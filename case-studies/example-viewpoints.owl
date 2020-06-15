@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://mpm4cps.eu/ontology/case-studies/example-viewpoints"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://mpm4cps.eu/ontology/case-studies/example-viewpoints">
+    <Prefix name="" IRI="http://mpm4cps.eu/ontology/case-studies/example-viewpoints"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://mpm4cps.eu/ontology/mpm4cps</Import>
+    <Import>http://mpm4cps.eu/ontology/catalog-tools-languages</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:paper"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BLTT2012</Literal>
+    </Annotation>
+    <Declaration>
+        <NamedIndividual IRI="#SoftwareTester"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SoftwareDesignEngineer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Energy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Designer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tester"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Controller"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Software"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComputingPlatform"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ADASAlgorithm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhysicalPlant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Robustness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Performance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SensorsActuators"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
+        <NamedIndividual IRI="#ADASAlgorithm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#SystemPart"/>
+        <NamedIndividual IRI="#ComputingPlatform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#SystemPart"/>
+        <NamedIndividual IRI="#Controller"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Role"/>
+        <NamedIndividual IRI="#Designer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
+        <NamedIndividual IRI="#Energy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
+        <NamedIndividual IRI="#Performance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#SystemPart"/>
+        <NamedIndividual IRI="#PhysicalPlant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
+        <NamedIndividual IRI="#Robustness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#SystemPart"/>
+        <NamedIndividual IRI="#SensorsActuators"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#SystemPart"/>
+        <NamedIndividual IRI="#Software"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
+        <NamedIndividual IRI="#SoftwareDesignEngineer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
+        <NamedIndividual IRI="#SoftwareTester"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Role"/>
+        <NamedIndividual IRI="#Tester"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="#ComputingPlatform"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="#Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="#PhysicalPlant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="#SensorsActuators"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="#Software"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#isSupportedBy"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DifferentialEquations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#isSupportedBy"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#TimedAutomata"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasConcerns"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="#ADASAlgorithm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasConcerns"/>
+        <NamedIndividual IRI="#ControlPerformanceDesign"/>
+        <NamedIndividual IRI="#Performance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+        <NamedIndividual IRI="#Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+        <NamedIndividual IRI="#PhysicalPlant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+        <NamedIndividual IRI="#SensorsActuators"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#isSupportedBy"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DifferentialEquations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#isSupportedBy"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#HybridAutomata"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#isSupportedBy"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#TimedAutomata"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasConcerns"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+        <NamedIndividual IRI="#ADASAlgorithm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasConcerns"/>
+        <NamedIndividual IRI="#ControlRobustnessDesign"/>
+        <NamedIndividual IRI="#Robustness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasStakeholders"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="#SoftwareDesignEngineer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasStakeholders"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="#SoftwareTester"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="#ComputingPlatform"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="#Software"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#isSupportedBy"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#AbstractStateMachines"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#isSupportedBy"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DataFlow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#isSupportedBy"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DiscreteEvent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasConcerns"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="#ADASAlgorithm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasConcerns"/>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="#Performance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasRole"/>
+        <NamedIndividual IRI="#SoftwareDesignEngineer"/>
+        <NamedIndividual IRI="#Designer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasRole"/>
+        <NamedIndividual IRI="#SoftwareTester"/>
+        <NamedIndividual IRI="#Tester"/>
+    </ObjectPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

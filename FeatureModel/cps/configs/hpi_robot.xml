@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="CPS"/>
+	<feature automatic="selected" name="ConstituentElement"/>
+	<feature automatic="selected" manual="selected" name="Cyber"/>
+	<feature automatic="selected" manual="selected" name="Control"/>
+	<feature manual="selected" name="State"/>
+	<feature manual="selected" name="Disturbance"/>
+	<feature manual="selected" name="Input"/>
+	<feature manual="selected" name="Output"/>
+	<feature automatic="selected" manual="selected" name="Goal"/>
+	<feature manual="selected" name="Setpoint"/>
+	<feature manual="selected" name="Tracking"/>
+	<feature automatic="selected" name="ValidityRegion"/>
+	<feature automatic="selected" name="Local"/>
+	<feature manual="unselected" name="Global"/>
+	<feature manual="unselected" name="SemiGlobal"/>
+	<feature manual="selected" name="Regulation"/>
+	<feature manual="unselected" name="ReferenceSignal"/>
+	<feature automatic="selected" manual="selected" name="Feedback"/>
+	<feature automatic="selected" name="Dependency"/>
+	<feature manual="selected" name="StateFeedback"/>
+	<feature manual="selected" name="OutputFeedback"/>
+	<feature automatic="selected" name="Scope"/>
+	<feature manual="selected" name="Centralized"/>
+	<feature automatic="unselected" name="Decentralized"/>
+	<feature automatic="unselected" name="Distributfed"/>
+	<feature automatic="selected" manual="selected" name="Dynamics"/>
+	<feature automatic="selected" manual="selected" name="SystemType"/>
+	<feature manual="selected" name="Linearity"/>
+	<feature manual="selected" name="Time"/>
+	<feature manual="selected" name="Continuity"/>
+	<feature manual="selected" name="Behavior"/>
+	<feature manual="unselected" name="Topology"/>
+	<feature automatic="unselected" name="Evolution"/>
+	<feature automatic="unselected" name="Implementatin"/>
+	<feature manual="selected" name="Properties"/>
+	<feature manual="unselected" name="Diagnostics"/>
+	<feature manual="selected" name="Prognostics"/>
+	<feature automatic="selected" manual="selected" name="Human"/>
+	<feature automatic="selected" manual="selected" name="Role"/>
+	<feature manual="selected" name="Responsibilities"/>
+	<feature automatic="selected" name="Constraints"/>
+	<feature manual="unselected" name="Event"/>
+	<feature automatic="unselected" name="State-of-Affairs"/>
+	<feature manual="selected" name="Entity"/>
+	<feature automatic="selected" manual="selected" name="Action"/>
+	<feature manual="unselected" name="CommunicationAction"/>
+	<feature manual="unselected" name="PhysicalAction"/>
+	<feature manual="selected" name="EpistemicAction"/>
+	<feature automatic="selected" name="Network"/>
+	<feature automatic="selected" name="Configuration"/>
+	<feature automatic="unselected" manual="unselected" name="Star"/>
+	<feature automatic="unselected" name="Bus"/>
+	<feature automatic="unselected" name="Ring"/>
+	<feature automatic="unselected" name="Mesh"/>
+	<feature automatic="unselected" name="Point2Point"/>
+	<feature manual="selected" name="Hybrid"/>
+	<feature automatic="selected" name="Communication"/>
+	<feature automatic="selected" name="ComType"/>
+	<feature manual="selected" name="Synchronous"/>
+	<feature automatic="unselected" name="Asynchronous"/>
+	<feature automatic="selected" name="Protocol"/>
+	<feature automatic="unselected" name="P2P"/>
+	<feature automatic="unselected" name="ClientServer"/>
+	<feature automatic="unselected" name="BrokerBased"/>
+	<feature manual="selected" name="OtherProtocols"/>
+	<feature automatic="selected" name="Physical"/>
+	<feature automatic="selected" name="Sensor"/>
+	<feature automatic="selected" name="Actuator"/>
+	<feature automatic="selected" name="Plant"/>
+	<feature automatic="selected" name="Controller"/>
+	<feature automatic="selected" name="Environment"/>
+	<feature automatic="selected" name="nonfunctionalReqs"/>
+	<feature manual="selected" name="Performance"/>
+	<feature manual="selected" name="Security"/>
+	<feature manual="selected" name="Safety"/>
+	<feature manual="selected" name="Reliability"/>
+	<feature manual="selected" name="Efficiency"/>
+	<feature manual="unselected" name="Interoperability"/>
+	<feature automatic="unselected" name="SyntacticInteroperability"/>
+	<feature automatic="unselected" name="SemanticInteroperability"/>
+	<feature manual="selected" name="Scalability"/>
+	<feature manual="selected" name="Composability"/>
+	<feature manual="selected" name="Availability"/>
+	<feature manual="selected" name="Sustainability"/>
+	<feature manual="selected" name="X_ilities"/>
+	<feature automatic="selected" name="ApplicationDomain"/>
+	<feature automatic="unselected" name="Health"/>
+	<feature manual="selected" name="SmartManufacturing"/>
+	<feature automatic="unselected" name="Transportation"/>
+	<feature automatic="unselected" name="ProcessControl"/>
+	<feature automatic="unselected" name="Defense"/>
+	<feature automatic="unselected" name="BuildingAutomation"/>
+	<feature automatic="unselected" name="RoboticforService"/>
+	<feature automatic="unselected" name="CriticalInfrastructure"/>
+	<feature automatic="unselected" name="EmergencyResponse"/>
+	<feature automatic="unselected" name="X_Domain"/>
+	<feature automatic="selected" name="Disciplines"/>
+	<feature manual="selected" name="SoftwareEngineering"/>
+	<feature manual="selected" name="MechanicalEngineering"/>
+	<feature manual="selected" name="ElectricalEngineering"/>
+	<feature manual="unselected" name="CivilEngineering"/>
+	<feature manual="unselected" name="ChecmicalEngineering"/>
+	<feature manual="unselected" name="OtherEngineering"/>
+	<feature automatic="selected" name="Architecture"/>
+	<feature automatic="selected" name="ManagementLayer"/>
+	<feature automatic="selected" name="CPSComponentLayer"/>
+	<feature automatic="selected" name="NetworkLayer"/>
+	<feature automatic="selected" name="ServiceLayer"/>
+	<feature automatic="selected" name="ApplicationLayer"/>
+	<feature automatic="selected" name="SecurityLayer"/>
+	<feature name="Evaluation"/>
+	<feature name="Simulation"/>
+	<feature name="Experimentation"/>
+	<feature name="Testing"/>
+	<feature name="Formal_Verification"/>
+	<feature name="OtherEvaluation"/>
+	<feature name="Tool"/>
+	<feature name="Tool_Integration"/>
+	<feature name="Within_Domain"/>
+	<feature name="Across_Domains"/>
+	<feature name="kind"/>
+	<feature name="CyberTool"/>
+	<feature name="PhysicalTool"/>
+	<feature name="HW_SW_CoDesignTool"/>
+	<feature name="Lifecycle_Support"/>
+	<feature name="RequirementsAnalysis"/>
+	<feature name="ArchitectureDesign"/>
+	<feature name="DetailedDesign"/>
+	<feature name="Implementation"/>
+	<feature name="TestingTool"/>
+	<feature name="Maintenance"/>
+	<feature name="Design"/>
+	<feature name="Approach"/>
+	<feature name="Separate"/>
+	<feature name="CoDesign"/>
+	<feature name="Viewpoint"/>
+	<feature name="Formalisms"/>
+	<feature name="Stakeholder"/>
+	<feature name="SystemEngineer"/>
+	<feature name="Developer"/>
+	<feature name="EndUser"/>
+	<feature name="Customer"/>
+	<feature name="Maintainer"/>
+	<feature name="Evaluator"/>
+	<feature name="X_Stakeholder"/>
+	<feature name="Model"/>
+	<feature name="Framework"/>
+	<feature name="AgentBased"/>
+	<feature name="DifferentialEquation"/>
+	<feature name="DifferenceEquation"/>
+	<feature name="HybridAutomata"/>
+	<feature name="Bond graphs"/>
+	<feature name="Petri nets"/>
+	<feature name="Complex networks"/>
+	<feature name="Complementarity"/>
+	<feature name="Bisimulations"/>
+	<feature name="Symbolic dynamics"/>
+	<feature name="Event-flow formulas"/>
+	<feature name="OtherFramework"/>
+	<feature name="ParameterIdentification"/>
+	<feature name="Sampling"/>
+	<feature name="Simulating"/>
+	<feature name="SignalProcessing"/>
+	<feature name="Verification"/>
+	<feature name="Property"/>
+	<feature name="SafetyP"/>
+	<feature name="Liveness"/>
+	<feature name="Deadness"/>
+	<feature name="Reachability"/>
+	<feature name="Correctness"/>
+	<feature name="Technique"/>
+	<feature name="ModelChecking"/>
+	<feature name="TheoremProving"/>
+	<feature name="Falsification"/>
+	<feature name="ConstraintSatisfaction"/>
+	<feature name="BooleanSatisfiability"/>
+	<feature name="Satisfiability Modulo"/>
+	<feature name="Symbolic Methocs"/>
+	<feature name="DynamicallyAware"/>
+</configuration>

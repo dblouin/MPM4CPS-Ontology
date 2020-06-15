@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1591725366362" name="http://mpm4cps.eu/ontology/catalog-tools-languages" uri="catalog-tools-languages.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1591725366362" name="http://mpm4cps.eu/ontology/cps" uri="cps.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1591725366362" name="duplicate:http://mpm4cps.eu/ontology/cpsFM" uri="cpsFM.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1591725366362" name="duplicate:http://mpm4cps.eu/ontology/cpsFM" uri="cpsFM2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1591725366362" name="http://mpm4cps.eu/ontology/mpm" uri="mpm.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1591725366362" name="http://mpm4cps.eu/ontology/mpm4cps" uri="mpm4cps.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1591725366362" name="http://mpm4cps.eu/ontology/shared" uri="shared.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1591725366362" name="http://mpm4cps.eu/ontology/shared-individuals" uri="shared-individuals.owl"/>
+    </group>
+</catalog>
