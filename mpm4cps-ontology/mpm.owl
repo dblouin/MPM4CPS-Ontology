@@ -15,163 +15,271 @@
     <Import>http://mpm4cps.eu/ontology/shared</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology captures the Multi-Paradigm Modeling Domain (MPM). It includes concepts for the related modeling, linguistic and formal sub domains.</Literal>
+        <Literal>This ontology captures the Multi-Paradigm Modeling Domain (MPM). It includes concepts for the related modeling, linguistic and formal sub domains.</Literal>
     </Annotation>
-    <Declaration>
-        <Class IRI="#ApplicationMegaModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Distributed"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasTool"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasChildFormalism"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasSyntax"/>
-    </Declaration>
     <Declaration>
         <Class IRI="#AbstractSyntax"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasChildLanguage"/>
+        <Class IRI="#AnalysisTool"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ModelingTool"/>
+        <Class IRI="#ApplicationMegaModel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LinguisticDC"/>
+        <Class IRI="#Architecture"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TimedCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PetriNetBasedFormalism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ModelOperation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isConnecting"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AutomatonLikeFamily"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TransformationOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Centralized"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#IntegrationOperation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasOutput"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isBasedOnFormalism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ConcreteSyntax"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ModelingActivity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasMegamodelFragment"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Graphical"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ContinuousCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isToolFor"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasModel"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasSubFormalismFamily"/>
+        <Class IRI="#ArchitectureDescriptionLanguage"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AutomataBasedFormalism"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasSemantics"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Model"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RuntimeTool"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FormalSemantics"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#FlowFormalismsFamily"/>
+        <Class IRI="#Behavioral"/>
     </Declaration>
     <Declaration>
         <Class IRI="#BehavioralCharacteristic"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ModelingLanguage"/>
+        <Class IRI="#BehavioralConstraintLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Centralized"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Communication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConcreteModelingLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConcreteSyntax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConfigurationMegaModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConformanceRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConstraintLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ContinuousCharacteristic"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Deployment"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TimedAutomataBasedFormalism"/>
+        <Class IRI="#DiscreteCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Distributed"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DomainSpecificLanguage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ProgrammingLanguage"/>
+        <Class IRI="#ExecutionTool"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isAppliedToModel"/>
+        <Class IRI="#FlowBasedFormalism"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ModelConstraint"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ModelingParadigm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UncertaintyCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasInputModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Structural"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#TimedAutomatonLike"/>
+        <Class IRI="#FormalDC"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FormalLanguage"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasOutputModel"/>
+        <Class IRI="#FormalSemantics"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#HybridAutomatonLike"/>
+        <Class IRI="#Formalism"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#BehavioralConstraintLanguage"/>
+        <Class IRI="#FormalismCharacteristic"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AnalysisTool"/>
+        <Class IRI="#FormalismDC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FormalismFamily"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Graphical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HybridAutomataBasedFormalism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LogicBasedFormalism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Megamodel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MegamodelFragment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MicroModelElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Micromodel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelConstraint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelingDC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelingLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelingParadigm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelingTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OldLinguisticDC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PetriNetBasedFormalism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProgrammingLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RefinementRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RuntimeTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticMappingRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Semantics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SimulationTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structural"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StructuralConstraintLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StructureCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SynchronizationRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Syntax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SyntaxMappingRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Textual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TimedAutomataBasedFormalism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TimedCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TraceabilityModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TraceabilityRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransformationLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransformationRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransformationTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UncertaintyCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VisualizationTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Action"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAbstractSyntax"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAbstractSyntaxSem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChildFormalism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChildLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConcreteSyntax"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConnectedModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContextRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInputModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMegamodelFragment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelConstraint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelElement"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasModelOperation"/>
@@ -180,134 +288,98 @@
         <ObjectProperty IRI="#hasModelRelation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ModelingDC"/>
+        <ObjectProperty IRI="#hasOutput"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Action"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Architecture"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CapturingOperation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Communication"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DiscreteCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Behavioral"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ConfigurationMegaModel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Formalism"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isPerformedBy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FormalismFamily"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isExtending"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ConstraintLanguage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MegamodelFragment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Syntax"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isExtendingFormalism"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasLanguage"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasContext"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Megamodel"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VerificationTool"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FormalDC"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TransformationLanguage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TransformationTool"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasModelConstraint"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ArchitectureDescriptionLanguage"/>
+        <ObjectProperty IRI="#hasOutputModel"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPurpose"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HybridAutomataBasedFormalism"/>
+        <ObjectProperty IRI="#hasSemanticDomain"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isSpecializing"/>
+        <ObjectProperty IRI="#hasSemantics"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TracabilityRelation"/>
+        <ObjectProperty IRI="#hasSpecification"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasInput"/>
+        <ObjectProperty IRI="#hasSubFormalismFamily"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MissionSpecificationTool"/>
+        <ObjectProperty IRI="#hasSyntax"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FlowBasedFormalism"/>
+        <ObjectProperty IRI="#hasSyntaxMapping"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTool"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTraceabilityRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTranformationSpecification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAppliedToModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBasedOnFormalism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isConformingTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isConnecting"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isExtending"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isExtendingFormalism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPerformedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isReturningTo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SimulationTool"/>
+        <ObjectProperty IRI="#isSpecializing"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#StructuralConstraintLanguage"/>
+        <ObjectProperty IRI="#isToolFor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ModelRelation"/>
+        <NamedIndividual IRI="#AutomatonLikeFamily"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#StructureCharacteristic"/>
+        <NamedIndividual IRI="#FlowFormalismsFamily"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Textual"/>
+        <NamedIndividual IRI="#HybridAutomatonLike"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Language"/>
+        <NamedIndividual IRI="#TimedAutomatonLike"/>
     </Declaration>
-    <Declaration>
-        <Class IRI="#FormalismCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LogicBasedFormalism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Semantics"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FormalismDC"/>
-    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Megamodel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Model"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasModel"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Model"/>
+                    <ObjectComplementOf>
+                        <Class IRI="#MicroModelElement"/>
+                    </ObjectComplementOf>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#AbstractSyntax"/>
         <Class IRI="#ModelingDC"/>
@@ -315,10 +387,6 @@
     <SubClassOf>
         <Class IRI="#AbstractSyntax"/>
         <Class IRI="#Syntax"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AnalysisTool"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ApplicationMegaModel"/>
@@ -349,16 +417,16 @@
         <Class IRI="#ConstraintLanguage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CapturingOperation"/>
-        <Class IRI="#TransformationOperation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Centralized"/>
         <Class IRI="#Deployment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Communication"/>
         <Class IRI="#Behavioral"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcreteModelingLanguage"/>
+        <Class IRI="#ModelingLanguage"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConcreteSyntax"/>
@@ -371,6 +439,10 @@
     <SubClassOf>
         <Class IRI="#ConfigurationMegaModel"/>
         <Class IRI="#Megamodel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConformanceRelation"/>
+        <Class IRI="#ModelRelation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConstraintLanguage"/>
@@ -395,6 +467,10 @@
     <SubClassOf>
         <Class IRI="#DomainSpecificLanguage"/>
         <Class IRI="#ModelingLanguage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExecutionTool"/>
+        <Class IRI="#ModelingTool"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FlowBasedFormalism"/>
@@ -425,12 +501,16 @@
         <Class IRI="#FormalismDC"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Formalism"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#FormalismCharacteristic"/>
         <Class IRI="#FormalismDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FormalismDC"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+        <Class IRI="#ModelingDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FormalismFamily"/>
@@ -445,32 +525,31 @@
         <Class IRI="#AutomataBasedFormalism"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IntegrationOperation"/>
-        <Class IRI="#ModelOperation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Language"/>
-        <Class IRI="#LinguisticDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#LinguisticDC"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+        <Class IRI="#OldLinguisticDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LogicBasedFormalism"/>
         <Class IRI="#Formalism"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Megamodel"/>
-        <Class IRI="#Model"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#MegamodelFragment"/>
         <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MissionSpecificationTool"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
+        <Class IRI="#MicroModelElement"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Micromodel"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Micromodel"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasModel"/>
+            <Class IRI="#MicroModelElement"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Model"/>
@@ -485,14 +564,6 @@
         <Class IRI="http://mpm4cps.eu/ontology/shared#Constraint"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ModelOperation"/>
-        <Class IRI="#ModelRelation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ModelOperation"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Action"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ModelRelation"/>
         <Class IRI="#ModelingDC"/>
     </SubClassOf>
@@ -501,12 +572,15 @@
         <Class IRI="http://mpm4cps.eu/ontology/shared#Relation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ModelingActivity"/>
-        <Class IRI="#ModelingDC"/>
+        <Class IRI="#ModelRelation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasConnectedModel"/>
+            <Class IRI="#Model"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModelingActivity"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Activity"/>
+        <Class IRI="#ModelingDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModelingDC"/>
@@ -533,6 +607,10 @@
         <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#OldLinguisticDC"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#PetriNetBasedFormalism"/>
         <Class IRI="#Formalism"/>
     </SubClassOf>
@@ -541,16 +619,28 @@
         <Class IRI="#ModelingLanguage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#RefinementRelation"/>
+        <Class IRI="#TransformationRelation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#RuntimeTool"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
+        <Class IRI="#ModelingTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticDomain"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticMappingRelation"/>
+        <Class IRI="#ModelRelation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Semantics"/>
-        <Class IRI="#LinguisticDC"/>
+        <Class IRI="#OldLinguisticDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SimulationTool"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
+        <Class IRI="#ModelingTool"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Structural"/>
@@ -565,8 +655,16 @@
         <Class IRI="#FormalismCharacteristic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#SynchronizationRelation"/>
+        <Class IRI="#TransformationRelation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Syntax"/>
-        <Class IRI="#LinguisticDC"/>
+        <Class IRI="#OldLinguisticDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyntaxMappingRelation"/>
+        <Class IRI="#ModelRelation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Textual"/>
@@ -581,28 +679,32 @@
         <Class IRI="#BehavioralCharacteristic"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TracabilityRelation"/>
-        <Class IRI="#ModelOperation"/>
+        <Class IRI="#TraceabilityModel"/>
+        <Class IRI="#Micromodel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TraceabilityRelation"/>
+        <Class IRI="#ModelRelation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TransformationLanguage"/>
         <Class IRI="#ModelingLanguage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TransformationOperation"/>
-        <Class IRI="#ModelOperation"/>
+        <Class IRI="#TransformationRelation"/>
+        <Class IRI="#ModelRelation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TransformationTool"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
+        <Class IRI="#ModelingTool"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UncertaintyCharacteristic"/>
         <Class IRI="#BehavioralCharacteristic"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#VerificationTool"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
+        <Class IRI="#VisualizationTool"/>
+        <Class IRI="#ModelingTool"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#AbstractSyntax"/>
@@ -616,10 +718,6 @@
         <Class IRI="#Language"/>
         <Class IRI="#Semantics"/>
         <Class IRI="#Syntax"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Language"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#FormalismFamily"/>
@@ -670,6 +768,10 @@
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#isAppliedTo"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasConnectedModel"/>
+        <ObjectProperty IRI="#hasModelRelation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasInputModel"/>
         <ObjectProperty IRI="#hasModelRelation"/>
     </InverseObjectProperties>
@@ -689,6 +791,14 @@
         <ObjectProperty IRI="#hasChildFormalism"/>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAbstractSyntax"/>
+        <Class IRI="#SyntaxMappingRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAbstractSyntaxSem"/>
+        <Class IRI="#SemanticMappingRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCharacteristic"/>
         <Class IRI="#Formalism"/>
     </ObjectPropertyDomain>
@@ -701,12 +811,16 @@
         <Class IRI="#Language"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasContext"/>
-        <Class IRI="#ModelOperation"/>
+        <ObjectProperty IRI="#hasConcreteSyntax"/>
+        <Class IRI="#SyntaxMappingRelation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasInput"/>
-        <Class IRI="#ModelOperation"/>
+        <ObjectProperty IRI="#hasConnectedModel"/>
+        <Class IRI="#ModelRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContextRelation"/>
+        <Class IRI="#ModelRelation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasInputModel"/>
@@ -717,6 +831,10 @@
         <Class IRI="#Formalism"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <Class IRI="#ModelingTool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMegamodelFragment"/>
         <Class IRI="#Megamodel"/>
     </ObjectPropertyDomain>
@@ -725,8 +843,8 @@
         <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasModelConstraint"/>
-        <Class IRI="#ModelOperation"/>
+        <ObjectProperty IRI="#hasModelElement"/>
+        <Class IRI="#Micromodel"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasModelOperation"/>
@@ -737,10 +855,6 @@
         <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasOutput"/>
-        <Class IRI="#ModelOperation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasOutputModel"/>
         <Class IRI="#ModelRelation"/>
     </ObjectPropertyDomain>
@@ -749,8 +863,16 @@
         <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSemanticDomain"/>
+        <Class IRI="#SemanticMappingRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSemantics"/>
         <Class IRI="#Language"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSpecification"/>
+        <Class IRI="#TransformationRelation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSubFormalismFamily"/>
@@ -761,8 +883,20 @@
         <Class IRI="#Language"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSyntaxMapping"/>
+        <Class IRI="#ConcreteModelingLanguage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTool"/>
         <Class IRI="#Language"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTraceabilityRelation"/>
+        <Class IRI="#TraceabilityModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTranformationSpecification"/>
+        <Class IRI="#ModelingTool"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isAppliedToModel"/>
@@ -773,8 +907,8 @@
         <Class IRI="#Language"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isConnecting"/>
-        <Class IRI="#ModelOperation"/>
+        <ObjectProperty IRI="#isConformingTo"/>
+        <Class IRI="#Micromodel"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isExtending"/>
@@ -785,17 +919,17 @@
         <Class IRI="#Formalism"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isReturningTo"/>
-        <Class IRI="#IntegrationOperation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isSpecializing"/>
         <Class IRI="#Formalism"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isToolFor"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
-    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAbstractSyntax"/>
+        <Class IRI="#AbstractSyntax"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAbstractSyntaxSem"/>
+        <Class IRI="#AbstractSyntax"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCharacteristic"/>
         <Class IRI="#FormalismCharacteristic"/>
@@ -809,8 +943,16 @@
         <Class IRI="#Language"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasContext"/>
-        <Class IRI="#ModelOperation"/>
+        <ObjectProperty IRI="#hasConcreteSyntax"/>
+        <Class IRI="#ConcreteSyntax"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConnectedModel"/>
+        <Class IRI="#Model"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContextRelation"/>
+        <Class IRI="#ModelRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasInput"/>
@@ -840,8 +982,8 @@
         <Class IRI="#ModelConstraint"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasModelOperation"/>
-        <Class IRI="#ModelOperation"/>
+        <ObjectProperty IRI="#hasModelElement"/>
+        <Class IRI="#MicroModelElement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasModelRelation"/>
@@ -860,8 +1002,16 @@
         <Class IRI="http://mpm4cps.eu/ontology/shared#Purpose"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSemanticDomain"/>
+        <Class IRI="#SemanticDomain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSemantics"/>
         <Class IRI="#Semantics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSpecification"/>
+        <Class IRI="#Micromodel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSubFormalismFamily"/>
@@ -872,8 +1022,16 @@
         <Class IRI="#Syntax"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasTool"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
+        <ObjectProperty IRI="#hasSyntaxMapping"/>
+        <Class IRI="#SyntaxMappingRelation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTraceabilityRelation"/>
+        <Class IRI="#TraceabilityRelation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTranformationSpecification"/>
+        <Class IRI="#TransformationRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isAppliedToModel"/>
@@ -882,6 +1040,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isBasedOnFormalism"/>
         <Class IRI="#Formalism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isConformingTo"/>
+        <Class IRI="#ConformanceRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isConnecting"/>
@@ -896,10 +1058,6 @@
         <Class IRI="#Formalism"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#isReturningTo"/>
-        <Class IRI="#IntegrationOperation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#isSpecializing"/>
         <Class IRI="#Formalism"/>
     </ObjectPropertyRange>
@@ -910,42 +1068,42 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AbstractSyntax</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">metamodel</Literal>
+        <Literal>metamodel</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AnalysisTool</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tools to analysis systems e.g. performance, resourceConsumption, schedulability ....</Literal>
+        <Literal>Tools to analysis systems e.g. performance, resourceConsumption, schedulability ....</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#ApplicationMegaModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/index/index/docId/6234</Literal>
+        <Literal>https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/index/index/docId/6234</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ApplicationMegaModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A representation of the real models in the CPS development environment.</Literal>
+        <Literal>A representation of the real models in the CPS development environment.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Architecture</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A system architecture is a conceptual model that defines the structure, behavior, and more views of a system. An architecture description is a formal description and representation of a system, organized in a way that supports reasoning about the structures and behaviors of the system.</Literal>
+        <Literal>A system architecture is a conceptual model that defines the structure, behavior, and more views of a system. An architecture description is a formal description and representation of a system, organized in a way that supports reasoning about the structures and behaviors of the system.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Architecture</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Systems_architecture</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Systems_architecture</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#ArchitectureDescriptionLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Architecture_description_language</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Architecture_description_language</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ArchitectureDescriptionLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Architecture description languages (ADLs) are used in several disciplines: system engineering, software engineering, and enterprise modelling and engineering.
+        <Literal>Architecture description languages (ADLs) are used in several disciplines: system engineering, software engineering, and enterprise modelling and engineering.
 
 The system engineering community uses an architecture description language as a language and/or a conceptual model to describe and represent system architectures.
 
@@ -962,113 +1120,108 @@ Most of the writing below refers primarily to the perspective from the software 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AutomataBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of formalisms that are based on automata</Literal>
+        <Literal>The class of formalisms that are based on automata</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutomataBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Automata-based Formalisms</Literal>
+        <Literal>Automata-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
         <IRI>#Behavioral</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">where to put studying timing: deadline, delays, elapsedTime, timeout</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#CapturingOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The process of capturing information (e.g from users) into a model.</Literal>
+        <Literal>where to put studying timing: deadline, delays, elapsedTime, timeout</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#Communication</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Communication</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Communication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Communication</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Communication is the act of conveying intended meanings from one entity or group to another through the use of mutually understood signs and semiotic rules.</Literal>
+        <Literal>Communication is the act of conveying intended meanings from one entity or group to another through the use of mutually understood signs and semiotic rules.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ConcreteSyntax</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">textual/graphics as in AADL</Literal>
+        <Literal>textual/graphics as in AADL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#ConfigurationMegaModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/index/index/docId/6234</Literal>
+        <Literal>https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/index/index/docId/6234</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ConfigurationMegaModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Declares types for the models and relations contained in application megamodel. (language and relation types)</Literal>
+        <Literal>Declares types for the models and relations contained in application megamodel. (language and relation types)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#Deployment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/System_deployment</Literal>
+        <Literal>https://en.wikipedia.org/wiki/System_deployment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Deployment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The deployment of a mechanical device, electrical system, computer program, etc., is its assembly or transformation from a packaged form to an operational working state.
+        <Literal>The deployment of a mechanical device, electrical system, computer program, etc., is its assembly or transformation from a packaged form to an operational working state.
 Deployment implies moving a product from a temporary or development state to a permanent or desired state.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#DomainSpecificLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Domain-specific_language</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Domain-specific_language</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DomainSpecificLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A domain-specific language (DSL) is a computer language specialized to a particular application domain. This is in contrast to a general-purpose language (GPL), which is broadly applicable across domains.</Literal>
+        <Literal>A domain-specific language (DSL) is a computer language specialized to a particular application domain. This is in contrast to a general-purpose language (GPL), which is broadly applicable across domains.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FlowBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Flow-based Formalisms</Literal>
+        <Literal>Flow-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FormalDC</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class groups domain concepts that are related to the formal aspects of MPM.</Literal>
+        <Literal>This class groups domain concepts that are related to the formal aspects of MPM.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
         <IRI>#FormalLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Moussa_Amrani</Literal>
+        <Literal>Moussa_Amrani</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FormalLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A formal language is a language whose semantics is formally defined. This formal semantics relates to the formalism(s) the language realizes. A formal language has its abstract syntax formally defined.</Literal>
+        <Literal>A formal language is a language whose semantics is formally defined. This formal semantics relates to the formalism(s) the language realizes. A formal language has its abstract syntax formally defined.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#FormalSemantics</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Semantics_(computer_science)</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Semantics_(computer_science)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FormalSemantics</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">In programming language theory, semantics is the field concerned with the rigorous mathematical study of the meaning of programming languages. It does so by evaluating the meaning of syntactically legal strings defined by a specific programming language, showing the computation involved. In such a case that the evaluation would be of syntactically illegal strings, the result would be non-computation. Semantics describes the processes a computer follows when executing a program in that specific language. This can be shown by describing the relationship between the input and output of a program, or an explanation of how the program will execute on a certain platform, hence creating a model of computation.</Literal>
+        <Literal>In programming language theory, semantics is the field concerned with the rigorous mathematical study of the meaning of programming languages. It does so by evaluating the meaning of syntactically legal strings defined by a specific programming language, showing the computation involved. In such a case that the evaluation would be of syntactically illegal strings, the result would be non-computation. Semantics describes the processes a computer follows when executing a program in that specific language. This can be shown by describing the relationship between the input and output of a program, or an explanation of how the program will execute on a certain platform, hence creating a model of computation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeUpdated"/>
         <IRI>#Formalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">To be reformulated as this is the same text as Bronan</Literal>
+        <Literal>To be reformulated as this is the same text as Bronan</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#Formalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Formalism_(philosophy_of_mathematics)</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Formalism_(philosophy_of_mathematics)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Formalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Formalisms are mathematical objects consisting of an abstract
+        <Literal>Formalisms are mathematical objects consisting of an abstract
 syntax and a formal semantics. Languages are concrete
 implementations of formalisms. A language has a concrete
 syntax, may deviate slightly from the formalism in the
@@ -1080,312 +1233,272 @@ language may implement more than one formalisms.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>#Formalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">key:Broman2012</Literal>
+        <Literal>key:Broman2012</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FormalismDC</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class groups classes related to formalisms</Literal>
+        <Literal>This class groups classes related to formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#HybridAutomataBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hybrid Automata-based Formalisms</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#IntegrationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The process to integrate many models together.</Literal>
+        <Literal>Hybrid Automata-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Language</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A language is a concrete realization of a set of formalisms. A language has a set of concrete syntaxes. The language may deviate slightly from the formalisms it realizes in the semantics that it realizes, or may realize multiple
+        <Literal>A language is a concrete realization of a set of formalisms. A language has a set of concrete syntaxes. The language may deviate slightly from the formalisms it realizes in the semantics that it realizes, or may realize multiple
 semantics.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>#Language</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">key:Broman2012</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#LinguisticDC</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class groups domain concepts related to the linguistic aspects of MPM, such as modeling, programming, formal and even natural languages and their syntax.</Literal>
+        <Literal>key:Broman2012</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#LogicBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Logic-based Formalisms</Literal>
+        <Literal>Logic-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
         <IRI>#Megamodel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
+        <Literal>Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#Megamodel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/index/index/docId/6234</Literal>
+        <Literal>https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/index/index/docId/6234</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Megamodel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A model that contains models and relations between them.</Literal>
+        <Literal>A model that contains models and relations between them.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
         <IRI>#MegamodelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Do we add also application and configuration division here?</Literal>
+        <Literal>Do we add also application and configuration division here?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#MegamodelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The fragment is not a complete megamodel, and can&apos;t be used alone. It can be reused to take part in another megamodel. (e.g. physical part, view of the system, self-adaptation .... etc.)</Literal>
+        <Literal>The fragment is not a complete megamodel, and can&apos;t be used alone. It can be reused to take part in another megamodel. (e.g. physical part, view of the system, self-adaptation .... etc.)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Model</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A representation of real artifacts regardless of the metamodeling technical space. e.g. xml file, equations...etc.</Literal>
+        <Literal>A representation of real artifacts regardless of the metamodeling technical space. e.g. xml file, equations...etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ModelConstraint</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A restriction over model that is input or output for relation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#ModelOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It is any kind of transformation from input set of models to output set of models.</Literal>
+        <Literal>A restriction over model that is input or output for relation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
         <IRI>#ModelRelation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">&quot;On the Unification of Megamodels&quot; paper.</Literal>
+        <Literal>&quot;On the Unification of Megamodels&quot; paper.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ModelRelation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A relation that connects models.</Literal>
+        <Literal>A relation that connects models.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ModelingDC</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class groups domain concepts related to the modeling aspects of MPM.</Literal>
+        <Literal>This class groups domain concepts related to the modeling aspects of MPM.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#ModelingLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Modeling_language</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Modeling_language</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ModelingLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A modeling language is any artificial language that can be used to express information or knowledge or systems in a structure that is defined by a consistent set of rules. The rules are used for interpretation of the meaning of components in the structure.</Literal>
+        <Literal>A modeling language is any artificial language that can be used to express information or knowledge or systems in a structure that is defined by a consistent set of rules. The rules are used for interpretation of the meaning of components in the structure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ModelingTool</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tools to model the system.</Literal>
+        <Literal>Tools to model the system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OldLinguisticDC</IRI>
+        <Literal>This class groups domain concepts related to the linguistic aspects of MPM, such as modeling, programming, formal and even natural languages and their syntax.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
         <IRI>#PetriNetBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Didier_Buchs</Literal>
+        <Literal>Didier_Buchs</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#PetriNetBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Petri nets (also known as a place/transition net or P/T net) are formalisms for the description of distributed systems.</Literal>
+        <Literal>Petri nets (also known as a place/transition net or P/T net) are formalisms for the description of distributed systems.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PetriNetBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Petri Net-based Formalisms</Literal>
+        <Literal>Petri Net-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#ProgrammingLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Programming_language</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Programming_language</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ProgrammingLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A programming language is a formal computer language designed to communicate instructions to a machine, particularly a computer. Programming languages can be used to create programs to control the behavior of a machine or to express algorithms.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#RuntimeTool</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tools that are presented as runtime framworks.</Literal>
+        <Literal>A programming language is a formal computer language designed to communicate instructions to a machine, particularly a computer. Programming languages can be used to create programs to control the behavior of a machine or to express algorithms.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#Semantics</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Semantics</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Semantics</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Semantics</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Semantics (from Ancient Greek: &quot;significant&quot;) is primarily the linguistic, and also philosophical study of meaning in language, programming languages, formal logics, and semiotics. It focuses on the relationship between signifiers-like words, phrases, signs, and symbols-and what they stand for, their denotation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#SimulationTool</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tools to simulate the real system behaviour.</Literal>
+        <Literal>Semantics (from Ancient Greek: &quot;significant&quot;) is primarily the linguistic, and also philosophical study of meaning in language, programming languages, formal logics, and semiotics. It focuses on the relationship between signifiers-like words, phrases, signs, and symbols-and what they stand for, their denotation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#Structural</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Structure</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Structure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Structural</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Structure is an arrangement and organization of interrelated elements in a material object or system, or the object or system so organized.</Literal>
+        <Literal>Structure is an arrangement and organization of interrelated elements in a material object or system, or the object or system so organized.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TimedAutomataBasedFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Timed Automata-based Formalisms</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
-        <IRI>#TracabilityRelation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Should we put it here? It is not an operation.</Literal>
+        <Literal>Timed Automata-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#TransformationLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Transformation_language</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Transformation_language</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TransformationLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A transformation language is a computer language designed to transform some input text in a certain formal language into a modified output text that meets some specific goal.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#TransformationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The process to transform one model to another.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#TransformationTool</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tools to transform models to other models.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#VerificationTool</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tools that are used to verifiy system properties.</Literal>
+        <Literal>A transformation language is a computer language designed to transform some input text in a certain formal language into a modified output text that meets some specific goal.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
         <IRI>#hasContext</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
+        <Literal>Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasInput</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model need inputs to do perform the determined task.</Literal>
+        <Literal>The model need inputs to do perform the determined task.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasInputModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It describes the input model for a model relation.</Literal>
+        <Literal>It describes the input model for a model relation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model could be expressed in natural language or formal language that is why the range is Language class not the ModelingLanguage class.</Literal>
+        <Literal>The model could be expressed in natural language or formal language that is why the range is Language class not the ModelingLanguage class.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasLanguage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The relation defines the formal language for a formalism. It is an inverse of hasFormalism.</Literal>
+        <Literal>The relation defines the formal language for a formalism. It is an inverse of hasFormalism.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasMegamodelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It describes the relation between megamodel and its fragments.</Literal>
+        <Literal>It describes the relation between megamodel and its fragments.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
         <IRI>#hasModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
+        <Literal>Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
         <IRI>#hasModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://journal.ub.tu-berlin.de/eceasst/article/viewFile/704/713</Literal>
+        <Literal>http://journal.ub.tu-berlin.de/eceasst/article/viewFile/704/713</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It describes a recursive relation. e.g. MegaModelFragment hasModel xModel ...</Literal>
+        <Literal>It describes a recursive relation. e.g. MegaModelFragment hasModel xModel ...</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasModelOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It defines a model operation for a model.</Literal>
+        <Literal>It defines a model operation for a model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasModelRelation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It defines a model relation for a model.</Literal>
+        <Literal>It defines a model relation for a model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
         <IRI>#hasOutput</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It is not clear what the result of this relation is.</Literal>
+        <Literal>It is not clear what the result of this relation is.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasOutput</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model provides results in the following form.</Literal>
+        <Literal>The model provides results in the following form.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasOutputModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It describes the output model for a model relation.</Literal>
+        <Literal>It describes the output model for a model relation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasTool</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The tool that represent the Language. It is an inverse of isToolFor.</Literal>
+        <Literal>The tool that represent the Language. It is an inverse of isToolFor.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isBasedOnFormalism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The relation defines the formalism for a formal language. It is an inverse of hasLanguage.</Literal>
+        <Literal>The relation defines the formalism for a formal language. It is an inverse of hasLanguage.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
         <IRI>#isConnecting</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
+        <Literal>Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isConnecting</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A relation connects a model.</Literal>
+        <Literal>A relation connects a model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isExtending</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This property captures a language extensions. Typically, a language extends another one by adding constructs and possibly refining / overriding some ot the extended language.</Literal>
+        <Literal>This property captures a language extensions. Typically, a language extends another one by adding constructs and possibly refining / overriding some ot the extended language.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
         <IRI>#isReturningTo</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The relation is an inverse of hasNext, but only in the integration operation case.</Literal>
+        <Literal>The relation is an inverse of hasNext, but only in the integration operation case.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isToolFor</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The language that is represented by a tool. It is an inverse of hasTool.</Literal>
+        <Literal>The language that is represented by a tool. It is an inverse of hasTool.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
