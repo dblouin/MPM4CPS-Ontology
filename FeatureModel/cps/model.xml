@@ -2,7 +2,7 @@
 <featureModel>
 	<properties>
 		<graphics key="showhiddenfeatures" value="true"/>
-		<graphics key="legendposition" value="553,63"/>
+		<graphics key="legendposition" value="643,40"/>
 		<graphics key="legendautolayout" value="false"/>
 		<graphics key="showshortnames" value="false"/>
 		<graphics key="layout" value="vertical"/>
@@ -20,25 +20,25 @@
 						and any artificial device. It refers to systems where feedback is essential.
 					</description>
 				</feature>
-				<or mandatory="true" name="Control">
+				<and mandatory="true" name="Control">
 					<description>The action of modifying the behaviour of a system through feedback.</description>
 					<graphics key="collapsed" value="false"/>
-					<feature name="State">
+					<feature mandatory="true" name="State">
 						<description>Instrinsic configuration and description of the system.</description>
 					</feature>
-					<feature name="Disturbance">
+					<feature mandatory="true" name="Disturbance">
 						<description>
 							External influence of the environment in a system, typically
 							unknown.
 						</description>
 					</feature>
-					<feature name="Input">
+					<feature mandatory="true" name="Input">
 						<description>Abstraction of the external factors in a system influencing its behaviour.</description>
 					</feature>
-					<feature name="Output">
+					<feature mandatory="true" name="Output">
 						<description>Abstraction of the effect of a system on its environment.</description>
 					</feature>
-					<or name="Goal">
+					<or mandatory="true" name="Goal">
 						<description>Desired behaviour of a system.</description>
 						<graphics key="collapsed" value="false"/>
 						<feature name="Setpoint">
@@ -84,10 +84,10 @@
 							</description>
 						</feature>
 					</or>
-					<and name="Feedback">
+					<and mandatory="true" name="Feedback">
 						<description>
-							Implementation of the control action by sensing the output of a&#13;
-							system and modifying its input by means of actuators to meet a &#13;
+							Implementation of the control action by sensing the output of a
+							system and modifying its input by means of actuators to meet a
 							pre-defined control goal.
 						</description>
 						<graphics key="collapsed" value="false"/>
@@ -128,7 +128,7 @@
 							</feature>
 						</alt>
 					</and>
-					<or name="Dynamics">
+					<or mandatory="true" name="Dynamics">
 						<description>Evolution of a system over time</description>
 						<graphics key="collapsed" value="false"/>
 						<or name="SystemType">
@@ -173,11 +173,32 @@
 								systems are a subclass of hybrid systems.
 								Other.
 							</description>
-							<feature name="Linearity"/>
-							<feature name="Time"/>
-							<feature name="Continuity"/>
+							<alt name="Linearity">
+								<feature name="Linear"/>
+								<feature name="Non-linear"/>
+							</alt>
+							<alt name="Time">
+								<feature name="Discrete Time"/>
+								<feature name="Continuous Time"/>
+							</alt>
+							<alt name="Continuity">
+								<feature name="Smooth"/>
+								<and name="Discontiuous">
+									<feature name="Multi-modal system"/>
+									<feature name="Discrete-event System"/>
+									<feature name="Transition system"/>
+									<feature name="Varable structure system"/>
+									<feature name="Switched system"/>
+									<feature name="Reset system"/>
+									<feature name="Jump system"/>
+									<feature name="Impulsive system"/>
+									<feature name="Piecewise-affine system"/>
+									<feature name="Hybrid system"/>
+									<feature name="Other"/>
+								</and>
+							</alt>
 						</or>
-						<feature name="Behavior">
+						<and name="Behavior">
 							<description>
 								States of the system that represent set points. They can
 								be:
@@ -185,13 +206,47 @@
 								systems in a more complex system.
 								Multiple. Multiple different equilibria in the system.
 							</description>
-						</feature>
-						<alt name="Topology">
-							<feature name="Evolution"/>
-							<feature name="Implementatin"/>
-						</alt>
+							<alt mandatory="true" name="Equilibria">
+								<feature name="Common"/>
+								<feature name="Multiple"/>
+							</alt>
+							<feature name="Bifurcations"/>
+							<feature name="Oscillations/Limit cycles"/>
+							<feature name="Hysteresis"/>
+							<feature name="Complex/strange"/>
+							<feature name="Chattering"/>
+							<feature name="Sliding motions"/>
+							<feature name="Phase transitions"/>
+							<feature name="Zenoness"/>
+							<alt mandatory="true" name="Emergent_Behavior">
+								<graphics key="collapsed" value="false"/>
+								<feature name="Collective"/>
+								<feature name="Flocking"/>
+								<feature name="Swarming"/>
+								<feature name="Consensus"/>
+								<feature name="Synchronisation"/>
+								<feature name="SelfOrganisation"/>
+								<feature name="CascadingDynamics"/>
+								<feature name="Cooperation"/>
+								<feature name="Competition"/>
+								<feature name="SelfOrganisedCriticality"/>
+							</alt>
+						</and>
+						<and name="Topology">
+							<alt mandatory="true" name="Evolution">
+								<feature name="Static"/>
+								<feature name="Adaptive"/>
+							</alt>
+							<or mandatory="true" name="Implementation_">
+								<feature name="Logical"/>
+								<and name="Physcal_">
+									<feature name="Component"/>
+									<feature name="Connectors"/>
+								</and>
+							</or>
+						</and>
 					</or>
-					<feature name="Properties">
+					<and mandatory="true" name="Properties">
 						<description>
 							Characteristics related to systems related to control.
 							* Stability. Idea that a system trajectory will keep getting closer and
@@ -229,7 +284,26 @@
 							Probabilistic.
 							Stochastic.
 						</description>
-					</feature>
+						<feature name="Stability"/>
+						<feature name="Dissipativity/Passivity"/>
+						<feature name="Robustness"/>
+						<feature name="Adaptation"/>
+						<feature name="Controllability"/>
+						<feature name="Observability"/>
+						<feature name="Resilience"/>
+						<feature name="Autonomy"/>
+						<feature name="Intelligence"/>
+						<feature name="Consistency"/>
+						<feature name="Heterogeneity"/>
+						<feature name="Sensitivity"/>
+						<feature name="Learning"/>
+						<alt name="Uncertainty">
+							<feature name="Deterministic"/>
+							<feature name="Non-deterministic"/>
+							<feature name="Probabilistic"/>
+							<feature name="Stochastic"/>
+						</alt>
+					</and>
 					<feature name="Diagnostics">
 						<description>Identification of properties in a system.</description>
 					</feature>
@@ -240,8 +314,8 @@
 							goal).
 						</description>
 					</feature>
-				</or>
-				<or name="Human">
+				</and>
+				<or mandatory="true" name="Human">
 					<description>
 						Humans within a CPS perform certain roles within the CPS. Each
 						role represents some capacity or position, where humans playing
@@ -326,7 +400,7 @@
 				</and>
 			</and>
 			<or mandatory="true" name="nonfunctionalReqs">
-				<graphics key="collapsed" value="true"/>
+				<graphics key="collapsed" value="false"/>
 				<feature name="Performance"/>
 				<feature name="Security"/>
 				<feature name="Safety"/>
