@@ -108,9 +108,6 @@
         <Class IRI="#FormalismFamily"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Graphical"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#HybridAutomataBasedFormalism"/>
     </Declaration>
     <Declaration>
@@ -124,6 +121,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#MegamodelFragment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaModel"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MicroModelElement"/>
@@ -195,13 +195,7 @@
         <Class IRI="#SynchronizationRelation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Syntax"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#SyntaxMappingRelation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Textual"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TimedAutomataBasedFormalism"/>
@@ -223,6 +217,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#TransformationTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TranslationalSemantics"/>
     </Declaration>
     <Declaration>
         <Class IRI="#UncertaintyCharacteristic"/>
@@ -382,11 +379,11 @@
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#AbstractSyntax"/>
-        <Class IRI="#ModelingDC"/>
+        <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AbstractSyntax"/>
-        <Class IRI="#Syntax"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Syntax"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ApplicationMegaModel"/>
@@ -430,11 +427,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConcreteSyntax"/>
-        <Class IRI="#ModelingDC"/>
+        <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConcreteSyntax"/>
-        <Class IRI="#Syntax"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Syntax"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConfigurationMegaModel"/>
@@ -517,10 +514,6 @@
         <Class IRI="#FormalismDC"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Graphical"/>
-        <Class IRI="#ConcreteSyntax"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#HybridAutomataBasedFormalism"/>
         <Class IRI="#AutomataBasedFormalism"/>
     </SubClassOf>
@@ -534,6 +527,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MegamodelFragment"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetaModel"/>
         <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
@@ -600,7 +597,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModelingTool"/>
-        <Class IRI="#ModelingDC"/>
+        <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModelingTool"/>
@@ -659,16 +656,8 @@
         <Class IRI="#TransformationRelation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Syntax"/>
-        <Class IRI="#OldLinguisticDC"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#SyntaxMappingRelation"/>
         <Class IRI="#ModelRelation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Textual"/>
-        <Class IRI="#ConcreteSyntax"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TimedAutomataBasedFormalism"/>
@@ -699,6 +688,10 @@
         <Class IRI="#ModelingTool"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#TranslationalSemantics"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Semantics"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#UncertaintyCharacteristic"/>
         <Class IRI="#BehavioralCharacteristic"/>
     </SubClassOf>
@@ -707,17 +700,8 @@
         <Class IRI="#ModelingTool"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#AbstractSyntax"/>
-        <Class IRI="#ConcreteSyntax"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#ApplicationMegaModel"/>
         <Class IRI="#ConfigurationMegaModel"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Language"/>
-        <Class IRI="#Semantics"/>
-        <Class IRI="#Syntax"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#FormalismFamily"/>
@@ -923,14 +907,6 @@
         <Class IRI="#Formalism"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAbstractSyntax"/>
-        <Class IRI="#AbstractSyntax"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAbstractSyntaxSem"/>
-        <Class IRI="#AbstractSyntax"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCharacteristic"/>
         <Class IRI="#FormalismCharacteristic"/>
     </ObjectPropertyRange>
@@ -941,10 +917,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasChildLanguage"/>
         <Class IRI="#Language"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasConcreteSyntax"/>
-        <Class IRI="#ConcreteSyntax"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasConnectedModel"/>
@@ -1018,10 +990,6 @@
         <Class IRI="#FormalismFamily"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasSyntax"/>
-        <Class IRI="#Syntax"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSyntaxMapping"/>
         <Class IRI="#SyntaxMappingRelation"/>
     </ObjectPropertyRange>
@@ -1065,11 +1033,6 @@
         <ObjectProperty IRI="#isToolFor"/>
         <Class IRI="#Language"/>
     </ObjectPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#AbstractSyntax</IRI>
-        <Literal>metamodel</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AnalysisTool</IRI>
@@ -1141,11 +1104,6 @@ Most of the writing below refers primarily to the perspective from the software 
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Communication</IRI>
         <Literal>Communication is the act of conveying intended meanings from one entity or group to another through the use of mutually understood signs and semiotic rules.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#ConcreteSyntax</IRI>
-        <Literal>textual/graphics as in AADL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
@@ -1325,6 +1283,11 @@ semantics.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ModelingTool</IRI>
         <Literal>Tools to model the system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeRemoved"/>
+        <IRI>#OldLinguisticDC</IRI>
+        <Literal></Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

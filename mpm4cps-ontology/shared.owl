@@ -19,9 +19,6 @@
 The detailed specification of the shared onytology is provided in the following subsections.</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#AbstractSyntax"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Activity"/>
     </Declaration>
     <Declaration>
@@ -58,9 +55,6 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#Concern"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ConcreteSyntax"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Constraint"/>
     </Declaration>
     <Declaration>
@@ -88,9 +82,6 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#Goal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Graphical"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Human"/>
     </Declaration>
     <Declaration>
@@ -100,16 +91,13 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#LinguisticDC"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Methodology"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#NaturalLanguage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Organization"/>
+        <Class IRI="#OldRelationDC"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Paradigm"/>
+        <Class IRI="#Organization"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ParadigmDC"/>
@@ -139,9 +127,6 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#Relation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#RelationDC"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Resource"/>
     </Declaration>
     <Declaration>
@@ -166,25 +151,13 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#System"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Textual"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Tool"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ToolDC"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ToolProvider"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Toolchain"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Transition"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TranslationalSemantics"/>
     </Declaration>
     <Declaration>
         <Class IRI="#WorkflowDC"/>
@@ -328,10 +301,6 @@ The detailed specification of the shared onytology is provided in the following 
         <AnnotationProperty IRI="#mpm4cps:usage:cps"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#AbstractSyntax"/>
-        <Class IRI="#Syntax"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Activity"/>
         <Class IRI="#WorkflowDC"/>
     </SubClassOf>
@@ -340,12 +309,16 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#Resource"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ActivityPerformer"/>
+        <Class IRI="#WorkflowDC"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ActivitySet"/>
         <Class IRI="#WorkflowDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Application"/>
-        <Class IRI="#Resource"/>
+        <Class IRI="#ActivityPerformer"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Architecture"/>
@@ -387,16 +360,16 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#ArchitectureDC"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ConcreteSyntax"/>
-        <Class IRI="#Syntax"/>
+        <Class IRI="#Concern"/>
+        <Class IRI="#ProjectManagementDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Constraint"/>
-        <Class IRI="#RelationDC"/>
+        <Class IRI="#OldRelationDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DecisionProcedure"/>
-        <Class IRI="#ParadigmaticProperty"/>
+        <Class IRI="#ParadigmDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EngineeringArtifact"/>
@@ -408,7 +381,7 @@ The detailed specification of the shared onytology is provided in the following 
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EngineeringMethodology"/>
-        <Class IRI="#Methodology"/>
+        <Class IRI="#WorkflowDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EngineeringParadigm"/>
@@ -416,19 +389,11 @@ The detailed specification of the shared onytology is provided in the following 
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EngineeringStage"/>
-        <Class IRI="#Methodology"/>
+        <Class IRI="#WorkflowDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Goal"/>
         <Class IRI="#ProjectManagementDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Graphical"/>
-        <Class IRI="#ConcreteSyntax"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Human"/>
-        <Class IRI="#Application"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Human"/>
@@ -461,20 +426,16 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#DomainConcept"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Methodology"/>
-        <Class IRI="#WorkflowDC"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#NaturalLanguage"/>
         <Class IRI="#Language"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Organization"/>
-        <Class IRI="#ProjectManagementDC"/>
+        <Class IRI="#OldRelationDC"/>
+        <Class IRI="#DomainConcept"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Paradigm"/>
-        <Class IRI="#ParadigmDC"/>
+        <Class IRI="#Organization"/>
+        <Class IRI="#ProjectManagementDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ParadigmDC"/>
@@ -486,7 +447,7 @@ The detailed specification of the shared onytology is provided in the following 
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Participant"/>
-        <Class IRI="#Resource"/>
+        <Class IRI="#ActivityPerformer"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Principle"/>
@@ -502,7 +463,7 @@ The detailed specification of the shared onytology is provided in the following 
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PropertyExpression"/>
-        <Class IRI="#ParadigmaticProperty"/>
+        <Class IRI="#ParadigmDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Purpose"/>
@@ -510,11 +471,7 @@ The detailed specification of the shared onytology is provided in the following 
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Relation"/>
-        <Class IRI="#RelationDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RelationDC"/>
-        <Class IRI="#DomainConcept"/>
+        <Class IRI="#OldRelationDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Resource"/>
@@ -553,44 +510,20 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#ArchitectureDC"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Textual"/>
-        <Class IRI="#ConcreteSyntax"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Tool"/>
         <Class IRI="#Application"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Tool"/>
-        <Class IRI="#Participant"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tool"/>
         <Class IRI="#Resource"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Tool"/>
-        <Class IRI="#ToolDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ToolDC"/>
-        <Class IRI="#DomainConcept"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ToolProvider"/>
         <Class IRI="#Stakeholder"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Toolchain"/>
-        <Class IRI="#ToolDC"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Transition"/>
         <Class IRI="#WorkflowDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TranslationalSemantics"/>
-        <Class IRI="#Semantics"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WorkflowDC"/>
@@ -599,10 +532,6 @@ The detailed specification of the shared onytology is provided in the following 
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasActivities"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasConcerns"/>
-        <ObjectProperty IRI="#hasActivitySet"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSystemActivities"/>
@@ -701,10 +630,6 @@ The detailed specification of the shared onytology is provided in the following 
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isAppliedTo"/>
         <Class IRI="#Constraint"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#toolChainHasTool"/>
-        <Class IRI="#Toolchain"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasActivityPerformer"/>
@@ -851,18 +776,28 @@ The detailed specification of the shared onytology is provided in the following 
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#mpm4cps:author"/>
-        <IRI>#Paradigm</IRI>
+        <IRI>#OldRelationDC</IRI>
         <Literal>Dominique_Blouin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:fullName"/>
+        <IRI>#OldRelationDC</IRI>
+        <Literal>Relation Domain Concepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:toBeRemoved"/>
+        <IRI>#OldRelationDC</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Paradigm</IRI>
-        <Literal>In the usual sense, a paradigm is a set of concepts, patterns, theories, research methods, postulates, and standards that together constitutes a contribution to a domain.</Literal>
+        <IRI>#OldRelationDC</IRI>
+        <Literal>This class groups concepts that are related to the \uidxp{relation} domain. Relations are used everywhere and can be of different kinds depending on the domain. For example, in mathematiics, we have binary relation, directed relation, equivalence relation, finitary relation and so on. Each sub-domain of the MPM4CPS ontology can refine this core relation domain.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#Paradigm</IRI>
-        <Literal>https://en.wikipedia.org/wiki/Paradigm</Literal>
+        <IRI>#OldRelationDC</IRI>
+        <Literal>https://en.wikipedia.org/wiki/Relation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#mpm4cps:author"/>
@@ -940,31 +875,6 @@ The detailed specification of the shared onytology is provided in the following 
         <Literal>Relation or relations may refer to anything that involves communicating with another person, group, society or country.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#mpm4cps:author"/>
-        <IRI>#RelationDC</IRI>
-        <Literal>Dominique_Blouin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#mpm4cps:fullName"/>
-        <IRI>#RelationDC</IRI>
-        <Literal>Relation Domain Concepts</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#mpm4cps:toBeRemoved"/>
-        <IRI>#RelationDC</IRI>
-        <Literal></Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#RelationDC</IRI>
-        <Literal>This class groups concepts that are related to the \uidxp{relation} domain. Relations are used everywhere and can be of different kinds depending on the domain. For example, in mathematiics, we have binary relation, directed relation, equivalence relation, finitary relation and so on. Each sub-domain of the MPM4CPS ontology can refine this core relation domain.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#RelationDC</IRI>
-        <Literal>https://en.wikipedia.org/wiki/Relation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#mpm4cps:website"/>
         <IRI>#Role</IRI>
         <Literal>https://en.wikipedia.org/wiki/Role</Literal>
@@ -985,49 +895,9 @@ The detailed specification of the shared onytology is provided in the following 
         <Literal>https://en.wikipedia.org/wiki/Project_stakeholder</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#mpm4cps:author"/>
-        <IRI>#ToolDC</IRI>
-        <Literal>Dominique_Blouin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#mpm4cps:fullName"/>
-        <IRI>#ToolDC</IRI>
-        <Literal>Tools Domain Concepts</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#ToolDC</IRI>
-        <Literal>This class groups concepts that are related to the \uidxp{tool}s domain. These concepts were initially inspired from the softwware tools domain, which consist of tools used to develop software. The proposed concepts are generalized from software to system development.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#ToolDC</IRI>
-        <Literal>https://en.wikipedia.org/wiki/Programming_tool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#ToolDC</IRI>
-        <Literal>https://en.wikipedia.org/wiki/Toolchain</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ToolProvider</IRI>
         <Literal>Who provides the product and gives the licenses (e.g. company, university, group, ..)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#mpm4cps:author"/>
-        <IRI>#Toolchain</IRI>
-        <Literal>Dominique_Blouin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Toolchain</IRI>
-        <Literal>A toolchain is a set of tools used together to perform development activities to develop a product. In general, the tools of a toolchain are executed consecutively so that the output of each tool becomes the input or starting environment for the next one. For example, a simple toolchain could consist of a compiler and linker, which transform the source code into an executable program, libraries providing interfaces to an operating system and a debugger used to test and debug programs.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#Toolchain</IRI>
-        <Literal>https://en.wikipedia.org/wiki/Toolchain</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#mpm4cps:author"/>

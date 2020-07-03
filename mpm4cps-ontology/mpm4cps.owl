@@ -18,13 +18,37 @@
         <Class IRI="#MPM4CPSDC"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ModelBasedProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelingEngineeringEnv"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#View"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ViewPoint"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasApplicationMegamodel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFramedConcerns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGovernedView"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelingArtifacts"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasStakeholders"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSupportingMegamodelFragments"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSystemConstituentElements"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSystemPart"/>
@@ -41,6 +65,14 @@
     <SubClassOf>
         <Class IRI="#MPM4CPSDC"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedProcess"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelingEngineeringEnv"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringEnvironment"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#View"/>
@@ -71,13 +103,45 @@
             <Class IRI="http://mpm4cps.eu/ontology/cps#SystemPart"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasModelingArtifacts"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasArtifacts"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasTranformationSpecification"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#ActivityPerformer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFramedConcerns"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGovernedView"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelingArtifacts"/>
+        <Class IRI="#ModelingEngineeringEnv"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasStakeholders"/>
         <Class IRI="#ViewPoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSupportingMegamodelFragments"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSystemConstituentElements"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSystemPart"/>
         <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasViewpoint"/>
+        <Class IRI="#ModelBasedProcess"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasViewpoint"/>
@@ -92,8 +156,24 @@
         <Class IRI="#ViewPoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFramedConcerns"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGovernedView"/>
+        <Class IRI="#View"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelingArtifacts"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringArtifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasStakeholders"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSupportingMegamodelFragments"/>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#MegamodelFragment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSystemPart"/>
