@@ -68,7 +68,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModelBasedProcess"/>
+        <Class IRI="#MPM4CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedProcess"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelingEngineeringEnv"/>
+        <Class IRI="#MPM4CPSDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModelingEngineeringEnv"/>

@@ -123,7 +123,7 @@
         <Class IRI="#MegamodelFragment"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MetaModel"/>
+        <Class IRI="#Metamodel"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MicroModelElement"/>
@@ -139,9 +139,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ModelRelation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ModelingActivity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ModelingDC"/>
@@ -530,7 +527,7 @@
         <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MetaModel"/>
+        <Class IRI="#Metamodel"/>
         <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
@@ -574,10 +571,6 @@
             <ObjectProperty IRI="#hasConnectedModel"/>
             <Class IRI="#Model"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ModelingActivity"/>
-        <Class IRI="#ModelingDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModelingDC"/>
