@@ -18,10 +18,16 @@
         <Class IRI="#MPM4CPSDC"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ModelBasedEngineeringArtifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelBasedEngineeringEnv"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ModelBasedProcess"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ModelingEngineeringEnv"/>
+        <Class IRI="#ModelingEngineeringParadigm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#View"/>
@@ -63,24 +69,44 @@
         <ObjectProperty IRI="#isSupportedBy"/>
     </Declaration>
     <SubClassOf>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#Model"/>
+        <Class IRI="#ModelBasedEngineeringArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelRelation"/>
+        <Class IRI="#ModelBasedEngineeringArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MPM4CPSDC"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ModelBasedEngineeringArtifact"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedEngineeringEnv"/>
+        <Class IRI="#MPM4CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedEngineeringEnv"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringEnvironment"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ModelBasedProcess"/>
         <Class IRI="#MPM4CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedProcess"/>
+        <Class IRI="#ModelBasedEngineeringArtifact"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ModelBasedProcess"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Process"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ModelingEngineeringEnv"/>
-        <Class IRI="#MPM4CPSDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ModelingEngineeringEnv"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringEnvironment"/>
+        <Class IRI="#ModelingEngineeringParadigm"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringParadigm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#View"/>
@@ -129,7 +155,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasModelingArtifacts"/>
-        <Class IRI="#ModelingEngineeringEnv"/>
+        <Class IRI="#ModelBasedEngineeringEnv"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasStakeholders"/>
@@ -173,7 +199,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasModelingArtifacts"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringArtifact"/>
+        <Class IRI="#ModelBasedEngineeringArtifact"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasStakeholders"/>
