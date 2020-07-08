@@ -1,0 +1,173 @@
+[comment encoding = UTF-8 /]
+[module catalog('http://www.w3.org/2002/07/owl#')]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::owlHelpers/]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::mpm4cpsHelpers/]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::utils/]
+
+[template public generate(rootDoc : DocumentRoot)]
+	[comment @main/]
+	[file ('catalog.tex', false)]
+[generateFormalisms( rootDoc.ontology->first() )/]
+[generateLanguages( rootDoc.ontology->first() )/]
+[generateTools( rootDoc.ontology->first() )/]
+	[/file]
+[/template]
+
+[template private generateFormalisms( catalogOntology : Ontology ) post(trim())]
+\section{Formalisms}
+\label{sec:formalisms}
+
+The following subsections present the most commonly used formalisms for cyber-physical systems development.
+
+[generateSubFormalisms( catalogOntology, 'subsection', 'Automata-based Formalisms', catalogOntology.catalogAutomataBasedFormalisms( false ) )/]
+[generateSubFormalisms( catalogOntology, 'subsubsection', 'Hybrid Automata-based Formalisms', catalogOntology.catalogHybridAutomataBasedFormalisms( true ) )/]
+
+[generateSubFormalisms( catalogOntology, 'subsection', 'Flow-based Formalisms', catalogOntology.catalogFlowBasedFormalisms( true ) )/]
+
+[generateSubFormalisms( catalogOntology, 'subsection', 'Logic-based Formalisms', catalogOntology.catalogLogicBasedFormalisms( true ) )/]
+
+[generateSubFormalisms( catalogOntology, 'subsection', 'Petri Net-based Formalisms', catalogOntology.catalogPetriNetBasedFormalisms( true ) )/]
+
+[generateSubFormalisms( catalogOntology, 'subsection', 'Other Formalisms', catalogOntology.catalogDirectFormalisms( false ) )/]
+[/template]
+
+[template private generateSubFormalisms( catalogOntology : Ontology, sectionCommand : String, sectionLabel : String, iris : Set( String ) ) post(trim())]
+
+\[sectionCommand/]{[sectionLabel/]}
+	[for ( iri : String | iris )]
+
+\subsubsection{[catalogOntology.completeName( iri )/]}
+\label{subsecF:[iri.toLatexLabel()/]}
+\index{[label( catalogOntology, iri, iri.toLatex() )/]}
+\index{Formalisms![label( catalogOntology, iri, iri.toLatex() )/]}
+[generateParticipants( catalogOntology, iri )/]
+[catalogOntology.commentAss( iri )/]
+[generateFormalismLanguages( catalogOntology, iri, 'textbf' )/]
+[generateUsage( catalogOntology, iri, 'cpsUsage' )/]
+[generateReferences( catalogOntology, iri, 'textbf' )/]
+[generateToDos( catalogOntology, iri )/]
+	[/for]
+[/template]
+
+[template private generateLanguages( catalogOntology : Ontology ) post(trim())]
+\section{Languages}
+\label{sec:languages}
+
+The following subsections present the most commonly used languages for CPS development.
+	[for ( iri : String | catalogOntology.catalogLanguages() )]
+
+\subsection{[catalogOntology.completeName( iri )/]}
+\label{subsecL:[iri.toLatexLabel()/]}
+\index{[label( catalogOntology, iri, iri.toLatex() )/]}
+\index{Languages![label( catalogOntology, iri, iri.toLatex() )/]}
+[generateParticipants( catalogOntology, iri )/]
+[catalogOntology.commentAss( iri )/]
+[generateLanguageFormalisms( catalogOntology, iri, 'textbf' )/]
+[generateLanguageTools( catalogOntology, iri, 'textbf' )/]
+[generateReferences( catalogOntology, iri, 'textbf' )/]
+[generateToDos( catalogOntology, iri )/]
+	[/for]
+[/template]
+
+[template private generateTools( catalogOntology : Ontology ) post(trim())]
+\section{Tools}
+\label{sec:tools}
+
+The following subsections present the most commonly used tools for CPS development.
+	[for ( iri : String | catalogOntology.catalogTools() )]
+
+\subsection{[catalogOntology.completeName( iri )/]}
+\label{subsecT:[iri.toLatexLabel()/]}
+\index{[label( catalogOntology, iri, iri.toLatex() )/]}
+\index{Tools![label( catalogOntology, iri, iri.toLatex() )/]}
+[generateParticipants( catalogOntology, iri )/]
+[catalogOntology.commentAss( iri )/]
+[generateToolLanguages( catalogOntology, iri, 'textbf' )/]
+[generateReferences( catalogOntology, iri, 'textbf' )/]
+[generateToDos( catalogOntology, iri )/]
+	[/for]
+[/template]
+
+[template private generateLanguageTools( catalogOntology : Ontology, iri : String, sectionCommand : String )]
+
+\[sectionCommand/]{Supporting Tools}
+
+	[if ( catalogOntology.languageTools( iri )->isEmpty() ) ]
+None
+	[else]
+[label( catalogOntology, iri, iri.toLatex() )/] is implemented by the following tools:
+\begin{itemize}
+		[for ( langIri : String | catalogOntology.languageTools( iri ) ) ]
+	\item [label( catalogOntology, langIri, langIri.toLatex() )/] (see section \ref{subsecT:[langIri.toLatexLabel()/]})
+		[/for]
+\end{itemize}
+	[/if]
+[/template]
+
+[template private generateLanguageFormalisms( catalogOntology : Ontology, iri : String, sectionCommand : String )]
+
+\[sectionCommand/]{Supported Formalisms}
+
+	[if ( catalogOntology.languageFormalisms( iri )->isEmpty() ) ]
+None
+	[else]
+[label( catalogOntology, iri, iri.toLatex() )/] is based on the following formalisms:
+\begin{itemize}
+		[for ( formIri : String | catalogOntology.languageFormalisms( iri ) ) ]
+	\item [label( catalogOntology, formIri, formIri.toLatex() )/] (see section \ref{subsecF:[formIri.toLatexLabel()/]})
+		[/for]
+\end{itemize}
+	[/if]
+[/template]
+
+[template private generateToolLanguages( catalogOntology : Ontology, iri : String, sectionCommand : String )]
+
+\[sectionCommand/]{Supported Languages}
+
+	[if ( catalogOntology.toolLanguages( iri )->isEmpty() ) ]
+None
+	[else]
+[label( catalogOntology, iri, iri.toLatex() )/] is a tool for the following languages:
+\begin{itemize}
+		[for ( langIri : String | catalogOntology.toolLanguages( iri ) ) ]
+	\item [label( catalogOntology, langIri, langIri.toLatex() )/] (see section \ref{subsecL:[langIri.toLatexLabel()/]})
+		[/for]
+\end{itemize}
+	[/if]
+[/template]
+
+[template private generateFormalismLanguages( catalogOntology : Ontology, iri : String, sectionCommand : String )]
+
+\[sectionCommand/]{Implementing Languages}
+
+	[if ( catalogOntology.formalismLanguages( iri )->isEmpty() ) ]
+None
+	[else]
+[label( catalogOntology, iri, iri.toLatex() )/] is a formalism for the following languages:
+\begin{itemize}
+		[for ( formIri : String | catalogOntology.formalismLanguages( iri ) ) ]
+	\item [label( catalogOntology, formIri, formIri.toLatex() )/] (see section \ref{subsecL:[formIri.toLatexLabel()/]})
+		[/for]
+\end{itemize}
+	[/if]
+[/template]
+
+[template private generateUsage( catalogOntology : Ontology, iri : String, sectionCommand : String )]
+
+\[sectionCommand/]{Usage for CPS Development}
+
+[if ( catalogOntology.cpsUsages( iri )->isEmpty() ) ]
+\todoAuthors{Provide ``mpm4cps:usage:cps'' annotation assertion in ontology}
+[else]
+\beginCpsUsage{itemize}
+[for ( ref : String | catalogOntology.cpsUsages( iri ) ) ]
+
+	[if ( ref.citeKey() <> null ) ]
+\itemCpsUsage \bibentryCpsUsage{[ ref.citeKey() /]}
+	[else]
+\itemCpsUsage [ref.toLatexURL()/]
+	[/if]
+[/for]
+\bendCpsUsage{itemize}
+[/if]
+[/template]

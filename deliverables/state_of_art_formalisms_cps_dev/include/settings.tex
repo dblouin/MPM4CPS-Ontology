@@ -1,0 +1,120 @@
+%-------------------------------------------------------------------------------------------------
+% This settings.tex contains settings required for *all* documents (reports, presentations, etc)
+% Project or Report specific settings should go to their own settings files (eg CE/settings.tex)
+% This file is included after the class definition and before project and report specific settings 
+%-------------------------------------------------------------------------------------------------
+
+%--------Useful packages (required by the example files, turn off if you do not use them)-------
+\usepackage[dutch,american]{babel}	% Make American-English hyphenation (and settings) and Dutch available (for summary)
+\usepackage{include/files/atbeginend} % Allows to add commands before/after an environment
+%\usepackage{subfig}				% Provides support for (sub)figures and (sub)tables
+%\usepackage{float}					% Improved interface for floating objects (eg figures, tables, ...)
+\usepackage{listings}				% Allows (external) source files to be shown in a syntax highlighted way
+%\usepackage{amsmath}				% Provides miscellaneous enhancements for documents containing formulas
+\usepackage{datetime}				% Provides commands for displaying the current time
+\usepackage{eurosym}				% Defines \euro command to display euro symbols
+%\usepackage{appendix}				% Makes it possible to modify appendix numbering
+%\usepackage{longtable}				% Allows tables to span multiple pages
+%\usepackage{units}					% Shows units (eg m/s) in a nice way
+%\usepackage{ctable}				% Provides \ctable command for the typesetting of table and figure floats
+%\usepackage{ccaption}				% Support continuation captions (eg multi-page tables)
+%\usepackage{verbatim}				% Adds verbatim environment, in which texts are exactly copied to the output
+%\usepackage{pdfpages}				% Include PDF pages/documents in the current document
+\usepackage[draft]{todonotes}
+\iffinalversion
+	\usepackage[final]{include/files/notes}% Add note commands, [final] removes all notes from the document
+	\usepackage[final]{include/files/rro}  % Add Rich Report Outline support, [final] removes all RRO output from document
+\else
+	\usepackage{include/files/notes}       % Add note commands
+	\usepackage{include/files/rro}         % Add Rich Report Outline support
+\fi
+
+\usepackage{bibentry}
+
+\usepackage{url}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+\nobibliography*
+
+% Add wrongly (or unknown) hyphened words here (space separated and - at possible hyphenation positions):
+%\hyphenation{}
+
+%% Spacing possibilities for captions are available as well
+% See captions.pdf for all options!
+%\captionsetup{aboveskip=4pt, belowskip=-9pt}
+
+%% Include verbatim in the subfigure env
+% From: subfig.pdf, section 4.4
+% <Uncomment if verbatim is required in subfloat>:
+%\makeatletter
+%\newbox\sf@box
+%\let\orig@subfloat\subfloat
+%\renewenvironment{subfloat}[2][]%
+%{ \def\sf@one{#1}%
+%  \def\sf@two{#2}%
+%  \setbox\sf@box\hbox
+%  \bgroup}%
+%{ \egroup
+%  \ifx\@empty\sf@two\@empty\relax
+%    \def\sf@two{\@empty}
+%  \fi
+%  \ifx\@empty\sf@one\@empty\relax
+%    \orig@subfloat[\sf@two]{\box\sf@box}%
+%  \else
+%    \orig@subfloat[\sf@one][\sf@two]{\box\sf@box}%
+%  \fi}
+%\makeatother
+%% Uncomment till here
+  
+%% Automatically provide H option for floats
+% Requires float package
+% \floatplacement{figure}{H} 
+% \floatplacement{table}{H} 
+
+%% abbreviation making
+\newcommand{\abbr}[1]{(\textit{#1})}
+
+%%lstlisting settings
+\lstset{	%aboveskip=20pt,%
+		numbers=none, %no line numbers
+%		numbers=left, %show line numbers
+		numberstyle=\tiny,%
+		frame=single,% 
+		frameround={t}{t}{t}{t},% 
+		numbersep=5pt,% 
+		language=C,%
+		captionpos=b,%
+		morecomment=[s][\itshape]{<}{>}, %also define <> as comment
+		morecomment=[s][\itshape]{[}{]} %also define [] as comment
+}
+
+%lstinline with empty language definition
+\lstdefinelanguage{empty}{}
+\newcommand{\mylstinline}[1]{{\lstinline[language=empty]{#1}}}
+
+\newcommand{\authors}[1]{\textit{Author(s): #1}}
+
+\newcommand{\reviewers}[1]{\textit{Reviewer(s): #1}}
+
+% DB: Command for todos
+\newcommand{\todoAuthors}[1]{\textbf{TODO Author(s): #1}}
+\newcommand{\cpsUsage}[1]{\textbf{#1}}
+\newcommand{\beginCpsUsage}[1]{\begin{#1}}
+\newcommand{\itemCpsUsage}{\item}
+\newcommand{\bibentryCpsUsage}[1]{\bibentry{#1}}
+\newcommand{\bendCpsUsage}[1]{\end{#1}}
+
+%\newcommand{\todoAuthors}[1]{}
+%\newcommand{\cpsUsage}[1]{}
+%\newcommand{\beginCpsUsage}[1]{}
+%\newcommand{\itemCpsUsage}{}
+%\newcommand{\bibentryCpsUsage}[1]{}
+%\newcommand{\bendCpsUsage}[1]{}
+
+%% Don't show warnings like: ``PDF inclusion: found PDF version <1.x>, but at most version <1.4> allowed
+% Uncomment if you experience these kind of warnings 
+%\ifpdf
+%	\pdfminorversion=6 
+%\fi

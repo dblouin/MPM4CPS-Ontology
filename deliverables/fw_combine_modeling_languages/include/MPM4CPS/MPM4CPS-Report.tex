@@ -1,0 +1,64 @@
+%% Some test settings (will be removed by the Report Generator)
+
+\documentclass{include/MPM4CPS/MPM4CPS-Report} 
+\settitle{This is my beautiful report title}
+\setauthor{Donald Duck}
+\input{include/settings}
+% Till here the file will be skipped by the document generator
+
+\begin{document}
+\makerro
+
+\frontmatter
+
+\setdisseminationlevel{Restricted}
+\setdeliverablenumber{D1.1}
+%\setdocduedate{June 1, 2010}
+\setleadbeneficiary{Utwente}
+
+\addversion{0.1}{$CreationDate$}{$Authors$}{Initial document version}
+
+% Generates the information and version tables
+\maketitle
+
+\cleardoublepage
+
+% The front matter starts here
+
+%\include{Summary}
+
+%\include{Preface}
+
+% In a two-sided printing style, it makes the next page a right-hand
+% (odd-numbered) page, producing a blank page if necessary.
+%\cleardoublepage
+
+% Add the table of contents pages (TOC) 
+\tableofcontents
+
+
+% The report body, i.e. the main matter, starts here
+\mainmatter
+
+% Either type the text, or include chapter tex files
+
+
+% Appendix starts here
+%\appendix
+%\include{Appendix1}
+
+
+
+% Bibliography starts here
+\backmatter
+
+% Generate bibliography
+\fancyhead[LO]{Bibliography}
+\bibliographystyle{include/files/CE-bibtex}
+\label{ch:bib} %label to refer to
+\bibliography{bibliography} 
+
+
+
+\end{document}
+

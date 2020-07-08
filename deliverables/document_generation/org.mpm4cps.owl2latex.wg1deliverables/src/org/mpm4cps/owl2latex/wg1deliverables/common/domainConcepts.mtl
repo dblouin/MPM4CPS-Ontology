@@ -1,0 +1,45 @@
+[comment encoding = UTF-8 /]
+[module domainConcepts('http://www.w3.org/2002/07/owl#')]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::owlHelpers/]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::mpm4cpsHelpers/]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::utils/]
+
+[template public generateDomainConcepts( ontology : Ontology ) post(trim())]
+	[for ( subClassOf : SubClassOf | ontology.subClassOf->select( isLocalDomainConcept() )->sortedBy( ontology.completeName( extendingClass().iRI ) ) )]
+
+\subsection{[ontology.completeName( subClassOf.extendingClass().iRI )/]}
+\label{subsecDC:[subClassOf.toLatexLabel()/]}
+
+[ontology.commentAss( subClassOf.extendingClass().iRI )/]
+
+[generateAllConcepts( ontology, subClassOf.extendingClass().iRI )/]
+
+[generateToDos( ontology, subClassOf.extendingClass().iRI )/]
+	[/for]
+[/template]
+
+[template public generateAllConcepts( ontology : Ontology, dcIri : String ) post(trim())]
+	[for ( classIri : String | ontology.allExtendingClassIris( dcIri )->sortedBy( el | ontology.completeName( el) ) )]
+
+\subsubsection{[classIri.toLatex()/]}
+\label{subsubsecC:[classIri.toLatexLabel()/]}
+\didx{[classIri.toLatexLabel()/]}
+
+[ontology.commentAss( classIri )/]
+
+\textbf{Subclass of}
+		[if ontology.extendedClasses( classIri )->isEmpty() ]
+None
+		[else]
+\begin{itemize}
+			[for ( className : String |  ontology.extendedClasses( classIri )->sortedBy( self ) ) ]
+	\item \textbf{[className.toLatex()/]} (see section \ref{[if ontology.isDomainConcept( className ) ]subsecDC:[else]subsubsecC:[/if][className.toLatexLabel()/]})
+			[/for]
+\end{itemize}
+		[/if]
+
+[generateReferences( ontology, classIri, 'textbf', false )/]
+
+[generateToDos( ontology, classIri )/]
+	[/for]
+[/template]

@@ -1,0 +1,30 @@
+\documentclass[a4paper]{include/MPM4CPS/MPM4CPS-Report}                                                % Enables rro/notes/line numbers/date in footer
+\settitle{Report on the work of MPM4CPS: Rich Report Outline}
+\setauthor{Jan F. Broenink and others}
+\input{include/settings}
+
+\begin{document}
+% Disable paragraph indention
+\parindent=0pt
+
+% \makeatletter is required to define a macro with a @ (at) in the name
+\makeatletter
+% Create @mkboth macro to prevent undefined macro texts (with contents and/or bibliography))
+\def\@mkboth#1#2{}
+
+% .rro file contains commands to build the actual document
+% Check where .rro file resides
+% (Texlipse is able to put it in a tmp folder to have it out of the way)
+\input{RichReportOutline.rro}
+
+% Disable \makeatletter here, since the RichReportOutline.rro contains the \@mkboth!!
+% Counterpart of \makeatletter (needed after include, due to \@ commands in rro)
+\makeatother
+
+\IfFileExists{bibliography.bib}{
+	% Support for citations
+	\bibliographystyle{include/files/CE-bibtex}
+	\bibliography{bibliography}
+}%
+
+\end{document}

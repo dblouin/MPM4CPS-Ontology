@@ -1,0 +1,291 @@
+[comment encoding = UTF-8 /]
+[module owlHelpers('http://www.w3.org/2002/07/owl#' )]
+
+[query public extendedPropertyIries( ontology : Ontology, propIri : String ) : Sequence( String ) =
+	subObjectPropertyOf->select( extendingProperty().iri().normEquals( propIri ) )->collect( extendedProperty().iri() )->select( el | el <> 'owl:topObjectProperty' )
+/]
+
+[query public iri( property : ObjectProperty ) : String =
+	if iRI <> null then
+		iRI
+	else
+		abbreviatedIRI
+	endif
+/]
+[query public extendingProperty( subPropOf : SubObjectPropertyOf ) : ObjectProperty =
+	subPropOf.objectProperty->first()
+/]
+
+[query public extendedProperty( subPropOf : SubObjectPropertyOf ) : ObjectProperty =
+	subPropOf.objectProperty->last()
+/]
+
+[query public objectPropertyRanges( ontology : Ontology, propIri : String ) : Sequence( String ) =
+	objectPropertyRange->select( isRangeFor( propIri ) )->collect( range() )
+/]
+
+[query public range( objPropRange : ObjectPropertyRange ) : String =
+	if class <> null then
+		class.iRI
+	else
+		if objectAllValuesFrom <> null then
+			'only '.concat( objectAllValuesFrom.class.iRI )
+		else
+			if objectExactCardinality <> null then
+				'exactly '.concat( objectExactCardinality.cardinality.toString() ).concat( ''.separator() ).concat( objectExactCardinality.class.iRI )
+			else
+				'TODO finish implementing range helper'
+			endif
+		endif
+	endif
+/]
+
+[query public separator( dummy : String ) : String = '::' /]
+
+[query public rangeType( objPropRange : String ) : String =
+	let index : Integer = lastIndexOf( separator() ) in
+		if index > 0 then
+			substring( 1, index - 1 ).concat( ' ' )
+		else
+			null
+		endif
+/]
+
+[query public rangeClassIri( objPropRange : String ) : String =
+	let index : Integer = lastIndexOf( separator() ) in
+		if index > 0 then
+			substring( index )
+		else
+			objPropRange
+		endif
+/]
+
+[query public isRangeFor( objPropRange : ObjectPropertyRange, propIri : String ) : Boolean =
+	objectProperty.iRI.normEquals( propIri )
+/]
+
+[query public objectPropertyDomains( ontology : Ontology, propIri : String ) : Sequence( String ) =
+	objectPropertyDomain->select( isDomainFor( propIri ) )->collect( domain() )
+/]
+
+[query public isDomainFor( objPropDomain : ObjectPropertyDomain, propIri : String ) : Boolean =
+	objectProperty.iRI.normEquals( propIri )
+/]
+
+[query public domain( objPropDomain : ObjectPropertyDomain ) : String =
+	if class <> null then
+		class.iRI
+	else
+		if objectSomeValuesFrom <> null then
+			'some '.concat( objectSomeValuesFrom.class.iRI )
+		else
+			if objectExactCardinality <> null then
+				objectExactCardinality.cardinality.toString().concat( ''.separator() ).concat( objectExactCardinality.class.iRI )
+			else
+				'TODO finish implementing domainType helper'
+			endif
+		endif
+	endif
+/]
+
+[query public domainType( objPropDomain : String ) : String =
+	let index : Integer = lastIndexOf( separator() ) in
+		if index > 0 then
+			substring( 1, index - 1 ).concat( ' ' )
+		else
+			null
+		endif
+/]
+
+[query public domainClassIri( objPropDomain : String ) : String =
+	let index : Integer = lastIndexOf( separator() ) in
+		if index > 0 then
+			substring( index )
+		else
+			self
+		endif
+/]
+
+[query public toLatexLabel( iriStr : String ) : String =
+	if iriStr.size() < 1 then
+		iriStr
+	else
+		normalize().substring( 2 )
+	endif
+/]
+
+[query public toLatex( iriStr : String ) : String =
+	toLatexLabel().escapeSpecialLatexChars()
+/]
+
+[query public escapeSpecialLatexChars( expression : String ) : String =
+	replaceAll( '_', '\\\\textunderscore ' ).replaceAll( '&', '\\\\&' )
+/]
+
+[query public toLatexURL( ref : String ) : OclAny =
+	invoke( 'org.mpm4cps.owl2latex.wg1deliverables.common.LatexUtils', 'toLatexURL( java.lang.String )', Sequence { ref } )
+/]
+
+[query public hasDomainIndividual( assertion : ObjectPropertyAssertion, iri : String ) : Boolean =
+	namedIndividual->first().iRI.normEquals( iri )
+/]
+
+[query public hasRangeIndividual( assertion : ObjectPropertyAssertion, iri : String ) : Boolean =
+	namedIndividual->last().iRI.normEquals( iri )
+/]
+
+[query public seeAlso( ontology : Ontology, iri : String ) : Set( String ) =
+	let seeAlsoAss : Set( AnnotationAssertion ) = seeAlsoAssertions()->select( annotates( iri ) ) in
+		seeAlsoAss->collect( literal.value )->asSet()
+/]
+
+[query public seeAlsoAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isSeeAlso() )
+/]
+
+[query public isSeeAlso( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isSeeAlso() 
+/]
+
+[query public isSeeAlso( annProperty : AnnotationProperty ) : Boolean =
+	abbreviatedIRI = 'rdfs:seeAlso' 
+/]
+
+[query public commentAnnotations( ontology : Ontology ) : String =
+	let commentAnn : Set( Annotation ) = annotation->select( annotationProperty.isComment() ) in
+	
+	if commentAnn->isEmpty() then
+		'\\todoAuthors{Provide ``rdfs:comment\'\' annotation in ontology}'
+	else
+		commentAnn->collect( literal.value.escapeSpecialLatexChars() )
+	endif
+/]
+
+[query public commentAss( ontology : Ontology, iri : String ) : String =
+	ontology.commentAss( iri, '\\todoAuthors{Provide ``rdfs:comment\'\' annotation in ontology}' )
+/]
+
+[query public commentAss( ontology : Ontology, iri : String, default : String ) : String =
+	let commentAss : Set( AnnotationAssertion ) = commentAssertions()->select( annotates( iri ) ) in
+	
+	if commentAss->isEmpty() then
+		default
+	else
+		commentAss->any( true ).literal.value.escapeSpecialLatexChars()
+	endif
+/]
+
+[query public commentAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isComment() )
+/]
+
+[query public isComment( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isComment() 
+/]
+
+[query public isComment( annProperty : AnnotationProperty ) : Boolean =
+	abbreviatedIRI = 'rdfs:comment' 
+/]
+
+[query public label( ontology : Ontology, iri : String ) : String =
+	label( ontology, iri, null )
+/]
+
+[query public label( ontology : Ontology, iri : String, default : String ) : String =
+	let labelAss : Set( AnnotationAssertion ) = labelAssertions()->select( annotates( iri ) ) in
+	
+	if labelAss->isEmpty() then
+		default
+	else
+		labelAss->any( true ).literal.value.escapeSpecialLatexChars()
+	endif
+/]
+
+[query public labelAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isLabel() )
+/]
+
+[query public isLabel( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isLabel() 
+/]
+
+[query public isLabel( annProperty : AnnotationProperty ) : Boolean =
+	abbreviatedIRI = 'rdfs:label' 
+/]
+
+[query public annotates( assertion : AnnotationAssertion, iri : String ) : Boolean =
+	iRI.value = iri
+/]
+
+[query public allExtendingClassIris( ontology : Ontology, classIri : String ) : Sequence( String ) =
+	allExtendingClasses( classIri )->collect( iRI )
+/]
+
+[query public extendedClasses( ontology : Ontology, classIri : String ) : Sequence( String ) =
+	subClassOf->select( extendingClass().iRI.normEquals( classIri ) )->collect( extendedClass().iRI )
+/]
+
+[query public allExtendingClasses( ontology : Ontology, classIri : String ) : Sequence( Class ) =
+	declaration->select( class <> null )->select( isExtending( class.iRI, classIri, true ) )->
+		select( not class.iRI.normEquals( classIri ) )->collect( class )
+/]
+
+[query public isExtending( 	ontology : Ontology,
+							class1Uri : String,
+							class2Uri : String,
+							recursive : Boolean ) : Boolean =
+	ontology.isExtending( class1Uri, class2Uri, recursive, Set{} )
+/]
+
+[query public isExtending( 	ontology : Ontology, 
+							class1Uri : String, 
+							class2Uri : String,
+							recursive : Boolean,
+							traversed : Set( SubClassOf ) ) : Boolean =
+	if class1Uri.normEquals( class2Uri ) then
+		true
+	else
+		if recursive then
+			if subClassOf->exists( el | el.isExtending( class1Uri, class2Uri ) ) then
+				true
+			else
+				subClassOf->select( el | not traversed->includes( el ) )->select( extendingClass().iRI.normEquals( class1Uri ) )->exists( el | ontology.isExtending( el.extendedClass().iRI, class2Uri, recursive, traversed->union( Set{ el } ) ) )
+			endif
+		else
+			false
+		endif
+	endif
+/]
+
+[query public isExtending( relation : SubClassOf, class1 : Class, class2 : Class ) : Boolean =
+	isExtending( class1.iRI, class2.iRI )
+/]
+
+[query public isExtending( relation : SubClassOf, uri1 : String, uri2 : String ) : Boolean =
+	extendingClass().iRI.normEquals( uri1 ) and extendedClass().iRI.normEquals( uri2 )
+/]
+
+[query public extendingClass( subClassOf : SubClassOf ) : Class =
+	class->first()
+/]
+
+[query public extendedClass( subClassOf : SubClassOf ) : Class =
+	class->last()
+/]
+
+[query public normEquals( iri1 : String, iri2 : String ) : Boolean =
+	normalize() = iri2.normalize()
+/]
+
+[query public normalize( iri : String ) : String =
+	let index : Integer = iri.lastIndexOf( '#' ) in
+		if index > 0 then
+			substring( index )
+		else
+			self
+		endif
+/]
+
+[query public isLocal( iri : String ) : Boolean =
+	lastIndexOf( '#' ) = 1
+/]

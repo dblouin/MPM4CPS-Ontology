@@ -1,0 +1,55 @@
+[comment encoding = UTF-8 /]
+[module utils('http://www.w3.org/2002/07/owl#')]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::owlHelpers/]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::mpm4cpsHelpers/]
+
+[template public generateReferences( ontology : Ontology, iri : String, sectionCommand : String )]
+[generateReferences( ontology, iri, sectionCommand, true )/]
+[/template]
+
+[template public generateReferences( ontology : Ontology, iri : String, sectionCommand : String, generateTODO : Boolean )]
+
+[if ( generateTODO and ontology.seeAlso( iri )->isEmpty() )]
+\[sectionCommand/]{References}
+
+\todoAuthors{Provide ``rdfs:seeAlso'' annotation in ontology}
+[elseif ( not  ontology.seeAlso( iri )->isEmpty() )]
+\[sectionCommand/]{References}
+\begin{itemize}
+	[for ( ref : String | ontology.seeAlso( iri ) )]
+	
+		[if ( ref.citeKey() <> null ) ]
+\item \bibentry{[ ref.citeKey() /]}
+		[else]
+\item [ref.toLatexURL()/]
+		[/if]
+[/for]
+\end{itemize}
+[/if]
+[/template]
+
+[template public generateParticipants( ontology : Ontology, iri : String )]
+[if ( ontology.authors( iri )->isEmpty() ) ]
+\todoAuthors{Provide ``mpm4cps:author'' annotation assertion in ontology}
+[else]
+\authors{[for ( ref : String | ontology.authors( iri ) ) ][ref/][if ( ref <> ontology.authors( iri )->last() )], [/if][/for]}
+[/if]
+
+[if ( not ontology.reviewers( iri )->isEmpty() ) ]
+\reviewers{[for ( ref : String | ontology.reviewers( iri ) ) ][ref/][if ( ref <> ontology.reviewers( iri )->last() )], [/if][/for]}
+[/if]
+[/template]
+
+[template public generateToDos( ontology : Ontology )]
+	[for ( toDo : String | ontology.toDos() ) ]
+
+\todoAuthors{[toDo/]}
+	[/for]
+[/template]
+
+[template public generateToDos( ontology : Ontology, iri : String )]
+	[for ( toDo : String | ontology.toDos( iri ) ) ]
+
+\todoAuthors{[toDo/]}
+	[/for]
+[/template]

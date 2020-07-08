@@ -1,0 +1,4762 @@
+\section{Formalisms}
+\label{sec:formalisms}
+
+The following subsections present the most commonly used formalisms for CPS development.
+
+\subsection{AbstractStateMachines}
+\label{subsecF:AbstractStateMachines}
+% \reviewers{Soumy (reviewed old version)}
+
+\authors{Stefan} 
+
+\checkok{SK complete rewrite}
+
+\integrated{DB}
+
+Abstract state machines (ASM) are a formalism that model the states and their transitions.
+ASM are an extension of finite state machines (FSM) and allow the representation of states as arbitrary data types. The formalism aims to bridge the gap between human-readable, easily understandable specifications and machine-executable code.
+Application areas of ASM are for example the modelling and verification of programming languages, protocols, embedded systems, etc.
+
+
+% Abstract state machine (ASM) is one of the type state machine which operates on state which are arbitrary data structures. 
+% The ASM method is both practically and scientifically well-founded systems engineering method which bridges the gap between the two ends of system development.
+
+% The method built around the notion of Abstract State Machine (ASM) has been proved to be a scientifically well founded and an industrially viable method for the design and analysis of complex systems, which has been applied successfully to programming languages, protocols, embedded systems, architectures, requirements engineering, etc. The analysis covers both verification and validation, using mathematical reasoning (possibly theorem-prover-verified or model-checked) or experimental simulation (by running the executable models).
+
+\subsubsection{Implementing Languages}
+
+AbstractStateMachines is a formalism for the following languages:
+\begin{itemize}
+	\item AsmL (see section \ref{subsecL:AsmL})
+	\item AsmGofer (\url{https://tydo.eu/AsmGofer/})
+\end{itemize}
+
+Tools:
+\begin{itemize}
+    \item \url{http://asmeta.sourceforge.net/}
+\end{itemize}
+
+
+\subsubsection{References}
+
+Egon B\"{o}rger and Wolfram Schulte, "A Programmer Friendly Modular Definition of the Semantics of Java". In J. Alves-Foss, ed., "Formal Syntax and Semantics of Java", Springer LNCS 1523, 1998. \\
+Summary: A modular specification of the dynamic semantics of Java using ASMs.
+
+ASM Book: \url{http://pages.di.unipi.it/boerger/AsmBook/}
+
+\url{http://web.eecs.umich.edu/gasm/intro.html}
+
+\cite{Borger2005}
+
+\subsection{BayesianNetworks}
+\label{subsecF:BayesianNetworks}
+
+% \authors{Rima Al Ali} (copy & paste)
+% \reviewers{Florin Leon}
+\authors{Stefan}
+
+\checkok{SK rewrite}
+
+Bayesian networks are a formalism that establishes a probabilistic graph model.
+The vertices of the directed acyclic graph represent random variable probabilities and edges between them represent probabilistic dependencies. Hence each vertex depends on its predecessors.
+Bayesian networks are well-suited to create simple computations for models with many variables.
+They can further be used to encode hypotheses, hypotheses, beliefs, and latent variables.
+
+% Bayesian networks are a type of probabilistic graphical model that uses Bayesian inference for probability computations. Bayesian networks aim to model conditional dependence, and therefore causation, by representing conditional dependence by edges in a directed graph. Through these relationships, one can efficiently conduct inference on the random variables in the graph through the use of factors.
+
+% Bayesian networks (BNs), also known as belief networks, belong to the family of probabilistic graphical models (GMs). These graphical structures are used to represent knowledge about an uncertain domain. In particular, a Bayesian network is a directed acyclic graph where each node represents a random variable, while the edges between the nodes represent probabilistic dependencies among the corresponding random variables. A key assumption is that a node depends only on its "parents", i.e. direct predecessors in the directed graph. Thus, the number of parameters needed to describe these conditional probabilities is much smaller than the number of parameters needed to describe the joint probability distributions of all the nodes. These conditional dependencies in the graph are often estimated by using known statistical and computational methods. Hence, BNs combine principles from graph theory, probability theory, computer science, and statistics.
+
+\subsubsection{Implementing Languages}
+
+None
+
+\subsubsection{Usage for CPS Development}
+
+\cite{POC2011}
+\cite{KST2014}
+\cite{N2013}
+
+
+\subsubsection{References}
+
+\url{https://onlinelibrary.wiley.com/doi/full/10.1002/9780470061572.eqr089}
+	
+\url{https://www.bayesserver.com/docs/introduction/bayesian-networks}
+	
+\url{http://www.cs.ubc.ca/~murphyk/Bayes/bnintro.html}
+
+
+% \subsection{CTLSpecification}\reviewers{Didier Buchs, Soumy}
+% \label{subsecF:CTLSpecification}
+
+% A CTL specification is given as a formula in the temporal logic CTL.
+% Computation tree logic (CTL) is a branching-time logic, meaning that its model of time is a tree-like structure in which the future is not determined; there are different paths in the future, any one of which might be an actual path that is realized. It is used in formal verification of software or hardware artifacts, typically by software applications known as model checkers which determine if a given artifact possesses safety or liveness properties.
+
+% \subsubsection{Implementing Languages}
+
+% CTLSpecification is a formalism for the following languages:
+% \begin{itemize}
+% 	\item CTL (see section \ref{subsecL:CTL})
+% \end{itemize}
+
+
+% \subsubsection{References}
+
+
+\subsection{Temporal Logic}
+\label{subsecF:CTLSpecification}
+\authors{Stefan}
+
+\checkok{new section}
+
+A temporal logic (also ``tense logic'') system is a formal mathematical system that allows the reasoning about terms and their truth value related to time. It is an extension of first-order logic and allows the expression of statements such as ``I always model CPS'', ``I will eventually model a CPS'' and ``I will not model CPS until I find a good formalism''. 
+
+Temporal logic is frequently used in formal verification, where it is used to formally express requirements (e.g. the reaching of a certain state).
+Popular temporal logic systems are for example the linear temporal logic (LTL), computation tree logic (CTL) and Hennessyâ€“Milner logic (HML).
+
+\subsubsection{Implementing Languages}
+
+\begin{itemize}
+	\item CTL (see section \ref{subsecL:CTL})
+	\item LTL (need ref ?)
+\end{itemize}
+
+
+\subsubsection{References}
+
+Amir Pnueli: The Temporal Logic of Programs FOCS 1977: 46--57
+
+
+
+
+
+
+\subsection{CausalBlockDiagrams}
+\label{subsecF:CausalBlockDiagrams}
+\authors{Stefan}
+
+\checkok{rewritten from scratch}
+
+Causal block diagrams are a visual modelling formalism that connects operation blocks in a graph structure.
+The graph's operation block nodes represent computations or transformations of signals, edges model the signals themselves.
+Typical operation blocks are algebraic functions (e.g. sum, product) but can also represent timed functionality (e.g. delays, integration or derivatives).
+The formalism is used in many visual modelling tools (e.g. Simulink) and graphical programming languages (e.g. LabVIEW).
+
+% A Causal Block Diagram model is a graph made up of connected operation blocks. The connections stand for signals. Blocks can be purely algebraic such as Adder and Product, or may involve some notion of time such as Delay, Integrator and Derivative. Furthermore, Input and Output blocks are often used to model the system's connection to its environment.
+
+
+\subsubsection{Implementing Languages}
+
+Simulink
+
+LabVIEW
+
+\subsubsection{References}
+Paper: \url{http://msdl.cs.mcgill.ca/people/claudio/pub/Gomes2016a.pdf}
+
+Formalizing causal block diagrams for modeling a class of hybrid dynamic systems
+B Denckla, PJ Mosterman - â€¦ -ECC'05. 44th IEEE Conference on, 2005
+
+H.V. McGill Lecture Notes: \url{http://msdl.cs.mcgill.ca/people/hv/teaching/MS/COMP522A2004/lectures/lecture.CBD/notes.pdf}
+
+
+
+\subsection{CellularAutomata}
+\label{subsecF:CellularAutomata}
+% \authors{Rima Al Ali}
+
+% \reviewers{Florin Leon}
+
+\authors{Stefan}
+
+\checkok{rewritten from scratch}
+
+Cellular Automata (CA) is a popular formalism for the idealisation of physical systems.
+A system consists of an n-dimensional lattice of uniform ``cells''. 
+Each cell is an automaton, whose behaviour (discrete state transitions) is defined by its own state, and the states of cells in its ``neighbourhood'' (the cells with a certain distance, e.g. direct neighbours).
+The transitions of all CA in the system are executed at the same time.
+By representing automaton behaviour using relatively simple rules, highly complex system behaviour can be expressed. Since their introduction in the 1950ies, cellular automata had various waves of popularity.
+Recently they are used to model and study emergent behaviour in very large and highly complex systems consisting of uniform units.
+One of the most popular CA case studies is Conway's ``Game of Life''.
+
+
+% Cellular automata (CA) are an idealization of a physical system in which space and time are discrete, and the physical quantities have a finite set of values. A cellular automaton is a collection of cells with different states placed on a lattice, e.g. a grid. Each cell can change its state according to some predefined rules, taking into account its current state and the state of its neighbouring cells. The rules can be deterministic or probabilistic. The whole system evolves by applying the rules iteratively for all the cells and for a number of discrete time steps.
+\subsubsection{Implementing Languages}
+
+None
+
+\subsubsection{Usage for CPS Development}
+
+\cite{H2015}
+\cite{Z2013}
+\cite{THVP2016}
+
+
+\subsubsection{References}
+
+Conway's game of life
+
+\url{https://www.springer.com/cda/content/document/cda_downloaddocument/9789400745155-c2.pdf?SGWID=0-0-45-1335417-p174314677}
+	
+\url{http://mathworld.wolfram.com/CellularAutomaton.html}
+	
+\url{http://plato.stanford.edu/entries/cellular-automata/}
+
+
+
+\subsection{DEECo}
+\label{subsecF:DEECo}
+\reviewers{Rima}
+
+Comment from Stefan: This is not a formalism, DEECo re-uses SCEL, which is formalized as SCELight here:
+Programming and Verifying Component Ensembles \url{https://www.researchgate.net/publication/265503436_Programming_and_Verifying_Component_Ensembles}
+Perhaps we should create a formalism SCELight or \textit{Ensemble Languages}.
+% DOI: 10.1007/978-3-642-54848-2_5
+
+
+
+In scope of the ASCENS project have developed the DEECo component model (stands for Dependable Emergent Ensembles of Components) targeting design of systems consisting of autonomous, self-aware, and adaptable components. The components, implicitly organized in groups called ensembles, live in a very dynamic environment where a component can enter/exit an ensemble at any time. The goal of DEECo is to support development of applications in such a dynamic environment.
+
+\subsubsection{Implementing Languages}
+
+DEECo is a formalism for the following languages:
+\begin{itemize}
+	\item DEECoDSL (see section \ref{subsecL:DEECoDSL})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{DEECoSpecification}
+\label{subsecF:DEECoSpecification}
+
+The main concepts of DEECo are heavily inspired by the concepts of the SCEL specification language. The main idea is to manage all the dynamism of the environment by externalizing the distributed communication between components to a component framework. The components access only local information and the distributed communication is performed implicitly by the framework. This way, the components have to be programmed as autonomous units, without relying on whether/how the distributed communication is performed, which makes them very robust and suitable for rapidly-changing environments.
+
+\subsubsection{Implementing Languages}
+
+None
+
+
+\subsubsection{References}
+
+\subsection{DataFlow}
+\label{subsecF:DataFlow}
+\authors{Etienne, Stefan}
+
+DataFlow describes an computation model that resembles a graph. Each node represents a function (usually called actor) and each arc represents a communication channel between two functions. All the inputs of a function must be present to start its execution. In synchronous dataflow modelling the ``synchronous hypothesis'' states that the computation of each function and the communication between two functions is infinitely fast (or instantaneous). 
+
+Given this hypothesis, SDF provides a sound model of computation with predictable performance, properties verification methods (liveness, deadlock freedom), and predictable buffering.
+
+The practical approach relies on the fact that the computation of a node starts only when the execution of all its predecessors is finished. This requires that the graph topology is loop-free. Since SDF are usually executed in periodic tasks, the synchronous hypothesis is usually considered to be verified as the worst case response time of the graph is smaller than the task's period.
+
+This type of model is well-suited to digital signal processing and communications systems which often process an endless supply of data. It has been successfully applied in the domain of safety critical embedded systems. It has also been characterised or extended into homogeneous data flow graphs, cyclo-static data flow graphs, scenario-aware data flow graphs, affine data flow graphs.
+
+\subsubsection{Implementing Languages}
+
+Lustre, Esterel and their integration in the SCADE tool suite~\ref{subsecT:SCADE}. SIGNAL, and its Polychrony environment. Ptolemy. ZÃ©lus, bridging the GAP between SDF and ODEs (such as those implemented with Mathlab/Simulink).
+
+
+
+\subsubsection{References}
+
+
+\url{http://users.ece.utexas.edu/~bevans/courses/ee382c/lectures/08_sdf/}
+
+Kahn Process Networks: \url{http://liacs.leidenuniv.nl/assets/Bachelorscripties/2011-20RoyKensmil.pdf}
+
+\url{http://ptolemy.eecs.berkeley.edu/papers/02/synchronous/MurthyLee_MultidimensionalSDF.pdf}
+
+
+
+
+\subsection{DataFlowTimed}
+\label{subsecF:DataFlowTimed}
+\reviewers{Stefan}
+\todo[inline]{It's a Model of computation, not a formalism... perhaps we should move it to SystemC, but we don't have SystemC-AMS as language, so I'm not sure if we need this at all, if we don't describe SystemC-AMS}
+
+The Timed Data Flow (TDF) model of computation defined in the SystemC AMS 1.0 standard has already shown its value for signal-processing-oriented applications, such as RF communication and digital signal processing (DSP) systems, where the complex envelope of the modulated RF signal can be described as an equivalent baseband signal and where baseband algorithms are described naturally using data flow semantics. Because TDF is derived from the well-known Synchronous Data Flow (SDF) model of computation, high simulation performance can be obtained due to the calculation of a static schedule prior to simulation.
+
+\subsubsection{Implementing Languages}
+
+SystemC-AMS
+
+
+\subsubsection{References}
+
+\url{http://www.accellera.org/images/downloads/standards/systemc/SystemC_AMS_2_0_LRM.pdf} % (page 21)
+
+\url{http://www.accellera.org/resources/articles/amsspeed}
+
+\url{http://leat.unice.fr/ECoFaC2012/presentations/Pecheux_part5.pdf}
+
+\subsection{DifferentialEquations}
+\label{subsecF:DifferentialEquations}
+% \authors{Rima Al Ali}
+
+% \reviewers{Florin Leon}
+
+% A differential equation is a mathematical equation containing functions and derivatives. Differential equations are in particular used for modeling the physical plant of a CPS. Differential equations can be broadly classified into ordinary differential equations (ODEs), differential-algebraic equations (DAEs), and partial differential equations (PDEs).
+
+\authors{Stefan}
+
+Differential equations are frequently used to model the physical phenomena of CPS and in particular the plant of CPSs. They are mathematical equations, consisting of derivatives and functions. Differential equations can be classified into ordinary differential equations (ODE), which have a single independent variable, differential-algebraic equations (DAE), which make use of algebraic equations and partial differential equations (PDE), which involve multi-variable functions and partial derivatives.
+% Depending on their type, one can distinguish between ordinary differential equations (ODE, one independent variable), partial differential equations (PDE, multi-variable functions and partial derivatives) and 
+
+\subsubsection{Implementing Languages}
+
+None
+
+\subsubsection{Usage for CPS Development}
+
+\cite{L2015}
+
+
+\subsubsection{References}
+
+	
+\url{http://os.inf.tu-dresden.de/Studium/CPS/SS2015/02-Math.pdf}
+	
+\url{http://users.math.msu.edu/users/gnagy/teaching/ode.pdf}
+
+\subsection{DiscreteEvent}%
+\label{subsecF:DiscreteEvent}
+\reviewers{Fernando Barros, Stefan}
+
+\checkok{Stefan checked Fernando's text}
+
+%The DE paradigm is prevalent in simulation frameworks in different application domains, from queueing systems and networks to circuits. based on concurrent actors manipulating streams of timed events, such as DEVS, real-time process networks, or actor theories.
+The discrete event (DE) paradigm provides a representation of systems based on piecewise constant state variables. Contrarily to continuous systems, where variables change continuously in time, DE systems can only change at a finite number of instants during a finite time interval. The actions causing these changes are commonly called by events. Contrarily to discrete time models, where changes are periodic, in DE systems changes can occur randomly, i.e., without any following any periodicity.
+
+Several strategies for organising DE systems have been developed. These descriptions are commonly termed by {\em world views} and  provide different organisations for modelling DE systems. Common world views include event scanning \cite{Kiviat:1968:SIMSCRIPT}, activity scanning \cite{Buxton:1962:CSL}, and process interaction \cite{Dahl:1966:Simula}.
+
+The DEVS formalism \cite{Zeigler:1976:TMS}, provides a formal description of modular DE systems, abstracting and unifying many of the concepts required for characterising DE systems. The co-simulation of DE systems was introduced in \cite{Zeigler:1984:Multifaceted} that has established the separation between models and their simulators, enabling the interoperability of hierarchical and modular DE models. The Hybrid Flow Systems Specification (HyFlow) combines the DEVS formalism with sample-based and discrete time formalisms to provide a multi-paradigm description for modeling hybrid systems \cite{Barros:2008:SDS}.
+
+%The DE paradigm has been successively applied in modeling and simulation in a large variety of domains including manufacturing systems, computer architectures, and communication networks (References).
+
+\subsubsection{Implementing Languages}
+The support for DE is provided by both general purpose M\&S languages and frameworks including SIMUL8, ARENA, OMNET++, Simio, SimEvents and FlexSim. The DEVS formalism is supported by the MS4 Me framework.
+%References are for the companies that develop the tools. Would this be ok?
+\subsubsection{References}
+\url{https://www.simul8.com}
+\url{https://www.arenasimulation.com}
+\url{https://omnetpp.org}
+\url{https://www.simio.com/products/simulation-software.php}
+\url{https://www.mathworks.com/products/simevents.html}
+\url{https://www.flexsim.com/flexsim}
+\url{http://www.ms4systems.com}
+
+%\url{http://www.andrew.cmu.edu/user/dionisio/avicps2010-proceedings/an-adaptive-discrete-event-model-for-cyber-physical-systems.pdf}
+
+
+
+
+\subsection{ElectricalLinearNetworks}
+\label{subsecF:ElectricalLinearNetworks}
+\authors{Eva Navarro}
+
+Electrical linear networks (ELN) consist of linear electrical components that are interconnected to form a circuit. The electrical components considered are linear, such as: voltage/current sources, resistors, capacitors, inductors and transmission lines. Circuits falling within the ELN category are analysed with well-known linear methods, typically, frequency-domain methods.
+
+\subsubsection{Implementing Languages}
+
+\begin{itemize}
+  \item SPICE (Simulation Program with Integrated Circuit Emphasis).
+    \item Simulink/Matlab.
+    \item XPPAUT.
+    \item PyDSTool.
+\end{itemize}
+
+
+\subsubsection{References}
+
+SystemC and SystemC-AMS in Practice: SystemC 2.3, 2.2 and SystemC-AMS 1.0
+By Amal Banerjee, Balmiki Sur
+
+
+\url{http://leat.unice.fr/ECoFaC2012/presentations/Pecheux_part5.pdf}
+
+\url{http://www.accellera.org/resources/articles/amsspeed}
+
+\url{https://www2.eecs.berkeley.edu/Pubs/TechRpts/1973/22871.html}
+
+\url{http://www.math.pitt.edu/~bard/xpp/xpp.html}
+
+\url{https://pypi.org/project/PyDSTool/}
+
+
+\subsection{EntityRelationship}
+\label{subsecF:EntityRelationship}
+\reviewers{Dominique}
+
+\checkok{Stefan agrees with Dominique}
+
+I suggest to remove this entry since I could not find any specific use for CPSs.
+
+\subsubsection{Implementing Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+\subsection{Fault Trees}
+\authors{Mauro Iacono} % plagiarism check done
+\reviewers{Stefan}
+
+\checkok{Stefan extended a little bit}
+Fault Trees is a formal model designed to analyze and evaluate the origin and the effects of faults in the components of an architecture at its subsystem or system level. 
+The graphs represent the probability of component faults on the edges between nodes, allowing the quick calculation of risks by following the paths of the tree.
+Many variants have been proposed that extend the basic combinatorial nature of this formalism to include time, repairable components or repairing actions.
+
+\subsubsection{Implementing Languages}
+
+None
+
+\subsubsection{References}
+
+\cite{RUIJTERS201529}
+
+\subsection{FiniteStateProcess}
+\label{subsecF:FiniteStateProcess}
+\reviewers{Rima}
+
+\reviewers{Stefan}
+
+Stefan: I believe this is not of importance for our field... 
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Implementing Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{First Order Logic}
+\label{subsecF:FirstOrderLogic}
+\authors{Moussa Amrani}
+\reviewers{Florin Leon, Stefan}
+
+\checkok{Stefan approves}
+
+First-Order Logic (\textsc{FOL}, also ``First-Order Predicate Calculus'') is a logical formalism constituted of terms and formulas. A term is either a variable, a function symbol or a predicate symbol. A formula is constituted of formulas built over terms combined with the usual Boolean operators (negation, conjunction and so on) and both existential and universal quantifiers. First-Order Logic formulas are interpreted on a (finite) domain, and possess a sound and complete calculus, making it automatable for reasoning \cite{B:Kleene:2002}. 
+
+\subsubsection{Implementing Languages}
+
+\textsc{Fol} serves as the core formalisms for many tools, including:
+\begin{itemize}
+	\item Theorem Provers like SMT\textunderscore LIB (see section \ref{subsecL:SMT_LIB}), Z3, 
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+\subsection{HyFlow (Hybrid Flow System Specification)}%
+\label{subsecF:HyFlow}
+\reviewers{Fernando Barros, Eva Navarro}
+
+Eva: I think this should be within a class of "Hybrid System" or "Discontinuous Systems". I feel this is a bit disconnected.
+
+\checkok{Stefan approves}
+
+The Hybrid Flow Systems Specification (HyFlow) provides a formal description of dynamic topology hybrid systems \cite{Barros:2003:DSM}. This formalism can model systems that exhibit both continuous and discrete behaviors while relying on a digital computer representation. HyFlow supports multi-sampling as a first order operator, enabling both time and component varying sampling, making it suitable for representing sampled-based systems, like digital controllers and filters. HyFlow provides also an extrapolation operator that enables an error free representation of continuous signals. Multi-sampling can be used for achieving an explicit representation of asynchronous adaptive stepsize differential equations integrators \cite{Barros-2018:Geometric}. HyFlow provides an integrative framework for combing models expressed in different modelling paradigms. In particular, fluid stochastic Petri nets \cite{Barros-2015:FSPN} and geometric integrators \cite{Barros-2018:Geometric}, for example, can be  represented in the HyFlow formalism, enabling its seamless integration with other HyFlow models. HyFlow sampling provides an expressive operator for making the connection of computer-based systems with real-time systems, since sampling is, in many cases, the most convenient operator to interact with continuous signals. HyFlow supports modular and hierarchical models providing deterministic semantics for model composition and co-simulation \cite{Barros:2008:SDS}.
+
+\subsubsection{Implementing Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+\cite{Barros:2003:DSM}
+
+\subsection{DiscontinuousSystems}
+\label{subsecF:SwitchingSystems}
+
+\authors{Eva Navarro}
+\reviewers{Stefan}
+
+Discontinuous or non-smooth systems are a subclass of hybrid systems. There are several types, depending on the type of discontinuity in the model representing the system. Two main classes of discontinuous systems are observable: 1) switched/switching systems  where the discontinuity is in the derivative of the state, that is, in the vector field defining the systems dynamics (for example, systems that switch between different operation modes with different dynamics in each mode and with the state space partitioned in different regions), and 2) reset/jump/impulsive systems where the discontinuity is in the system state (for example, a bouncing ball). In switched systems, the state space is divided into different regions separated by a discontinuity surface. The dynamics on the discontinuity surface is key for the analysis of these systems. It is typically undefined and different methods are used to define it, mainly Filipov's continuation method and Utkin's equivalent control method. 
+
+\subsubsection{Implementing Languages}
+
+
+\begin{itemize}
+    \item Stateflow/Simulink/Matlab.
+    \item XPPAUT.
+    \item PyDSTool.
+    \item Ptolemy.
+    \item Modelica/Dymola.
+    \item Scilab/Scicos.
+\end{itemize}
+
+
+
+\subsubsection{References}
+
+\url{http://staff.cs.manchester.ac.uk/~navarroe/papers/enavarro_chaos09.pdf}
+
+\url{http://staff.cs.manchester.ac.uk/~navarroe/papers/enavarro_adhs09.pdf}
+
+A.F. Filippov. Differential Equations with Discontinuous Right-hand Sides. Kluwer Academic Publishers, Dordrecht, 1988.
+
+V.I. Utkin. Sliding Modes in Control Optimization. Springer-Verlag, Berlin, 1992.
+
+\url{http://www.math.pitt.edu/~bard/xpp/xpp.html}
+
+\url{https://pypi.org/project/PyDSTool/}
+
+\url{https://www.mathworks.com/products/stateflow.html}
+
+\url{https://ptolemy.berkeley.edu/publications/papers/06/hyvisual/}
+
+\url{https://www.cenit.com/fileadmin/dam/3DS-PLM/PDFs/Dymola_Release_notes_2018_FD01_CENIT.pdf}
+
+\url{http://www.scicos.org/}
+
+
+\subsection{HybridAutomata}
+\label{subsecF:HybridAutomata}
+\authors{Eva Navarro}
+
+A finite state automaton is a computational abstraction of the transitions of a system between discrete states or locations (on and off, for instance). A hybrid automaton, additionally, considers dynamical evolution over time in each location. This dynamical evolution is represented by a dynamical system. Depending on the nature of the dynamics of this system, different types of hybrid automata are defined; the main ones are explained as follows. Hybrid automata is one of the many existing modelling frameworks of hybrid systems.
+
+% Since \subsubsubsection is undefined, I have substitute \subsubsubsection by \underline
+
+\subsubsection{LinearHybridAutomata}
+\label{subsubsecF:LinearHybridAutomata}
+\authors{Eva Navarro}
+
+A linear hybrid automaton is a hybrid automaton where the dynamical system within each location or discrete state is linear.
+
+\underline{Implementing Languages}
+
+Same languages than in \ref{HybridAutomata:Languages}.
+
+
+
+
+\subsubsection{NonLinearHybridAutomata}
+\label{subsubsecF:NonLinearHybridAutomata}
+\authors{Eva Navarro}
+
+A nonlinear hybrid automaton is a hybrid automaton where the dynamical system within each location or discrete state is nonlinear. The studies on nonlinear hybrid automata are much less than in linear hybrid automata due to the complexity of the dynamical behaviours involved.
+
+\underline{Implementing Languages}
+
+Same languages than in \ref{HybridAutomata:Languages}.
+
+
+\underline{References}
+
+Same references than in \ref{HybridAutomata:References}.
+
+\subsubsection{StochasticHybridAutomata}
+\label{subsubsecF:StochasticHybridAutomata}
+\authors{Eva Navarro}
+
+A stochastic hybrid automaton is a class of non-deterministic hybrid automaton where uncertainty is introduced  in the system evolution and the control inputs. The main differences with respect to a hybrid automaton are: 1) the initial state (initial discrete location and initial continuous state vector) is chosen at random, 2) the continuous state evolves following stochastic differential equations, 3) there are two types of discrete transitions between locations that give rise to two types of guards conditions: forced transitions and spontaneous transitions; spontaneous transitions are triggered by stochastic events.
+
+
+\underline{Implementing Languages}
+
+\begin{itemize}
+    \item StateFlow/Simulink/Matlab
+%\label{subsecF:StateFlow}
+	\item PyDSTool.
+    \item Ptolemy.
+    \item Modelica/Dymola.
+    \item Scilab/Scicos. 
+\end{itemize}
+
+
+\underline{References}
+
+\url{https://www.sciencedirect.com/science/article/pii/S0947358010706889}
+
+\url{https://www.sciencedirect.com/science/article/pii/S0947358010706919}
+
+\url{https://pypi.org/project/PyDSTool/}
+
+\url{https://www.mathworks.com/products/stateflow.html}
+
+\url{https://ptolemy.berkeley.edu/publications/papers/06/hyvisual/}
+
+\url{https://www.cenit.com/fileadmin/dam/3DS-PLM/PDFs/Dymola_Release_notes_2018_FD01_CENIT.pdf}
+
+\url{http://www.scicos.org/}
+
+
+\subsubsection{TimedAutomata}
+\label{subsubsecF:TimedAutomata}
+\authors{Stefan}
+\reviewers{Eva Navarro, Moussa Amrani}
+
+% Eva: I have checked it and corrected some things I thought were incorrect.
+
+Timed automata (TA) is a formalism that merges the concepts of discrete automata theory with the continuous evolution of variables (``clocks'').  Each clock progressively increases its value at a constant rate (i.e. 1). Transition guards can be defined by comparing the clocks' values to constants. Further, each clock can be reset to zero when firing transitions.
+
+Timed automata can be seen as a class of hybrid automata, where all clock rates are constant and equal, transition guards only allow linear comparisons of clocks and reset functions can only reset clock values to zero.
+
+Many extensions of timed automata have been proposed, such as stopwatch automata (the rate can be temporarily set to 0), and hourglass automata (the clocks' rate can be reversed to -1).
+
+\underline{Implementing Languages}
+
+TimedAutomata is a formalism for the following languages:
+\begin{itemize}
+	\item UPPAALRequirementSpecificationLanguage (see section \ref{subsecL:UPPAALRequirementSpecificationLanguage})
+	\item HyTech
+	\item Kronos
+\end{itemize}
+
+
+\underline{References}
+
+Timed Automata: Semantics, Algorithms and Tools.
+Johan Bengtsson and Wang Yi.
+
+Rajeev Alur , David L. Dill.  
+A Theory of Timed Automata. 
+In Theoretical Computer Science, vol. 126, 183-235, 1994.
+
+R. Carter, E.M. Navarro-L\'opez.
+Dynamically-driven timed automaton abstractions for proving liveness of continuous systems
+10th International Conference on Formal Modelling and Analysis of Timed Systems, FORMATS 2012, (London, UK, September 18-22, 2012). LNCS 7595, pp. 59-74, Springer-Verlag.
+\url{https://link.springer.com/chapter/10.1007%2F978-3-642-33365-1_6}
+
+
+Dominique, here are two  Bibtex entries:
+% @inproceedings{cassez2000,
+%   title = {The Impressive Power of Stopwatches},
+%   booktitle = {International {{Conference}} on {{Concurrency Theory}}},
+%   publisher = {{Springer}},
+%   author = {Cassez, Franck and Larsen, Kim},
+%   year = {2000},
+%   pages = {138--152}
+% }
+
+% @article{osada2014,
+%   title = {Hourglass {{Automata}}},
+%   volume = {161},
+%   issn = {2075-2180},
+%   doi = {10.4204/EPTCS.161.16},
+%   language = {en},
+%   journal = {Electronic Proceedings in Theoretical Computer Science},
+%   author = {Osada, Yuki and French, Tim and Reynolds, Mark and Smallbone, Harry},
+%   month = aug,
+%   year = {2014},
+%   pages = {175-188}
+% }
+
+
+
+
+
+\subsubsection{TimeAutomataPriced (Priced/Probabilistic Timed Automata (PTAs))}
+\label{subsubsecF:TimeAutomataPriced}
+
+\authors{Stefan}
+\reviewers{Eva Navarro, Moussa Amrani}
+
+A priced timed automaton is a timed automaton where transitions and locations are annotated with real-valued costs and cost rates, respectively. The global cost increases according to the cost rate of the current location and ``jumps'' when taking a transition (according to the cost annotation of the transition).
+
+The cost rate of each location can be different, but cannot be negative.
+
+\underline{Implementing Languages}
+
+TimeAutomataPriced is a formalism for the following languages:
+\begin{itemize}
+	\item PRISMLanguage (see section \ref{subsecL:PRISMLanguage}).
+\end{itemize}
+
+
+\underline{References}
+
+\url{https://pdfs.semanticscholar.org/ce4d/6ce625f5c4482a71b9d85fa56dfbe72679e6.pdf}
+
+
+\subsubsection{TimedAutomataStochastic}
+\label{subsubsecF:TimedAutomataStochastic}
+\reviewers{Eva Navarro, Moussa Amrani}
+
+Stochastic timed automata extend the TA formalism by adding stochastic processes, which allow the stochastic selection of enabled transitions and delays (i.e. time spent within a location).
+
+% A stochastic timed automaton is a purely stochastic process defined on a timed automaton, in which both delays and discrete choices a are made randomly.
+
+\underline{Implementing Languages}
+
+TimedAutomataStochastic is a formalism for the following languages:
+\begin{itemize}
+	\item UPPAALSMCSpecificationLanguage (see section \ref{subsecL:UPPAALSMCSpecificationLanguage})
+\end{itemize}
+
+
+\underline{References}
+\url{https://arxiv.org/pdf/1410.2128.pdf}
+
+\subsubsection{I/O\textunderscore HybridAutomata}
+\label{subsubsecF:I/O_Automata}
+% \reviewers{Paulo Careira}
+
+
+\authors{Stefan}
+\reviewers{Eva Navarro}
+
+% Eva: I have called them I/O HybridAutomata instead of I/O Automata
+
+I/O hybrid automata are a class of hybrid automata that include asynchronous distributed system components. The automaton's transitions are annotated with input actions and output actions, which are executed at when triggering a transition.
+
+\underline{Implementing Languages}
+
+None
+
+
+\underline{References}
+
+\url{https://groups.csail.mit.edu/tds/papers/Lynch/CWI89.pdf}
+
+Hybrid I/O Automata: \url{http://groups.csail.mit.edu/tds/papers/Lynch/DIMACS95.pdf}
+
+Timed I/O Automata: \url{http://people.cs.aau.dk/~adavid/ecdar/hscc10.pdf}
+
+
+
+\subsubsection{Implementing Languages} \label{HybridAutomata:Languages}
+
+HybridAutomata is a formalism for the following languages:
+\begin{itemize}
+    \item StateFlow
+%\label{subsecF:StateFlow}
+	\item PyDSTool.
+    \item Ptolemy.
+    \item Modelica/Dymola.
+    \item Scilab/Scicos. 
+    \item NuSMVLanguage (see section \ref{subsecL:NuSMVLanguage}). % I am not sure about this
+
+\end{itemize}
+
+
+\subsubsection{References} \label{HybridAutomata:References}
+
+T.A. Henzinger. The theory of hybrid automata. Proc. 11th IEEE Symposium of Logic in Computer Science, 1:278â€“292, 1996.
+
+J. Lygeros, K.H. Johansson, S.N. Simic, J. Zhang, and S. Sastry. Dynamical properties of hybrid automata. IEEE Transactions on Automatic Control, 48(1):2â€“17, 2003.
+
+
+\url{https://www.tandfonline.com/doi/abs/10.1080/00207721.2010.495189}
+
+\url{https://ieeexplore.ieee.org/document/6512040?arnumber=6512040}
+
+\url{https://www.tandfonline.com/doi/full/10.1080/13873954.2017.1369437}
+
+\url{https://www.sciencedirect.com/science/article/pii/S0304397516302456}
+
+\url{https://pypi.org/project/PyDSTool/}
+
+\url{https://www.mathworks.com/products/stateflow.html}
+
+\url{https://ptolemy.berkeley.edu/publications/papers/06/hyvisual/}
+
+\url{https://www.cenit.com/fileadmin/dam/3DS-PLM/PDFs/Dymola_Release_notes_2018_FD01_CENIT.pdf}
+
+\url{http://www.scicos.org/}
+
+% Put reference NuSMVLanguage?
+
+\subsection{LabelledTransitionSystem}
+\label{subsecF:LabelledTransitionSystem}
+\reviewers{Didier Buchs, Stefan}
+%To be removed
+
+Labelled  Transition  Systems  (LTS),  are  operational  models  of  system  behaviours that can be analysed in various ways with respect to given safety or liveness properties  of  the  system.   However,  they  often  give  a  holistic  view  of  the system, thereby also covering behaviour or detail that is undesirable according to the system specification.  It is therefore in the interest of requirements engineers to use these LTS models so that they can provide a more synthesised view of the system using scenarios and knowledge about the system domain based on specific examples.
+
+\subsubsection{Implementing Languages}
+
+LTS MIn:
+
+
+\subsubsection{References}
+
+
+
+
+\textbf{TODO:} LTSA developed in JAVA
+
+
+
+
+
+
+\subsection{LinearSignalFlow}
+\label{subsecF:LinearSignalFlow}
+\reviewers{Moussa Amrani}
+
+Dominique, this should be removed!
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Implementing Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{MarkovChains}
+\label{subsecF:MarkovChains}
+
+\author{Stefan}
+
+Markov chains are a probabilistic model of event sequences.
+When depicted as graph, each node in a Markov chain represents an event type (e.g. ``rolling a die'') and the edges to other nodes represent the outcomes of the event (e.g. the probability of each side).
+The events need to support the Markov property. This means that predictions on the future evolution of the chain can be made based on the current state, and knowledge of previous evolutions has no influence on this prediction.
+Markov chains models can be built for discrete events as well as for continuous state space.
+
+\subsubsection{Implementing Languages}
+
+MarkovChains is a formalism for the following languages:
+\begin{itemize}
+	\item PRISMLanguage (see section \ref{subsecL:PRISMLanguage})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+Continuous Markov Chains: \url{http://www.columbia.edu/~ks20/stochastic-I/stochastic-I-CTMC.pdf}
+
+Markov Decision Process : \url{https://www.cs.ubc.ca/~kevinlb/teaching/cs322%20-%202009-10/Lectures/DT3.pdf}
+
+Discrete Markov Chains: \url{http://www.columbia.edu/~ks20/stochastic-I/stochastic-I-MCI.pdf}
+
+
+
+
+\subsection{MessageDescriptionSpecification}
+\label{subsecF:MessageDescriptionSpecification}
+\reviewers{Dominique Blouin}
+The format of this language is simple: a message description is a list of data field descriptions and constant definitions on separate lines.
+
+DB: I suggest to remove it since I could not find references for it
+Stefan: Remove it !!!
+
+
+\subsubsection{Implementing Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{PetriNet}\reviewer{Didier Buchs, Mauro Iacono, Soumy}
+\label{subsecF:PetriNet}
+
+\label{subsecL:PetriNetLanguage}
+
+A Petri net (also known as a place/transition net or P/T net) is a modeling languages for the description of dynamic discrete systems. It is particularly suited to the modeling of systems where distribution, concurrency and non-determinism is important to describe and analyze. The mathematical foundation of Petri nets has led to several development to make possible complex analsis of systems decribed by Petri nets. A Petri net is a directed bipartite graph, in which the nodes represent transitions (i.e. events that may occur, represented by bars or black rectangles) and places (i.e. conditions or ressources, represented by circles). The directed arcs describe which places are pre- and/or postconditions for which transitions (signified by arrows).  Petri nets were invented, according to some sources, in August 1939 by Carl Adam Petri at the age of 13 for the purpose of describing chemical processes.
+
+Petri nets offer a graphical notation which is of particular interest to the engineer analyzing systems, natural pattern of design are existing in Petri nets such as causality, choice, independence and ressource management.
+
+There are attempts for several formalisms Like UML activity diagrams, Business Process Model and Notation and EPCs to have semantics in term of translation into Petri nets. These translations have been used to provide a precise semantics to such formalisms as well as to  develop tools for their simulation and analysis.
+
+It has been observed that in practice Petri Nets lack of modeling power for some modeling dimensions such as: timing aspects, data structures, stochastic processes and event priority. In general the formal analysis tool need different techniques if new modeling dimensions are introduced. So tools are generally different and adapted to the specific extensions.
+
+\subsubsection{Supported Extended Formalisms}
+
+Petri Nets have several extensions which are concretised in the following formalisms, it must be noted that the computing power of such extensions can change according to the new concepts introduced in the notations (i.e. time) and then the analysability of the models is sometime much more difficult or limited to extention with finiteness assumptions (i.e. high level nets):
+\begin{itemize}
+	\item PetriNetPrioritised (Petri Net with priority) This simple extension bring new semantics to the transition firing in order to solve conflict. Depending on the variant it can lead to more powerful models which are Turing complete. (see section \ref{subsecF:PetriNetPrioritised})	
+	\item PetriNetStochastic (Stochastic Petri Nets)(see section \ref{subsecF:PetriNetStochastic}) the firing of transition follows probabilistic distibution on time duration or frequency of transition firing when there is conflict.
+	\item PetriNetColoured (High level Petri nets) This large class rely on another modeling framework devoted to the description of the data attached to the tokens, and the expression that must be assigned to arcs describing the computation that must be done for satisfying the pre and post conditions. Among several dialect of these class we can cite algebraic Petri Nets and coloured Petri Nets (see section \ref{subsecF:PetriNetColoured})
+	\item PetriNetTimed (Time Petri Net or Timed Petri Net)(see section \ref{subsecF:PetriNetTimed})
+	These formalisms introduce time as a modeling dimension. This is reflected in aspect such as transition duration or possible interval for firing transitions. Generally these classes bring new problems for analysing them, in particular the time-line which has no limit in the future and the density of the time.
+%	\item PetriNetDualistic (see section \ref{subsecF:PetriNetDualistic})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+PetriNetLanguage and its variants is implemented by various tools, we can cite among the following tools:
+\begin{itemize}
+	\item Lola,
+	\item TAPALL,
+	\item GreatSPN,
+	\item ORIS,
+	\item Alpina, StrataGEM (see section \ref{subsecT:StrataGEM})
+	\item TINA\textunderscore SELT (see section \ref{subsecT:TINA_SELT})
+\end{itemize}
+
+In order to evaluate the power of these tools benchmarks have been proposed and are annually evaluated in a competition called the model checking contest. \cite{mcc} The ability to verify different kind of properties on various complex models is considered. 
+For most of the models there exist parameters that reflects the complexity of the model, the best tool is the tool that is
+able to do accurately the verification for the largest parameter.
+
+\subsubsection{References}
+
+A Petri net (also known as a place/transition net or P/T net) is one of several mathematical modeling languages for the description of distributed systems.
+
+\subsubsection{Implementing Languages}
+
+None
+
+\subsection{ProcessAlgebras}
+\label{subsecF:ProcessAlgebras}
+\authors{Stefan}
+% \reviewers{Florin Leon}
+
+Process algebra refer to a group of different calculi that are used to study the evolution of concurrent processes and their relations, including communication, synchronisation and interactions.
+Individual processes are seen as agents that continuously interact with each other and the environment.
+Their well-defined semantics allow for the analysis and verification of highly complex systems. 
+Common process algebras include the Calculus of Communicating Systems (CCS), Communicating Sequential Processes (CSP) and the Algebra of Communicating Processes (ACP).
+
+
+% Process algebras represent an algebraic approach to the study of concurrent processes. Its tools are algebraical languages with well defined semantics that permit the specification of concurrent communicating systems and the verification of their properties. They can be seen as models of processes, regarded as agents that act and interact continuously with other similar agents and with their common environment. Process algebras have an operational semantics that describes systems evolution in terms of labelled transitions. Models and semantics are built by taking a compositional approach that permits describing the meaning of composite systems in terms of the meaning of their components.
+\subsubsection{Implementing Languages}
+
+None
+
+\subsubsection{Usage for CPS Development}
+Hoare, C. A. R. (2004) [1985]. Communicating Sequential Processes. Prentice Hall International. ISBN 0-13-153271-5.
+
+\cite{A2011}
+\cite{AM2009}
+\cite{BKGS2010}
+
+
+\subsubsection{References}
+
+\url{https://link.springer.com/chapter/10.1007%2FBFb0039617}
+	
+\url{http://theory.stanford.edu/~rvg/process.html}
+	
+\url{https://pdfs.semanticscholar.org/12d9/eae1638729aeb237b5be445ee91ecdd3c5d7.pdf}
+
+
+\subsection{TFPG (Timed Failure Propagation Graph)}
+\label{subsecF:TFPG}
+\reviewers{Etienne Borde, Dominique Blouin, Rima Al Ali}
+
+A Timed Failure Propagation Graph (TFPG) model is a relatively simple directed graph structure which identifies the paths along which failures are expected to propagate in the system. Nodes of a TFPG represent failure modes or discrepancies, and arcs represent failure propagation paths with a time interval representing the lower and upper bound of the failure propagation time. Logical operators AND and OR are used to represent logical combinations of failures to reach a mode and/or a discrepancy. TFPG can be used at design time to analyse faults propagation and their consequences. It can also be used at runtime to provide potential explanations to a fault signature that is observed during the system execution since consistency checking can be used to eliminate path on which timing constraints are not verified.
+
+\subsubsection{Implementing Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+\url{http://www.mikand.net/data/smt_based_validation_of_timed_failure_propagation_graphs.pdf}
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Implementing Languages}
+
+TimedTransitionSystems is a formalism for the following languages:
+\begin{itemize}
+	\item FIACRE (see section \ref{subsecL:FIACRE})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+%\subsection{VonNeumann}
+%\label{subsecF:VonNeumann}
+%\reviewers{Mauro}
+%To be removed
+
+%Von Neumann Architecture also known as the Von Neumann model, the computer consisted of a CPU, memory and I/O devices. The program is stored in the memory. The CPU fetches an instruction from the memory at a time and executes it.
+
+
+%\subsubsection{Implementing Languages}
+
+%None
+
+
+%\subsubsection{References}
+
+
+%Toward a dataflow/von Neumann hybrid architecture:  %\url{http://dl.acm.org/citation.cfm?id=52416}
+
+\subsection{CTL (Computation Tree Logic)}
+\label{subsecL:CTL}
+
+\author{Stefan}
+
+CTL is a branching-time temporal logic that allows the analysis of tree-like structures.
+It allows the analysis of various future evolution paths to answer questions whether there is a possibility that an event might or will happen.
+Various model checkers exist that allow the verification of the reachability and liveness of certain events (or event sequences).
+
+
+% Computation tree logic (CTL) is a branching-time logic, meaning that its model of time is a tree-like structure in which the future is not determined; there are different paths in the future, any one of which might be an actual path that is realized. It is used in formal verification of software or hardware artifacts, typically by software applications known as model checkers which determine if a given artifact possesses safety or liveness properties. For example, CTL can specify that when some initial condition is satisfied (e.g., all program variables are positive or no cars on a highway straddle two lanes), then all possible executions of a program avoid some undesirable condition (e.g., dividing a number by zero or two cars colliding on a highway).
+
+
+
+\subsubsection{Supporting Tools}
+
+There are several tools implementing CTL, nuSMV is one of them. There is others that you can consult in \cite{modelcheckingcontest}
+
+
+\subsubsection{References}
+E.M. Clarke; E.A. Emerson (1981). "Design and synthesis of synchronisation skeletons using branching time temporal logic". Logic of Programs, Proceedings of Workshop, Lecture Notes in Computer Science, vol. 131. Springer, Berlin: 52â€“71.
+
+
+\subsection{ComplexNetworks}
+\author{Eva Navarro}
+% New!!
+ A complex network consists of a large number of interdependent systems connected in a nontrivial
+and non-regular manner. The interconnection of these systems produces emergent properties or behaviours which are not present in the individual systems: this is called self-organisation, collective behaviour. There are different models for complex networks. These models are typically based on graph theory (nodes connected with links). The main models for complex networks are:  random-graph networks, small-world networks and scale-free networks. Each of these models have different topological (structural) features, analysed with tools from statistical physics.
+
+\subsubsection{Implementing Languages}
+
+\begin{itemize}
+\item Tools for complex networks visualisation:
+
+\begin{itemize}
+  \item  Graphviz. Open-source graph visualization project. 
+	
+	\item Gephi. Open-source graph visualisation GUI.
+	
+	\item Pajek. Analysis and visualisation of large-scale networks.
+
+	 \item  Visone. Analysis and visualisation of social networks.
+
+	\item Cytoscape. Visualisation of biological networks.
+
+	\end{itemize}
+
+\item Tools for complex networks analysis and visualisation:
+
+\begin{itemize}
+  \item  NetworkX. Interactive analysis in Python.
+	
+  \item iGraph. C/R/Python libraries. iGraph is typically used in the R Environment for Statistical Computing (\url{www.r-project.org}).
+	
+  \item Network Workbench. Interactive analysis and visualisation of large-scale networks.
+  
+  \item   Mathematica. The newest version (9) has many new features for networks built-in, ranging from network models (like Watts-Strogatz and Barab\'asi-Albert) to network visualisation and computations.
+	\end{itemize}
+
+\end{itemize}
+
+\subsubsection{References}
+
+A.-L. Barab\'asi, R. Albert.
+Emergence of scaling in random networks.
+Science, vol. 286, pp. 509-512, 1999.
+
+
+R. Albert, A.-L. Barab\'asi.
+Statistical mechanics of complex networks.
+Reviews of Modern Physics, vol. 74, pp. 47-97, 2002.
+
+
+A. Barrat, M. Barth\'elemy, A. Vespignani. 
+Dynamical Processes on Complex Networks. 
+Cambridge University Press, 2010.
+
+S. Boccaletti, V. Latora, Y. Moreno, M. Ch\'avez, D.U. Hwang. 
+Structure and dynamics of complex networks.
+Physics Reports, vol. 424, pp. 175-308, 2006.
+
+
+E.M. Navarro-L\'opez.
+DYVERSE: From formal verification to biologically-inspired real-time self-organizing systems. In Computation for Humanity - Information Technology to Advance Society. Editors: Pieter J. Mosterman, Justyna Zander. ISBN-10:1439883270, CRC Press/Taylor & Francis. Chapter 12, pp. 301-346, 2013.
+ 
+M.E.J. Newman.
+The structure and function of complex networks.
+SIAM Review, vol. 45(2), pp. 167-256, 2003.
+
+M.E.J. Newman.
+Networks. An Introduction.
+Oxford University Press, 2010.
+
+
+S.H. Strogatz.
+Exploring complex networks.
+Nature, vol. 268, pp. 268-276, 2001.
+
+X.F. Wang, G. Chen.
+Complex networks: Small-world, scale-free and beyond.
+IEEE Circuits and Systems Magazine, vol. first quarter, pp. 7-20, 2003.
+
+D.J. Watts, S.H. Strogatz.
+Collective dynamics of â€œsmall-worldâ€� networks.
+Nature, vol. 393, pp. 440-442, 1998.
+ 
+\url{http://www.graphviz.org/} 
+
+\url{https://gephi.org/} 
+
+\url{http://vlado.fmf.uni-lj.si/pub/networks/pajek/} 
+
+\url{https://visone.info/} 
+
+\url{https://cytoscape.org/} 
+
+\url{https://networkx.github.io/} 
+
+\url{http://igraph.org/redirect.html} 
+
+\url{http://nwb.cns.iu.edu/} 
+
+\url{https://demonstrations.wolfram.com/ComplexNetworks/} 
+
+\section{Languages}
+\label{sec:languages}
+
+The following subsections present the most commonly used languages for CPS development.
+
+\subsection{AADL (Architecture Analysis and Design Language)}
+\label{subsecL:AADL}
+
+\checkok{@Dominique, rewrite this please}
+
+The AADL is designed for the specification, analysis, automated integration and code generation of real-time performance-critical (timing, safety, schedulability, fault tolerant, security, etc.) distributed computer systems. It provides a new vehicle to allow analysis of system designs (and system of systems) prior to development and supports a model-based, model-driven development approach throughout the system life cycle.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+AADL is implemented by the following tools:
+\begin{itemize}
+	\item AADLInspector (see section \ref{subsecT:AADLInspector})
+	\item OSATE (see section \ref{subsecT:OSATE})
+	\item Ocarina (see section \ref{subsecT:Ocarina})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{ACME (Architecture Description Interchange Language)}
+\label{subsecL:ACME}
+\reviewers{Miguel Goul\~{a}o, Stefan}
+
+\checkok{shortened Miguel's text}
+
+While most Architectural Description Languages (ADLs) considerably overlap on their core features, each ADL focuses on different aspects of the software architecture and problem categories. 
+The creation of a global ADL would be impractical and developing mappings among each pair of languages would require an excessive amount of effort.
+Nevertheless, this diversity raises difficulties in transferring information among different ADLs. 
+Acme was proposed as common representation of architectural concepts and to support the interchange of information using a generic language. 
+This reduces the number of required transformations to those to and from Acme.
+
+Language Features:
+\begin{itemize}
+    \item an architectural ontology consisting of seven basic architectural design elements;
+    \item a flexible annotation mechanism supporting association of non-structural information using externally defined sublanguages;
+    \item a type mechanism for abstracting common, reusable architectural idioms and styles; and
+    \item an open semantic framework for reasoning about architectural descriptions.
+\end{itemize}
+
+\subsubsection{Supported Formalisms}
+
+Acme's elements are formally defined in a relational representation in a constraint logic language (see \cite{Wile1996acme}).
+
+
+\subsubsection{Supporting Tools}
+ACME is implemented by the following tools:
+\begin{itemize}
+    \item AcmeStudio (see section \ref{subsecT:AcmeStudio})
+\end{itemize}
+
+
+\subsubsection{References}
+\cite{garlan1997acme}
+\cite{garlan2000acme}
+\cite{Wile1996acme}
+
+
+
+
+\subsection{AML}
+\label{subsecL:AML}
+
+\todo[inline]{Dominique, remove this}
+
+ARC Macro Language:
+AML is a robust programming language that allows you access to a range of functionality, from automating common tasks in ARC/INFO, to creating complete GUI-based, multithreaded applications.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+AML is implemented by the following tools:
+\begin{itemize}
+	\item ArcGIS (see section \ref{subsecT:ArcGIS})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{ATL}
+\label{subsecL:ATL}
+
+\authors{Stefan}
+
+The ATLAS Transformation Language (ATL) is a widely used model transformation language. 
+It is part of the Eclipse Modeling Project and supports both syntactic and semantic definitions of model transformations.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{AUTOSARLanguage (AUTomotive Open System ARchitecture)}
+\label{subsecL:AUTOSARLanguage}
+
+\todo[inline]{Dominique write this}
+
+AUTOSAR (AUTomotive Open System ARchitecture) is a partnership of automotive stakeholders (vehicle manufacturers, suppliers, service providers and companies) working on establishing an open and standardized software architecture for automotive electronic control units (ECUs). AUTOSAR includes an architecture description language for the design of vehicular systems. Application software components are linked through abstract virtual function buses, which represent all hardware and system services offered by a vehicular system. This allows designers to focus on the application instead of the infrastructure software.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+\subsubsection{Supporting Tools}
+
+SystemDesk
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Alloy}
+\label{subsecL:Alloy}
+
+\authors{Stefan}
+
+Alloy is a specification language that allows the description of relations within a model. 
+It is declarative in nature and allows checking of systems for correctness.
+It is accompanied by a tool implementation, the Alloy Analyzer.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+Alloy is implemented by the following tools:
+\begin{itemize}
+	\item AlloyTool (see section \ref{subsecT:AlloyTool})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Artisan}
+\label{subsecL:Artisan}
+
+\todo[inline]{Dominique, this one's for you DB: This was not a language but a tool supporting SysML. It has been bought by Atego, which has then been bought by PTC Model-based Systems Engineering Solutions in 2014. Moved to tools section.}
+
+
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{AsmL (Abstract State Machine Language)}
+\label{subsecL:AsmL}
+
+\authors{Stefan}
+
+AsmL is a language implementation of the Abstract State Machine (ASM) formalism.
+It runs on the .NET platform and allows modelling, coding and testing.
+
+\subsubsection{Supported Formalisms}
+	\item AbstractStateMachines (see section \ref{subsecF:AbstractStateMachines})
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{AsmetaL}
+\label{subsecL:AsmetaL}
+
+AsmetaL is the language used for the creation of models in the Asmeta toolset.
+
+\subsubsection{Supported Formalisms}
+
+AsmetaL is based on the following formalisms:
+\begin{itemize}
+	\item AbstractStateMachines (see section \ref{subsecF:AbstractStateMachines})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+AsmetaL is implemented by the following tools:
+\begin{itemize}
+	\item Asmeta (see section \ref{subsecT:Asmeta})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{20-sim Block Diagrams}
+\label{subsecL:BlockDiagram}
+
+\authors{Stefan}
+
+\todo[inline]{Should be renamed to 20-sim block diagrams and linked to the CBD formalim}
+
+Block diagrams are a graphical programming and modelling language that is used to model within the 20-sim tool.
+They are similar to block diagrams in other languages and tools (e.g. Simulink).
+
+% allow you to graphically represent the mathematical relationships between signals in a system. They are especially suited to model control systems. In 20-sim a large library of block diagram elements is available. The elements are displayed in the Editor by icons. You can create block diagram models by dragging the elements to the Editor and making the proper connections between the elements. 20-sim allows you to create user defined block diagram elements with an arbitrary number of input and output signals.
+
+\subsubsection{Supported Formalisms}
+
+CausalBlockDiagrams
+
+
+\subsubsection{Supporting Tools}
+
+BlockDiagram is implemented by the following tools:
+\begin{itemize}
+	\item 20Sim (see section \ref{subsecT:20Sim})
+\end{itemize}
+
+
+\subsubsection{References}
+\url{http://www.20sim.com/product/blockdiagrams.html}
+
+
+
+
+\subsection{20-sim Bond Graph}
+\label{subsecL:BondGraph}
+
+\authors{Stefan}
+
+\todo[inline]{Should be renamed to 20-sim bond graphs and linked to the formalim}
+
+Bond graphs model idealized physical processes as graphs and graph networks.
+The language is implemented in 20-sim and allows the initial modelling of a-causal systems and performing causailty analyses.
+
+\subsubsection{Supported Formalisms}
+
+Bond Graphs
+
+
+\subsubsection{Supporting Tools}
+
+BondGraph is implemented by the following tools:
+\begin{itemize}
+	\item 20Sim (see section \ref{subsecT:20Sim})
+\end{itemize}
+
+
+\subsubsection{References}
+
+\url{http://www.20sim.com/product/bondgraphs.html}
+
+
+
+\subsection{C}
+\label{subsecL:C}
+
+\todo{remove this, too generic}
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{C++}
+\label{subsecL:C++}
+\todo{remove this, too generic}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{CCSL (Clock Constraint Specification Language)}
+\label{subsecL:CCSL}
+
+The CCSL is a language that introduces is the modelling of relations between clocks into the MARTE UML Profile.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+Timesquare \url{http://timesquare.inria.fr/}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{CDL (Context Description Language)}
+\label{subsecL:CDL}
+
+\authors{Stefan}
+
+CDL is a language that uses UML Activity and Sequence diagrams to model a system's context and environment.
+It is implemented in OBP toolset, which allows properties to be checked.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+CDL is implemented by the following tools:
+\begin{itemize}
+	\item OBPExplorer (see section \ref{subsecT:OBPExplorer})
+	\item TINA\textunderscore SELT (see section \ref{subsecT:TINA_SELT})
+\end{itemize}
+
+
+\subsubsection{References}
+
+\url{http://www.obpcdl.org/}
+\url{https://www.hindawi.com/journals/ase/2012/547157/}
+
+
+
+
+
+
+\subsection{Clafer}
+\label{subsecL:Clafer}
+
+\authors{Stefan}
+\todo[inline]{DB: I suggest to remove it since this is a metamodeling language}
+Clafer is a lightweight modeling language for the simple modeling of feature and class diagrams and meta models.
+It is based on the concept of simplicity, allows model completion and debugging, and uses the Alloy Analyzer to check for model consistency.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+
+\subsubsection{References}
+
+\url{https://www.clafer.org/}
+
+
+
+\subsection{CoCoME}
+\label{subsecL:CoCoME}
+
+\todo[inline]{Stefan: Can be removed, DB: Yes}
+
+The Common Component Modelling Example"
+Component-based software development (CBSD) has changed the current paradigm of software development. As systems become more and more complex, CBSD is to a greater extend applied in industry and plays a more and more important role in research. 
+In order to leverage CBSD to build correct and dependable component-based systems, research has developed various formal and semi-formal component models. However, many of these component models like DisCComp, Fractal, Focus, or UML Extensions concentrate on different yet related aspects of component modelling. These are for instance communication issues or performance aspects. This hinders their validation for practical usage. 
+Therefore, the main goal of the research seminar is to evaluate and compare the practical appliance of existing component models using a common component-based system as modelling example.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{DEECoDSL (Dependable Emergent Ensembles of Component-Domain Specific Language)}
+\label{subsecL:DEECoDSL}
+
+\todo[inline]{Requires input from Rima}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{DSLTrans}
+\label{subsecL:DSLTrans}
+\todo[inline]{DB: Generic model transformation. To be removed}
+DSLTrans is a visual model transformation language. Its syntax and semantics are formally defined, the language itself is turing incomplete. The language aims to enforce transformation termination and confluence.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+DSLTrans is implemented by the following tools:
+\begin{itemize}
+	\item SyVoLT (see section \ref{subsecT:SyVoLT})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EAST-ADL}
+\label{subsecL:EAST-ADL}
+
+\author{Stefan}
+
+EAST-ADL is an ADL for the automotive embedded domain. 
+It ties concepts from UML, SysML and AADL to the AUTOSAR environment.
+
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+\subsection{ECL (Epsilon Comparison Language)}
+\label{subsecL:ECL}
+
+\todo[inline]{Stefan: remove this}
+
+A rule-based language for discovering correspondences (matches) between elements of models of diverse metamodels.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+ECL is implemented by the following tools:
+\begin{itemize}
+	\item EclipseEpsilon (see section \ref{subsecT:EclipseEpsilon})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EGL (Epsilon Generation Language)}
+\label{subsecL:EGL}
+
+\todo[inline]{Stefan: remove this}
+
+A template-based model-to-text language for generating code, documentation and other textual artefacts from models.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+EGL is implemented by the following tools:
+\begin{itemize}
+	\item EclipseEpsilon (see section \ref{subsecT:EclipseEpsilon})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EML (Epsilon Merging Language)}
+\label{subsecL:EML}
+
+\todo[inline]{Stefan: remove this}
+
+
+EML is a hybrid, rule-based language for merging homogeneous or heterogeneous models. As a merging language requires all the features of a transformation language (merging model A with an empty model into model B is equivalent to transforming A->B), EML reuses the syntax and semantics of ETL and extends it with concepts specific to model merging.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+EML is implemented by the following tools:
+\begin{itemize}
+	\item EclipseEpsilon (see section \ref{subsecT:EclipseEpsilon})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EOL (Epsilon Object Language)}
+\label{subsecL:EOL}
+
+\todo[inline]{Stefan: remove this}
+
+An imperative model-oriented scripting language that combines the procedural style of Javascript with the powerful model querying capabilities of OCL.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+EOL is implemented by the following tools:
+\begin{itemize}
+	\item EclipseEpsilon (see section \ref{subsecT:EclipseEpsilon})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{ERD (Entity Relationship Diagram)}
+\label{subsecL:ERD}
+
+\authors{Stefan}
+
+Entity relationship diagrams are a visual, graphical modelling language for specifying relations within a domain.
+The language is primarily used to create models of relational databases.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+ERD is implemented by the following tools:
+\begin{itemize}
+	\item EclipseERD (see section \ref{subsecT:EclipseERD})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{ETL (Epsilon Transformation Language)}
+\label{subsecL:ETL}
+
+\todo[inline]{Stefan: remove this}
+
+A rule-based model-to-model transformation language that supports transforming many input to many output models, rule inheritance,lazy and greedy rules.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+ETL is implemented by the following tools:
+\begin{itemize}
+	\item EclipseEpsilon (see section \ref{subsecT:EclipseEpsilon})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EVL (Epsilon Validation Language)}
+\label{subsecL:EVL}
+
+\todo[inline]{Stefan: remove this}
+
+A model validation language that supports both intra and inter-model consistency checking, and provides out-of-the-box integration with EMF \& GMF editors.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+EVL is implemented by the following tools:
+\begin{itemize}
+	\item EclipseEpsilon (see section \ref{subsecT:EclipseEpsilon})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EWL (Epsilon Wizard Language)}
+\label{subsecL:EWL}
+
+\todo[inline]{Stefan: remove this}
+
+A language tailored for interactive in-place transformations on model elements selected by the user. EWL provides out-of-the-box integration with EMF \& GMF editors
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+EWL is implemented by the following tools:
+\begin{itemize}
+	\item EclipseEpsilon (see section \ref{subsecT:EclipseEpsilon})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+\subsection{EclipseEGL}
+\label{subsecL:EclipseEGL}
+
+\todo[inline]{I vote to remove this one. DB: I agree!}
+
+EGL is a programming language conceptually similar to many common languages that have come before it. The language borrows concepts familiar to anyone using statically typed languages like Java, COBOL, C, etc. However, it borrows a concept from UML (Universal Modeling Language) that is not typically found in statically typed programming language ? the concept of Stereotype. In UML, stereotypes are used to tag UML elements with metadata (in this case, metadata refers to information about the UML element, for example, information about a UML element called a "class"). Constraints can be defined by stereotype definitions such that elements stereotyped by the given stereotype must adhere to the defined constraints of that stereotype. Stereotypes in UML are used as a lightweight mechanism to extend the standard modeling concepts. Stereotypes in EGL are essentially the same idea and are used to extend the basic EGL core language concepts.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EpsilonFlock}
+\label{subsecL:EpsilonFlock}
+
+\todo[inline]{remove this}
+
+Epsilon Flock is a model migration language built atop EOL, for updating models in response to metamodel changes. Flock provides a rule-based transformation language for specifying model migration strategies. A conservative copying algorithm automatically migrates model values and elements that are not affected by the metamodel changes.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+EpsilonFlock is implemented by the following tools:
+\begin{itemize}
+	\item EclipseEpsilon (see section \ref{subsecT:EclipseEpsilon})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{FIACRE}
+\label{subsecL:FIACRE}
+
+\authors{Stefan}
+
+The Intermediate Format for the Embedded Distributed Component Architectures (French acronym: FIACRE) is a formally defined language for representing compositionaly of component architectures.
+It supports the expression of embedded and distributed systems aspects (behaviour, timing) for formal verification and simulation.
+
+\subsubsection{Supported Formalisms}
+
+FIACRE is based on the following formalisms:
+\begin{itemize}
+	\item PetriNet (see section \ref{subsecF:PetriNet})
+	\item PetriNetTimed (see section \ref{subsecF:PetriNetTimed})
+	\item TimedTransitionSystems (see section \ref{subsecF:TimedTransitionSystems})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+FIACRE is implemented by the following tools:
+\begin{itemize}
+	\item OBPExplorer (see section \ref{subsecT:OBPExplorer})
+	\item TINA\textunderscore SELT (see section \ref{subsecT:TINA_SELT})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+\url{http://projects.laas.fr/fiacre/}
+
+
+\subsection{fUML (Foundational Subset for Executable UML Models)}
+\label{subsecL:FUML}
+
+fUML is a subset of UML~2 that allows the structural and behavioural semantic description of systems.
+The models are analysable and executable.
+
+\subsubsection{Supported Formalisms}
+
+FUML is based on the following formalisms:
+\begin{itemize}
+	\item EntityRelationship (see section \ref{subsecF:EntityRelationship})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+\url{https://www.omg.org/spec/FUML/About-FUML/}
+
+
+
+
+\subsection{IRM}
+\label{subsecL:IRM}
+
+\todo[inline]{Check with Rima if this is still necessary}
+
+IRM is a method and a corresponding model that allows for designing software-intensive Cyber-Physical Systems (siCPS) with a focus on dependability aspects. IRM is tailored for systems consisting of ensembles of components (e.g. DEECo-based systems), and provides a way to refine high-level system invariants into low-level system obligations, or equivalently to trace low-level system obligations to their rationale at the requirements space.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{IRM-SA}
+\label{subsecL:IRM-SA}
+
+\todo[inline]{Check with Rima if this is still necessary}
+
+IRM-SA is an extension to IRM that allows for introducing alternative decompositions in the design. Each branch in an alternative decomposition corresponds to a different situation in the environment (captured by one or more assumptions) that dictates a different design in order for the parent invariant to be preserved.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+IRM-SA is implemented by the following tools:
+\begin{itemize}
+	\item IRM-SATool (see section \ref{subsecT:IRM-SATool})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{20-sim IconicDiagrams}
+\label{subsecL:IconicDiagrams}
+
+\todo[inline]{Remove, we already have 20sim bond graphs and 20-sim block diagrams, that's enough!!}
+
+Iconic diagrams or components are the building blocks of physical systems. They allow you to enter models of physical systems graphically, similar to drawing an engineering scheme. In 20-sim a large library of iconic diagram elements is available. The elements are displayed in the Editor by icons which look like the corresponding parts of the ideal physical model. You can create models by dragging the elements to the Editor and making the proper connections between the elements.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+IconicDiagrams is implemented by the following tools:
+\begin{itemize}
+	\item 20Sim (see section \ref{subsecT:20Sim})
+\end{itemize}
+
+
+\subsubsection{References}
+
+\url{http://www.20sim.com/product/iconicdiagrams.html}
+
+
+
+\subsection{Java}
+\label{subsecL:Java}
+
+\todo[inline]{Remove, too generic}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{LTL (Linear Temporal Logic)}
+\label{subsecL:LTL}
+
+\todo[inline]{This is a formalism, not a language}
+
+LTL is a representative of the family of temporal logics that analyses the future evolution of paths. It allows the testing of one individual branch (as opposed to CTL).
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{MARTE (Modeling and Analysis of Real-Time and Embedded systems)}
+\label{subsecL:MARTE}
+
+\authors{Stefan}
+
+The UML profile for MARTE is an extension of UML that adds missing aspects of the real time and embedded systems domain.
+The profile supports the modelling and analysis of schedulability, performance and time.
+
+
+\subsubsection{Supported Formalisms}
+
+MARTE is based on the following formalisms:
+\begin{itemize}
+	\item EntityRelationship (see section \ref{subsecF:EntityRelationship})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{MTL (Model to Text Language)}
+\label{subsecL:MTL}
+
+\authors{Stefan}
+\todo[inline]{DB: Too generic}
+MTL is an OMG standardised model transformation language, built for the translation of generic models to text representations, such as source code or documentation.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+MTL is implemented by the following tools:
+\begin{itemize}
+	\item Acceleo (see section \ref{subsecT:Acceleo})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{MessagesDescriptionLanguage}
+\label{subsecL:MessagesDescriptionLanguage}
+
+\todo[inline]{Remove this}
+
+ROS uses a simplified messages description language for describing the data values (aka messages) that ROS nodes publish. This description makes it easy for ROS tools to automatically generate source code for the message type in several target languages. Message descriptions are stored in .msg files in the msg/ subdirectory of a ROS package.
+
+\subsubsection{Supported Formalisms}
+
+MessagesDescriptionLanguage is based on the following formalisms:
+\begin{itemize}
+	\item MessageDescriptionSpecification (see section \ref{subsecF:MessageDescriptionSpecification})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+MessagesDescriptionLanguage is implemented by the following tools:
+\begin{itemize}
+	\item ROS (see section \ref{subsecT:ROS})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{MetaH}
+\label{subsecL:MetaH}
+
+\todo[inline]{@Dominique, this one's for you}
+
+Model tasks, subprograms, processes, and non-functional properties
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{MoTiF}
+\label{subsecL:MoTiF}
+
+MoTif is a graph transformation language that provides a graphical description for graph transformation rules and a modelling environment to define the control structure of the transformation.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+MoTiF is implemented by the following tools:
+\begin{itemize}
+	\item AToM3 (see section \ref{subsecT:AToM3})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Modelica}
+\label{subsecL:Modelica}
+
+\authors{Stefan}
+
+Modelica is a multi-domain modelling language for complex systems modelling. 
+Its tool-implementations are wide spread and offer support for many different engineering domains (e.g. hydraulic, electric and mechanical).
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+Modelica is implemented by the following tools:
+\begin{itemize}
+	\item Dymola (see section \ref{subsecT:Dymola})
+	\item AMESim (see section \ref{subsecT:AMESim})
+	\item OpenModelica (see section \ref{subsecT:OpenModelica})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{ModelicaML}
+\label{subsecL:ModelicaML}
+
+\todo[inline]{I think we can remove this}
+
+A UML Profile for Modelica
+Modelica Modeling Language (ModelicaML) is a graphical modeling language for the description of time-continuous and time-discrete/event-based system dynamics.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{NaturalLanguage}
+\label{subsecL:NaturalLanguage}
+
+\todo[inline]{Seriously, remove this, we're putting everything in here}
+
+Such as plain text as we can see in use cases for example.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{NuSMVLanguage}
+\label{subsecL:NuSMVLanguage}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{OCL}
+\label{subsecL:OCL}
+\reviewer{Miguel Goul\~{a}o}
+
+\authors{Stefan}
+OCL is a declarative constraint language for UML models.
+
+% he Object Constraint Language (OCL) is a declarative language for describing rules that apply to Unified Modeling Language (UML) models developed at IBM and now part of the UML standard. Initially, OCL was only a formal specification language extension to UML. OCL may now be used with any Meta-Object Facility (MOF) Object Management Group (OMG) meta-model, including UML. The Object Constraint Language is a precise text language that provides constraint and object query expressions on any MOF model or meta-model that cannot otherwise be expressed by diagrammatic notation. OCL is a key component of the new OMG standard recommendation for transforming models, the Queries/Views/Transformations (QVT) specification.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+The following tools support OCL:
+\begin{itemize}
+    \item Eclipse OCL https://projects.eclipse.org/projects/modeling.mdt.ocl
+    \item Papyrus http://www.eclipse.org/papyrus/
+\end{itemize}
+None
+
+
+\subsubsection{References}
+\url{https://www.omg.org/spec/OCL/2.4/PDF}
+
+
+
+
+\subsection{OMEGA2}
+\label{subsecL:OMEGA2}
+
+\authors{Stefan}
+
+An extension of UML for the formal specification and validation of real-time systems.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{OSATE2}
+\label{subsecL:OSATE2}
+
+\todo[inline]{Dominique, this one's for you}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{PRISMLanguage}
+\label{subsecL:PRISMLanguage}
+
+\authors{Stefan}
+
+The PRISM language allows the specification of models within the PRISM tool, such as discrete-time Markov chains (DTMCs), continuous-time Markov chains (CTMCs), Markov decision processes (MDPs) and probabilistic timed automata (PTAs).
+
+\subsubsection{Supported Formalisms}
+
+PRISMLanguage is based on the following formalisms:
+\begin{itemize}
+	\item MarkovChains (see section \ref{subsecF:MarkovChains})
+	\item TimeAutomataPriced (see section \ref{subsecF:TimeAutomataPriced})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+PRISMLanguage is implemented by the following tools:
+\begin{itemize}
+	\item PRISM (see section \ref{subsecT:PRISM})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{ParallelAssignmentLanguage}
+\label{subsecL:ParallelAssignmentLanguage}
+
+\todo[inline]{To be removed, I think. Don't see the direct reference to CPS}
+
+The input language of NuSMV is designed to allow the description of finite state systems that range from completely synchronous to completely asynchronous. The NuSMV language (like the language of SMV) provides for modular hierarchical descriptions and for the definition of reusable components. The basic purpose of the NuSMV language is to describe (using expressions in propositional calculus) the transition relation of a finite Kripke structure. This provides a great deal of flexibility, but at the same time it can introduce danger of inconsistency.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+ParallelAssignmentLanguage is implemented by the following tools:
+\begin{itemize}
+	\item NuSMV (see section \ref{subsecT:NuSMV})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+\subsection{Petri Net Diagram}
+\label{subsecL:PetriNetDiagram}
+\todo[inline]{New }
+
+A representation of Petri nets as bi-partite graphs. Places are drawn as circles, transitions as rectangles and pre- and post-conditions as annotated, directed arcs. Tokens are drawn as black dots for Place-Transition nets, high level Petri nets might use other encoding for tokens of different types.
+
+
+\subsubsection{Supported Formalisms}
+
+PetriNetLanguage is based on the following formalisms:
+\begin{itemize}
+	\item PetriNetPrioritised (see section \ref{subsecF:PetriNetPrioritised})
+	\item PetriNet (see section \ref{subsecF:PetriNet})
+	\item PetriNetStochastic (see section \ref{subsecF:PetriNetStochastic})
+	\item PetriNetColoured (see section \ref{subsecF:PetriNetColoured})
+	\item PetriNetTimed (see section \ref{subsecF:PetriNetTimed})
+	\item PetriNetDualistic (see section \ref{subsecF:PetriNetDualistic})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+
+
+\subsubsection{References}
+
+
+\subsection{Petri Net Markup Language}
+\label{subsecL:PNML}
+\todo[inline]{New }
+
+An XML-based encoding of Petri nets and Petri net diagrams.
+
+
+\subsubsection{Supported Formalisms}
+
+PetriNetLanguage is based on the following formalisms:
+\begin{itemize}
+	\item PetriNetPrioritised (see section \ref{subsecF:PetriNetPrioritised})
+	\item PetriNet (see section \ref{subsecF:PetriNet})
+	\item PetriNetStochastic (see section \ref{subsecF:PetriNetStochastic})
+	\item PetriNetColoured (see section \ref{subsecF:PetriNetColoured})
+	\item PetriNetTimed (see section \ref{subsecF:PetriNetTimed})
+	\item PetriNetDualistic (see section \ref{subsecF:PetriNetDualistic})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+PetriNetLanguage is implemented by the following tools:
+\begin{itemize}
+	\item StrataGEM (see section \ref{subsecT:StrataGEM})
+\end{itemize}
+
+
+
+\subsubsection{References}
+
+
+
+
+
+
+\subsection{ProMoBox}
+\label{subsecL:ProMoBox}
+
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Promela}
+\label{subsecL:Promela}
+
+Promela is a language for the modelling of distributed systems and concurrent processes.
+The language supports expression of synchronisation points and communication means (both synchronous and asynchronous). 
+Promela models can be analysed with the SPIN model checker, although many other tools also offer support for Promela models.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+Promela is implemented by the following tools:
+\begin{itemize}
+	\item Spin (see section \ref{subsecT:Spin})
+\end{itemize}
+
+
+\subsubsection{References}
+\url{https://cava.in.tum.de/templates/publications/promela.pdf}
+
+
+
+
+\subsection{PtidyOS}
+\label{subsecL:PtidyOS}
+
+\todo[inline]{Remove because it's not a language}
+
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://cava.in.tum.de/templates/publications/promela.pdf}
+
+
+
+
+\subsection{QVT}
+\label{subsecL:QVT}
+
+\authors{Stefan}
+\todo[inline]{DB: Remove because it's too generic}
+
+QVT is a set of OMG-specified model transformation languages.
+These languages focus on model-to-model transformations, as opposed to model-to-text (text generation) and text-to-model transformations (parsing).
+
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.omg.org/spec/QVT}
+
+
+
+
+\subsection{Reo\textunderscore Coordination\textunderscore Language}
+\label{subsecL:Reo_Coordination_Language}
+
+\todo[inline]{SK: I propose to remove this, as I'm not sure of the importance.}
+
+a domain-specific language for programming and analyzing coordination protocols that compose individual processes into full systems
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://reo.project.cwi.nl/reo/}
+
+
+
+\subsection{SMT\textunderscore LIB}
+\label{subsecL:SMT_LIB}
+
+SMT-LIB is a language designed to aid the development and exchange of Satisfiability Modulo Theories tools.
+SMT-LIB defines a language format for the description of theories and models.
+
+\subsubsection{Supported Formalisms}
+
+SMT\textunderscore LIB is based on the following formalisms:
+\begin{itemize}
+	\item FirstOrderLogic (see section \ref{subsecF:FirstOrderLogic})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+SMT\textunderscore LIB is implemented by the following tools:
+\begin{itemize}
+	\item Z3 (see section \ref{subsecT:Z3})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+\url{http://smtlib.cs.uiowa.edu/}
+
+
+\subsection{STUML Statechart (Spatio-Temporal UML Statechart)}
+\label{subsecL:STUML}
+
+STUML statechart is an extension of UML MARTE statechart based on hybrid automata. 
+Hybrid automata bring a set of differential equations into MARTE to represent the continuous dynamic behavior of the system.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://ieeexplore.ieee.org/document/6299209}
+
+
+
+\subsection{SimPL}
+\label{subsecL:SimPL}
+
+\todo[inline]{Remove, it's very specific, I don't see the direct link to CPS}
+
+Simpl is a tool for quickly and efficiently implementing domain-specific languages.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{SimulinkLanguage}
+\label{subsecL:SimulinkLanguage}
+
+\author{Stefan}
+
+The Simulink tool provides a language that allows the modelling of multi-domain systems.
+The language has both graphical and textual features that model the signal flow between computation blocks.
+
+\subsubsection{Supported Formalisms}
+
+SimulinkLanguage is based on the following formalisms:
+\begin{itemize}
+	\item DifferentialEquations (see section \ref{subsecF:DifferentialEquations})
+\end{itemize}
+
+\todo[inline]{Also causal block diagrams}
+
+\subsubsection{Supporting Tools}
+
+SimulinkLanguage is implemented by the following tools:
+\begin{itemize}
+	\item Simulink (see section \ref{subsecT:Simulink})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Stitch}
+\label{subsecL:Stitch}
+
+\todo[inline]{Didn't find relation to CPS, maybe Rima can give details. DB: Rima provided a description}
+\author{Rima}
+Stitch is a language for describing strategies and tactics in self-adaptive systems
+at the architectural level. It allows representing the relation 
+between decision trees and business objectives to be used in self-adaptation processes. It also
+provides the ability to express delays and uncertainties.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+Stitch is implemented by the following tools:
+\begin{itemize}
+	\item Rainbow (see section \ref{subsecT:Rainbow})
+\end{itemize}
+
+
+\subsubsection{References}
+
+\url{https://doi.org/10.1016/j.jss.2012.02.060}
+
+
+
+\subsection{SysML (Systems Modeling Language)}
+\label{subsecL:SysML}
+
+SysML is an extension and adaptation of some of a subset UML diagrams for the modelling of hardware and software systems.
+SysML introduces various embedded systems concepts that facilitate the representation of such systems.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+SysML is implemented by the following tools:
+\begin{itemize}
+	\item TTool (see section \ref{subsecT:TTool})
+\end{itemize}
+
+
+\subsubsection{References}
+\url{https://sysml.org/}
+
+
+
+\subsection{SystemC}
+\label{subsecL:SystemC}
+
+
+SystemC is an IEEE standardized Hardware Description Language (HDL) language.
+Contrary to other HDLs (e.g. VHDL, Verilog), SystemC is not a complete language by itself, but rather a set of C++ classes and macros, that allow the representation of HDL-concepts.
+SystemC includes built-in support for embedded concepts (e.g. mutex, semaphores, four-valued logic) and measures time in sub-second granularity (e.g. picosecond).
+
+The use of C++ as a basis provides SystemC with flexibility and adaptability so that models are written just as any other C++ code, specifying ports, signals and channels. Functionality is modelled using methods, which execute at predefined events and threads, which run continuously until they finish or temporarily seize execution (SystemC provides a simulation kernel that prescribes cooperative multi-threading).
+
+Most functional tooling and verification support focuses on the generation and verification of  Transaction-Level Modelling and Register-Transfer Level designs, which is too low-level for large CPS purposes that focus on the combination of many components.
+
+
+\subsubsection{Supported Formalisms}
+
+SystemC is based on the following formalisms:
+\begin{itemize}
+	\item ElectricalLinearNetworks (see section \ref{subsecF:ElectricalLinearNetworks})
+	\item LinearSignalFlow (see section \ref{subsecF:LinearSignalFlow})
+	\item DataFlowTimed (see section \ref{subsecF:DataFlowTimed})
+	\item SystemCSpecification (see section \ref{subsecF:SystemCSpecification})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+SystemC is implemented by the following tools:
+\begin{itemize}
+	\item DIPLODOCUS (see section \ref{subsecT:DIPLODOCUS})
+\end{itemize}
+
+
+\subsubsection{References}
+
+@book{Black:2005:SGU:1197604,
+  address = {Secaucus, NJ, USA},
+  title = {{{SystemC}}: {{From}} the {{Ground Up}}},
+  isbn = {0-387-29240-3},
+  publisher = {{Springer-Verlag New York, Inc.}},
+  author = {Black, David C. and Donovan, Jack and Bunton, Bill and Keist, Anna},
+  year = {2010}
+}
+
+@book{zhang2002microelectrofluidic,
+  series = {Nano- and Microscience, Engineering, Technology and Medicine},
+  title = {Microelectrofluidic {{Systems}}: {{Modeling}} and {{Simulation}}},
+  isbn = {978-1-4200-4049-4},
+  publisher = {{CRC Press}},
+  author = {Zhang, T. and Chakrabarty, K. and Fair, R.B.},
+  year = {2002},
+  lccn = {2002019344}
+}
+
+@inproceedings{Ruf2001TheSS,
+  title={The simulation semantics of systemC},
+  author={J{\"u}rgen Ruf and Dirk W. Hoffmann and Joachim Gerlach and Thomas Kropf and Wolfgang Rosenstiel and Wolfgang M{\"u}ller},
+  booktitle={DATE},
+  year={2001}
+}
+
+
+@inproceedings{SalemFormalsemanticssynchronous2003,
+  title = {Formal Semantics of Synchronous {{SystemC}}},
+  doi = {10.1109/DATE.2003.1253637},
+  booktitle = {Automation and {{Test}} in {{Europe Conference}} and {{Exhibition}} 2003 {{Design}}},
+  author = {Salem, A.},
+  year = {2003},
+  pages = {376-381}
+}
+
+@inproceedings{DBLP:conf/syde/HerberG15,
+  author    = {Paula Herber and
+               Sabine Glesner},
+  title     = {Verification of Embedded Real-time Systems},
+  booktitle = {Formal Modeling and Verification of Cyber-Physical Systems, 1st International
+               Summer School on Methods and Tools for the Design of Digital Systems,
+               Bremen, Germany, September 2015},
+  pages     = {1--25},
+  year      = {2015},
+  crossref  = {DBLP:conf/syde/2015},
+  url       = {https://doi.org/10.1007/978-3-658-09994-7_1},
+  doi       = {10.1007/978-3-658-09994-7_1},
+  timestamp = {Thu, 15 Jun 2017 21:34:07 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/syde/HerberG15},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+
+\subsection{TCTL (Timed Computation Tree Logic)}
+\label{subsecL:TCTL}
+
+\todo[inline]{Remove. Not a language, but a formalism. Also no particular relation with CPS, it's generic}
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{TEPE (Temporal Property Expression Language)}
+\label{subsecL:TEPE}
+
+TEPE is a graphical TEmporal Property Expression language based on SysML parametric diagrams. TEPE enriches the expressiveness of other common property languages in particular with the notion of physical time and unordered signal reception.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+TEPE is implemented by the following tools:
+\begin{itemize}
+	\item AVATAR (see section \ref{subsecT:AVATAR})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{TimedTransitionSystemLanguage}
+\label{subsecL:TimedTransitionSystemLanguage}
+
+\todo[inline]{Remove this one, it's not a language, there's no tool}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+TimedTransitionSystemLanguage is based on the following formalisms:
+\begin{itemize}
+	\item TimedTransitionSystems (see section \ref{subsecF:TimedTransitionSystems})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{UML (Unified Modeling Language)}
+\label{subsecL:UML}
+
+\authors{Stefan}
+
+UML is a set of graphical diagrams that allow the specification of a system's structure and behaviour.
+It is standardised by the Object Modeling Group (OMG). The language is flexible and can be adapted using UML Profiles.
+
+\subsubsection{Supported Formalisms}
+
+UML is based on the following formalisms:
+\begin{itemize}
+	\item EntityRelationship (see section \ref{subsecF:EntityRelationship})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+UML is implemented by the following tools:
+\begin{itemize}
+	\item AVATAR (see section \ref{subsecT:AVATAR})
+	\item UMLMAST (see section \ref{subsecT:UMLMAST})
+	\item Papyrus (see section \ref{subsecT:Papyrus})
+	\item DIPLODOCUS (see section \ref{subsecT:DIPLODOCUS})
+	\item TTool (see section \ref{subsecT:TTool})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{UML-RT}
+\label{subsecL:UML-RT}
+
+\authors{Stefan}
+
+UML-RT is an extension of UML for the modelling of real-time systems.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+\url{https://link.springer.com/chapter/10.1007/978-1-4615-5229-1_6}
+
+
+
+
+\subsection{UMLMARTE}
+\label{subsecL:UMLMARTE}
+
+\todo[inline]{Remove, See MARTE instead}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{UMLProfile}
+\label{subsecL:UMLProfile}
+
+\todo[inline]{Remove, nothing special about profiles, we mentioned it in UML already.}
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+UMLProfile is implemented by the following tools:
+\begin{itemize}
+	\item TTool (see section \ref{subsecT:TTool})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{UMLSysML}
+\label{subsecL:UMLSysML}
+
+\todo[inline]{Remove, we already have SysML}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{UPPAALRequirementSpecificationLanguage}
+\label{subsecL:UPPAALRequirementSpecificationLanguage}
+
+\authors{Stefan}
+
+The UPPAAAL language is based on three language references for model definition, requirements specification and an expression language.
+In combination, they can be used to simulate, analyse and verify extended timed automata.
+
+
+% It describes the languages used when defining UPPAAL system models, and requirement specifications.
+% -The System Description section describes the language used when defining a system model.
+% -The Requirements Specification section describes the language used when specifying requirements on the system model.
+% -The Expressions section describes the syntax for expressions in the two languages.
+
+\subsubsection{Supported Formalisms}
+
+UPPAALRequirementSpecificationLanguage is based on the following formalisms:
+\begin{itemize}
+	\item TCTL (see section \ref{subsecF:TCTL})
+\end{itemize}
+
+\todo[inline]{Add Timed automata}
+
+
+\subsubsection{Supporting Tools}
+
+UPPAALRequirementSpecificationLanguage is implemented by the following tools:
+\begin{itemize}
+	\item UPPAAL (see section \ref{subsecT:UPPAAL})
+\end{itemize}
+
+
+\subsubsection{References}
+
+\url{http://www.it.uu.se/research/group/darts/uppaal/help.php?file=System_Descriptions/Introduction.shtml}
+
+
+
+\subsection{UPPAALSMCSpecificationLanguage}
+\label{subsecL:UPPAALSMCSpecificationLanguage}
+
+\authors{Stefan}
+
+UPPAAL SMC is a tool that allows the statistical model checking for probabilistic performance checking.
+The goal is to use statistical tools to give probabilities on whether a tool contains a property or not.
+
+\subsubsection{Supported Formalisms}
+
+UPPAALSMCSpecificationLanguage is based on the following formalisms:
+\begin{itemize}
+	\item TimedAutomataStochastic (see section \ref{subsecF:TimedAutomataStochastic})
+\end{itemize}
+
+
+\subsubsection{Supporting Tools}
+
+UPPAALSMCSpecificationLanguage is implemented by the following tools:
+\begin{itemize}
+	\item UppaalSMC (see section \ref{subsecT:UppaalSMC})
+\end{itemize}
+
+
+\subsubsection{References}
+
+\url{http://people.cs.aau.dk/~kgl/SSFT2015/SMC\%20tutorial.pdf}
+
+
+
+
+\subsection{VDM-SL}
+\label{subsecL:VDM-SL}
+
+VDM-SL is a formal specification language of the Vienna Development Method (VDM). 
+It supports the description of data and functionality in textual form.
+% Data are defined by means of types built using constructors that define structured data and collections such as sets, sequences and mappings from basic values such as Booleans and numbers. These types are very abstract, allowing the user to add any relevant constraints as data type invariants. Functionality is defined in terms of operations over these data types. Operations can be defined implicitly by preconditions and postconditions that characterize their behavior, or explicitly by means of specific algorithms. An extension of VDM-SL, called VDM++, supports object-oriented structuring of models and permits direct modeling of concurrency.
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+VDM-SL is implemented by the following tools:
+\begin{itemize}
+	\item Overture (see section \ref{subsecT:Overture})
+	\item Crescendo (see section \ref{subsecT:Crescendo})
+\end{itemize}
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Xtend}
+\label{subsecL:Xtend}
+
+\todo[inline]{remove, there's no particular connection with CPS modelling}
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{xtext}
+\label{subsecL:xtext}
+\todo[inline]{remove, there's no particular connection with CPS modelling}
+
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Formalisms}
+
+None
+
+
+\subsubsection{Supporting Tools}
+
+None
+
+
+\subsubsection{References}
+\section{Tools}
+\label{sec:tools}
+
+The following subsections present the most commonly used tools for CPS development.
+
+\subsection{20Sim}
+\label{subsecT:20Sim}
+
+\authors{Stefan}
+
+20-sim is a multi-domain modeling and simulation platform. 
+It allows the specification of models using various formalisms (e.g. block diagrams, bond graphs, ODEs).
+20-sim can be used for simulation, analysis and state space exploration of model designs. 
+The tool further supports the generation of controller codes.
+
+\subsubsection{Supported Languages}
+
+20-sim bond graph
+20-sim block diagram
+
+
+\subsubsection{References}
+\url{http://20sim.com}
+
+
+
+
+\subsection{AADLInspector}
+\label{subsecT:AADLInspector}
+
+\todo[inline]{@Dominique, this one's for you}
+
+AADL Inspector is a model processing framework for AADL. Its aim is to provide an easy to use and extensible tool to perform static and dynamic analysis of AADL architectures, and to easily connect any AADL compliant verification tool or code generator.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://wiki.sei.cmu.edu/aadl/index.php/AADL_Inspector}
+
+
+
+\subsection{AF3}
+\label{subsecT:AF3}
+
+AF3 is an open-source tool developed by the Fortiss. 
+AF3 drives the MDE approach by supporting requirements modelling, simulation, code generation, formal verification and similar types of modelling tasks.
+
+
+% AF3 is a powerful open-source (Apache License) tool to develop embedded systems using models from the requirements to the hardware architecture, passing by the design of the logical architecture, the deployment and the scheduling. AF3 provides advanced features to support the user ensuring the quality of his/her system:formal analyses, synthesis methods, space exploration visualization...
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://af3.fortiss.org/}
+
+
+
+\subsection{AMESim (AMESim (Advanced Modeling Environment for Simulations))}
+\label{subsecT:AMESim}
+\todo[inline]{yet to do}
+
+AMESim stands for Advanced Modeling Environment for performing Simulations of engineering systems. It is based on an intuitive graphical interface in which the system is displayed throughout the simulation process.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{AToM3}
+\label{subsecT:AToM3}
+
+\authors{Stefan}
+AToM3 is a tool for the meta-modelling and model transformation (via graph modelling) of multi-formalism models.
+
+
+% AToM3 is a tool for multi-paradigm modelling under development at the Modelling, Simulation and Design Lab (MSDL) in the School of Computer Science of McGill University. It is developed in close collaboration with Prof. Juan de Lara of the School of Computer Science, Universidad Autï¿½noma de Madrid (UAM), Spain. AToM3 stands for ``A Tool for Multi-formalism and Meta-Modelling''.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://atom3.cs.mcgill.ca/}
+
+
+\subsection{AToMPM}
+\label{subsecT:AToMPM}
+
+\authors{Stefan}
+
+AToMPM is a web-based tool for multi-paradigm and domain-specific modelling.
+It allows the design of DSML environments, model transformations and model creation.
+
+
+
+% AToMPM stands for "A Tool for Multi-Paradigm Modeling". It is a research framework from which you can generate domain-specific modeling web-based tools that run on the cloud. AToMPM is an open-source framework for designing DSML environements, performing model transformations, and manipulating and managing models. It runs completely over the web, making it independent from any operating system, platform, or device it may execute on. AToMPM follows the philosophy of modeling everything explicitly, at the right level of abstraction(s), using the most appropriate formalism(s) and process(es), being completely modeled by itself.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://atompm.github.io/}
+
+
+
+\subsection{AVATAR (AVATAR stands for Automated Verification of reAl Time softwARe.)}
+\label{subsecT:AVATAR}
+
+\todo[inline]{@Dominique, this is your tool }
+AVATAR stands for Automated Verification of reAl Time softwARe.
+
+AVATAR targets the modeling and formal verification of real-time embedded systems.
+
+The AVATAR profile reuses eight of the SysML diagrams (Package diagrams are not supported). AVATAR supports the following methodological phases:
+
+    Requirement capture. Requirements and properties are structured using AVATAR Requirement Diagrams. At this step, properties are just defined with a specific label.
+
+    Assumption modeling. Assumptions of system may be captured with an assumption modeling diagram, based on a SysML requirement diagram.
+
+    System analysis. A system may be analyzed using usual UML diagrams, such as Use Case Diagrams, Interaction Overview Diagrams (Supported by UML2, not by SysML) and Sequence Diagrams.
+
+    System design. The system is designed in terms of communicating SysML blocks described in an AVATAR Block Diagram, and in terms of behaviors described with AVATAR State Machines.
+
+    Property modeling. The formal semantics of properties is defined within TEPE Parametric Diagrams (PDs). Since TEPE PDs involve elements defined in system design (e.g, a given integer attribute of a block), TEPE PDs may be defined only after a first system design has been performed.
+
+    Formal verification can be conducted over the system design, and for each testcase defined in the Requirement Diagram.
+
+    Code generation can finally be used to generate a fully executable code. The latter can be compiled and executed on the SoCLib prototyping platform directly from TTool, or executed on your local host if the latter supports gcc and POSIX.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+DOI: 10.1109/NOTERE.2011.5957992
+
+
+
+
+
+\subsection{Acceleo}
+\label{subsecT:Acceleo}
+
+\authors{Stefan}
+
+Acceleo is an open source implementation of the OMG's Model-to-Text (M2T) standard. It is developed by the Eclipse Foundation and well integrated in the Eclipse Modeling Project. Acceleo was initially developed for source code generation, although newer versions support all kinds of textual representations.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.eclipse.org/acceleo/}
+
+
+
+\subsection{AcmeStudio}
+\label{subsecT:AcmeStudio}
+\reviewers{Miguel GoulÃ£o}
+
+\authors{Stefan}
+
+AcmeStudio is a graphical editor for models created in the Acme architecture description language. 
+It is developed as a plugin for the Eclipse IDE and is adaptable, expansible and customizable using the Eclipse plugin features. 
+
+\subsubsection{Supported Languages}
+
+AcmeStudio supports the following languages:
+
+\begin{itemize}
+    \item Acme (see section \ref{subsecL:ACME})
+\end{itemize}
+
+
+\subsubsection{References}
+\url{http://acme.able.cs.cmu.edu/AcmeStudio/}
+
+
+
+
+\subsection{AlloyAnalyzer}
+\label{subsecT:AlloyAnalyzer}
+
+\authors{Stefan}
+
+\todo[inline]{Warning, I renamed it to AlloyAnalyzer}
+
+The Alloy Analyzer is a tool developed alongside the Alloy language. 
+It can be used to find inconsistencies and check properties of the declarative Alloy models.
+Similar to many popular model checkers, it can generate counter examples and graphically visualise the model structures.
+
+% Alloy's tool, the Alloy Analyzer, is a solver that takes the constraints of a model and finds structures that satisfy them. 
+% It can be used both to explore the model by generating sample structures, and to check properties of the model by generating counterexamples. Structures are displayed graphically, and their appearance can be customized for the domain at hand.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{AnyLogic}
+\label{subsecT:AnyLogic}
+
+AnyLogic is a multi-method modelling tool, supporting various modelling formalims and languages, including statecharts, process flowcharts, and action charts. 
+The tool allows the use of multiple simulation paradigms, including system dynamics, discrete events and agent-based models.
+Its graphical user interface and well-integrated tools and libraries allow rapid modelling processes in various domains, such as business processes, manufacturing and logistics.
+
+% AnyLogic is the only simulation tool that supports all the most common simulation methodologies in place today: System Dynamics, Process-centric (AKA Discrete Event), and Agent Based modeling.
+% The unique flexibility of the modeling language enables the user to capture the complexity and heterogeneity of business, economic and social systems to any desired level of detail. AnyLogic's graphical interface, tools, and library objects allow you to quickly model diverse areas such as manufacturing and logistics, business processes, human resources, consumer and patient behavior.
+% The object-oriented model design paradigm supported by AnyLogic provides for modular, hierarchical, and incremental construction of large models.
+% AnyLogic is a simulation software for the entire business lifecycle.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.anylogic.com/}
+
+
+
+\subsection{ArcGIS}
+\label{subsecT:ArcGIS}
+
+\authors{Stefan}
+
+ArcGIS is a tool, that is focused on the creation of geographic data representations and models.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.arcgis.com/index.html}
+
+
+
+\subsection{Asmeta Tools}
+\label{subsecT:AsmetaTools}
+
+\todo[inline]{Renamed}
+
+Asmeta Tools is a collection of software utilities for interaction with Asmeta models. 
+Asmeta Tools allow for example the editing, visualisation, simulation and model checking of Asmeta models.
+The tools are distributed as plugins for the Eclipse IDE.
+
+% This site is dedicated to the Abstract State Machine Metamodel (AsmM, in brief), a metamodel for the Abstract State Machines (ASMs) formal method developed by following the guidelines of the Model-Driven Engineering (MDE).
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://asmeta.sourceforge.net/download/index.html}
+
+
+
+\subsection{CHESS}
+\label{subsecT:CHESS}
+
+\todo[inline]{CHESS is a UML Profile and an adapted version of existing tools. If we add CHESS as a tool, we need the language too. I think it should be removed}
+
+
+Distributed dependable real-time embedded software systems, like Satellite on board software, are becoming increasingly complex due to the demand for extended functionalities or the reuse of legacy code and components. Model-Driven Engineering (MDE) approaches are good solutions to help build such complex systems. Addressing domain specific modeling (like component description and interaction, real-time constraints, ...) while keeping the flexibility and generality offered by languages like UML is a challenge in a context where software must be qualified according to safety and reliability standards.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://www.chess-project.org/}
+
+
+
+\subsection{COMSOL Multiphysics}
+\label{subsecT:COMSOL}
+
+\authors{Stefan}
+
+\todo[inline]{Renamed}
+
+COMSOL Multiphysics is a tool that allows the simulation, solving and analysis of systems in various domains, such as electrical, mechanical and chemical applications.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.comsol.com/}
+
+
+
+
+\subsection{Capella}
+\label{subsecT:Capella}
+\authors{Stefan}
+
+Capella is an implementation of the ARCADIA modelling language and toolset distributed as an Eclipse plugin.
+The basis of ARCADIA enforces three main modelling aspects, i.e. the requirements engineering, the architecture modelling and the need analysis.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://hal.archives-ouvertes.fr/hal-01258014/document}
+
+\url{https://www.polarsys.org/capella/index.html}
+
+
+
+\subsection{Crescendo}
+\label{subsecT:Crescendo}
+
+\authors{Stefan}
+
+Crescendo is a tool built upon the Overture tool and 20-sim, to offer co-simulation, design and modelling capabilities for cyber-physical systems.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://crescendotool.org/}
+
+DOI: 10.1007/978-3-642-54118-6
+
+
+
+
+\subsection{CyPhySim}
+\label{subsecT:CyPhySim}
+
+CyPhySim is a Cyber-Physical Simulator based on Ptolemy II.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://cyphysim.org/}
+
+% @presentation{BrooksLeeLorenzettiNouiduiWetter15_DemoCyPhySimCyberPhysicalSystemsSimulator,
+%     author = {Christopher Brooks and Edward A. Lee and David
+%               Lorenzetti and Thierry Nouidui and Michael Wetter},
+%     title = {Demo: CyPhySim --- A Cyber-Physical Systems
+%               Simulator},
+%     day = {14},
+%     month = {April},
+%     year = {2015},
+%     note = {Presented as a demo at <a
+%               href="http://ljk.imag.fr/hscc2015/" >HSCC 2015,
+%               Seattle</a>.},
+%     abstract = {This demo provides a preview of a pre-release
+%               version of CyPhySim, an open-source simulator for
+%               cyber-physical systems. This simulator supports
+%               discrete-event models, quantized-state simulation
+%               of continuous dynamics, the Functional Mockup
+%               Interface (FMI), classical (Runge-Kutta)
+%               simulation of continuous dynamics, modal models
+%               (hybrid systems), discrete-time (periodic)
+%               systems, and algebraic loop solvers. CyPhySim
+%               provides a graphical editor, an XML file syntax
+%               for models, and an open API for programmatic
+%               construction of models.},
+%     URL = {http://icyphy.org/pubs/56.html}
+% }
+
+
+\subsection{DIPLODOCUS}
+\label{subsecT:DIPLODOCUS}
+
+\todo[inline]{@Dominique, this one is for you to describe :-) }
+
+DIPLODOCUS stands for DesIgn sPace exLoration based on fOrmal Description teChniques, Uml and SystemC. 
+
+Basically, DIPLODOCUS targets the partitioning of Systems-on-Chip. Partitioning a system means finding the best candidate software and hardware architecture for executing a set of functions. This selection of architecture is thus made according to given criteria, e.g., cost, power consumption, performance, etc..
+
+DIPLODOCUS supports the Y-Chart approach, i.e., the partitioning is done as follows:
+
+    Application modeling: functions of the system are first modeled. Functions might later be software or hardware implemented.
+
+    Architecture modeling: candidate hardware architectures are modeled in terms of parametrized nodes: execution nodes (CPU, hardware accelerators), communication nodes (buses, bridges) and storage nodes (memories).
+
+    Mapping modeling: functions are mapped onto a given candidate architecture, i.e. functions are allocate dto either CPUs or hardware accelerators, and communication between functions are allocated to communication and storage nodes.
+
+
+Moreover, DIPLODOCUS works at a high level of abstraction, and offers non-deterministic operators: this is thus very fast to model a first system, and evaluate different mappings for these functions. Moreover, all is graphical (UML). Last but not least, formal proofs and performance evaluation by simulation can be done at the push of a button, directly from UML diagrams.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Dymola}
+\label{subsecT:Dymola}
+
+\authors{Stefan}
+
+Dymola is an commercial implementation of the Modelica language. 
+It allows modelling and simulation of complex multi-domain systems.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.3ds.com/products-services/catia/products/dymola/}
+
+
+
+\subsection{EBTresos}
+\label{subsecT:EBTresos}
+
+\todo[inline]{I'm not sure how important it is. It is ``one of the'' Autosar solutions}
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{ESMoL}
+\label{subsecT:ESMoL}
+
+\authors{Stefan}
+
+The Embedded Systems Modeling Language (ESMoL) is a set of DSMLs for the modelling of embedded systems.
+The languages address various aspects of the safety-critical systems domain and focus on separation of concerns between
+control engineering, hardware specification, and software development teams.
+ESMoL is further used to specify relations between controllers, implementing functions and hardware platforms.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+The ESMoL Language and Tools for High-Confidence Distributed
+Control Systems Design. Part 1: Design Language, Modeling Framework, and Analysis
+
+by Joseph Porter, Graham Hemingway, Harmon Nine, Chris vanBusKirk,
+Nicholas Kottenstette, Gabor Karsai, and Janos Sztipanovits
+
+\url{https://pdfs.semanticscholar.org/022f/888e86ab2df0627421f2d8ad1da90b733528.pdf}
+
+
+
+\subsection{EclipseEDT}
+\label{subsecT:EclipseEDT}
+
+\todo[inline]{If we remove EclipseEGL we should also remove this oen}
+
+It is tool for EGL
+EGL, originally developed by IBM, is a programming technology designed to meet the challenges of modern, multi-platform application development by providing a common language and programming model across languages, frameworks, and runtime platforms. The language borrows concepts familiar to anyone using statically typed languages like Java, COBOL, C, etc. However, it borrows the concept of Stereotype from UML (Universal Modeling Language) that is not typically found in statically typed programming languages.
+
+In a nutshell, EGL is a higher-level, universal application development language.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EclipseEMF}
+\label{subsecT:EclipseEMF}
+
+The Eclipse Modeling Framework (EMF) is a set of software tools for the specification of software models.
+EMF is the basis of many other tools and a foundation of the Eclipse Modeling Project.
+Due to its popularity it is one of the go-to solutions when it comes to creating domain specific modelling tools.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EclipseERD}
+\label{subsecT:EclipseERD}
+
+\todo[inline]{I think this is outdated and not really that important, vote to remove}
+
+a database design tool that provides graphical representation of database tables, their columns and inter-relationships.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{EclipseEpsilon}
+\label{subsecT:EclipseEpsilon}
+
+\authors{Stefan}
+
+Epsilon is a set of modelling languages built around the Eclipse eco-system.
+It supports various modelling tasks (e.g. code generation, model-to-model transformation, model validation, etc.).
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.eclipse.org/epsilon/}
+
+
+
+
+\subsection{FCM}
+\label{subsecT:FCM}
+
+\authors{Stefan}
+
+The Flex-eWare Component Model (FCM) is an extension of the CORBA Component Model (CCM) in the aim of providing a common meta-model for component-oriented software modelling.
+The targeted domain of FCM modes are embedded and real-time systems. 
+FCM notably offers flexible interaction through connectors and user defined port-types
+
+% Flexible Component Model : profile to annotate port, connectors, and components
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://www.ec3m.net/component-model.html}
+
+\url{https://hal.inria.fr/inria-00628310/document}
+
+
+
+\subsection{FOMA}
+\label{subsecT:FOMA}
+
+\todo[inline]{The tool is called FOAM (not FOMA), also I question its relevance. I only found the MSc thesis (see below). I think it should be removed.}
+
+The FOAM tool allows users to capture behaviour in use-cases using annotations and to verify various temporal constraints.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://is.cuni.cz/webapps/zzp/download/120138195}
+
+
+\textbf{TODO:} add natural language
+
+
+\subsection{GEMOCStudio}
+\label{subsecT:GEMOCStudio}
+
+GEMOC Studio is a language and modelling workbench which supports the GEMOC methodology.
+Its aim is tu support the creation and composition of executable DSMLs.
+It is distributed as plugin for the Eclipse IDE.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://gemoc.org/studio.html}
+
+
+
+\subsection{IRM-SATool}
+\label{subsecT:IRM-SATool}
+
+\authors{Stefan}
+
+IRM-SA is a toolchain for the creation of IRM-SA (Invariant Refinement Method for Self-Adaptation) models.
+The method is focused on the specification of software intensive cyber-physical systems and component-ensemble based models.
+It relies on Eclipse's EMF and GMF technologies and the Epsilon modeling languages.
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://d3s.mff.cuni.cz/software/irm/}
+
+
+
+
+\subsection{Kronos}
+\label{subsecT:Kronos}
+
+Kronos is a timed automata model checker, which uses the region graph method for verification.
+It supports the TCTL temporal logic.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{LTSA}
+\label{subsecT:LTSA}
+
+\todo[inline]{Remove, latest stable version from 2006...}
+
+Labelled Transition System Analyser:
+LTSA is a verification tool for concurrent systems. It mechanically checks that the specification of a concurrent system satisfies the properties required of its behaviour. In addition, LTSA supports specification animation to facilitate interactive exploration of system behaviour.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.doc.ic.ac.uk/ltsa/}
+
+
+
+
+\subsection{MASSIF}
+\label{subsecT:MASSIF}
+
+\todo[inline]{Not that important... it's ``just'' a converter from Simulink to EMF. Remove IMO}
+Massif is Matlab Simulink Integration Framework for Eclipse. Its purpose is to convert Simulink models to Eclipse-EMF models, and vice versa. This guide introduces the main features of the software for end-users. It also contains illustrative screenshots in order to ease the learning process and to show configuration settings.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://github.com/viatra/massif}
+
+
+
+\subsection{MAST}
+\label{subsecT:MAST}
+
+MAST is a suite of tools for the analysis of distributed systems.
+Its focus lies on the assessment of schedulability and timing requirements of real-time systems.
+
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://mast.unican.es/}
+
+
+
+\subsection{MATSim}
+\label{subsecT:MATSim}
+
+MATSim is an open-source framework to implement large-scale agent-based transport simulations.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://matsim.org/}
+
+\url{http://dx.doi.org/10.5334/baw}
+
+
+\subsection{MoDeS}
+\label{subsecT:MoDeS}
+
+\todo[inline]{Remove this one}
+<<TODO: Provide rdfs:comment annotation assertion>>
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{MyCCM-Hi}
+\label{subsecT:MyCCM-Hi}
+
+\todo[inline]{Outdated, I think. Remove?}
+
+MyCCM-HI is a modelling framework for distributed, safety-critical embedded systems.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://freshmeat.sourceforge.net/projects/myccmhi}
+
+
+
+\subsection{NuSMV}
+\label{subsecT:NuSMV}
+
+\authors{Stefan}
+
+NuSMV is a popular symbolic model checker.
+It is employed in many other tools for systems and model analysis.
+It is further the basis of NuXMV, a model checker for synchronous systems.
+
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://es-static.fbk.eu/tools/nuxmv/index.php}
+
+\url{http://nusmv.fbk.eu/}
+
+
+\subsection{OBPExplorer}
+\label{subsecT:OBPExplorer}
+
+\authors{Stefan}
+
+The OBP toolset is an implementation of the OBP-CDL language.
+It allows model properties to be checked properties to be checked.
+
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{OMNet++}
+\label{subsecT:OMNet++}
+
+\authors{Stefan}
+
+OMNeT++ is a discrete event simulation library for network simulators, implemented in C++.
+This design choice renders the tool extensible and modular.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.omnetpp.org/}
+
+
+
+\subsection{OSATE}
+\label{subsecT:OSATE}
+
+\todo[inline]{@Dominique, I'll leave this for you}
+Osate 2 is an open-source tool platform to support AADL v2. In January 2012 correction to a number of errata to AADL v2 have been approved.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Ocarina}
+\label{subsecT:Ocarina}
+
+\authors{Stefan}
+
+Ocarina is a tool for the processing of AADL models. 
+It supports model and schedulability analysis, parsing, code generation and model checking.
+Ocarina can be used as stand-alone solution or integrated into OSATE and other tools.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://www.openaadl.org/ocarina.html}
+
+
+
+\subsection{OpenModelica}
+\label{subsecT:OpenModelica}
+
+\authors{Stefan}
+
+OpenModelica is an open-source implementation of the Modelica language.
+The popular tool offers modelling and simulation of systems and sees industrial and academic usage.
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://openmodelica.org/}
+
+
+\subsection{Overture}
+\label{subsecT:Overture}
+
+\authors{Stefan}
+
+Overture is an Eclipse-based tool that notably supports the Vienna Development Method (VDM).
+It supports various VDM dialects (VDM-SL, VDM++, VDM-RT). 
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{www.overturetool.org}
+
+
+
+\subsection{PHAVer}
+\label{subsecT:PHAVer}
+
+\authors{Stefan}
+
+PHAVer is a model checking and verification tool for hybrid automata.
+It allows the verification of safety properties and offers robust arithmetic, unlimited precision and support for compositional and assume-guarantee reasoning.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://www-verimag.imag.fr/~frehse/phaver_web/}
+
+\url{http://spaceex.imag.fr/phaver-8}
+
+
+
+\subsection{PRISM}
+\label{subsecT:PRISM}
+
+\author{Stefan}
+
+PRISM is a popular model checker for probabilistic models. It features the analysis of systems with random or probabilistic behaviour. 
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://www.prismmodelchecker.org/}
+
+
+\subsection{Palladio}
+\label{subsecT:Palladio}
+
+\authors{Stefan}
+
+Palladio is an architecture based analysis and simulation tool.
+It focuses on model-based discovery of performance bottlenecks, scalability issues, and reliability threats.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.palladio-simulator.com/home/}
+
+
+
+\subsection{Papyrus}
+\label{subsecT:Papyrus}
+
+\authors{Stefan}
+
+Papyrus is an Eclipse-based UML, SysML and domain-specific modelling environment.
+The tool is customisable and expandable and supports UML profiles.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.eclipse.org/papyrus/}
+
+
+
+
+\subsection{ProCom}
+\label{subsecT:ProCom}
+
+\todo[inline]{I think we should remove this}
+Progress Component Model
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Ptolemy}
+\label{subsecT:Ptolemy}
+
+\authors{Stefan}
+
+Ptolemy II is a modelling platform, supporting various modelling paradigms, such as actor-oriented, real-time, discrete-event, continuous time.
+It supports the modelling, simulation and analysis of heterogeneous models, notably hybrid automata.
+It is further the platform for other tools built upon its models of computation.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://ptolemy.berkeley.edu/ptolemyII/index.htm}
+
+
+\subsection{ROS}
+\label{subsecT:ROS}
+
+\authors{Stefan}
+
+The Robot Operating System is a middleware for robotics systems. 
+It provides libraries for the design, creation and analysis of embedded systems.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://www.ros.org/}
+
+
+
+\subsection{RSA}
+\label{subsecT:RSA}
+
+\todo[inline]{Rename this to Rational Software Architect. RSA is an ambiguous name.}
+
+\authors{Stefan}
+
+IBM's Rational Software Architect is a tool suite for the end-to-end modelling and development of software systems.
+It features extensive design and modelling capabilities around various modelling formalisms and languages and further features extensive analysis and reporting capabilities.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.ibm.com/developerworks/downloads/r/architect/index.html}
+
+
+
+\subsection{Rainbow}
+\label{subsecT:Rainbow}
+
+\todo[inline]{I didn't find anythong for this one. Remove?}
+To reduce the cost and improve the reliability of making changes to complex systems, we are developing new technology supporting automated, dynamic system adaptation via architectural models, explicit representation of user tasks, and performance-oriented run-time gauges.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Remes}
+\label{subsecT:Remes}
+
+\authors{Stefan}
+
+Remes is a state-machine based modelling language for embedded systems.
+It features the representation of resources (e.g. storage, computation, electrical power) and continuous time.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+DOI: 10.1109/ICECCS.2009.49
+
+
+\reviewer{Moussa Amrani}
+\subsection{SCADE}
+\label{subsecT:SCADE}
+
+\authors{Stefan}
+
+SCADE is a tool suite for the modelling, simulation and analysis of mission and safety-critical embedded systems.
+Its focus lies on the software side, which can be modelled.
+SCADE applications involve requirements modelling, model design, verification and code-generation.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.ansys.com/products/embedded-software/ansys-scade-suite}
+
+
+\subsection{SOFA-HI}
+\label{subsecT:SOFA-HI}
+
+\todo[inline]{Remove this, we don't describe SOFA 2, why are we describing an extension ?}
+
+SOFA HI is an extension of the SOFA 2 component model, targeted at high-integrity real-time embedded systems.
+
+The key additions and differences of SOFA HI comparing to SOFA 2 include various restrictions of the component model in order to make it more predictable and lightweight. For instance, SOFA HI restricts dynamic architecture reconfigurations to dynamic component updates at runtime only, while SOFA 2 supports more types of dynamic architecture reconfigurations). In addition, while SOFA 2 does not consider any restricted computational model, SOFA HI considers the Ravenscar Computational Model for local deployments, with an extension for distributed deployments.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{SPL}
+\label{subsecT:SPL}
+
+\todo[inline]{remove this, it's a formalism and imho not that exciting}
+
+Stochastic Performance Logic
+Compared to functional unit testing, performance unit testing is more difficult, partially because correctness criteria are more difficult to express for performance than for functionality. Using the Stochastic Performance Logic (SPL), we aim to express assertions on code performance in relative, hardware-independent terms. Using the performance unit testing tools, these assertions can be automatically validated. Besides performance unit testing, we experiment with using the performance unit tests to generate data for software documentation extended with performance information. Other research includes incorporating performance awareness into adaptive applications.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{STOOD}
+\label{subsecT:STOOD}
+
+\authors{Stefan}
+
+STOOD is a tool suite for the system design and modelling.
+It complies with AADL and follows the Hierarchical Object Oriented Design (HOOD) method.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.ellidiss.com/products/stood/}
+
+
+
+
+\subsection{Simulink}
+\label{subsecT:Simulink}
+
+\authors{Stefan}
+
+Simulink is a multi-domain simulation and modelling environment.
+Its main language is block diagram based, although it also supports a programming and scripting language for advanced, customised extension. 
+Due to its flexibility and large object library it is popular and can be seen as a de-facto standard for systems modelling.
+
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://ch.mathworks.com/de/products/simulink.html}
+
+
+\subsection{Spin}
+\label{subsecT:Spin}
+
+\authors{Stefan}
+
+Spin is wide-spread model verification tool.
+It is known for its verification capabilities of parallel and multi-threaded software applications.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://spinroot.com/spin/whatispin.html}
+
+
+
+\subsection{Stage}
+\label{subsecT:Stage}
+
+\todo[inline]{Remove, this is one of the ROS features. It's not important enough to be its own entry.}
+
+Stage (ver 3.0.0 and above) is equipped to work as standalone, wherein controllers integrated into stage enables motion, behaviour and processes for the robot(s). This tutorial discusses two such stage controllers.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{StrataGEM (Strategy Generic Extensible Modelchecker)}
+\label{subsecT:StrataGEM}
+
+
+
+Strategy Generic Extensible Modelchecker (StrataGEM) is a tool for the analysis and symbolic model-checking of concurrent models such as Petri nets. It is based on term rewriting and uses decision diagrams fro efficiency.
+
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://link.springer.com/chapter/10.1007/978-3-319-07734-5_20}
+
+
+
+
+\subsection{SyVoLT}
+\label{subsecT:SyVoLT}
+
+\authors{Stefan}
+
+SyVOLT (Symbolic Verifier of mOdeL Transformations) is a contract verification tool.
+It is distributed as a plugin for the Eclipse development environment and allows the verification of structural pre-/post-condition contracts on model transformations. 
+
+\subsubsection{Supported Languages}
+
+DSLTrans
+
+
+\subsubsection{References}
+
+
+[6] Full Contract Verification for ATL using Symbolic Execution. B. Oakes, J. Troya, L. LÃºcio, M. Wimmer. Software and Systems Modeling 2016 (pp. 1-35). Springer Berlin Heidelberg. 
+
+[5] SyVOLT: Full Model Transformation Verification Using Contracts. L. LÃºcio, B. Oakes, C. Gomes, G. Selim, J. Dingel, J. R. Cordy, H. Vangheluwe. Proceedings of MODELS 2015.
+
+[4] Finding and Fixing Bugs in Model Transformations with Formal Verification: An Experience Report. G. Selim, J. R. Cordy, J. Dingel, L. LÃºcio, B. Oakes. Proceedings of Analysis of Model Transformations 2015 (pp. 26-35).
+
+[3] Fully Verifying Transformation Contracts for Declarative ATL. B. Oakes, J. Troya, L. LÃºcio, M. Wimmer. Proceedings of MODELS 2015 (pp. 256-265).
+
+[2] A Technique for Symbolically Verifying Properties of Graph-based Model Transformations. L. LÃºcio, B. Oakes, H. Vangheluwe. Technical Report SOCS-TR-2014.1, McGill University.
+
+[1] Specification and Verification of Graph-Based Model Transformation Properties. G. Selim, L. LÃºcio, J. Cordy, J. Dingel, B.Oakes. Proceedings of Graph Transformation 2014 (pp. 113-129). Springer International Publishing.
+
+
+
+\subsection{SystemDesk}
+\label{subsecT:SystemDesk}
+
+SystemDesk is an AUTOSAR tool aimed at the modelling of system architectures.
+It can generate virtual ECUs (V-ECUs) from application software,w hich can be tested using other dSPACE simulation platforms.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://www.dspace.com/en/inc/home/products/sw/system_architecture_software/systemdesk.cfm}
+
+
+
+\subsection{TINA\textunderscore SELT (TIme petri Net Analyzer - State/Event LTL model checker)}
+\label{subsecT:TINA_SELT}
+
+TINA (TIme Petri Net Analyser)1 is a model checker for Petri nets and Time Petri nets.
+It supports various abstract state space constructions, while preserving properties of the concrete state space representations (e.g. reachability properties, deadlock freeness, liveness).
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://projects.laas.fr/tina//}
+
+
+
+\subsection{TTool (tea-tool)}
+\label{subsecT:TTool}
+
+\todo[inline]{@Dominique, this one's for you :-) }
+
+TTool (pronounced "tea-tool") is a toolkit dedicated to the edition of UML and SysML diagrams, and to the simulation and formal validation of those diagrams. TTool supports several UML profiles, including:
+-    DIPLODOCUS: UML profile dedicated to the partitioning of Systems-on-Chip or embedded systems.
+-    AVATAR: SysML-based environment for the modeling and formal verification of real-time embedded software..
+-    SysML-Sec: SysML-based environment for the modeling and formal verification of real-time embedded systems with security and safety issues
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{TURTLE}
+\label{subsecT:TURTLE}
+
+\todo[inline]{@Dominique, this one's for you (I think it's also TTool stuff)}
+Verification and Simulation of TURTLE (Real-Time UML) Diagrams
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://ieeexplore.ieee.org/document/1318608}
+
+
+
+\subsection{TargetLink}
+\label{subsecT:TargetLink}
+
+\todo[inline]{This is an addon for MATLAB/Simulink/Stateflow; shouldn't be it's own tool. Remove!}
+
+
+Automatic production code generator
+TargetLink is a software system that generates production code (C code) straight from the MATLAB/Simulink/Stateflow graphical development environment.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{UMLAnalyzer}
+\label{subsecT:UMLAnalyzer}
+
+\authors{Stefan}
+
+UML/Analyzer is a tool for the consiztenzy checking of UML models.
+It is integrated with IBM Rational Rose.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{https://dl.acm.org/citation.cfm?id=1248824}
+
+
+
+\subsection{UMLMAST}
+\label{subsecT:UMLMAST}
+
+\todo[inline]{Remove, Already described as MAST}
+
+UML-MAST is a metodology and a set of tools for modeling and analizing object oriented real-time systems expressed in UML. It is based on the concept of the "Mast RT View" of the system, which describes in a qualitative and quantitative way the timing behavior, the real-time performance constraints and relevant implementation parameters from the real-time perspective. The use of a real-time view allows the designer building the real-time system model gradually according to the evolution of the development process, feeding the analysis tools, and bringing back into the model the relevant timing responses. Therefore UML-MAST follows the model processing paradigm.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{UPPAAL}
+\label{subsecT:UPPAAL}
+
+UPPAAL is a modeling, simulation and model-checking tool for timed and real-time systems.
+It allows the desing and verification of timed automata and similar formalisms.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://www.uppaal.org/}
+
+
+
+\subsection{UppaalSMC (Statistical Model Checking Extension for the UPPAAL Toolset.)}
+\label{subsecT:UppaalSMC}
+
+\todo[inline]{Remove this, it's just a small extension}
+
+Statistical Model Checking (SMC) refers to a series of techniques that monitor several runs of the system with respect to some property, and then use results from the statistics to get an overall estimate of the correctness of the design. The approach has been applied to problems that are far beyond the scope of existing model checkers. In fact, SMC gets widely accepted in various research areas such as systems biology or software engineering, in particular for industrial applications. There are several reasons for this success. First, it is very simple to implement, understand and use (especially by industry, software engineers, and generally all people that are not pure researchers but customers for our results and tools). Second, it requires little or no extra modeling or specification effort, but simply an operational model of the system that can be simulated and checked against properties. Third, the use of Statistics allows to approximate undecidable problems. Finally, it is possible to easily distribute SMC.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{VIATRA}
+\label{subsecT:VIATRA}
+
+The VIATRA framework is a reactive model transformation system. It's focus lies on event-driven transformations.
+The tool is well-integrated into the Eclipse modelling ecosystem.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+\url{https://projects.eclipse.org/projects/modeling.viatra}
+
+
+\subsection{Z3}
+\label{subsecT:Z3}
+
+\todo[inline]{Remove this, it's an SMT checker, nothing specific for modelling or CPS}
+
+Z3 is a low level tool. It is best used as a component in the context of other tools that require solving logical formulas.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{Zen-RUCM}
+\label{subsecT:Zen-RUCM}
+
+Zen-RUCM is an extension of the Restricted Use Case Modeling (RUCM) approach.
+Its accompanying tool allows the analysis and verification of requirements defined in specified in restricted natural language.
+Requirements models can be automatically generated and verified.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+\url{http://zen-tools.com/tools/zen-rucm.html}
+
+
+
+\subsection{eC3M (Embedded Component Container Connector Middleware)}
+\label{subsecT:eC3M}
+
+\authors{Stefan}
+
+\todo[inline]{I vote to remove it, it's not that interesting.}
+
+eC3M is an FCM-based application for the generation of embedded middleware and real-time applications.
+
+% eC3M (pronounce: e triple-C M) is a component based modeling / middleware approach that is suitable for embedded and real-time applications. The application modeling is based on the Flex-eWare component model (FCM). This component model is aligned with the OMG standard (D\&C), click here for more information on the component model.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}
+
+
+
+
+
+\subsection{jDEECo}
+\label{subsecT:jDEECo}
+
+\todo[inline]{Arguably, this is not really a tool, it is a java-library implementation of DEECo. we should remove it.}
+JDEECo framework is a prototype in java that illustrates basic DEECo concepts.
+
+\subsubsection{Supported Languages}
+
+None
+
+
+\subsubsection{References}

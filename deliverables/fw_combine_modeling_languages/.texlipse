@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Wed Jul 08 14:49:28 CEST 2020
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=mpm4cps_wg1_d12.tex
+outputFile=mpm4cps_wg1_d12.pdf
+langSpell=en
+markDer=true
+srcDir=

@@ -1,0 +1,370 @@
+[comment encoding = UTF-8 /]
+[module mpm4cpsHelpers('http://www.w3.org/2002/07/owl#')]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::owlHelpers/]
+
+[query public domainConceptName( subClassOf : SubClassOf ) : String =
+	let rawName : String = extendingClass().iRI.toLatex() in
+		rawName.substring( 1, rawName.size() - 2 ).concat( ' Domain Concepts' ) 
+/]
+
+[query public toLatexLabel( subClassOf : SubClassOf ) :  String =
+	extendingClass().iRI.toLatexLabel()
+/]
+
+[query public isDomainConcept( ontology : Ontology, classIri : String ) : Boolean =
+	extendedClasses( classIri )->exists( el | el.isDomainConcept() )
+/]
+
+[query public isLocalDomainConcept( subClassOf : SubClassOf ) : Boolean =
+	extendingClass().iRI.isLocal() and extendedClass().iRI.isDomainConcept()
+/]
+
+[query public isDomainConcept( classIri : String ) : Boolean =
+	classIri.normEquals( '#DomainConcept' )
+/]
+
+[query public citeKey( reference : String ) :  String =
+	if startsWith( 'key:' ) then
+		substring( 5, size() )
+	else
+		null
+	endif
+/]
+
+[query public formalismLanguages( ontology : Ontology, iri : String ) : Set( String ) =
+	hasLanguageAssertions()->select( hasDomainIndividual( iri ) )->
+		select( toBeRemoveds( ontology, namedIndividual->last().iRI )->isEmpty() )->
+			collect( namedIndividual->last().iRI )->asSet()
+/]
+
+[query public hasLanguageAssertions( ontology : Ontology ) : Set( ObjectPropertyAssertion ) =
+	objectPropertyAssertion->select( isHasLanguage() )
+/]
+
+[query public isHasLanguage( assertion : ObjectPropertyAssertion ) : Boolean =
+	objectProperty.isHasLanguage() 
+/]
+
+[query public isHasLanguage( property : ObjectProperty ) : Boolean =
+	iRI.normEquals( '#hasLanguage' )
+/]
+
+[query public toolLanguages( ontology : Ontology, iri : String ) : Set( String ) =
+	isToolForAssertions()->select( hasDomainIndividual( iri ) )->
+		select( toBeRemoveds( ontology, namedIndividual->last().iRI )->isEmpty() )->
+			collect( namedIndividual->last().iRI )->asSet()
+/]
+
+[query public isToolForAssertions( ontology : Ontology ) : Set( ObjectPropertyAssertion ) =
+	objectPropertyAssertion->select( isIsToolFor() )
+/]
+
+[query public isIsToolFor( assertion : ObjectPropertyAssertion ) : Boolean =
+	objectProperty.isIsToolFor() 
+/]
+
+[query public isIsToolFor( property : ObjectProperty ) : Boolean =
+	iRI.normEquals( '#isToolFor' )
+/]
+
+[query public languageTools( ontology : Ontology, iri : String ) : Set( String ) =
+	hasToolAssertions()->select( hasDomainIndividual( iri ) )->
+		select( toBeRemoveds( ontology, namedIndividual->last().iRI )->isEmpty() )->
+			collect( namedIndividual->last().iRI )->asSet()
+/]
+
+[query public hasToolAssertions( ontology : Ontology ) : Set( ObjectPropertyAssertion ) =
+	objectPropertyAssertion->select( isHasTool() )
+/]
+
+[query public isHasTool( assertion : ObjectPropertyAssertion ) : Boolean =
+	objectProperty.isHasTool() 
+/]
+
+[query public isHasTool( property : ObjectProperty ) : Boolean =
+	iRI.normEquals( '#hasTool' )
+/]
+
+[query public languageFormalisms( ontology : Ontology, iri : String ) : Set( String ) =
+	isBasedOnFormalismAssertions()->select( hasDomainIndividual( iri ) )->
+		select( toBeRemoveds( ontology, namedIndividual->last().iRI )->isEmpty() )->
+			collect( namedIndividual->last().iRI )->asSet()
+/]
+
+[query public isBasedOnFormalismAssertions( ontology : Ontology ) : Set( ObjectPropertyAssertion ) =
+	objectPropertyAssertion->select( isIsBasedOnFormalism() )
+/]
+
+[query public isIsBasedOnFormalism( assertion : ObjectPropertyAssertion ) : Boolean =
+	objectProperty.isIsBasedOnFormalism() 
+/]
+
+[query public isIsBasedOnFormalism( property : ObjectProperty ) : Boolean =
+	iRI.normEquals( '#isBasedOnFormalism' )
+/]
+
+[query public isFormalism( 	ontology : Ontology, 
+							class : Class,
+							recursive : Boolean  ) : Boolean =
+	ontology.isExtending( class.iRI, '#Formalism', recursive )
+/]
+
+[query public isLanguage( ontology : Ontology, class : Class ) : Boolean =
+	isExtending( class.iRI, '#Language', true )
+/]
+
+[query public isFormalLanguage( ontology : Ontology, class : Class ) : Boolean =
+	isFormalLanguage( class.iRI )
+/]
+
+[query public isFormalLanguage( ontology : Ontology, iri : String ) : Boolean =
+	isExtending( iri, '#FormalLanguage', true )
+/]
+
+[query public isTool( ontology : Ontology, class : Class ) : Boolean =
+	isTool( class.iRI )
+/]
+
+[query public isTool( ontology : Ontology, iri : String ) : Boolean =
+	isExtending( iri, '#Tool', true )
+/]
+
+[query public toDos( ontology : Ontology ) : Sequence( String ) =
+	annotation->select( annotationProperty.isToDo() )->collect( literal.value.escapeSpecialLatexChars() )
+/]
+
+[query public toDos( ontology : Ontology, iri : String ) : Bag( String ) =
+	toDoAssertions()->select( annotates( iri ) )->collect( literal.value.escapeSpecialLatexChars() )
+/]
+
+[query public toDoAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isToDo() )
+/]
+
+[query public isToDo( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isToDo() 
+/]
+
+[query public isToDo( annProperty : AnnotationProperty ) : Boolean =
+	-- TODO: Fix this
+	iRI <> null and iRI.normEquals( '#mpm4cps:toDo' )
+/]
+
+[query public toBeRemoveds( ontology : Ontology ) : Sequence( String ) =
+	annotation->select( annotationProperty.isToBeRemoved() )->collect( literal.value.escapeSpecialLatexChars() )
+/]
+
+[query public toBeRemoveds( ontology : Ontology, iri : String ) : Bag( String ) =
+	toBeRemovedAssertions()->select( annotates( iri ) )->collect( literal.value.escapeSpecialLatexChars() )
+/]
+
+[query public toBeRemovedAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isToBeRemoved() )
+/]
+
+[query public isToBeRemoved( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isToBeRemoved() 
+/]
+
+[query public isToBeRemoved( annProperty : AnnotationProperty ) : Boolean =
+	-- TODO: Fix this
+	iRI <> null and iRI.normEquals( '#mpm4cps:toBeRemoved' )
+/]
+
+[query public cpsUsages( ontology : Ontology, iri : String ) : Set( String ) =
+	let cpsUsageAss : Set( AnnotationAssertion ) = cpsUsageAssertions()->select( annotates( iri ) ) in
+		cpsUsageAss->collect( literal.value )->asSet()
+/]
+
+[query public cpsUsageAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isCpsUsage() )
+/]
+
+[query public isCpsUsage( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isCpsUsage() 
+/]
+
+[query public isCpsUsage( annProperty : AnnotationProperty ) : Boolean =
+	-- TODO: Fix this
+	iRI <> null and iRI.normEquals( '#mpm4cps:usage:cps' )
+/]
+
+[query public authors( ontology : Ontology, iri : String ) : OrderedSet( String ) =
+	let authorAss : Set( AnnotationAssertion ) = authorAssertions()->select( annotates( iri ) ) in
+		authorAss->collect( literal.value.mapParticipant() )->asOrderedSet()
+/]
+
+[query public authorAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isAuthor() )
+/]
+
+[query public isAuthor( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isAuthor() 
+/]
+
+[query public isAuthor( annProperty : AnnotationProperty ) : Boolean =
+	-- TODO: Fix this
+	iRI <> null and iRI.normEquals( '#mpm4cps:author' )
+/]
+
+[query public reviewers( ontology : Ontology, iri : String ) : OrderedSet( String ) =
+	let reviewerAss : Set( AnnotationAssertion ) = reviewerAssertions()->select( annotates( iri ) ) in
+		reviewerAss->collect( literal.value.mapParticipant() )->asOrderedSet()
+/]
+
+[query public reviewerAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isReviewer() )
+/]
+
+[query public isReviewer( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isReviewer() 
+/]
+
+[query public isReviewer( annProperty : AnnotationProperty ) : Boolean =
+	-- TODO: Fix this
+	iRI <> null and iRI.normEquals( '#mpm4cps:reviewer' )
+/]
+
+[query public mapParticipant( key : String ) : String =
+	replaceAll( '_', ' ')
+/]
+
+[query public completeName( ontology : Ontology, iri : String ) : String =
+	let label : String = 
+		if label( ontology, iri ) = null then 
+			iri.toLatex()
+		else 
+			label( ontology, iri )
+		endif
+		in
+			let fullName : String = fullName( ontology, iri ) in
+				if fullName = null then  
+					label
+				else
+					label + ' (' + fullName + ')'
+				endif
+/]
+
+[query public fullName( ontology : Ontology, iri : String ) : String =
+	let assertions : Set( AnnotationAssertion ) = fullNameAssertions()->select( annotates( iri ) ) in
+	
+	if assertions->isEmpty() then
+		null
+	else
+		assertions->any( true ).literal.value.escapeSpecialLatexChars()
+	endif
+/]
+
+[query public fullNameAssertions( ontology : Ontology ) : Set( AnnotationAssertion ) =
+	annotationAssertion->select( isFullName() )
+/]
+
+[query public isFullName( annAssertion : AnnotationAssertion ) : Boolean =
+	annotationProperty.isFullName() 
+/]
+
+[query public isFullName( annProperty : AnnotationProperty ) : Boolean =
+	iRI <> null and iRI.normEquals( '#mpm4cps:fullName' )
+/]
+
+[query public catalogDirectFormalisms( ontology : Ontology, recursive : Boolean ) : Set( String ) =
+	classAssertion->select( ontology.isFormalism( class, recursive ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public catalogAutomataBasedFormalisms( ontology : Ontology, recursive : Boolean ) : Set( String ) =
+	classAssertion->select( isAutomataBasedFormalism( class, recursive ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public catalogHybridAutomataBasedFormalisms( ontology : Ontology, recursive : Boolean ) : Set( String ) =
+	classAssertion->select( isHybridAutomataBasedFormalism( class, recursive ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public catalogTimedAutomataBasedFormalisms( ontology : Ontology, recursive : Boolean ) : Set( String ) =
+	classAssertion->select( isTimedAutomataBasedFormalism( class, recursive ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public catalogFlowBasedFormalisms( ontology : Ontology, recursive : Boolean ) : Set( String ) =
+	classAssertion->select( isFlowBasedFormalism( class, recursive ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public catalogLogicBasedFormalisms( ontology : Ontology, recursive : Boolean ) : Set( String ) =
+	classAssertion->select( isLogicBasedFormalism( class, recursive ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public catalogPetriNetBasedFormalisms( ontology : Ontology, recursive : Boolean ) : Set( String ) =
+	classAssertion->select( isPetriNetBasedFormalism( class, recursive ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public isAutomataBasedFormalism( ontology : Ontology, 
+										class : Class,
+										recursive : Boolean ) : Boolean =
+	ontology.isExtending( class.iRI, '#AutomataBasedFormalism', recursive )
+/]
+
+[query public isHybridAutomataBasedFormalism( 	ontology : Ontology, 
+												class : Class,
+												recursive : Boolean ) : Boolean =
+	ontology.isExtending( class.iRI, '#HybridAutomataBasedFormalism', recursive )
+/]
+
+[query public isTimedAutomataBasedFormalism( ontology : Ontology, 
+											class : Class,
+											recursive : Boolean ) : Boolean =
+	ontology.isExtending( class.iRI, '#TimedAutomataBasedFormalism', recursive )
+/]
+
+[query public isFlowBasedFormalism( ontology : Ontology, 
+										class : Class,
+										recursive : Boolean ) : Boolean =
+	ontology.isExtending( class.iRI, '#FlowBasedFormalism', recursive )
+/]
+
+[query public isLogicBasedFormalism( ontology : Ontology, 
+										class : Class,
+										recursive : Boolean ) : Boolean =
+	ontology.isExtending( class.iRI, '#LogicBasedFormalism', recursive )
+/]
+
+[query public isPetriNetBasedFormalism( ontology : Ontology, 
+										class : Class,
+										recursive : Boolean ) : Boolean =
+	ontology.isExtending( class.iRI, '#PetriNetBasedFormalism', recursive )
+/]
+
+[query public catalogLanguages( ontology : Ontology ) : Set( String ) =
+	classAssertion->select( isLanguage( class ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public catalogTools( ontology : Ontology ) : Set( String ) =
+	classAssertion->select( isTool( class ) )->
+		select( toBeRemoveds( ontology, namedIndividual.iRI )->isEmpty() )->
+			collect( namedIndividual.iRI )->asSet()->sortedBy( el | completeName( ontology, el ).toLower() )
+/]
+
+[query public isExtendingAssertions( ontology : Ontology ) : Set( ObjectPropertyAssertion ) =
+	objectPropertyAssertion->select( isIsExtending() )
+/]
+
+[query public isIsExtending( assertion : ObjectPropertyAssertion ) : Boolean =
+	objectProperty.isIsExtending() 
+/]
+
+[query public isIsExtending( property : ObjectProperty ) : Boolean =
+	iRI.normEquals( '#isExtending' )
+/]

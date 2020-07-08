@@ -1,0 +1,451 @@
+\section{State-of-the-art }
+\label{sec:SotA}
+
+\STATUS{Moussa has proof-read the entire section (\S 3.1): corrected some typo, reorganised some sections to have a progression in the discourse, cleaned up some references to have a consistent set everywhere, and harmonised (somehow) the writing (e.g., meta model / megamodel / etc. INTO metamodel / megamodel).}
+
+\LATER{ HG: remove use of ins and chg macro }
+
+Developing nowadays complex systems\uidx{System} with Multi-Paradigm Modeling 
+requires \emph{Global Model Management} (\emph{GMM})~\cite{BJRV05,Favre04foundationsof}
+to ensure that the models of different subsystems, of different views and
+of different domains are properly combined, even though the models might reside
+at different levels of abstraction. GMM must also ensure that the development 
+activities that operate on the models are properly coordinated such that the models 
+lead to a proper system as a whole, where the different elements and aspects covered by the different models are correctly integrated and are consistent with each other.
+
+A classification of model integration problems and fundamental integration
+techniques has  been introduced in~\cite{GieseNNS2011}. It highlights  the
+techniques of decomposition and enrichment, which characterize two orthogonal
+dimensions of development where the system is decomposed into subsystems and
+domains (\emph{horizontal} dimension) and into a set of models with increasing
+level of details (\emph{vertical} dimension). %
+% \ins{
+Another approach to support interoperability\uidx{Interoperability} among languages and tools is presented in~\cite{dually}. The approach is general, however it is exemplified on interoperability among architectural languages and tools~\cite{TSE2013}. An approach to extend architectural languages\uidx{ArchitectureDescriptionLanguage} is presented in~\cite{byADL}. The technique is based on some operators to integrate models and it is generalized in~\cite{FASE2012}. % }
+\chg{This}{Model integration}\uidx{IntegrationOperation} requires coordinating all
+activities operating on the models across these dimensions to ensure their
+consistency. %
+%\ins{
+A model-driven approach to automate the propagation of changes among Architecture Description Languages\uidx{ArchitectureDescriptionLanguage}~\cite{TSE2013} is presented in~\cite{Eramo2012}. %} 
+However, inconsistency management goes beyond simply identifying
+and resolving inconsistencies, since as pointed out in~\cite{Finkelstein+1994},
+inconsistencies may need to be  tolerated at some stage of the development.
+Therefore, living with inconsistencies must be manageable and consequently, an
+approach is required to detect, resolve, but also tolerate inconsistencies for a
+significant amount of time during development. %
+% \ins{
+The work in~\cite{Wohlrab2018} provides empirical evidence of how culture, processes, and organization\uidx{Organization} impact traceability management and collaboration, and principles\uidx{Principle} support practitioners with collaborative traceability\uidx{Tracability} management. The work shows that collaboration and traceability management have the potential to be mutually beneficial - when investing in one, also the other one is positively affected. % }
+
+The development activities for nowadays complex systems\uidx{System} and in particular
+CPSs encompass multiple domains and teams, with each team using a dedicated set of
+modelling languages\uidx{ModelingLanguage}, thus requiring their proper integration and management. Using a single "model-it-all" language to cover all domains would certainly lead to large, monolithic languages that become less efficient, not easily customisable for development environments and tools needed by development teams, therefore adding difficulties to the already demanding effort of developing CPS. These considerations lead to \emph{Multi-Paradigm Modeling} (\emph{MPM})~\cite{VangheluweAIS2002}, which advocates the combination of reusable \emph{modular} modeling languages\uidx{ModelingLanguage} instead  of large monolithic languages.
+Hence, GMM must support integrating models and \textit{modeling languages} with appropriate abstractions and modularity, but also coordinating all activities
+operating on the models and specified as \textit{model operations /
+transformations}\uidx{ModelOperation}\uidx{TransformationOperation}. The execution of these model operations has to be \emph{scalable} for being able to handle large models.  This requires \emph{incrementality}, where only the  operations impacted by a model change are re-executed, thus avoiding the effort to recompute entire models, as in the case of incremental code compilers.
+
+GMM is also known as \emph{modeling-in-the-large}, which consists of
+establishing global relationships\uidx{Relation} (e.g. model operations that generated one
+model from other models) between macroscopic entities (models and meta models),
+while ignoring the internal details of these entities~\cite{BJRV05}. \emph{Mega
+modeling}~\cite{Bezivin+2004,Favre04foundationsof} has been introduced for the
+purpose of describing these macroscopic entities and their relations\uidx{Relation}.
+Nowadays only preliminary approaches exist that provide \emph{ad-hoc} solutions 
+for fragments of the sketched problem and a solid
+understanding of the underlying needs including new foundations to 
+address this problem as proposed to be developed by WG1 of MPM4CPS.
+In particular, the current approaches do at most offer some modularity and/or
+incrementality for a single aspect as modeling languages or model operations\uidx{ModelOperation}.
+However, support for handling complex modeling landscapes as a whole in a
+modular and incremental fashion as required for the large-scale problems that
+exist in practice is not offered so far.
+
+In the following, we will first look at existing solutions that address the
+construction and execution of models and modeling languages in Section~\ref{subsec:maml_cae}, model
+operations\uidx{ModelOperation} in Section~\ref{subsec:mo_cae}, and mega models in Section~\ref{subsec:mm_and_other}.
+%  \newcommand{\HC}{\cellcolor[gray]{0.8}}
+% \newcommand{\HCS}{\cellcolor[gray]{0.5}} \begin{table}[t] \vspace{-5mm} \small
+% \centering \scalebox{0.80}{ \begin{tabular}{|p{4.5
+% cm}||c|c|c|c|c||c|c|c|c||c|c|c|c|} \hline \textbf{Approach} & \multicolumn{5}
+% {c|} {\textbf{Modeling Languages}} & \multicolumn{4} {c|} {\textbf{Model
+% Operations}}  & \multicolumn{4} {c|} {\textbf{Mega Models}} \\
+% \hline & \multicolumn{3} {c|} {\emph{Const.}} & \multicolumn{2} {c|}
+% {\emph{Exec.}} & \multicolumn{2} {c|} {\emph{Const.}} & \multicolumn{2} {c|}
+% {\emph{Exec.}} & \multicolumn{2} {c|} {\emph{Const.}} & \multicolumn{2} {c|}
+% {\emph{Exec.}} \\
+% \hline & \emph{Links} & \emph{Int.} & \emph{MM} & \emph{Batch} & \emph{Inc.} &
+% \emph{Flow} & \emph{Ctx.} & \emph{Batch} & \emph{Inc.} & \emph{Mon.} &
+% \emph{Mod.} & \emph{Batch} & \emph{Inc.} \\
+% \hline \hline \multicolumn{14} {|c|} {\emph{Modeling Languages}} \\
+% \hline \hline Blanc et al.~\cite{1573497} & & & & + & \HCS + & & & & & & & &
+% \\
+% \hline EMF IncQuery~\cite{EMF-IncQuery-website, UjhelyiSCP2015} & & & & + &
+% \HCS + & & & & & & & & \\
+% \hline Egyed et al.~\cite{GroherFASE2010, Egyed2006} & & & & + & \HCS + & & &
+% & & & & & \\
+% \hline Cabot et al.~\cite{CT06} & & & & + & \HCS+ & & & & & & & & \\
+% \hline ACOL~\cite{LangsweirdtISORC2010} & & \HC $\sim$ & & + & & & & & & & & &
+% \\
+% \hline SmartEMF~\cite{LH09, HesselundMODELS2008, smartemf-website} & + & \HCS
+% + & & & & & & & & & & & \\
+% \hline Composite EMF Models~\cite{JurackICGT2010, compositeemfmodels-website}
+% & + & \HCS + & & & & & & & & & & & \\
+% \hline EMFViews~\cite{emfviews-website, CaueIDM2011} & + & & \HC $\sim$ & + &
+% & & & & & & & & \\
+% \hline Kompren~\cite{ABlouinSoSyM2015, kompren-website} & & & \HC $\sim$ & & &
+% & & & & & & & \\
+% \hline Kompose~\cite{FleureyMSE2008, kompose-website} & & & \HC $\sim$ & & & &
+% & & & & & & \\
+% \hline \hline \multicolumn{14} {|c|} {\emph{Model Operations}} \\
+% \hline \hline Wires*~\cite{Wires-09, wires-website} & & & & & & + & & + & & &
+% & & \\
+% \hline ATL Flow~\cite{atlflow-website} & & & & & & + &  & + & & & & & \\
+% \hline Epsilon~\cite{PaigeIECCS2009, epsilon-website}  & + & & & & & + & & + &
+% & & & & \\
+% \hline Gaspard2~\cite{EtienSAC2010, gaspard2-website} & & & \HC $\sim$ & & & +
+% & \HC $\sim$ & + & \HC $\sim$ & & & & \\
+% \hline Debreceni et al.~\cite{DebreceniFASE2014} & & & & & & + & \HC $\sim$ &
+% + & \HCS + & & & & \\
+% \hline MoTCoF~\cite{SHNG11} & & & & & & + & \HCS + & + & \HC $\sim$ & & & & \\
+% \hline MoTE~\cite{GNH10}\cite{mote-website} & + & & & & & & & + & \HCS + & & &
+% & \\
+% \hline \hline \multicolumn{14} {|c|} {\emph{Integration Languages and Others}}
+% \\
+% \hline \hline CyPhy~\cite{SimkoASME2012, gme-website} & + & & & & & + & & + &
+% & & & & \\
+% \hline FUSED~\cite{BoddyAVICPS2011, fused-website} & + & \HC $\sim$ & & & & +
+% & & + & & & & & \\
+% \hline CONSYSTENT~\cite{HerzigProcCS2014, HerzigMoDeVVa2014} & + & & & & & + &
+% & + & & & & & \\
+% \hline \hline \multicolumn{14} {|c|} {\emph{Mega Models}} \\
+% \hline \hline AM3~\cite{Vignaga_et_al:2013, am3-website} & + & & & & & + & & +
+% & & + & & $\sim$ & \\
+% \hline FTG+PM~\cite{Lucio_et_al:2013, atompm-website} & & & & & & + & & + & &
+% + & & + & \\
+% \hline MegaL Exp.~\cite{Favre:2012:MLA:2404962.2404978} & + & & & & & + & & &
+% & + & & & \\
+% \hline GMM*~\cite{BlouinGemoc2014} & + & & \HC $\sim$ & & & + & & + & \HC
+% $\sim$ & + & & + & \HC $\sim$ \\
+% \hline Seibel et al.~\cite{SNG10, SHG12}\cite{Beyhl_et_al:2013} & + & & & & &
+% & & & & + & & + & \HC $\sim$ \\
+% \hline \end{tabular} } \vspace{-1mm} \caption{Comparison of existing model
+% management approaches } \label{tab:eval-approaches} \vspace{-5mm} \end{table}
+
+
+\subsection{Models and Modeling Languages: Construction and Execution}%
+\label{subsec:maml_cae}%
+%
+The construction of models and modeling languages\uidx{ModelingLanguage} is addressed in the current approaches in three
+main ways  via (1) linking of models and model elements, (2) model interfaces
+and (3) meta model composition.
+
+\subsubsection{Model / Model Elements Links}
+ 
+Many approaches rely on \emph{traceability links}\iidx{TracabilityRelation} between models and/or model elements to capture 
+megamodelling relations\uidx{Relation}/operations. We adopt here the definition proposed by the Center
+of Excellence for Software Traceability~\cite{CoEST-website}: a \emph{trace link} is 
+\emph{"[...] a specified association between a pair of artifacts, one comprising 
+the source artifact and one comprising the target artifact..."}. The CoEST specialises those links into
+two dimensions: \emph{vertical} trace links link \emph{[...] artifacts at different levels of
+abstraction so as to accommodate lifecycle-wide or end-to-end traceability, such
+as from requirements to code [...]"}; while \emph{horizontal} trace links associate 
+\emph{"[...] artifacts at the same level of abstraction, such as: (i) traces
+between all the requirements created by 'Mary', (ii) traces between
+requirements that are concerned with the performance of the system, or (iii)
+traces between versions of a particular requirement at different moments in
+time"}.
+
+A plethora of approaches have been proposed that make use of trace links for model integration (cf. e.g.,
+\cite{amw-website,epsilon-website,Favre:2012:MLA:2404962.2404978,LH09,HerzigProcCS2014,SimkoASME2012,BoddyAVICPS2011}~\cite{mote-website}). The Atlas Model Weaving (AMW) language~\cite{amw-website} provided one of the first approaches for capturing\uidx{CapturingOperation} hierarchical traceability links between models and model elements.
+The purpose\uidx{Purpose} was to support activities such as automated navigation between
+elements of the linked models. In this approach, a generic core traceability language is made available and optionally extended to provide semantics specific to the metamodels of the models to be linked. Similarly, the Epsilon framework~\cite{epsilon-website} provides a tool named ModeLink to establish correspondences between models. MegaL Explorer~\cite{Favre:2012:MLA:2404962.2404978} supports relating heterogeneous\uidx{Heterogeneity} software development artifacts using predefined relation\uidx{Relation} types, linking elements that do not necessary have to be models or model elements. 
+%
+%
+SmarfEMF~\cite{LH09} is another tool for linking models based on annotations of Ecore metamodels to specify simple relations between model elements through correspondence rules for attribute values. Complex relations are specified with ontologies relating the concepts of the linked languages. The whole set of combined models is converted into Prolog facts to support various activities such as navigation, consistency and user guidance when editing models. The CONSYSTENT tool and approach~\cite{HerzigProcCS2014} make use of a similar idea. However, graph structures and pattern matching are used to represent the  combined models in a common formalism and to identify and manage inconsistencies instead of Prolog facts as in the case of SmartEMF.
+
+There are also a number of approaches, such as~\cite{SimkoASME2012} and \cite{BoddyAVICPS2011}, that build on establishing links between models through the use of integration languages developed for a specific set of integrated modeling languages, where the integration language embeds constructs specific to the linked languages. This is also the case for model weaving languages extending the core AMW language. However, AMW has the advantage of capturing the linking domain with a core common language.
+%
+%
+Other means for linking and integrating models are Triple Graph Grammars (TGG) such as the Model Transformation Engine (MoTE) tool~\cite{mote-website}, which  similarly requires the specification of some sort of integration language (correspondence meta model) specific to the integrated languages. However, an important asset of this approach is that it automatically establishes and manages the traceability links and maintains the consistency of the linked models (model synchronization) in a scalable, incremental manner.
+%
+%
+Finally, in~\cite{SNG10,SHG12}\cite{Beyhl_et_al:2013}, an approach is presented to automatically create and maintain traceability links between models in a scalable manner. While the approach focuses on traceability management rather than model integration, compared to integration languages, it relies on link types defined at the model level (and not at the meta model / language level), thus avoiding the need to update the integration language every time a new language\uidx{Language} must be integrated.                  
+%
+%
+
+The comparison of these approaches shows that apart from the  approach~\cite{SNG10,SHG12}\cite{Beyhl_et_al:2013}, all approaches suffer from being dependent on the set of integrated languages, thus requiring to better support modularity.       Furthermore, only \cite{mote-website}\cite{SNG10,SHG12}\cite{Beyhl_et_al:2013} supports automated management of traceability links.
+
+\paragraph{Interfaces}
+%
+In addition to links, a few more sophisticated approaches  (e.g.,~\cite{LangsweirdtISORC2010, HesselundMODELS2008, JurackICGT2010}) introduce the concept of \emph{model interface} for specifying how models can be linked. In~\cite{LangsweirdtISORC2010}, the Analysis Constraints Optimization Language (ACOL) is proposed, which has been designed to be pluggable to an Architecture Description Language (ADL)\uidx{ArchitectureDescriptionLanguage}. A concept of \emph{interface} specific to ACOL\ is included so that constraints\uidx{Constraint} can refer to these interfaces to relate to the model elements expected from the ADL. 
+
+SmartEMF~\cite{HesselundMODELS2008, smartemf-website} proposes a more generic concept of model interface to track dependencies between models and metamodels and provide automated compatibility checks. Composite EMF Models \cite{JurackICGT2010, compositeemfmodels-website} introduces \emph{export} and \emph{import} interfaces to specify which model elements of a main model (\emph{body}) should be exposed to other models (i.e. are part of the public API), and which elements of a body model are to be required from an export interface.
+
+However, these approaches are only preliminary and need to be enriched to cover a larger number of model integration use cases such as for example, specifying modification policies of the linked model elements required to ensure the models can be kept consistent. They also lack integration into GMM.
+
+\paragraph{Metamodel Composition} 
+%
+Some approaches (e.g.,~\cite{kompren-website, kompose-website, EtienSAC2010,emfviews-website}~\cite{BlouinGemoc2014}) consider the construction of metamodels for expressing views in terms of other metamodels or language fragments. In~\cite{EtienSAC2010}, an approach implemented in the Gaspard2 tool~\cite{gaspard2-website} is presented where meta models are artificially extended for the purpose of combining independent model transformations\uidx{TransformationOperation} resulting in an extended transformation for the extended meta models. %
+%\ins{
+The work in~\cite{FASE2012} presents operators to compose metamodels while preserving specific properties. %} 
+In~\cite{ABlouinSoSyM2015}, the language  and tool (Kompren)~\cite{kompren-website} is proposed to specify and generate slices of metamodels via the selection of classes and properties of an input metamodel. A reduced metamodel is then produced from the input metamodel. However the produced metamodel must be completely regenerated when the input metamodel is changed.
+Such is the case for the Kompose approach \cite{kompose-website}, which on the contrary to Kompren, proposes to create \emph{compound metamodels,} where a set of visible model elements from each combined metamodels is selected, and optionally related. The EMF Views~\cite{emfviews-website, CaueIDM2011} provides similar approach however without the need to duplicate the meta model elements as opposed to Kompose and Kompren where a new metamodel is created. These virtual view\uidx{View} metamodels seem to be usable transparently by tools.
+Finally, the Global Model Management language (GMM*)\footnote{We use * to distinguish this existing language and tool from the generic Global Model Management (GMM) acronym.} \cite{BlouinGemoc2014} provides means to specify and interpret reusable language subsets as sets of constraints combined to form subsetted meta models. Like for EMF Views, these reduced meta models can to some extent be used transparently by tools.
+
+While each of these approaches provides interesting support for modular modeling
+languages\uidx{ModelingLanguage}, their unification into a common formalism\uidx{Formalism}, the use of an explicit
+notion of a model interface and their integration into GMM is lacking, except
+for subsetted metamodels already integrated within the GMM* language.
+
+The execution of integrated models  concerns\uidx{Concern} the evaluation of the
+well-formedness constraints\uidx{Constraint} of each combined model alone, but also of the combined models as a whole. To our knowledge, no approach addresses the incremental checking of well-formedness conditions across the different language fragments of compound models. However, some approaches on incremental
+constraints evaluation exist. In~\cite{1573497}, changes on models are expressed as sequences of atomic model operations to determine which constraint\uidx{Constraint} is impacted by the changes, so that only these constraints need to be re-evaluated. In~\cite{EMF-IncQuery-website, UjhelyiSCP2015},  a graph-based query language (EMF-IncQuery) relying on incremental pattern
+matching for improved performance is also proposed. In~\cite{Egyed2006}, an
+approach is presented for incremental evaluation of constraints based on a scope of model elements referenced by the query and determined during the first query evaluation. This scope is stored into cache and used to determine which queries need to be re-evaluated according for some model changes.
+In~\cite{GroherFASE2010}, this approach is extended for the case where the constraints themselves may change besides the 
+constrained models. Finally in~\cite{CT06}, an incremental OCL checker is presented where a simpler OCL expression and reduced context elements set are computed from an OCL constraint\uidx{Constraint} and a given structural\uidx{Structural} change event. Evaluating this simpler constraint for the reduced context is sufficient to assert the validity of the initial constraint and requires significantly less computation resources.
+
+\subsection{Model Operations: Construction and Execution}%
+\label{subsec:mo_cae}%
+%
+The construction of model operations\uidx{ModelOperation} is addressed in two ways in the literature. Most approaches  combine model operations as \emph{model transformations chains} (named (1) \emph{flow composition})\uidx{Composibility}, where each chained transformation operates at the granularity of complete models. In order to support reuse and scalability\uidx{Scalability} for complex modeling languages, which are defined by composing them from simpler modeling languages, a few approaches have considered specifying model transformations as white boxes. Composed of explicit fine grained  operations processing model elements for a given context, these operations are reusable across several model transformations (named (2) \emph{context composition}).%
+
+\subsubsection{Flow Composition Approaches}
+\label{sec:SotA-MO-Flow}
+
+Formal United System Engineering Development (FUSED)~\cite{BoddyAVICPS2011} is
+an integration language to specify complex relationships\uidx{Relation} between models of
+different languages. It supports model transformation chains, but only
+implicitly via execution of tools, without explicit representation of the
+involved transformations and processed data. On the contrary, there is a
+plethora of approaches allowing the explicit specification and construction of
+model transformation chains implementing a data flow paradigm\uidx{Paradigm}. A popular one is
+the AtlanMod Mega Model Management (AM3) tool~\cite{am3-website}, for which
+the Atlas Transformation Language (ATL)~\cite{atl-website} is used to specify
+the model transformations\uidx{TransformationLanguage}. Besides, a type system has been
+developed~\cite{Vignaga_et_al:2013}, which enables type checking and inference
+on artifacts related via model transformations.
+Another similar but less advanced tool is the Epsilon
+Framework~\cite{epsilon-website}, which  provides model transformation chaining
+via ANT tasks. Wires~\cite{Wires-09} and ATL Flow~\cite{atlflow-website} are
+tools providing graphical\uidx{Graphical} languages for the orchestration of ATL model
+transformations.  The Formalism Transformation Graph + Process Model (FTG+PM)
+formalism~\cite{Lucio_et_al:2013} implemented in the AToMPM (A Tool for
+Multi-Paradigm Modeling) tool~\cite{atompm-website} provides similar
+functionality. However, it has the advantage of also specifying the complete
+modeling process in addition to the involved model transformations. This is
+achieved via activity diagrams coupled with model transformation specifications
+executed automatically to support the development process\uidx{Process}. Finally,
+GMM* {\cite{BlouinGemoc2014}}  also supports model transformation
+chaining, but through the specification of relations\uidx{Relation} between models of specific
+metamodels that can be chained. One advantage of this approach is that
+automated incremental (re-)execution of the specified relations\uidx{Relation} between models
+is provided in response to received model change events.
+Incrementality of the execution of the transformations is also made possible by
+the integration of the MoTE~\cite{mote-website} incremental model
+transformation tool into GMM*.
+
+However, while chaining model transformations offers some degree of modularity of model transformation specifications, apart from GMM*, most approaches suffer from scalability\uidx{Scalability} issues for large models, since the used transformation tools do not support incremental execution. In addition, the case where a generated model is modified by hand to add  information not expressible with the language of the original model(s) cannot easily be handled by these approaches, since regenerating the model modified by hand will destroy the user-specific information. This need is better supported by context composition approaches.
+ 
+\subsubsection{Context Composition Approaches}
+%
+A few approaches allow context composition\uidx{Compositionality} of model operations. In~\cite{EtienSAC2010} as mentioned above,  independent model transformations are combined, resulting in extended transformations for corresponding extended meta models. In~\cite{DebreceniFASE2014}, view\uidx{View} models are built using contextual composition of model operations\uidx{ModelOperation} (derivation rules) encoded as annotations of queries  of the EMF IncQuery~\cite{EMF-IncQuery-website} language.  Traceability links\uidx{TracabilityRelation} between view and source model elements are automatically established and maintained. The use of EMF IncQuery natively provides incremental execution of the derivation rules to synchronize the view model with the source model. Some views may be derived from other
+views thus allowing flow composition as chains of view models. This approach achieves results similar to TGGs supporting incrementality, however with the drawback of being unidirectional. Similarly, but equpped with bi-directionality, the MoTCoF language~\cite{SHNG11} allows for both flow- and fine-grained context composition of model transformations. An advantage over~\cite{EtienSAC2010} however is that model transformations are used as black boxes without the need to adapt the transformations according to the context.
+
+As can be seen, most approaches only support flow type modularity for model
+operations\uidx{ModelOperation} with batch execution except for the GMM* language thanks to its
+integration of MoTE providing incremental execution. This will not scale and
+lead to information losses in case of partial model information overlap. Only a
+few approaches allow context modularity, which better supports incremental
+application where only the impacted operations can be re-applied following a
+change in order to avoid the cost of re-computing complete transformations.
+Such is the case of MoTCoF, which theoretically permits incremental execution,
+but a concrete technical solution is still lacking for it.
+
+\subsection{Megamodels and other Global Model Management Approaches}%
+\label{subsec:mm_and_other}%
+%
+Two strands can be identified for GMM. A first one makes use of
+(1) \emph{model integration languages,} which are  defined for a specific set of
+integrated modeling languages and tools meaning that the integration language must be updated every time a new language or tool is used. The second strand attempts to solve this problem by making use of (2) \emph{mega models} providing configurable global model management.
+
+
+\subsubsection{Integration Language and other Approaches}
+
+The CyPhy~\cite{SimkoASME2012} used in the GME modeling tool~\cite{gme-website} and FUSED~\cite{BoddyAVICPS2011,fused-website} are examples of model integration languages. But as mentioned above, these languages must be adapted as soon as a different set of integrated languages and tools must be used, thus requiring highly skilled developers. Integration languages are therefore not practical.
+
+ Open Services for Lifecycle Collaboration (OSLC)~\cite{OSLC-website} provides standards for tool integration through the Web. Many specifications are available for \emph{change management}, \emph{resource previews}, \emph{linked data}, etc. It builds on the W3C \textit{linked data} standard, which aims at providing best practices for publishing structured data on the Web based on the W3C Resource  Description Framework (RDF). RDF is a model for data interchange on the Web where data is represented as graphs. However, OSLC is  more services (and tools) oriented and inherits the problems of \emph{linked data}, which is specific to the Web and therefore does not separate the concerns of data representation and persistence as opposed to Model-Driven Engineering (MDE) where an abstract syntax\uidx{AbstractSyntax} is used independently of the way the data is stored.
+
+Another approach making use of these standards is \cite{HerzigProcCS2014} and is implemented in a the CONSYSTENT tool used to identify
+and resolve inconsistencies across viewpoints due to information overlapping. The information of all
+models involved during development is captured in a common RDF graph. The approach relies on a human (in parallel, an automated method making use of Bayesian Belief Networks is also under study~\cite{HerzigMoDeVVa2014}) to specify patterns representing semantic equivalence links (semantic connections) across the graph models.
+Inconsistency patterns based on these semantic connections are continuously checked over the RDF model for potential matches identifying inconsistencies. Means to automatically resolve inconsistencies are under development. However, since the conversion of all models as an RDF graph is required, this approach is not incremental and will not scale for
+large models.
+
+\subsubsection{Mega Models}
+%
+In this second strand, megamodels\uidx{Megamodel} serve to capture and manage
+MDE resources such as modeling languages\uidx{ModelingLanguage}, model transformations, model correspondences and tools used in modeling environments.
+There are several mega modeling approaches as already mentioned. AM3 \cite{am3-website} is one of the first initiatives where a megamodel is basically a registry for MDE resources. Model transformations\uidx{TransformationOperation} are specified with ATL~\cite{atl-website} and model correspondences with the Atlas Model Weaving (AMW) language [2]. 
+Similarly, FTG+PM~\cite{Lucio_et_al:2013} as well as MegaL Explorer~\cite{Favre:2012:MLA:2404962.2404978}, allow to model the artifacts used in software development environments and their relations\uidx{Relation} from a linguistic point of view\uidx{ViewPoint}. 
+The involved software languages, related technologies and technological spaces can be captured with linguistic relationships between them such as membership, subset, conformance, input, dependency, definition, etc. Operations\uidx{ModelOperation} between entities can also be captured. The artifacts do not need to be represented as models, but each entity of the megamodel can be linked to a Web resource that can be browsed and examined.
+However, the language seems to be used mostly for visualization providing a better understanding of the developments artifacts but cannot be executed to perform model management.
+The aforementioned GMM* infrastructure~\cite{BlouinGemoc2014} consists of a megamodeling\uidx{Megamodel} language inspired from~\cite{HSG2010}. Metamodels can be declared, as well as relations\uidx{Relation} between models of these meta models. In particular, synchronization relations can relate models of two different meta models making use of the MoTE TGG engine~\cite{mote-website} to transform or synchronize the models. As mentioned earlier, chains of model transformations can be specified and executed incrementally in response to model change events and \emph{subsets} of modeling languages can be declared. GMM* is experimented within the Kaolin tool \cite{BlouinAHS2015} making use of complex and rich industrial languages such as AADL and VHDL thus challenging GMM for realistic specifications.
+
+
+However, most of these mega modeling approaches only cover to a certain degree
+the core ingredients of specifying MDE resources by means of meta models and
+model operations\uidx{ModelOperation} with appropriate modularity and incrementality. Only fragments
+of the problem are solved. Furthermore, all these megamodeling languages are
+monolithic and as a result, predefined megamodel fragments cannot be %
+%\ins{
+easily%}
+composed and reused to avoid
+rebuilding complete megamodel\uidx{Megamodel} specifications from scratch  for new projects\uidx{Project}. An attempt towards the reuse of megamodel fragments is presented in~\cite{Hilliard2012,Hilliard2010}. 
+The work makes use of megamodeling techniques to propose an automated infrastructure to facilitate customization, composition and reuse of the architect's representational resources to meet project-\uidx{Project}, domain-\uidx{Domain} and organization-specific needs\uidx{Organization}.
+Among these megamodeling approaches, only FTG+PM, GMM* and ~\cite{SNG10, SHG12}
+address the automated execution of megamodels in response to model changes or
+modeling events from the tool's user interface. GMM* and \cite{SNG10,
+SHG12} provide incremental execution of mega models to some extent by
+re-evaluating only the relations\uidx{Relation} concerned with the detected model changes.
+
+%\subsection{Semantic Integration}
+
+% \textit{Possible reference: \cite{Derler+2012}}
+% 
+% \emph{Possible current approaches and tools}
+% \begin{itemize}
+%   \item Ptolemy
+%   \item Gemoc
+%   \item FMI / FMU
+%   \item OSLC
+%   \item Others from  \cite{Derler+2012}
+% \end{itemize}
+\subsection{Multiformalism Modelling Approaches}
+
+According to \cite{Mosterman2004433}, multiformalism modeling is one of the
+three dimensions of the Computer Automated Multi-Paradigm Modeling framework,
+established to allow the representation, the analysis and the synthesis of
+intricate knowledge at various levels of abstraction, together with multilevel
+abstraction and metamodeling. Multiformalism, Multiresolution, Multiscale
+Modeling (M4) environments may provide \cite{Dandashi20162622} an important and
+manageable resource to fulfill the needs for modeling and simulation of modelers
+that have to deal with complex systems, where complexity derives from
+heterogeneity\uidx{Heterogeneity} of components\uidx{Component} and relationships\uidx{Relation}, multiple scales, multiple interacting
+requirements. Besides performance (or verification) oriented issues,
+multiformalism approaches may also deal with software architecture\uidx{Architecture} oriented
+issues, e.g. by integrating UML as one of the formalisms to assist the
+development cycle of large, complex software systems \cite{Reza20044}: in
+general, literature proposes very popular dedicated transformational approaches
+for computer automated or assisted software generation, that provide a formal
+framework to support the steps that lead from a formal\uidx{FormalLanguage} or semiformal
+specification to code, but in the rest of this subsection the focus is on
+performance oriented approaches.
+
+In multiformalism modeling, many formalisms may be used simultaneously in a
+model. This may or may not exploit compositionality\uidx{Compositionality} in the modeling approach, as
+elements of the different formalisms may coexist in the model, or the model may
+be composed of submodels written in different (single and particular) formalisms, or the
+different formalisms may be used in different steps of the processing of the
+model, by means of model transformation or generation. A general introduction to
+these themes can be found in \cite{multiformalismbook2014-Cap1-IntroMultiformalism}.
+
+Metamodeling is an important resource for both performance oriented approaches
+\cite{Lacoste-Julien200465}\cite{Vangheluwe2003595} and software oriented
+transformation\uidx{TransformationOperation} based tools, consequently metamodeling-based multiformalism
+approaches can be considered a peculiar category. Another special category of
+approaches is constituted by the ones that deal with hybrid systems, that
+support multiformalisms with both continuous\uidx{ContinuousCharacteristic} and discrete\uidx{DiscreteCharacteristic} nature, and are
+thus capable of modeling natural systems in a better way \cite{Zeigler1998}.
+These approaches should be able to describe and solve jointly and coherently
+differential equation like descriptions and state space-based descriptions, for
+a same complex system. While the problem has been popular in the 70s and 80s,
+there is currently a renovated interest in it from the point of view\uidx{ViewPoint} of
+cyberphysical systems: the interested reader can find specific general
+multiformalism approaches in \cite{Zeigler2006125}, \cite{PASM2016Hybrid} and
+\cite{EPEW2016}, that also provides an overview of selected previous, classical
+literature.
+
+\emph{Approaches} 
+
+With reference to multiformalism\uidx{FormalismCharacteristic} approaches oriented to performance evaluation,
+a number of different naive and structured approaches to the problem have been
+presented in literature (a survey is provided in
+\cite{MarinMultiformalismSurvey}). In the second group, the approaches have been
+implemented in a number of different tools, with different backgrounds, such as
+SHARPE, SMART, DEDS, AToM3, M\"obius, OsMoSys and SIMTHESys. These tools also
+differ in the solution strategy adopted for the evaluation of models, and are
+designed with different purposes\uidx{Purpose} (e.g. some of them are designed to be
+extensible, some for experimenting new formalism variants, some optimize the
+solution process\uidx{Process}).
+
+SHARPE \cite{SHARPE02} supports the composition by submodels of some given
+different formalisms, solved by different solvers, but based on Markovian
+approaches. The composition consists in the exchange of probability
+distributions between submodels. SMART
+\cite{1348056}\cite{Ciardo:2009:AFS:1530873.1530885}\cite{SMART2006} supports
+the specification and solution, by simulation or approximation, of complex
+discrete-state\uidx{DiscreteCharacteristic} systems. DEDS \cite{Bause:1998:TFQ:647808.737654} provides a
+common abstract notation in which submodels written in different formalisms are
+translated. M\"obius
+\cite{796527}\cite{Clark:2001:MMT:882474.883479}\cite{conf/dsn/CourtneyGKRS09}\cite{MOBIUS02}
+supports, by states and events superposition, a number of different formalisms
+(that can be extended by user provided code) and alternative solvers (that can
+be chosen by the modeler) in a very articulated modeling and solution process\uidx{Process}.
+
+Other approaches exploit, in different ways, metamodeling too. AToM3
+\cite{conf/fase/LaraV02,DelV.Sosa2007367} exploits metamodeling to
+implement model transformations, used to solve models by its solver. OsMoSys
+\cite{Franceschinis02,TOOLS02,ATPN,Franceschinis:2009:IBC:1698822.1698878,Drawnet}
+and SIMTHESys \cite{PASM2011,HiPMoS2013,MASCOTS2010,CAMWA2012}
+use metamodeling to let different user-defined formalisms\uidx{Formalism} interact by founding
+them over common metaformalisms and using elements and formalism level
+inheritance, and to implement different compositional mechanisms: while OsMoSys
+implements ad-hoc operators for parameters exchange between submodels, and
+integrates external solvers by means of orchestration and adapters, SIMTHESys
+privileges the experimentation of user-defined formalisms and embeds into
+formalism elements the interactions between different formalisms implementing
+multiformalism by arcs superposition, allowing the automatic synthesis of proper
+solvers, according to the nature of the involved formalisms (with no claim for
+their optimality): there is an explicit specification of both syntax\uidx{Syntax} and
+semantics\uidx{Semantics} of every formalism element to allow high flexibility in the
+specification of custom, user defined formalisms. For more details, the reader
+may refer to \cite{multiformalismbook2014-Cap1-IntroMultiformalism}, that
+provides a more detailed analysis on multiformalism features and implementation,
+solution processes\uidx{Process}, purposes\uidx{Purpose}, compositional\uidx{Compositionality} and transformational mechanisms of
+these approaches.
+
+\emph{Solution}
+
+Most of the approaches are backed up with state space analysis techniques.
+Both analytical- and simulation-based methods are applied to perform the
+analysis, eventually with specific solutions to cope with the state space
+explosion problem, such as folding, decomposition, product forms solutions. The
+most common way is to directly generate the whole state space, with (e.g. in
+M\"obius or in \cite{Pezze1997239}) or without (e.g. in SMART or in some
+SIMTHESys solvers) an intermediate step of simple translation or more
+sophisticated transformation towards a specific intermediate representation, or
+by using partial state spaces exploiting modularity (e.g. in OsMoSys or in some
+SIMTHESys solvers\cite{ENTCS2013ProductForms}), or by transformation (e.g. in
+AToM, or in \cite{Bobeanu2004389}). Noticeable are the approaches that exploit
+mean field analysis to cope with very large space states (e.g.
+\cite{Bradley2013144} or \cite{FGCS2014BigData}).
+
+\emph{Applications}
+
+The literature provides a conspicuous number of applications: here some
+significant examples are provided. The effect of cyber-exploits have on information sharing
+and task synchronization have been studied in \cite{Levis2014541}; performance
+evaluation of Service Oriented Architecture have been studied in
+\cite{Abusharekh2016614} and \cite{JTIT2014WS}; cardiovascular system and its
+regulation has been studied, with a hybrid approach, in
+\cite{Hernandez20094923}; interdependencies in electric power systems have been
+studied in \cite{Chiaradonna2007185}; the ERMTS/ETCS European standard for high
+speed trains has been studied in \cite{ERTMS1014}; security attacks have been
+studied in \cite{ENTCS2015BN}; exceptions aware systems have been studied in
+\cite{ASMTA2011}; effects of software rejuvenation techniques have been studied
+in \cite{ISSRE2012}; NoSQL systems have been studied in \cite{FGCS2014NoSQL}.
+Multiformalism has been also applied as an implementation technique to provide
+higher level tools or formalisms: in \cite{DSN2004} a flexible, optimized
+Repairable Fault Tree modeling and solution approach is presented; a performance
+oriented model checking example is given in \cite{VT2011}; an analysis framework
+for detecting inconsistencies in high level semantic relationships between
+models has been developed in \cite{Qamar201584}.

@@ -1,0 +1,21 @@
+\LARGE
+\title{Rich Report Outline: State-of-the-art on Current Formalisms used in Cyber-Physical Systems Development}
+\@title
+\author{Holger Giese, Dominique Blouin, Ken Vanherpen, Moussa Amrani, Hans Vangueluwe, Rima Al-Ali TODO other authors?}
+\normalsize
+\vspace{0.2in}
+
+\rroaddsection{chapter}{-}{\contentsname }
+\rroaddsection{chapter}{1}{Introduction}
+\rroaddsection{chapter}{2}{Structured Catalog of Modeling Languages and Tools}
+\rroaddsection{section}{2.1}{Introduction}
+\rroaddsection{section}{2.2}{Language x}
+\rroaddsection{subsection}{-}{Tools}
+\rroaddsection{subsubsection}{-}{Tool x.1}
+\rroaddsection{subsubsection}{-}{Tool x.2}
+\rroaddsection{chapter}{3}{Glossary of Terms for Cyber Physical Systems}
+\rroaddsection{section}{3.1}{Introduction}
+\rroaddsection{section}{3.2}{Term x}
+\rroaddsection{subsection}{-}{Related Terms}
+\rroaddsection{chapter}{4}{Summary}
+\rroaddsection{chapter}{-}{\bibname \@mkboth {\MakeUppercase {\bibname }}{\MakeUppercase {\bibname }}}

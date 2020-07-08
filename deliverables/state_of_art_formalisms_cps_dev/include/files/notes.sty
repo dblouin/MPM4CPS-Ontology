@@ -1,0 +1,50 @@
+%%
+%  This package contains commands to create notes in a document
+%
+% The macros with a @ in the name should not be used from the LaTeX document,
+% unless you *know* what you are doing
+% All rro.sty macros should start with rro to prevent clashes with other
+% packages
+% macros starting with RRO indicate are settings and can be modified in the
+% LaTeX document to change the package behavior
+%%
+\NeedsTeXFormat{LaTeX2e}[1994/12/01]
+\ProvidesPackage{include/files/notes}[2009/09/25 v0.1.1 Notes package]
+\RequirePackage{xcolor}			% Color extensions, provided more (user-friendly) color commands
+\RequirePackage{ifpdf}
+
+% If note@final is true, no rro output in generated into the document
+% Use \usepackage[final]{notes} to activate this option
+\newif\ifnote@final \note@finalfalse
+\DeclareOption{draft}{\note@finalfalse}
+\DeclareOption{final}{\note@finaltrue}
+\ProcessOptions
+
+%% Notes colors
+% Redefine in your document to change their colors
+\definecolor{NoteGone}{gray}{0.50}
+\definecolor{NoteDone}{rgb}{0.35,0.7,0.35}
+\definecolor{NoteNormal}{rgb}{0.6,0,0}
+% KGP 2010/10/06
+% new note colour
+\definecolor{KNoteLine}{rgb}{1.0,0,0}
+\definecolor{KNoteBack}{rgb}{0.94,0.97,1.0}
+
+%% Notes commands
+\newcommand{\note}[1]{\ifnote@final\else{\textit{\color{NoteNormal}** #1 **}\par}\fi}
+\newcommand{\notedone}[1]{\ifnote@final\else{\textit{\color{NoteDone}** #1 **}\par}\fi}
+\ifpdf
+	\newcommand{\notegone}[1]{}
+\else
+	\newcommand{\notegone}[1]{\ifnote@final\else{
+		\textit{\color{NoteGone}** #1 **}\par}\fi
+	}
+\fi
+\newcommand{\oldnote}[1]{}
+
+% KGP 2010/10/06
+% a new note style
+\newcommand{\knote}[2][Note]{\ifnote@final\else{\smallskip\noindent\fcolorbox{KNoteLine}{KNoteBack}{\begin{minipage}{\textwidth}\textbf{#1 }#2\end{minipage}}\smallskip\par}\fi}
+
+\setlength{\marginparwidth}{2cm}
+\newcommand{\sidenote}[1]{\ifnote@final\else\marginpar{\footnotesize\color{NoteNormal}#1}\fi}

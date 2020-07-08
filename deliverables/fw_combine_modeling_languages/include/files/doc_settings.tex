@@ -1,0 +1,106 @@
+% doc_settings.tex
+% ----------------
+% LaTeX file containing settings for all document types (reports, presentations, etc)!!
+% This file is included in the class definitions and should contain class specific settings
+% ie settings which defines the document type (margins, headers, footers, etc
+%
+% Keep content generic for *all* document types (reports, presentations, etc)!!
+
+%% Packages required by *all* documents
+\RequirePackage{ifthen}				% Provides conditional commands in LaTeX documents
+\RequirePackage{graphicx}			% Enhanced support for graphics (updates graphics package)
+\RequirePackage{fixltx2e}			% Patches for LaTeX
+\RequirePackage{url}				% Defines \url command to display url-like texts correctly (for eg line-breaks)
+
+% 
+% Font settings 
+%_________________________________________ 
+% Fonts: Fourier for math 
+%        Utopia for rm 
+%        Helvetica for sf 
+%        Courier for tt 
+% Change fourier font 'warnings' into 'info' messages 
+\let\my@@font@warning\@font@warning 
+\let\@font@warning\@font@info 
+%% times.sty package is obsolete (see l2tabu) and is replaced by mathptmx + helvet + courier 
+%\RequirePackage{mathptmx}           % Times/Maths \rmdefault 
+\RequirePackage{fourier}             % \rmdefault = Utopia, math = fourier font 
+\RequirePackage[scaled=.90]{helvet}  % \sfdefault = Scaled Helvetica 
+\RequirePackage{courier}             % \ttdefault = Courier 
+\RequirePackage{latexsym}            % additional characters from Latex symbol font 
+\RequirePackage[T1]{fontenc} 
+% turn on the font warnings again 
+\let\@font@warning\my@@font@warning 
+%_________________________________________ 
+
+%% Include PDF hyperref, and perform default settings (ok for all documents)
+\RequirePackage[colorlinks=true,bookmarks=true,bookmarksnumbered=true,plainpages=false,unicode=true]{hyperref}
+\hypersetup{%
+	pdfcreator = {LaTeX},%
+	pdfproducer = {pdfLaTeX},%
+	pdfstartview={FitH},%
+	%a4paper=true,%
+}%
+
+% ====================================
+% Names to use in Hyperrefs \autoref
+% ====================================
+% Names for sections and similar:
+\renewcommand{\chapterautorefname}{Chapter}
+\renewcommand{\partautorefname}{Part}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+% Names for figures and tables:
+\renewcommand{\figureautorefname}{Figure}
+\newcommand{\subfigureautorefname}{Figure}
+\renewcommand{\tableautorefname}{Table}
+\newcommand{\subtableautorefname}{Table}
+
+\RequirePackage[all]{hypcap}		% Correct anchors for figures and tables to be above the float
+
+%% Create document information
+% Title
+\let\title@org\title
+\newcommand{\settitle}[1]{\title{#1}}
+\renewcommand{\title}[1]{%
+\def\doctitle{#1\iffinalversion\else\ (Draft)\fi}%
+\hypersetup{pdftitle={#1}}%
+\title@org{#1}%
+\def\rro@title{#1}%
+}
+
+% Author affiliation
+\newcommand{\setauthoraffiliation}[1]{\def\docauthoraffiliation{#1}}
+
+% Author
+\let\author@org\author
+\newcommand{\setauthor}[1]{\author{#1}}
+\renewcommand{\author}[1]{%
+\def\docauthor{#1}%
+\hypersetup{pdfauthor={#1, \docauthoraffiliation}}%
+\author@org{#1}%
+\def\rro@author{#1}%
+}
+
+% Subject
+\newcommand{\setsubject}[1]{\def\docsubject{#1}\hypersetup{pdfsubject={#1}}}
+
+% Keywords
+\newcommand{\setkeywords}[1]{\def\dockeywords{#1}\hypersetup{pdfkeywords={#1}}}
+
+% Use these defaults:
+% We cannot use the \title command directly, since it results in illegal PDF chars
+\def\doctitle{{\color{red}No \texttt{$\backslash$title} defined!}}
+\title@org{{\color{red}No \texttt{$\backslash$title} defined!}}
+\def\rro@title{No title defined!}
+
+% We cannot use the \author command directly, since it results in illegal PDF chars
+\def\docauthor{{\color{red}No \texttt{$\backslash$author} defined!}}
+\author@org{{\color{red}No \texttt{$\backslash$author} defined!}}
+\def\rro@author{No author defined!}
+
+\setauthoraffiliation{Control Engineering, University of Twente}
+\setsubject{}
+\setkeywords{Control Engineering, Robotics, Embedded Systems}
+

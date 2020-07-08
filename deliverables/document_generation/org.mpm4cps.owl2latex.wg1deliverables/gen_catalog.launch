@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType">
+<stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
+<booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="false"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Java Application"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/lib/catalog-tools-languages.owl"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/state_of_art_formalisms_cps_dev"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/org.mpm4cps.owl2latex.wg1deliverables/src/org/mpm4cps/owl2latex/wg1deliverables/main/Catalog.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.mpm4cps.owl2latex.wg1deliverables.main.Catalog"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;D:/Projets/mpm4cps/git/mpm4cps_wg1_ontology/lib/catalog-tools-languages.owl&quot; &quot;D:/Projets/mpm4cps/git/mpm4cps_wg1/deliverables/state_of_art_formalisms_cps_dev&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.mpm4cps.owl2latex.wg1deliverables"/>
+</launchConfiguration>

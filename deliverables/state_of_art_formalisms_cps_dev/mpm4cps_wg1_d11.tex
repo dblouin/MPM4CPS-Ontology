@@ -1,0 +1,498 @@
+\documentclass[final]{include/MPM4CPS/MPM4CPS-Report} % Use this line for the final version of your report
+%\documentclass{include/MPM4CPS/MPM4CPS-Report} % Use this line for the draft versions of your report
+                                                % Enables rro/notes/line numbers/date in footer
+\settitle{State-of-the-art on Current Formalisms used in Cyber-Physical Systems Development}
+\setauthor{
+Stefan Klikovits,
+Rima Al-Ali, 
+Moussa Amrani, 
+Ankica Bari\v{s}i\'{c}, 
+Fernando Barros,
+Dominique Blouin,  
+Etienne Borde,
+Didier Buchs,
+Holger Giese, 
+Miguel Goul\~{a}o,
+Mauro Iacono, 
+Florin Leon,
+Eva Navarro, 
+Patrizio Pelliccione,
+Ken Vanherpen
+}
+
+\input{include/settings}
+
+% docu type: Deliverable or Technote
+% The only difference is the document type text on the title page
+% Uncomment the line below for a Technical Note. Comment it for a Deliverable
+%\technotetrue % Technical Note instead of Deliverable
+
+\usepackage{todo}
+\newcommand{\COMMENT}[2][N.N.]{\todo[color=yellow]{\tiny COMMENT[#1]: #2}}
+\newcommand{\TODONOTE}[2][N.N.]{\todo{\tiny TODO[#1]: #2}}
+\newcommand{\TODOINLINE}[2][N.N.]{{\todo[inline]{\footnotesize TODO[#1]: #2}}}
+\newcommand{\DONE}[2][N.N.]{{\todo[color=lightgray]{\tiny DONE[#1]: #2}}}
+\newcommand{\LATER}[1]{{\todo[color=yellow]{\tiny LATER}}}
+\newcommand{\LATERNOTE}[1]{{\todo[color=yellow]{\tiny LATER: #1}}}
+\newcommand{\BLOCK}[1]{ #1 }
+
+\usepackage{imakeidx}
+\makeindex
+
+
+
+% Set to provide a list of 
+% formalisms/languages/tools in the TOC
+%\setcounter{tocdepth}{3}
+%
+% Set to provide no list of 
+% formalisms/languages/tools in the TOC
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+\makerro
+
+%\frontmatter
+
+\setdisseminationlevel{Restricted}
+\setdeliverablenumber{WG1.1}
+\def\docversion{2.0}
+\def\docdate{January 8, 2017}
+\setleadbeneficiary{Hasso-Plattner Inst.}
+
+%\addversion{1.0}{26-10-2015}{Dominique Blouin}{Initial version}
+%\addversion{1.1}{07-11-2015}{Holger Giese}{Added introduction}
+%\addversion{1.2}{26-11-2015}{N.N.}{Added list of formalisms}
+%\addversion{1.3}{11-12-2015}{N.N.}{Added glossary}
+%\addversion{1.4}{13-12-2015}{Holger Giese}{Added summary}
+%\addversion{2.1}{21-12-2016}{Holger Giese}{Updated introduction}
+%\addversion{2.2}{28-12-2016}{Dominique Blouin}{Added generated list of formalisms}
+%\addversion{2.3}{04-01-2017}{Dominique Blouin}{Added generated glossary}
+%\addversion{2.4}{07-01-2017}{Holger Giese}{Updated summary}
+%\todo{\tiny Holger: omit table with version information for the official release?}
+
+% Generates the information and version tables
+\maketitle
+
+
+\cleardoublepage
+
+% The front matter starts here
+
+%\include{Summary}
+
+%\include{Preface}
+
+% In a two-sided printing style, it makes the next page a right-hand
+% (odd-numbered) page, producing a blank page if necessary.
+%\cleardoublepage
+
+% Add the table of contents pages (TOC) 
+\tableofcontents
+
+
+% The report body, i.e. the main matter, starts here
+\mainmatter
+
+% Either type the text, or include chapter tex files
+
+% ========================================================
+\chapter{Introduction}
+\label{ch:introduction}
+
+%\textit{\textbf{TODO Holger}:  Explanation of use of framework related to the ontology structure diagram}
+
+This report presents a substantial catalog of formalisms, modelling languages and tools that are used in the domain of cyber-physical systems modelling.
+It is part of the deliverable produced by the MPM4CPS's\footnote{ICT COST Action IC1404 Multi-Paradigm Modelling for Cyber-Physical Systems (MPM4CPS)} \emph{Working Group 1 (WG1) on Foundations of MPM4CPS}.
+
+Initial WG1 developments prompted the use of ontologies for the analysis of structures and relations of individual modelling components.
+Earlier deliverables (e.g. Deliverable D1.2 \cite{MPM4CPS-D1-2v1}) highlighted the close interconnections between formalisms, languages and tools, as further detailed in Section \ref{sec:CatalogStructure}. \COMMENT{ HG: This seems to be somehow incomplete. We should explain the interconnection here a little bit (viewpoint ref?) ... }
+
+
+\begin{figure}[!htb]
+\includegraphics[width=\textwidth]{figures/ontology_structure.png}
+\caption{Overview of the structure of the MPM4CPS ontology}
+\label{fig:ontology_structure}
+\end{figure}
+
+In particular, figure \ref{fig:ontology_structure} provides an overview of the MPM4CPS ontology (shown in the first column).
+It emphasises the unification of the two domains of Multi-Paradigm Modelling (MPM) and Cyber-Physical Systems (CPS), which are both foundations for this new emerging domain.
+
+The figure further shows that the catalog (i.e. the contents of this document) is an instantiation of the MPM4CPS domain. The right column of the figure shows few examples of CPS developments that use multi-paradigm modelling. 
+% and ``mega-models''. \COMMENT{ HG: Either we explain the role of MM here or leave the term out, or?}
+These examples will not be presented in this report, but are elaborated on in the \emph{Framework to Relate / Combine Modeling Languages and Techniques} (see Deliverable D1.2 \cite{MPM4CPS-D1-2v1}).
+
+
+\textbf{Automatic Catalog Creation:}
+As stated, the individual formalisms, languages and tools of this catalog are based upon the MPM4CPS ontology. As one can easily imagine, many of the over 170 individual representatives of these concepts contain numerous connections to other individuals.
+In general, a tight network of dependencies, compatibilities and other relations was discovered.
+To fully exploit modern technologies, the catalog entries were entered directly into the ontology, so that the connections could be defined.
+This catalog is generated directly from these ontology sources and thus shows one view of this ontology.
+As an interactive, searchable and visual depiction of this data provides a more comprehensive view than this static generation, we are in the process of publishing the digital ontology alongside the final report.
+
+ 
+
+% In figure \ref{fig:ontology_structure} the structure of the framework and its
+% elements in form of the different ontologies and their dependencies are
+% presented. The figure also includes the data for the next two chapters of this
+% report.
+
+% The first column depicts the framework and its ontologies as presented in the
+% report on the Framework to Relate / Combine Modeling Languages and Techniques
+% covered by deliverable D1.2 \cite{MPM4CPS-D1-2v1}.
+% The Glossary of Terms for Cyber Physical Systems presented in chapter
+% \ref{ch:glossary} of this report is extracted automatically from these
+% ontologies and its contained concepts defining the framework.
+
+% In the second column the catalog of modeling languages and tools that
+% consists of indiciduals of the MPM4CPS ontology as covered later in chapter
+% \ref{ch:catalog} is presented. It is automatically derived from these
+% individuals such that the ontology and its instances can be kept consistent with
+% minimal coordination efforts.
+
+% In the third column, some examples for CPS development employing MPM in form of
+% mega models are depicted. Those are presented in details in the report on
+% the Framework to Relate / Combine Modeling Languages and Techniques covered by
+% deliverable D1.2 \cite{MPM4CPS-D1-2v1}. As depicted, these examples employ
+% individuals of the catalog of languages and tools listed in this report in
+% chapter \ref{ch:catalog} and instantiate the classes of the MPM4CPS ontology.
+
+% The  high-level framework presented in the form of framework ontologies  
+
+% framework The work executed by WG1 highlights out by the 
+
+\textbf{Usage of this catalog} This catalog serves as a valuable source of information and can be used as a reference to look up data about a large number of current modelling technologies and approaches.
+The authors tried to add further references to each entry, such that formalisms show scientific references or sources of introduction material, and tool implementations are annotated with a hyperlink to the tool's webpage, where it can be downloaded from.
+
+The catalog is structured as follows:
+Chapter \ref{ch:catalog} presents the list of identified formalisms (Section \ref{sec:formalisms}), modelling languages (Section \ref{sec:languages}) and modelling tools (Section \ref{sec:tools}).
+The list items each have a short description, extended by references and links to further resources to guide interested readers towards further information.
+% The second chapter (Chapter \ref{ch:glossary}) captures a collection of the most common terms and abbreviations used in the modelling and cyber-physical systems domains in two tables.
+
+% ========================================================
+\begin{comment}
+
+\todo[inline]{Original text below}
+
+This report on the State-of-the-art on Current Formalisms used in Cyber-Physical
+Systems Development of Working Group1 (WG1) on Foundations of the ICT COST
+Action IC1404 Multi-Paradigm Modelling for Cyber-Physical Systems (MPM4CPS)
+first presents a catalog of modeling languages and tools in chapter
+\ref{ch:catalog}. Then a Glossary of Terms for Cyber Physical Systems is
+presented in chapter \ref{ch:glossary}.
+
+The work of WG1 revealed that the dependencies
+between the framework targeted in deliverable D1.2 \cite{MPM4CPS-D1-2v1} and
+this report was much more tight than initially expected. To avoid capturing some
+content of this report  in a redundant form in the ontologies of the
+framework, it was decided instead to  include relevant information in the
+ontologies and extract it automatically from the ontologies for this report .
+
+
+% Figure + description below
+
+\begin{figure}[!htb]
+\includegraphics[width=\textwidth]{figures/ontology_structure.png}
+\caption{Overview of the structure of the MPM4CPS ontology}
+\label{fig:ontology_structure}
+\end{figure}
+
+In figure \ref{fig:ontology_structure} the structure of the framework and its
+elements in form of the different ontologies and their dependencies are
+presented. The figure also includes the data for the next two chapters of this
+report.
+
+The first column depicts the framework and its ontologies as presented in the
+report on the Framework to Relate / Combine Modeling Languages and Techniques
+covered by deliverable D1.2 \cite{MPM4CPS-D1-2v1}.
+The Glossary of Terms for Cyber Physical Systems presented in chapter
+\ref{ch:glossary} of this report is extracted automatically from these
+ontologies and its contained concepts defining the framework.
+
+In the second column the catalog of modeling languages and tools that
+consists of indiciduals of the MPM4CPS ontology as covered later in chapter
+\ref{ch:catalog} is presented. It is automatically derived from these
+individuals such that the ontology and its instances can be kept consistent with
+minimal coordination efforts.
+
+In the third column, some examples for CPS development employing MPM in form of
+mega models are depicted. Those are presented in details in the report on
+the Framework to Relate / Combine Modeling Languages and Techniques covered by
+deliverable D1.2 \cite{MPM4CPS-D1-2v1}. As depicted, these examples employ
+individuals of the catalog of languages and tools listed in this report in
+chapter \ref{ch:catalog} and instantiate the classes of the MPM4CPS ontology.
+\end{comment}
+
+% ========================================================
+\chapter{Structured Catalog of Modelling Languages and Tools}
+\label{ch:catalog}
+
+The MPM4CPS domain merges concepts from multi-paradigm modelling (MPM) and applies them onto the development of cyber-physical systems.
+As an extension of the well-known field of embedded systems development, the CPS discipline emerges from a widely studied field and thus builds upon its previous insights, development and modelling approaches and languages and tools.
+
+On the other hand, CPS is a very recent field that embraces new ideas and modern paradigms.
+These additions created diverging branches from existing standards and new target audiences and domain actors adopted multiple approaches: the result is that different stakeholders use different definitions for their approaches, with an evident dispersion of effort and a significant introduction of unnecessary conceptual entropy in the field in both literature and practice, that may be dominated by a substanding unifying approach suitable to keep beneficial diversity.
+Consequently, MPM's aim is to further the diversity of topics by taking a very elastic approach and supporting generic (informal) definitions and merging the ``best formalisms, languages and tools'' for each point of view.
+This stance however resulted in the creation of tools that were generated based on different
+needs and from different points of view, spanning from small-scale, theoretical and hardware-centric  approaches to robust, practical, industrial and large-scale applications, and numerous other solutions inbetween.
+
+This chaotic richness of tools is further founded by the
+heterogeneity of users and backgrounds that are involved in the MPM4CPS processes.
+MPM4CPS processes mirror the intrinsic complexity of
+their systems and diversity of their users. These come from and
+work in different domains, each bringing their specialised point of view,
+heritage and methods of their respective domain.
+Such methods belong to different phases of the
+design, development and assessment cycle, and stem from various research fields,
+with particular perspectives on the same problems and different views on similar
+systems. As a result, specifications of tools are often divergent, even if not
+contrasting, as they are driven by different purposes, towards different goals,
+and on different methodological foundations.
+
+This catalog aims to serve as a small collection of the most commonly employed tools, modelling languages and formalisms in the domain.
+The catalog's initial purpose prescribed to capture current and actively used means to model CPS. However, it quickly became evident that the domain's vastness cannot be captured entirely in this document. Too many tools and languages have been developed and trialed in many experiments and evaluated on numerous case studies.
+Instead, the decision was made to initially create a description of the most commonly known and used representatives of each category, and, in a second iteration, add representative usage reports and evaluations.
+
+The catalog is by no means attempting to be complete or even exhaustive, as the described vastness and the speed of development, adaptation and change of the discipline renders such a goal unreachable.
+What it does however is to serve as a reference for newcomers who wish to learn more about a particular formalism, language or tool.
+The catalog further provides references to additional information resources such as experience reports, case studies and analyses.
+
+Catalog entries has been selected by experts in their respective fields and participants of the MPM4CPS's WG1 on Foundations. 
+Collectively, they serve as a current snapshot of the main and most important concepts, but -- similar to other lexica and reference sources -- has to be extended, revisited and updated in regular intervals (as intended by the members of WG1).
+
+\section{Catalog Structure}\label{sec:CatalogStructure}
+The structure of the catalog is inspired by the framework proposed by~\cite{Broman2012}, which distinguishes between viewpoints, formalisms, and languages and tools.
+It defines that stakeholders have viewpoints which are expressed using formalisms.
+As formalisms are mathematical structures (i.e. without a concrete syntax), they require languages and tools that implement them.
+Figure \ref{fig:broman} depicts this framework visually. 
+Evidently, modern tools often support several languages, and each language can merge several formalisms.
+For example, Papyrus is a tool that supports the creation of different Unified Modeling Language (UML) diagram types such as \textit{class diagrams}, \textit{sequence diagrams}, etc.
+Each diagram is based upon a different formalism.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/fw_viewpoints_bronan.png}
+\caption{Framework for Viewpoints, Formalisms, Languages and Tools (from~\cite{Broman2012})}
+\label{fig:broman}
+\end{figure}
+
+The catalog lists its entries in a pre-defined order, starting from the most theoretical (formalisms) to the most practical (tools).
+In some situations, the classification of individual entries is not easily possible.
+For example, \textit{Petri nets} are a family of formalisms that are well-suited for the expression of concurrency. 
+There are various ``flavours'' of Petri nets that allow the expression of different systems.
+As they are closely related though, the catalog authors choose to list them as individual formalisms, even though one might argue that \textit{Colored Petri nets} are a formalism by themselves.
+Another issue arises with the classification of Petri nets, as, when they were introduced, Petri nets were equipped with a visual notation syntax, which nowadays is used interchangeably with the mathematical formalism.
+This catalog thus lists two different entries for ``Petri nets'' (i.e. the formalism) and ``Petri nets diagram'' (i.e. its graphical syntax). 
+The reason behind this is that there exists for example the \textit{PNML} (Petri Net Markup Language) format, which is a common exchange format for Petri net diagrams that can be easily read and written by tools.
+It is thus another language (with a concrete, textual syntax) for the Petri nets formalism.
+Finally, the tools section (Section \ref{sec:tools}) provides a list of tools that can be used to create, edit, and interact with models. 
+For example, the section contains an entry for \textit{StrataGEM}, a common tool for the model-checking of concurrent models such as Petri nets.
+
+\begin{comment}
+
+\section{Introduction}
+
+A number of different tools is available that support multiparadigm modeling
+and/or CPS modeling, at different maturity levels, designed by academia or
+industry. This richness is quite natural, for different reasons. 
+
+As first, CPS is a recent field, with no established standards and with
+different actors, each of which adopts a slightly different definition and a
+different approach for the topic: while multiparadigm modeling embraces a very
+wide spectrum of different topics, and actually has a very elastic and generic
+(informal) definition: the result is that tools were generated under different
+needs and from different directions, as the field spans from very theoretical,
+foundational approaches to very practical, application oriented approaches.
+
+As second, this chaotic richness of tools is easily explained by the
+heterogeneity of users and backgrounds that are involved in the processes that
+are in the scope of interest of MPM4CPS that mirrors the intrinsic complexity of
+the systems that are in the scope of interest of MPM4CPS. They come from and
+work in different domains, each bringing the specialistic point of view,
+heritage and methods of their domain, they belong to different phases of the
+design, development and assessment cycle, or from different research fields,
+with different perspectives on the same problems and different views on the same
+systems. As a result, specifications of tools are often divergent, even if not
+contrasting, as they are driven by different purposes, towards different goals,
+and on different methodological foundations.
+
+In this chapter a catalogue of tools is presented, with a classification that is
+derived from the ontology. Some of the tools are released as commercial
+software in support of different applications, others are pure experimental
+tools devoted to support research in language engineering or model engineering.
+For each tool the main points have been resumed and classified, in order to
+provide a comprehensive support for candidate users and to guide them in
+exploring the offer to find the best match to their needs.
+
+The structure of the catalog is inspired from the framework proposed by~\cite{Broman2012} (see figure \ref{fig:broman}) where modeling languages and tools may be based on / support a set of formalisms and conversely, formalisms may be implemented by languages and tools. Therefore, the catalog proposed three top level lists for languages, tools and formalisms with subsections for referencing the related elements via the aforementioned relations. In addition, for each element of the catalog a set of references is provided.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/fw_viewpoints_bronan.png}
+\caption{Framework for Viewpoints, Formalisms, Languages and Tools (from~\cite{Broman2012})}
+\label{fig:broman}
+\end{figure}
+\end{comment}
+
+%\todo{???: should we add %here a copy of the %figure or a diagram from %the ontology?\\
+%Holger: yes. I think %this would be very %helpful.
+%}
+
+\include{catalog}
+
+%\todo[inline]{Holger:\\
+%Ideas for the generation templates:\\
+%- Language/Formalism/Tool: <element>\\
+%- for Languages: Formalisms -> %Supported Formalisms\\
+%- for Languages: Tools -> Supported by %the following Tools\\
+%- for Formalism: Languages -> Employed %in the following Languages\\
+%- for Formalism: Tools -> Supported by %the following Tools\\
+%- for Tool: Languages -> Supported %Languages\\
+%- for Tool: add Model Operations?\\
+%- we need some additional dimensions %to organize the languages/formalisms %somehow meaningful (e.g., continuous, %discrete, hybrid concerning state)\\
+%}
+
+
+% ========================================================
+% \chapter{Glossary of Terms for Cyber Physical Systems}
+% \label{ch:glossary}
+% \COMMENT{ HG: Did we not plan to skip the glossary and refer to existing results of larger EU projects here? }
+% \COMMENT{ HG: What about the concepts defined in the CPS ontology? Did they not provide such a glossary? }
+% %
+% %\todo{\tiny
+% %\textit{\textbf{Team:} }
+% %\begin{itemize}
+% %  \item \textit{Moussa Amrani}
+% %  \item \textit{Hans Vangheluwe}
+% %\end{itemize}
+% %}
+% %
+% %\section{Introduction}
+% %\textit{\textbf{TODO Moussa and Hans}}
+% %
+% For the glossary we were able to identify a list of terms presented in the two following Tables \ref{tab:glossary_1} and \ref{tab:glossary_2} that are important for MPM4CPS.
+% %
+% As many terms are related or even included in the ontology already, we plan to integrate them into the ontology model in the long run rather the maintaining a separate source/representation, and generate this part of the document automatically. 
+
+% \begin{table}[!htb]
+% \centering
+% \includegraphics[width=0.7\textwidth]{figures/glossary_1.pdf}
+% \caption{Terms for the glossary (1/2)}
+% \label{tab:glossary_1}
+% \end{table}
+
+% \begin{table}[!htb]
+% \centering
+% \includegraphics[width=0.7\textwidth]{figures/glossary_2.pdf}
+% \caption{Terms for the glossary (2/2)}
+% \label{tab:glossary_2}
+% \end{table}
+
+
+%\include{glossary}
+
+% ========================================================
+\chapter{Summary and Future Work}
+%\todo{\textbf{TODO Holger}}
+%
+
+This report presents a catalog of formalisms, modelling languages and tools that are used in the domain of cyber-physical systems development.
+It was compiled as part of the deliverables produced by the \emph{ICT COST Action IC1404 Multi-Paradigm Modelling for Cyber-Physical Systems (MPM4CPS)} -- \emph{Working Group 1 (WG1) on Foundations of MPM4CPS}.
+
+The catalog comprises descriptions of over 170 formalisms, languages and tools, and is automatically generated from a digital ontology that was established using modern ontology engineering techniques.
+The tight network of related ontology entries has been adapted to catalog form for this report.
+Since it is a static snapshot of the current state of art, it requires that its contents are revisited in regular intervals to extend, update and maintain the correctness of the information.
+
+% The second part of the report presents a glossary of terms that are commonly used in the multi-paradigm modelling and cyber-physical systems domains.
+% It is intended for novice users and can be used to avoid ambiguities, for example when interacting with stakeholders from different domains.
+% It too requires the same, continuous maintenance effort that the catalog experiences.
+
+
+%Future work:
+% \COMMENT{ HG: Sounds to concrete and doable for the future work at the end of the COST action, or? It sounds as if we simply did not do the obvious ...}
+The catalog poses a solid foundation for a future, more complete body of knowledge.
+To this extent, an extension of the catalog and the addition of further, more detailed properties for all entries should be performed and the catalog extended.
+Obviously, this vast and time-consuming task cannot be performed by a small group of researchers, but instead should be executed through continuous, collaborative effort.
+While the descriptions and references in this catalog already provide a significant coverage of the domain, we believe that tool creators and language developers are best suited to maintain the catalog entries for their field of expertise. Evidently, this solution also requires that these experts have the means to easily create, update and alter the ontology's entries.
+
+There also exist more concrete research tasks to be performed on the catalog.
+For example, in the course of the ontology development, we discovered that there exist many more properties for each individual entry that can be used to search, filter and explore the ontology.
+It would be of interest to look into possibilities of how to best represent this multi-dimensional information within a catalog, while maintaining its legibility and usability.
+
+One possibility would be to group the entries into subsections, based on these properties.
+For example, we discovered that many tools serve particular purposes, such as e.g. analysis or simulation.
+This information was gathered and entered into the ontology and is readily available to be used.
+At the moment, we are evaluating the benefits of this approach, as for example some tools serve multiple purposes and thus would be present in multiple subsections, thereby introducing redundancy.
+The members of WG1 envisage a collaboration with experts in the ontology domains to harness their knowledge in this matter.
+
+Future tasks should also establish links to the practical usage of the listed formalisms, tools and modelling languages. For instance, the MPM4CPS's Working Group 4 has compiled a meta-data study~\cite{barisic_wg44}, reporting on which formalisms and tools were used in primary studies of CPS modelling. 
+Based on this information it can then be possible to discover e.g. common formalisms for particular CPS application domains, or e.g. list potential alternative tools and languages that can be used for certain projects. 
+
+
+%ANKICA: Another direction is to understand the practical usage of the reported formalism, tools and modelling languages. For instance, as a result of the WG4 we will have a meta-data reporting on which formalism and tools were used in primary studies which report on modelling of CPS. Based on this meta-data it is possible  to perform analysis and understand in which CPS application domains certain tools were used / or for modelling which part of CPS.  
+
+
+
+\begin{comment}
+
+In this report on the State-of-the-art on Current Formalisms used in Cyber-Physical
+Systems Development of Working Group1 (WG1) on Foundations of the ICT COST
+Action IC1404 Multi-Paradigm Modelling for Cyber-Physical Systems (MPM4CPS), we
+first presented 
+%
+a catalog of languages, formalisms, and tools in chapter
+\ref{ch:catalog}. 
+%
+Then a glossary of terms for Cyber Physical Systems has been
+presented in chapter \ref{ch:glossary}.
+
+Both the catalog and glossary still need to be improved as future work. For the catalog, the documentation of each entry and the completeness 
+of the catalog still have to be improved. In addition, the three main categories of languages, formalisms and tools of the catalog better populated, reviewed, and updated to reflect the finer classification provided by the ontology from which they are generated.
+%
+Finally, the presented glossary of terms for Cyber-Physical Systems is currently still 
+incomplete and has to be reworked to cover all relevant terms and be better linked to 
+the ontologies. 
+
+%\todo[inline]{ Holger:\\
+%LATER:\\
+%- agree on consistent referencing of %figures, sections, chapters, ...\\
+%- agree on UK or US English and do a %related grammar and spell checking %...\\
+%}
+
+% Appendices start here
+%\appendix
+
+% An example appendix
+%\include{ExampleAppendix}
+\end{comment}
+
+% ========================================================
+% Bibliography starts here
+\backmatter
+
+% Generate bibliography
+\fancyhead[LO]{Bibliography}
+\bibliographystyle{include/files/CE-bibtex}
+\label{ch:bib} %label to refer to
+\bibliography{bibliography} 
+
+
+~\newpage
+% ========================================================
+% Index starts here
+%
+\fancyhead[LO]{Index}
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\BLOCK{
+~\newpage
+% ========================================================
+% List of todos starts here
+%
+\listoftodos
+}
+
+\end{document}
+

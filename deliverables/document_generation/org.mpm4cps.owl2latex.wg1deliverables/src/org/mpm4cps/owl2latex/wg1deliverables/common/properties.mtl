@@ -1,0 +1,60 @@
+[comment encoding = UTF-8 /]
+[module properties('http://www.w3.org/2002/07/owl#')]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::owlHelpers/]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::mpm4cpsHelpers/]
+[import org::mpm4cps::owl2latex::wg1deliverables::common::utils/]
+
+[template public generateProperties( ontology : Ontology )]
+	[for ( propIri : String | ontology.declaration->select( objectProperty <> null )->select( el | el.objectProperty.iRI.isLocal() )->collect( objectProperty.iRI )->sortedBy( toLatex() ) )]
+
+\subsection{[ontology.completeName( propIri )/]}
+\label{subsecP:[propIri.toLatexLabel()/]}
+[ontology.commentAss( propIri )/]
+[generateExtendedProperties( ontology, propIri )/]
+
+[generateDomains( ontology, propIri )/]
+
+[generateRanges( ontology, propIri )/]
+
+[generateToDos( ontology, propIri )/]
+	[/for]
+[/template]
+
+[template public generateDomains(  ontology : Ontology, propIri : String )]
+Domains:
+	[if ( ontology.objectPropertyDomains( propIri )->isEmpty() )]
+None
+	[else]
+\begin{itemize}
+		[for ( domain : String | ontology.objectPropertyDomains( propIri )->sortedBy( toLatex() ) )]
+	\item [domain.domainType()/]\textbf{[domain.domainClassIri().toLatex()/]} (see section \ref{subsubsecC:[domain.domainClassIri().toLatexLabel()/]})
+		[/for]
+\end{itemize}
+	[/if]
+[/template]
+
+[template public generateRanges(  ontology : Ontology, propIri : String )]
+Ranges:
+	[if ( ontology.objectPropertyRanges( propIri )->isEmpty() )]
+None
+	[else]
+\begin{itemize}
+		[for ( range : String | ontology.objectPropertyRanges( propIri )->sortedBy( toLatex() ) )]
+	\item [range.rangeType()/]\textbf{[range.rangeClassIri().toLatex()/]} (see section \ref{subsubsecC:[range.rangeClassIri().toLatexLabel()/]})
+		[/for]
+\end{itemize}
+	[/if]
+[/template]
+
+[template public generateExtendedProperties( ontology : Ontology, propIri : String )]
+Subproperty of:
+		[if ontology.extendedPropertyIries( propIri )->isEmpty() ]
+None
+		[else]
+\begin{itemize}
+			[for ( propName : String | ontology.extendedPropertyIries( propIri )->sortedBy( toLatex() ) )]
+	\item \textbf{[propName.toLatex()/]} (see section \ref{subsecP:[propName.toLatexLabel()/]})
+			[/for]
+\end{itemize}
+		[/if]
+[/template]

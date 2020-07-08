@@ -1,0 +1,420 @@
+%% 
+%  This package is to add Rich Report Outline information to the LaTeX document
+%  The package is able to keep track of all RRO items and can turn them into a
+%  full blown RRO document (which is required for discussions with your
+%  supervisor about the LaTeX document!)
+%
+% The macros with a @ in the name should not be used from the LaTeX document,
+% unless you *know* what you are doing
+% All rro.sty macros should start with rro to prevent clashes with other
+% packages
+% macros starting with RRO indicate are settings and can be modified in the
+% LaTeX document to change the package behavior
+%%
+\NeedsTeXFormat{LaTeX2e}[1994/12/01]
+\ProvidesPackage{include/files/rro}[2010/02/11 v0.2.1b Rich Report Outline package]
+\RequirePackage{xcolor}			% Color extensions, provided more (user-friendly) color commands
+\RequirePackage{ifthen}
+\RequirePackage{ifpdf}
+\RequirePackage{calc}
+\RequirePackage{verbatim}
+
+% If rro@final is true, no rro output in generated into the document
+% Use \usepackage[final]{rro} to activate this option
+\newif\ifrro@final \rro@finalfalse
+\DeclareOption{draft}{\rro@finalfalse}
+\DeclareOption{final}{\rro@finaltrue}
+\ProcessOptions
+
+% Definition of the colors of each RRO type
+% Possible to redefine in your LaTeX document to change the colors 
+\definecolor{RROGone}{gray}{0.50}
+\definecolor{RRONormal}{rgb}{0,0,1}
+\definecolor{RRODone}{rgb}{0.35,0.7,0.35}
+\definecolor{RROTodo}{rgb}{0.6,0,0}
+\definecolor{RROWIP}{rgb}{1,0.6,0} % Orange
+
+%% Commands to insert RRO items
+
+% Regular RRO command (could be used to for RRO comment)
+\newcommand{\rro}[1]{\rro@template{RRONormal}{rro}{#1}}
+
+% RRO command to indicate that the RRO item is done
+% The item will still be visible in DVI/PDF documents
+\newcommand{\rrodone}[1]{\rro@template{RRODone}{done}{#1}}
+% Abbreviation
+\newcommand{\rrod}[1]{\rrodone{#1}}
+
+% RRO command to indicate that the RRO item is not finished
+% and some sort of action still is required
+\newcommand{\rrotodo}[1]{\rro@template{RROTodo}{todo}{#1}}
+% Abbreviation
+\newcommand{\rrot}[1]{\rrotodo{#1}}
+
+% RRO command to indicate that the RRO item is being processes, but
+% not finished and some sort of action still is required
+\newcommand{\rrowip}[1]{\rro@template{RROWIP}{inpr}{#1}}
+% Abbreviation
+\newcommand{\rrow}[1]{\rrowip{#1}}
+
+
+% RRO command to remove the RRO item from the PDF document
+% The RRO item will still be visible in the DVI and RRO document
+% So it is useful to keep the RRO complete
+\newcommand{\rrogone}[1]
+{%
+  \ifpdf%
+    % Only write to rro file
+	\rro@makestring{#1}%
+    \rro@write{\string\rroaddline{gone}{\rro@stringresult}}%
+  \else%
+    \rro@template{RROGone}{gone}{#1}
+  \fi
+}
+% Abbreviation
+\newcommand{\rrog}[1]{\rrogone{#1}}
+
+% Template for RRO items
+% #1 = color
+% #2 = name (text)
+% #3 = rro text
+\def\rro@template#1#2#3
+{% Make a string of the given text argument (all macros will not be expanded)
+\rro@makestring{#3}%
+\rro@write{\string\rroaddline{#2}{\rro@stringresult}}%
+\ifrro@final\else%
+\par\noindent%
+	% Put inside minipage to keep bullet and text on same page when the end is
+	% reached, 'tricky part' messes this up
+	\begin{minipage}{\linewidth - 5pt}%
+		% 'Tricky part' is also messing with the spacing, so correct
+		\vspace{1ex}%
+		% print rro item text in a small font
+		\mbox{\footnotesize\color{#1}[#2]}%
+		% The tricky part... (Makes sure that the circ stays top aligned, for multi line texts)
+		\\[-4ex]\mbox{}\hskip3em
+		% This Minipage prevents all kind of nasty things from happening
+		% when commands are used, eg like itemize environments
+		\begin{minipage}[t]{\linewidth - 3em}
+			\normalsize\color{#1}#3%
+		\end{minipage}%
+	\end{minipage}%
+	\par%
+\fi%
+}
+
+%% RRO subitems
+% TODO Having two RRO subitems after each other results in a (huge) gap
+% (which takes quite some space with several subitems...)
+\newcommand{\rroi}[1]{\rro@item{RRONormal}{rroi}{#1}}
+\newcommand{\rroid}[1]{\rro@item{RRODone}{rroid}{#1}}
+\newcommand{\rroit}[1]{\rro@item{RROTodo}{rroit}{#1}}
+\newcommand{\rroiw}[1]{\rro@item{RROWIP}{rroiw}{#1}}
+\newcommand{\rroig}[1]
+{%
+  \ifpdf %
+    % Only write to rro file
+	\rro@makestring{#1}%
+    \rro@write{\string\rroaddline{rroig}{\rro@stringresult}}%
+  \else
+    \rro@item{RROGone}{rroig}{#1}
+  \fi
+}
+
+% Template for bulleted rro items
+% #1 = color
+% #2 = name (text)
+% #3 = rro item text
+\def\rro@item#1#2#3
+{% Make a string of the given text argument (all macros will not be expanded)
+\rro@makestring{#3}%
+\rro@write{\string\rroaddline{#2}{\rro@stringresult}}%
+\ifrro@final\else%
+	\par\noindent%
+	% Put inside minipage to keep bullet and text on same page when the end is
+	% reached, 'tricky part' messes this up
+	\begin{minipage}{\linewidth - 5pt}%
+		% 'Tricky part' is also messing with the spacing, so correct
+		\vspace{1ex}%
+		% Extra indention for RRO sub items
+		\hskip3em\mbox{\normalsize\color{#1}$\bullet$}
+		% The tricky part... (Makes sure that the circ stays top aligned, for multi line texts)
+		\\[-4ex]\mbox{}\hskip15pt\hskip3em
+		% This Minipage prevents all kind of nasty things from happening
+		% when commands are used, eg like itemize environments
+		\begin{minipage}[t]{\linewidth - 3em - 15pt}
+			\normalsize\color{#1}#3
+		\end{minipage}%
+	\end{minipage}%
+	\par%
+\fi%
+}
+
+%% Commands to create a RRO (toc style) from the LaTeX document
+
+% File handle for RRO file
+\newwrite\@rrofile
+
+% Token to indicate that no section number is used (eg *-command)
+\def\rro@nonumber{-}
+ 
+% Disable write command (will be enabled when \rrobuild is invoked) 
+\def\rro@write#1{\@empty}
+ 
+% Enable the creation of RichReportOutline.rro
+% This file can be used to build the RRO document
+\def\makerro{%
+	% Open the rro file
+	\immediate\openout\@rrofile=RichReportOutline.rro
+
+	% Enable writing to the file
+	\def\rro@write##1{\immediate\write\@rrofile{##1}}
+
+	% Add document title to the top of the file
+	\rro@write{\string\LARGE}
+	\ifthenelse{ \isundefined{\rro@title} }{ 
+		%Use verbatim environment to prevent strange effects (eg a _ in the filename
+		\rro@write{\string\begin{verbatim}Rich Report Outline: \jobname\string\end{verbatim}} 
+	}{ % else 
+		% \doctitle available 
+		\rro@write{\string\title{Rich Report Outline: \rro@title}}
+		\rro@write{\string\@title} 
+	} 
+	\ifthenelse{ \isundefined{\rro@author} }{}
+	{ % else
+		\rro@write{\string\author{\rro@author}}
+	} 
+	\rro@write{\string\normalsize}
+	\rro@write{\string\vspace{0.2in}}
+	\rro@write{}
+	
+	% Allow only once, so turn command into no-op after use
+	\let\makerro\@empty
+}
+
+\def\rro@makestring#1{%
+\verbatim@startline%
+\verbatim@addtoline{#1}%
+\def\rro@stringresult{\the\verbatim@line}%
+}
+
+%%Override chapter command to add the chapter to the *.rro file
+\let\org@chapter\chapter
+\def\chapter{
+	\@ifnextchar*
+	{\rro@section{chapter}{-1}}
+	{\rro@section{chapter}{-1}{}}
+}
+
+%%Override section command to add the section to the *.rro file
+%(Also works for section* commands)
+\let\org@section\section
+\def\section{
+	\@ifnextchar*
+	{\rro@section{section}{1}}
+	{\rro@section{section}{1}{}}
+}
+
+
+%%Override subsection command to add the chapter to the *.rro file
+%(Also works for section* commands)
+\let\org@subsection\subsection
+\def\subsection{
+	\@ifnextchar*
+	{\rro@section{subsection}{2}}
+	{\rro@section{subsection}{2}{}}
+}
+
+%%Override subsubsection command to add the chapter to the *.rro file
+%(Also works for section* commands)
+\let\org@subsubsection\subsubsection
+\def\subsubsection{
+	\@ifnextchar*
+	{\rro@section{subsubsection}{3}}
+	{\rro@section{subsubsection}{3}{}}
+}
+
+% General template for all section commands
+% It will invoke the original section command #1 and write an appropriate
+% command to the .rro file
+% #1 Orginal section command
+% #2 Depth of section 1 = \section - 3 = \subsubsection
+% #3 * is original command was start command
+% #4 Section text
+\def\rro@section#1#2#3#4{%
+	% Invoke original command (with or without star depending on #3)
+	\csname org@#1\endcsname#3{#4}
+	
+	% Make a string of the given text argument (all macros will not be expanded)
+	\rro@makestring{#4}%
+	
+	\if*#3%
+		% star command
+
+		% Write line to rro file
+		\rro@write{\string\rroaddsection{#1}{\rro@nonumber}{\rro@stringresult}}%
+	\else%
+		% Write line to rro file
+		% (tocdepth is used to check till which section depth numbers are enabled)
+		\rro@write{\string\rroaddsection{#1}%
+			{\ifnum #2>\value{tocdepth}\rro@nonumber\else\csname%
+				the#1\endcsname\fi}%
+			{\rro@stringresult}}%
+	\fi%
+}%
+
+%% Commands to create the RRO document from the rro file
+
+% Current margin (is updated when new section depths are encountered)
+\newdimen\rro@leftmargin
+
+% Set the left indentions for each level
+% To modify these values redefine them in the LaTeX document
+\rro@leftmargin=0pt
+\def\RROChapterLeftMargin{0pt}
+\def\RROSectionLeftMargin{20pt}
+\def\RROSubSectionLeftMargin{40pt}
+\def\RROSubSubSectionLeftMargin{60pt}
+% Extra margin used for the RRO items (compared to the section lines)
+\def\RROExtraRROItemMargin{20pt}
+
+% rro file command used to add a rro item
+% #1 is the item type (rro, todo, done or gone)
+% #2 is the rro text
+\def\rroaddline#1#2{
+	% add rro@build in front of #1 and executes this macro with #2 as argument
+	\csname rro@build#1\endcsname{#2}
+}
+
+% Insert regular RRO item
+\def\rro@buildrro#1{\rro@buildrroitem{#1}{RRONormal}}
+% Insert todo RRO item
+\def\rro@buildtodo#1{\rro@buildrroitem{#1}{RROTodo}}
+\def\rro@buildinpr#1{\rro@buildrroitem{#1}{RROWIP}}
+% Insert regular done RRO item
+\def\rro@builddone#1{\rro@buildrroitem{#1}{RRODone}} 
+% Insert gone RRO item
+\def\rro@buildgone#1{\rro@buildrroitem{#1}{RROGone}}
+
+% Insert regular RRO sub item
+\def\rro@buildrroi#1{\rro@buildrrosubitem{#1}{RRONormal}}
+% Insert todo RRO sub item
+\def\rro@buildrroit#1{\rro@buildrrosubitem{#1}{RROTodo}}
+% Insert done RRO sub item
+\def\rro@buildrroid#1{\rro@buildrrosubitem{#1}{RRODone}}
+\def\rro@buildrroiw#1{\rro@buildrrosubitem{#1}{RROWIP}}
+% Insert gone RRO sub item
+\def\rro@buildrroig#1{\rro@buildrrosubitem{#1}{RROGone}}
+
+
+% Generic macro for RRO item insertion
+\def\rro@buildrroitem#1#2
+{
+	% Put inside minipage to keep bullet and text on same page when the end is
+	% reached, 'tricky part' messes this up
+	\begin{minipage}{\linewidth}%
+	% 'Tricky part' is also messing with the spacing, so correct
+	\vspace{1ex}%
+	% Insert indentation and bullet
+	\hskip\rro@leftmargin$\bullet$%
+	% The tricky part... (Makes sure that the bullet stays top aligned, for multi line texts)
+	\\[-4ex]\mbox{}\hskip\rro@leftmargin\hskip10pt
+	% This Minipage prevents all kind of nasty things from happening
+	% when commands are used, eg like itemize environments
+	\begin{minipage}[t]{\linewidth - \rro@leftmargin - 15pt}
+		\color{#2} #1%        
+	\end{minipage}%
+	\end{minipage}%
+	\par%
+}
+
+% Generic macro for RRO subitem insertion
+\def\rro@buildrrosubitem#1#2
+{
+	% Put inside minipage to keep circ and text on same page when the end is
+	% reached, 'tricky part' messes this up
+	\begin{minipage}{\linewidth}%
+	% 'Tricky part' is also messing with the spacing, so correct
+	\vspace{1ex}%
+	% Insert (extra) indentation and a open bullet
+	\hskip\rro@leftmargin\hskip1em$\circ$
+	% The tricky part... (Makes sure that the circ stays top aligned, for multi line texts)
+	\\[-4ex]\mbox{}\hskip\rro@leftmargin\hskip10pt\hskip1em
+	% This Minipage prevents all kind of nasty things from happening
+	% when commands are used, eg like itemize environments
+	\begin{minipage}[t]{\linewidth - \rro@leftmargin - 1em - 15pt}
+		\color{#2} #1%        
+	\end{minipage}%
+	\end{minipage}%
+	\par%
+}
+
+
+% rro file command used to add a section
+% #1 is the section type (chapter, section, subsection, subsubsection)
+% #2 is the section number (or \rro@nonumber to insert a section without a
+%    number)
+% #3 is the section text
+\def\rroaddsection#1#2#3{
+	% (Re)create macro from section number for later usage 
+	\edef\rro@tmp{#2}	
+	% add rro@build in front of #1 and executes this macro with #2 and #3 as
+	% arguments
+	\csname rro@build#1\endcsname{#2}{#3}
+}
+
+% Insert chapter section
+\def\rro@buildchapter#1#2{
+	% Update margin
+	\rro@leftmargin=\RROChapterLeftMargin
+	% Build section text with given font
+	% if \rro@tmp (set earlier) is equal to \rro@nonumber then no number is
+	% inserted in front of the section text
+	% ifx compares on macro level (without expanding)
+	\rro@buildrrosection{\normalfont\Large\bfseries}%
+		{\ifx\rro@tmp\rro@nonumber\else#1 \fi#2}
+}%
+
+% Insert section section
+\def\rro@buildsection#1#2{
+	% Update margin
+	\rro@leftmargin=\RROSectionLeftMargin
+	% Build section text with given font
+	\rro@buildrrosection{\normalfont\large\bfseries}%
+		{\ifx\rro@tmp\rro@nonumber\else#1 \fi#2} 
+}
+
+% Insert subsection section
+\def\rro@buildsubsection#1#2{
+	% Update margin
+	\rro@leftmargin=\RROSubSectionLeftMargin
+	% Build section text with given font
+	\rro@buildrrosection{\normalfont\normalsize\bfseries}%
+		{\ifx\rro@tmp\rro@nonumber\else#1 \fi#2}
+}
+
+% Insert subsubsection section
+\def\rro@buildsubsubsection#1#2{
+	% Update margin
+	\rro@leftmargin=\RROSubSubSectionLeftMargin
+	% Build section text with given font
+	\rro@buildrrosection{\normalfont\normalsize}%
+		{\ifx\rro@tmp\rro@nonumber\else#1 \fi#2}
+}
+
+% Build a section line
+% #1 is the font to be used
+% #2 is the text (including the section number if required)
+\def\rro@buildrrosection#1#2
+{
+	% insert margin
+	\hskip\rro@leftmargin
+	% set hangiing indent for multi-line support
+	\hangindent=\rro@leftmargin
+	\advance\hangindent by 1.5em
+	% font and text
+	{#1#2}
+	% increase left margin value to indent rro items
+	\advance\rro@leftmargin by \RROExtraRROItemMargin
+	\par
+}
