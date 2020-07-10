@@ -18,52 +18,52 @@
     <Import>http://mpm4cps.eu/ontology/mpm4cps</Import>
     <Import>http://mpm4cps.eu/ontology/catalog-tools-languages</Import>
     <Declaration>
-        <NamedIndividual IRI="#SelfAdaptationDesign"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#DEECoDesignModel"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Robustness"/>
+        <NamedIndividual IRI="#MATSimCommunity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DEECoRuntimeModel"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DynamicityDesign"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#RequirementEngineer"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SoftwareDesign"/>
+        <NamedIndividual IRI="#InstantiationSimulationTransforamtionOperation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SATSolver_DEECoRuntime_IntegrationOperation"/>
+        <NamedIndividual IRI="#Self-AdaptationCapturingOperation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RequirementsCapturingOperation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ROSModel"/>
+        <NamedIndividual IRI="#EnsembleCapturingOperation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ODEModel"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#SimulationMegaModelFragment"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#OMNet++Model"/>
+        <NamedIndividual IRI="#InstantiationDesignTransformationOperation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ROSDesignModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IRMModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DEECoMegaModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#InstantiationTransformationOperation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CaptureSelfAdaptation"/>
@@ -75,16 +75,22 @@
         <NamedIndividual IRI="#PerformSelfAdaptation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#IRM(-SA)Model"/>
+        <NamedIndividual IRI="#OMNet++RuntimeModel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SupportDynamicSystems"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#StateMachineModel"/>
+        <NamedIndividual IRI="#IRM-SAModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Self-Adaptation_DEECoRuntime_IntegrationOperation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CaptureRequirements"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpenSimLtd"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
@@ -93,10 +99,16 @@
         <NamedIndividual IRI="#RequirementsVerification"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Self-AdaptationModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpenSourceRoboticsFoundation"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#EclipseProject"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
+        <NamedIndividual IRI="#AutonomyViewpoint"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SupportDistributedSystem"/>
@@ -105,7 +117,7 @@
         <NamedIndividual IRI="#CaptureDynamicity"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SATSolver"/>
+        <NamedIndividual IRI="#SimulationCapturingOperation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Designer"/>
@@ -114,10 +126,16 @@
         <NamedIndividual IRI="#SoftwareEngineer"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ROSRuntimeModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#D3S_CUNI"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#StateMachine_DEECoRuntime_IntegrationOperation"/>
+        <NamedIndividual IRI="#OMNet++DesignModel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RuntimeMegaModelFragment"/>
@@ -129,17 +147,75 @@
         <NamedIndividual IRI="#User"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#MATSimModel"/>
+        <NamedIndividual IRI="#MATSimRuntimeModel"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#RequirementMegaModelFragment"/>
+        <NamedIndividual IRI="#CooperationViewpoint"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#EnsureDependability"/>
+        <NamedIndividual IRI="#MATSimDesignModel"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#StatisticalModel"/>
+        <Class abbreviatedIRI="mpm:Megamodel"/>
     </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="mpm4cps:toDo"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mpm:Model"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="mpm4cps:toBeReviewed"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mpm:TransformationOperation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="mpm4cps:website"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:ToolProvider"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="mpm4cps:toBeUpdated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:Purpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:Stakeholder"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
+        <NamedIndividual IRI="#AutonomyViewpoint"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Purpose"/>
         <NamedIndividual IRI="#CaptureDynamicity"/>
@@ -151,6 +227,14 @@
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Purpose"/>
         <NamedIndividual IRI="#CaptureSelfAdaptation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
+        <NamedIndividual IRI="#CooperationViewpoint"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:ToolProvider"/>
+        <NamedIndividual IRI="#D3S_CUNI"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
@@ -177,28 +261,52 @@
         <NamedIndividual IRI="#Designer"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
-        <NamedIndividual IRI="#DynamicityDesign"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="shared:ToolProvider"/>
         <NamedIndividual IRI="#EclipseProject"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="shared:Purpose"/>
-        <NamedIndividual IRI="#EnsureDependability"/>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#EnsembleCapturingOperation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#IRM-SAModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:TransformationOperation"/>
-        <NamedIndividual IRI="#InstantiationTransformationOperation"/>
+        <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#MATSimModel"/>
+        <NamedIndividual IRI="#IRMModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:TransformationOperation"/>
+        <NamedIndividual IRI="#InstantiationDesignTransformationOperation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:TransformationOperation"/>
+        <NamedIndividual IRI="#InstantiationSimulationTransforamtionOperation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:ToolProvider"/>
+        <NamedIndividual IRI="#MATSimCommunity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#ODEModel"/>
+        <NamedIndividual IRI="#MATSimDesignModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#MATSimRuntimeModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:ToolProvider"/>
+        <NamedIndividual IRI="#OpenSimLtd"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:ToolProvider"/>
+        <NamedIndividual IRI="#OpenSourceRoboticsFoundation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Purpose"/>
@@ -206,71 +314,59 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#ROSModel"/>
+        <NamedIndividual IRI="#ROSDesignModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#ROSRuntimeModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Stakeholder"/>
         <NamedIndividual IRI="#RequirementEngineer"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
-        <NamedIndividual IRI="#RequirementMegaModelFragment"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="mpm:CapturingOperation"/>
         <NamedIndividual IRI="#RequirementsCapturingOperation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
+        <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Purpose"/>
         <NamedIndividual IRI="#RequirementsVerification"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="shared:Concern"/>
-        <NamedIndividual IRI="#Robustness"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#RuntimeMegaModelFragment"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#Self-AdaptationCapturingOperation"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#SATSolver"/>
+        <NamedIndividual IRI="#Self-AdaptationModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:IntegrationOperation"/>
-        <NamedIndividual IRI="#SATSolver_DEECoRuntime_IntegrationOperation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
-        <NamedIndividual IRI="#SelfAdaptationDesign"/>
+        <NamedIndividual IRI="#Self-Adaptation_DEECoRuntime_IntegrationOperation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#SimulationCapturingOperation"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#SimulationMegaModelFragment"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
-        <NamedIndividual IRI="#SoftwareDesign"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="shared:Stakeholder"/>
         <NamedIndividual IRI="#SoftwareEngineer"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#StateMachineModel"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
-        <NamedIndividual IRI="#StateMachine_DEECoRuntime_IntegrationOperation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#StatisticalModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Purpose"/>
@@ -290,15 +386,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#IRM(-SA)Model"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="mpm:TransformationOperation"/>
-        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
+        <NamedIndividual IRI="#OMNet++DesignModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#OMNet++Model"/>
+        <NamedIndividual IRI="#OMNet++RuntimeModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:IntegrationOperation"/>
@@ -312,7 +404,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
         <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#RequirementMegaModelFragment"/>
+        <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
@@ -332,42 +424,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
         <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#InstantiationTransformationOperation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
         <NamedIndividual IRI="#RequirementsCapturingOperation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#SATSolver_DEECoRuntime_IntegrationOperation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#StateMachine_DEECoRuntime_IntegrationOperation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
@@ -377,7 +434,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
         <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
-        <NamedIndividual IRI="#ROSModel"/>
+        <NamedIndividual IRI="#ROSRuntimeModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
@@ -385,29 +442,64 @@
         <NamedIndividual IRI="#DEECoDesignModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
-        <NamedIndividual IRI="#InstantiationTransformationOperation"/>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#DesignMegaModelFragment"/>
+        <NamedIndividual IRI="#MATSimDesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#DesignMegaModelFragment"/>
+        <NamedIndividual IRI="#OMNet++DesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#EnsembleCapturingOperation"/>
         <NamedIndividual IRI="#DEECoDesignModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
-        <NamedIndividual IRI="#InstantiationTransformationOperation"/>
+        <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
+        <NamedIndividual IRI="#DEECoDesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#InstantiationDesignTransformationOperation"/>
         <NamedIndividual IRI="#DEECoRuntimeModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasConcerns"/>
-        <NamedIndividual IRI="#RequirementEngineer"/>
-        <NamedIndividual IRI="#Robustness"/>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#InstantiationDesignTransformationOperation"/>
+        <NamedIndividual IRI="#Self-AdaptationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#InstantiationSimulationTransforamtionOperation"/>
+        <NamedIndividual IRI="#MATSimRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#InstantiationSimulationTransforamtionOperation"/>
+        <NamedIndividual IRI="#OMNet++RuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#RequirementsCapturingOperation"/>
+        <NamedIndividual IRI="#IRM-SAModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#RequirementsCapturingOperation"/>
+        <NamedIndividual IRI="#IRMModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#RequirementMegaModelFragment"/>
-        <NamedIndividual IRI="#IRM(-SA)Model"/>
+        <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
+        <NamedIndividual IRI="#IRM-SAModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasNext"/>
-        <NamedIndividual IRI="#RequirementsCapturingOperation"/>
-        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
+        <NamedIndividual IRI="#IRMModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
@@ -415,104 +507,84 @@
         <NamedIndividual IRI="#DEECoRuntimeModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-        <NamedIndividual IRI="#SATSolver_DEECoRuntime_IntegrationOperation"/>
-        <NamedIndividual IRI="#DEECoRuntimeModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-        <NamedIndividual IRI="#SATSolver_DEECoRuntime_IntegrationOperation"/>
-        <NamedIndividual IRI="#SATSolver"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
-        <NamedIndividual IRI="#SATSolver"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
-        <NamedIndividual IRI="#StateMachineModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
-        <NamedIndividual IRI="#MATSimModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
-        <NamedIndividual IRI="#ROSModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
-        <NamedIndividual IRI="#OMNet++Model"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasConcerns"/>
-        <NamedIndividual IRI="#SoftwareEngineer"/>
-        <NamedIndividual IRI="#Robustness"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#StateMachineModel"/>
-        <NamedIndividual IRI="#ODEModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#StateMachineModel"/>
-        <NamedIndividual IRI="#StatisticalModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-        <NamedIndividual IRI="#StateMachine_DEECoRuntime_IntegrationOperation"/>
-        <NamedIndividual IRI="#DEECoRuntimeModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-        <NamedIndividual IRI="#StateMachine_DEECoRuntime_IntegrationOperation"/>
-        <NamedIndividual IRI="#StateMachineModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
-        <NamedIndividual IRI="#DEECoRuntimeModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
-        <NamedIndividual IRI="#MATSimModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
-        <NamedIndividual IRI="#OMNet++Model"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
-        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
-        <NamedIndividual IRI="#IRM(-SA)Model"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
-        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
+        <NamedIndividual IRI="#Self-AdaptationCapturingOperation"/>
         <NamedIndividual IRI="#DEECoDesignModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-        <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
-        <NamedIndividual IRI="#ROSModel"/>
+        <NamedIndividual IRI="#Self-Adaptation_DEECoRuntime_IntegrationOperation"/>
+        <NamedIndividual IRI="#DEECoRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
+        <NamedIndividual IRI="#Self-Adaptation_DEECoRuntime_IntegrationOperation"/>
+        <NamedIndividual IRI="#Self-AdaptationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
+        <NamedIndividual IRI="#Self-AdaptationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#SimulationCapturingOperation"/>
+        <NamedIndividual IRI="#DEECoDesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#SimulationCapturingOperation"/>
+        <NamedIndividual IRI="#MATSimDesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#SimulationCapturingOperation"/>
+        <NamedIndividual IRI="#OMNet++DesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
+        <NamedIndividual IRI="#MATSimRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
+        <NamedIndividual IRI="#ROSRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
+        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
+        <NamedIndividual IRI="#OMNet++RuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
+        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
+        <NamedIndividual IRI="#DEECoRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
+        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
+        <NamedIndividual IRI="#MATSimRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
+        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
+        <NamedIndividual IRI="#OMNet++RuntimeModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
         <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
-        <NamedIndividual IRI="#OMNet++Model"/>
+        <NamedIndividual IRI="#ROSRuntimeModel"/>
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CaptureRequirements</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Describe the requirements in terms of invariants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#D3S_CUNI</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Department of Distributed and Dependable Systems, Charles University in Prague</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -535,16 +607,6 @@
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is the main part of the Ensemble-Based Cyber-Physical Systems. This part is resposible of defining entities, their relations, and their behavior.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#InstantiationTransformationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This relation describes the instantiation from design model to runtime model.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#RequirementMegaModelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This fragment represents the entities of requierment model and their relations.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:toDo"/>
         <IRI>#RequirementsCapturingOperation</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">What is the relation with the Requirement Engineer? We have to link models here?</Literal>
@@ -565,11 +627,6 @@
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This fragment represents the runtime environment of EBCPS.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#SATSolver_DEECoRuntime_IntegrationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The operation describes the integration between SATSolver model as part of self-adaptation and runtime model.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:toBeUpdated"/>
         <IRI>#SelfAdaptationMegaModelFragment</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">on going</Literal>
@@ -586,23 +643,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#StateMachine_DEECoRuntime_IntegrationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The operation describes the state-machine as part of self-adaptation integrats with DEECo Runtime Model.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DEECoRuntime_MATSim_OMNet++_IntegrationOperation</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This operation describes the integration between the runtime model and both MATSim and OMNET++ models.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mpm4cps:toDo"/>
-        <IRI>#IRM(-SA)ToDEECoDesignTransformationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">who is doing this transformation? Shouldn&apos;t be related to hasNext relation?</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#IRM(-SA)ToDEECoDesignTransformationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It describes the transformation operation from requirements to design.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
