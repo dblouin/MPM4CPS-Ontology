@@ -21,9 +21,6 @@
         <Class abbreviatedIRI="mpm:CapturingOperation"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="mpm:Megamodel"/>
     </Declaration>
     <Declaration>
@@ -31,9 +28,6 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="mpm:Model"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="mpm:TransformationOperation"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
@@ -61,15 +55,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AutonomyViewpoint"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#CaptureDynamicity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#CaptureRequirements"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#CaptureSelfAdaptation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CooperationViewpoint"/>
@@ -132,9 +117,6 @@
         <NamedIndividual IRI="#OpenSourceRoboticsFoundation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PerformSelfAdaptation"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#ROSDesignModel"/>
     </Declaration>
     <Declaration>
@@ -148,9 +130,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#RequirementsVerification"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RuntimeMegaModelFragment"/>
@@ -175,12 +154,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SoftwareEngineer"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SupportDistributedSystem"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SupportDynamicSystems"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#User"/>
@@ -234,7 +207,7 @@
         <NamedIndividual IRI="#DEECoRuntimeModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -258,7 +231,7 @@
         <NamedIndividual IRI="#IRM-SAModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:TransformationOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -266,11 +239,11 @@
         <NamedIndividual IRI="#IRMModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:TransformationOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#InstantiationDesignTransformationOperation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:TransformationOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#InstantiationSimulationTransforamtionOperation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -326,7 +299,7 @@
         <NamedIndividual IRI="#Self-AdaptationModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#Self-Adaptation_DEECoRuntime_IntegrationOperation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -350,7 +323,7 @@
         <NamedIndividual IRI="#User"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -362,7 +335,7 @@
         <NamedIndividual IRI="#OMNet++RuntimeModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
@@ -547,11 +520,6 @@
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#CaptureRequirements</IRI>
-        <Literal>Describe the requirements in terms of invariants.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#D3S_CUNI</IRI>
         <Literal>Department of Distributed and Dependable Systems, Charles University in Prague</Literal>
     </AnnotationAssertion>
@@ -584,11 +552,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#RequirementsCapturingOperation</IRI>
         <Literal>Operation to capture the requirements engineer.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#RequirementsVerification</IRI>
-        <Literal>Support verification through connecting requirements to the architecture.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -646,19 +609,9 @@
         <Literal>LTSA is a verification tool for concurrent systems. It mechanically checks that the specification of a concurrent system satisfies the properties required of its behaviour. In addition, LTSA supports specification animation to facilitate interactive exploration of system behaviour.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>mpm:IntegrationOperation</AbbreviatedIRI>
-        <Literal>The process of building a manual integration between two models.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:toBeReviewed"/>
         <AbbreviatedIRI>mpm:TracabilityRelation</AbbreviatedIRI>
         <Literal>Should we put it here or somewhere else? It is not an operation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>mpm:TransformationOperation</AbbreviatedIRI>
-        <Literal>The process of transforming one model to another.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
