@@ -15,130 +15,133 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="shared" IRI="http://mpm4cps.eu/ontology/shared#"/>
     <Prefix name="mpm4cps" IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:"/>
-    <Import>http://mpm4cps.eu/ontology/mpm4cps</Import>
     <Import>http://mpm4cps.eu/ontology/catalog-tools-languages</Import>
+    <Import>http://mpm4cps.eu/ontology/mpm4cps</Import>
     <Declaration>
-        <NamedIndividual IRI="#SelfAdaptationDesign"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#DEECoDesignModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Robustness"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#DEECoRuntimeModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#DynamicityDesign"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#RequirementEngineer"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SoftwareDesign"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SATSolver_DEECoRuntime_IntegrationOperation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#RequirementsCapturingOperation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#ROSModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#ODEModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#OMNet++Model"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#InstantiationTransformationOperation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#CaptureSelfAdaptation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#DesignMegaModelFragment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#PerformSelfAdaptation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#IRM(-SA)Model"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SupportDynamicSystems"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#StateMachineModel"/>
+        <NamedIndividual IRI="#CaptureDynamicity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CaptureRequirements"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CaptureSelfAdaptation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DEECoDesignModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DEECoRuntimeModel"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#RequirementsVerification"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#EclipseProject"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SupportDistributedSystem"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#CaptureDynamicity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SATSolver"/>
+        <NamedIndividual IRI="#DesignMegaModelFragment"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Designer"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SoftwareEngineer"/>
+        <NamedIndividual IRI="#DynamicityDesign"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#StateMachine_DEECoRuntime_IntegrationOperation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#RuntimeMegaModelFragment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#MATSimModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#RequirementMegaModelFragment"/>
+        <NamedIndividual IRI="#EclipseProject"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#EnsureDependability"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#InstantiationTransformationOperation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MATLAB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MATSimModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ODEModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PerformSelfAdaptation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ROSModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RequirementEngineer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RequirementMegaModelFragment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RequirementsCapturingOperation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RequirementsVerification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Robustness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RuntimeMegaModelFragment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SATSolver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SATSolver_DEECoRuntime_IntegrationOperation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SelfAdaptationDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SoftwareDesign"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SoftwareEngineer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StateMachineModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StateMachine_DEECoRuntime_IntegrationOperation"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#StatisticalModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SupportDistributedSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SupportDynamicSystems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IRM(-SA)Model"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OMNet++Model"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
     </Declaration>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Purpose"/>
@@ -165,10 +168,6 @@
         <NamedIndividual IRI="#DEECoRuntimeModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
-        <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#DesignMegaModelFragment"/>
     </ClassAssertion>
@@ -189,8 +188,8 @@
         <NamedIndividual IRI="#EnsureDependability"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:TransformationOperation"/>
-        <NamedIndividual IRI="#InstantiationTransformationOperation"/>
+        <Class abbreviatedIRI="mpm:ExecutionTool"/>
+        <NamedIndividual IRI="#MATLAB"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
@@ -217,10 +216,6 @@
         <NamedIndividual IRI="#RequirementMegaModelFragment"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
-        <NamedIndividual IRI="#RequirementsCapturingOperation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="shared:Purpose"/>
         <NamedIndividual IRI="#RequirementsVerification"/>
     </ClassAssertion>
@@ -235,10 +230,6 @@
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#SATSolver"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
-        <NamedIndividual IRI="#SATSolver_DEECoRuntime_IntegrationOperation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm4cps#ViewPoint"/>
@@ -265,10 +256,6 @@
         <NamedIndividual IRI="#StateMachineModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
-        <NamedIndividual IRI="#StateMachine_DEECoRuntime_IntegrationOperation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#StatisticalModel"/>
     </ClassAssertion>
@@ -285,24 +272,12 @@
         <NamedIndividual IRI="#User"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
-        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#IRM(-SA)Model"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:TransformationOperation"/>
-        <NamedIndividual IRI="#IRM(-SA)ToDEECoDesignTransformationOperation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#OMNet++Model"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="mpm:IntegrationOperation"/>
-        <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
@@ -512,151 +487,136 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CaptureRequirements</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Describe the requirements in terms of invariants.</Literal>
+        <Literal>Describe the requirements in terms of invariants.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DEECoDesignModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It is the model that describe entities and how they behave.</Literal>
+        <Literal>It is the model that describe entities and how they behave.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DEECoMegaModel</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The megamodel for all views of Ensemble-Based Cyber-Physical Systems.</Literal>
+        <Literal>The megamodel for all views of Ensemble-Based Cyber-Physical Systems.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DEECoRuntime_ROS_IntegrationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This operation describes the integration between the runtime model and ROS model.</Literal>
+        <Literal>This operation describes the integration between the runtime model and ROS model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DesignMegaModelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is the main part of the Ensemble-Based Cyber-Physical Systems. This part is resposible of defining entities, their relations, and their behavior.</Literal>
+        <Literal>This is the main part of the Ensemble-Based Cyber-Physical Systems. This part is resposible of defining entities, their relations, and their behavior.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#InstantiationTransformationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This relation describes the instantiation from design model to runtime model.</Literal>
+        <Literal>This relation describes the instantiation from design model to runtime model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#RequirementMegaModelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This fragment represents the entities of requierment model and their relations.</Literal>
+        <Literal>This fragment represents the entities of requierment model and their relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:toDo"/>
         <IRI>#RequirementsCapturingOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">What is the relation with the Requirement Engineer? We have to link models here?</Literal>
+        <Literal>What is the relation with the Requirement Engineer? We have to link models here?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#RequirementsCapturingOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Operation to capture the requirements engineer.</Literal>
+        <Literal>Operation to capture the requirements engineer.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#RequirementsVerification</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Support verification through connecting requirements to the architecture.</Literal>
+        <Literal>Support verification through connecting requirements to the architecture.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#RuntimeMegaModelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This fragment represents the runtime environment of EBCPS.</Literal>
+        <Literal>This fragment represents the runtime environment of EBCPS.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#SATSolver_DEECoRuntime_IntegrationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The operation describes the integration between SATSolver model as part of self-adaptation and runtime model.</Literal>
+        <Literal>The operation describes the integration between SATSolver model as part of self-adaptation and runtime model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:toBeUpdated"/>
         <IRI>#SelfAdaptationMegaModelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">on going</Literal>
+        <Literal>on going</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#SelfAdaptationMegaModelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This fragment represents the self-adaptation part in EBCPS.</Literal>
+        <Literal>This fragment represents the self-adaptation part in EBCPS.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#SimulationMegaModelFragment</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This fragment represents the entities in the simulation environment and their relations.</Literal>
+        <Literal>This fragment represents the entities in the simulation environment and their relations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#StateMachine_DEECoRuntime_IntegrationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The operation describes the state-machine as part of self-adaptation integrats with DEECo Runtime Model.</Literal>
+        <Literal>The operation describes the state-machine as part of self-adaptation integrats with DEECo Runtime Model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DEECoRuntime_MATSim_OMNet++_IntegrationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This operation describes the integration between the runtime model and both MATSim and OMNET++ models.</Literal>
+        <Literal>This operation describes the integration between the runtime model and both MATSim and OMNET++ models.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:toDo"/>
         <IRI>#IRM(-SA)ToDEECoDesignTransformationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">who is doing this transformation? Shouldn&apos;t be related to hasNext relation?</Literal>
+        <Literal>who is doing this transformation? Shouldn&apos;t be related to hasNext relation?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#IRM(-SA)ToDEECoDesignTransformationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It describes the transformation operation from requirements to design.</Literal>
+        <Literal>It describes the transformation operation from requirements to design.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ROS_OMNet++_IntegrationOperation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This operation describes the integration between three different simulation models which are ROS on one side and OMNET++ and Stage on the other side.</Literal>
+        <Literal>This operation describes the integration between three different simulation models which are ROS on one side and OMNET++ and Stage on the other side.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:toBeReviewed"/>
         <IRI>http://mpm4cps.eu/ontology/catalog-tools-languages#ESMoL</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Under which class that one suppose to be?</Literal>
+        <Literal>Under which class that one suppose to be?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:website"/>
         <IRI>http://mpm4cps.eu/ontology/catalog-tools-languages#FOMA</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://d3s.mff.cuni.cz/publications/download/2012-SEAA-SimkoHnetynaBuresPlasil-FOAM.pdf</Literal>
+        <Literal>http://d3s.mff.cuni.cz/publications/download/2012-SEAA-SimkoHnetynaBuresPlasil-FOAM.pdf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://mpm4cps.eu/ontology/catalog-tools-languages#FOMA</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Formal Verification of Annotated Use-Case Models (FOAM) method which features simple user-definable annotations, inserted into a use-case to make its semantics more suitable for verification.</Literal>
+        <Literal>Formal Verification of Annotated Use-Case Models (FOAM) method which features simple user-definable annotations, inserted into a use-case to make its semantics more suitable for verification.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="mpm4cps:website"/>
         <IRI>http://mpm4cps.eu/ontology/catalog-tools-languages#LTSA</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.doc.ic.ac.uk/ltsa/</Literal>
+        <Literal>http://www.doc.ic.ac.uk/ltsa/</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://mpm4cps.eu/ontology/catalog-tools-languages#LTSA</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LTSA is a verification tool for concurrent systems. It mechanically checks that the specification of a concurrent system satisfies the properties required of its behaviour. In addition, LTSA supports specification animation to facilitate interactive exploration of system behaviour.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>mpm:IntegrationOperation</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The process of building a manual integration between two models.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mpm4cps:toBeReviewed"/>
-        <AbbreviatedIRI>mpm:TracabilityRelation</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Should we put it here or somewhere else? It is not an operation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>mpm:TransformationOperation</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The process of transforming one model to another.</Literal>
+        <Literal>LTSA is a verification tool for concurrent systems. It mechanically checks that the specification of a concurrent system satisfies the properties required of its behaviour. In addition, LTSA supports specification animation to facilitate interactive exploration of system behaviour.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>shared:hasConcerns</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">each stakeholder has concerns which can be captured (or framed) into viewpoints</Literal>
+        <Literal>each stakeholder has concerns which can be captured (or framed) into viewpoints</Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
