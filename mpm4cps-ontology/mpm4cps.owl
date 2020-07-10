@@ -14,6 +14,14 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://mpm4cps.eu/ontology/cps</Import>
     <Import>http://mpm4cps.eu/ontology/mpm</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
+        <Literal>Dominique Blouin; Hana Mkaouar</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>The OWL MPM4CPS ontology that defines cross-cutting concepts between the Shared, MPM and CPS ontologies.</Literal>
+    </Annotation>
     <Declaration>
         <Class IRI="#MPM4CPSDC"/>
     </Declaration>
@@ -55,9 +63,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSystemConstituentElements"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasSystemPart"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasViewpoint"/>
@@ -130,13 +135,6 @@
             <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ViewPoint"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSystemPart"/>
-            <Class IRI="http://mpm4cps.eu/ontology/cps#SystemPart"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasModelingArtifacts"/>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasArtifacts"/>
@@ -167,10 +165,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSystemConstituentElements"/>
-        <Class IRI="#ViewPoint"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSystemPart"/>
         <Class IRI="#ViewPoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -210,10 +204,6 @@
         <Class IRI="http://mpm4cps.eu/ontology/mpm#MegamodelFragment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasSystemPart"/>
-        <Class IRI="http://mpm4cps.eu/ontology/cps#SystemPart"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasViewpoint"/>
         <Class IRI="#ViewPoint"/>
     </ObjectPropertyRange>
@@ -225,6 +215,16 @@
         <ObjectProperty IRI="#isSupportedBy"/>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#Formalism"/>
     </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
+        <IRI>http://mpm4cps.eu/ontology/mpm#hasCharacteristic</IRI>
+        <Literal>under construction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MPM4CPSDC</IRI>
+        <Literal>MPM4CPSDC domain concept class</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 

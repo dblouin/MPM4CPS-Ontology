@@ -90,10 +90,6 @@
         <NamedIndividual IRI="#Controller"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Role"/>
-        <NamedIndividual IRI="#Designer"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
         <NamedIndividual IRI="#Energy"/>
     </ClassAssertion>
@@ -128,10 +124,6 @@
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
         <NamedIndividual IRI="#SoftwareTester"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Role"/>
-        <NamedIndividual IRI="#Tester"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps#hasSystemPartsOfInterest"/>
@@ -262,16 +254,6 @@
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasConcerns"/>
         <NamedIndividual IRI="#SoftwareDesign"/>
         <NamedIndividual IRI="#Performance"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasRole"/>
-        <NamedIndividual IRI="#SoftwareDesignEngineer"/>
-        <NamedIndividual IRI="#Designer"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasRole"/>
-        <NamedIndividual IRI="#SoftwareTester"/>
-        <NamedIndividual IRI="#Tester"/>
     </ObjectPropertyAssertion>
 </Ontology>
 

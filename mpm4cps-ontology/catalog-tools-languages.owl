@@ -926,6 +926,12 @@
     <Declaration>
         <NamedIndividual IRI="#TimedI/OAutomata"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#Communication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#Structural"/>
+    </Declaration>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ArchitectureDescriptionLanguage"/>
         <NamedIndividual IRI="#AADL"/>
@@ -1001,10 +1007,6 @@
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelingTool"/>
         <NamedIndividual IRI="#AcmeStudio"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://mpm4cps.eu/ontology/mpm#Behavioral"/>
-        <NamedIndividual IRI="#ActivityDiagram"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#Structural"/>
@@ -1813,10 +1815,6 @@
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#FormalLanguage"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://mpm4cps.eu/ontology/mpm#Behavioral"/>
-        <NamedIndividual IRI="#StateMachines"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#AnalysisTool"/>
