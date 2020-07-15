@@ -16,6 +16,9 @@
     <Prefix name="shared" IRI="http://mpm4cps.eu/ontology/shared#"/>
     <Import>http://mpm4cps.eu/ontology/catalog-tools-languages</Import>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CPSLabMmfControl"/>
     </Declaration>
     <Declaration>
@@ -30,9 +33,6 @@
     <Declaration>
         <NamedIndividual IRI="#simulinkRobot"/>
     </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
-    </Declaration>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#CPSLabMmfControl"/>
@@ -41,11 +41,6 @@
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#simulinkRobot"/>
     </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#CPSLabMmfControl"/>
-        <NamedIndividual IRI="#simulinkRobot"/>
-    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
         <NamedIndividual IRI="#robotControlValidation"/>

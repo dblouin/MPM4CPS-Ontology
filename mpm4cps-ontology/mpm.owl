@@ -49,6 +49,9 @@
         <Class IRI="#Communication"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ConcreteModelingLanguage"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ConcreteSyntax"/>
     </Declaration>
     <Declaration>
@@ -86,9 +89,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#FormalismDC"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FormalismFamily"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GraphicalSyntax"/>
@@ -211,19 +211,28 @@
         <ObjectProperty IRI="#hasCharacteristic"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasChildFormalism"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasChildLanguage"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasConcreteSyntax"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasConformedModel"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasConnectedModel"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasContext"/>
+        <ObjectProperty IRI="#hasContainedMegamodelFragments"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContainedModelElements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContainedModelRelations"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContainedModels"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasContextRelation"/>
@@ -238,16 +247,7 @@
         <ObjectProperty IRI="#hasLanguage"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasMegamodelFragment"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasModel"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasModelConstraint"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasModelElement"/>
+        <ObjectProperty IRI="#hasMetamodel"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasModelOperation"/>
@@ -268,13 +268,7 @@
         <ObjectProperty IRI="#hasSpecification"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasSubFormalismFamily"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasSyntaxMapping"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasTool"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasTraceabilityRelation"/>
@@ -283,34 +277,10 @@
         <ObjectProperty IRI="#hasTranformationSpecification"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isAppliedToModel"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#isBasedOnFormalism"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isConformingTo"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#isConnecting"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isExtending"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isExtendingFormalism"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isPerformedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isReturningTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isSpecializing"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isToolFor"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AutomatonLikeFamily"/>
@@ -329,7 +299,7 @@
         <ObjectIntersectionOf>
             <Class IRI="#Model"/>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasModel"/>
+                <ObjectProperty IRI="#hasContainedModels"/>
                 <ObjectIntersectionOf>
                     <Class IRI="#Model"/>
                     <ObjectComplementOf>
@@ -337,6 +307,16 @@
                     </ObjectComplementOf>
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Micromodel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Model"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasContainedModels"/>
+                <Class IRI="#MicroModelElement"/>
+            </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
@@ -378,6 +358,10 @@
     <SubClassOf>
         <Class IRI="#Communication"/>
         <Class IRI="#ArchitectureDescriptionLanguage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcreteModelingLanguage"/>
+        <Class IRI="#ModelingLanguage"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConcreteSyntax"/>
@@ -440,10 +424,6 @@
         <Class IRI="#ModelingDC"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FormalismFamily"/>
-        <Class IRI="#FormalismDC"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#GraphicalSyntax"/>
         <Class IRI="#ConcreteSyntax"/>
     </SubClassOf>
@@ -466,17 +446,6 @@
     <SubClassOf>
         <Class IRI="#MicroModelElement"/>
         <Class IRI="#Model"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Micromodel"/>
-        <Class IRI="#Model"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Micromodel"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasModel"/>
-            <Class IRI="#MicroModelElement"/>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Model"/>
@@ -613,33 +582,33 @@
         <Class IRI="#ApplicationMegaModel"/>
         <Class IRI="#ConfigurationMegaModel"/>
     </DisjointClasses>
-    <ClassAssertion>
-        <Class IRI="#FormalismFamily"/>
-        <NamedIndividual IRI="#AutomatonLikeFamily"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#FormalismFamily"/>
-        <NamedIndividual IRI="#FlowFormalismsFamily"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#FormalismFamily"/>
-        <NamedIndividual IRI="#HybridAutomatonLike"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#FormalismFamily"/>
-        <NamedIndividual IRI="#TimedAutomatonLike"/>
-    </ClassAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasChildFormalism"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="#hasAbstractSyntax"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasSyntax"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAbstractSyntaxSem"/>
+        <ObjectProperty IRI="#hasConnectedModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasConformedModel"/>
+        <ObjectProperty IRI="#hasConnectedModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContainedMegamodelFragments"/>
+        <ObjectProperty IRI="#hasContainedModels"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContainedModelElements"/>
+        <ObjectProperty IRI="#hasContainedModels"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasInput"/>
         <ObjectProperty IRI="#isConnecting"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasMegamodelFragment"/>
-        <ObjectProperty IRI="#hasModel"/>
+        <ObjectProperty IRI="#hasMetamodel"/>
+        <ObjectProperty IRI="#hasConnectedModel"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasModelOperation"/>
@@ -650,8 +619,12 @@
         <ObjectProperty IRI="#isConnecting"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasSubFormalismFamily"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="#hasSemanticDomain"/>
+        <ObjectProperty IRI="#hasConnectedModel"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTraceabilityRelation"/>
+        <ObjectProperty IRI="#hasContainedModelRelations"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasConnectedModel"/>
@@ -669,16 +642,9 @@
         <ObjectProperty IRI="#hasModelRelation"/>
         <ObjectProperty IRI="#hasOutputModel"/>
     </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasTool"/>
-        <ObjectProperty IRI="#isToolFor"/>
-    </InverseObjectProperties>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="#hasChildFormalism"/>
-    </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAbstractSyntax"/>
-        <Class IRI="#SyntaxMappingRelation"/>
+        <Class IRI="#ModelingLanguage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAbstractSyntaxSem"/>
@@ -689,16 +655,32 @@
         <Class IRI="#Formalism"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasChildFormalism"/>
-        <Class IRI="#FormalismFamily"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasConcreteSyntax"/>
         <Class IRI="#SyntaxMappingRelation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConformedModel"/>
+        <Class IRI="#ConformanceRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasConnectedModel"/>
         <Class IRI="#ModelRelation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContainedMegamodelFragments"/>
+        <Class IRI="#Megamodel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContainedModelElements"/>
+        <Class IRI="#Micromodel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContainedModelRelations"/>
+        <Class IRI="#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContainedModels"/>
+        <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasContextRelation"/>
@@ -717,16 +699,8 @@
         <Class IRI="#ModelingTool"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasMegamodelFragment"/>
-        <Class IRI="#Megamodel"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasModel"/>
-        <Class IRI="#Model"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasModelElement"/>
-        <Class IRI="#Micromodel"/>
+        <ObjectProperty IRI="#hasMetamodel"/>
+        <Class IRI="#ConformanceRelation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasModelOperation"/>
@@ -749,8 +723,8 @@
         <Class IRI="#TransformationRelation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSubFormalismFamily"/>
-        <Class IRI="#FormalismFamily"/>
+        <ObjectProperty IRI="#hasSyntaxMapping"/>
+        <Class IRI="#ConcreteModelingLanguage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTraceabilityRelation"/>
@@ -758,31 +732,47 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTranformationSpecification"/>
-        <Class IRI="#ModelingTool"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#ActivityPerformer"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isConformingTo"/>
-        <Class IRI="#Micromodel"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isExtendingFormalism"/>
-        <Class IRI="#Formalism"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isSpecializing"/>
-        <Class IRI="#Formalism"/>
-    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAbstractSyntax"/>
+        <Class IRI="#AbstractSyntax"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAbstractSyntaxSem"/>
+        <Class IRI="#AbstractSyntax"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCharacteristic"/>
         <Class IRI="#FormalismCharacteristic"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasChildFormalism"/>
-        <Class IRI="#Formalism"/>
+        <ObjectProperty IRI="#hasConcreteSyntax"/>
+        <Class IRI="#ConcreteSyntax"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConformedModel"/>
+        <Class IRI="#Micromodel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasConnectedModel"/>
         <Class IRI="#Model"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContainedMegamodelFragments"/>
+        <Class IRI="#MegamodelFragment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContainedModelElements"/>
+        <Class IRI="#MicroModelElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContainedModelRelations"/>
+        <Class IRI="#ModelRelation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContainedModels"/>
+        <Class IRI="#Micromodel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasContextRelation"/>
@@ -797,19 +787,8 @@
         <Class IRI="#Model"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasMegamodelFragment"/>
-        <Class IRI="#MegamodelFragment"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasModel"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasModel"/>
-            <Class IRI="#Model"/>
-        </ObjectAllValuesFrom>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasModelElement"/>
-        <Class IRI="#MicroModelElement"/>
+        <ObjectProperty IRI="#hasMetamodel"/>
+        <Class IRI="#Metamodel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasModelRelation"/>
@@ -832,10 +811,6 @@
         <Class IRI="#Micromodel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasSubFormalismFamily"/>
-        <Class IRI="#FormalismFamily"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSyntaxMapping"/>
         <Class IRI="#SyntaxMappingRelation"/>
     </ObjectPropertyRange>
@@ -848,28 +823,12 @@
         <Class IRI="#TransformationRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#isAppliedToModel"/>
-        <Class IRI="#Model"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#isBasedOnFormalism"/>
         <Class IRI="#Formalism"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#isConformingTo"/>
-        <Class IRI="#ConformanceRelation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#isConnecting"/>
         <Class IRI="#Model"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isExtendingFormalism"/>
-        <Class IRI="#Formalism"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isSpecializing"/>
-        <Class IRI="#Formalism"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -962,11 +921,6 @@ language may implement more than one formalisms.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FormalismDC</IRI>
         <Literal>This class groups classes related to formalisms</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
-        <IRI>#FormalismFamily</IRI>
-        <Literal>We are not sur about this classification.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1156,9 +1110,59 @@ Only some sequences of words or sentences are considered valid and the set of al
         <Literal>Visualization Tool</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
-        <IRI>#hasContext</IRI>
-        <Literal>Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAbstractSyntax</IRI>
+        <Literal>The hasAbstractSyntax object property is a subproperty of the hasSyntax object property of the linguistic subdomain to relate the  ModelingLanguage and AbstractSyntax classes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAbstractSyntaxSem</IRI>
+        <Literal>The hasAbstractSyntaxSem object property links the mapping relation to the mapped abstract syntax.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCharacteristic</IRI>
+        <Literal>The hasCharacteristics relates a Formalism with a characteristic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasConcreteSyntax</IRI>
+        <Literal>The hasAbstractSyntax object property is a subproperty of the hasSyntax object property of the linguistic subdomain, relating a ModelingLanguage with its  AbstractSyntax.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasConnectedModel</IRI>
+        <Literal>The model relation is used to connect an arbitrary number of models. This connects reference is defined in our ontology by the hasConnectedModels object property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContainedMegamodelFragments</IRI>
+        <Literal>It describes the relation between megamodel and its fragments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContainedModelElements</IRI>
+        <Literal>It describes the relation between micromodel and its elements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContainedModelRelations</IRI>
+        <Literal>A model relation also needs to be contained in a model and therefore we create the hasContainedModelRelations object property whose domain is Model and range ModelRelation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
+        <IRI>#hasContainedModels</IRI>
+        <Literal>http://journal.ub.tu-berlin.de/eceasst/article/viewFile/704/713</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContainedModels</IRI>
+        <Literal>It describes a recursive relation. e.g. MegaModelFragment hasModel xModel ...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContextRelation</IRI>
+        <Literal>A model relation may exist in the context of another model relation. This is expressed by  the hasContextRelation object property in the ontology. An example of such contextual relation may be a relation between to model elements that can only exist after a relation has first been created between their respective containing parent elements.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1179,26 +1183,6 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasLanguage</IRI>
         <Literal>The relation defines the formal language for a formalism. It is an inverse of hasFormalism.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasMegamodelFragment</IRI>
-        <Literal>It describes the relation between megamodel and its fragments.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
-        <IRI>#hasModel</IRI>
-        <Literal>Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
-        <IRI>#hasModel</IRI>
-        <Literal>http://journal.ub.tu-berlin.de/eceasst/article/viewFile/704/713</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasModel</IRI>
-        <Literal>It describes a recursive relation. e.g. MegaModelFragment hasModel xModel ...</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1227,8 +1211,29 @@ Only some sequences of words or sentences are considered valid and the set of al
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasTool</IRI>
-        <Literal>The tool that represent the Language. It is an inverse of isToolFor.</Literal>
+        <IRI>#hasSemanticDomain</IRI>
+        <Literal>The hasSemanticDomain object properties links the mapping relation to  its semantic domain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSpecification</IRI>
+        <Literal>a TransformationRelation class is a subclass of the ModelRelation class with an object property hasSpecification
+to relate the transformation relation to its specification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSyntaxMapping</IRI>
+        <Literal>The hasSyntaxMapping relates  a ConcreteModelingLanguage to its SyntaxMappingRelation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTraceabilityRelation</IRI>
+        <Literal>The hasContainedModelRelations is refined into the hasTraceabilityRelation with the domain and the range respectively refined into TraceabilityModel and TraceabilityRelation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTranformationSpecification</IRI>
+        <Literal>The hasTranformationSpecifications object property relates an activity performer resource to the transformation relations it executes.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1244,21 +1249,6 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isConnecting</IRI>
         <Literal>A relation connects a model.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isExtending</IRI>
-        <Literal>This property captures a language extensions. Typically, a language extends another one by adding constructs and possibly refining / overriding some ot the extended language.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
-        <IRI>#isReturningTo</IRI>
-        <Literal>The relation is an inverse of hasNext, but only in the integration operation case.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isToolFor</IRI>
-        <Literal>The language that is represented by a tool. It is an inverse of hasTool.</Literal>
     </AnnotationAssertion>
 </Ontology>
 

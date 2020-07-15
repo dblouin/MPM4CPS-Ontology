@@ -45,12 +45,6 @@
         <Class abbreviatedIRI="shared:ToolProvider"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
     </Declaration>
     <Declaration>
@@ -366,31 +360,6 @@
         <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#DesignMegaModelFragment"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#RuntimeMegaModelFragment"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasMegamodelFragment"/>
-        <NamedIndividual IRI="#DEECoMegaModel"/>
-        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasModelOperation"/>
         <NamedIndividual IRI="#DEECoMegaModel"/>
         <NamedIndividual IRI="#RequirementsCapturingOperation"/>
@@ -404,21 +373,6 @@
         <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
         <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
         <NamedIndividual IRI="#ROSRuntimeModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#DesignMegaModelFragment"/>
-        <NamedIndividual IRI="#DEECoDesignModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#DesignMegaModelFragment"/>
-        <NamedIndividual IRI="#MATSimDesignModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#DesignMegaModelFragment"/>
-        <NamedIndividual IRI="#OMNet++DesignModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
@@ -461,21 +415,6 @@
         <NamedIndividual IRI="#IRMModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
-        <NamedIndividual IRI="#IRM-SAModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#RequirementsMegaModelFragment"/>
-        <NamedIndividual IRI="#IRMModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#RuntimeMegaModelFragment"/>
-        <NamedIndividual IRI="#DEECoRuntimeModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#Self-AdaptationCapturingOperation"/>
         <NamedIndividual IRI="#DEECoDesignModel"/>
@@ -489,41 +428,6 @@
         <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
         <NamedIndividual IRI="#Self-Adaptation_DEECoRuntime_IntegrationOperation"/>
         <NamedIndividual IRI="#Self-AdaptationModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SelfAdaptationMegaModelFragment"/>
-        <NamedIndividual IRI="#Self-AdaptationModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationCapturingOperation"/>
-        <NamedIndividual IRI="#DEECoDesignModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationCapturingOperation"/>
-        <NamedIndividual IRI="#MATSimDesignModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationCapturingOperation"/>
-        <NamedIndividual IRI="#OMNet++DesignModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
-        <NamedIndividual IRI="#MATSimRuntimeModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
-        <NamedIndividual IRI="#ROSRuntimeModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasModel"/>
-        <NamedIndividual IRI="#SimulationMegaModelFragment"/>
-        <NamedIndividual IRI="#OMNet++RuntimeModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
