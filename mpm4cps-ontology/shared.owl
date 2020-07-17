@@ -807,6 +807,11 @@ semantics.</Literal>
         <Literal>NaturalLanguage classe gathers  natural languages are those spoken by humans such as English, French, etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Organization</IRI>
+        <Literal>A stakeholder belongs to an organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="#mpm4cps:author"/>
         <IRI>#ParadigmDC</IRI>
         <Literal>Dominique_Blouin</Literal>

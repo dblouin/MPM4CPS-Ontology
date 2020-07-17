@@ -211,9 +211,6 @@
         <ObjectProperty IRI="#hasCharacteristic"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasChildLanguage"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasConcreteSyntax"/>
     </Declaration>
     <Declaration>
@@ -238,9 +235,6 @@
         <ObjectProperty IRI="#hasContextRelation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasInput"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasInputModel"/>
     </Declaration>
     <Declaration>
@@ -254,9 +248,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasModelRelation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasOutput"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasOutputModel"/>
@@ -278,9 +269,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isBasedOnFormalism"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isConnecting"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AutomatonLikeFamily"/>
@@ -603,20 +591,12 @@
         <ObjectProperty IRI="#hasContainedModels"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasInput"/>
-        <ObjectProperty IRI="#isConnecting"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasMetamodel"/>
         <ObjectProperty IRI="#hasConnectedModel"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasModelOperation"/>
         <ObjectProperty IRI="#hasModelRelation"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasOutput"/>
-        <ObjectProperty IRI="#isConnecting"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSemanticDomain"/>
@@ -779,10 +759,6 @@
         <Class IRI="#ModelRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasInput"/>
-        <Class IRI="#Model"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasInputModel"/>
         <Class IRI="#Model"/>
     </ObjectPropertyRange>
@@ -793,10 +769,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasModelRelation"/>
         <Class IRI="#ModelRelation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasOutput"/>
-        <Class IRI="#Model"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasOutputModel"/>
@@ -826,10 +798,6 @@
         <ObjectProperty IRI="#isBasedOnFormalism"/>
         <Class IRI="#Formalism"/>
     </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isConnecting"/>
-        <Class IRI="#Model"/>
-    </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AbstractSyntax</IRI>
@@ -851,6 +819,29 @@
         <Literal>A representation of the real models in the CPS development environment.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:paper"/>
+        <IRI>#ArchitectureDescriptionLanguage</IRI>
+        <Literal>D. E. Perry and A. L. Wolf. Foundations for the study of software archi-
+tecture. ACM SIGSOFT Software engineering notes, 17(4):40–52, 1992.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:paper"/>
+        <IRI>#ArchitectureDescriptionLanguage</IRI>
+        <Literal>ISO/IEC/IEEE 42010: Systems and software engineering–architecture description. Technical report, ISO/IEC/IEEE, 2011.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:paper"/>
+        <IRI>#ArchitectureDescriptionLanguage</IRI>
+        <Literal>M. Ozkaya. The analysis of architectural languages for the needs of practitioners. Software: Practice and Experience, 48(5):985–1018, 2018.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ArchitectureDescriptionLanguage</IRI>
+        <Literal>The notion of software architecture has been proposed, since the early 1990s by Perry and Wolf, as a software system representation composed of a set
+of components with their interactions and their constraints. 
+A software architecture is designed using an architectural language (may also be referred to as ADL (Architectural Description Language)), which is generally defined as any form of expression for use in architecture descriptions, according to the ISO/IEC/IEEE standard.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#AutomataBasedFormalism</IRI>
         <Literal>The class of formalisms that are based on automata</Literal>
@@ -859,6 +850,52 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutomataBasedFormalism</IRI>
         <Literal>Automata-based Formalisms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
+        <IRI>#Behavioral</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Behavioral</IRI>
+        <Literal>Behavioral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BehavioralCharacteristic</IRI>
+        <Literal>Behavioral.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
+        <IRI>#CapturingOperation</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CapturingOperation</IRI>
+        <Literal>Capturing Operation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
+        <IRI>#Communication</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Communication</IRI>
+        <Literal>Communication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:paper"/>
+        <IRI>#ConcreteModelingLanguage</IRI>
+        <Literal>Holger Giese, Tihamer Levendovszky, and Hans Vangheluwe, editors.
+Summary of the Workshop on Multi-Modelling Paradigms: Concepts and Tools, 2006.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConcreteModelingLanguage</IRI>
+        <Literal>The notion of concrete language is defined as a language that“comprises both an abstract syntax and a concrete syntax mapping function k ”.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -882,13 +919,33 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ContinuousCharacteristic</IRI>
+        <Literal>Continuous Characteristic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DiscreteCharacteristic</IRI>
+        <Literal>Discrete Characteristic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DomainSpecificLanguage</IRI>
+        <Literal>The DSLs are specialized languages which capture the concepts of a specific domain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ExecutionTool</IRI>
         <Literal>Execution Tool</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FlowBasedFormalism</IRI>
         <Literal>Flow-based Formalisms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FormalLanguage</IRI>
+        <Literal>A modeling language is said to be formal if it is based on a well-defined semantics using mathematical foundations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeUpdated"/>
@@ -919,6 +976,11 @@ language may implement more than one formalisms.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FormalismCharacteristic</IRI>
+        <Literal>Formalism characteristic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#FormalismDC</IRI>
         <Literal>This class groups classes related to formalisms</Literal>
     </AnnotationAssertion>
@@ -929,9 +991,14 @@ language may implement more than one formalisms.</Literal>
 However pure graphical syntax are not common and often include textual parts.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#HybridAutomataBasedFormalism</IRI>
         <Literal>Hybrid Automata-based Formalisms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LogicBasedFormalism</IRI>
+        <Literal>Logic-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1009,6 +1076,11 @@ It precises the core notions of Model, ModelRelation, ModelingLanguage, Abstract
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ModelingLanguage</IRI>
+        <Literal>ModelingLanguage extends the Language subclasse from the shared ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ModelingParadigm</IRI>
         <Literal>A modeling paradigm is a set of properties characterizing the languages (including their semantics) and workflows (development
 processes) employed to develop systems.</Literal>
@@ -1032,6 +1104,11 @@ processes) employed to develop systems.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PetriNetBasedFormalism</IRI>
         <Literal>Petri Net-based Formalisms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProgrammingLanguage</IRI>
+        <Literal>The programming languages can be seen as a subset of modeling languages.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1059,6 +1136,26 @@ processes) employed to develop systems.</Literal>
         <Literal>Simulation Tool</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
+        <IRI>#Structural</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Structural</IRI>
+        <Literal>Structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StructuralConstraintLanguage</IRI>
+        <Literal>A modeling language for expressing constraints.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StructureCharacteristic</IRI>
+        <Literal>Structural.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#SynchronizationRelation</IRI>
         <Literal>Example of a  transformation relation.</Literal>
@@ -1075,9 +1172,14 @@ processes) employed to develop systems.</Literal>
 Only some sequences of words or sentences are considered valid and the set of all valid sentences is said to make up the language.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TimedAutomataBasedFormalism</IRI>
         <Literal>Timed Automata-based Formalisms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TimedCharacteristic</IRI>
+        <Literal>Timed Characteristic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1088,6 +1190,11 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TraceabilityRelation</IRI>
         <Literal>A traceability relation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TransformationLanguage</IRI>
+        <Literal>A langauge to specify model transformations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1103,6 +1210,11 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TranslationalSemantics</IRI>
         <Literal>A translational semantics maybe considered as a  semantic domain with a semantic mapping for a given language.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#UncertaintyCharacteristic</IRI>
+        <Literal>Uncertainty Characteristic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1128,6 +1240,11 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasConcreteSyntax</IRI>
         <Literal>The hasAbstractSyntax object property is a subproperty of the hasSyntax object property of the linguistic subdomain, relating a ModelingLanguage with its  AbstractSyntax.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasConformedModel</IRI>
+        <Literal>The hasConnectedModels object property links a  ConformanceRelation to MicroModel.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1166,11 +1283,6 @@ Only some sequences of words or sentences are considered valid and the set of al
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasInput</IRI>
-        <Literal>The model need inputs to do perform the determined task.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasInputModel</IRI>
         <Literal>It describes the input model for a model relation.</Literal>
     </AnnotationAssertion>
@@ -1186,6 +1298,11 @@ Only some sequences of words or sentences are considered valid and the set of al
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMetamodel</IRI>
+        <Literal>The hasMetamodel object property is a subproperty of the hasConnectedModels object property with its domain and range respectively refined to ConformanceRelation and Metamodel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasModelOperation</IRI>
         <Literal>It defines a model operation for a model.</Literal>
     </AnnotationAssertion>
@@ -1193,16 +1310,6 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasModelRelation</IRI>
         <Literal>It defines a model relation for a model.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
-        <IRI>#hasOutput</IRI>
-        <Literal>It is not clear what the result of this relation is.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasOutput</IRI>
-        <Literal>The model provides results in the following form.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1239,16 +1346,6 @@ to relate the transformation relation to its specification.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isBasedOnFormalism</IRI>
         <Literal>The relation defines the formalism for a formal language. It is an inverse of hasLanguage.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
-        <IRI>#isConnecting</IRI>
-        <Literal>Regina Hebig, Andreas Seibel, and Holger Giese, On the Uniï¬�cation of Megamodels, 4th International Workshop on. Multi-Paradigm Modeling. (MPM 2010)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isConnecting</IRI>
-        <Literal>A relation connects a model.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
