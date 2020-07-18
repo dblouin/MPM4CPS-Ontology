@@ -4,12 +4,15 @@
 	<feature automatic="selected" name="ConstituentElement"/>
 	<feature automatic="selected" name="Cyber"/>
 	<feature automatic="selected" name="Software"/>
-	<feature automatic="selected" name="Program"/>
-	<feature automatic="selected" name="System Utilities"/>
-	<feature automatic="selected" name="Command Shell"/>
-	<feature automatic="selected" name="System Services"/>
-	<feature automatic="selected" name="User Interface"/>
-	<feature automatic="selected" name="Operating System"/>
+	<feature automatic="selected" name="Application Software"/>
+	<feature name="System Software"/>
+	<feature name="Operating System"/>
+	<feature name="User Interface"/>
+	<feature name="Graphical"/>
+	<feature name="Menu-driven"/>
+	<feature name="Command-line"/>
+	<feature name="System Services"/>
+	<feature name="System Utilities"/>
 	<feature automatic="selected" name="Control"/>
 	<feature automatic="selected" name="State"/>
 	<feature automatic="selected" name="Disturbance"/>
@@ -138,23 +141,18 @@
 	<feature automatic="selected" name="Actuator"/>
 	<feature automatic="selected" name="Plant"/>
 	<feature automatic="selected" name="Controller"/>
+	<feature name="Electronic"/>
 	<feature automatic="selected" name="Platform"/>
-	<feature automatic="unselected" name="System-on-Chip"/>
-	<feature manual="selected" name="Motherboard"/>
-	<feature automatic="unselected" name="Network-on-Chip"/>
-	<feature automatic="unselected" name="Microcontroller"/>
-	<feature manual="unselected" name="H/WDesign_Optimizn"/>
-	<feature automatic="unselected" name="Min. Latency"/>
-	<feature automatic="unselected" name="Max. Throughput"/>
-	<feature automatic="unselected" name="Min. Power"/>
-	<feature automatic="unselected" name="Min. Area"/>
+	<feature automatic="selected" name="Processor"/>
+	<feature automatic="selected" name="CPU"/>
+	<feature manual="unselected" name="GPU"/>
 	<feature automatic="selected" name="Memory"/>
 	<feature automatic="selected" name="Main Memory"/>
 	<feature automatic="selected" name="Cache Memory"/>
 	<feature manual="selected" name="Auxiliary Memory"/>
-	<feature automatic="selected" name="Processor"/>
-	<feature automatic="selected" name="CPU"/>
-	<feature manual="unselected" name="GPU"/>
+	<feature name="External Interfaces"/>
+	<feature name="System Bus"/>
+	<feature name="Mechanical"/>
 	<feature automatic="selected" name="Environment"/>
 	<feature automatic="selected" name="nonfunctionalReqs"/>
 	<feature manual="unselected" name="Performance"/>
