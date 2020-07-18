@@ -4,15 +4,16 @@
 	<feature automatic="selected" name="ConstituentElement"/>
 	<feature automatic="selected" manual="selected" name="Cyber"/>
 	<feature automatic="selected" name="Software"/>
-	<feature automatic="selected" name="Application Software"/>
-	<feature name="System Software"/>
+	<feature manual="selected" name="Application Software"/>
+	<feature automatic="selected" manual="selected" name="System Software"/>
 	<feature automatic="selected" name="Operating System"/>
 	<feature automatic="selected" name="User Interface"/>
-	<feature name="Graphical"/>
-	<feature name="Menu-driven"/>
-	<feature name="Command-line"/>
+	<feature manual="selected" name="Graphical"/>
+	<feature manual="unselected" name="Menu-driven"/>
+	<feature manual="unselected" name="Command-line"/>
 	<feature automatic="selected" name="System Services"/>
 	<feature automatic="selected" name="System Utilities"/>
+	<feature manual="selected" name="Embedded/Firmware"/>
 	<feature automatic="selected" manual="selected" name="Control"/>
 	<feature automatic="selected" manual="selected" name="State"/>
 	<feature automatic="selected" manual="selected" name="Disturbance"/>
@@ -82,11 +83,6 @@
 	<feature automatic="unselected" name="Evolution"/>
 	<feature automatic="unselected" name="Static"/>
 	<feature automatic="unselected" name="Adaptive"/>
-	<feature automatic="unselected" name="Implementation_"/>
-	<feature automatic="unselected" name="Logical"/>
-	<feature automatic="unselected" name="Physcal_"/>
-	<feature automatic="unselected" name="Component"/>
-	<feature automatic="unselected" name="Connectors"/>
 	<feature automatic="selected" manual="selected" name="Properties"/>
 	<feature manual="selected" name="Stability"/>
 	<feature manual="selected" name="Dissipativity/Passivity"/>
@@ -115,10 +111,10 @@
 	<feature manual="unselected" name="Event"/>
 	<feature automatic="unselected" name="State-of-Affairs"/>
 	<feature manual="selected" name="Entity"/>
-	<feature automatic="selected" manual="selected" name="Action"/>
+	<feature manual="selected" name="Action"/>
 	<feature manual="unselected" name="CommunicationAction"/>
 	<feature manual="unselected" name="PhysicalAction"/>
-	<feature manual="selected" name="EpistemicAction"/>
+	<feature automatic="selected" manual="selected" name="EpistemicAction"/>
 	<feature automatic="selected" name="Network"/>
 	<feature automatic="selected" name="Configuration"/>
 	<feature automatic="unselected" manual="unselected" name="Star"/>
@@ -141,8 +137,7 @@
 	<feature automatic="selected" name="Actuator"/>
 	<feature automatic="selected" name="Plant"/>
 	<feature automatic="selected" name="Controller"/>
-	<feature name="Electronic"/>
-	<feature automatic="selected" name="Platform"/>
+	<feature manual="selected" name="Electronic Platform"/>
 	<feature automatic="selected" name="Processor"/>
 	<feature automatic="selected" name="CPU"/>
 	<feature manual="unselected" name="GPU"/>
@@ -150,9 +145,15 @@
 	<feature automatic="selected" name="Main Memory"/>
 	<feature automatic="selected" name="Cache Memory"/>
 	<feature manual="unselected" name="Auxiliary Memory"/>
-	<feature name="External Interfaces"/>
-	<feature name="System Bus"/>
-	<feature name="Mechanical"/>
+	<feature automatic="unselected" name="Physical Storage"/>
+	<feature automatic="unselected" name="Cloud Storage"/>
+	<feature automatic="selected" name="System Bus"/>
+	<feature automatic="selected" name="Topology_"/>
+	<feature automatic="selected" name="Logical"/>
+	<feature automatic="selected" name="Physical_"/>
+	<feature automatic="selected" name="External Interfaces"/>
+	<feature manual="unselected" name="Application-specific Circuit"/>
+	<feature manual="unselected" name="Mechanical"/>
 	<feature automatic="selected" name="Environment"/>
 	<feature automatic="selected" name="nonfunctionalReqs"/>
 	<feature manual="selected" name="Performance"/>
@@ -161,7 +162,7 @@
 	<feature manual="selected" name="Reliability"/>
 	<feature manual="selected" name="Efficiency"/>
 	<feature manual="unselected" name="Interoperability"/>
-	<feature automatic="unselected" name="SyntacticInteroperability"/>
+	<feature automatic="unselected" manual="unselected" name="SyntacticInteroperability"/>
 	<feature automatic="unselected" name="SemanticInteroperability"/>
 	<feature manual="selected" name="Scalability"/>
 	<feature manual="selected" name="Composability"/>

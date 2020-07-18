@@ -4,15 +4,16 @@
 	<feature automatic="selected" name="ConstituentElement"/>
 	<feature automatic="selected" name="Cyber"/>
 	<feature automatic="selected" name="Software"/>
-	<feature automatic="selected" name="Application Software"/>
-	<feature name="System Software"/>
-	<feature name="Operating System"/>
-	<feature name="User Interface"/>
-	<feature name="Graphical"/>
-	<feature name="Menu-driven"/>
-	<feature name="Command-line"/>
-	<feature name="System Services"/>
-	<feature name="System Utilities"/>
+	<feature manual="selected" name="Application Software"/>
+	<feature automatic="selected" name="System Software"/>
+	<feature automatic="selected" name="Operating System"/>
+	<feature automatic="selected" name="User Interface"/>
+	<feature manual="selected" name="Graphical"/>
+	<feature manual="unselected" name="Menu-driven"/>
+	<feature manual="unselected" name="Command-line"/>
+	<feature automatic="selected" name="System Services"/>
+	<feature automatic="selected" name="System Utilities"/>
+	<feature manual="selected" name="Embedded/Firmware"/>
 	<feature automatic="selected" name="Control"/>
 	<feature automatic="selected" name="State"/>
 	<feature automatic="selected" name="Disturbance"/>
@@ -82,11 +83,6 @@
 	<feature automatic="selected" name="Evolution"/>
 	<feature automatic="unselected" name="Static"/>
 	<feature manual="selected" name="Adaptive"/>
-	<feature automatic="selected" name="Implementation_"/>
-	<feature manual="selected" name="Logical"/>
-	<feature automatic="selected" manual="selected" name="Physcal_"/>
-	<feature manual="selected" name="Component"/>
-	<feature manual="selected" name="Connectors"/>
 	<feature automatic="selected" name="Properties"/>
 	<feature manual="selected" name="Stability"/>
 	<feature manual="unselected" name="Dissipativity/Passivity"/>
@@ -141,18 +137,23 @@
 	<feature automatic="selected" name="Actuator"/>
 	<feature automatic="selected" name="Plant"/>
 	<feature automatic="selected" name="Controller"/>
-	<feature name="Electronic"/>
-	<feature automatic="selected" name="Platform"/>
+	<feature automatic="selected" name="Electronic Platform"/>
 	<feature automatic="selected" name="Processor"/>
 	<feature automatic="selected" name="CPU"/>
 	<feature manual="unselected" name="GPU"/>
 	<feature automatic="selected" name="Memory"/>
 	<feature automatic="selected" name="Main Memory"/>
 	<feature automatic="selected" name="Cache Memory"/>
-	<feature manual="selected" name="Auxiliary Memory"/>
-	<feature name="External Interfaces"/>
-	<feature name="System Bus"/>
-	<feature name="Mechanical"/>
+	<feature automatic="selected" manual="selected" name="Auxiliary Memory"/>
+	<feature manual="selected" name="Physical Storage"/>
+	<feature manual="unselected" name="Cloud Storage"/>
+	<feature automatic="selected" name="System Bus"/>
+	<feature automatic="selected" name="Topology_"/>
+	<feature automatic="selected" manual="selected" name="Logical"/>
+	<feature automatic="selected" manual="selected" name="Physical_"/>
+	<feature automatic="selected" name="External Interfaces"/>
+	<feature manual="selected" name="Application-specific Circuit"/>
+	<feature manual="unselected" name="Mechanical"/>
 	<feature automatic="selected" name="Environment"/>
 	<feature automatic="selected" name="nonfunctionalReqs"/>
 	<feature manual="unselected" name="Performance"/>
