@@ -19,10 +19,79 @@
         <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CPSLabMmfControl"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#robotControlValidation"/>
+        <NamedIndividual IRI="#CPSLabMTMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabMiLMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabRPaMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabRPbMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlCode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FunctionCodeGeneration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InputData"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OneShotSimulation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OutputData"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlantModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RobotModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SysemCodeGeneration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemCode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemModel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#robotFunctBehaviorSpecification"/>
@@ -30,22 +99,328 @@
     <Declaration>
         <NamedIndividual IRI="#robotinoBlocks"/>
     </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#simulinkRobot"/>
-    </Declaration>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
-        <NamedIndividual IRI="#CPSLabMmfControl"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
+        <NamedIndividual IRI="#CPSLabMTMMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Megamodel"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
+        <NamedIndividual IRI="#CPSLabMiLMMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
+        <NamedIndividual IRI="#CPSLabRPaMMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
+        <NamedIndividual IRI="#CPSLabRPbMMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:MegamodelFragment"/>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
-        <NamedIndividual IRI="#simulinkRobot"/>
+        <NamedIndividual IRI="#ControlCode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#FunctionCodeGeneration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#InputData"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#OneShotSimulation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#OutputData"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#RobotModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <NamedIndividual IRI="#SysemCodeGeneration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#SystemCode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:Model"/>
+        <NamedIndividual IRI="#SystemModel"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
-        <NamedIndividual IRI="#robotControlValidation"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#C"/>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
+        <NamedIndividual IRI="#ControlModel"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
+        <NamedIndividual IRI="#SystemModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabMTMMF"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+        <NamedIndividual IRI="#CPSLabMTMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+        <NamedIndividual IRI="#CPSLabMiLMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+        <NamedIndividual IRI="#CPSLabRPaMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+        <NamedIndividual IRI="#CPSLabRPbMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabMiLMMF"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabMiLMMF"/>
+        <NamedIndividual IRI="#PlantModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabRPaMMF"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabRPaMMF"/>
+        <NamedIndividual IRI="#RobotModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabRPbMMF"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+        <NamedIndividual IRI="#RobotModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+        <NamedIndividual IRI="#SystemModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+        <NamedIndividual IRI="#SystemModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#FunctionCodeGeneration"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#FunctionCodeGeneration"/>
+        <NamedIndividual IRI="#ControlCode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
+        <NamedIndividual IRI="#ControlCode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
+        <NamedIndividual IRI="#SystemCode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
+        <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
+        <NamedIndividual IRI="#PlantModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
+        <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#OneShotSimulation"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#OneShotSimulation"/>
+        <NamedIndividual IRI="#InputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#OneShotSimulation"/>
+        <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
+        <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
+        <NamedIndividual IRI="#ControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
+        <NamedIndividual IRI="#RobotModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
+        <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
+        <NamedIndividual IRI="#ControlCode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
+        <NamedIndividual IRI="#SystemCode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
+        <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
+        <NamedIndividual IRI="#ControlCode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
+        <NamedIndividual IRI="#RobotModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
+        <NamedIndividual IRI="#SystemCode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
+        <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
+        <NamedIndividual IRI="#SysemCodeGeneration"/>
+        <NamedIndividual IRI="#SystemModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
+        <NamedIndividual IRI="#SysemCodeGeneration"/>
+        <NamedIndividual IRI="#SystemCode"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CPSLabMegaModel</IRI>
+        <Literal>The megamodel for all stages of the HPI Cyber-Physical Systems Lab.</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 

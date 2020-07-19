@@ -26,9 +26,6 @@
         <Class IRI="#Formalism"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MegamodelFragment"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="4cps#MPM4CPSDC"/>
     </Declaration>
     <Declaration>
@@ -193,10 +190,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="4cps#hasStakeholders"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="4cps#hasSupportingMegamodelFragments"/>
-        <Class IRI="#MegamodelFragment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="4cps#hasViewpoint"/>
