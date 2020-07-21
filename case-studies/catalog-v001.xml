@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/catalog-tools-languages" uri="../lib/catalog-tools-languages.owl"/>
-    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/mpm4cps" uri="../lib/mpm4cps.owl"/>
-    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/shared-individuals" uri="../lib/shared-individuals.owl"/>
-    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/shared" uri="../lib/shared.owl"/>
-    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/mpm" uri="../lib/mpm.owl"/>
-    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/cps" uri="../lib/cps.owl"/>
+    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/catalog-tools-languages" uri="../mpm4cps-ontology/catalog-tools-languages.owl"/>
+    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/mpm4cps" uri="../mpm4cps-ontology/mpm4cps.owl"/>
+    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/shared-individuals" uri="../mpm4cps-ontology/shared-individuals.owl"/>
+    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/shared" uri="../mpm4cps-ontology/shared.owl"/>
+    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/mpm" uri="../mpm4cps-ontology/mpm.owl"/>
+    <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/cps" uri="../mpm4cps-ontology/cps.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1595156603012" name="http://mpm4cps.eu/ontology/case-studies/ensemble-based-cps" uri="ensemble-based-cps.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1595156603012" name="http://mpm4cps.eu/ontology/case-studies/example-viewpoints" uri="example-viewpoints.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1595156603012" name="http://mpm4cps.eu/ontology/case-studies/hpi-cps-lab" uri="hpi-cps-lab.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1595320583743" name="http://mpm4cps.eu/ontology/case-studies/ensemble-based-cps" uri="ensemble-based-cps.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1595320583743" name="http://mpm4cps.eu/ontology/case-studies/example-viewpoints" uri="example-viewpoints.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1595320583743" name="http://mpm4cps.eu/ontology/case-studies/hpi-cps-lab" uri="hpi-cps-lab.owl"/>
     </group>
 </catalog>
