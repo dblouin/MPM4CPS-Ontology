@@ -22,9 +22,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal>The OWL MPM4CPS ontology that defines cross-cutting concepts between the Shared, MPM and CPS ontologies.</Literal>
     </Annotation>
-    <!-- Declaration>
-        <Class IRI="#Formalism"/>
-    </Declaration-->
     <Declaration>
         <Class IRI="4cps#MPM4CPSDC"/>
     </Declaration>
@@ -45,6 +42,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="4cps#ViewPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGoverningView"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="4cps#hasApplicationMegamodel"/>
@@ -120,7 +120,7 @@
     <SubClassOf>
         <Class IRI="4cps#View"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="4cps#hasViewpoint"/>
+            <ObjectProperty IRI="#hasGoverningView"/>
             <Class IRI="4cps#ViewPoint"/>
         </ObjectExactCardinality>
     </SubClassOf>
@@ -139,6 +139,14 @@
         <ObjectProperty IRI="4cps#hasModelingArtifacts"/>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasArtifacts"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasGoverningView"/>
+        <ObjectProperty IRI="4cps#hasGovernedView"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGoverningView"/>
+        <Class IRI="4cps#View"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="4cps#hasFramedConcerns"/>
         <Class IRI="4cps#ViewPoint"/>
@@ -168,13 +176,13 @@
         <Class IRI="4cps#ModelBasedProcess"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="4cps#hasViewpoint"/>
-        <Class IRI="4cps#View"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="4cps#isSupportedBy"/>
         <Class IRI="4cps#ViewPoint"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGoverningView"/>
+        <Class IRI="4cps#ViewPoint"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="4cps#hasFramedConcerns"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
@@ -203,6 +211,11 @@
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
         <IRI>http://mpm4cps.eu/ontology/mpm#hasCharacteristic</IRI>
         <Literal>under construction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGoverningView</IRI>
+        <Literal>A viewpoint governs an architecture view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
