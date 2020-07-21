@@ -22,9 +22,9 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal>The OWL MPM4CPS ontology that defines cross-cutting concepts between the Shared, MPM and CPS ontologies.</Literal>
     </Annotation>
-    <Declaration>
+    <!-- Declaration>
         <Class IRI="#Formalism"/>
-    </Declaration>
+    </Declaration-->
     <Declaration>
         <Class IRI="4cps#MPM4CPSDC"/>
     </Declaration>
@@ -197,7 +197,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="4cps#isSupportedBy"/>
-        <Class IRI="#Formalism"/>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#Formalism"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
