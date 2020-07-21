@@ -17,7 +17,7 @@
     <Prefix name="mpm4cps" IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:"/>
     <Import>http://mpm4cps.eu/ontology/catalog-tools-languages</Import>
     <Import>http://mpm4cps.eu/ontology/mpm4cps</Import>
-    <Declaration>
+    <!-- Declaration>
         <Class abbreviatedIRI="mpm:CapturingOperation"/>
     </Declaration>
     <Declaration>
@@ -46,7 +46,7 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="mpm:isConnecting"/>
-    </Declaration>
+    </Declaration-->
     <Declaration>
         <NamedIndividual IRI="#AutonomyViewpoint"/>
     </Declaration>
