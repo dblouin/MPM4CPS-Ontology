@@ -89,18 +89,18 @@
 						</and>
 						<feature name="Embedded/Firmware">
 						<description>
-							Embedded software is computer software, written to control &#13;
-							machines or devices that are not typically thought of as &#13;
-							computers, commonly known as embedded systems. It is typically &#13;
-							specialized for the particular hardware that it runs on and has time &#13;
-							and memory constraints.&#13;
-							A precise and stable characteristic feature is that no or not all &#13;
-							functions of embedded software are initiated/controlled via a &#13;
-							human interface, but through machine-interfaces instead.&#13;
-							Unlike standard computers that generally use an operating &#13;
-							systems such as OS X, Windows or GNU/Linux, embedded &#13;
-							software may use no operating system, or when they do use, a &#13;
-							wide variety of operating systems can be chosen from, typically a &#13;
+							Embedded software is computer software, written to control
+							machines or devices that are not typically thought of as
+							computers, commonly known as embedded systems. It is typically
+							specialized for the particular hardware that it runs on and has time
+							and memory constraints.
+							A precise and stable characteristic feature is that no or not all
+							functions of embedded software are initiated/controlled via a
+							human interface, but through machine-interfaces instead.
+							Unlike standard computers that generally use an operating
+							systems such as OS X, Windows or GNU/Linux, embedded
+							software may use no operating system, or when they do use, a
+							wide variety of operating systems can be chosen from, typically a
 							real-time operating system.
 						</description>
 					</feature>
@@ -632,7 +632,7 @@
 			External device or component of the system which produces
 			the control signal to modify the system behaviour
 		</description>
-		<and name="Electronic Platform">
+		<and name="Hardware Platform">
 			<description>The execution platform of the control software</description>
 			<and mandatory="true" name="Processor">
 				<graphics key="collapsed" value="false"/>
@@ -646,75 +646,61 @@
 			<and mandatory="true" name="Memory">
 				<feature mandatory="true" name="Main Memory">
 					<description>
-						The memory unit that communicates directly within the CPU, &#13;
-						Auxillary memory and Cache memory, is called main memory. It &#13;
-						is the central storage unit of the computer system. It is a large and &#13;
-						fast memory used to store data during computer operations. Main &#13;
-						memory is made up of RAM and ROM, with RAM integrated &#13;
+						The memory unit that communicates directly within the CPU,
+						Auxillary memory and Cache memory, is called main memory. It
+						is the central storage unit of the computer system. It is a large and
+						fast memory used to store data during computer operations. Main
+						memory is made up of RAM and ROM, with RAM integrated
 						circuit chips holding the major share.
 					</description>
 				</feature>
 				<feature mandatory="true" name="Cache Memory">
 					<description>
-						The data or contents of the main memory that are used again and &#13;
-						again by CPU, are stored in the cache memory so that we can &#13;
-						easily access that data in shorter time.&#13;
-						Whenever the CPU needs to access memory, it first checks the &#13;
-						cache memory. If the data is not found in cache memory then the &#13;
-						CPU moves onto the main memory. It also transfers block of &#13;
-						recent data into the cache and keeps on deleting the old data in &#13;
+						The data or contents of the main memory that are used again and
+						again by CPU, are stored in the cache memory so that we can
+						easily access that data in shorter time.
+						Whenever the CPU needs to access memory, it first checks the
+						cache memory. If the data is not found in cache memory then the
+						CPU moves onto the main memory. It also transfers block of
+						recent data into the cache and keeps on deleting the old data in
 						cache to accomodate the new one.
 					</description>
 				</feature>
 				<and name="Auxiliary Memory">
 					<description>
-						Devices that provide backup storage are called auxiliary memory. &#13;
-						It is not directly accessible to the CPU, and is accessed using the &#13;
-						Input/Output channels.&#13;
-						Magnetic disks and tapes are commonly used auxiliary devices. &#13;
-						Other devices used as auxiliary memory are magnetic drums, &#13;
-						magnetic bubble memory and optical disks.&#13;
+						Devices that provide backup storage are called auxiliary memory.
+						It is not directly accessible to the CPU, and is accessed using the
+						Input/Output channels.
+						Magnetic disks and tapes are commonly used auxiliary devices.
+						Other devices used as auxiliary memory are magnetic drums,
+						magnetic bubble memory and optical disks.
 					</description>
 					<feature name="Physical Storage"/>
 					<feature name="Cloud Storage"/>
 				</and>
 			</and>
 			<feature mandatory="true" name="System Bus"/>
-			<and mandatory="true" name="Topology_">
-				<description>The way in which constituent parts are interrelated or arranged.</description>
-				<feature mandatory="true" name="Logical">
-					<description>
-						Logical topology maps the flow of data, regardless of the physical
-						layout.
-					</description>
-				</feature>
-				<and mandatory="true" name="Physical_">
-					<description>
-						Physical topology means the placement of the elements of the
-						network, including the location of the devices or the layout of the
-						cables.
-					</description>
-					<graphics key="collapsed" value="false"/>
-					<feature mandatory="true" name="External Interfaces">
-						<description>
-							Interfaces and connections in between componenets of the
-							execution platform
-						</description>
-					</feature>
-				</and>
-			</and>
-			<feature name="Application-specific Circuit"/>
+			<and mandatory="true" name="H/W Topology">
+			<description>The way in which constituent parts are interrelated or arranged.</description>
+			<feature mandatory="true" name="External Interfaces">
+				<description>
+					Interfaces and connections in between componenets of the
+					execution platform
+				</description>
+			</feature>
 		</and>
-		<feature name="Mechanical">
-			<description>
-				A mechanical control mechanism like a bi-metallic strip in a
-				thermostat. Its input is made up of effort.
-			</description>
-		</feature>
+		<feature name="Application-specific Circuit"/>
 	</and>
-	<feature mandatory="true" name="Environment">
-		<description>What it is not the system.</description>
+	<feature name="Mechanical">
+		<description>
+			A mechanical control mechanism like a bi-metallic strip in a
+			thermostat. Its input is made up of effort.
+		</description>
 	</feature>
+</and>
+<feature mandatory="true" name="Environment">
+	<description>What it is not the system.</description>
+</feature>
 </and>
 </and>
 <or mandatory="true" name="nonfunctionalReqs">
@@ -725,8 +711,8 @@
 <feature name="Reliability"/>
 <feature name="Efficiency"/>
 <alt name="Interoperability">
-	<feature name="SyntacticInteroperability"/>
-	<feature name="SemanticInteroperability"/>
+<feature name="SyntacticInteroperability"/>
+<feature name="SemanticInteroperability"/>
 </alt>
 <feature name="Scalability"/>
 <feature name="Composability"/>
@@ -737,7 +723,7 @@
 <alt mandatory="true" name="ApplicationDomain">
 <graphics key="collapsed" value="true"/>
 <feature name="Health">
-	<description>This is the description for health</description>
+<description>This is the description for health</description>
 </feature>
 <feature name="SmartManufacturing"/>
 <feature name="Transportation"/>
@@ -778,31 +764,31 @@
 <and hidden="true" name="Tool">
 <graphics key="collapsed" value="true"/>
 <or mandatory="true" name="Tool_Integration">
-	<graphics key="collapsed" value="true"/>
-	<feature name="Within_Domain"/>
-	<feature name="Across_Domains"/>
+<graphics key="collapsed" value="true"/>
+<feature name="Within_Domain"/>
+<feature name="Across_Domains"/>
 </or>
 <or mandatory="true" name="kind">
-	<graphics key="collapsed" value="true"/>
-	<feature name="CyberTool"/>
-	<feature name="PhysicalTool"/>
-	<feature name="HW_SW_CoDesignTool"/>
+<graphics key="collapsed" value="true"/>
+<feature name="CyberTool"/>
+<feature name="PhysicalTool"/>
+<feature name="HW_SW_CoDesignTool"/>
 </or>
 <or mandatory="true" name="Lifecycle_Support">
-	<graphics key="collapsed" value="false"/>
-	<feature name="RequirementsAnalysis"/>
-	<feature name="ArchitectureDesign"/>
-	<feature name="DetailedDesign"/>
-	<feature name="Implementation"/>
-	<feature name="TestingTool"/>
-	<feature name="Maintenance"/>
+<graphics key="collapsed" value="false"/>
+<feature name="RequirementsAnalysis"/>
+<feature name="ArchitectureDesign"/>
+<feature name="DetailedDesign"/>
+<feature name="Implementation"/>
+<feature name="TestingTool"/>
+<feature name="Maintenance"/>
 </or>
 </and>
 <alt hidden="true" name="Design">
 <graphics key="collapsed" value="true"/>
 <alt name="Approach">
-	<feature name="Separate"/>
-	<feature name="CoDesign"/>
+<feature name="Separate"/>
+<feature name="CoDesign"/>
 </alt>
 <feature name="Viewpoint"/>
 <feature name="Formalisms"/>
@@ -819,190 +805,190 @@
 </alt>
 <alt hidden="true" name="Model">
 <description>
-	Mathematical/computational abstraction that approximates the evolution,
-	properties and relationships between elements of the system.
+Mathematical/computational abstraction that approximates the evolution,
+properties and relationships between elements of the system.
 </description>
 <graphics key="collapsed" value="true"/>
 <alt name="Framework">
+<description>
+	Modelling framework depending of the types of mathematical/
+	computational objects and formalisation used:
+</description>
+<feature name="AgentBased">
+	<description>Components are seen as non-dynamical agents.</description>
+</feature>
+<feature name="DifferentialEquation">
+	<description>Continuous-time dynamical model.</description>
+</feature>
+<feature name="DifferenceEquation">
+	<description>Discrete-time dynamical model.</description>
+</feature>
+<feature name="HybridAutomata">
 	<description>
-		Modelling framework depending of the types of mathematical/
-		computational objects and formalisation used:
+		A finite state automaton is a computational
+		abstraction of the transitions of a system between discrete states
+		or locations (on and off, for instance). A hybrid automaton, additionally,
+		considers dynamical evolution over time in each location.
+		This dynamical evolution is represented by a dynamical system.
+		Each location represents an operation mode in a complex dynamical
+		system, or multiple dynamical systems interacting to achieve
+		a common goal. Depending on the nature of the dynamics of the
+		system in each location, different types of hybrid automata are
+		defined
 	</description>
-	<feature name="AgentBased">
-		<description>Components are seen as non-dynamical agents.</description>
-	</feature>
-	<feature name="DifferentialEquation">
-		<description>Continuous-time dynamical model.</description>
-	</feature>
-	<feature name="DifferenceEquation">
-		<description>Discrete-time dynamical model.</description>
-	</feature>
-	<feature name="HybridAutomata">
-		<description>
-			A finite state automaton is a computational
-			abstraction of the transitions of a system between discrete states
-			or locations (on and off, for instance). A hybrid automaton, additionally,
-			considers dynamical evolution over time in each location.
-			This dynamical evolution is represented by a dynamical system.
-			Each location represents an operation mode in a complex dynamical
-			system, or multiple dynamical systems interacting to achieve
-			a common goal. Depending on the nature of the dynamics of the
-			system in each location, different types of hybrid automata are
-			defined
-		</description>
-	</feature>
-	<feature name="Bond graphs">
-		<description>
-			Graph representation of energy relationships in
-			physical systems.
-		</description>
-	</feature>
-	<feature name="Petri nets">
-		<description>
-			Modelling language for the description of dynamical
-			discrete systems.
-		</description>
-	</feature>
-	<feature name="Complex networks">
-		<description>
-			A complex network consists of a large number
-			of interdependent systems connected in a non-trivial and nonregular
-			manner. The interconnection of these systems produces
-			emergent properties or behaviours which are not present in the
-			individual systems: this is called self-organisation, collective behaviour.
-			There are different models for complex networks. These
-			models are typically based on graph theory (nodes connected with
-			links). The main models for complex networks are: random-graph
-			networks, small-world networks and scale-free networks. Each of
-			these models have different topological (structural) features, analysed
-			with tools from statistical physics.
-		</description>
-	</feature>
-	<feature name="Complementarity">
-		<description>
-			Representation of a system by several incompatible
-			descriptions that together can describe the full system.
-		</description>
-	</feature>
-	<feature name="Bisimulations">
-		<description>Binary relations between state transition systems.</description>
-	</feature>
-	<feature name="Symbolic dynamics">
-		<description>
-			Different formalisations of discrete-time
-			dynamical systems with continuous state spaces.
-		</description>
-	</feature>
-	<feature name="Event-flow formulas">
-		<description>
-			Formalisation of the continuous evolution
-			of a system with discrete events (abrupt changes).
-		</description>
-	</feature>
-	<feature name="OtherFramework">
-		<description>
-			There are many other modelling frameworks,
-			as many as mathematical abstractions of dynamics.
-		</description>
-	</feature>
+</feature>
+<feature name="Bond graphs">
+	<description>
+		Graph representation of energy relationships in
+		physical systems.
+	</description>
+</feature>
+<feature name="Petri nets">
+	<description>
+		Modelling language for the description of dynamical
+		discrete systems.
+	</description>
+</feature>
+<feature name="Complex networks">
+	<description>
+		A complex network consists of a large number
+		of interdependent systems connected in a non-trivial and nonregular
+		manner. The interconnection of these systems produces
+		emergent properties or behaviours which are not present in the
+		individual systems: this is called self-organisation, collective behaviour.
+		There are different models for complex networks. These
+		models are typically based on graph theory (nodes connected with
+		links). The main models for complex networks are: random-graph
+		networks, small-world networks and scale-free networks. Each of
+		these models have different topological (structural) features, analysed
+		with tools from statistical physics.
+	</description>
+</feature>
+<feature name="Complementarity">
+	<description>
+		Representation of a system by several incompatible
+		descriptions that together can describe the full system.
+	</description>
+</feature>
+<feature name="Bisimulations">
+	<description>Binary relations between state transition systems.</description>
+</feature>
+<feature name="Symbolic dynamics">
+	<description>
+		Different formalisations of discrete-time
+		dynamical systems with continuous state spaces.
+	</description>
+</feature>
+<feature name="Event-flow formulas">
+	<description>
+		Formalisation of the continuous evolution
+		of a system with discrete events (abrupt changes).
+	</description>
+</feature>
+<feature name="OtherFramework">
+	<description>
+		There are many other modelling frameworks,
+		as many as mathematical abstractions of dynamics.
+	</description>
+</feature>
 </alt>
 <feature name="ParameterIdentification">
-	<description>
-		Process of calculating the parameters of a
-		model of the system to reproduce key patterns or properties.
-	</description>
+<description>
+	Process of calculating the parameters of a
+	model of the system to reproduce key patterns or properties.
+</description>
 </feature>
 <feature name="Sampling">
-	<description>
-		Discretisation of a continuous-time system as a set of samples
-		in discrete times.
-	</description>
+<description>
+	Discretisation of a continuous-time system as a set of samples
+	in discrete times.
+</description>
 </feature>
 <feature name="Simulating">
-	<description>
-		Reproduction of the behaviour of a system in a computer
-		through a model of this system.
-	</description>
+<description>
+	Reproduction of the behaviour of a system in a computer
+	through a model of this system.
+</description>
 </feature>
 <feature name="SignalProcessing">
-	<description>
-		Set of mathematical/computational techniques/tools
-		to generate, measure, transform, filter and visualise signals (states, inputs,
-		outputs, disturbances) in a system.
-	</description>
+<description>
+	Set of mathematical/computational techniques/tools
+	to generate, measure, transform, filter and visualise signals (states, inputs,
+	outputs, disturbances) in a system.
+</description>
 </feature>
 </alt>
 <and hidden="true" name="Verification">
 <description>
-	The process of checking that a property is met by a system.
-	The verification process involves specifying the model of the system, specifying
-	the property we wish it to conform to, and then checking if the model
-	satisfies the desired property
+The process of checking that a property is met by a system.
+The verification process involves specifying the model of the system, specifying
+the property we wish it to conform to, and then checking if the model
+satisfies the desired property
 </description>
 <graphics key="collapsed" value="true"/>
 <or mandatory="true" name="Property">
-	<description>Types of properties to verify</description>
-	<feature name="SafetyP">
-		<description>Something bad will never happen in a system.</description>
-	</feature>
-	<feature name="Liveness">
-		<description>
-			Something good will eventually happen in a system. Liveness
-			properties are characterised by the idea that, at any finite point
-			in an execution, they could always be satisfied at some point in the
-			future, or alternatively that the only type of execution which can
-			disprove such a property is one of infinite length. Proposed by
-			E.M. Navarro-López.
-		</description>
-	</feature>
-	<feature name="Deadness">
-		<description>To disprove a liveness property with a finite length path.</description>
-	</feature>
-	<feature name="Reachability">
-		<description>
-			To guarantee that the system trajectory will reach a
-			subset of the state space
-		</description>
-	</feature>
-	<feature name="Correctness"/>
+<description>Types of properties to verify</description>
+<feature name="SafetyP">
+	<description>Something bad will never happen in a system.</description>
+</feature>
+<feature name="Liveness">
+	<description>
+		Something good will eventually happen in a system. Liveness
+		properties are characterised by the idea that, at any finite point
+		in an execution, they could always be satisfied at some point in the
+		future, or alternatively that the only type of execution which can
+		disprove such a property is one of infinite length. Proposed by
+		E.M. Navarro-López.
+	</description>
+</feature>
+<feature name="Deadness">
+	<description>To disprove a liveness property with a finite length path.</description>
+</feature>
+<feature name="Reachability">
+	<description>
+		To guarantee that the system trajectory will reach a
+		subset of the state space
+	</description>
+</feature>
+<feature name="Correctness"/>
 </or>
 <or mandatory="true" name="Technique">
-	<description>Different types</description>
-	<feature name="ModelChecking">
-		<description>
-			The model of the system is checked using algorithms
-			to automatically test that it satisfies a desired specification
-			(property).
-		</description>
-	</feature>
-	<feature name="TheoremProving">
-		<description>
-			Deductive verification or theorem proving employs
-			known axioms and rules to logically prove that a formal
-			specification holds. The idea is to mimic how humans carry out
-			mathematical proofs.
-		</description>
-	</feature>
-	<feature name="Falsification">
-		<description>
-			To find bugs in the design rather than proving the
-			correctness of the system. From a practical viewpoint, this verification
-			technique provides counterexample trajectories - that is,
-			trajectories violating a given property - in order to consider scenarios
-			difficult to extract from simulations.
-		</description>
-	</feature>
-	<feature name="ConstraintSatisfaction"/>
-	<feature name="BooleanSatisfiability"/>
-	<feature name="Satisfiability Modulo"/>
-	<feature name="Symbolic Methods"/>
-	<feature name="DynamicallyAware">
-		<description>
-			Verification guided by the dynamical
-			properties of the system. Recent verification technique proposed
-			by E.M. Navarro-López.
-		</description>
-	</feature>
+<description>Different types</description>
+<feature name="ModelChecking">
+	<description>
+		The model of the system is checked using algorithms
+		to automatically test that it satisfies a desired specification
+		(property).
+	</description>
+</feature>
+<feature name="TheoremProving">
+	<description>
+		Deductive verification or theorem proving employs
+		known axioms and rules to logically prove that a formal
+		specification holds. The idea is to mimic how humans carry out
+		mathematical proofs.
+	</description>
+</feature>
+<feature name="Falsification">
+	<description>
+		To find bugs in the design rather than proving the
+		correctness of the system. From a practical viewpoint, this verification
+		technique provides counterexample trajectories - that is,
+		trajectories violating a given property - in order to consider scenarios
+		difficult to extract from simulations.
+	</description>
+</feature>
+<feature name="ConstraintSatisfaction"/>
+<feature name="BooleanSatisfiability"/>
+<feature name="Satisfiability Modulo"/>
+<feature name="Symbolic Methods"/>
+<feature name="DynamicallyAware">
+	<description>
+		Verification guided by the dynamical
+		properties of the system. Recent verification technique proposed
+		by E.M. Navarro-López.
+	</description>
+</feature>
 </or>
 </and>
 </and>

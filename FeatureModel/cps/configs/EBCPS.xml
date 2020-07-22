@@ -137,7 +137,7 @@
 	<feature automatic="selected" name="Actuator"/>
 	<feature automatic="selected" name="Plant"/>
 	<feature automatic="selected" name="Controller"/>
-	<feature automatic="selected" name="Electronic Platform"/>
+	<feature automatic="selected" name="Hardware Platform"/>
 	<feature automatic="selected" name="Processor"/>
 	<feature automatic="selected" name="CPU"/>
 	<feature manual="unselected" name="GPU"/>
@@ -148,9 +148,7 @@
 	<feature manual="selected" name="Physical Storage"/>
 	<feature manual="unselected" name="Cloud Storage"/>
 	<feature automatic="selected" name="System Bus"/>
-	<feature automatic="selected" name="Topology_"/>
-	<feature automatic="selected" manual="selected" name="Logical"/>
-	<feature automatic="selected" manual="selected" name="Physical_"/>
+	<feature automatic="selected" name="H/W Topology"/>
 	<feature automatic="selected" name="External Interfaces"/>
 	<feature manual="selected" name="Application-specific Circuit"/>
 	<feature manual="unselected" name="Mechanical"/>
