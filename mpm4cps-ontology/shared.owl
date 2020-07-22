@@ -167,9 +167,6 @@ The detailed specification of the shared onytology is provided in the following 
         <ObjectProperty IRI="#hasCharacteristics"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasConcerns"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasDecisionProcedures"/>
     </Declaration>
     <Declaration>
@@ -494,10 +491,6 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#EngineeringParadigm"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasConcerns"/>
-        <Class IRI="#Stakeholder"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDecisionProcedures"/>
         <Class IRI="#ParadigmaticProperty"/>
     </ObjectPropertyDomain>
@@ -580,10 +573,6 @@ The detailed specification of the shared onytology is provided in the following 
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCharacteristics"/>
         <Class IRI="#Characteristic"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasConcerns"/>
-        <Class IRI="#Concern"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDecisionProcedures"/>
@@ -972,11 +961,6 @@ the activities in the ActivitySet.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasCharacteristics</IRI>
         <Literal>The hasCharacteristics allows to relate the EngineeringParadigm classe to Characteristics class.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasConcerns</IRI>
-        <Literal>A concern of stakeholder.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
