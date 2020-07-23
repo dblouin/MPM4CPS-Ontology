@@ -28,7 +28,16 @@
         <NamedIndividual IRI="#CPSLabMegaModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CPSLabMethodology"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CPSLabMiLMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabPreproductionStage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CPSLabRPaMMF"/>
@@ -41,6 +50,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ControlCode"/>
@@ -56,6 +68,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#InputData"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MTActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MTProcess"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
@@ -85,10 +103,10 @@
         <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SysemCodeGeneration"/>
+        <NamedIndividual IRI="#SystemCode"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SystemCode"/>
+        <NamedIndividual IRI="#SystemCodeGeneration"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SystemModel"/>
@@ -112,8 +130,20 @@
         <NamedIndividual IRI="#CPSLabMegaModel"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:EngineeringMethodology"/>
+        <NamedIndividual IRI="#CPSLabMethodology"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#CPSLabMiLMMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:EngineeringStage"/>
+        <NamedIndividual IRI="#CPSLabPreproductionStage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:EngineeringStage"/>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
@@ -132,6 +162,10 @@
         <NamedIndividual IRI="#CPSLabSiLbMMF"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:EngineeringStage"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#ControlCode"/>
     </ClassAssertion>
@@ -140,11 +174,11 @@
         <NamedIndividual IRI="#ControlModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#FunctionCodeGeneration"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -152,11 +186,15 @@
         <NamedIndividual IRI="#InputData"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <Class abbreviatedIRI="shared:SubFlow"/>
+        <NamedIndividual IRI="#MTActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#OneShotSimulation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -164,11 +202,11 @@
         <NamedIndividual IRI="#OutputData"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -176,21 +214,40 @@
         <NamedIndividual IRI="#RobotModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:CapturingOperation"/>
-        <NamedIndividual IRI="#SysemCodeGeneration"/>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#SystemCode"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="mpm:TransformationRelation"/>
+        <NamedIndividual IRI="#SystemCodeGeneration"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#SystemModel"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
+        <NamedIndividual IRI="#FunctionCodeGeneration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
+        <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
+        <NamedIndividual IRI="#SystemCodeGeneration"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
@@ -200,6 +257,11 @@
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
         <NamedIndividual IRI="#SystemModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabMTMMF"/>
+        <NamedIndividual IRI="#OneShotSimulation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
@@ -242,6 +304,26 @@
         <NamedIndividual IRI="#CPSLabSiLbMMF"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasStage"/>
+        <NamedIndividual IRI="#CPSLabMethodology"/>
+        <NamedIndividual IRI="#CPSLabPreproductionStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasStage"/>
+        <NamedIndividual IRI="#CPSLabMethodology"/>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasStage"/>
+        <NamedIndividual IRI="#CPSLabMethodology"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabMiLMMF"/>
+        <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabMiLMMF"/>
         <NamedIndividual IRI="#ControlModel"/>
@@ -252,6 +334,16 @@
         <NamedIndividual IRI="#PlantModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasNextStage"/>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
+        <NamedIndividual IRI="#CPSLabPreproductionStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabRPaMMF"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabRPaMMF"/>
         <NamedIndividual IRI="#ControlModel"/>
@@ -260,6 +352,11 @@
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabRPaMMF"/>
         <NamedIndividual IRI="#RobotModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabRPbMMF"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
@@ -267,6 +364,21 @@
         <NamedIndividual IRI="#ControlModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+        <NamedIndividual IRI="#FunctionCodeGeneration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+        <NamedIndividual IRI="#SystemCodeGeneration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabSiLaMMF"/>
         <NamedIndividual IRI="#ControlModel"/>
@@ -282,6 +394,21 @@
         <NamedIndividual IRI="#SystemModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+        <NamedIndividual IRI="#FunctionCodeGeneration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+        <NamedIndividual IRI="#SystemCodeGeneration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabSiLbMMF"/>
         <NamedIndividual IRI="#ControlModel"/>
@@ -290,6 +417,11 @@
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabSiLbMMF"/>
         <NamedIndividual IRI="#SystemModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasNextStage"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
@@ -408,12 +540,12 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
-        <NamedIndividual IRI="#SysemCodeGeneration"/>
+        <NamedIndividual IRI="#SystemCodeGeneration"/>
         <NamedIndividual IRI="#SystemModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
-        <NamedIndividual IRI="#SysemCodeGeneration"/>
+        <NamedIndividual IRI="#SystemCodeGeneration"/>
         <NamedIndividual IRI="#SystemCode"/>
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
