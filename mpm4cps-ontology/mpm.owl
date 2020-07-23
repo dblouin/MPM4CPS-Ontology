@@ -202,6 +202,9 @@
         <Class IRI="#VisualizationTool"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#IsToolFor"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasAbstractSyntax"/>
     </Declaration>
     <Declaration>
@@ -262,13 +265,22 @@
         <ObjectProperty IRI="#hasSyntaxMapping"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasTool"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasTraceabilityRelation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasTranformationSpecification"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isBasedOnFormalism"/>
+        <ObjectProperty IRI="#hasUsedModels"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBasedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isImplementedBy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AutomatonLikeFamily"/>
@@ -607,6 +619,10 @@
         <ObjectProperty IRI="#hasContainedModelRelations"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#IsToolFor"/>
+        <ObjectProperty IRI="#hasTool"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasConnectedModel"/>
         <ObjectProperty IRI="#hasModelRelation"/>
     </InverseObjectProperties>
@@ -615,13 +631,17 @@
         <ObjectProperty IRI="#hasModelRelation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasLanguage"/>
-        <ObjectProperty IRI="#isBasedOnFormalism"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#hasModelRelation"/>
         <ObjectProperty IRI="#hasOutputModel"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isBasedOn"/>
+        <ObjectProperty IRI="#isImplementedBy"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsToolFor"/>
+        <Class IRI="#ModelingTool"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAbstractSyntax"/>
         <Class IRI="#ModelingLanguage"/>
@@ -672,11 +692,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasLanguage"/>
-        <Class IRI="#Formalism"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLanguage"/>
-        <Class IRI="#ModelingTool"/>
+        <Class IRI="#Micromodel"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMetamodel"/>
@@ -707,6 +723,10 @@
         <Class IRI="#ConcreteModelingLanguage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTool"/>
+        <Class IRI="#ModelingLanguage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTraceabilityRelation"/>
         <Class IRI="#TraceabilityModel"/>
     </ObjectPropertyDomain>
@@ -714,6 +734,22 @@
         <ObjectProperty IRI="#hasTranformationSpecification"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#ActivityPerformer"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUsedModels"/>
+        <Class IRI="#MegamodelFragment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBasedOn"/>
+        <Class IRI="#ModelingLanguage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isImplementedBy"/>
+        <Class IRI="#Formalism"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsToolFor"/>
+        <Class IRI="#ModelingLanguage"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAbstractSyntax"/>
         <Class IRI="#AbstractSyntax"/>
@@ -752,7 +788,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasContainedModels"/>
-        <Class IRI="#Micromodel"/>
+        <Class IRI="#Model"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasContextRelation"/>
@@ -761,6 +797,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasInputModel"/>
         <Class IRI="#Model"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLanguage"/>
+        <Class IRI="#ModelingLanguage"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMetamodel"/>
@@ -787,6 +827,10 @@
         <Class IRI="#SyntaxMappingRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTool"/>
+        <Class IRI="#ModelingTool"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTraceabilityRelation"/>
         <Class IRI="#TraceabilityRelation"/>
     </ObjectPropertyRange>
@@ -795,8 +839,16 @@
         <Class IRI="#TransformationRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#isBasedOnFormalism"/>
+        <ObjectProperty IRI="#hasUsedModels"/>
+        <Class IRI="#Micromodel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBasedOn"/>
         <Class IRI="#Formalism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isImplementedBy"/>
+        <Class IRI="#ModelingLanguage"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -994,6 +1046,16 @@ However pure graphical syntax are not common and often include textual parts.</L
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#HybridAutomataBasedFormalism</IRI>
         <Literal>Hybrid Automata-based Formalisms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IsToolFor</IRI>
+        <Literal>The model could be expressed in natural language or formal language that is why the range is Language class not the ModelingLanguage class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IsToolFor</IRI>
+        <Literal>The relation defines the formal language for a formalism. It is an inverse of hasFormalism.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1288,16 +1350,6 @@ Only some sequences of words or sentences are considered valid and the set of al
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasLanguage</IRI>
-        <Literal>The model could be expressed in natural language or formal language that is why the range is Language class not the ModelingLanguage class.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasLanguage</IRI>
-        <Literal>The relation defines the formal language for a formalism. It is an inverse of hasFormalism.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasMetamodel</IRI>
         <Literal>The hasMetamodel object property is a subproperty of the hasConnectedModels object property with its domain and range respectively refined to ConformanceRelation and Metamodel</Literal>
     </AnnotationAssertion>
@@ -1344,7 +1396,7 @@ to relate the transformation relation to its specification.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isBasedOnFormalism</IRI>
+        <IRI>#isBasedOn</IRI>
         <Literal>The relation defines the formalism for a formal language. It is an inverse of hasLanguage.</Literal>
     </AnnotationAssertion>
 </Ontology>

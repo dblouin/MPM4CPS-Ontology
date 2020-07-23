@@ -2019,367 +2019,367 @@
         <NamedIndividual IRI="#TimedI/OAutomata"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#AADL"/>
         <NamedIndividual IRI="#AbstractStateMachines"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#AADL"/>
         <NamedIndividual IRI="#DataFlow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#AADL"/>
         <NamedIndividual IRI="#EntityRelationship"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ARENALanguage"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#AUTOSARLanguage"/>
         <NamedIndividual IRI="#EntityRelationship"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#AbstractStateMachines"/>
         <NamedIndividual IRI="#AADL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#AbstractStateMachines"/>
         <NamedIndividual IRI="#AsmL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#AbstractStateMachines"/>
         <NamedIndividual IRI="#AsmetaL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#AbstractStateMachines"/>
         <NamedIndividual IRI="#Gofer"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#AsmL"/>
         <NamedIndividual IRI="#AbstractStateMachines"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#AsmetaL"/>
         <NamedIndividual IRI="#AbstractStateMachines"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#BondGraphs"/>
         <NamedIndividual IRI="#TwentySimBondGraph"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#CTL"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#CausalBlockDiagrams"/>
         <NamedIndividual IRI="#LabVIEWLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#CausalBlockDiagrams"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#CytoscapeLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#MathematicaLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#NetworkWorkbenchLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#NetworkXLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#PajekLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#RandomGraphNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#SmallWorldNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#VisoneLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
         <NamedIndividual IRI="#iGraphLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#CytoscapeLanguage"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#DEECo"/>
         <NamedIndividual IRI="#LTS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DataFlow"/>
         <NamedIndividual IRI="#AADL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DataFlow"/>
         <NamedIndividual IRI="#Lustre"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DataFlow"/>
         <NamedIndividual IRI="#Signal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DataFlow"/>
         <NamedIndividual IRI="#Zelus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DataFlowTimed"/>
         <NamedIndividual IRI="#SystemC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DataFlowTimed"/>
         <NamedIndividual IRI="#SystemC_AMS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
         <NamedIndividual IRI="#MathematicaLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
         <NamedIndividual IRI="#Modelica"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
         <NamedIndividual IRI="#XPPAUTLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
         <NamedIndividual IRI="#Zelus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
         <NamedIndividual IRI="#Modelica"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
         <NamedIndividual IRI="#XPPAUTLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
         <NamedIndividual IRI="#ARENALanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
         <NamedIndividual IRI="#FlexSimLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
         <NamedIndividual IRI="#MS4MeLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
         <NamedIndividual IRI="#OMNetPPLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
         <NamedIndividual IRI="#SIMUL8Language"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
         <NamedIndividual IRI="#SimEventsLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
         <NamedIndividual IRI="#SimioLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ERD"/>
         <NamedIndividual IRI="#EntityRelationship"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
         <NamedIndividual IRI="#SPICELanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
         <NamedIndividual IRI="#SystemC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
         <NamedIndividual IRI="#SystemC_AMS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
         <NamedIndividual IRI="#XPPAUTLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#EntityRelationship"/>
         <NamedIndividual IRI="#AADL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#EntityRelationship"/>
         <NamedIndividual IRI="#AUTOSARLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#EntityRelationship"/>
         <NamedIndividual IRI="#ERD"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#EntityRelationship"/>
         <NamedIndividual IRI="#MARTE"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#EntityRelationship"/>
         <NamedIndividual IRI="#MetaH"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#EntityRelationship"/>
         <NamedIndividual IRI="#UML"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#FIACRE"/>
         <NamedIndividual IRI="#PetriNet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#FIACRE"/>
         <NamedIndividual IRI="#PetriNetsTimed"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#FIACRE"/>
         <NamedIndividual IRI="#TimedTransitionSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#FirstOrderLogic"/>
         <NamedIndividual IRI="#SMTLIBLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#FlexSimLanguage"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Gofer"/>
         <NamedIndividual IRI="#AbstractStateMachines"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#HyTechLanguage"/>
         <NamedIndividual IRI="#TimedAutomata"/>
     </ObjectPropertyAssertion>
@@ -2389,787 +2389,787 @@
         <NamedIndividual IRI="#ContinuousTimeCharacteristic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomata"/>
         <NamedIndividual IRI="#Modelica"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomata"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomata"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomata"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomata"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomata"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
         <NamedIndividual IRI="#Modelica"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
         <NamedIndividual IRI="#Modelica"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
         <NamedIndividual IRI="#Modelica"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#KronosLanguage"/>
         <NamedIndividual IRI="#LTL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#KronosLanguage"/>
         <NamedIndividual IRI="#TimedAutomata"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#LTL"/>
         <NamedIndividual IRI="#KronosLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#LTL"/>
         <NamedIndividual IRI="#PROMISEDSL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#LTL"/>
         <NamedIndividual IRI="#PSC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#LTS"/>
         <NamedIndividual IRI="#DEECo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#LTS"/>
         <NamedIndividual IRI="#SCEL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#LabVIEWLanguage"/>
         <NamedIndividual IRI="#CausalBlockDiagrams"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#LabelledTransitionSystem"/>
         <NamedIndividual IRI="#DEECo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#LinearSignalFlow"/>
         <NamedIndividual IRI="#SystemC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#LinearSignalFlow"/>
         <NamedIndividual IRI="#SystemC_AMS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Lustre"/>
         <NamedIndividual IRI="#DataFlow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#MARTE"/>
         <NamedIndividual IRI="#EntityRelationship"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#MS4MeLanguage"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#MarkovChains"/>
         <NamedIndividual IRI="#PRISMLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#MathematicaLanguage"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#MathematicaLanguage"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#MessageDescriptionSpecification"/>
         <NamedIndividual IRI="#MessagesDescriptionLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#MessagesDescriptionLanguage"/>
         <NamedIndividual IRI="#MessageDescriptionSpecification"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#MetaH"/>
         <NamedIndividual IRI="#EntityRelationship"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Modelica"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Modelica"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Modelica"/>
         <NamedIndividual IRI="#HybridAutomata"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Modelica"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Modelica"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Modelica"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#NetworkWorkbenchLanguage"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#NetworkXLanguage"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
         <NamedIndividual IRI="#CTL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
         <NamedIndividual IRI="#HybridAutomata"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
         <NamedIndividual IRI="#TemporalLogic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#OMNetPPLanguage"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PNML"/>
         <NamedIndividual IRI="#PetriNet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PNML"/>
         <NamedIndividual IRI="#PetriNetsHighLevel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PNML"/>
         <NamedIndividual IRI="#PetriNetsPrioritised"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PNML"/>
         <NamedIndividual IRI="#PetriNetsStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PNML"/>
         <NamedIndividual IRI="#PetriNetsTimed"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PNML"/>
         <NamedIndividual IRI="#dPNs"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PRISMLanguage"/>
         <NamedIndividual IRI="#MarkovChains"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PRISMLanguage"/>
         <NamedIndividual IRI="#PTAs"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PROMISEDSL"/>
         <NamedIndividual IRI="#LTL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PSC"/>
         <NamedIndividual IRI="#LTL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PSPFramework"/>
         <NamedIndividual IRI="#TemporalLogic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PTAs"/>
         <NamedIndividual IRI="#PRISMLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PajekLanguage"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNet"/>
         <NamedIndividual IRI="#FIACRE"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNet"/>
         <NamedIndividual IRI="#PNML"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNet"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
         <NamedIndividual IRI="#PetriNet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
         <NamedIndividual IRI="#PetriNetsHighLevel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
         <NamedIndividual IRI="#PetriNetsPrioritised"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
         <NamedIndividual IRI="#PetriNetsStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
         <NamedIndividual IRI="#PetriNetsTimed"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
         <NamedIndividual IRI="#dPNs"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsHighLevel"/>
         <NamedIndividual IRI="#PNML"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsHighLevel"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsPrioritised"/>
         <NamedIndividual IRI="#PNML"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsPrioritised"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsStochastic"/>
         <NamedIndividual IRI="#PNML"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsStochastic"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsTimed"/>
         <NamedIndividual IRI="#FIACRE"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsTimed"/>
         <NamedIndividual IRI="#PNML"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#PetriNetsTimed"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
         <NamedIndividual IRI="#HybridAutomata"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PtolemyLanguage"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
         <NamedIndividual IRI="#HybridAutomata"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#PyDSToolLanguage"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#RandomGraphNetworks"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SCEL"/>
         <NamedIndividual IRI="#LTS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SIMUL8Language"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SMTLIBLanguage"/>
         <NamedIndividual IRI="#FirstOrderLogic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SPICELanguage"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ScaleFreeNetworks"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
         <NamedIndividual IRI="#HybridAutomata"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#ScilabLanguage"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Signal"/>
         <NamedIndividual IRI="#DataFlow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SimEventsLanguage"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SimioLanguage"/>
         <NamedIndividual IRI="#DiscreteEvent"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
         <NamedIndividual IRI="#CausalBlockDiagrams"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SimulinkLanguage"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SmallWorldNetworks"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
         <NamedIndividual IRI="#HybridAutomata"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
         <NamedIndividual IRI="#HybridAutomataLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
         <NamedIndividual IRI="#HybridAutomataNonLinear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#StateFlowLanguage"/>
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SystemC"/>
         <NamedIndividual IRI="#DataFlowTimed"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SystemC"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SystemC"/>
         <NamedIndividual IRI="#LinearSignalFlow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SystemC_AMS"/>
         <NamedIndividual IRI="#DataFlowTimed"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SystemC_AMS"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#SystemC_AMS"/>
         <NamedIndividual IRI="#LinearSignalFlow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#TCTL"/>
         <NamedIndividual IRI="#UPPAALRequirementSpecificationLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#TemporalLogic"/>
         <NamedIndividual IRI="#NuSMVLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#TimedAutomata"/>
         <NamedIndividual IRI="#HyTechLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#TimedAutomata"/>
         <NamedIndividual IRI="#KronosLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#TimedAutomata"/>
         <NamedIndividual IRI="#UPPAALRequirementSpecificationLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#TimedAutomataStochastic"/>
         <NamedIndividual IRI="#UPPAALSMCSpecificationLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#TimedTransitionSystemLanguage"/>
         <NamedIndividual IRI="#TimedTransitionSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#TimedTransitionSystems"/>
         <NamedIndividual IRI="#FIACRE"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#TimedTransitionSystems"/>
         <NamedIndividual IRI="#TimedTransitionSystemLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#TwentySimBlockDiagram"/>
         <NamedIndividual IRI="#CausalBlockDiagrams"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#TwentySimBondGraph"/>
         <NamedIndividual IRI="#BondGraphs"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#UML"/>
         <NamedIndividual IRI="#EntityRelationship"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#UPPAALRequirementSpecificationLanguage"/>
         <NamedIndividual IRI="#TCTL"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#UPPAALRequirementSpecificationLanguage"/>
         <NamedIndividual IRI="#TimedAutomata"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#UPPAALSMCSpecificationLanguage"/>
         <NamedIndividual IRI="#TimedAutomataStochastic"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#VisoneLanguage"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#XPPAUTLanguage"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#XPPAUTLanguage"/>
         <NamedIndividual IRI="#DiscontinuousSystems"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#XPPAUTLanguage"/>
         <NamedIndividual IRI="#ElectricalLinearNetworks"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Zelus"/>
         <NamedIndividual IRI="#DataFlow"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#Zelus"/>
         <NamedIndividual IRI="#DifferentialEquations"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#dPNs"/>
         <NamedIndividual IRI="#PNML"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguage"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isImplementedBy"/>
         <NamedIndividual IRI="#dPNs"/>
         <NamedIndividual IRI="#PetriNetDiagram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOnFormalism"/>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#iGraphLanguage"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
     </ObjectPropertyAssertion>
