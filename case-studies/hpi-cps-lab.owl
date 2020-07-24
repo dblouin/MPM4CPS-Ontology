@@ -15,6 +15,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="shared" IRI="http://mpm4cps.eu/ontology/shared#"/>
     <Import>http://mpm4cps.eu/ontology/catalog-tools-languages</Import>
+    <Import>http://mpm4cps.eu/ontology/mpm4cps</Import>
     <Declaration>
         <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
     </Declaration>
@@ -67,13 +68,37 @@
         <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#HiL2STTransition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HiLActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HiLProcess"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#InputData"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MT2MiLTransition"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MTActivity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MTProcess"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MiL2RPTransition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MiL2SiLTransition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MiLActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MiLProcess"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
@@ -88,6 +113,15 @@
         <NamedIndividual IRI="#PlantModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#RP2SiLTransition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RPActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RPProcess"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
     </Declaration>
     <Declaration>
@@ -95,6 +129,21 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RobotModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#STActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#STProcess"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SiL2HiLTransition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SiLActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SiLProcess"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
@@ -182,14 +231,50 @@
         <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#HiL2STTransition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:SubFlow"/>
+        <NamedIndividual IRI="#HiLActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
+        <NamedIndividual IRI="#HiLProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#InputData"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#MT2MiLTransition"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:SubFlow"/>
         <NamedIndividual IRI="#MTActivity"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
+        <NamedIndividual IRI="#MTProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#MiL2RPTransition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#MiL2SiLTransition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:SubFlow"/>
+        <NamedIndividual IRI="#MiLActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
+        <NamedIndividual IRI="#MiLProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
     </ClassAssertion>
@@ -202,6 +287,18 @@
         <NamedIndividual IRI="#OutputData"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#RP2SiLTransition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:SubFlow"/>
+        <NamedIndividual IRI="#RPActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
+        <NamedIndividual IRI="#RPProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:TransformationRelation"/>
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
     </ClassAssertion>
@@ -212,6 +309,26 @@
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#RobotModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:SubFlow"/>
+        <NamedIndividual IRI="#STActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
+        <NamedIndividual IRI="#STProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#SiL2HiLTransition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:SubFlow"/>
+        <NamedIndividual IRI="#SiLActivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
+        <NamedIndividual IRI="#SiLProcess"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:TransformationRelation"/>
@@ -334,6 +451,21 @@
         <NamedIndividual IRI="#PlantModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
+        <NamedIndividual IRI="#CPSLabPreproductionStage"/>
+        <NamedIndividual IRI="#STActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
+        <NamedIndividual IRI="#HiLActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
+        <NamedIndividual IRI="#SiLActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasNextStage"/>
         <NamedIndividual IRI="#CPSLabPrototypingStage"/>
         <NamedIndividual IRI="#CPSLabPreproductionStage"/>
@@ -419,6 +551,21 @@
         <NamedIndividual IRI="#SystemModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
+        <NamedIndividual IRI="#MTActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
+        <NamedIndividual IRI="#MiLActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
+        <NamedIndividual IRI="#RPActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasNextStage"/>
         <NamedIndividual IRI="#CPSLabSimulationStage"/>
         <NamedIndividual IRI="#CPSLabPrototypingStage"/>
@@ -447,6 +594,21 @@
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#Hardware-in-the-Loop_Execution"/>
         <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
+        <NamedIndividual IRI="#HiLActivity"/>
+        <NamedIndividual IRI="#HiLProcess"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
+        <NamedIndividual IRI="#MTActivity"/>
+        <NamedIndividual IRI="#MTProcess"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
+        <NamedIndividual IRI="#MiLActivity"/>
+        <NamedIndividual IRI="#MiLProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
@@ -479,6 +641,11 @@
         <NamedIndividual IRI="#OutputData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
+        <NamedIndividual IRI="#RPActivity"/>
+        <NamedIndividual IRI="#RPProcess"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
         <NamedIndividual IRI="#ControlModel"/>
@@ -502,6 +669,16 @@
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
         <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
+        <NamedIndividual IRI="#STActivity"/>
+        <NamedIndividual IRI="#STProcess"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
+        <NamedIndividual IRI="#SiLActivity"/>
+        <NamedIndividual IRI="#SiLProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
@@ -547,6 +724,46 @@
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#SystemCodeGeneration"/>
         <NamedIndividual IRI="#SystemCode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasTranformationSpecification"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#FESTO_Robotino_Sim"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasTranformationSpecification"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#FESTO_Robotino_Sim"/>
+        <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasTranformationSpecification"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Stateflow"/>
+        <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasTranformationSpecification"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Stateflow"/>
+        <NamedIndividual IRI="#OneShotSimulation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasTranformationSpecification"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Stateflow"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasTranformationSpecification"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Stateflow"/>
+        <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasTranformationSpecification"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#SystemDesk"/>
+        <NamedIndividual IRI="#SystemCodeGeneration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasTranformationSpecification"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#TargetLink"/>
+        <NamedIndividual IRI="#FunctionCodeGeneration"/>
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
