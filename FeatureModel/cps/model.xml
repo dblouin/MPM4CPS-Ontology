@@ -20,8 +20,35 @@
 						and any artificial device. It refers to systems where feedback is essential.
 					</description>
 					<and mandatory="true" name="Software">
-						<feature name="Application Software"/>
+						<description>
+							Computer software, or simply software, is a collection of data or &#13;
+							computer instructions that tell the computer how to work.&#13;
+							In computer science and software engineering, computer software &#13;
+							is all information processed by computer systems, programs and &#13;
+							data. Computer software includes computer programs, libraries &#13;
+							and related non-executable data, such as online documentation &#13;
+							or digital media. Computer hardware and software require each &#13;
+							other and neither can be realistically used on its own.
+						</description>
+						<feature name="Application Software">
+							<description>
+								Application software (app for short) is a program or group of &#13;
+								programs designed for end users. Application software is built for &#13;
+								specific tasks.&#13;
+								While system software programs run in the background, &#13;
+								application software runs in the foreground and users interact &#13;
+								with it. System software programs work on its own while &#13;
+								application software is dependent on it.
+							</description>
+						</feature>
 						<and name="System Software">
+							<description>
+								System software is software designed to provide a platform for &#13;
+								other software. Examples of system software include operating &#13;
+								systems like macOS, GNU/Linux and Microsoft Windows, &#13;
+								computational science software, game engines, industrial &#13;
+								automation, and software as a service applications.
+							</description>
 							<and mandatory="true" name="Operating System">
 								<and mandatory="true" name="User Interface">
 									<description>
@@ -679,7 +706,15 @@
 					<feature name="Cloud Storage"/>
 				</and>
 			</and>
-			<feature mandatory="true" name="System Bus"/>
+			<feature mandatory="true" name="System Bus">
+				<description>
+					The system bus is a pathway composed of cables and connectors &#13;
+					used to carry data between a computer microprocessor and the &#13;
+					main memory. The bus provides a communication path for the &#13;
+					data and control signals moving between the major components &#13;
+					of the computer system.
+				</description>
+			</feature>
 			<and mandatory="true" name="H/W Topology">
 			<description>The way in which constituent parts are interrelated or arranged.</description>
 			<feature mandatory="true" name="External Interfaces">
