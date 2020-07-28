@@ -247,12 +247,6 @@
         <ObjectProperty IRI="#hasMetamodel"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasModelOperation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasModelRelation"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasOutputModel"/>
     </Declaration>
     <Declaration>
@@ -353,7 +347,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CapturingOperation"/>
-        <Class IRI="#TransformationLanguage"/>
+        <Class IRI="#TransformationRelation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Communication"/>
@@ -607,10 +601,6 @@
         <ObjectProperty IRI="#hasConnectedModel"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasModelOperation"/>
-        <ObjectProperty IRI="#hasModelRelation"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSemanticDomain"/>
         <ObjectProperty IRI="#hasConnectedModel"/>
     </SubObjectPropertyOf>
@@ -621,18 +611,6 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#IsToolFor"/>
         <ObjectProperty IRI="#hasTool"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasConnectedModel"/>
-        <ObjectProperty IRI="#hasModelRelation"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasInputModel"/>
-        <ObjectProperty IRI="#hasModelRelation"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasModelRelation"/>
-        <ObjectProperty IRI="#hasOutputModel"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isBasedOn"/>
@@ -697,14 +675,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMetamodel"/>
         <Class IRI="#ConformanceRelation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasModelOperation"/>
-        <Class IRI="#Model"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasModelRelation"/>
-        <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasOutputModel"/>
@@ -805,10 +775,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMetamodel"/>
         <Class IRI="#Metamodel"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasModelRelation"/>
-        <Class IRI="#ModelRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasOutputModel"/>
@@ -1352,16 +1318,6 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasMetamodel</IRI>
         <Literal>The hasMetamodel object property is a subproperty of the hasConnectedModels object property with its domain and range respectively refined to ConformanceRelation and Metamodel</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasModelOperation</IRI>
-        <Literal>It defines a model operation for a model.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasModelRelation</IRI>
-        <Literal>It defines a model relation for a model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

@@ -48,7 +48,7 @@
         <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Design2RequirementsTransition"/>
+        <NamedIndividual IRI="#Design2RuntimeTransition"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DesignMegaModelFragment"/>
@@ -63,7 +63,13 @@
         <NamedIndividual IRI="#Designer"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#EBCPSActivitySet"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#EBCPSMethodology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EBCPSProcess"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#EBCPSSimulationStage"/>
@@ -248,7 +254,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Transition"/>
-        <NamedIndividual IRI="#Design2RequirementsTransition"/>
+        <NamedIndividual IRI="#Design2RuntimeTransition"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
@@ -267,8 +273,16 @@
         <NamedIndividual IRI="#Designer"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:ActivitySet"/>
+        <NamedIndividual IRI="#EBCPSActivitySet"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="shared:EngineeringMethodology"/>
         <NamedIndividual IRI="#EBCPSMethodology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
+        <NamedIndividual IRI="#EBCPSProcess"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:EngineeringStage"/>
@@ -331,7 +345,7 @@
         <NamedIndividual IRI="#ROSDesignModel"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:Model"/>
+        <Class abbreviatedIRI="mpm:Micromodel"/>
         <NamedIndividual IRI="#ROSRuntimeModel"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -379,7 +393,7 @@
         <NamedIndividual IRI="#Self-AdaptationCapturingOperation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mpm:Model"/>
+        <Class abbreviatedIRI="mpm:Micromodel"/>
         <NamedIndividual IRI="#Self-AdaptationModel"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -543,6 +557,136 @@
         <NamedIndividual IRI="#SimulationMegaModelFragment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#EnsembleCapturingOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#InstantiationDesignTransformationOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#InstantiationSimulationTransforamtionOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#RequirementsCapturingOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#Self-AdaptationCapturingOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#Self-Adaptation_DEECoRuntime_IntegrationOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#SimulationCapturingOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#ROS_OMNet++_IntegrationOperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#DEECoDesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#DEECoRuntime-Self-AdaptationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#DEECoRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#DEECoRuntimeROSModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#IRM-SAModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#IRMModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#MATSimDesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#MATSimRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#ROSDesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#ROSRuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#Self-AdaptationModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#DEECoRuntime-MATSimRuntime-OMNet++RuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#OMNet++DesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#OMNet++RuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
+        <NamedIndividual IRI="#DEECoMegaModel"/>
+        <NamedIndividual IRI="#ROS_OMNet++RuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
         <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
         <NamedIndividual IRI="#DEECoRuntimeModel"/>
@@ -555,7 +699,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
-        <NamedIndividual IRI="#DEECoRuntime_ROS_IntegrationOperation"/>
+        <NamedIndividual IRI="#DEECoRuntimeROSModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasUsedModels"/>
@@ -598,34 +742,39 @@
         <NamedIndividual IRI="#DesignProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#EBCPSActivitySet"/>
+        <NamedIndividual IRI="#DesignRootActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#EBCPSActivitySet"/>
+        <NamedIndividual IRI="#RequirementsRootActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#EBCPSActivitySet"/>
+        <NamedIndividual IRI="#RuntimeRootActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#EBCPSActivitySet"/>
+        <NamedIndividual IRI="#Design2RuntimeTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#EBCPSActivitySet"/>
+        <NamedIndividual IRI="#Requirements2DesignTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasStage"/>
         <NamedIndividual IRI="#EBCPSMethodology"/>
         <NamedIndividual IRI="#EBCPSSimulationStage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#EBCPSSimulationStage"/>
-        <NamedIndividual IRI="#DesignRootActivity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#EBCPSSimulationStage"/>
-        <NamedIndividual IRI="#RequirementsRootActivity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#EBCPSSimulationStage"/>
-        <NamedIndividual IRI="#RuntimeRootActivity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#EBCPSSimulationStage"/>
-        <NamedIndividual IRI="#Design2RequirementsTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#EBCPSSimulationStage"/>
-        <NamedIndividual IRI="#Requirements2DesignTransition"/>
+        <ObjectProperty abbreviatedIRI="shared:hasContainedActivitySet"/>
+        <NamedIndividual IRI="#EBCPSProcess"/>
+        <NamedIndividual IRI="#EBCPSActivitySet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasTool"/>

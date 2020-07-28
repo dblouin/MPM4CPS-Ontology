@@ -167,6 +167,9 @@ The detailed specification of the shared onytology is provided in the following 
         <ObjectProperty IRI="#hasCharacteristics"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasContainedActivitySet"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDecisionProcedures"/>
     </Declaration>
     <Declaration>
@@ -491,6 +494,10 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#EngineeringParadigm"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContainedActivitySet"/>
+        <Class IRI="#Process"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDecisionProcedures"/>
         <Class IRI="#ParadigmaticProperty"/>
     </ObjectPropertyDomain>
@@ -573,6 +580,10 @@ The detailed specification of the shared onytology is provided in the following 
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCharacteristics"/>
         <Class IRI="#Characteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContainedActivitySet"/>
+        <Class IRI="#ActivitySet"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDecisionProcedures"/>
