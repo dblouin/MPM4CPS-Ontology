@@ -522,16 +522,6 @@
         <NamedIndividual IRI="#SimulationMegaModelFragment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
-        <NamedIndividual IRI="#DEECoDesignModel"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasTool"/>
-        <NamedIndividual IRI="#DEECoDesignModel"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#jDEECo"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedMegamodelFragments"/>
         <NamedIndividual IRI="#DEECoMegaModel"/>
         <NamedIndividual IRI="#DesignMegaModelFragment"/>
@@ -775,11 +765,6 @@
         <ObjectProperty abbreviatedIRI="shared:hasContainedActivitySet"/>
         <NamedIndividual IRI="#EBCPSProcess"/>
         <NamedIndividual IRI="#EBCPSActivitySet"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasTool"/>
-        <NamedIndividual IRI="#IRM-SAModel"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#IRM-SATool"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
