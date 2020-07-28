@@ -12,7 +12,6 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://mpm4cps.eu/ontology/shared</Import>
     <Annotation>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
         <Literal>Dominique Blouin; Hana Mkaouar</Literal>
@@ -287,6 +286,48 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TimedAutomatonLike"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Syntax"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeUpdated"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:paper"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Language"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasSyntax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#ActivityPerformer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Semantics"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Megamodel"/>
