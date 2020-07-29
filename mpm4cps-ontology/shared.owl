@@ -215,6 +215,12 @@ The detailed specification of the shared onytology is provided in the following 
         <ObjectProperty IRI="#hasTransitions"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isImplementingMethodology"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isImplementingStage"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="#hasLanguageDesc"/>
     </Declaration>
     <Declaration>
@@ -557,6 +563,14 @@ The detailed specification of the shared onytology is provided in the following 
         <ObjectProperty IRI="#hasTransitions"/>
         <Class IRI="#ActivitySet"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isImplementingMethodology"/>
+        <Class IRI="#Process"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isImplementingStage"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasActivities"/>
         <Class IRI="#Activity"/>
@@ -644,6 +658,14 @@ The detailed specification of the shared onytology is provided in the following 
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTransitions"/>
         <Class IRI="#Transition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isImplementingMethodology"/>
+        <Class IRI="#EngineeringMethodology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isImplementingStage"/>
+        <Class IRI="#EngineeringStage"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1052,6 +1074,17 @@ other entities.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasTransitions</IRI>
         <Literal>An ActivitySet contains a set of other activities and Transition elements declared via the hasSetActivities and hasTransitions object properties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isImplementingMethodology</IRI>
+        <Literal>A methodology is implemented by an overall workflow process defining activities supporting each stage of the methodology. 
+The object property isImplementingMethodology  relates a process to the methodology it implements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isImplementingStage</IRI>
+        <Literal>The isImplementingStage is defined to relate an activity to a stage it implements.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
