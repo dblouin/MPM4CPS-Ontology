@@ -20,7 +20,13 @@
         <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabMTControlAlgorithmVP"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CPSLabMTMMF"/>
@@ -32,13 +38,22 @@
         <NamedIndividual IRI="#CPSLabMethodology"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CPSLabMiLControlAlgorithmVP"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CPSLabMiLMMF"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CPSLabPreproductionStage"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CPSLabProcess"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CPSLabPrototypingStage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabRPControlAlgorithmVP"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CPSLabRPaMMF"/>
@@ -54,6 +69,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CPSLabSimulationStage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlAlgorithm"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ControlCode"/>
@@ -128,6 +146,9 @@
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Reliability"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#RobotModel"/>
     </Declaration>
     <Declaration>
@@ -135,6 +156,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#STProcess"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Safety"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SiL2HiLTransition"/>
@@ -150,6 +174,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stability"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SystemCode"/>
@@ -167,8 +194,16 @@
         <NamedIndividual IRI="#robotinoBlocks"/>
     </Declaration>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:ActivitySet"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ViewPoint"/>
+        <NamedIndividual IRI="#CPSLabMTControlAlgorithmVP"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
@@ -183,6 +218,10 @@
         <NamedIndividual IRI="#CPSLabMethodology"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ViewPoint"/>
+        <NamedIndividual IRI="#CPSLabMiLControlAlgorithmVP"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#CPSLabMiLMMF"/>
     </ClassAssertion>
@@ -191,8 +230,16 @@
         <NamedIndividual IRI="#CPSLabPreproductionStage"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
+        <NamedIndividual IRI="#CPSLabProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="shared:EngineeringStage"/>
         <NamedIndividual IRI="#CPSLabPrototypingStage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ViewPoint"/>
+        <NamedIndividual IRI="#CPSLabRPControlAlgorithmVP"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
@@ -213,6 +260,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="shared:EngineeringStage"/>
         <NamedIndividual IRI="#CPSLabSimulationStage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Concern"/>
+        <NamedIndividual IRI="#ControlAlgorithm"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
@@ -307,6 +358,10 @@
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:Concern"/>
+        <NamedIndividual IRI="#Reliability"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#RobotModel"/>
     </ClassAssertion>
@@ -317,6 +372,10 @@
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
         <NamedIndividual IRI="#STProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Concern"/>
+        <NamedIndividual IRI="#Safety"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Transition"/>
@@ -339,6 +398,10 @@
         <NamedIndividual IRI="#Software-in-the-Loop_Simulation"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:Concern"/>
+        <NamedIndividual IRI="#Stability"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#SystemCode"/>
     </ClassAssertion>
@@ -350,6 +413,66 @@
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#SystemModel"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#HiLActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#MTActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#MiLActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#RPActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#STActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#SiLActivity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#HiL2STTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#MT2MiLTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#MiL2RPTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#MiL2SiLTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#RP2SiLTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
+        <NamedIndividual IRI="#SiL2HiLTransition"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
@@ -374,6 +497,16 @@
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
         <NamedIndividual IRI="#SystemModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabMTControlAlgorithmVP"/>
+        <NamedIndividual IRI="#ControlAlgorithm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasSupportingMegamodelFragments"/>
+        <NamedIndividual IRI="#CPSLabMTControlAlgorithmVP"/>
+        <NamedIndividual IRI="#CPSLabMTMMF"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
@@ -436,6 +569,31 @@
         <NamedIndividual IRI="#CPSLabSimulationStage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabMiLControlAlgorithmVP"/>
+        <NamedIndividual IRI="#ControlAlgorithm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabMiLControlAlgorithmVP"/>
+        <NamedIndividual IRI="#Reliability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabMiLControlAlgorithmVP"/>
+        <NamedIndividual IRI="#Safety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabMiLControlAlgorithmVP"/>
+        <NamedIndividual IRI="#Stability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasSupportingMegamodelFragments"/>
+        <NamedIndividual IRI="#CPSLabMiLControlAlgorithmVP"/>
+        <NamedIndividual IRI="#CPSLabMiLMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
         <NamedIndividual IRI="#CPSLabMiLMMF"/>
         <NamedIndividual IRI="#Model-in-the-Loop_Simulation"/>
@@ -451,24 +609,44 @@
         <NamedIndividual IRI="#PlantModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#CPSLabPreproductionStage"/>
-        <NamedIndividual IRI="#STActivity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
-        <NamedIndividual IRI="#HiLActivity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
-        <NamedIndividual IRI="#SiLActivity"/>
+        <ObjectProperty abbreviatedIRI="shared:hasContainedActivitySet"/>
+        <NamedIndividual IRI="#CPSLabProcess"/>
+        <NamedIndividual IRI="#CPSLabActivitySet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasNextStage"/>
         <NamedIndividual IRI="#CPSLabPrototypingStage"/>
         <NamedIndividual IRI="#CPSLabPreproductionStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabRPControlAlgorithmVP"/>
+        <NamedIndividual IRI="#ControlAlgorithm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabRPControlAlgorithmVP"/>
+        <NamedIndividual IRI="#Reliability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabRPControlAlgorithmVP"/>
+        <NamedIndividual IRI="#Safety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabRPControlAlgorithmVP"/>
+        <NamedIndividual IRI="#Stability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasSupportingMegamodelFragments"/>
+        <NamedIndividual IRI="#CPSLabRPControlAlgorithmVP"/>
+        <NamedIndividual IRI="#CPSLabRPaMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasSupportingMegamodelFragments"/>
+        <NamedIndividual IRI="#CPSLabRPControlAlgorithmVP"/>
+        <NamedIndividual IRI="#CPSLabRPbMMF"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
@@ -549,21 +727,6 @@
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabSiLbMMF"/>
         <NamedIndividual IRI="#SystemModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#CPSLabSimulationStage"/>
-        <NamedIndividual IRI="#MTActivity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#CPSLabSimulationStage"/>
-        <NamedIndividual IRI="#MiLActivity"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasActivitySet"/>
-        <NamedIndividual IRI="#CPSLabSimulationStage"/>
-        <NamedIndividual IRI="#RPActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasNextStage"/>
