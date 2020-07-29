@@ -201,7 +201,22 @@
         <Class IRI="#VisualizationTool"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#IsToolFor"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#ActivityPerformer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Semantics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Syntax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasAbstractSyntax"/>
@@ -276,6 +291,9 @@
         <ObjectProperty IRI="#isImplementedBy"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasSyntax"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#AutomatonLikeFamily"/>
     </Declaration>
     <Declaration>
@@ -288,46 +306,25 @@
         <NamedIndividual IRI="#TimedAutomatonLike"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Syntax"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeUpdated"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:paper"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reference"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Language"/>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeUpdated"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasSyntax"/>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#ActivityPerformer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Semantics"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:website"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Megamodel"/>
@@ -650,17 +647,9 @@
         <ObjectProperty IRI="#hasContainedModelRelations"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#IsToolFor"/>
-        <ObjectProperty IRI="#hasTool"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#isBasedOn"/>
         <ObjectProperty IRI="#isImplementedBy"/>
     </InverseObjectProperties>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#IsToolFor"/>
-        <Class IRI="#ModelingTool"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAbstractSyntax"/>
         <Class IRI="#ModelingLanguage"/>
@@ -757,10 +746,6 @@
         <ObjectProperty IRI="#isImplementedBy"/>
         <Class IRI="#Formalism"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#IsToolFor"/>
-        <Class IRI="#ModelingLanguage"/>
-    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAbstractSyntax"/>
         <Class IRI="#AbstractSyntax"/>
@@ -1053,16 +1038,6 @@ However pure graphical syntax are not common and often include textual parts.</L
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#HybridAutomataBasedFormalism</IRI>
         <Literal>Hybrid Automata-based Formalisms</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#IsToolFor</IRI>
-        <Literal>The model could be expressed in natural language or formal language that is why the range is Language class not the ModelingLanguage class.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#IsToolFor</IRI>
-        <Literal>The relation defines the formal language for a formalism. It is an inverse of hasFormalism.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

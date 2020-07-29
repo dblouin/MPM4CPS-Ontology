@@ -928,6 +928,18 @@
         <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#TargetLink"/>
         <NamedIndividual IRI="#FunctionCodeGeneration"/>
     </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="mpm:hasTool"/>
+        <ObjectProperty abbreviatedIRI="mpm:isToolFor"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="mpm:isToolFor"/>
+        <Class abbreviatedIRI="mpm:ModelingTool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="mpm:isToolFor"/>
+        <Class abbreviatedIRI="mpm:ModelingLanguage"/>
+    </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CPSLabMegaModel</IRI>
