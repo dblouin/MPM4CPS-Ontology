@@ -20,7 +20,16 @@
         <ObjectProperty abbreviatedIRI="mpm:hasMegaModelFragment"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ArcsProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BlocksPortsProperty"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CPSLabActivitySet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CPSLabEngineeringEnv"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
@@ -92,6 +101,9 @@
         <NamedIndividual IRI="#ControlModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DirectedGraphProperty"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#EditControl2SimulateControlTransition"/>
     </Declaration>
     <Declaration>
@@ -140,6 +152,9 @@
         <NamedIndividual IRI="#MTSimulateControlModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MemoryFullProperty"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#MiL2RPTransition"/>
     </Declaration>
     <Declaration>
@@ -185,6 +200,12 @@
         <NamedIndividual IRI="#RobotModel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SDFParadigm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SDFParadigmCharacteristics"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#STActivity"/>
     </Declaration>
     <Declaration>
@@ -201,6 +222,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SiLProcess"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SignalProperty"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Software-in-the-Loop_Execution"/>
@@ -227,8 +251,20 @@
         <NamedIndividual IRI="#robotinoBlocks"/>
     </Declaration>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:ParadigmaticProperty"/>
+        <NamedIndividual IRI="#ArcsProperty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:ParadigmaticProperty"/>
+        <NamedIndividual IRI="#BlocksPortsProperty"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="shared:ActivitySet"/>
         <NamedIndividual IRI="#CPSLabActivitySet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedEngineeringEnv"/>
+        <NamedIndividual IRI="#CPSLabEngineeringEnv"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
@@ -323,6 +359,10 @@
         <NamedIndividual IRI="#ControlModel"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:ParadigmaticProperty"/>
+        <NamedIndividual IRI="#DirectedGraphProperty"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="shared:Transition"/>
         <NamedIndividual IRI="#EditControl2SimulateControlTransition"/>
     </ClassAssertion>
@@ -383,6 +423,10 @@
         <NamedIndividual IRI="#MTProcess_ActivitySet"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:ParadigmaticProperty"/>
+        <NamedIndividual IRI="#MemoryFullProperty"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="shared:Transition"/>
         <NamedIndividual IRI="#MiL2RPTransition"/>
     </ClassAssertion>
@@ -439,6 +483,14 @@
         <NamedIndividual IRI="#RobotModel"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelingEngineeringParadigm"/>
+        <NamedIndividual IRI="#SDFParadigm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Characteristic"/>
+        <NamedIndividual IRI="#SDFParadigmCharacteristics"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="shared:SubFlow"/>
         <NamedIndividual IRI="#STActivity"/>
     </ClassAssertion>
@@ -461,6 +513,10 @@
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
         <NamedIndividual IRI="#SiLProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:ParadigmaticProperty"/>
+        <NamedIndividual IRI="#SignalProperty"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:TransformationRelation"/>
@@ -545,6 +601,16 @@
         <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
         <NamedIndividual IRI="#CPSLabActivitySet"/>
         <NamedIndividual IRI="#SiL2HiLTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasModelingArtifacts"/>
+        <NamedIndividual IRI="#CPSLabEngineeringEnv"/>
+        <NamedIndividual IRI="#CPSLabMegaModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasModelingArtifacts"/>
+        <NamedIndividual IRI="#CPSLabEngineeringEnv"/>
+        <NamedIndividual IRI="#CPSLabProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
@@ -1045,6 +1111,36 @@
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Simulation"/>
         <NamedIndividual IRI="#OutputData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasCharacteristics"/>
+        <NamedIndividual IRI="#SDFParadigm"/>
+        <NamedIndividual IRI="#SDFParadigmCharacteristics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasProperties"/>
+        <NamedIndividual IRI="#SDFParadigmCharacteristics"/>
+        <NamedIndividual IRI="#ArcsProperty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasProperties"/>
+        <NamedIndividual IRI="#SDFParadigmCharacteristics"/>
+        <NamedIndividual IRI="#BlocksPortsProperty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasProperties"/>
+        <NamedIndividual IRI="#SDFParadigmCharacteristics"/>
+        <NamedIndividual IRI="#DirectedGraphProperty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasProperties"/>
+        <NamedIndividual IRI="#SDFParadigmCharacteristics"/>
+        <NamedIndividual IRI="#MemoryFullProperty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasProperties"/>
+        <NamedIndividual IRI="#SDFParadigmCharacteristics"/>
+        <NamedIndividual IRI="#SignalProperty"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
