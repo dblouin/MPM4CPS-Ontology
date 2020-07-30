@@ -26,6 +26,9 @@
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CPSLabHiLSoftwareDesignVP"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CPSLabMTControlAlgorithmVP"/>
     </Declaration>
     <Declaration>
@@ -62,6 +65,9 @@
         <NamedIndividual IRI="#CPSLabRPbMMF"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CPSLabSiLaMMF"/>
     </Declaration>
     <Declaration>
@@ -71,13 +77,25 @@
         <NamedIndividual IRI="#CPSLabSimulationStage"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CheckResults2EditControlTransition"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ControlAlgorithm"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ControlCode"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ControlEngineer"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ControlModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EditControl2SimulateControlTransition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EditInput2EditControlTransition"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#FunctionCodeGeneration"/>
@@ -104,7 +122,22 @@
         <NamedIndividual IRI="#MTActivity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MTCheckSimulationResults"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MTEditControlModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MTEditInputModel"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#MTProcess"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MTSimulateControlModel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MiL2RPTransition"/>
@@ -203,6 +236,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ViewPoint"/>
+        <NamedIndividual IRI="#CPSLabHiLSoftwareDesignVP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ViewPoint"/>
         <NamedIndividual IRI="#CPSLabMTControlAlgorithmVP"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -250,6 +287,10 @@
         <NamedIndividual IRI="#CPSLabRPbMMF"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ViewPoint"/>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:MegamodelFragment"/>
         <NamedIndividual IRI="#CPSLabSiLaMMF"/>
     </ClassAssertion>
@@ -262,6 +303,10 @@
         <NamedIndividual IRI="#CPSLabSimulationStage"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#CheckResults2EditControlTransition"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="shared:Concern"/>
         <NamedIndividual IRI="#ControlAlgorithm"/>
     </ClassAssertion>
@@ -270,8 +315,20 @@
         <NamedIndividual IRI="#ControlCode"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:Human"/>
+        <NamedIndividual IRI="#ControlEngineer"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="mpm:Model"/>
         <NamedIndividual IRI="#ControlModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#EditControl2SimulateControlTransition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Transition"/>
+        <NamedIndividual IRI="#EditInput2EditControlTransition"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="mpm:TransformationRelation"/>
@@ -306,8 +363,24 @@
         <NamedIndividual IRI="#MTActivity"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="shared:Activity"/>
+        <NamedIndividual IRI="#MTCheckSimulationResults"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Activity"/>
+        <NamedIndividual IRI="#MTEditControlModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Activity"/>
+        <NamedIndividual IRI="#MTEditInputModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#ModelBasedProcess"/>
         <NamedIndividual IRI="#MTProcess"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:ActivitySet"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:Transition"/>
@@ -497,6 +570,31 @@
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#CPSLabHiLMMF"/>
         <NamedIndividual IRI="#SystemModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabHiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#ControlAlgorithm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabHiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#Reliability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabHiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#Safety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabHiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#Stability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasSupportingMegamodelFragments"/>
+        <NamedIndividual IRI="#CPSLabHiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#CPSLabHiLMMF"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
@@ -674,6 +772,36 @@
         <NamedIndividual IRI="#ControlModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#ControlAlgorithm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#Reliability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#Safety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasFramedConcerns"/>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#Stability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasSupportingMegamodelFragments"/>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#CPSLabSiLaMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasSupportingMegamodelFragments"/>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
+        <NamedIndividual IRI="#CPSLabSiLbMMF"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModelRelations"/>
         <NamedIndividual IRI="#CPSLabSiLaMMF"/>
         <NamedIndividual IRI="#FunctionCodeGeneration"/>
@@ -764,14 +892,94 @@
         <NamedIndividual IRI="#HiLProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:isImplementingStage"/>
+        <NamedIndividual IRI="#HiLActivity"/>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasViewpoint"/>
+        <NamedIndividual IRI="#HiLProcess"/>
+        <NamedIndividual IRI="#CPSLabHiLSoftwareDesignVP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
         <NamedIndividual IRI="#MTActivity"/>
         <NamedIndividual IRI="#MTProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:isImplementingStage"/>
+        <NamedIndividual IRI="#MTActivity"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
+        <NamedIndividual IRI="#MTCheckSimulationResults"/>
+        <NamedIndividual IRI="#ControlEngineer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
+        <NamedIndividual IRI="#MTEditControlModel"/>
+        <NamedIndividual IRI="#ControlEngineer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
+        <NamedIndividual IRI="#MTEditInputModel"/>
+        <NamedIndividual IRI="#ControlEngineer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasContainedActivitySet"/>
+        <NamedIndividual IRI="#MTProcess"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+        <NamedIndividual IRI="#MTCheckSimulationResults"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+        <NamedIndividual IRI="#MTEditControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+        <NamedIndividual IRI="#MTEditInputModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+        <NamedIndividual IRI="#MTSimulateControlModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+        <NamedIndividual IRI="#CheckResults2EditControlTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+        <NamedIndividual IRI="#EditControl2SimulateControlTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
+        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
+        <NamedIndividual IRI="#EditInput2EditControlTransition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
+        <NamedIndividual IRI="#MTSimulateControlModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Simulink"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
         <NamedIndividual IRI="#MiLActivity"/>
         <NamedIndividual IRI="#MiLProcess"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:isImplementingStage"/>
+        <NamedIndividual IRI="#MiLActivity"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
@@ -809,6 +1017,11 @@
         <NamedIndividual IRI="#RPProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:isImplementingStage"/>
+        <NamedIndividual IRI="#RPActivity"/>
+        <NamedIndividual IRI="#CPSLabSimulationStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
         <NamedIndividual IRI="#Rapid_Prototyping_with_Robot_Execution"/>
         <NamedIndividual IRI="#ControlModel"/>
@@ -839,9 +1052,24 @@
         <NamedIndividual IRI="#STProcess"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:isImplementingStage"/>
+        <NamedIndividual IRI="#STActivity"/>
+        <NamedIndividual IRI="#CPSLabPreproductionStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
         <NamedIndividual IRI="#SiLActivity"/>
         <NamedIndividual IRI="#SiLProcess"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="shared:isImplementingStage"/>
+        <NamedIndividual IRI="#SiLActivity"/>
+        <NamedIndividual IRI="#CPSLabPrototypingStage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasViewpoint"/>
+        <NamedIndividual IRI="#SiLProcess"/>
+        <NamedIndividual IRI="#CPSLabSiLSoftwareDesignVP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
