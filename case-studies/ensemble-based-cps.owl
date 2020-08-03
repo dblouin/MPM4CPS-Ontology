@@ -522,6 +522,11 @@
         <NamedIndividual IRI="#SimulationMegaModelFragment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#DEECoDesignModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedMegamodelFragments"/>
         <NamedIndividual IRI="#DEECoMegaModel"/>
         <NamedIndividual IRI="#DesignMegaModelFragment"/>
@@ -767,6 +772,11 @@
         <NamedIndividual IRI="#EBCPSActivitySet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#IRM-SAModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#IRM-SA-Language"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
         <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
         <NamedIndividual IRI="#IRM-SAModel"/>
@@ -774,12 +784,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
         <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#IRM"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#IRMLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
         <NamedIndividual IRI="#DEECoDesignModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#IRMModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#IRM-SA-Language"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
