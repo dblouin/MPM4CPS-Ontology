@@ -8,12 +8,12 @@
 	<feature automatic="selected" name="System Software"/>
 	<feature automatic="selected" name="Operating System"/>
 	<feature automatic="selected" name="User Interface"/>
-	<feature manual="selected" name="Graphical"/>
-	<feature manual="unselected" name="Menu-driven"/>
-	<feature manual="unselected" name="Command-line"/>
+	<feature manual="unselected" name="Graphical"/>
+	<feature manual="selected" name="Menu-driven"/>
+	<feature manual="selected" name="Command-line"/>
 	<feature automatic="selected" name="System Services"/>
 	<feature automatic="selected" name="System Utilities"/>
-	<feature manual="selected" name="Embedded/Firmware"/>
+	<feature manual="unselected" name="Embedded/Firmware"/>
 	<feature automatic="selected" name="Control"/>
 	<feature automatic="selected" name="State"/>
 	<feature automatic="selected" name="Disturbance"/>
@@ -33,9 +33,9 @@
 	<feature manual="selected" name="StateFeedback"/>
 	<feature manual="selected" name="OutputFeedback"/>
 	<feature automatic="selected" name="Scope"/>
-	<feature manual="selected" name="Centralized"/>
-	<feature automatic="unselected" manual="unselected" name="Decentralized"/>
-	<feature automatic="unselected" name="Distributfed"/>
+	<feature manual="unselected" name="Centralized"/>
+	<feature manual="selected" name="Decentralized"/>
+	<feature manual="selected" name="Distributed"/>
 	<feature automatic="selected" name="Dynamics"/>
 	<feature automatic="selected" manual="selected" name="SystemType"/>
 	<feature automatic="selected" manual="selected" name="Linearity"/>
@@ -45,17 +45,17 @@
 	<feature manual="selected" name="Discrete Time"/>
 	<feature automatic="unselected" name="Continuous Time"/>
 	<feature automatic="selected" manual="selected" name="Continuity"/>
-	<feature manual="selected" name="Smooth"/>
-	<feature automatic="unselected" name="Discontiuous"/>
-	<feature automatic="unselected" name="Multi-modal system"/>
-	<feature automatic="unselected" name="Discrete-event System"/>
-	<feature automatic="unselected" name="Transition system"/>
-	<feature automatic="unselected" name="Varable structure system"/>
-	<feature automatic="unselected" name="Switched system"/>
-	<feature automatic="unselected" name="Reset/jump/impulsive system"/>
-	<feature automatic="unselected" name="Piecewise-affine system"/>
-	<feature automatic="unselected" name="Hybrid system"/>
-	<feature automatic="unselected" name="Other"/>
+	<feature name="Smooth"/>
+	<feature automatic="selected" manual="selected" name="Discontiuous"/>
+	<feature manual="unselected" name="Multi-modal system"/>
+	<feature manual="unselected" name="Discrete-event System"/>
+	<feature manual="selected" name="Transition system"/>
+	<feature manual="unselected" name="Varable structure system"/>
+	<feature manual="selected" name="Switched system"/>
+	<feature manual="unselected" name="Reset/jump/impulsive system"/>
+	<feature manual="unselected" name="Piecewise-affine system"/>
+	<feature manual="unselected" name="Hybrid system"/>
+	<feature manual="unselected" name="Other"/>
 	<feature automatic="selected" manual="selected" name="Behavior"/>
 	<feature automatic="selected" name="Equilibria"/>
 	<feature automatic="unselected" name="Common"/>
@@ -86,17 +86,17 @@
 	<feature automatic="selected" name="Properties"/>
 	<feature manual="selected" name="Stability"/>
 	<feature manual="unselected" name="Dissipativity/Passivity"/>
-	<feature manual="selected" name="Robustness"/>
+	<feature manual="unselected" name="Robustness"/>
 	<feature manual="selected" name="Adaptation"/>
 	<feature manual="selected" name="Controllability"/>
-	<feature manual="selected" name="Observability"/>
+	<feature manual="unselected" name="Observability"/>
 	<feature manual="unselected" name="Resilience"/>
-	<feature manual="unselected" name="Autonomy"/>
-	<feature manual="unselected" name="Intelligence"/>
-	<feature manual="selected" name="Consistency"/>
+	<feature manual="selected" name="Autonomy"/>
+	<feature manual="selected" name="Intelligence"/>
+	<feature manual="unselected" name="Consistency"/>
 	<feature manual="unselected" name="Heterogeneity"/>
-	<feature manual="selected" name="Sensitivity"/>
-	<feature manual="unselected" name="Learning"/>
+	<feature manual="unselected" name="Sensitivity"/>
+	<feature manual="selected" name="Learning"/>
 	<feature automatic="selected" manual="selected" name="Uncertainty"/>
 	<feature automatic="unselected" name="Deterministic"/>
 	<feature automatic="unselected" name="Non-deterministic"/>
@@ -181,7 +181,7 @@
 	<feature automatic="selected" name="Disciplines"/>
 	<feature manual="selected" name="SoftwareEngineering"/>
 	<feature manual="selected" name="MechanicalEngineering"/>
-	<feature manual="selected" name="ElectricalEngineering"/>
+	<feature manual="unselected" name="ElectricalEngineering"/>
 	<feature manual="unselected" name="CivilEngineering"/>
 	<feature manual="unselected" name="ChecmicalEngineering"/>
 	<feature manual="unselected" name="OtherEngineering"/>

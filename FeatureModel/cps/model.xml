@@ -21,32 +21,32 @@
 					</description>
 					<and mandatory="true" name="Software">
 						<description>
-							Computer software, or simply software, is a collection of data or &#13;
-							computer instructions that tell the computer how to work.&#13;
-							In computer science and software engineering, computer software &#13;
-							is all information processed by computer systems, programs and &#13;
-							data. Computer software includes computer programs, libraries &#13;
-							and related non-executable data, such as online documentation &#13;
-							or digital media. Computer hardware and software require each &#13;
+							Computer software, or simply software, is a collection of data or
+							computer instructions that tell the computer how to work.
+							In computer science and software engineering, computer software
+							is all information processed by computer systems, programs and
+							data. Computer software includes computer programs, libraries
+							and related non-executable data, such as online documentation
+							or digital media. Computer hardware and software require each
 							other and neither can be realistically used on its own.
 						</description>
 						<feature name="Application Software">
 							<description>
-								Application software (app for short) is a program or group of &#13;
-								programs designed for end users. Application software is built for &#13;
-								specific tasks.&#13;
-								While system software programs run in the background, &#13;
-								application software runs in the foreground and users interact &#13;
-								with it. System software programs work on its own while &#13;
+								Application software (app for short) is a program or group of
+								programs designed for end users. Application software is built for
+								specific tasks.
+								While system software programs run in the background,
+								application software runs in the foreground and users interact
+								with it. System software programs work on its own while
 								application software is dependent on it.
 							</description>
 						</feature>
 						<and name="System Software">
 							<description>
-								System software is software designed to provide a platform for &#13;
-								other software. Examples of system software include operating &#13;
-								systems like macOS, GNU/Linux and Microsoft Windows, &#13;
-								computational science software, game engines, industrial &#13;
+								System software is software designed to provide a platform for
+								other software. Examples of system software include operating
+								systems like macOS, GNU/Linux and Microsoft Windows,
+								computational science software, game engines, industrial
 								automation, and software as a service applications.
 							</description>
 							<and mandatory="true" name="Operating System">
@@ -213,7 +213,7 @@
 							</description>
 						</feature>
 					</or>
-					<alt mandatory="true" name="Scope">
+					<or mandatory="true" name="Scope">
 						<feature name="Centralized">
 							<description>
 								The feedback is only applied on one element of the
@@ -226,14 +226,14 @@
 								there is no central authority.
 							</description>
 						</feature>
-						<feature name="Distributfed">
+						<feature name="Distributed">
 							<description>
 								The feedback is applied on the components of the
 								system (it does not have to be all); some coordination of these
 								parts has to be put in place.
 							</description>
 						</feature>
-					</alt>
+					</or>
 				</and>
 				<or mandatory="true" name="Dynamics">
 					<description>Evolution of a system over time</description>
@@ -252,7 +252,7 @@
 							<feature name="Discrete Time"/>
 							<feature name="Continuous Time"/>
 						</alt>
-						<alt name="Continuity">
+						<and name="Continuity">
 							<feature name="Smooth"/>
 							<and name="Discontiuous">
 								<description>
@@ -318,7 +318,7 @@
 							</feature>
 							<feature name="Other"/>
 						</and>
-					</alt>
+					</and>
 				</or>
 				<and name="Behavior">
 					<description>Dynamical pattern.</description>
@@ -708,10 +708,10 @@
 			</and>
 			<feature mandatory="true" name="System Bus">
 				<description>
-					The system bus is a pathway composed of cables and connectors &#13;
-					used to carry data between a computer microprocessor and the &#13;
-					main memory. The bus provides a communication path for the &#13;
-					data and control signals moving between the major components &#13;
+					The system bus is a pathway composed of cables and connectors
+					used to carry data between a computer microprocessor and the
+					main memory. The bus provides a communication path for the
+					data and control signals moving between the major components
 					of the computer system.
 				</description>
 			</feature>
@@ -780,7 +780,7 @@
 <feature name="OtherEngineering"/>
 </or>
 <and mandatory="true" name="Architecture">
-<graphics key="collapsed" value="true"/>
+<graphics key="collapsed" value="false"/>
 <feature mandatory="true" name="ManagementLayer"/>
 <feature mandatory="true" name="CPSComponentLayer"/>
 <feature mandatory="true" name="NetworkLayer"/>

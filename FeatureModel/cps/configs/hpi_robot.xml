@@ -35,7 +35,7 @@
 	<feature automatic="selected" name="Scope"/>
 	<feature manual="selected" name="Centralized"/>
 	<feature automatic="unselected" name="Decentralized"/>
-	<feature automatic="unselected" name="Distributfed"/>
+	<feature automatic="unselected" name="Distributed"/>
 	<feature automatic="selected" manual="selected" name="Dynamics"/>
 	<feature automatic="selected" manual="selected" name="SystemType"/>
 	<feature automatic="selected" manual="selected" name="Linearity"/>
