@@ -15,6 +15,9 @@
     <Import>http://mpm4cps.eu/ontology/cps</Import>
     <Import>http://mpm4cps.eu/ontology/mpm</Import>
     <Declaration>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isToolFor"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#AADL"/>
     </Declaration>
     <Declaration>
@@ -339,13 +342,13 @@
         <NamedIndividual IRI="#HybridAutomataStochastic"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#IRM"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#IRM-SA-Language"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#IRM-SATool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IRMLanguage"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#IconicDiagrams"/>
@@ -929,9 +932,6 @@
     <Declaration>
         <NamedIndividual IRI="#TimedI/OAutomata"/>
     </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isToolFor"/>
-    </Declaration>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ArchitectureDescriptionLanguage"/>
         <NamedIndividual IRI="#AADL"/>
@@ -1338,15 +1338,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelingLanguage"/>
-        <NamedIndividual IRI="#IRM"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelingLanguage"/>
         <NamedIndividual IRI="#IRM-SA-Language"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelingTool"/>
         <NamedIndividual IRI="#IRM-SATool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelingLanguage"/>
+        <NamedIndividual IRI="#IRMLanguage"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelingLanguage"/>
@@ -7226,32 +7226,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
-        <IRI>#IRM</IRI>
-        <Literal>Rima_Al-Ali</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:fullName"/>
-        <IRI>#IRM</IRI>
-        <Literal>Invariant Refinement Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#IRM</IRI>
-        <Literal>IRM provides the developer with a way to design
-			Cyber-Physical Systems (CPS). The designed system follows the
-			concepts presented in SCEL, which includes systems consisting of
-			ensembles of components (e.g. DEECo-based systems). It is a method to
-			map invariants from requirements level with parts of the system
-			architecture.
-		</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#IRM</IRI>
-        <Literal>key:IRM-website</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
         <IRI>#IRM-SA-Language</IRI>
         <Literal>Rima_Al-Ali</Literal>
     </AnnotationAssertion>
@@ -7303,6 +7277,32 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>#IRM-SATool</IRI>
+        <Literal>key:IRM-website</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
+        <IRI>#IRMLanguage</IRI>
+        <Literal>Rima_Al-Ali</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:fullName"/>
+        <IRI>#IRMLanguage</IRI>
+        <Literal>Invariant Refinement Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IRMLanguage</IRI>
+        <Literal>IRM provides the developer with a way to design
+			Cyber-Physical Systems (CPS). The designed system follows the
+			concepts presented in SCEL, which includes systems consisting of
+			ensembles of components (e.g. DEECo-based systems). It is a method to
+			map invariants from requirements level with parts of the system
+			architecture.
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#IRMLanguage</IRI>
         <Literal>key:IRM-website</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
