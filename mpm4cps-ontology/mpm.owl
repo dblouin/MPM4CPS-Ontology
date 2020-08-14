@@ -96,6 +96,9 @@
         <Class IRI="#HybridAutomataBasedFormalism"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#LanguageFragment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#LogicBasedFormalism"/>
     </Declaration>
     <Declaration>
@@ -177,6 +180,9 @@
         <Class IRI="#TimedCharacteristic"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ToolExtension"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TraceabilityModel"/>
     </Declaration>
     <Declaration>
@@ -252,10 +258,16 @@
         <ObjectProperty IRI="#hasContextRelation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCoreLanguage"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasInputModel"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLanguageFragment"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasMetamodel"/>
@@ -288,7 +300,13 @@
         <ObjectProperty IRI="#isBasedOn"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isEnvironmentFor"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isImplementedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isToolExtensionFor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasSyntax"/>
@@ -464,6 +482,10 @@
         <Class IRI="#AutomataBasedFormalism"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#LanguageFragment"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Language"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#LogicBasedFormalism"/>
         <Class IRI="#Formalism"/>
     </SubClassOf>
@@ -577,6 +599,10 @@
     <SubClassOf>
         <Class IRI="#TimedCharacteristic"/>
         <Class IRI="#BehavioralCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ToolExtension"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TraceabilityModel"/>
@@ -695,12 +721,20 @@
         <Class IRI="#ModelRelation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoreLanguage"/>
+        <Class IRI="#ModelingLanguage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasInputModel"/>
         <Class IRI="#ModelRelation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasLanguage"/>
         <Class IRI="#Micromodel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLanguageFragment"/>
+        <Class IRI="#ModelingLanguage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMetamodel"/>
@@ -743,8 +777,16 @@
         <Class IRI="#ModelingLanguage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEnvironmentFor"/>
+        <Class IRI="#ModelingTool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isImplementedBy"/>
         <Class IRI="#Formalism"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isToolExtensionFor"/>
+        <Class IRI="#ToolExtension"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAbstractSyntax"/>
@@ -791,12 +833,20 @@
         <Class IRI="#ModelRelation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoreLanguage"/>
+        <Class IRI="#ModelingLanguage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasInputModel"/>
         <Class IRI="#Model"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasLanguage"/>
         <Class IRI="#ModelingLanguage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLanguageFragment"/>
+        <Class IRI="#LanguageFragment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMetamodel"/>
@@ -839,8 +889,16 @@
         <Class IRI="#Formalism"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEnvironmentFor"/>
+        <Class IRI="#ToolExtension"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isImplementedBy"/>
         <Class IRI="#ModelingLanguage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isToolExtensionFor"/>
+        <Class IRI="#ModelingTool"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1040,6 +1098,16 @@ However pure graphical syntax are not common and often include textual parts.</L
         <Literal>Hybrid Automata-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
+        <IRI>#LanguageFragment</IRI>
+        <Literal>Rakshit Mittal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LanguageFragment</IRI>
+        <Literal>Fragments of language that are not languages in themselves but dependent on other language(s) for complete meaning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#LogicBasedFormalism</IRI>
         <Literal>Logic-based Formalisms</Literal>
@@ -1224,6 +1292,16 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TimedCharacteristic</IRI>
         <Literal>Timed Characteristic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
+        <IRI>#ToolExtension</IRI>
+        <Literal>Rakshit Mittal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ToolExtension</IRI>
+        <Literal>Extension of a tool, not a standalone tool.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
