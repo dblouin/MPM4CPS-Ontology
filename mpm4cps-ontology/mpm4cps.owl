@@ -235,7 +235,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>4cps#ModelBasedProcess</IRI>
-        <Literal>The Process class of the Shared ontology in refined into the ModelBasedProcess class to represent all processes that manipulate models instead of data fields.</Literal>
+        <Literal>The Process class of the Shared ontology is refined into the ModelBasedProcess class to represent all processes that manipulate models instead of data fields.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>

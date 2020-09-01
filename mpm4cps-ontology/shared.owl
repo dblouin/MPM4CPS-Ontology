@@ -221,6 +221,12 @@ The detailed specification of the shared onytology is provided in the following 
         <ObjectProperty IRI="#isImplementingStage"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isTransitionFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTransitionTo"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="#hasLanguageDesc"/>
     </Declaration>
     <Declaration>
@@ -571,6 +577,14 @@ The detailed specification of the shared onytology is provided in the following 
         <ObjectProperty IRI="#isImplementingStage"/>
         <Class IRI="#Activity"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTransitionFrom"/>
+        <Class IRI="#Transition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTransitionTo"/>
+        <Class IRI="#Transition"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasActivities"/>
         <Class IRI="#Activity"/>
@@ -666,6 +680,14 @@ The detailed specification of the shared onytology is provided in the following 
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isImplementingStage"/>
         <Class IRI="#EngineeringStage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTransitionFrom"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTransitionTo"/>
+        <Class IRI="#Activity"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
