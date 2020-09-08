@@ -480,6 +480,11 @@
         <NamedIndividual IRI="#SimulationMegaModelFragment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#DEECoDesignModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DEECo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedMegamodelFragments"/>
         <NamedIndividual IRI="#DEECoMegaModel"/>
         <NamedIndividual IRI="#DesignMegaModelFragment"/>
@@ -603,6 +608,16 @@
         <ObjectProperty abbreviatedIRI="mpm:hasContainedModels"/>
         <NamedIndividual IRI="#DEECoMegaModel"/>
         <NamedIndividual IRI="#OMNet++RuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#DEECoRuntime-Self-AdaptationModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DEECo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#DEECoRuntimeModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DEECo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasUsedModels"/>
@@ -740,6 +755,16 @@
         <NamedIndividual IRI="#OMNet++RuntimeModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#MATSimDesignModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#MATSimRuntimeModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#RequirementsCapturingOperation"/>
         <NamedIndividual IRI="#IRMModel"/>
@@ -830,6 +855,11 @@
         <NamedIndividual IRI="#DEECoDesignModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#Self-AdaptationModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
         <NamedIndividual IRI="#Self-Adaptation_DEECoRuntime_IntegrationOperation"/>
         <NamedIndividual IRI="#DEECoRuntimeModel"/>
@@ -875,6 +905,11 @@
         <NamedIndividual IRI="#OMNet++RuntimeModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#DEECoRuntime-MATSimRuntime-OMNet++RuntimeModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
         <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
         <NamedIndividual IRI="#DEECoRuntimeModel"/>
@@ -893,6 +928,16 @@
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
         <NamedIndividual IRI="#DEECoRuntime-MATSimRuntime-OMNet++RuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#OMNet++DesignModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#OMNetPPLanguage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#OMNet++RuntimeModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#OMNetPPLanguage"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasCoreLanguage"/>
