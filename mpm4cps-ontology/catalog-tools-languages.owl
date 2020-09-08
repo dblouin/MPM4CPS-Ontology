@@ -183,7 +183,16 @@
         <NamedIndividual IRI="#CytoscapeLanguage"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DEECOModeSwitch"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DEECo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DEECoGoals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DEECoHieraricalEnsembles"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DSLTrans"/>
@@ -1150,8 +1159,20 @@
         <NamedIndividual IRI="#CytoscapeLanguage"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#LanguageFragment"/>
+        <NamedIndividual IRI="#DEECOModeSwitch"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ArchitectureDescriptionLanguage"/>
         <NamedIndividual IRI="#DEECo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#LanguageFragment"/>
+        <NamedIndividual IRI="#DEECoGoals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#LanguageFragment"/>
+        <NamedIndividual IRI="#DEECoHieraricalEnsembles"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#TransformationLanguage"/>
@@ -2353,6 +2374,21 @@
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isBasedOn"/>
         <NamedIndividual IRI="#CytoscapeLanguage"/>
         <NamedIndividual IRI="#ComplexNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguageFragment"/>
+        <NamedIndividual IRI="#DEECo"/>
+        <NamedIndividual IRI="#DEECOModeSwitch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguageFragment"/>
+        <NamedIndividual IRI="#DEECo"/>
+        <NamedIndividual IRI="#DEECoGoals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasLanguageFragment"/>
+        <NamedIndividual IRI="#DEECo"/>
+        <NamedIndividual IRI="#DEECoHieraricalEnsembles"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#hasTool"/>
@@ -4292,7 +4328,22 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isEnvironmentFor"/>
         <NamedIndividual IRI="#jDEECo"/>
-        <NamedIndividual IRI="#IRM-SATool"/>
+        <NamedIndividual IRI="#HierarchicalEnsemblePlugin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isEnvironmentFor"/>
+        <NamedIndividual IRI="#jDEECo"/>
+        <NamedIndividual IRI="#IRMPlugin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isEnvironmentFor"/>
+        <NamedIndividual IRI="#jDEECo"/>
+        <NamedIndividual IRI="#MATSimPlugin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isEnvironmentFor"/>
+        <NamedIndividual IRI="#jDEECo"/>
+        <NamedIndividual IRI="#ModePlugin"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isToolFor"/>
