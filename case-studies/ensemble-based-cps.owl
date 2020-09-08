@@ -612,7 +612,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
         <NamedIndividual IRI="#DEECoRuntime-Self-AdaptationModel"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DEECo"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
@@ -857,7 +857,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
         <NamedIndividual IRI="#Self-AdaptationModel"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DEECOModeSwitch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
+        <NamedIndividual IRI="#Self-AdaptationModel"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DEECoGoals"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
@@ -938,11 +943,6 @@
         <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
         <NamedIndividual IRI="#OMNet++RuntimeModel"/>
         <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#OMNetPPLanguage"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasCoreLanguage"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DEECo"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
