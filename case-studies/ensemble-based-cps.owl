@@ -480,11 +480,6 @@
         <NamedIndividual IRI="#SimulationMegaModelFragment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasLanguage"/>
-        <NamedIndividual IRI="#DEECoDesignModel"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasContainedMegamodelFragments"/>
         <NamedIndividual IRI="#DEECoMegaModel"/>
         <NamedIndividual IRI="#DesignMegaModelFragment"/>
@@ -700,11 +695,6 @@
         <NamedIndividual IRI="#IRM-SAModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="mpm:hasInputModel"/>
-        <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
-        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#IRMLanguage"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#IRMDEECoDesignTransoformationOperation"/>
         <NamedIndividual IRI="#DEECoDesignModel"/>
@@ -903,6 +893,11 @@
         <ObjectProperty abbreviatedIRI="mpm:hasOutputModel"/>
         <NamedIndividual IRI="#DEECoRuntime_MATSim_OMNet++_IntegrationOperation"/>
         <NamedIndividual IRI="#DEECoRuntime-MATSimRuntime-OMNet++RuntimeModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="mpm:hasCoreLanguage"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#DEECo"/>
+        <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Java"/>
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
