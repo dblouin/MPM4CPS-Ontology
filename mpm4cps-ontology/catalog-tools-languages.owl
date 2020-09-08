@@ -15,9 +15,6 @@
     <Import>http://mpm4cps.eu/ontology/cps</Import>
     <Import>http://mpm4cps.eu/ontology/mpm</Import>
     <Declaration>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm#isToolFor"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#AADL"/>
     </Declaration>
     <Declaration>
