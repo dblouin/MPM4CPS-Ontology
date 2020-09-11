@@ -2,10 +2,7 @@ pre {
 	"Running fmToOWL transformation".println();
 	var ont : new owl!Ontology;
 	var sharedOnt : new owl!Import;	
-	var DCMap = new Map;
 	var sharedClasses = new List;
-	var userPrompt = new String;
-	var sharedOntology : new Boolean;
 	
 	// Header settings
 	ont.base = "http://mpm4cps.eu/ontology/cpsFM";
@@ -19,58 +16,14 @@ pre {
 	addPrefix("xsd", "http://www.w3.org/2001/XMLSchema#");
 	addPrefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
 	
-	// Import shared ontology
-	/*userPrompt = System.user.prompt("Take into account shared ontology? (y/N)");
-	if (userPrompt.toLowerCase() == "y") {
-		sharedOntology = true;
-		sharedOnt.value = "http://mpm4cps.eu/ontology/shared";
-		ont.Import.add(sharedOnt);
-	}
-	else {*/
-		sharedOntology = false;
-	//}
 	
-	// Search for the top classes
-	for (fmStruct in fm!StructType) {	
-		
-		for (branch in fmStruct.And) {
-			
-			for (feature in branch.feature) {
-				var oldClassName : String;
-				var newClassName : String;
-				oldClassName = feature.name;
-				newClassName = feature.name + "DC";
-				DCMap.put(oldClassName, newClassName);
-			}
-			
-			for (subBranch in branch.alt) {
-				var oldClassName : String;
-				var newClassName : String;
-				oldClassName = subBranch.name;
-				newClassName = subBranch.name + "DC";
-				DCMap.put(oldClassName, newClassName);
-			}
-			
-			for (subBranch in branch.And) {
-				var oldClassName : String;
-				var newClassName : String;
-				oldClassName = subBranch.name;
-				newClassName = subBranch.name + "DC";
-				DCMap.put(oldClassName, newClassName);
-			}
-			
-			for (subBranch in branch.Or) {
-				var oldClassName : String;
-				var newClassName : String;
-				oldClassName = subBranch.name;
-				newClassName = subBranch.name + "DC";
-				DCMap.put(oldClassName, newClassName);
-			}
-		}
-	}
+	//import shared ontology and prepare a list of its classes
+	sharedOnt.value = "http://mpm4cps.eu/ontology/shared";
+	ont.Import.add(sharedOnt);
 	
-	DCMap.println();
-	sharedClasses.println();
+	for (class in shared!Class) {
+	   sharedClasses.add(class.iri);
+	}
 }
 
 post {
@@ -590,18 +543,13 @@ operation generateOwlClassIRI(	prefix: String,
 		}
 		fmName = refactoredfmName;
 	}
-
-	if (DCMap.containsKey(fmName)) {
-		if (sharedClasses.contains(DCMap.get(fmName))) {
-			return sharedOnt.value + "#" + prefix + DCMap.get(fmName);
-		}
-		else {
-			return "#" + prefix + fmName.legalName();
-		}
+	if (sharedClasses.contains("#"+ prefix + fmName)) {
+			return sharedOnt.value + "#" + prefix + fmName;
 	}
 	else {
-		return "#" + prefix + fmName.legalName();
+			return "#" + prefix + fmName.legalName();
 	}
+
 }
 
 operation createDescription (classIRI : String, description : String) : owl!AnnotationAssertion {
