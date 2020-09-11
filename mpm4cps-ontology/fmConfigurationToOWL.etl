@@ -1,0 +1,74 @@
+pre {
+	"Running fmConfigurationToOWL transformation".println();
+	var ont : new owl!Ontology;
+	var sharedOnt : new owl!Import;	
+	var sharedClasses = new List;
+	
+	// Header settings
+	ont.base = "http://mpm4cps.eu/ontology/cpsFM";
+	ont.ontologyIRI = "http://mpm4cps.eu/ontology/cpsFM";
+	
+	// Prefixes
+	addPrefix("", "http://mpm4cps.eu/ontology/cpsFM");
+	addPrefix("owl", "http://www.w3.org/2002/07/owl#");
+	addPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+	addPrefix("xml", "http://www.w3.org/XML/1998/namespace");
+	addPrefix("xsd", "http://www.w3.org/2001/XMLSchema#");
+	addPrefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
+}
+
+post {
+	"Configuration model to WOL transformation finished.".println();
+}
+
+/**************************/
+/********* RULES **********/
+/**************************/
+
+// The following two rules transform the feature model instances to owl classes
+rule featureTypeToClass
+	transform configuration : conf!ConfigurationType
+	to owlDeclaration : owl!Declaration {
+		var owlClass : new owl!Class;
+		owlClass.iri = "#" + configuration.feature.name;
+		
+		owlDeclaration.class = owlClass;
+		ont.declaration.add(owlDeclaration);
+		
+	}
+operation addPrefix(prefixName : String, prefixIRI : String) {
+	var prefix = new owl!Prefix;
+	prefix.name = prefixName;
+	prefix.iri = prefixIRI;
+	ont.Prefix.add(prefix);
+}
+
+operation generateOwlClassIRI(fmName : String) : String {
+	return generateOwlClassIRI( '', fmName );
+}
+
+operation generateOwlClassIRI(	prefix: String,
+								fmName : String) : String {
+	var refactoredfmName : String;
+	var splited = new List;
+	splited = fmName.split("\\s+");
+	if (splited.size() > 1) {
+		for (s in splited) {
+			refactoredfmName += s.firstToUpperCase();
+		}
+		fmName = refactoredfmName;
+	}
+	if (sharedClasses.contains("#"+ prefix + fmName)) {
+			return sharedOnt.value + "#" + prefix + fmName;
+	}
+	else {
+			return "#" + prefix + fmName.legalName();
+	}
+
+}
+
+operation fm!FeatureType convert() {
+	if ( self.hidden ) {
+		return false;
+	}
+}
