@@ -1,20 +1,38 @@
 pre {
 	"Running fmConfigurationToOWL transformation".println();
 	var ont : new owl!Ontology;
-	var sharedOnt : new owl!Import;	
+	var mpm4cpsOnt : new owl!Import;
+	var catalogOnt : new owl!Import;	
+		
 	var sharedClasses = new List;
 	
 	// Header settings
-	ont.base = "http://mpm4cps.eu/ontology/cpsFM";
-	ont.ontologyIRI = "http://mpm4cps.eu/ontology/cpsFM";
+	ont.base = "http://mpm4cps.eu/ontology/ToBeAdded";
+	ont.ontologyIRI = "http://mpm4cps.eu/ontology/ToBeAdded";
 	
 	// Prefixes
-	addPrefix("", "http://mpm4cps.eu/ontology/cpsFM");
+	addPrefix("", "http://mpm4cps.eu/ontology/ToBeAdded");
 	addPrefix("owl", "http://www.w3.org/2002/07/owl#");
 	addPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 	addPrefix("xml", "http://www.w3.org/XML/1998/namespace");
 	addPrefix("xsd", "http://www.w3.org/2001/XMLSchema#");
 	addPrefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
+	
+    addPrefix("mpm","http://mpm4cps.eu/ontology/mpm#");    
+    addPrefix("shared", "http://mpm4cps.eu/ontology/shared#");
+    addPrefix("mpm4cps", "http://mpm4cps.eu/ontology/shared#mpm4cps:");
+    addPrefix("cps","http://mpm4cps.eu/ontology/cps#");
+    
+	
+	
+	
+	//import shared ontology and prepare a list of its classes
+	mpm4cpsOnt.value = "http://mpm4cps.eu/ontology/mpm4cps";
+	ont.Import.add(mpm4cpsOnt);
+	
+	catalogOnt.value = "http://mpm4cps.eu/ontology/catalog-tools-languages";
+	ont.Import.add(catalogOnt);	
+	
 }
 
 post {
@@ -25,23 +43,52 @@ post {
 /********* RULES **********/
 /**************************/
 
-// The following two rules transform the feature model instances to owl classes
+// The following two rules transform the configuration features to owl individuals
+
+	
 rule featureTypeToClass
-	transform configuration : conf!ConfigurationType
-	to owlDeclaration : owl!Declaration {
-		var owlClass : new owl!Class;
-		owlClass.iri = "#" + configuration.feature.name;
+	transform feature : conf!FeatureType
+	to owlDeclaration : owl!Declaration,
+       owlClassAssertion : owl!ClassAssertion {
+       
+
+		if ((feature.automatic.asString = "selected") or 
+		    (feature.manual.asString = "selected")){
+		 
+		   var owlInd : new owl!NamedIndividual;
+     	   owlInd.iri = generateOwlClassIRI ("ToBeAddedFor", feature.name);
+	       owlDeclaration.setNamedIndividual (owlInd);
+		   ont.declaration.add(owlDeclaration);
 		
-		owlDeclaration.class = owlClass;
-		ont.declaration.add(owlDeclaration);
-		
-	}
+		   var owlClassforAssertion : new owl!Class;
+		   owlClassforAssertion.iri = generateCPSOwlClassIRI ("", feature.name);
+		   var owlIndforAssertion : new owl!NamedIndividual;
+		   owlIndforAssertion.iri = generateOwlClassIRI ("ToBeAddedFor", feature.name);
+		   owlClassAssertion.setClass (owlClassforAssertion);		   
+		   owlClassAssertion.setNamedIndividual (owlIndforAssertion);
+		   ont.classAssertion.add (owlClassAssertion);
+
+    }
+}	
+	
+	
+	
 operation addPrefix(prefixName : String, prefixIRI : String) {
 	var prefix = new owl!Prefix;
 	prefix.name = prefixName;
 	prefix.iri = prefixIRI;
 	ont.Prefix.add(prefix);
 }
+
+
+operation conf!FeatureType generateOwlObjectPropertyIRI() : String {
+	return "#has" + self.name.legalName();
+}
+
+operation String legalName() : String {
+	return self.replaceall( ' ', '' );
+}
+
 
 operation generateOwlClassIRI(fmName : String) : String {
 	return generateOwlClassIRI( '', fmName );
@@ -58,17 +105,22 @@ operation generateOwlClassIRI(	prefix: String,
 		}
 		fmName = refactoredfmName;
 	}
-	if (sharedClasses.contains("#"+ prefix + fmName)) {
-			return sharedOnt.value + "#" + prefix + fmName;
-	}
-	else {
-			return "#" + prefix + fmName.legalName();
-	}
 
+	return "#" + prefix + fmName.legalName();
 }
 
-operation fm!FeatureType convert() {
-	if ( self.hidden ) {
-		return false;
+
+operation generateCPSOwlClassIRI(	prefix: String,
+								fmName : String) : String {
+	var refactoredfmName : String;
+	var splited = new List;
+	splited = fmName.split("\\s+");
+	if (splited.size() > 1) {
+		for (s in splited) {
+			refactoredfmName += s.firstToUpperCase();
+		}
+		fmName = refactoredfmName;
 	}
+
+	return "http://mpm4cps.eu/ontology/cps" + "#" + prefix + fmName;
 }
