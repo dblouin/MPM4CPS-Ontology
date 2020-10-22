@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relations:FeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:relations="platform:/resource/fr.tpt.mem4csd.featureide.model/model/relations.xsd" name="cps">
+  <branchRelations>
+    <superBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.0/@and.0"/>
+    <childBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.0/@and.0/@and.0"/>
+    <childFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.0/@and.0/@feature.0"/>
+    <childFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.0/@and.0/@feature.1"/>
+  </branchRelations>
+  <branchRelations>
+    <superBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.0/@and.0/@and.0"/>
+    <childBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.0/@and.0/@and.0/@and.0"/>
+    <childFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.0/@and.0/@and.0/@feature.0"/>
+    <childFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.0/@and.0/@and.0/@feature.1"/>
+  </branchRelations>
+</relations:FeatureModel>
