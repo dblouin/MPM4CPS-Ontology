@@ -5,11 +5,11 @@ pre {
 	var sharedClasses = new List;
 	
 	// Header settings
-	ont.base = "http://mpm4cps.eu/ontology/cpsFM";
-	ont.ontologyIRI = "http://mpm4cps.eu/ontology/cpsFM";
+	ont.base = "http://mpm4cps.eu/ontology/cps";
+	ont.ontologyIRI = "http://mpm4cps.eu/ontology/cps";
 	
 	// Prefixes
-	addPrefix("", "http://mpm4cps.eu/ontology/cpsFM");
+	addPrefix("", "http://mpm4cps.eu/ontology/cps");
 	addPrefix("owl", "http://www.w3.org/2002/07/owl#");
 	addPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 	addPrefix("xml", "http://www.w3.org/XML/1998/namespace");
@@ -56,7 +56,6 @@ post {
 rule featureTypeToClass
 	transform feature : fm!FeatureType
 	to owlDeclaration : owl!Declaration {
-//		guard : isSubclass( fmFeature.name )
 	guard : feature.convert()
 		// Create class
 		var owlClass : new owl!Class;
@@ -68,6 +67,9 @@ rule featureTypeToClass
 			ont.annotationAssertion.add(createDescription(owlClass.iri, feature.description));
 			ont.annotationAssertion.add(createAuthor(owlClass.iri, "FeatureModel"));
 		}
+		
+
+			
 	}
 
 rule branchTypeToClass
@@ -83,66 +85,23 @@ rule branchTypeToClass
 			ont.annotationAssertion.add(createDescription(owlClass.iri, branch.description));
 			ont.annotationAssertion.add(createAuthor(owlClass.iri, "FeatureModel"));
 		}
-	}
-
-// Create hierarchy in the ontology
-/*rule hierarchy
-	transform fmBranch : fm!BranchType
-	to owlClass : owl!Class {
-		// Subdivide into classes and subclasses
-		owlClass.iri = generateOwlClassIRI(fmBranch.name);
-			
-		for (feature in fmBranch.feature.equivalent()) {
-			// if (not fmBranch.name.endsWith('*')) {
-			if ( feature.isKindOf( owl!Class) ) {
-				var owlSubClass : new owl!SubClassOf;
-				var owlParentClass : new owl!Class;
-				var owlChildClass : new owl!Class;
+		
+		var subClasses : List = branch.hasSubclasses();
+        if (subClasses.notEmpty){
+		   for (feature in subClasses) {	   
+		      var owlSubClass : new owl!SubClassOf;
+		      var owlParentClass : new owl!Class;
+		      var owlChildClass : new owl!Class;
 				
-				owlChildClass.iri = feature.iri;
-				owlSubClass.class.add(owlChildClass);
-				owlParentClass.iri = owlClass.iri;
-				owlSubClass.class.add(owlParentClass);
-				ont.subclassof.add(owlSubClass);
-			// }
-			// else {
-			// 	delete feature;
-			}
-		}
-		
-		// Alternative relationship
-		for (branch in fmBranch.alt) {
-			if ( isSubclass( branch.name ) ) {
-//			if (not branch.name.endsWith('*')) {
-				ontHierarchy(branch, owlClass.iri);
-			}
-			// else {
-			// 	deleteFeature(branch);
-			// }
-		}
-		
-		// Mandatory relationship
-		for (branch in fmBranch.And) {
-			if ( isSubclass( branch.name ) ) {
-//			if (not branch.name.endsWith('*')) {
-				ontHierarchy(branch, owlClass.iri);
-			}
-			// else {
-			// 	deleteFeature(branch);
-			// }
-		}
-		
-		// Or relationship
-		for (branch in fmBranch.Or) {
-			if ( isSubclass( branch.name ) ) {
-//			if (not branch.name.endsWith('*')) {
-				ontHierarchy(branch, owlClass.iri);
-			}
-			// else {
-			// 	deleteFeature(branch);
-			// }
-		}
-	}*/
+		      owlChildClass.iri = feature.equivalent().class.iri;
+    		  owlSubClass.class.add(owlChildClass);
+		      owlParentClass.iri = owlClass.iri;
+		      owlSubClass.class.add(owlParentClass);
+		      ont.subclassof.add(owlSubClass);
+		   }
+		}		
+}
+
 
 // Add object properties to the ontology (used for relationships between classes)
 rule branchTypeToDeclareObjectProperties
@@ -165,7 +124,9 @@ rule featureTypeToDeclareObjectProperties
 
 rule branchTypeToObjectPropertyRange
 	transform branch : fm!BranchType
-	to owlObjectPropertyRange : owl!ObjectPropertyRange, owlOP : owl!ObjectProperty, owlClass: owl!Class {
+	to owlObjectPropertyRange : owl!ObjectPropertyRange, 
+	owlOP : owl!ObjectProperty, 
+	owlClass: owl!Class {
 	guard : branch.convert()
 		owlOP.iri = branch.generateOwlObjectPropertyIRI();
 		owlObjectPropertyRange.objectProperty = owlOP;
@@ -176,7 +137,8 @@ rule branchTypeToObjectPropertyRange
 
 rule featureTypeToObjectPropertyRange
 	transform feature : fm!FeatureType
-	to owlObjectPropertyRange : owl!ObjectPropertyRange, owlOP : owl!ObjectProperty, owlClass: owl!Class {
+	to owlObjectPropertyRange : owl!ObjectPropertyRange,
+	 owlOP : owl!ObjectProperty, owlClass: owl!Class {
 	guard : feature.convert()
 		owlOP.iri = feature.generateOwlObjectPropertyIRI();
 		owlObjectPropertyRange.objectProperty = owlOP;
@@ -394,6 +356,7 @@ operation fm!BranchType addSomeValueFromFeature( owlObjectUnionOf : owl!ObjectUn
 		var owlOP : new owl!ObjectProperty;
 		owlOP.iri = self.generateOwlObjectPropertyIRI();
 		owlObjectSomeValuesFrom.objectProperty = owlOP;
+		
 		var owlClassRange : new owl!Class;
 		owlClassRange.iri = generateOwlClassIRI(self.name);
 		owlObjectSomeValuesFrom.class = owlClassRange;
@@ -633,23 +596,6 @@ operation deleteFeature (branch : fm!BranchType) {
 	}
 }
 
-operation ontHierarchy (branch : fm!BranchType, parentClassName : String) {
-	var owlSubClass : new owl!SubClassOf;
-	var owlParentClass : new owl!Class;
-	var owlChildClass : new owl!Class;
-	
-	// For some reason there is a need to delay the execution of the transformation (e.g., by adding some print output). 
-	// If not, it might be that the owlChildClass is missing in the owl-file.
-	
-	("class " + branch.equivalent().class.iri + " ").print();
-	
-	owlChildClass.iri = branch.equivalent().class.iri;
-	owlSubClass.class.add(owlChildClass);
-	owlParentClass.iri = parentClassName;
-	("subClass of " + parentClassName).println();
-	owlSubClass.class.add(owlParentClass);
-	ont.subclassof.add(owlSubClass);
-}
 
 operation searchForBranches (branch : fm!BranchType) {
 	// Alternative branches
@@ -731,7 +677,7 @@ operation searchForBranches (branch : fm!BranchType) {
 	for (subBranch in branch.Or) {
 		// Create childs for every branch in the feature model
 		var owlChildClass : new owl!Class;		
-		owlChildClass.iri = subBranch.equivalent().class.iri;	
+		owlChildClass.iri = subBranch.Dua Lipa - IDGAFequivalent().class.iri;	
 		// Add the child elements to the ObjectUnionOf MM class
 		owlObjectUnionOf.class.add(owlChildClass);
 	}
@@ -886,3 +832,19 @@ operation addOrObjProp(owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owl
 	owlSubClassOf.objectSomeValuesFrom = owlObjectSomeValuesFrom;
 	ont.subclassof.add(owlSubClassOf);
 }*/
+
+
+operation fm!BranchType hasSubclasses (): List {
+   var subClasses = new List;
+   for (branch in inheritances!BranchSubRelation) {
+      if (branch.SuperBranch = self){
+	     for (feat in branch.ChildFeature) {
+	        subClasses.add (feat);
+	        }
+	     for (bran in branch.ChildBranch) {
+	        subClasses.add (bran);
+	        }	       
+	  }    
+   }
+   return subClasses;
+}
