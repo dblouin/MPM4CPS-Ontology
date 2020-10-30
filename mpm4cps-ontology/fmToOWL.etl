@@ -836,12 +836,12 @@ operation addOrObjProp(owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owl
 
 operation fm!BranchType hasSubclasses (): List {
    var subClasses = new List;
-   for (branch in inheritances!BranchSubRelation) {
+   for (branch in inheritances!SubClassRelation) {
       if (branch.SuperBranch = self){
-	     for (feat in branch.ChildFeature) {
+	     for (feat in branch.SubFeature) {
 	        subClasses.add (feat);
 	        }
-	     for (bran in branch.ChildBranch) {
+	     for (bran in branch.SubBranch) {
 	        subClasses.add (bran);
 	        }	       
 	  }    
