@@ -26,7 +26,7 @@ pre {
 	
 	
 	
-	//import shared ontology and prepare a list of its classes
+	//import mpm4cps and catalog ontologies
 	mpm4cpsOnt.value = "http://mpm4cps.eu/ontology/mpm4cps";
 	ont.Import.add(mpm4cpsOnt);
 	
@@ -50,25 +50,21 @@ rule featureTypeToClass
 	transform feature : conf!FeatureType
 	to owlDeclaration : owl!Declaration,
        owlClassAssertion : owl!ClassAssertion {
-       
-
-		if ((feature.automatic.asString = "selected") or 
-		    (feature.manual.asString = "selected")){
-		 
+    guard : feature.convert ()
+		   //feature.name.println();
 		   var owlInd : new owl!NamedIndividual;
      	   owlInd.iri = generateOwlClassIRI ("ToBeAddedFor", feature.name);
 	       owlDeclaration.setNamedIndividual (owlInd);
 		   ont.declaration.add(owlDeclaration);
 		
 		   var owlClassforAssertion : new owl!Class;
-		   owlClassforAssertion.iri = generateCPSOwlClassIRI ("", feature.name);
+		   owlClassforAssertion.iri = generateCPSOwlClassIRI (feature.name);
 		   var owlIndforAssertion : new owl!NamedIndividual;
 		   owlIndforAssertion.iri = generateOwlClassIRI ("ToBeAddedFor", feature.name);
 		   owlClassAssertion.setClass (owlClassforAssertion);		   
 		   owlClassAssertion.setNamedIndividual (owlIndforAssertion);
 		   ont.classAssertion.add (owlClassAssertion);
 
-    }
 }	
 	
 	
@@ -110,8 +106,7 @@ operation generateOwlClassIRI(	prefix: String,
 }
 
 
-operation generateCPSOwlClassIRI(	prefix: String,
-								fmName : String) : String {
+operation generateCPSOwlClassIRI(fmName : String) : String {
 	var refactoredfmName : String;
 	var splited = new List;
 	splited = fmName.split("\\s+");
@@ -122,5 +117,14 @@ operation generateCPSOwlClassIRI(	prefix: String,
 		fmName = refactoredfmName;
 	}
 
-	return "http://mpm4cps.eu/ontology/cps" + "#" + prefix + fmName;
+	return "http://mpm4cps.eu/ontology/cps" + "#" + fmName;
+}
+
+operation conf!FeatureType convert (): Boolean{
+
+   if ((self.automatic.asString = "selected") or 
+       (self.manual.asString = "selected")){
+       return true;
+   }
+   return false;
 }

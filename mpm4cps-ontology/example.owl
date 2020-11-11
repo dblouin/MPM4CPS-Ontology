@@ -1,0 +1,1828 @@
+<?xml version="1.0" encoding="ASCII"?>
+<owl:Ontology xmlns:owl="http://www.w3.org/2002/07/owl#" xml:base="http://mpm4cps.eu/ontology/ToBeAdded" ontologyIRI="http://mpm4cps.eu/ontology/ToBeAdded">
+  <owl:Prefix IRI="http://mpm4cps.eu/ontology/ToBeAdded" name=""/>
+  <owl:Prefix IRI="http://www.w3.org/2002/07/owl#" name="owl"/>
+  <owl:Prefix IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" name="rdf"/>
+  <owl:Prefix IRI="http://www.w3.org/XML/1998/namespace" name="xml"/>
+  <owl:Prefix IRI="http://www.w3.org/2001/XMLSchema#" name="xsd"/>
+  <owl:Prefix IRI="http://www.w3.org/2000/01/rdf-schema#" name="rdfs"/>
+  <owl:Prefix IRI="http://mpm4cps.eu/ontology/mpm#" name="mpm"/>
+  <owl:Prefix IRI="http://mpm4cps.eu/ontology/shared#" name="shared"/>
+  <owl:Prefix IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:" name="mpm4cps"/>
+  <owl:Prefix IRI="http://mpm4cps.eu/ontology/cps#" name="cps"/>
+  <owl:Import>http://mpm4cps.eu/ontology/mpm4cps</owl:Import>
+  <owl:Import>http://mpm4cps.eu/ontology/catalog-tools-languages</owl:Import>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCPS"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CPS"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCPS"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForConstituentElement"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ConstituentElement"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForConstituentElement"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCyber"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Cyber"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCyber"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSoftware"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Software"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSoftware"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForApplicationSoftware"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ApplicationSoftware"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForApplicationSoftware"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemSoftware"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SystemSoftware"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemSoftware"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOperatingSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#OperatingSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOperatingSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForUserInterface"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#UserInterface"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForUserInterface"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForGraphical"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Graphical"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForGraphical"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMenu-driven"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Menu-driven"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMenu-driven"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCommand-line"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Command-line"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCommand-line"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemServices"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SystemServices"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemServices"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemUtilities"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SystemUtilities"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemUtilities"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEmbedded/Firmware"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Embedded/Firmware"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEmbedded/Firmware"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForControl"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Control"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForControl"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForState"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#State"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForState"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDisturbance"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Disturbance"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDisturbance"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForInput"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Input"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForInput"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOutput"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Output"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOutput"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForGoal"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Goal"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForGoal"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSetpoint"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Setpoint"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSetpoint"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTracking"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Tracking"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTracking"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForValidityRegion"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ValidityRegion"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForValidityRegion"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForLocal"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Local"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForLocal"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForGlobal"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Global"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForGlobal"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSemiGlobal"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SemiGlobal"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSemiGlobal"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForRegulation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Regulation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForRegulation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForReferenceSignal"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ReferenceSignal"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForReferenceSignal"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForFeedback"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Feedback"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForFeedback"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDependency"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Dependency"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDependency"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForStateFeedback"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#StateFeedback"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForStateFeedback"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOutputFeedback"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#OutputFeedback"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOutputFeedback"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForScope"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Scope"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForScope"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCentralized"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Centralized"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCentralized"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDecentralized"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Decentralized"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDecentralized"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDistributed"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Distributed"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDistributed"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDynamics"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Dynamics"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDynamics"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemType"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SystemType"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemType"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForLinearity"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Linearity"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForLinearity"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForLinear"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Linear"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForLinear"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForNon-linear"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Non-linear"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForNon-linear"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTime"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Time"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTime"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDiscreteTime"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#DiscreteTime"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDiscreteTime"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForContinuousTime"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ContinuousTime"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForContinuousTime"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForContinuity"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Continuity"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForContinuity"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSmooth"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Smooth"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSmooth"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDiscontiuous"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Discontiuous"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDiscontiuous"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMulti-modalSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Multi-modalSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMulti-modalSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDiscrete-eventSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Discrete-eventSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDiscrete-eventSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTransitionSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#TransitionSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTransitionSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForVarableStructureSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#VarableStructureSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForVarableStructureSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSwitchedSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SwitchedSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSwitchedSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForReset/jump/impulsiveSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Reset/jump/impulsiveSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForReset/jump/impulsiveSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPiecewise-affineSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Piecewise-affineSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPiecewise-affineSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHybridSystem"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#HybridSystem"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHybridSystem"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOther"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Other"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOther"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForBehavior"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Behavior"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForBehavior"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEquilibria"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Equilibria"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEquilibria"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCommon"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Common"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCommon"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMultiple"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Multiple"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMultiple"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForBifurcations"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Bifurcations"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForBifurcations"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOscillations/LimitCycles"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Oscillations/LimitCycles"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOscillations/LimitCycles"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHysteresis"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Hysteresis"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHysteresis"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForComplex/strange"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Complex/strange"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForComplex/strange"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForChattering"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Chattering"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForChattering"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSlidingMotions"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SlidingMotions"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSlidingMotions"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhaseTransitions"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#PhaseTransitions"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhaseTransitions"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForZenoness"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Zenoness"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForZenoness"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEmergent_Behavior"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Emergent_Behavior"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEmergent_Behavior"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCollective"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Collective"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCollective"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForFlocking"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Flocking"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForFlocking"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSwarming"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Swarming"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSwarming"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForConsensus"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Consensus"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForConsensus"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSynchronisation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Synchronisation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSynchronisation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSelfOrganisation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SelfOrganisation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSelfOrganisation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCascadingDynamics"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CascadingDynamics"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCascadingDynamics"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCooperation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Cooperation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCooperation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCompetition"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Competition"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCompetition"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSelfOrganisedCriticality"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SelfOrganisedCriticality"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSelfOrganisedCriticality"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTopology"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Topology"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTopology"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvolution"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Evolution"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvolution"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForStatic"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Static"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForStatic"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAdaptive"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Adaptive"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAdaptive"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForProperties"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Properties"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForProperties"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForStability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Stability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForStability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDissipativity/Passivity"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Dissipativity/Passivity"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDissipativity/Passivity"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForRobustness"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Robustness"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForRobustness"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAdaptation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Adaptation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAdaptation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForControllability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Controllability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForControllability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForObservability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Observability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForObservability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForResilience"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Resilience"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForResilience"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAutonomy"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Autonomy"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAutonomy"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForIntelligence"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Intelligence"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForIntelligence"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForConsistency"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Consistency"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForConsistency"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHeterogeneity"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Heterogeneity"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHeterogeneity"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSensitivity"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Sensitivity"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSensitivity"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForLearning"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Learning"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForLearning"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForUncertainty"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Uncertainty"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForUncertainty"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDeterministic"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Deterministic"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDeterministic"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForNon-deterministic"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Non-deterministic"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForNon-deterministic"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForProbabilistic"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Probabilistic"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForProbabilistic"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForStochastic"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Stochastic"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForStochastic"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDiagnostics"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Diagnostics"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDiagnostics"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPrognostics"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Prognostics"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPrognostics"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHuman"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Human"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHuman"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForRole"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Role"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForRole"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForResponsibilities"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Responsibilities"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForResponsibilities"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForConstraints"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Constraints"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForConstraints"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvent"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Event"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvent"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForState-of-Affairs"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#State-of-Affairs"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForState-of-Affairs"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEntity"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Entity"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEntity"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAction"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Action"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAction"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCommunicationAction"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CommunicationAction"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCommunicationAction"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhysicalAction"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#PhysicalAction"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhysicalAction"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEpistemicAction"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#EpistemicAction"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEpistemicAction"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForNetwork"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Network"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForNetwork"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForConfiguration"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Configuration"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForConfiguration"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForBus"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Bus"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForBus"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForRing"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Ring"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForRing"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMesh"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Mesh"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMesh"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPoint2Point"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Point2Point"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPoint2Point"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHybrid"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Hybrid"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHybrid"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCommunication"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Communication"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCommunication"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForComType"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ComType"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForComType"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSynchronous"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Synchronous"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSynchronous"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAsynchronous"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Asynchronous"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAsynchronous"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForProtocol"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Protocol"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForProtocol"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForP2P"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#P2P"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForP2P"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForClientServer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ClientServer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForClientServer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForBrokerBased"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#BrokerBased"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForBrokerBased"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOtherProtocols"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#OtherProtocols"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOtherProtocols"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhysical"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Physical"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhysical"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSensor"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Sensor"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSensor"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForActuator"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Actuator"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForActuator"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPlant"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Plant"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPlant"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForController"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Controller"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForController"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHardwarePlatform"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#HardwarePlatform"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHardwarePlatform"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForProcessor"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Processor"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForProcessor"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCPU"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CPU"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCPU"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForGPU"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#GPU"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForGPU"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMemory"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Memory"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMemory"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMainMemory"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#MainMemory"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMainMemory"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCacheMemory"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CacheMemory"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCacheMemory"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAuxiliaryMemory"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#AuxiliaryMemory"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAuxiliaryMemory"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhysicalStorage"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#PhysicalStorage"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhysicalStorage"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCloudStorage"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CloudStorage"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCloudStorage"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemBus"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SystemBus"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemBus"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForH/WTopology"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#H/WTopology"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForH/WTopology"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForExternalInterfaces"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ExternalInterfaces"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForExternalInterfaces"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForApplication-specificCircuit"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Application-specificCircuit"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForApplication-specificCircuit"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMechanical"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Mechanical"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMechanical"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEnvironment"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Environment"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEnvironment"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedFornonfunctionalReqs"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#nonfunctionalReqs"/>
+    <owl:NamedIndividual IRI="#ToBeAddedFornonfunctionalReqs"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPerformance"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Performance"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPerformance"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSecurity"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Security"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSecurity"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSafety"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Safety"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSafety"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForReliability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Reliability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForReliability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEfficiency"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Efficiency"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEfficiency"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForInteroperability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Interoperability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForInteroperability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSemanticInteroperability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SemanticInteroperability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSemanticInteroperability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForScalability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Scalability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForScalability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForComposability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Composability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForComposability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAvailability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Availability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAvailability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSustainability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Sustainability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSustainability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForX_ilities"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#X_ilities"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForX_ilities"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForApplicationDomain"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ApplicationDomain"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForApplicationDomain"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHealth"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Health"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHealth"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSmartManufacturing"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SmartManufacturing"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSmartManufacturing"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTransportation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Transportation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTransportation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForProcessControl"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ProcessControl"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForProcessControl"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDefense"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Defense"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDefense"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForBuildingAutomation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#BuildingAutomation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForBuildingAutomation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForRoboticforService"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#RoboticforService"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForRoboticforService"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCriticalInfrastructure"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CriticalInfrastructure"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCriticalInfrastructure"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEmergencyResponse"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#EmergencyResponse"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEmergencyResponse"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForX_Domain"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#X_Domain"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForX_Domain"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDisciplines"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Disciplines"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDisciplines"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSoftwareEngineering"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SoftwareEngineering"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSoftwareEngineering"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMechanicalEngineering"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#MechanicalEngineering"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMechanicalEngineering"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForElectricalEngineering"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ElectricalEngineering"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForElectricalEngineering"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCivilEngineering"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CivilEngineering"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCivilEngineering"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForChecmicalEngineering"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ChecmicalEngineering"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForChecmicalEngineering"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOtherEngineering"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#OtherEngineering"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOtherEngineering"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForArchitecture"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Architecture"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForArchitecture"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForManagementLayer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ManagementLayer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForManagementLayer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCPSComponentLayer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CPSComponentLayer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCPSComponentLayer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForNetworkLayer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#NetworkLayer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForNetworkLayer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForServiceLayer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ServiceLayer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForServiceLayer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForApplicationLayer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ApplicationLayer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForApplicationLayer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSecurityLayer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SecurityLayer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSecurityLayer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvaluation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Evaluation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvaluation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSimulation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Simulation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSimulation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForExperimentation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Experimentation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForExperimentation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTesting"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Testing"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTesting"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForFormal_Verification"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Formal_Verification"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForFormal_Verification"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOtherEvaluation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#OtherEvaluation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOtherEvaluation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTool"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Tool"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTool"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTool_Integration"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Tool_Integration"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTool_Integration"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForWithin_Domain"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Within_Domain"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForWithin_Domain"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAcross_Domains"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Across_Domains"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAcross_Domains"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForkind"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#kind"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForkind"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCyberTool"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CyberTool"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCyberTool"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhysicalTool"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#PhysicalTool"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPhysicalTool"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHW_SW_CoDesignTool"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#HW_SW_CoDesignTool"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHW_SW_CoDesignTool"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForLifecycle_Support"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Lifecycle_Support"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForLifecycle_Support"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForRequirementsAnalysis"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#RequirementsAnalysis"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForRequirementsAnalysis"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForArchitectureDesign"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ArchitectureDesign"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForArchitectureDesign"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDetailedDesign"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#DetailedDesign"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDetailedDesign"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForImplementation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Implementation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForImplementation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTestingTool"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#TestingTool"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTestingTool"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMaintenance"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Maintenance"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMaintenance"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDesign"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Design"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDesign"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForApproach"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Approach"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForApproach"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSeparate"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Separate"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSeparate"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCoDesign"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#CoDesign"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCoDesign"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForViewpoint"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Viewpoint"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForViewpoint"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForFormalisms"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Formalisms"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForFormalisms"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForStakeholder"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Stakeholder"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForStakeholder"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemEngineer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SystemEngineer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSystemEngineer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDeveloper"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Developer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDeveloper"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEndUser"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#EndUser"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEndUser"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCustomer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Customer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCustomer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForMaintainer"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Maintainer"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForMaintainer"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvaluator"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Evaluator"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvaluator"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForX_Stakeholder"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#X_Stakeholder"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForX_Stakeholder"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForModel"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Model"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForModel"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForFramework"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Framework"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForFramework"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForAgentBased"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#AgentBased"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForAgentBased"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDifferentialEquation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#DifferentialEquation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDifferentialEquation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDifferenceEquation"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#DifferenceEquation"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDifferenceEquation"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForHybridAutomata"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#HybridAutomata"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForHybridAutomata"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForBondGraphs"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#BondGraphs"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForBondGraphs"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForPetriNets"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#PetriNets"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForPetriNets"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForComplexNetworks"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ComplexNetworks"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForComplexNetworks"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForComplementarity"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Complementarity"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForComplementarity"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForBisimulations"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Bisimulations"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForBisimulations"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSymbolicDynamics"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SymbolicDynamics"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSymbolicDynamics"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvent-flowFormulas"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Event-flowFormulas"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForEvent-flowFormulas"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForOtherFramework"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#OtherFramework"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForOtherFramework"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForParameterIdentification"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ParameterIdentification"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForParameterIdentification"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSampling"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Sampling"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSampling"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSimulating"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Simulating"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSimulating"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSignalProcessing"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SignalProcessing"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSignalProcessing"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForVerification"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Verification"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForVerification"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForProperty"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Property"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForProperty"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSafetyP"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SafetyP"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSafetyP"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForLiveness"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Liveness"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForLiveness"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDeadness"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Deadness"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDeadness"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForReachability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Reachability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForReachability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForCorrectness"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Correctness"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForCorrectness"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTechnique"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Technique"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTechnique"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForModelChecking"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ModelChecking"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForModelChecking"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForTheoremProving"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#TheoremProving"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForTheoremProving"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForFalsification"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#Falsification"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForFalsification"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForConstraintSatisfaction"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#ConstraintSatisfaction"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForConstraintSatisfaction"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForBooleanSatisfiability"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#BooleanSatisfiability"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForBooleanSatisfiability"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSatisfiabilityModulo"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SatisfiabilityModulo"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSatisfiabilityModulo"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForSymbolicMethods"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#SymbolicMethods"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForSymbolicMethods"/>
+  </owl:ClassAssertion>
+  <owl:Declaration>
+    <owl:NamedIndividual IRI="#ToBeAddedForDynamicallyAware"/>
+  </owl:Declaration>
+  <owl:ClassAssertion>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/cps#DynamicallyAware"/>
+    <owl:NamedIndividual IRI="#ToBeAddedForDynamicallyAware"/>
+  </owl:ClassAssertion>
+</owl:Ontology>
