@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <featurerelations:FeatureModelRelationsSpec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:featurerelations="platform:/resource/fr.tpt.mem4csd.featureide.model/model/featurerelations.xsd" name="cps">
-  <ownedSubClassRelations>
+  <ownedSubClassRelations hasIndividuals="true">
     <superBranch href="model.featureide#//@featureModel/@struct/@and/@alt.0"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@alt.0/@feature.0"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@alt.0/@feature.1"/>
@@ -114,4 +114,7 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.11"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.12"/>
   </ownedSubClassRelations>
+  <individuals>
+    <correspondingFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.2/@alt.0/@feature.1"/>
+  </individuals>
 </featurerelations:FeatureModelRelationsSpec>
