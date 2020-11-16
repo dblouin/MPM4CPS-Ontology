@@ -3,6 +3,7 @@ pre {
 	var ont : new owl!Ontology;
 	var mpm4cpsOnt : new owl!Import;
 	var catalogOnt : new owl!Import;	
+	
 		
 	var sharedClasses = new List;
 	
@@ -33,10 +34,14 @@ pre {
 	catalogOnt.value = "http://mpm4cps.eu/ontology/catalog-tools-languages";
 	ont.Import.add(catalogOnt);	
 	
+		for (class in shared!Class) {
+	       sharedClasses.add(class.iri);
+	    }
+	
 }
 
 post {
-	"Configuration model to WOL transformation finished.".println();
+	"Configuration model to OWL transformation finished.".println();
 }
 
 /**************************/
@@ -50,7 +55,7 @@ rule featureTypeToClass
 	transform feature : conf!FeatureType
 	to owlDeclaration : owl!Declaration,
        owlClassAssertion : owl!ClassAssertion {
-    guard : feature.convert ()
+    guard : feature.convert () and not feature.isDisabled () and not feature.isIndividual ()
 		   //feature.name.println();
 		   var owlInd : new owl!NamedIndividual;
      	   owlInd.iri = generateOwlClassIRI ("ToBeAddedFor", feature.name);
@@ -110,21 +115,54 @@ operation generateCPSOwlClassIRI(fmName : String) : String {
 	var refactoredfmName : String;
 	var splited = new List;
 	splited = fmName.split("\\s+");
+	
 	if (splited.size() > 1) {
 		for (s in splited) {
 			refactoredfmName += s.firstToUpperCase();
 		}
 		fmName = refactoredfmName;
 	}
-
-	return "http://mpm4cps.eu/ontology/cps" + "#" + fmName;
+	   
+    if (sharedClasses.contains("#" + fmName)) {
+	   return  "http://mpm4cps.eu/ontology/shared" + "#" + fmName;
+	} else {
+	   return "http://mpm4cps.eu/ontology/cps" + "#" + fmName;
+	}
+	
 }
 
 operation conf!FeatureType convert (): Boolean{
-
    if ((self.automatic.asString = "selected") or 
        (self.manual.asString = "selected")){
        return true;
    }
    return false;
+}
+
+operation conf!FeatureType isDisabled (): Boolean {
+   for (feat in featureRelations!Disabled) {
+       
+     if (feat.features.exists(c|c.name.asString = self.name.asString)){
+        return true;
+     }
+     if (feat.branches.exists(c|c.name.asString = self.name.asString)){
+        return true;
+     }     
+     
+   }   
+   return false;  
+}
+
+operation conf!FeatureType isIndividual (): Boolean {
+
+   for (branch in featureRelations!SubClassRelation) {
+      if (branch.hasIndividuals){
+	     for (feat in branch.SubFeature) {
+	        if (feat.name = self.name){
+	           return true;
+	        }
+	     }	      
+	  }
+   }
+   return false;  
 }

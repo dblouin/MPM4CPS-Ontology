@@ -50,7 +50,8 @@ post {
 rule featureTypeToClass
 	transform feature : fm!FeatureType
 	to owlDeclaration : owl!Declaration {
-	guard : feature.convert() and not feature.isIndividual ()
+	guard : not feature.isDisabled() and not 
+	        feature.isIndividual ()
 		// Create class
 		var owlClass : new owl!Class;
 		owlClass.iri = generateOwlClassIRI(feature.name);
@@ -68,7 +69,8 @@ rule featureTypeToClass
 rule branchTypeToClass
 	transform branch : fm!BranchType
 	to owlDeclaration : owl!Declaration {
-	guard : branch.convert()
+	guard : not branch.isDisabled ()
+
 		var owlClass : new owl!Class;
 		owlClass.iri = generateOwlClassIRI(branch.name);
 		owlDeclaration.class = owlClass;
@@ -104,7 +106,7 @@ rule branchTypeToClass
 rule branchTypeToDeclareObjectProperties
 	transform branch : fm!BranchType
 	to owlDeclaration : owl!Declaration, owlOP : owl!ObjectProperty {
-	guard : branch.convert()
+	guard : not branch.isDisabled ()
 		owlOP.iri = branch.generateOwlObjectPropertyIRI();
 		owlDeclaration.objectProperty = owlOP;
 		ont.declaration.add(owlDeclaration);
@@ -113,7 +115,7 @@ rule branchTypeToDeclareObjectProperties
 rule featureTypeToDeclareObjectProperties
 	transform feature : fm!FeatureType
 	to owlDeclaration : owl!Declaration, owlOP : owl!ObjectProperty {
-	guard : feature.convert() and not feature.isIndividual ()
+	guard : not feature.isDisabled () and not feature.isIndividual ()
 		owlOP.iri = feature.generateOwlObjectPropertyIRI();
 		owlDeclaration.objectProperty = owlOP;
 		ont.declaration.add(owlDeclaration);	
@@ -124,7 +126,7 @@ rule branchTypeToObjectPropertyRange
 	to owlObjectPropertyRange : owl!ObjectPropertyRange, 
 	owlOP : owl!ObjectProperty, 
 	owlClass: owl!Class {
-	guard : branch.convert()
+	guard : not branch.isDisabled ()
 		owlOP.iri = branch.generateOwlObjectPropertyIRI();
 		owlObjectPropertyRange.objectProperty = owlOP;
 		owlClass.iri = generateOwlClassIRI(branch.name);
@@ -136,7 +138,7 @@ rule featureTypeToObjectPropertyRange
 	transform feature : fm!FeatureType
 	to owlObjectPropertyRange : owl!ObjectPropertyRange,
 	   owlOP : owl!ObjectProperty, owlClass: owl!Class {
-    guard : feature.convert() and not feature.isIndividual ()
+    guard : not feature.isDisabled () and not feature.isIndividual ()
 		owlOP.iri = feature.generateOwlObjectPropertyIRI();
 		owlObjectPropertyRange.objectProperty = owlOP;
 		owlClass.iri = generateOwlClassIRI(feature.name);
@@ -151,7 +153,7 @@ rule andBranchTypeToSubclassOf
 	to owlSubClassOf : owl!SubClassOf, 
 	   owlClass : owl!Class, 
 	   owlObjectIntersectionOf : owl!ObjectIntersectionOf {
-	guard : branch.isAndBranch() and branch.hasFeatures( true ) and branch.convert()
+	guard : branch.isAndBranch() and branch.hasFeatures( true ) and not branch.isDisabled ()
 
 	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlSubClassOf.class.add(owlClass);
@@ -180,8 +182,9 @@ rule orBranchTypeToSubclassOf
 	to owlSubClassOf : owl!SubClassOf, 
 	   owlClass : owl!Class, 
 	   owlObjectUnionOf : owl!ObjectUnionOf {
-	guard : branch.isOrBranch() or branch.isAltBranch() and branch.hasFeatures( false ) 
-	and branch.convert() and not branch.hasIndividual ()
+	guard : branch.isOrBranch() or branch.isAltBranch() 
+	and branch.hasFeatures( false ) 
+	and not branch.isDisabled () and not branch.hasIndividual ()
 
 	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlSubClassOf.class.add(owlClass);
@@ -208,7 +211,7 @@ rule orBranchTypeToSubclassOf
 rule altBranchTypeToSubclassOf
 	transform branch : fm!BranchType
 	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectComplementOf : owl!ObjectComplementOf, owlObjectUnionOf : owl!ObjectUnionOf {
-	guard : branch.isAltBranch() and branch.hasFeatures( false ) and branch.convert() and not branch.hasIndividual ()
+	guard : branch.isAltBranch() and branch.hasFeatures( false ) and not branch.isDisabled () and not branch.hasIndividual ()
 
 	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlSubClassOf.class.add(owlClass);
@@ -239,12 +242,12 @@ rule altBranchTypeToSubclassOf
 /******* OPERATIONS *******/
 /**************************/
 operation fm!BranchType convert() {
-	if ( self.hidden ) {
+	if (self.hidden) {
 		return false;
 	}
 	
 	if ( self.eContainer.isDefined() ) {
-		return self.eContainer.convert();
+		return self.eContainer.convert ();
 	}
 	
 	return true;
@@ -256,7 +259,7 @@ operation fm!FeatureType convert() {
 	}
 	
 	if ( self.eContainer.isDefined() ) {
-		return self.eContainer.convert();
+		return self.eContainer.convert ();
 	}
 	
 	return true;
@@ -800,7 +803,7 @@ operation addOrObjProp(owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owl
 
 operation fm!BranchType hasSubclasses (): List {
    var subClasses = new List;
-   for (branch in inheritances!SubClassRelation) {
+   for (branch in featureRelations!SubClassRelation) {
       if ((branch.SuperBranch = self) and not branch.SuperBranch.hasIndividual ()){
 	     for (feat in branch.SubFeature) {
 	        subClasses.add (feat);
@@ -814,7 +817,7 @@ operation fm!BranchType hasSubclasses (): List {
 }
 
 operation fm!BranchType isSubclass (): Boolean {
-   for (branch in inheritances!SubClassRelation) {
+   for (branch in featureRelations!SubClassRelation) {
 	     for (bran in branch.SubBranch) {
 	        if (bran = self){
 	        return true;}
@@ -825,7 +828,7 @@ operation fm!BranchType isSubclass (): Boolean {
 
 operation fm!FeatureType isIndividual (): Boolean {
 
-   for (branch in inheritances!SubClassRelation) {
+   for (branch in featureRelations!SubClassRelation) {
       if (branch.hasIndividuals){
 	     for (feat in branch.SubFeature) {
 	        if (feat = self){
@@ -837,8 +840,28 @@ operation fm!FeatureType isIndividual (): Boolean {
    return false;  
 }
 
+operation fm!FeatureType isDisabled (): Boolean {
+   for (feat in featureRelations!Disabled) {
+       
+     if (feat.features.indexOf (self) <> -1){
+        return true;
+     }
+   }   
+   return false;  
+}
+
+operation fm!BranchType isDisabled (): Boolean {
+   for (branch in featureRelations!Disabled) {
+     if (branch.branches.indexOf (self) <> -1){
+        return true;
+     }
+   }   
+   return false;  
+}
+
+
 operation fm!BranchType hasIndividual (): Boolean {
-   for (branch in inheritances!SubClassRelation) {
+   for (branch in featureRelations!SubClassRelation) {
       if ((branch.SuperBranch = self) and (branch.hasIndividuals)){
 	     return true;
       }

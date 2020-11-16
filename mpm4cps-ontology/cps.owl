@@ -1528,9 +1528,228 @@
   <owl:Declaration>
     <owl:Class IRI="#ConstituentElement"/>
   </owl:Declaration>
+  <owl:Declaration>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>http://mpm4cps.eu/ontology/shared#Human</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humans within a CPS perform certain roles within the CPS. </owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>http://mpm4cps.eu/ontology/shared#Human</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasEntity"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEntity"/>
+    <owl:Class IRI="#Entity"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
-    <owl:Class IRI="#ConstituentElement"/>
+    <owl:Class IRI="#Entity"/>
     <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasHuman"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasHuman"/>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+    <owl:ObjectUnionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasRole"/>
+        <owl:Class IRI="#Role"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEvent"/>
+        <owl:Class IRI="#Event"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasAction"/>
+        <owl:Class IRI="#Action"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEntity"/>
+        <owl:Class IRI="#Entity"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectUnionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:Class IRI="#Control"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Control</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The action of modifying the behaviour of a system through feedback.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Control</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasState"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasState"/>
+    <owl:Class IRI="#State"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#State"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDisturbance"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDisturbance"/>
+    <owl:Class IRI="#Disturbance"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Disturbance"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasInput"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasInput"/>
+    <owl:Class IRI="#Input"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Input"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasOutput"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasOutput"/>
+    <owl:Class IRI="#Output"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Output"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDiagnostics"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDiagnostics"/>
+    <owl:Class IRI="#Diagnostics"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Diagnostics"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasPrognostics"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasPrognostics"/>
+    <owl:Class IRI="#Prognostics"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Prognostics"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasControl"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasControl"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Control"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasFeedback"/>
+        <owl:Class IRI="#Feedback"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasProperties"/>
+        <owl:Class IRI="#Properties"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasGoal"/>
+        <owl:Class IRI="#Goal"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasDynamics"/>
+        <owl:Class IRI="#Dynamics"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasState"/>
+        <owl:Class IRI="#State"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasDisturbance"/>
+        <owl:Class IRI="#Disturbance"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasInput"/>
+        <owl:Class IRI="#Input"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasOutput"/>
+        <owl:Class IRI="#Output"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Control"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:Class IRI="#Network"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Network</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+		A set of elements (for example, nodes) connected in some physical or
+		abstract manner (for example, links).
+	</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Network</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasNetwork"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasNetwork"/>
+    <owl:Class IRI="#Network"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Network"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasCommunication"/>
+        <owl:Class IRI="#Communication"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasConfiguration"/>
+        <owl:Class IRI="#Configuration"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Network"/>
+    <owl:Class IRI="#ConstituentElement"/>
   </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Cyber"/>
@@ -1548,8 +1767,111 @@
     <owl:IRI>#Cyber</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasCyber"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasCyber"/>
+    <owl:Class IRI="#Cyber"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Cyber"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSoftware"/>
+        <owl:Class IRI="#Software"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Cyber"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:Class IRI="#Physical"/>
+  </owl:Declaration>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasSensor"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSensor"/>
+    <owl:Class IRI="#Sensor"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Sensor"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasActuator"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasActuator"/>
+    <owl:Class IRI="#Actuator"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Actuator"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasPlant"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasPlant"/>
+    <owl:Class IRI="#Plant"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Plant"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasEnvironment"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEnvironment"/>
+    <owl:Class IRI="#Environment"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Environment"/>
+    <owl:Class IRI="#CpsDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasPhysical"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasPhysical"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Physical"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasController"/>
+        <owl:Class IRI="#Controller"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSensor"/>
+        <owl:Class IRI="#Sensor"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasActuator"/>
+        <owl:Class IRI="#Actuator"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasPlant"/>
+        <owl:Class IRI="#Plant"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEnvironment"/>
+        <owl:Class IRI="#Environment"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Physical"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ConstituentElement"/>
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -1707,89 +2029,6 @@
   </owl:SubClassOf>
   <owl:SubClassOf>
     <owl:Class IRI="#UserInterface"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Control"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Control</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The action of modifying the behaviour of a system through feedback.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Control</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasState"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasState"/>
-    <owl:Class IRI="#State"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#State"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDisturbance"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDisturbance"/>
-    <owl:Class IRI="#Disturbance"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Disturbance"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasInput"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasInput"/>
-    <owl:Class IRI="#Input"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Input"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasOutput"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasOutput"/>
-    <owl:Class IRI="#Output"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Output"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDiagnostics"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDiagnostics"/>
-    <owl:Class IRI="#Diagnostics"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Diagnostics"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPrognostics"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPrognostics"/>
-    <owl:Class IRI="#Prognostics"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Prognostics"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Control"/>
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -2984,34 +3223,6 @@
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:Declaration>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>http://mpm4cps.eu/ontology/shared#Human</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humans within a CPS perform certain roles within the CPS. </owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>http://mpm4cps.eu/ontology/shared#Human</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEntity"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEntity"/>
-    <owl:Class IRI="#Entity"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Entity"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#Role"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -3146,26 +3357,6 @@
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:Declaration>
-    <owl:Class IRI="#Network"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Network</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-		A set of elements (for example, nodes) connected in some physical or
-		abstract manner (for example, links).
-	</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Network</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Network"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#Configuration"/>
   </owl:Declaration>
   <owl:Declaration>
@@ -3323,57 +3514,6 @@
   </owl:SubClassOf>
   <owl:SubClassOf>
     <owl:Class IRI="#Protocol"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Physical"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSensor"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSensor"/>
-    <owl:Class IRI="#Sensor"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Sensor"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasActuator"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasActuator"/>
-    <owl:Class IRI="#Actuator"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Actuator"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPlant"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPlant"/>
-    <owl:Class IRI="#Plant"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Plant"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEnvironment"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEnvironment"/>
-    <owl:Class IRI="#Environment"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Environment"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Physical"/>
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -3990,9 +4130,6 @@
     <owl:ObjectProperty IRI="#hasConstituentElement"/>
   </owl:Declaration>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCyber"/>
-  </owl:Declaration>
-  <owl:Declaration>
     <owl:ObjectProperty IRI="#hasSoftware"/>
   </owl:Declaration>
   <owl:Declaration>
@@ -4003,9 +4140,6 @@
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasUserInterface"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasControl"/>
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasGoal"/>
@@ -4056,9 +4190,6 @@
     <owl:ObjectProperty IRI="#hasProperties"/>
   </owl:Declaration>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasHuman"/>
-  </owl:Declaration>
-  <owl:Declaration>
     <owl:ObjectProperty IRI="#hasRole"/>
   </owl:Declaration>
   <owl:Declaration>
@@ -4066,9 +4197,6 @@
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasAction"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasNetwork"/>
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasConfiguration"/>
@@ -4081,9 +4209,6 @@
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasProtocol"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPhysical"/>
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasController"/>
@@ -4112,10 +4237,6 @@
     <owl:Class IRI="#ConstituentElement"/>
   </owl:ObjectPropertyRange>
   <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCyber"/>
-    <owl:Class IRI="#Cyber"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasSoftware"/>
     <owl:Class IRI="#Software"/>
   </owl:ObjectPropertyRange>
@@ -4130,10 +4251,6 @@
   <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasUserInterface"/>
     <owl:Class IRI="#UserInterface"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasControl"/>
-    <owl:Class IRI="#Control"/>
   </owl:ObjectPropertyRange>
   <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasGoal"/>
@@ -4200,10 +4317,6 @@
     <owl:Class IRI="#Properties"/>
   </owl:ObjectPropertyRange>
   <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasHuman"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasRole"/>
     <owl:Class IRI="#Role"/>
   </owl:ObjectPropertyRange>
@@ -4214,10 +4327,6 @@
   <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasAction"/>
     <owl:Class IRI="#Action"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasNetwork"/>
-    <owl:Class IRI="#Network"/>
   </owl:ObjectPropertyRange>
   <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasConfiguration"/>
@@ -4234,10 +4343,6 @@
   <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasProtocol"/>
     <owl:Class IRI="#Protocol"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPhysical"/>
-    <owl:Class IRI="#Physical"/>
   </owl:ObjectPropertyRange>
   <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasController"/>
@@ -4310,15 +4415,6 @@
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#Cyber"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSoftware"/>
-        <owl:Class IRI="#Software"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
     <owl:Class IRI="#SystemSoftware"/>
     <owl:ObjectIntersectionOf>
       <owl:ObjectSomeValuesFrom>
@@ -4341,43 +4437,6 @@
       <owl:ObjectSomeValuesFrom>
         <owl:ObjectProperty IRI="#hasUserInterface"/>
         <owl:Class IRI="#UserInterface"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Control"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasFeedback"/>
-        <owl:Class IRI="#Feedback"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasProperties"/>
-        <owl:Class IRI="#Properties"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasGoal"/>
-        <owl:Class IRI="#Goal"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasDynamics"/>
-        <owl:Class IRI="#Dynamics"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasState"/>
-        <owl:Class IRI="#State"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasDisturbance"/>
-        <owl:Class IRI="#Disturbance"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasInput"/>
-        <owl:Class IRI="#Input"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasOutput"/>
-        <owl:Class IRI="#Output"/>
       </owl:ObjectSomeValuesFrom>
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
@@ -4439,19 +4498,6 @@
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#Network"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasCommunication"/>
-        <owl:Class IRI="#Communication"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasConfiguration"/>
-        <owl:Class IRI="#Configuration"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
     <owl:Class IRI="#Communication"/>
     <owl:ObjectIntersectionOf>
       <owl:ObjectSomeValuesFrom>
@@ -4461,31 +4507,6 @@
       <owl:ObjectSomeValuesFrom>
         <owl:ObjectProperty IRI="#hasProtocol"/>
         <owl:Class IRI="#Protocol"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Physical"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasController"/>
-        <owl:Class IRI="#Controller"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSensor"/>
-        <owl:Class IRI="#Sensor"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasActuator"/>
-        <owl:Class IRI="#Actuator"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasPlant"/>
-        <owl:Class IRI="#Plant"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEnvironment"/>
-        <owl:Class IRI="#Environment"/>
       </owl:ObjectSomeValuesFrom>
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
@@ -4660,27 +4681,6 @@
       <owl:ObjectSomeValuesFrom>
         <owl:ObjectProperty IRI="#hasAdaptive"/>
         <owl:Class IRI="#Adaptive"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasRole"/>
-        <owl:Class IRI="#Role"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEvent"/>
-        <owl:Class IRI="#Event"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasAction"/>
-        <owl:Class IRI="#Action"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEntity"/>
-        <owl:Class IRI="#Entity"/>
       </owl:ObjectSomeValuesFrom>
     </owl:ObjectUnionOf>
   </owl:SubClassOf>
