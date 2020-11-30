@@ -212,9 +212,6 @@ The detailed specification of the shared onytology is provided in the following 
         <ObjectProperty IRI="#hasSyntax"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasTransitions"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#isImplementingMethodology"/>
     </Declaration>
     <Declaration>
@@ -566,10 +563,6 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#Language"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasTransitions"/>
-        <Class IRI="#ActivitySet"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isImplementingMethodology"/>
         <Class IRI="#Process"/>
     </ObjectPropertyDomain>
@@ -668,10 +661,6 @@ The detailed specification of the shared onytology is provided in the following 
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSyntax"/>
         <Class IRI="#Syntax"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasTransitions"/>
-        <Class IRI="#Transition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isImplementingMethodology"/>
@@ -1091,11 +1080,6 @@ using the hasStages object property.</Literal>
         <IRI>#hasSyntax</IRI>
         <Literal>Every language (natural or artificial) must have at least one syntax using the hasSyntax object property to express sentences of the language to communicate with
 other entities.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasTransitions</IRI>
-        <Literal>An ActivitySet contains a set of other activities and Transition elements declared via the hasSetActivities and hasTransitions object properties.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

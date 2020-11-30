@@ -1,0 +1,1393 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://mpm4cps.eu/ontology/cps"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://mpm4cps.eu/ontology/cps">
+    <Prefix name="" IRI="http://mpm4cps.eu/ontology/cps"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://mpm4cps.eu/ontology/shared</Import>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actuator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Application-specificCircuit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ApplicationDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ApplicationLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ApplicationSoftware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArchitectureBasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Behavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CPS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CPSComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CPSComponentLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CPSDC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Communication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommunicationAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommunicationProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComponentProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComposedComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Configuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConstituentElements"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Constituents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Constraints"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Continuity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Control"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ControlBasicComponents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ControlComposedComponents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Controller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cyber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CyberComposedComponents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dependency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diagnostics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disciplines"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disturbance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dynamics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DynamicsProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmergentBehavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EpistemicAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equilibria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Evolution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExternalInterfaces"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Feedback"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FeedbackProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GoalBasicComponents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HardwarePlatform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HardwarePlatformBasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HardwarePlatformComposedComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanBasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanComposedComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Input"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Linearity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManagementLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mechanical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Memory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetworkBasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetworkLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OperatingSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OperatingSystemProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalBasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalComposedComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prognostics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Properties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Protocol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReferenceSignal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Regulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Responsibilities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoleBasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scope"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecurityLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Setpoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemBus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemServices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemSoftware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemSoftwareComponents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemUtilities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Topology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tracking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrackingProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserInterface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ValidityRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#nonfunctionalReqs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Embedded/Firmware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#H/WTopology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#H/WTopologyBasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Architecture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBasicComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComponentProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComposedComponent"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Action"/>
+        <Class IRI="#HumanBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actuator"/>
+        <Class IRI="#PhysicalBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application-specificCircuit"/>
+        <Class IRI="#HardwarePlatformBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApplicationDomain"/>
+        <Class IRI="#CPS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApplicationLayer"/>
+        <Class IRI="#ArchitectureBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApplicationSoftware"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArchitectureBasicComponent"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BasicComponent"/>
+        <Class IRI="#CPSComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Behavior"/>
+        <Class IRI="#DynamicsProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CPS"/>
+        <Class IRI="#CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CPSComponent"/>
+        <Class IRI="#CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CPSComponentLayer"/>
+        <Class IRI="#ArchitectureBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CPSDC"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComType"/>
+        <Class IRI="#CommunicationProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Communication"/>
+        <Class IRI="#NetworkBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommunicationAction"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommunicationProperty"/>
+        <Class IRI="#ComponentProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComponentProperty"/>
+        <Class IRI="#CPSComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComposedComponent"/>
+        <Class IRI="#CPSComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Configuration"/>
+        <Class IRI="#NetworkBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConstituentElements"/>
+        <Class IRI="#ComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Constituents"/>
+        <Class IRI="#CPS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Constraints"/>
+        <Class IRI="#RoleBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Continuity"/>
+        <Class IRI="#SystemType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control"/>
+        <Class IRI="#ConstituentElements"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ControlBasicComponents"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ControlComposedComponents"/>
+        <Class IRI="#ComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Controller"/>
+        <Class IRI="#PhysicalComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cyber"/>
+        <Class IRI="#ConstituentElements"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CyberComposedComponents"/>
+        <Class IRI="#ComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dependency"/>
+        <Class IRI="#FeedbackProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diagnostics"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disciplines"/>
+        <Class IRI="#CPS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disturbance"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dynamics"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DynamicsProperty"/>
+        <Class IRI="#ComponentProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmergentBehavior"/>
+        <Class IRI="#Behavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <Class IRI="#HumanBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Environment"/>
+        <Class IRI="#PhysicalBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EpistemicAction"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equilibria"/>
+        <Class IRI="#Behavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <Class IRI="#HumanBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Evolution"/>
+        <Class IRI="#Topology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExternalInterfaces"/>
+        <Class IRI="#H/WTopologyBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Feedback"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FeedbackProperty"/>
+        <Class IRI="#ComponentProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Goal"/>
+        <Class IRI="#ControlComposedComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GoalBasicComponents"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardwarePlatform"/>
+        <Class IRI="#Controller"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardwarePlatformBasicComponent"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardwarePlatformComposedComponent"/>
+        <Class IRI="#ComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanBasicComponent"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanComposedComponent"/>
+        <Class IRI="#ComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Input"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Linearity"/>
+        <Class IRI="#SystemType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManagementLayer"/>
+        <Class IRI="#ArchitectureBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical"/>
+        <Class IRI="#Controller"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Memory"/>
+        <Class IRI="#HardwarePlatformBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Network"/>
+        <Class IRI="#ConstituentElements"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetworkBasicComponent"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetworkLayer"/>
+        <Class IRI="#ArchitectureBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OperatingSystem"/>
+        <Class IRI="#SystemSoftwareComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OperatingSystemProperty"/>
+        <Class IRI="#ComponentProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Output"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physical"/>
+        <Class IRI="#ConstituentElements"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalAction"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalBasicComponent"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalComposedComponent"/>
+        <Class IRI="#ComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plant"/>
+        <Class IRI="#PhysicalBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processor"/>
+        <Class IRI="#HardwarePlatformBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prognostics"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Properties"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Protocol"/>
+        <Class IRI="#CommunicationProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReferenceSignal"/>
+        <Class IRI="#GoalBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Regulation"/>
+        <Class IRI="#GoalBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Responsibilities"/>
+        <Class IRI="#RoleBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Role"/>
+        <Class IRI="#HumanComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoleBasicComponent"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scope"/>
+        <Class IRI="#FeedbackProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecurityLayer"/>
+        <Class IRI="#ArchitectureBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <Class IRI="#PhysicalBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceLayer"/>
+        <Class IRI="#ArchitectureBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Setpoint"/>
+        <Class IRI="#GoalBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software"/>
+        <Class IRI="#CyberComposedComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State"/>
+        <Class IRI="#ControlBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemBus"/>
+        <Class IRI="#HardwarePlatformBasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemServices"/>
+        <Class IRI="#SystemSoftwareComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemSoftware"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemSoftwareComponents"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemType"/>
+        <Class IRI="#DynamicsProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemUtilities"/>
+        <Class IRI="#SystemSoftwareComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <Class IRI="#SystemType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Topology"/>
+        <Class IRI="#DynamicsProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tracking"/>
+        <Class IRI="#GoalBasicComponents"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrackingProperty"/>
+        <Class IRI="#ComponentProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserInterface"/>
+        <Class IRI="#OperatingSystemProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ValidityRegion"/>
+        <Class IRI="#TrackingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#nonfunctionalReqs"/>
+        <Class IRI="#CPS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded/Firmware"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H/WTopology"/>
+        <Class IRI="#HardwarePlatformComposedComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H/WTopologyBasicComponent"/>
+        <Class IRI="#BasicComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Architecture"/>
+        <Class IRI="#CPS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+        <Class IRI="#ConstituentElements"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBasicComponent"/>
+        <Class IRI="#ComposedComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class IRI="#CPS"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComponentProperty"/>
+        <Class IRI="#BasicComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComposedComponent"/>
+        <Class IRI="#ComposedComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBasicComponent"/>
+        <Class IRI="#BasicComponent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectUnionOf>
+            <Class IRI="#BasicComponent"/>
+            <Class IRI="#ComposedComponent"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComponentProperty"/>
+        <Class IRI="#ComponentProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComposedComponent"/>
+        <Class IRI="#ComposedComponent"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Action</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Action</IRI>
+        <Literal>
+			Humans within a CPS exercise their responsibilities defined by
+			roles by performing certain actions. Action is an entity that is
+			targeted at changing the state of the CPS or environment. Actions
+			are divided into physical actions, communicative actions, and
+			epistemic actions.
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Actuator</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Actuator</IRI>
+        <Literal>
+			External devices or components of the system which act on
+			parts of the system to modify its behaviour.
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#ApplicationSoftware</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ApplicationSoftware</IRI>
+        <Literal>
+								Application software (app for short) is a program or group of
+								programs designed for end users. Application software is built for
+								specific tasks.
+								While system software programs run in the background,
+								application software runs in the foreground and users interact
+								with it. System software programs work on its own while
+								application software is dependent on it.
+							</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Behavior</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Behavior</IRI>
+        <Literal>Dynamical pattern.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#CPSDC</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#CommunicationAction</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CommunicationAction</IRI>
+        <Literal>
+				A communicative action is a kind of action that sends a message
+				(I think a message should be defined for CPS but currently it is
+				not) through a communication network of the CPS.
+			</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Constraints</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Constraints</IRI>
+        <Literal>
+				Constraints are conditions that a human performing
+				the role must take into consideration when exercising its
+				responsibilities.
+			</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Control</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Control</IRI>
+        <Literal>The action of modifying the behaviour of a system through feedback.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Controller</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Controller</IRI>
+        <Literal>
+			External device or component of the system which produces
+			the control signal to modify the system behaviour
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Cyber</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cyber</IRI>
+        <Literal>
+						Communication and control between any human/biological/social system
+						and any artificial device. It refers to systems where feedback is essential.
+					</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Diagnostics</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Diagnostics</IRI>
+        <Literal>Identification of properties in a system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Disturbance</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Disturbance</IRI>
+        <Literal>
+						External influence of the environment in a system,
+						typically unknown.
+					</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Dynamics</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Dynamics</IRI>
+        <Literal>Evolution of a system over time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Entity</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Entity</IRI>
+        <Literal>
+			An entity is anything perceivable or conceivable (I think that entity should be
+			defined for CPS at a higher level than under human).
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Environment</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Environment</IRI>
+        <Literal>What it is not the system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#EpistemicAction</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EpistemicAction</IRI>
+        <Literal>
+				An epistemic action is a kind of action that changes the state of the data (I
+				would rather use the term knowledge) held by the CPS. A human
+				performs actions through actuators.
+			</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Event</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Event</IRI>
+        <Literal>
+			A human can perceive events generated by the CPS or
+			environment. An event is a kind of entity that is related to the
+			states of affairs before and after it has occurred. A human
+			perceives events through sensors.
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Feedback</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Feedback</IRI>
+        <Literal>
+						Implementation of the control action by sensing the output of a
+						system and modifying its input by means of actuators to meet a
+						pre-defined control goal.
+					</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Goal</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Goal</IRI>
+        <Literal>Desired behaviour of a system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#HardwarePlatform</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HardwarePlatform</IRI>
+        <Literal>The execution platform of the control software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Input</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Input</IRI>
+        <Literal>Abstraction of the external factors in a system influencing its behaviour.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Mechanical</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Mechanical</IRI>
+        <Literal>
+			A mechanical control mechanism like a bi-metallic strip in a
+			thermostat. Its input is made up of effort.
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Network</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Network</IRI>
+        <Literal>
+		A set of elements (for example, nodes) connected in some physical or
+		abstract manner (for example, links).
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Output</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Output</IRI>
+        <Literal>Abstraction of the effect of a system on its environment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#PhysicalAction</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalAction</IRI>
+        <Literal>
+				Physical action is a kind of action that changes
+				the state of a physical element of the CPS or environment.
+			</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Plant</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Plant</IRI>
+        <Literal>System to control.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Prognostics</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Prognostics</IRI>
+        <Literal>
+			Prediction of the time in the future when a system will not
+			performed anymore as it is expected or for what it was designed (control
+			goal).
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Properties</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Properties</IRI>
+        <Literal>Characteristics related to systems related to control.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#ReferenceSignal</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ReferenceSignal</IRI>
+        <Literal>
+							Desired value for the states and/or outputs of the
+							system to reach.
+						</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Regulation</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Regulation</IRI>
+        <Literal>Action to make the system to reach a set point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Responsibilities</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Responsibilities</IRI>
+        <Literal>
+				Responsibilities are components of a role that determine what a human
+				performing the role must do for the behaviour goals of the CPS to
+				be achieved.
+			</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Role</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Role</IRI>
+        <Literal>
+			Each role represents some capacity or position, where humans playing
+			the role need to contribute for achieving certain behaviour goals
+			set for the CPS. Each role is defined in terms of responsibilities and
+			constraints pertaining to the role that are required for contributing
+			to achieving the behaviour goals set for the CPS.
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Sensor</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sensor</IRI>
+        <Literal>
+			External devices or components of the system which collect
+			information from the environment or the system state.
+		</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Setpoint</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Setpoint</IRI>
+        <Literal>
+							Goal that does not vary with time (typically a constant
+							value).
+						</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#State</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#State</IRI>
+        <Literal>Instrinsic configuration and description of the system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#SystemBus</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SystemBus</IRI>
+        <Literal>
+					The system bus is a pathway composed of cables and connectors
+					used to carry data between a computer microprocessor and the
+					main memory. The bus provides a communication path for the
+					data and control signals moving between the major components
+					of the computer system.
+				</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#SystemServices</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SystemServices</IRI>
+        <Literal>
+									A service is software that performs automated tasks, responds to
+									hardware events, or listens for data requests from other software.
+									In a user&apos;s operating system, these services are often loaded
+									automatically at startup, and run in the background, without user
+									interaction. They respond to user keyboard shortcuts, index and
+									optimize the file system, and communicate with other devices on
+									the local network.
+								</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#SystemSoftware</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SystemSoftware</IRI>
+        <Literal>
+								System software is software designed to provide a platform for
+								other software. Examples of system software include operating
+								systems like macOS, GNU/Linux and Microsoft Windows,
+								computational science software, game engines, industrial
+								automation, and software as a service applications.
+							</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#SystemType</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SystemType</IRI>
+        <Literal>
+							Three main features to consider for the classification of
+							systems
+						</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#SystemUtilities</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SystemUtilities</IRI>
+        <Literal>
+									Software designed to help to analyze, configure, optimize or
+									maintain a computer. It is used to support the computer
+									infrastructure - in contrast to application software, which is aimed
+									at directly performing tasks that benefit ordinary users. However,
+									utilities often form part of the application systems.
+									Although a basic set of utility programs is usually distributed with
+									an operating system (OS), and this first party utility software is
+									often considered part of the operating system, users often install
+									replacements or additional utilities.
+								</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Topology</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Topology</IRI>
+        <Literal>
+					Structure of the interconnections of the components of a
+					system.
+				</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Tracking</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tracking</IRI>
+        <Literal>
+							Action to make the system follow a goal that varies with
+							time.
+						</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#UserInterface</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#UserInterface</IRI>
+        <Literal>
+										The user interface (UI), in the industrial design field of
+										human-computer interaction, is the space where interactions
+										between humans and machines occur. The goal of this interaction
+										is to allow effective operation and control of the machine from
+										the human end, whilst the machine simultaneously feeds back
+										information that aids the operators&apos; decision-making process.
+									</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#Embedded/Firmware</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Embedded/Firmware</IRI>
+        <Literal>
+							Embedded software is computer software, written to control
+							machines or devices that are not typically thought of as
+							computers, commonly known as embedded systems. It is typically
+							specialized for the particular hardware that it runs on and has time
+							and memory constraints.
+							A precise and stable characteristic feature is that no or not all
+							functions of embedded software are initiated/controlled via a
+							human interface, but through machine-interfaces instead.
+							Unlike standard computers that generally use an operating
+							systems such as OS X, Windows or GNU/Linux, embedded
+							software may use no operating system, or when they do use, a
+							wide variety of operating systems can be chosen from, typically a
+							real-time operating system.
+						</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#H/WTopology</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#H/WTopology</IRI>
+        <Literal>The way in which constituent parts are interrelated or arranged.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>http://mpm4cps.eu/ontology/shared#Human</IRI>
+        <Literal>FeatureModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://mpm4cps.eu/ontology/shared#Human</IRI>
+        <Literal>Humans within a CPS perform certain roles within the CPS. </Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

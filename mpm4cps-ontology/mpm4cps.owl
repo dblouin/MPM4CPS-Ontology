@@ -12,8 +12,6 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://mpm4cps.eu/ontology/cps</Import>
-    <Import>http://mpm4cps.eu/ontology/mpm</Import>
     <Annotation>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
         <Literal>Dominique Blouin; Hana Mkaouar</Literal>
@@ -72,6 +70,48 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="4cps#isSupportedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringArtifact"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringParadigm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#Formalism"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasArtifacts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringEnvironment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#Model"/>

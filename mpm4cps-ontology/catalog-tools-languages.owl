@@ -12,7 +12,6 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://mpm4cps.eu/ontology/cps</Import>
     <Import>http://mpm4cps.eu/ontology/mpm</Import>
     <Declaration>
         <NamedIndividual IRI="#AADL"/>
@@ -946,6 +945,24 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TimedI/OAutomata"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:usage:cps"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#hasToolDesc"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeRemoved"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:reviewer"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:fullName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#ApplicationDomain"/>
     </Declaration>
     <ClassAssertion>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ArchitectureDescriptionLanguage"/>

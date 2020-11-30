@@ -460,6 +460,66 @@
     <Declaration>
         <NamedIndividual IRI="#robotinoBlocks"/>
     </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:SubFlow"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:Characteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:Transition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:isTransitionTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:Activity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:hasSubProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:EngineeringMethodology"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:ParadigmaticProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:isTransitionFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:hasProperties"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:hasNextStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:hasStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:isImplementingStage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:ActivitySet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:hasCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:Human"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:EngineeringStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="shared:hasContainedActivitySet"/>
+    </Declaration>
     <ClassAssertion>
         <Class abbreviatedIRI="shared:ParadigmaticProperty"/>
         <NamedIndividual IRI="#ArcsProperty"/>
@@ -1077,36 +1137,6 @@
         <NamedIndividual IRI="#SiLbActivity"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#CPSLabActivitySet"/>
-        <NamedIndividual IRI="#HiL2STTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#CPSLabActivitySet"/>
-        <NamedIndividual IRI="#MT2MiLTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#CPSLabActivitySet"/>
-        <NamedIndividual IRI="#MiL2RPTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#CPSLabActivitySet"/>
-        <NamedIndividual IRI="#MiL2SiLTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#CPSLabActivitySet"/>
-        <NamedIndividual IRI="#RP2SiLTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#CPSLabActivitySet"/>
-        <NamedIndividual IRI="#SiL2HiLTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/mpm4cps4cps#hasModelingArtifacts"/>
         <NamedIndividual IRI="#CPSLabEngineeringEnv"/>
         <NamedIndividual IRI="#CPSLabMegaModel"/>
@@ -1552,31 +1582,6 @@
         <NamedIndividual IRI="#HiLGenerateSystemCode"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#HiLProcess_ActivitySet"/>
-        <NamedIndividual IRI="#HiL_CheckResults2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#HiLProcess_ActivitySet"/>
-        <NamedIndividual IRI="#HiL_EditControl2GenerateControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#HiLProcess_ActivitySet"/>
-        <NamedIndividual IRI="#HiL_EditInput2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#HiLProcess_ActivitySet"/>
-        <NamedIndividual IRI="#HiL_EditSystem2GenerateSystemTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#HiLProcess_ActivitySet"/>
-        <NamedIndividual IRI="#HiL_GenerateCode2ExecuteControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:isTransitionFrom"/>
         <NamedIndividual IRI="#HiL_CheckResults2EditControlTransition"/>
         <NamedIndividual IRI="#HiLCheckExecutionResult"/>
@@ -1697,21 +1702,6 @@
         <NamedIndividual IRI="#MTSimulateControlModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
-        <NamedIndividual IRI="#MT_CheckResults2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
-        <NamedIndividual IRI="#MT_EditControl2SimulateControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#MTProcess_ActivitySet"/>
-        <NamedIndividual IRI="#MT_EditInput2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
         <NamedIndividual IRI="#MTSimulateControlModel"/>
         <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#Simulink"/>
@@ -1825,21 +1815,6 @@
         <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
         <NamedIndividual IRI="#MiLProcess_ActivitySet"/>
         <NamedIndividual IRI="#MiLSimulateControlModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#MiLProcess_ActivitySet"/>
-        <NamedIndividual IRI="#MiL_CheckResults2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#MiLProcess_ActivitySet"/>
-        <NamedIndividual IRI="#MiL_EditControl2SimulateControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#MiLProcess_ActivitySet"/>
-        <NamedIndividual IRI="#MiL_EditInput2EditControlTransition"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
@@ -1977,21 +1952,6 @@
         <NamedIndividual IRI="#RPaSimulateControlModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#RPaProcess_ActivitySet"/>
-        <NamedIndividual IRI="#RPa_CheckResults2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#RPaProcess_ActivitySet"/>
-        <NamedIndividual IRI="#RPa_EditControl2SimulateControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#RPaProcess_ActivitySet"/>
-        <NamedIndividual IRI="#RPa_EditInput2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
         <NamedIndividual IRI="#RPaSimulateControlModel"/>
         <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#FESTO_Robotino_Sim"/>
@@ -2080,21 +2040,6 @@
         <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
         <NamedIndividual IRI="#RPbProcess_ActivitySet"/>
         <NamedIndividual IRI="#RPbSimulateControlModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#RPbProcess_ActivitySet"/>
-        <NamedIndividual IRI="#RPb_CheckResults2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#RPbProcess_ActivitySet"/>
-        <NamedIndividual IRI="#RPb_EditControl2SimulateControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#RPbProcess_ActivitySet"/>
-        <NamedIndividual IRI="#RPb_EditInput2EditControlTransition"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
@@ -2307,31 +2252,6 @@
         <NamedIndividual IRI="#SiLaSimulateControlModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLaProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLa_CheckResults2EditModelTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLaProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLa_EditControl2GenerateControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLaProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLa_EditInput2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLaProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLa_EditSystem2GenerateSystemTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLaProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLa_GenerateCode2SimulateControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>
         <NamedIndividual IRI="#SiLaSimulateControlModel"/>
         <NamedIndividual IRI="http://mpm4cps.eu/ontology/catalog-tools-languages#FESTO_Robotino_Sim"/>
@@ -2470,31 +2390,6 @@
         <ObjectProperty abbreviatedIRI="shared:hasSetActivities"/>
         <NamedIndividual IRI="#SiLbProcess_ActivitySet"/>
         <NamedIndividual IRI="#SiLbSimulateControlModel"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLbProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLb_CheckResults2EditModelTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLbProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLb_EditControl2GenerateControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLbProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLb_EditInput2EditControlTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLbProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLb_EditSystem2GenerateSystemTransition"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="shared:hasTransitions"/>
-        <NamedIndividual IRI="#SiLbProcess_ActivitySet"/>
-        <NamedIndividual IRI="#SiLb_GenerateCode2SimulateControlTransition"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="shared:hasActivityPerformer"/>

@@ -1,0 +1,1070 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://mpm4cps.eu/ontology/ToBeAdded"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://mpm4cps.eu/ontology/ToBeAdded">
+    <Prefix name="" IRI="http://mpm4cps.eu/ontology/ToBeAdded"/>
+    <Prefix name="cps" IRI="http://mpm4cps.eu/ontology/cps#"/>
+    <Prefix name="mpm" IRI="http://mpm4cps.eu/ontology/mpm#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="shared" IRI="http://mpm4cps.eu/ontology/shared#"/>
+    <Prefix name="mpm4cps" IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:"/>
+    <Import>http://mpm4cps.eu/ontology/catalog-tools-languages</Import>
+    <Import>http://mpm4cps.eu/ontology/mpm4cps</Import>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Action"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Actuator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Application-specificCircuit"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ApplicationDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ApplicationLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ApplicationSoftware"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Behavior"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:CPSComponentLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ComType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Communication"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:CommunicationAction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Configuration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ConstituentElements"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Constraints"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Continuity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Control"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Controller"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Cyber"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Dependency"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Diagnostics"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Disciplines"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Disturbance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Dynamics"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:EpistemicAction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Event"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Evolution"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Feedback"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:HardwarePlatform"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Input"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Linearity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ManagementLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Mechanical"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Memory"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Network"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:NetworkLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:OperatingSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Output"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Physical"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:PhysicalAction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Plant"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Prognostics"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Properties"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Protocol"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ReferenceSignal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Regulation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Responsibilities"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Role"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Scope"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:SecurityLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ServiceLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Setpoint"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:State"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:SystemBus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:SystemServices"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:SystemSoftware"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:SystemType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:SystemUtilities"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Time"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Topology"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:Tracking"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:UserInterface"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:ValidityRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cps:nonfunctionalReqs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#Embedded/Firmware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#H/WTopology"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:Architecture"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="shared:Human"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ApplicationSoftware_robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CyberPart_robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Software_robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SystemSoftware_robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForAction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForAdaptation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForAdaptive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForApplication-specificCircuit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForApplicationDomain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForApplicationLayer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForArchitecture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForAsynchronous"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForAutonomy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForAuxiliaryMemory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForAvailability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForBehavior"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForBifurcations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForBrokerBased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForBus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCPS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCPSComponentLayer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCPU"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCacheMemory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCascadingDynamics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCentralized"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForChattering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForChecmicalEngineering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCivilEngineering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForClientServer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCloudStorage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCollective"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForComType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCommand-line"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCommon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCommunication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCommunicationAction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCompetition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForComposability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForConsensus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForConsistency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForConstituentElement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForConstraints"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForContinuity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForContinuousTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForControl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForControllability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForController"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForCooperation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDecentralized"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDependency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDeterministic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDiagnostics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDisciplines"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDiscontiuous"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDiscrete-eventSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDiscreteTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDistributed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDisturbance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDynamics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForEfficiency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForElectricalEngineering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForEmergent_Behavior"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForEntity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForEnvironment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForEpistemicAction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForEquilibria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForEvent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForEvolution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForExternalInterfaces"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForFeedback"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForFlocking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForGPU"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForGlobal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForGoal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForGraphical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForHardwarePlatform"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForHeterogeneity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForHuman"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForHybrid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForHybridSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForHysteresis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForInput"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForIntelligence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForInteroperability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForLearning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForLinear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForLinearity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForLocal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForMainMemory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForManagementLayer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForMechanical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForMechanicalEngineering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForMemory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForMenu-driven"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForMesh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForMulti-modalSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForMultiple"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForNetwork"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForNetworkLayer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForNon-deterministic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForNon-linear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForObservability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForOperatingSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForOther"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForOtherEngineering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForOtherProtocols"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForOutput"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForOutputFeedback"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForP2P"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPerformance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPhaseTransitions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPhysical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPhysicalAction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPhysicalStorage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPiecewise-affineSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPlant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPoint2Point"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForProbabilistic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForProcessor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForPrognostics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForProperties"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForProtocol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForReferenceSignal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForRegulation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForReliability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForResilience"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForResponsibilities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForRing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForRobustness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForRole"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSafety"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForScalability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSecurity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSecurityLayer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSelfOrganisation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSelfOrganisedCriticality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSemanticInteroperability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSemiGlobal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSensitivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForServiceLayer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSetpoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSlidingMotions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSmooth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSoftwareEngineering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForStability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForState-of-Affairs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForStateFeedback"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForStatic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForStochastic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSustainability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSwarming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSwitchedSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSynchronisation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSynchronous"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSystemBus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSystemServices"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSystemType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForSystemUtilities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForTopology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForTracking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForTransitionSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForUncertainty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForUserInterface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForValidityRegion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForVarableStructureSystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForX_ilities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForZenoness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedFornonfunctionalReqs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Embedded/Firmware_robot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForComplex/strange"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForDissipativity/Passivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForH/WTopology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForOscillations/LimitCycles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ToBeAddedForReset/jump/impulsiveSystem"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ApplicationSoftware"/>
+        <NamedIndividual IRI="#ApplicationSoftware_robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Cyber"/>
+        <NamedIndividual IRI="#CyberPart_robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:SystemSoftware"/>
+        <NamedIndividual IRI="#SystemSoftware_robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Action"/>
+        <NamedIndividual IRI="#ToBeAddedForAction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Actuator"/>
+        <NamedIndividual IRI="#ToBeAddedForActuator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Application-specificCircuit"/>
+        <NamedIndividual IRI="#ToBeAddedForApplication-specificCircuit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ApplicationDomain"/>
+        <NamedIndividual IRI="#ToBeAddedForApplicationDomain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ApplicationLayer"/>
+        <NamedIndividual IRI="#ToBeAddedForApplicationLayer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Architecture"/>
+        <NamedIndividual IRI="#ToBeAddedForArchitecture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Behavior"/>
+        <NamedIndividual IRI="#ToBeAddedForBehavior"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:CPSComponentLayer"/>
+        <NamedIndividual IRI="#ToBeAddedForCPSComponentLayer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ComType"/>
+        <NamedIndividual IRI="#ToBeAddedForComType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Communication"/>
+        <NamedIndividual IRI="#ToBeAddedForCommunication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:CommunicationAction"/>
+        <NamedIndividual IRI="#ToBeAddedForCommunicationAction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Configuration"/>
+        <NamedIndividual IRI="#ToBeAddedForConfiguration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ConstituentElements"/>
+        <NamedIndividual IRI="#ToBeAddedForConstituentElement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Constraints"/>
+        <NamedIndividual IRI="#ToBeAddedForConstraints"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Continuity"/>
+        <NamedIndividual IRI="#ToBeAddedForContinuity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Control"/>
+        <NamedIndividual IRI="#ToBeAddedForControl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Controller"/>
+        <NamedIndividual IRI="#ToBeAddedForController"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Dependency"/>
+        <NamedIndividual IRI="#ToBeAddedForDependency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Diagnostics"/>
+        <NamedIndividual IRI="#ToBeAddedForDiagnostics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Disciplines"/>
+        <NamedIndividual IRI="#ToBeAddedForDisciplines"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Disturbance"/>
+        <NamedIndividual IRI="#ToBeAddedForDisturbance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Dynamics"/>
+        <NamedIndividual IRI="#ToBeAddedForDynamics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Entity"/>
+        <NamedIndividual IRI="#ToBeAddedForEntity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Environment"/>
+        <NamedIndividual IRI="#ToBeAddedForEnvironment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:EpistemicAction"/>
+        <NamedIndividual IRI="#ToBeAddedForEpistemicAction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Event"/>
+        <NamedIndividual IRI="#ToBeAddedForEvent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Evolution"/>
+        <NamedIndividual IRI="#ToBeAddedForEvolution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Feedback"/>
+        <NamedIndividual IRI="#ToBeAddedForFeedback"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Goal"/>
+        <NamedIndividual IRI="#ToBeAddedForGoal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:HardwarePlatform"/>
+        <NamedIndividual IRI="#ToBeAddedForHardwarePlatform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="shared:Human"/>
+        <NamedIndividual IRI="#ToBeAddedForHuman"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Input"/>
+        <NamedIndividual IRI="#ToBeAddedForInput"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Linearity"/>
+        <NamedIndividual IRI="#ToBeAddedForLinearity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ManagementLayer"/>
+        <NamedIndividual IRI="#ToBeAddedForManagementLayer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Mechanical"/>
+        <NamedIndividual IRI="#ToBeAddedForMechanical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Memory"/>
+        <NamedIndividual IRI="#ToBeAddedForMemory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Network"/>
+        <NamedIndividual IRI="#ToBeAddedForNetwork"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:NetworkLayer"/>
+        <NamedIndividual IRI="#ToBeAddedForNetworkLayer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:OperatingSystem"/>
+        <NamedIndividual IRI="#ToBeAddedForOperatingSystem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Output"/>
+        <NamedIndividual IRI="#ToBeAddedForOutput"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Physical"/>
+        <NamedIndividual IRI="#ToBeAddedForPhysical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:PhysicalAction"/>
+        <NamedIndividual IRI="#ToBeAddedForPhysicalAction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Plant"/>
+        <NamedIndividual IRI="#ToBeAddedForPlant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Processor"/>
+        <NamedIndividual IRI="#ToBeAddedForProcessor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Prognostics"/>
+        <NamedIndividual IRI="#ToBeAddedForPrognostics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Properties"/>
+        <NamedIndividual IRI="#ToBeAddedForProperties"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Protocol"/>
+        <NamedIndividual IRI="#ToBeAddedForProtocol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ReferenceSignal"/>
+        <NamedIndividual IRI="#ToBeAddedForReferenceSignal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Regulation"/>
+        <NamedIndividual IRI="#ToBeAddedForRegulation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Responsibilities"/>
+        <NamedIndividual IRI="#ToBeAddedForResponsibilities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Role"/>
+        <NamedIndividual IRI="#ToBeAddedForRole"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Scope"/>
+        <NamedIndividual IRI="#ToBeAddedForScope"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:SecurityLayer"/>
+        <NamedIndividual IRI="#ToBeAddedForSecurityLayer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Sensor"/>
+        <NamedIndividual IRI="#ToBeAddedForSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ServiceLayer"/>
+        <NamedIndividual IRI="#ToBeAddedForServiceLayer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Setpoint"/>
+        <NamedIndividual IRI="#ToBeAddedForSetpoint"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:State"/>
+        <NamedIndividual IRI="#ToBeAddedForState"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:SystemBus"/>
+        <NamedIndividual IRI="#ToBeAddedForSystemBus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:SystemServices"/>
+        <NamedIndividual IRI="#ToBeAddedForSystemServices"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:SystemType"/>
+        <NamedIndividual IRI="#ToBeAddedForSystemType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:SystemUtilities"/>
+        <NamedIndividual IRI="#ToBeAddedForSystemUtilities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Time"/>
+        <NamedIndividual IRI="#ToBeAddedForTime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Topology"/>
+        <NamedIndividual IRI="#ToBeAddedForTopology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:Tracking"/>
+        <NamedIndividual IRI="#ToBeAddedForTracking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:UserInterface"/>
+        <NamedIndividual IRI="#ToBeAddedForUserInterface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:ValidityRegion"/>
+        <NamedIndividual IRI="#ToBeAddedForValidityRegion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cps:nonfunctionalReqs"/>
+        <NamedIndividual IRI="#ToBeAddedFornonfunctionalReqs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#Embedded/Firmware"/>
+        <NamedIndividual IRI="#Embedded/Firmware_robot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#H/WTopology"/>
+        <NamedIndividual IRI="#ToBeAddedForH/WTopology"/>
+    </ClassAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
