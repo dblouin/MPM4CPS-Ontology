@@ -305,9 +305,7 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@feature.2"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@feature.3"/>
   </ownedSubClassRelations>
-  <individuals>
-    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.2/@alt.0/@feature.1"/>
-  </individuals>
+  <individuals/>
   <disabledFeatures>
     <features href="model.featureide#//@featureModel/@struct/@and/@or.2/@feature.0"/>
     <features href="model.featureide#//@featureModel/@struct/@and/@or.2/@feature.1"/>
