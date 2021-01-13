@@ -39,8 +39,9 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.0/@feature.0"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.0/@feature.1"/>
   </ownedSubClassRelations>
-  <ownedSubClassRelations hasIndividuals="true">
+  <ownedSubClassRelations>
     <superBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.1"/>
+    <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.1/@and.0"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.1/@feature.1"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.1/@feature.0"/>
   </ownedSubClassRelations>
@@ -49,7 +50,7 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.1/@and.0/@feature.1"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.1/@and.0/@feature.0"/>
   </ownedSubClassRelations>
-  <ownedSubClassRelations hasIndividuals="true">
+  <ownedSubClassRelations>
     <superBranch href="model.featureide#//@featureModel/@struct/@and/@or.0"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@or.0/@alt.0"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.0"/>
@@ -83,7 +84,7 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@or.0/@alt.1/@feature.1"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@or.0/@alt.1/@feature.0"/>
   </ownedSubClassRelations>
-  <ownedSubClassRelations hasIndividuals="true">
+  <ownedSubClassRelations>
     <superBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@alt.0"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@and.0"/>
@@ -96,7 +97,7 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.6"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.7"/>
   </ownedSubClassRelations>
-  <ownedSubClassRelations hasIndividuals="true">
+  <ownedSubClassRelations>
     <superBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@alt.0"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.0"/>
@@ -158,12 +159,12 @@
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.0"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1"/>
-    <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@feature.0"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@feature.1"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@feature.2"/>
-    <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@feature.3"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@feature.4"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@feature.5"/>
+    <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@feature.3"/>
+    <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@feature.0"/>
   </ownedSubClassRelations>
   <ownedSubClassRelations>
     <superBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.0"/>
@@ -214,7 +215,7 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@or.0/@alt.1/@feature.1"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@or.0/@alt.1/@feature.0"/>
   </ownedSubClassRelations>
-  <ownedSubClassRelations hasIndividuals="true">
+  <ownedSubClassRelations>
     <superBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@or.0/@and.0"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@or.0/@and.0/@and.0"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@or.0/@and.0/@feature.0"/>
@@ -287,7 +288,7 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.2/@alt.0/@feature.4"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.2/@alt.0/@feature.5"/>
   </ownedSubClassRelations>
-  <ownedSubClassRelations hasIndividuals="true">
+  <ownedSubClassRelations>
     <superBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.2/@and.0"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.2/@and.0/@alt.0"/>
     <subBranch href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.2/@and.0/@alt.1"/>
@@ -305,7 +306,44 @@
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@feature.2"/>
     <subFeature href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@feature.3"/>
   </ownedSubClassRelations>
-  <individuals/>
+  <individuals>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@or.0/@and.0/@feature.0"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.0"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.1"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.2"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.3"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.4"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.5"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.6"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@or.1/@and.0/@feature.7"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.0"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.1"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.2"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.3"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.4"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.6"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.5"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.8"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.7"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@or.0/@feature.9"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.1"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.0"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.2"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.4"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.3"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.5"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.6"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.8"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.7"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.9"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.10"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.12"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.1/@and.1/@feature.11"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.1/@feature.1"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.1/@feature.0"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.0/@feature.0"/>
+    <features href="model.featureide#//@featureModel/@struct/@and/@and.0/@and.3/@and.0/@and.0/@and.2/@feature.0"/>
+  </individuals>
   <disabledFeatures>
     <features href="model.featureide#//@featureModel/@struct/@and/@or.2/@feature.0"/>
     <features href="model.featureide#//@featureModel/@struct/@and/@or.2/@feature.1"/>
