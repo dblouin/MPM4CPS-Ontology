@@ -132,6 +132,19 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
+    <owl:Class IRI="#State"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#State</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Instrinsic configuration and description of the system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#State</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
     <owl:Class IRI="#Disturbance"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -158,6 +171,19 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
     <owl:IRI>#Input</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Output"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Output</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Abstraction of the effect of a system on its environment.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Output</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
@@ -203,38 +229,6 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
     <owl:IRI>#ReferenceSignal</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#StateFeedback"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#StateFeedback</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-								Control action which is designed depending on
-								the system states.
-							</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#StateFeedback</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#OutputFeedback"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#OutputFeedback</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-								Control action which is designed depending
-								on the system outputs.
-							</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#OutputFeedback</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
@@ -1159,14 +1153,25 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDisturbance"/>
+    <owl:ObjectProperty IRI="#hasOutput"/>
   </owl:Declaration>
   <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDisturbance"/>
-    <owl:Class IRI="#Disturbance"/>
+    <owl:ObjectProperty IRI="#hasOutput"/>
+    <owl:Class IRI="#Output"/>
   </owl:ObjectPropertyRange>
   <owl:SubClassOf>
-    <owl:Class IRI="#Disturbance"/>
+    <owl:Class IRI="#Output"/>
+    <owl:Class IRI="#Control"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasState"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasState"/>
+    <owl:Class IRI="#State"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#State"/>
     <owl:Class IRI="#Control"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -1178,6 +1183,17 @@
   </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Input"/>
+    <owl:Class IRI="#Control"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDisturbance"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDisturbance"/>
+    <owl:Class IRI="#Disturbance"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Disturbance"/>
     <owl:Class IRI="#Control"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -1350,28 +1366,6 @@
   <owl:Declaration>
     <owl:Class IRI="#Dependency"/>
   </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasStateFeedback"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasStateFeedback"/>
-    <owl:Class IRI="#StateFeedback"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#StateFeedback"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasOutputFeedback"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasOutputFeedback"/>
-    <owl:Class IRI="#OutputFeedback"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#OutputFeedback"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasDependency"/>
   </owl:Declaration>
@@ -2755,15 +2749,6 @@
   </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Processor"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasCPU"/>
-        <owl:Class IRI="#CPU"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Processor"/>
     <owl:Class IRI="#HardwarePlatform"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -2866,15 +2851,6 @@
     <owl:ObjectProperty IRI="#hasH/WTopology"/>
     <owl:Class IRI="#H/WTopology"/>
   </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#H/WTopology"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
-        <owl:Class IRI="#ExternalInterfaces"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
   <owl:SubClassOf>
     <owl:Class IRI="#H/WTopology"/>
     <owl:Class IRI="#HardwarePlatform"/>

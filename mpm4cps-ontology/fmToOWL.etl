@@ -153,7 +153,8 @@ rule andBranchTypeToSubclassOf
 	to owlSubClassOf : owl!SubClassOf, 
 	   owlClass : owl!Class, 
 	   owlObjectIntersectionOf : owl!ObjectIntersectionOf {
-	guard : branch.isAndBranch() and branch.hasFeatures( true ) and not branch.isDisabled ()
+	guard : branch.isAndBranch() and branch.hasFeatures( true ) 
+	       and not branch.isDisabled () and not branch.hasIndividual ()
 
 	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlSubClassOf.class.add(owlClass);
@@ -211,7 +212,8 @@ rule orBranchTypeToSubclassOf
 rule altBranchTypeToSubclassOf
 	transform branch : fm!BranchType
 	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectComplementOf : owl!ObjectComplementOf, owlObjectUnionOf : owl!ObjectUnionOf {
-	guard : branch.isAltBranch() and branch.hasFeatures( false ) and not branch.isDisabled () and not branch.hasIndividual ()
+	guard : branch.isAltBranch() and branch.hasFeatures( false ) 
+	and not branch.isDisabled () and not branch.hasIndividual ()
 
 	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlSubClassOf.class.add(owlClass);
