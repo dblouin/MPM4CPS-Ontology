@@ -2,7 +2,7 @@
 <featureModel>
 	<properties>
 		<graphics key="showhiddenfeatures" value="true"/>
-		<graphics key="legendposition" value="1312,239"/>
+		<graphics key="legendposition" value="1013,252"/>
 		<graphics key="legendautolayout" value="false"/>
 		<graphics key="showshortnames" value="false"/>
 		<graphics key="layout" value="vertical"/>
@@ -49,7 +49,6 @@
 								computational science software, game engines, industrial
 								automation, and software as a service applications.
 							</description>
-							<graphics key="collapsed" value="false"/>
 							<and mandatory="true" name="Operating System">
 								<and mandatory="true" name="User Interface">
 									<description>
@@ -60,7 +59,7 @@
 										the human end, whilst the machine simultaneously feeds back
 										information that aids the operators' decision-making process.
 									</description>
-									<feature name="Graphical">
+									<feature name="Graphical UI">
 										<description>
 											The graphical user interface (GUI) is a form of user interface that
 											allows users to interact with electronic devices through graphical
@@ -69,7 +68,7 @@
 											graphical elements.
 										</description>
 									</feature>
-									<feature name="Menu-driven">
+									<feature name="Menu-driven UI">
 										<description>
 											A menu-driven interface employs a series of screens, or ''menus,''
 											that allow users to make choices about what to do next. A menu-
@@ -78,7 +77,7 @@
 											completed the desired outcome.
 										</description>
 									</feature>
-									<feature name="Command-line">
+									<feature name="Command-line UI">
 										<description>
 											Command-line interfaces (CLIs) evolved from batch monitors
 											connected to the system console. Their interaction model was a
@@ -115,7 +114,7 @@
 								</description>
 							</feature>
 						</and>
-						<feature name="Embedded/Firmware">
+						<feature name="Embedded/Firmware Software">
 						<description>
 							Embedded software is computer software, written to control
 							machines or devices that are not typically thought of as
@@ -167,17 +166,17 @@
 							time.
 						</description>
 						<graphics key="collapsed" value="false"/>
-						<and mandatory="true" name="ValidityRegion">
-							<feature name="Local">
+						<and mandatory="true" name="Validity Region">
+							<feature name="Local VR">
 								<description>It is only valid for a subset of the state space of the system.</description>
 							</feature>
-							<feature name="Global">
+							<feature name="Global VR">
 								<description>
 									It is valid for all the state space where the system is defined
 									(normally an Euclidean space)
 								</description>
 							</feature>
-							<feature name="SemiGlobal">
+							<feature name="SemiGlobal VR">
 								<description>Partially global.</description>
 							</feature>
 						</and>
@@ -201,13 +200,13 @@
 					<graphics key="collapsed" value="false"/>
 					<or mandatory="true" name="Dependency">
 						<graphics key="collapsed" value="false"/>
-						<feature name="StateFeedback">
+						<feature name="State Dependency">
 							<description>
 								Control action which is designed depending on
 								the system states.
 							</description>
 						</feature>
-						<feature name="OutputFeedback">
+						<feature name="Output Dependency">
 							<description>
 								Control action which is designed depending
 								on the system outputs.
@@ -215,19 +214,19 @@
 						</feature>
 					</or>
 					<or mandatory="true" name="Scope">
-						<feature name="Centralized">
+						<feature name="Centralized Scope">
 							<description>
 								The feedback is only applied on one element of the
 								system, which controls the rest of the elements of the system.
 							</description>
 						</feature>
-						<feature name="Decentralized">
+						<feature name="Decentralized Scope">
 							<description>
 								The feedback is not applied in a centralised manner,
 								there is no central authority.
 							</description>
 						</feature>
-						<feature name="Distributed">
+						<feature name="Distributed Scope">
 							<description>
 								The feedback is applied on the components of the
 								system (it does not have to be all); some coordination of these
@@ -246,23 +245,25 @@
 						</description>
 						<graphics key="collapsed" value="false"/>
 						<alt name="Linearity">
-							<feature name="Linear"/>
-							<feature name="Non-linear"/>
+							<graphics key="collapsed" value="false"/>
+							<feature name="Linear System"/>
+							<feature name="Non-linear System"/>
 						</alt>
-						<alt name="Time">
+						<alt name="Timing">
 							<feature name="Discrete Time"/>
 							<feature name="Continuous Time"/>
 						</alt>
 						<and name="Continuity">
 							<feature name="Smooth"/>
-							<and name="Discontiuous">
+							<and name="Discontinuous">
 								<description>
 									Discontinous or non-smooth
 									systems present some type of discontinuity in the model representing
 									the system. Different names are used depending of the type of
 									discontinuity.
 								</description>
-								<feature name="Multi-modal system">
+								<graphics key="collapsed" value="false"/>
+								<feature name="Multi-modal System">
 									<description>
 										Systems with different modes, typically
 										consisting of several dynamical systems interacting one with
@@ -275,11 +276,11 @@
 										changes.
 									</description>
 								</feature>
-								<feature name="Transition system">
+								<feature name="Transition System">
 									<description>Systems with discrete transitions.</description>
 								</feature>
-								<feature name="Varable structure system"/>
-								<feature name="Switched system">
+								<feature name="Variable-structure System"/>
+								<feature name="Switched System">
 									<description>
 										Switched/switching systems are systems where
 										the discontinuity is in the derivative of the state, that is, in the
@@ -294,20 +295,20 @@
 										method.
 									</description>
 								</feature>
-								<feature name="Reset/jump/impulsive system">
+								<feature name="Reset/jump/impulsive System">
 								<description>
 									Systems where the discontinuity
 									is in the system state (for example, a bouncing ball).
 								</description>
 							</feature>
-							<feature name="Piecewise-affine system">
+							<feature name="Piecewise-affine System">
 								<description>
 									System whose input space is partitioned,
 									and consequently, it has different dynamics depending
 									on the discontinuous input.
 								</description>
 							</feature>
-							<feature name="Hybrid system">
+							<feature name="Hybrid System">
 								<description>
 									Hybrid dynamical systems are systems combining
 									continuous dynamics (either continuous time or discrete
@@ -317,27 +318,28 @@
 									systems are a subclass of hybrid systems.
 								</description>
 							</feature>
-							<feature name="Other"/>
+							<feature name="Other Discontinuous System"/>
 						</and>
 					</and>
 				</or>
 				<and name="Behavior">
 					<description>Dynamical pattern.</description>
-					<alt mandatory="true" name="Equilibria">
+					<graphics key="collapsed" value="true"/>
+					<and mandatory="true" name="Equilibrium">
 						<description>
 							States of the system that represent set points. They can
 							be
 						</description>
-						<feature name="Common">
+						<feature name="Common Equilibrium">
 							<description>
 								A unique equilibrium for all the interacting dynamical
 								systems in a more complex system.
 							</description>
 						</feature>
-						<feature name="Multiple">
+						<feature name="Multiple Equilibria">
 							<description>Multiple different equilibria in the system.</description>
 						</feature>
-					</alt>
+					</and>
 					<feature name="Bifurcations">
 						<description>
 							Points that mark a change in the dynamical patterns
@@ -373,7 +375,7 @@
 				<feature name="Zenoness">
 					<description>Infinite switches in a finite time.</description>
 				</feature>
-				<and mandatory="true" name="Emergent_Behavior">
+				<and mandatory="true" name="Emergent Behavior">
 					<description>
 						Behaviour that did not exist in the single systems
 						that together form a complex system consisting of interacting
@@ -406,7 +408,7 @@
 							each single node in the network.
 						</description>
 					</feature>
-					<feature name="SelfOrganisation">
+					<feature name="Self-organisation">
 						<description>
 							Collective behaviour that emerges in absence
 							of centralised control, local rules for the individuals lead to
@@ -425,7 +427,7 @@
 					<feature name="Competition">
 						<description>Action of segregation of interacting system components.</description>
 					</feature>
-					<feature name="SelfOrganisedCriticality">
+					<feature name="Self-organised Criticality">
 						<description>
 							Tendency of large systems to evolve
 							into a ‘critical’ state where minimal internal changes may lead
@@ -439,11 +441,11 @@
 					Structure of the interconnections of the components of a
 					system.
 				</description>
-				<alt mandatory="true" name="Evolution">
-					<feature name="Static">
+				<alt mandatory="true" name="Topological Evolution">
+					<feature name="Static Evolution">
 						<description>It does not change over time.</description>
 					</feature>
-					<feature name="Adaptive">
+					<feature name="Adaptive Evolution">
 						<description>It evolves over time.</description>
 					</feature>
 				</alt>
@@ -451,6 +453,7 @@
 		</or>
 		<and mandatory="true" name="Properties">
 			<description>Characteristics related to systems related to control.</description>
+			<graphics key="collapsed" value="false"/>
 			<feature name="Stability">
 				<description>
 					Idea that a system trajectory will keep getting closer and
@@ -589,20 +592,20 @@
 			are divided into physical actions, communicative actions, and
 			epistemic actions.
 		</description>
-		<feature name="CommunicationAction">
+		<feature name="Communication Action">
 			<description>
 				A communicative action is a kind of action that sends a message
 				(I think a message should be defined for CPS but currently it is
 				not) through a communication network of the CPS.
 			</description>
 		</feature>
-		<feature name="PhysicalAction">
+		<feature name="Physical Action">
 			<description>
 				Physical action is a kind of action that changes
 				the state of a physical element of the CPS or environment.
 			</description>
 		</feature>
-		<feature name="EpistemicAction">
+		<feature name="Epistemic Action">
 			<description>
 				An epistemic action is a kind of action that changes the state of the data (I
 				would rather use the term knowledge) held by the CPS. A human
@@ -660,7 +663,7 @@
 			External device or component of the system which produces
 			the control signal to modify the system behaviour
 		</description>
-		<and name="Hardware Platform">
+		<and name="Electronic">
 			<description>The execution platform of the control software</description>
 			<and mandatory="true" name="Processor">
 				<graphics key="collapsed" value="false"/>
@@ -716,39 +719,36 @@
 					of the computer system.
 				</description>
 			</feature>
-			<and mandatory="true" name="H/W Topology">
-			<description>The way in which constituent parts are interrelated or arranged.</description>
 			<feature mandatory="true" name="External Interfaces">
 				<description>
 					Interfaces and connections in between componenets of the
 					execution platform
 				</description>
 			</feature>
+			<feature name="Application-specific Circuit"/>
 		</and>
-		<feature name="Application-specific Circuit"/>
+		<feature name="Mechanical">
+			<description>
+				A mechanical control mechanism like a bi-metallic strip in a
+				thermostat. Its input is made up of effort.
+			</description>
+		</feature>
 	</and>
-	<feature name="Mechanical">
-		<description>
-			A mechanical control mechanism like a bi-metallic strip in a
-			thermostat. Its input is made up of effort.
-		</description>
+	<feature mandatory="true" name="Environment">
+		<description>What it is not the system.</description>
 	</feature>
-</and>
-<feature mandatory="true" name="Environment">
-	<description>What it is not the system.</description>
-</feature>
 </and>
 </and>
 <or mandatory="true" name="nonfunctionalReqs">
-<graphics key="collapsed" value="false"/>
+<graphics key="collapsed" value="true"/>
 <feature name="Performance"/>
 <feature name="Security"/>
 <feature name="Safety"/>
 <feature name="Reliability"/>
 <feature name="Efficiency"/>
 <alt name="Interoperability">
-<feature name="SyntacticInteroperability"/>
-<feature name="SemanticInteroperability"/>
+	<feature name="SyntacticInteroperability"/>
+	<feature name="SemanticInteroperability"/>
 </alt>
 <feature name="Scalability"/>
 <feature name="Composability"/>
@@ -756,38 +756,38 @@
 <feature name="Sustainability"/>
 <feature name="X_ilities"/>
 </or>
-<alt mandatory="true" name="ApplicationDomain">
-<graphics key="collapsed" value="false"/>
+<alt mandatory="true" name="Application Domain">
+<graphics key="collapsed" value="true"/>
 <feature name="Health">
-<description>This is the description for health</description>
+	<description>This is the description for health</description>
 </feature>
-<feature name="SmartManufacturing"/>
+<feature name="Smart Manufacturing"/>
 <feature name="Transportation"/>
-<feature name="ProcessControl"/>
+<feature name="Process Control"/>
 <feature name="Defense"/>
-<feature name="BuildingAutomation"/>
-<feature name="RoboticforService"/>
-<feature name="CriticalInfrastructure"/>
-<feature name="EmergencyResponse"/>
-<feature name="X_Domain"/>
+<feature name="Building Automation"/>
+<feature name="Robot for Service"/>
+<feature name="Critical Infrastructure"/>
+<feature name="Emergency Response"/>
+<feature name="Other Domain"/>
 </alt>
 <or mandatory="true" name="Disciplines">
-<graphics key="collapsed" value="false"/>
-<feature name="SoftwareEngineering"/>
-<feature name="MechanicalEngineering"/>
-<feature name="ElectricalEngineering"/>
-<feature name="CivilEngineering"/>
-<feature name="ChecmicalEngineering"/>
-<feature name="OtherEngineering"/>
+<graphics key="collapsed" value="true"/>
+<feature name="Software Engineering"/>
+<feature name="Mechanical Engineering"/>
+<feature name="Electrical Engineering"/>
+<feature name="Civil Engineering"/>
+<feature name="Chemical Engineering"/>
+<feature name="Other Engineering"/>
 </or>
 <and mandatory="true" name="Architecture">
-<graphics key="collapsed" value="false"/>
-<feature mandatory="true" name="ManagementLayer"/>
-<feature mandatory="true" name="CPSComponentLayer"/>
-<feature mandatory="true" name="NetworkLayer"/>
-<feature mandatory="true" name="ServiceLayer"/>
-<feature mandatory="true" name="ApplicationLayer"/>
-<feature mandatory="true" name="SecurityLayer"/>
+<graphics key="collapsed" value="true"/>
+<feature mandatory="true" name="Management Layer"/>
+<feature mandatory="true" name="CPS Component Layer"/>
+<feature mandatory="true" name="Network Layer"/>
+<feature mandatory="true" name="Service Layer"/>
+<feature mandatory="true" name="Application Layer"/>
+<feature mandatory="true" name="Security Layer"/>
 </and>
 <or hidden="true" name="Evaluation">
 <graphics key="collapsed" value="true"/>
@@ -798,33 +798,33 @@
 <feature name="OtherEvaluation"/>
 </or>
 <and hidden="true" name="Tool">
-<graphics key="collapsed" value="false"/>
-<or mandatory="true" name="Tool_Integration">
 <graphics key="collapsed" value="true"/>
-<feature name="Within_Domain"/>
-<feature name="Across_Domains"/>
+<or mandatory="true" name="Tool_Integration">
+	<graphics key="collapsed" value="true"/>
+	<feature name="Within_Domain"/>
+	<feature name="Across_Domains"/>
 </or>
 <or mandatory="true" name="kind">
-<graphics key="collapsed" value="false"/>
-<feature name="CyberTool"/>
-<feature name="PhysicalTool"/>
-<feature name="HW_SW_CoDesignTool"/>
+	<graphics key="collapsed" value="true"/>
+	<feature name="CyberTool"/>
+	<feature name="PhysicalTool"/>
+	<feature name="HW_SW_CoDesignTool"/>
 </or>
 <or mandatory="true" name="Lifecycle_Support">
-<graphics key="collapsed" value="false"/>
-<feature name="RequirementsAnalysis"/>
-<feature name="ArchitectureDesign"/>
-<feature name="DetailedDesign"/>
-<feature name="Implementation"/>
-<feature name="TestingTool"/>
-<feature name="Maintenance"/>
+	<graphics key="collapsed" value="false"/>
+	<feature name="RequirementsAnalysis"/>
+	<feature name="ArchitectureDesign"/>
+	<feature name="DetailedDesign"/>
+	<feature name="Implementation"/>
+	<feature name="TestingTool"/>
+	<feature name="Maintenance"/>
 </or>
 </and>
 <alt hidden="true" name="Design">
-<graphics key="collapsed" value="false"/>
+<graphics key="collapsed" value="true"/>
 <alt name="Approach">
-<feature name="Separate"/>
-<feature name="CoDesign"/>
+	<feature name="Separate"/>
+	<feature name="CoDesign"/>
 </alt>
 <feature name="Viewpoint"/>
 <feature name="Formalisms"/>
@@ -841,192 +841,200 @@
 </alt>
 <alt hidden="true" name="Model">
 <description>
-Mathematical/computational abstraction that approximates the evolution,
-properties and relationships between elements of the system.
+	Mathematical/computational abstraction that approximates the evolution,
+	properties and relationships between elements of the system.
 </description>
 <graphics key="collapsed" value="true"/>
 <alt name="Framework">
-<description>
-	Modelling framework depending of the types of mathematical/
-	computational objects and formalisation used:
-</description>
-<feature name="AgentBased">
-	<description>Components are seen as non-dynamical agents.</description>
-</feature>
-<feature name="DifferentialEquation">
-	<description>Continuous-time dynamical model.</description>
-</feature>
-<feature name="DifferenceEquation">
-	<description>Discrete-time dynamical model.</description>
-</feature>
-<feature name="HybridAutomata">
 	<description>
-		A finite state automaton is a computational
-		abstraction of the transitions of a system between discrete states
-		or locations (on and off, for instance). A hybrid automaton, additionally,
-		considers dynamical evolution over time in each location.
-		This dynamical evolution is represented by a dynamical system.
-		Each location represents an operation mode in a complex dynamical
-		system, or multiple dynamical systems interacting to achieve
-		a common goal. Depending on the nature of the dynamics of the
-		system in each location, different types of hybrid automata are
-		defined
+		Modelling framework depending of the types of mathematical/
+		computational objects and formalisation used:
 	</description>
-</feature>
-<feature name="Bond graphs">
-	<description>
-		Graph representation of energy relationships in
-		physical systems.
-	</description>
-</feature>
-<feature name="Petri nets">
-	<description>
-		Modelling language for the description of dynamical
-		discrete systems.
-	</description>
-</feature>
-<feature name="Complex networks">
-	<description>
-		A complex network consists of a large number
-		of interdependent systems connected in a non-trivial and nonregular
-		manner. The interconnection of these systems produces
-		emergent properties or behaviours which are not present in the
-		individual systems: this is called self-organisation, collective behaviour.
-		There are different models for complex networks. These
-		models are typically based on graph theory (nodes connected with
-		links). The main models for complex networks are: random-graph
-		networks, small-world networks and scale-free networks. Each of
-		these models have different topological (structural) features, analysed
-		with tools from statistical physics.
-	</description>
-</feature>
-<feature name="Complementarity">
-	<description>
-		Representation of a system by several incompatible
-		descriptions that together can describe the full system.
-	</description>
-</feature>
-<feature name="Bisimulations">
-	<description>Binary relations between state transition systems.</description>
-</feature>
-<feature name="Symbolic dynamics">
-	<description>
-		Different formalisations of discrete-time
-		dynamical systems with continuous state spaces.
-	</description>
-</feature>
-<feature name="Event-flow formulas">
-	<description>
-		Formalisation of the continuous evolution
-		of a system with discrete events (abrupt changes).
-	</description>
-</feature>
-<feature name="OtherFramework">
-	<description>
-		There are many other modelling frameworks,
-		as many as mathematical abstractions of dynamics.
-	</description>
-</feature>
+	<feature name="AgentBased">
+		<description>Components are seen as non-dynamical agents.</description>
+	</feature>
+	<feature name="DifferentialEquation">
+		<description>Continuous-time dynamical model.</description>
+	</feature>
+	<feature name="DifferenceEquation">
+		<description>Discrete-time dynamical model.</description>
+	</feature>
+	<feature name="HybridAutomata">
+		<description>
+			A finite state automaton is a computational
+			abstraction of the transitions of a system between discrete states
+			or locations (on and off, for instance). A hybrid automaton, additionally,
+			considers dynamical evolution over time in each location.
+			This dynamical evolution is represented by a dynamical system.
+			Each location represents an operation mode in a complex dynamical
+			system, or multiple dynamical systems interacting to achieve
+			a common goal. Depending on the nature of the dynamics of the
+			system in each location, different types of hybrid automata are
+			defined
+		</description>
+	</feature>
+	<feature name="Bond graphs">
+		<description>
+			Graph representation of energy relationships in
+			physical systems.
+		</description>
+	</feature>
+	<feature name="Petri nets">
+		<description>
+			Modelling language for the description of dynamical
+			discrete systems.
+		</description>
+	</feature>
+	<feature name="Complex networks">
+		<description>
+			A complex network consists of a large number
+			of interdependent systems connected in a non-trivial and nonregular
+			manner. The interconnection of these systems produces
+			emergent properties or behaviours which are not present in the
+			individual systems: this is called self-organisation, collective behaviour.
+			There are different models for complex networks. These
+			models are typically based on graph theory (nodes connected with
+			links). The main models for complex networks are: random-graph
+			networks, small-world networks and scale-free networks. Each of
+			these models have different topological (structural) features, analysed
+			with tools from statistical physics.
+		</description>
+	</feature>
+	<feature name="Complementarity">
+		<description>
+			Representation of a system by several incompatible
+			descriptions that together can describe the full system.
+		</description>
+	</feature>
+	<feature name="Bisimulations">
+		<description>Binary relations between state transition systems.</description>
+	</feature>
+	<feature name="Symbolic dynamics">
+		<description>
+			Different formalisations of discrete-time
+			dynamical systems with continuous state spaces.
+		</description>
+	</feature>
+	<feature name="Event-flow formulas">
+		<description>
+			Formalisation of the continuous evolution
+			of a system with discrete events (abrupt changes).
+		</description>
+	</feature>
+	<feature name="OtherFramework">
+		<description>
+			There are many other modelling frameworks,
+			as many as mathematical abstractions of dynamics.
+		</description>
+	</feature>
 </alt>
 <feature name="ParameterIdentification">
-<description>
-	Process of calculating the parameters of a
-	model of the system to reproduce key patterns or properties.
-</description>
+	<description>
+		Process of calculating the parameters of a
+		model of the system to reproduce key patterns or properties.
+	</description>
 </feature>
 <feature name="Sampling">
-<description>
-	Discretisation of a continuous-time system as a set of samples
-	in discrete times.
-</description>
+	<description>
+		Discretisation of a continuous-time system as a set of samples
+		in discrete times.
+	</description>
 </feature>
 <feature name="Simulating">
-<description>
-	Reproduction of the behaviour of a system in a computer
-	through a model of this system.
-</description>
+	<description>
+		Reproduction of the behaviour of a system in a computer
+		through a model of this system.
+	</description>
 </feature>
 <feature name="SignalProcessing">
-<description>
-	Set of mathematical/computational techniques/tools
-	to generate, measure, transform, filter and visualise signals (states, inputs,
-	outputs, disturbances) in a system.
-</description>
+	<description>
+		Set of mathematical/computational techniques/tools
+		to generate, measure, transform, filter and visualise signals (states, inputs,
+		outputs, disturbances) in a system.
+	</description>
 </feature>
 </alt>
 <and hidden="true" name="Verification">
 <description>
-The process of checking that a property is met by a system.
-The verification process involves specifying the model of the system, specifying
-the property we wish it to conform to, and then checking if the model
-satisfies the desired property
+	The process of checking that a property is met by a system.
+	The verification process involves specifying the model of the system, specifying
+	the property we wish it to conform to, and then checking if the model
+	satisfies the desired property
 </description>
 <graphics key="collapsed" value="true"/>
 <or mandatory="true" name="Property">
-<description>Types of properties to verify</description>
-<feature name="SafetyP">
-	<description>Something bad will never happen in a system.</description>
-</feature>
-<feature name="Liveness">
-	<description>
-		Something good will eventually happen in a system. Liveness
-		properties are characterised by the idea that, at any finite point
-		in an execution, they could always be satisfied at some point in the
-		future, or alternatively that the only type of execution which can
-		disprove such a property is one of infinite length. Proposed by
-		E.M. Navarro-López.
-	</description>
-</feature>
-<feature name="Deadness">
-	<description>To disprove a liveness property with a finite length path.</description>
-</feature>
-<feature name="Reachability">
-	<description>
-		To guarantee that the system trajectory will reach a
-		subset of the state space
-	</description>
-</feature>
-<feature name="Correctness"/>
+	<description>Types of properties to verify</description>
+	<feature name="SafetyP">
+		<description>Something bad will never happen in a system.</description>
+	</feature>
+	<feature name="Liveness">
+		<description>
+			Something good will eventually happen in a system. Liveness
+			properties are characterised by the idea that, at any finite point
+			in an execution, they could always be satisfied at some point in the
+			future, or alternatively that the only type of execution which can
+			disprove such a property is one of infinite length. Proposed by
+			E.M. Navarro-López.
+		</description>
+	</feature>
+	<feature name="Deadness">
+		<description>To disprove a liveness property with a finite length path.</description>
+	</feature>
+	<feature name="Reachability">
+		<description>
+			To guarantee that the system trajectory will reach a
+			subset of the state space
+		</description>
+	</feature>
+	<feature name="Correctness"/>
 </or>
 <or mandatory="true" name="Technique">
-<description>Different types</description>
-<feature name="ModelChecking">
-	<description>
-		The model of the system is checked using algorithms
-		to automatically test that it satisfies a desired specification
-		(property).
-	</description>
-</feature>
-<feature name="TheoremProving">
-	<description>
-		Deductive verification or theorem proving employs
-		known axioms and rules to logically prove that a formal
-		specification holds. The idea is to mimic how humans carry out
-		mathematical proofs.
-	</description>
-</feature>
-<feature name="Falsification">
-	<description>
-		To find bugs in the design rather than proving the
-		correctness of the system. From a practical viewpoint, this verification
-		technique provides counterexample trajectories - that is,
-		trajectories violating a given property - in order to consider scenarios
-		difficult to extract from simulations.
-	</description>
-</feature>
-<feature name="ConstraintSatisfaction"/>
-<feature name="BooleanSatisfiability"/>
-<feature name="Satisfiability Modulo"/>
-<feature name="Symbolic Methods"/>
-<feature name="DynamicallyAware">
-	<description>
-		Verification guided by the dynamical
-		properties of the system. Recent verification technique proposed
-		by E.M. Navarro-López.
-	</description>
-</feature>
+	<description>Different types</description>
+	<feature name="ModelChecking">
+		<description>
+			The model of the system is checked using algorithms
+			to automatically test that it satisfies a desired specification
+			(property).
+		</description>
+	</feature>
+	<feature name="TheoremProving">
+		<description>
+			Deductive verification or theorem proving employs
+			known axioms and rules to logically prove that a formal
+			specification holds. The idea is to mimic how humans carry out
+			mathematical proofs.
+		</description>
+	</feature>
+	<feature name="Falsification">
+		<description>
+			To find bugs in the design rather than proving the
+			correctness of the system. From a practical viewpoint, this verification
+			technique provides counterexample trajectories - that is,
+			trajectories violating a given property - in order to consider scenarios
+			difficult to extract from simulations.
+		</description>
+	</feature>
+	<feature name="ConstraintSatisfaction"/>
+	<feature name="BooleanSatisfiability"/>
+	<feature name="Satisfiability Modulo"/>
+	<feature name="Symbolic Methods"/>
+	<feature name="DynamicallyAware">
+		<description>
+			Verification guided by the dynamical
+			properties of the system. Recent verification technique proposed
+			by E.M. Navarro-López.
+		</description>
+	</feature>
 </or>
 </and>
 </and>
 </struct>
+<constraints>
+<rule>
+<imp>
+<var>Application Software</var>
+<var>System Software</var>
+</imp>
+</rule>
+</constraints>
 </featureModel>
