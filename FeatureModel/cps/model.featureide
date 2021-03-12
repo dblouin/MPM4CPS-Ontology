@@ -15,120 +15,40 @@
 			<and mandatory="true" name="ConstituentElement">
 				<graphics key="collapsed" value="false"/>
 				<and mandatory="true" name="Cyber">
-					<description>
-						Communication and control between any human/biological/social system
-						and any artificial device. It refers to systems where feedback is essential.
-					</description>
+					<description>Communication and control between any human/biological/social system and any artificial device. It refers to systems where feedback is essential.</description>
 					<and mandatory="true" name="Software">
-						<description>
-							Computer software, or simply software, is a collection of data or
-							computer instructions that tell the computer how to work.
-							In computer science and software engineering, computer software
-							is all information processed by computer systems, programs and
-							data. Computer software includes computer programs, libraries
-							and related non-executable data, such as online documentation
-							or digital media. Computer hardware and software require each
-							other and neither can be realistically used on its own.
-						</description>
+						<description>Computer software, or simply software, is a collection of data or computer instructions that tell the computer how to work. In computer science and software engineering, computer software is all information processed by computer systems, programs and data. Computer software includes computer programs, libraries and related non-executable data, such as online documentation or digital media. Computer hardware and software require each other and neither can be realistically used on its own.</description>
 						<feature name="Application Software">
-							<description>
-								Application software (app for short) is a program or group of
-								programs designed for end users. Application software is built for
-								specific tasks.
-								While system software programs run in the background,
-								application software runs in the foreground and users interact
-								with it. System software programs work on its own while
-								application software is dependent on it.
-							</description>
+							<description>Application software (app for short) is a program or group of programs designed for end users. Application software is built for specific tasks. While system software programs run in the background, application software runs in the foreground and users interact with it. System software programs work on its own while application software is dependent on it.</description>
 						</feature>
 						<and name="System Software">
-							<description>
-								System software is software designed to provide a platform for
-								other software. Examples of system software include operating
-								systems like macOS, GNU/Linux and Microsoft Windows,
-								computational science software, game engines, industrial
-								automation, and software as a service applications.
-							</description>
+							<description>System software is software designed to provide a platform for other software. Examples of system software include operating systems like macOS, GNU/Linux and Microsoft Windows, computational science software, game engines, industrial automation, and software as a service applications.</description>
 							<and mandatory="true" name="Operating System">
 								<and mandatory="true" name="User Interface">
-									<description>
-										The user interface (UI), in the industrial design field of
-										human-computer interaction, is the space where interactions
-										between humans and machines occur. The goal of this interaction
-										is to allow effective operation and control of the machine from
-										the human end, whilst the machine simultaneously feeds back
-										information that aids the operators' decision-making process.
-									</description>
+									<description>The user interface (UI), in the industrial design field of human-computer interaction, is the space where interactions between humans and machines occur. The goal of this interaction is to allow effective operation and control of the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making process.</description>
 									<feature name="Graphical UI">
-										<description>
-											The graphical user interface (GUI) is a form of user interface that
-											allows users to interact with electronic devices through graphical
-											icons and audio indicator such as primary notation. The actions in
-											a GUI are usually performed through direct manipulation of the
-											graphical elements.
-										</description>
+										<description>The graphical user interface (GUI) is a form of user interface that allows users to interact with electronic devices through graphical icons and audio indicator such as primary notation. The actions in a GUI are usually performed through direct manipulation of the graphical elements.</description>
 									</feature>
 									<feature name="Menu-driven UI">
-										<description>
-											A menu-driven interface employs a series of screens, or ''menus,''
-											that allow users to make choices about what to do next. A menu-
-											driven interface can use a list format or graphics, with one
-											selection leading to the next menu screen, until the user has
-											completed the desired outcome.
-										</description>
+										<description>A menu-driven interface employs a series of screens, or 'menus', that allow users to make choices about what to do next. A menu-driven interface can use a list format or graphics, with one selection leading to the next menu screen, until the user has completed the desired outcome.</description>
 									</feature>
 									<feature name="Command-line UI">
-										<description>
-											Command-line interfaces (CLIs) evolved from batch monitors
-											connected to the system console. Their interaction model was a
-											series of request-response transactions, with requests expressed as
-											textual commands in a specialized vocabulary. Latency was far
-											lower than for batch systems, dropping from days or hours to
-											seconds.
-										</description>
+										<description>Command-line interfaces (CLIs) evolved from batch monitors connected to the system console. Their interaction model was a series of request-response transactions, with requests expressed as textual commands in a specialized vocabulary. Latency was far lower than for batch systems, dropping from days or hours to seconds.</description>
 									</feature>
 								</and>
 							</and>
 							<feature mandatory="true" name="System Services">
-								<description>
-									A service is software that performs automated tasks, responds to
-									hardware events, or listens for data requests from other software.
-									In a user's operating system, these services are often loaded
-									automatically at startup, and run in the background, without user
-									interaction. They respond to user keyboard shortcuts, index and
-									optimize the file system, and communicate with other devices on
-									the local network.
-								</description>
+								<description>A service is software that performs automated tasks, responds to hardware events, or listens for data requests from other software. In a user's operating system, these services are often loaded automatically at startup, and run in the background, without user interaction. They respond to user keyboard shortcuts, index and optimize the file system, and communicate with other devices on the local network.</description>
 							</feature>
 							<feature mandatory="true" name="System Utilities">
 								<description>
-									Software designed to help to analyze, configure, optimize or
-									maintain a computer. It is used to support the computer
-									infrastructure - in contrast to application software, which is aimed
-									at directly performing tasks that benefit ordinary users. However,
-									utilities often form part of the application systems.
-									Although a basic set of utility programs is usually distributed with
-									an operating system (OS), and this first party utility software is
-									often considered part of the operating system, users often install
-									replacements or additional utilities.
+									Software designed to help to analyze, configure, optimize or maintain a computer. It is used to support the computer infrastructure - in contrast to application software, which is aimed at directly performing tasks that benefit ordinary users. However, utilities often form part of the application systems. Although a basic set of utility programs is usually distributed with an operating system (OS), and this first party utility software is often considered part of the operating system, users often install replacements or additional utilities.
 								</description>
 							</feature>
 						</and>
 						<feature name="Embedded/Firmware Software">
 						<description>
-							Embedded software is computer software, written to control
-							machines or devices that are not typically thought of as
-							computers, commonly known as embedded systems. It is typically
-							specialized for the particular hardware that it runs on and has time
-							and memory constraints.
-							A precise and stable characteristic feature is that no or not all
-							functions of embedded software are initiated/controlled via a
-							human interface, but through machine-interfaces instead.
-							Unlike standard computers that generally use an operating
-							systems such as OS X, Windows or GNU/Linux, embedded
-							software may use no operating system, or when they do use, a
-							wide variety of operating systems can be chosen from, typically a
-							real-time operating system.
+							Embedded software is computer software, written to control machines or devices that are not typically thought of as computers, commonly known as embedded systems. It is typically specialized for the particular hardware that it runs on and has time and memory constraints. A precise and stable characteristic feature is that no or not all functions of embedded software are initiated/controlled via a human interface, but through machine-interfaces instead. Unlike standard computers that generally use an operating systems such as OS X, Windows or GNU/Linux, embedded software may use no operating system, or when they do use, a wide variety of operating systems can be chosen from, typically a real-time operating system.
 						</description>
 					</feature>
 				</and>
@@ -156,14 +76,12 @@
 					<graphics key="collapsed" value="false"/>
 					<feature name="Setpoint">
 						<description>
-							Goal that does not vary with time (typically a constant
-							value).
+							Goal that does not vary with time (typically a constant value).
 						</description>
 					</feature>
 					<and name="Tracking">
 						<description>
-							Action to make the system follow a goal that varies with
-							time.
+							Action to make the system follow a goal that varies with time.
 						</description>
 						<graphics key="collapsed" value="false"/>
 						<and mandatory="true" name="Validity Region">
@@ -172,8 +90,7 @@
 							</feature>
 							<feature name="Global VR">
 								<description>
-									It is valid for all the state space where the system is defined
-									(normally an Euclidean space)
+									It is valid for all the state space where the system is defined (normally an Euclidean space).
 								</description>
 							</feature>
 							<feature name="SemiGlobal VR">
@@ -186,51 +103,42 @@
 					</feature>
 					<feature name="ReferenceSignal">
 						<description>
-							Desired value for the states and/or outputs of the
-							system to reach.
+							Desired value for the states and/or outputs of the system to reach.
 						</description>
 					</feature>
 				</or>
 				<and mandatory="true" name="Feedback">
 					<description>
-						Implementation of the control action by sensing the output of a
-						system and modifying its input by means of actuators to meet a
-						pre-defined control goal.
+						Implementation of the control action by sensing the output of a system and modifying its input by means of actuators to meet a pre-defined control goal.
 					</description>
 					<graphics key="collapsed" value="false"/>
 					<or mandatory="true" name="Dependency">
 						<graphics key="collapsed" value="false"/>
 						<feature name="State Dependency">
 							<description>
-								Control action which is designed depending on
-								the system states.
+								Control action which is designed depending on the system states.
 							</description>
 						</feature>
 						<feature name="Output Dependency">
 							<description>
-								Control action which is designed depending
-								on the system outputs.
+								Control action which is designed depending on the system outputs.
 							</description>
 						</feature>
 					</or>
 					<or mandatory="true" name="Scope">
 						<feature name="Centralized Scope">
 							<description>
-								The feedback is only applied on one element of the
-								system, which controls the rest of the elements of the system.
+								The feedback is only applied on one element of the system, which controls the rest of the elements of the system.
 							</description>
 						</feature>
 						<feature name="Decentralized Scope">
 							<description>
-								The feedback is not applied in a centralised manner,
-								there is no central authority.
+								The feedback is not applied in a centralised manner, there is no central authority.
 							</description>
 						</feature>
 						<feature name="Distributed Scope">
 							<description>
-								The feedback is applied on the components of the
-								system (it does not have to be all); some coordination of these
-								parts has to be put in place.
+								The feedback is applied on the components of the system (it does not have to be all); some coordination of these parts has to be put in place.
 							</description>
 						</feature>
 					</or>
@@ -240,8 +148,7 @@
 					<graphics key="collapsed" value="false"/>
 					<or name="SystemType">
 						<description>
-							Three main features to consider for the classification of
-							systems
+							Three main features to consider for the classification of systems
 						</description>
 						<graphics key="collapsed" value="false"/>
 						<alt name="Linearity">
@@ -257,23 +164,17 @@
 							<feature name="Smooth"/>
 							<and name="Discontinuous">
 								<description>
-									Discontinous or non-smooth
-									systems present some type of discontinuity in the model representing
-									the system. Different names are used depending of the type of
-									discontinuity.
+									Discontinuous or non-smooth systems present some type of discontinuity in the model representing the system. Different names are used depending on the type of discontinuity.
 								</description>
 								<graphics key="collapsed" value="false"/>
 								<feature name="Multi-modal System">
 									<description>
-										Systems with different modes, typically
-										consisting of several dynamical systems interacting one with
-										each other.
+										Systems with different modes, typically consisting of several dynamical systems interacting one with each other.
 									</description>
 								</feature>
 								<feature name="Discrete-event System">
 									<description>
-										Systems including discrete events, abrupt
-										changes.
+										Systems including discrete events, abrupt changes.
 									</description>
 								</feature>
 								<feature name="Transition System">
@@ -282,40 +183,22 @@
 								<feature name="Variable-structure System"/>
 								<feature name="Switched System">
 									<description>
-										Switched/switching systems are systems where
-										the discontinuity is in the derivative of the state, that is, in the
-										vector field defining the systems dynamics (for example, systems
-										that switch between different operation modes with different
-										dynamics in each mode and with the state space partitioned
-										in different regions). In switched systems, the state space is
-										divided into different regions separated by a discontinuity surface.
-										The dynamics on the discontinuity surface It is typically
-										undefined and different methods are used to define it, mainly
-										Filipov’s continuation method and Utkin’s equivalent control
-										method.
+										Switched/switching systems are systems where the discontinuity is in the derivative of the state, that is, in the vector field defining the systems dynamics (for example, systems that switch between different operation modes with different dynamics in each mode and with the state space partitioned in different regions). In switched systems, the state space is divided into different regions separated by a discontinuity surface. It is typically undefined and different methods are used to define it, mainly Filipov’s continuation method and Utkin’s equivalent control method.
 									</description>
 								</feature>
 								<feature name="Reset/jump/impulsive System">
 								<description>
-									Systems where the discontinuity
-									is in the system state (for example, a bouncing ball).
+									Systems where the discontinuity is in the system state (for example, a bouncing ball).
 								</description>
 							</feature>
 							<feature name="Piecewise-affine System">
 								<description>
-									System whose input space is partitioned,
-									and consequently, it has different dynamics depending
-									on the discontinuous input.
+									System whose input space is partitioned, and consequently, it has different dynamics depending on the discontinuous input.
 								</description>
 							</feature>
 							<feature name="Hybrid System">
 								<description>
-									Hybrid dynamical systems are systems combining
-									continuous dynamics (either continuous time or discrete
-									time) and discrete input or event-driven discrete state transitions.
-									Indeed, the term ‘hybrid system’ from a dynamical viewpoint
-									is more general than ‘discontinuous system’, since discontinuous
-									systems are a subclass of hybrid systems.
+									Hybrid dynamical systems are systems combining continuous dynamics (either continuous time or discrete time) and discrete input or event-driven discrete state transitions. Indeed, the term 'hybrid system' from a dynamical viewpoint is more general than ‘discontinuous system’, since discontinuous systems are a subclass of hybrid systems.
 								</description>
 							</feature>
 							<feature name="Other Discontinuous System"/>
@@ -324,16 +207,14 @@
 				</or>
 				<and name="Behavior">
 					<description>Dynamical pattern.</description>
-					<graphics key="collapsed" value="true"/>
+					<graphics key="collapsed" value="false"/>
 					<and mandatory="true" name="Equilibrium">
 						<description>
-							States of the system that represent set points. They can
-							be
+							States of the system that represent set points.
 						</description>
 						<feature name="Common Equilibrium">
 							<description>
-								A unique equilibrium for all the interacting dynamical
-								systems in a more complex system.
+								A unique equilibrium for all the interacting dynamical systems in a more complex system.
 							</description>
 						</feature>
 						<feature name="Multiple Equilibria">
@@ -342,16 +223,13 @@
 					</and>
 					<feature name="Bifurcations">
 						<description>
-							Points that mark a change in the dynamical patterns
-							in a system.
+							Points that mark a change in the dynamical patterns in a system.
 						</description>
 					</feature>
 					<feature name="Oscillations/Limit cycles"/>
 					<feature name="Hysteresis">
 						<description>
-							Persistence of effects after the causes of these effects
-							are eliminated, representing the dependence of the state of a system
-							on its past history (memory).
+							Persistence of effects after the causes of these effects are eliminated, representing the dependence of the state of a system on its past history (memory).
 						</description>
 					</feature>
 					<feature name="Complex/strange">
@@ -362,11 +240,7 @@
 				</feature>
 				<feature name="Sliding motions">
 					<description>
-						Dynamics on the discontinuity surface of a
-						switched system, key for the analysis of these systems. There
-						are typically undefined and different methods are used to define
-						it, mainly Filipov’s continuation method and Utkin’s equivalent
-						control method.
+						Dynamics on the discontinuity surface of a switched system, key for the analysis of these systems. There are typically undefined and different methods are used to define it, mainly Filipov's continuation method and Utkin's equivalent control method.
 					</description>
 				</feature>
 				<feature name="Phase transitions">
@@ -377,9 +251,7 @@
 				</feature>
 				<and mandatory="true" name="Emergent Behavior">
 					<description>
-						Behaviour that did not exist in the single systems
-						that together form a complex system consisting of interacting
-						systems.
+						Behaviour that did not exist in the single systems that together form a complex system consisting of interacting systems.
 					</description>
 					<graphics key="collapsed" value="false"/>
 					<feature name="Collective">
@@ -387,8 +259,7 @@
 					</feature>
 					<feature name="Flocking">
 						<description>
-							To congregate or travel in flock. How to force all
-							individuals to move as a group (control).
+							To congregate or travel in flock. How to force all individuals to move as a group (control).
 						</description>
 					</feature>
 					<feature name="Swarming">
@@ -396,29 +267,22 @@
 					</feature>
 					<feature name="Consensus">
 						<description>
-							Protocols to reach an agreement as a group. How to
-							achieve a common solution for the entire group (stability).
+							Protocols to reach an agreement as a group. How to achieve a common solution for the entire group (stability).
 						</description>
 					</feature>
 					<feature name="Synchronisation">
 						<description>
-							Emergence of coherent behaviour in which
-							the elements of the system follow the same dynamical pattern.
-							It cannot be explained in terms of the individual dynamics of
-							each single node in the network.
+							Emergence of coherent behaviour in which the elements of the system follow the same dynamical pattern. It cannot be explained in terms of the individual dynamics of each single node in the network.
 						</description>
 					</feature>
 					<feature name="Self-organisation">
 						<description>
-							Collective behaviour that emerges in absence
-							of centralised control, local rules for the individuals lead to
-							global patterns, transcending the detailed nature of the components.
+							Collective behaviour that emerges in absence of centralised control, local rules for the individuals lead to global patterns, transcending the detailed nature of the components.
 						</description>
 					</feature>
 					<feature name="CascadingDynamics">
 						<description>
-							Effect in cascade in the dynamics of the
-							system.
+							Effect in cascade in the dynamics of the system.
 						</description>
 					</feature>
 					<feature name="Cooperation">
@@ -428,18 +292,13 @@
 						<description>Action of segregation of interacting system components.</description>
 					</feature>
 					<feature name="Self-organised Criticality">
-						<description>
-							Tendency of large systems to evolve
-							into a ‘critical’ state where minimal internal changes may lead
-							to abrupt avalanches with unpredictable consequences.
-						</description>
+						<description>Tendency of large systems to evolve into a ‘critical’ state where minimal internal changes may lead to abrupt avalanches with unpredictable consequences.</description>
 					</feature>
 				</and>
 			</and>
 			<and name="Topology">
 				<description>
-					Structure of the interconnections of the components of a
-					system.
+					Structure of the interconnections of the components of a system.
 				</description>
 				<alt mandatory="true" name="Topological Evolution">
 					<feature name="Static Evolution">
@@ -456,58 +315,48 @@
 			<graphics key="collapsed" value="false"/>
 			<feature name="Stability">
 				<description>
-					Idea that a system trajectory will keep getting closer and
-					closer to a desired point in space.
+					Idea that a system trajectory will keep getting closer and closer to a desired point in space.
 				</description>
 			</feature>
 			<feature name="Dissipativity/Passivity">
 			<description>
-				Abstraction of the energy properties of systems.
-				A dissipative system dissipates energy in some manner.
+				Abstraction of the energy properties of systems. A dissipative system dissipates energy in some manner.
 			</description>
 		</feature>
 		<feature name="Robustness">
 			<description>
-				Ability of a system to keep performing well despite
-				changes within and outside the system (for example, maintaining its
-				trajectories close to equilibria despite perturbations). It does not entail
-				adaptation.
+				Ability of a system to keep performing well despite changes within and outside the system (for example, maintaining its trajectories close to equilibria despite perturbations). It does not entail adaptation.
 			</description>
 		</feature>
 		<feature name="Adaptation">
 			<description>
-				Evolution/change over time depending on environment
-				and system’s changes.
+				Evolution/change over time depending on environment and system’s changes.
 			</description>
 		</feature>
 		<feature name="Controllability">
 			<description>
-				A system is controllable if it can be controlled (its
-				internal state can be modified) by modifying its inputs.
+				A system is controllable if it can be controlled (its internal state can be modified) by modifying its inputs.
 			</description>
 		</feature>
 		<feature name="Observability">
 			<description>
-				A system is observable if its internal state can be detected
-				(observed) from its outputs.
+				A system is observable if its internal state can be detected (observed) from its outputs.
 			</description>
 		</feature>
 		<feature name="Resilience">
 			<description>
-				Ability of a system to maintain functionality by adaptation
-				and recover when changes are produced within and outside the system.
+				Ability of a system to maintain functionality by adaptation and recover when changes are produced within and outside the system.
 			</description>
 		</feature>
 		<feature name="Autonomy">
 			<description>Ability of a system to make decisions affecting its behaviour.</description>
 		</feature>
 		<feature name="Intelligence">
-			<description>Ability to ‘think’ or automate tasks to achieve a goal.</description>
+			<description>Ability to 'think' or automate tasks to achieve a goal.</description>
 		</feature>
 		<feature name="Consistency">
 			<description>
-				Property of logical systems by which it is not possible
-				to find a contradiction within the system.
+				Property of logical systems by which it is not possible to find a contradiction within the system.
 			</description>
 		</feature>
 		<feature name="Heterogeneity">
@@ -532,9 +381,7 @@
 	</feature>
 	<feature name="Prognostics">
 		<description>
-			Prediction of the time in the future when a system will not
-			performed anymore as it is expected or for what it was designed (control
-			goal).
+			Prediction of the time in the future when a system will not performed anymore as it is expected or for what it was designed (control goal).
 		</description>
 	</feature>
 </and>
@@ -543,81 +390,58 @@
 	<graphics key="collapsed" value="false"/>
 	<and name="Role">
 		<description>
-			Each role represents some capacity or position, where humans playing
-			the role need to contribute for achieving certain behaviour goals
-			set for the CPS. Each role is defined in terms of responsibilities and
-			constraints pertaining to the role that are required for contributing
-			to achieving the behaviour goals set for the CPS.
+			Each role represents some capacity or position, where humans playing the role need to contribute for achieving certain behaviour goals set for the CPS. Each role is defined in terms of responsibilities and constraints pertaining to the role that are required for contributing to achieving the behaviour goals set for the CPS.
 		</description>
 		<feature mandatory="true" name="Responsibilities">
 			<description>
-				Responsibilities are components of a role that determine what a human
-				performing the role must do for the behaviour goals of the CPS to
-				be achieved.
+				Responsibilities are components of a role that determine what a human performing the role must do for the behaviour goals of the CPS to be achieved.
 			</description>
 		</feature>
 		<feature mandatory="true" name="Constraints">
 			<description>
-				Constraints are conditions that a human performing
-				the role must take into consideration when exercising its
-				responsibilities.
+				Constraints are conditions that a human performing the role must take into consideration when exercising its responsibilities.
 			</description>
 		</feature>
 	</and>
 	<and name="Event">
 		<description>
-			A human can perceive events generated by the CPS or
-			environment. An event is a kind of entity that is related to the
-			states of affairs before and after it has occurred. A human
-			perceives events through sensors.
+			A human can perceive events generated by the CPS or environment. An event is a kind of entity that is related to the states of affairs before and after it has occurred. A human perceives events through sensors.
 		</description>
 		<feature name="State-of-Affairs">
 			<description>
-				State of affairs is a collective
-				state of the entities of the CPS and the environment.
+				State of affairs is a collective state of the entities of the CPS and the environment.
 			</description>
 		</feature>
 	</and>
 	<feature name="Entity">
 		<description>
-			An entity is anything perceivable or conceivable (I think that entity should be
-			defined for CPS at a higher level than under human).
+			An entity is anything perceivable or conceivable (I think that entity should be defined for CPS at a higher level than under human).
 		</description>
 	</feature>
 	<or name="Action">
 		<description>
-			Humans within a CPS exercise their responsibilities defined by
-			roles by performing certain actions. Action is an entity that is
-			targeted at changing the state of the CPS or environment. Actions
-			are divided into physical actions, communicative actions, and
-			epistemic actions.
+			Humans within a CPS exercise their responsibilities defined by roles by performing certain actions. Action is an entity that is targeted at changing the state of the CPS or environment. Actions are divided into physical actions, communicative actions, and epistemic actions.
 		</description>
 		<feature name="Communication Action">
 			<description>
-				A communicative action is a kind of action that sends a message
-				(I think a message should be defined for CPS but currently it is
-				not) through a communication network of the CPS.
+				A communicative action is a kind of action that sends a message through a communication network of the CPS.
 			</description>
 		</feature>
 		<feature name="Physical Action">
 			<description>
-				Physical action is a kind of action that changes
-				the state of a physical element of the CPS or environment.
+				Physical action is a kind of action that changes the state of a physical element of the CPS or environment.
 			</description>
 		</feature>
 		<feature name="Epistemic Action">
 			<description>
-				An epistemic action is a kind of action that changes the state of the data (I
-				would rather use the term knowledge) held by the CPS. A human
-				performs actions through actuators.
+				An epistemic action is a kind of action that changes the state of the data held by the CPS. A human performs actions through actuators.
 			</description>
 		</feature>
 	</or>
 </or>
 <and mandatory="true" name="Network">
 	<description>
-		A set of elements (for example, nodes) connected in some physical or
-		abstract manner (for example, links).
+		A set of elements (for example, nodes) connected in some physical or abstract manner (for example, links).
 	</description>
 	<graphics key="collapsed" value="false"/>
 	<alt mandatory="true" name="Configuration">
@@ -645,14 +469,12 @@
 	<graphics key="collapsed" value="false"/>
 	<feature mandatory="true" name="Sensor">
 		<description>
-			External devices or components of the system which collect
-			information from the environment or the system state.
+			External devices or components of the system which collect information from the environment or the system state.
 		</description>
 	</feature>
 	<feature mandatory="true" name="Actuator">
 		<description>
-			External devices or components of the system which act on
-			parts of the system to modify its behaviour.
+			External devices or components of the system which act on parts of the system to modify its behaviour.
 		</description>
 	</feature>
 	<feature mandatory="true" name="Plant">
@@ -660,8 +482,7 @@
 	</feature>
 	<and mandatory="true" name="Controller">
 		<description>
-			External device or component of the system which produces
-			the control signal to modify the system behaviour
+			External device or component of the system which produces the control signal to modify the system behaviour.
 		</description>
 		<and name="Electronic">
 			<description>The execution platform of the control software</description>
@@ -677,34 +498,17 @@
 			<and mandatory="true" name="Memory">
 				<feature mandatory="true" name="Main Memory">
 					<description>
-						The memory unit that communicates directly within the CPU,
-						Auxillary memory and Cache memory, is called main memory. It
-						is the central storage unit of the computer system. It is a large and
-						fast memory used to store data during computer operations. Main
-						memory is made up of RAM and ROM, with RAM integrated
-						circuit chips holding the major share.
+						The memory unit that communicates directly within the CPU, Auxillary memory and Cache memory, is called main memory. It is the central storage unit of the computer system. It is a large and fast memory used to store data during computer operations. Main memory is made up of RAM and ROM, with RAM integrated circuit chips holding the major share.
 					</description>
 				</feature>
 				<feature mandatory="true" name="Cache Memory">
 					<description>
-						The data or contents of the main memory that are used again and
-						again by CPU, are stored in the cache memory so that we can
-						easily access that data in shorter time.
-						Whenever the CPU needs to access memory, it first checks the
-						cache memory. If the data is not found in cache memory then the
-						CPU moves onto the main memory. It also transfers block of
-						recent data into the cache and keeps on deleting the old data in
-						cache to accomodate the new one.
+						The data or contents of the main memory that are used again and again by CPU, are stored in the cache memory so that we can easily access that data in shorter time. Whenever the CPU needs to access memory, it first checks the cache memory. If the data is not found in cache memory then the CPU moves onto the main memory. It also transfers block of recent data into the cache and keeps on deleting the old data in cache to accomodate the new one.
 					</description>
 				</feature>
 				<and name="Auxiliary Memory">
 					<description>
-						Devices that provide backup storage are called auxiliary memory.
-						It is not directly accessible to the CPU, and is accessed using the
-						Input/Output channels.
-						Magnetic disks and tapes are commonly used auxiliary devices.
-						Other devices used as auxiliary memory are magnetic drums,
-						magnetic bubble memory and optical disks.
+						Devices that provide backup storage are called auxiliary memory. It is not directly accessible to the CPU, and is accessed using the Input/Output channels. Magnetic disks and tapes are commonly used auxiliary devices. Other devices used as auxiliary memory are magnetic drums, magnetic bubble memory and optical disks.
 					</description>
 					<feature name="Physical Storage"/>
 					<feature name="Cloud Storage"/>
@@ -712,25 +516,19 @@
 			</and>
 			<feature mandatory="true" name="System Bus">
 				<description>
-					The system bus is a pathway composed of cables and connectors
-					used to carry data between a computer microprocessor and the
-					main memory. The bus provides a communication path for the
-					data and control signals moving between the major components
-					of the computer system.
+					The system bus is a pathway composed of cables and connectors used to carry data between a computer microprocessor and the main memory. The bus provides a communication path for the data and control signals moving between the major components of the computer system.
 				</description>
 			</feature>
 			<feature mandatory="true" name="External Interfaces">
 				<description>
-					Interfaces and connections in between componenets of the
-					execution platform
+					Interfaces and connections in between componenets of the execution platform.
 				</description>
 			</feature>
 			<feature name="Application-specific Circuit"/>
 		</and>
 		<feature name="Mechanical">
 			<description>
-				A mechanical control mechanism like a bi-metallic strip in a
-				thermostat. Its input is made up of effort.
+				A mechanical control mechanism like a bi-metallic strip in a thermostat. Its input is made of mechanical effort.
 			</description>
 		</feature>
 	</and>
@@ -841,14 +639,12 @@
 </alt>
 <alt hidden="true" name="Model">
 <description>
-	Mathematical/computational abstraction that approximates the evolution,
-	properties and relationships between elements of the system.
+	Mathematical/computational abstraction that approximates the evolution, properties and relationships between elements of the system.
 </description>
 <graphics key="collapsed" value="true"/>
 <alt name="Framework">
 	<description>
-		Modelling framework depending of the types of mathematical/
-		computational objects and formalisation used:
+		Modelling framework depending of the types of mathematical/computational objects and formalism used.
 	</description>
 	<feature name="AgentBased">
 		<description>Components are seen as non-dynamical agents.</description>
@@ -861,49 +657,27 @@
 	</feature>
 	<feature name="HybridAutomata">
 		<description>
-			A finite state automaton is a computational
-			abstraction of the transitions of a system between discrete states
-			or locations (on and off, for instance). A hybrid automaton, additionally,
-			considers dynamical evolution over time in each location.
-			This dynamical evolution is represented by a dynamical system.
-			Each location represents an operation mode in a complex dynamical
-			system, or multiple dynamical systems interacting to achieve
-			a common goal. Depending on the nature of the dynamics of the
-			system in each location, different types of hybrid automata are
-			defined
+			A finite state automaton is a computational abstraction of the transitions of a system between discrete states or locations (on and off, for instance). A hybrid automaton, additionally, considers dynamical evolution over time in each location. This dynamical evolution is represented by a dynamical system. Each location represents an operation mode in a complex dynamical system, or multiple dynamical systems interacting to achieve a common goal. Depending on the nature of the dynamics of the system in each location, different types of hybrid automata are defined.
 		</description>
 	</feature>
 	<feature name="Bond graphs">
 		<description>
-			Graph representation of energy relationships in
-			physical systems.
+			Graph representation of energy relationships in physical systems.
 		</description>
 	</feature>
 	<feature name="Petri nets">
 		<description>
-			Modelling language for the description of dynamical
-			discrete systems.
+			Modelling language for the description of dynamical discrete systems.
 		</description>
 	</feature>
 	<feature name="Complex networks">
 		<description>
-			A complex network consists of a large number
-			of interdependent systems connected in a non-trivial and nonregular
-			manner. The interconnection of these systems produces
-			emergent properties or behaviours which are not present in the
-			individual systems: this is called self-organisation, collective behaviour.
-			There are different models for complex networks. These
-			models are typically based on graph theory (nodes connected with
-			links). The main models for complex networks are: random-graph
-			networks, small-world networks and scale-free networks. Each of
-			these models have different topological (structural) features, analysed
-			with tools from statistical physics.
+			A complex network consists of a large number of interdependent systems connected in a non-trivial and nonregular manner. The interconnection of these systems produces emergent properties or behaviours which are not present in the individual systems: this is called self-organisation, collective behaviour. There are different models for complex networks. These models are typically based on graph theory (nodes connected with links). The main models for complex networks are: random-graph networks, small-world networks and scale-free networks. Each of these models have different topological (structural) features, analysed with tools from statistical physics.
 		</description>
 	</feature>
 	<feature name="Complementarity">
 		<description>
-			Representation of a system by several incompatible
-			descriptions that together can describe the full system.
+			Representation of a system by several incompatible descriptions that together can describe the full system.
 		</description>
 	</feature>
 	<feature name="Bisimulations">
@@ -911,55 +685,44 @@
 	</feature>
 	<feature name="Symbolic dynamics">
 		<description>
-			Different formalisations of discrete-time
-			dynamical systems with continuous state spaces.
+			Different formalisations of discrete-time dynamical systems with continuous state spaces.
 		</description>
 	</feature>
 	<feature name="Event-flow formulas">
 		<description>
-			Formalisation of the continuous evolution
-			of a system with discrete events (abrupt changes).
+			Formalisation of the continuous evolution of a system with discrete events (abrupt changes).
 		</description>
 	</feature>
 	<feature name="OtherFramework">
 		<description>
-			There are many other modelling frameworks,
-			as many as mathematical abstractions of dynamics.
+			There are many other modelling frameworks,as many as mathematical abstractions of dynamics.
 		</description>
 	</feature>
 </alt>
 <feature name="ParameterIdentification">
 	<description>
-		Process of calculating the parameters of a
-		model of the system to reproduce key patterns or properties.
+		Process of calculating the parameters of a model of the system to reproduce key patterns or properties.
 	</description>
 </feature>
 <feature name="Sampling">
 	<description>
-		Discretisation of a continuous-time system as a set of samples
-		in discrete times.
+		Discretisation of a continuous-time system as a set of samples in discrete times.
 	</description>
 </feature>
 <feature name="Simulating">
 	<description>
-		Reproduction of the behaviour of a system in a computer
-		through a model of this system.
+		Reproduction of the behaviour of a system in a computer through a model of this system.
 	</description>
 </feature>
 <feature name="SignalProcessing">
 	<description>
-		Set of mathematical/computational techniques/tools
-		to generate, measure, transform, filter and visualise signals (states, inputs,
-		outputs, disturbances) in a system.
+		Set of mathematical/computational techniques/tools to generate, measure, transform, filter and visualise signals (states, inputs, outputs, disturbances) in a system.
 	</description>
 </feature>
 </alt>
 <and hidden="true" name="Verification">
 <description>
-	The process of checking that a property is met by a system.
-	The verification process involves specifying the model of the system, specifying
-	the property we wish it to conform to, and then checking if the model
-	satisfies the desired property
+	The process of checking that a property is met by a system. The verification process involves specifying the model of the system, specifying the property we wish it to conform to, and then checking if the model satisfies the desired property.
 </description>
 <graphics key="collapsed" value="true"/>
 <or mandatory="true" name="Property">
@@ -969,12 +732,7 @@
 	</feature>
 	<feature name="Liveness">
 		<description>
-			Something good will eventually happen in a system. Liveness
-			properties are characterised by the idea that, at any finite point
-			in an execution, they could always be satisfied at some point in the
-			future, or alternatively that the only type of execution which can
-			disprove such a property is one of infinite length. Proposed by
-			E.M. Navarro-López.
+			Something good will eventually happen in a system. Liveness properties are characterised by the idea that, at any finite point in an execution, they could always be satisfied at some point in the future, or alternatively that the only type of execution which can disprove such a property is one of infinite length.
 		</description>
 	</feature>
 	<feature name="Deadness">
@@ -982,8 +740,7 @@
 	</feature>
 	<feature name="Reachability">
 		<description>
-			To guarantee that the system trajectory will reach a
-			subset of the state space
+			To guarantee that the system trajectory will reach a subset of the state space.
 		</description>
 	</feature>
 	<feature name="Correctness"/>
@@ -992,26 +749,17 @@
 	<description>Different types</description>
 	<feature name="ModelChecking">
 		<description>
-			The model of the system is checked using algorithms
-			to automatically test that it satisfies a desired specification
-			(property).
+			The model of the system is checked using algorithms to automatically test that it satisfies a desired specification (property).
 		</description>
 	</feature>
 	<feature name="TheoremProving">
 		<description>
-			Deductive verification or theorem proving employs
-			known axioms and rules to logically prove that a formal
-			specification holds. The idea is to mimic how humans carry out
-			mathematical proofs.
+			Deductive verification or theorem proving employs known axioms and rules to logically prove that a formal specification holds. The idea is to mimic how humans carry out mathematical proofs.
 		</description>
 	</feature>
 	<feature name="Falsification">
 		<description>
-			To find bugs in the design rather than proving the
-			correctness of the system. From a practical viewpoint, this verification
-			technique provides counterexample trajectories - that is,
-			trajectories violating a given property - in order to consider scenarios
-			difficult to extract from simulations.
+			To find bugs in the design rather than proving the correctness of the system. From a practical viewpoint, this verification technique provides counterexample trajectories - that is, trajectories violating a given property - in order to consider scenarios difficult to extract from simulations.
 		</description>
 	</feature>
 	<feature name="ConstraintSatisfaction"/>
@@ -1020,9 +768,7 @@
 	<feature name="Symbolic Methods"/>
 	<feature name="DynamicallyAware">
 		<description>
-			Verification guided by the dynamical
-			properties of the system. Recent verification technique proposed
-			by E.M. Navarro-López.
+			Verification guided by the dynamical properties of the system.
 		</description>
 	</feature>
 </or>

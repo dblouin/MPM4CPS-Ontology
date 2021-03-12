@@ -4,7 +4,7 @@
 <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
 <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="false"/>
 <stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Java Application"/>
-<stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/lib/shared.owl"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/mpm4cps-ontology/shared.owl"/>
 <stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/fw_combine_modeling_languages"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/org.mpm4cps.owl2latex.wg1deliverables/src/org/mpm4cps/owl2latex/wg1deliverables/main/SharedOntology.java"/>
@@ -14,6 +14,7 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.mpm4cps.owl2latex.wg1deliverables.main.SharedOntology"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;D:/Projets/mpm4cps/git/mpm4cps_wg1_ontology/lib/shared.owl&quot; &quot;D:/Projets/mpm4cps/git/mpm4cps_wg1/deliverables/fw_combine_modeling_languages&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="org.mpm4cps.owl2latex.wg1deliverables"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;C:/Users/RAKSHIT/git/MPM4CPS-Ontology/mpm4cps-ontology/shared.owl&quot; &quot;C:/Users/RAKSHIT/git/MPM4CPS-Ontology/deliverables/fw_combine_modeling_languages&quot;"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.mpm4cps.owl2latex.wg1deliverables"/>
 </launchConfiguration>

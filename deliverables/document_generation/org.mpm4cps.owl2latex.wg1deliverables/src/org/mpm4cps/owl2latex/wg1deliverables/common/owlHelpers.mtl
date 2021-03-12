@@ -119,7 +119,25 @@
 /]
 
 [query public escapeSpecialLatexChars( expression : String ) : String =
-	replaceAll( '_', '\\\\textunderscore ' ).replaceAll( '&', '\\\\&' )
+	replaceAll( '_', '\\\\textunderscore ' ).replaceAll( '&', '\\\\&' ).escapeLatexFirstQuotes()
+/]
+
+[query public escapeLatexFirstQuotes( expression : String ) : String =
+	if expression.contains('"') then
+		replace('"','``').escapeLatexSecondQuotes()
+	else
+		expression
+	endif
+	
+/]
+
+[query public escapeLatexSecondQuotes( expression : String ) : String =
+	if expression.contains('"') then
+		replace('"','\'\'').escapeLatexFirstQuotes()
+	else
+		expression
+	endif
+	
 /]
 
 [query public toLatexURL( ref : String ) : OclAny =
