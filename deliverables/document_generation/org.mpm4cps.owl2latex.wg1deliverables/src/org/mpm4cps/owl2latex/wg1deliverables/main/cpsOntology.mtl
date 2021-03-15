@@ -6,9 +6,11 @@
 [import org::mpm4cps::owl2latex::wg1deliverables::common::properties/]
 [import org::mpm4cps::owl2latex::wg1deliverables::common::utils/]
 
-[template public generate( rootDoc : DocumentRoot )]
+[template public generate( rootDoc : DocumentRoot ) post(trim())]
 	[comment @main /]
 	[file ( 'cps-ontology.tex', false )]
+[comment \chapter{Ontology of CPS Concepts}
+\label{ch:cps}/]
 %****************************************************************************************************************************************
 % File: cps-ontology.tex
 %
@@ -17,18 +19,20 @@
 [generateOverview( rootDoc.ontology->first() )/]
 	
 \section{Domain Concepts}
+\label{sec:cps:classes}
 
 This ontology of cyber-physical systems contains concepts divided into sub-domains as presented in the following subsections.
 
 [generateDomainConcepts( rootDoc.ontology->first() )/]
 
 \section{Properties}
+\label{sec:cps:properties}
 
 [generateProperties( rootDoc.ontology->first() )/]
 	[/file]
 [/template]
 
-[template public generateOverview( ontology : Ontology )]
+[template public generateOverview( ontology : Ontology ) post(trim())]
 \section{Ontology Overview}
 
 [ontology.commentAnnotations()/]
