@@ -110,10 +110,10 @@
 \thispagestyle{plain}
 
 ~			% some 'normal' text first, as otherwise, vspace() does not work
-\vspace{1cm}
+%\vspace{1cm}
 
 \begin{center}
-\includegraphics[height=6.6cm]{include/MPM4CPS/MPM4CPS-Logo}
+\includegraphics[height=6.4cm]{include/MPM4CPS/MPM4CPS-Logo}
 \hspace{1.0cm}
 \includegraphics[scale=0.3]{include/MPM4CPS/COST}
 \end{center}

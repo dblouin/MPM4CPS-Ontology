@@ -15,54 +15,91 @@ provided in the following subsections.
 \caption{Overview of the CPS ontology}
 \label{fig:cps_ontology_overview}
 \end{figure}
-
-
 	
 \section{Domain Concepts}
+\label{sec:cps:classes}
 
 This ontology of cyber-physical systems contains concepts divided into sub-domains as presented in the following subsections.
 
-\subsection{ApplicationDomainsDC}
-\label{subsecDC:ApplicationDomainsDC}
+\subsection{CpsDC}
+\label{subsecDC:CpsDC}
 
-Various studies have addressed the domains and domain specific applications of CPS. Gunes et al. summarize a number of research efforts that address some of those domains, namely Smart Manufacturing, Emergency Response, Air Transportation, Critical Infrastructure, Health Care and Medicine, Intelligent Transportation, and Robotic for Service.
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+\subsubsection{Action}
+\label{subsubsecC:Action}
+\didx{Action}
+
+Humans within a CPS exercise their responsibilities defined by roles by performing certain actions. Action is an entity that is targeted at changing the state of the CPS or environment. Actions are divided into physical actions, communicative actions, and epistemic actions.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Action} (see section \ref{subsubsecC:Action})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Actuator}
+\label{subsubsecC:Actuator}
+\didx{Actuator}
+
+External devices or components of the system which act on parts of the system to modify its behaviour.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Physical} (see section \ref{subsubsecC:Physical})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Adaptation}
+\label{subsubsecC:Adaptation}
+\didx{Adaptation}
+
+Evolution/change over time depending on environment and system's changes.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Application-specificCircuit}
+\label{subsubsecC:Application-specificCircuit}
+\didx{Application-specificCircuit}
+
+Application-specific circuits are various additional circuit-based components that are connected to the controller. It includes all kinds of bespoke circuits that are not processor, memory or interfaces, for example, hardware accelerators, signal processors, etc.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
 
 \subsubsection{ApplicationDomain}
 \label{subsubsecC:ApplicationDomain}
 \didx{ApplicationDomain}
 
-\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+This class describes the various domains and industrial sectors which the cyber-physical system is concerned with.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{ApplicationDomainsDC} (see section \ref{subsecDC:ApplicationDomainsDC})
-\end{itemize}
-
-
-
-\subsection{ArchitectureDC}
-\label{subsecDC:ArchitectureDC}
-
-\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
-
-
-
-
-
-\subsection{QualityRequirementsDC}
-\label{subsecDC:QualityRequirementsDC}
-
-Cyber-Physical Systems revolutionize our interaction with the physical world. Of course, this revolution does not come free. Since even legacy embedded systems require higher standards than general-purpose computing, we need to pay special attention to this next generation physically-aware engineered system requirements if we really want to put our full trust in them. Therefore, we want to clarify the definitions of some common CPS system-level requirements /challenges.
-
-\subsubsection{Accuracy}
-\label{subsubsecC:Accuracy}
-\didx{Accuracy}
-
-Accuracy refers to the degree of closeness of a system's measured/observed outcome to its actual/calculated one. A highly accurate system should converge to the actual outcome as close as possible. High accuracy especially comes into play for CPS applications where even small imprecisions are likely to cause system failures. For example, a motion-based object tracking system under the presence of imperfect sensor conditions may take untimely control action based on incorrect object position estimation, which in return leads to the system failure.
-
-\textbf{Subclass of}
-\begin{itemize}
-	\item \textbf{Predictability} (see section \ref{subsubsecC:Predictability})
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
 \end{itemize}
 
 
@@ -70,15 +107,81 @@ Accuracy refers to the degree of closeness of a system's measured/observed outco
 
 
 
-\subsubsection{Adaptability}
-\label{subsubsecC:Adaptability}
-\didx{Adaptability}
+\subsubsection{ApplicationLayer}
+\label{subsubsecC:ApplicationLayer}
+\didx{ApplicationLayer}
 
-Adaptability refers to the capability of a system to change its state to survive by adjusting its own configuration in response to different circumstances in the environment. A highly adaptable system should be quickly adaptable to evolving needs/circumstances. Adaptability is one of the key features in the next generation air transportation systems (e.g. NextGen). NextGen's capabilities enhance airspace performance with its computerized air transportation network which enables air vehicles immediately to accommodate themselves to evolving operational environment such as weather conditions, air vehicle routing and other pertinent flight trajectory patterns over satellites, air traffic congestion, and issues related to security.
+The application layer orchestrates the services to provide emergent properties.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Sustainability} (see section \ref{subsubsecC:Sustainability})
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ApplicationSoftware}
+\label{subsubsecC:ApplicationSoftware}
+\didx{ApplicationSoftware}
+
+Application software (app for short) is a program or group of programs designed for end users. Application software is built for specific tasks. While system software programs run in the background, application software runs in the foreground and users interact with it. System software programs work on its own while application software is dependent on it.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Software} (see section \ref{subsubsecC:Software})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Architecture}
+\label{subsubsecC:Architecture}
+\didx{Architecture}
+
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Architecture} (see section \ref{subsubsecC:Architecture})
+	\item \textbf{ArchitectureDC} (see section \ref{subsecDC:ArchitectureDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Autonomy}
+\label{subsubsecC:Autonomy}
+\didx{Autonomy}
+
+Ability of a system to make decisions affecting its behaviour.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{AuxiliaryMemory}
+\label{subsubsecC:AuxiliaryMemory}
+\didx{AuxiliaryMemory}
+
+Devices that provide backup storage are called auxiliary memory. It is not directly accessible to the CPU, and is accessed using the Input/Output channels. Magnetic disks and tapes are commonly used auxiliary devices. Other devices used as auxiliary memory are magnetic drums, magnetic bubble memory and optical disks.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Memory} (see section \ref{subsubsecC:Memory})
 \end{itemize}
 
 
@@ -90,12 +193,11 @@ Adaptability refers to the capability of a system to change its state to survive
 \label{subsubsecC:Availability}
 \didx{Availability}
 
-Availability refers to the property of a system to be ready for access even when faults occur. A highly available system should isolate malfunctioning portion from itself and continue to operate without it. Malicious cyber-attacks (e.g. denial of service attacks) hinder availability of the system services significantly. For example, in Cyber-Physical Medical Systems, medical data shed light on necessary actions to be taken in a timely manner to save a patient's life. Malicious attacks or system/component failure may cause services providing such data to become unavailable, hence, posing risk on the patient's life.
+Availability is the probability that system will work as required when required during the period of the mission. Availabilty includes non-operational periods associated with reliability, maintenance and logistics. Availabilty is measured in terms of 'nines'. For example, Five-9s (99.999%) means less than 5 minutes when the system is not operating correctly over the span of the year.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Dependability} (see section \ref{subsubsecC:Dependability})
-	\item \textbf{Security} (see section \ref{subsubsecC:Security})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
 \end{itemize}
 
 
@@ -103,15 +205,16 @@ Availability refers to the property of a system to be ready for access even when
 
 
 
-\subsubsection{Composibility}
-\label{subsubsecC:Composibility}
-\didx{Composibility}
+\subsubsection{Behavior}
+\label{subsubsecC:Behavior}
+\didx{Behavior}
 
-Composibility refers to the property of several components to be merged within a system and their inter-relationships. A highly composable system should allow recombination of the system components repeatedly to satisfy specific system requirements. Composibility should be examined in different levels (e.g. device composibility, code composibility, service composibility, system composibility). Certainly, system composibility is more challenging, hence the need for well-defined composition methodologies that follow composition properties from the bottom up. Additionally, requirements and evaluations must be composable accordingly. In the future, it will probably be of paramount importance to incrementally add emerging systems to the system of systems (e.g. CPS) with some predictable confidence without degrading the operation of the resulting  system.
+Dynamical pattern.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Interoperability} (see section \ref{subsubsecC:Interoperability})
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
 \end{itemize}
 
 
@@ -119,15 +222,15 @@ Composibility refers to the property of several components to be merged within a
 
 
 
-\subsubsection{Compositonality}
-\label{subsubsecC:Compositonality}
-\didx{Compositonality}
+\subsubsection{Bifurcations}
+\label{subsubsecC:Bifurcations}
+\didx{Bifurcations}
 
-Compositionality refers to the property of how well a system can be understood entirely by examining every part of it. A highly compositional system should provide great insight about the whole from derived behaviors of its constituent parts/components. Achieving high compositionality in CPS design is very challenging especially due to the chaotic behavior of constituent physical subsystems. Designing highly compositional CPS involves strong reasoning about the behavior of all constituent cyber and physical subsystems/components and devising cyber-physical methodologies for assembling CPSs from individual cyber and physical components, while requiring precise property taxonomies, formal metrics and standard test benches for their evaluation, and well-defined mathematical models of the overall system and its constituents.
+Points that mark a change in the dynamical patterns in a system.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Predictability} (see section \ref{subsubsecC:Predictability})
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
 \end{itemize}
 
 
@@ -135,15 +238,16 @@ Compositionality refers to the property of how well a system can be understood e
 
 
 
-\subsubsection{Confidentiality}
-\label{subsubsecC:Confidentiality}
-\didx{Confidentiality}
+\subsubsection{CPS}
+\label{subsubsecC:CPS}
+\didx{CPS}
 
-Confidentiality refers to the property of allowing only the authorized parties to access sensitive information generated within the system. A highly confidential system should employ the most secure methods of protection from unauthorized access, disclosure, or tampering. Data confidentiality is an important issue that needs to be satisfied in most CPS applications. For example, in an emergency management sensor network, attacks targeting confidentiality of data transmitted may degrade effectiveness of an emergency management system. Confidentiality of data transmitted through attacked sensor nodes can be compromised and that can cause data flow in the network to be directed over compromised sensors; critical data to be eavesdropped; or fake node identities to be generated in the network. Further, false/malicious data can be injected into the network over those fake nodes. Therefore, confidentiality of data circulation needs to be retained in a reasonable degree.
+The top-level class that encapsulates cyber-physical systems.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Security} (see section \ref{subsubsecC:Security})
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{CPS} (see section \ref{subsubsecC:CPS})
 \end{itemize}
 
 
@@ -151,15 +255,410 @@ Confidentiality refers to the property of allowing only the authorized parties t
 
 
 
-\subsubsection{Dependability}
-\label{subsubsecC:Dependability}
-\didx{Dependability}
+\subsubsection{CPSComponentLayer}
+\label{subsubsecC:CPSComponentLayer}
+\didx{CPSComponentLayer}
 
-Dependability refers to the property of a system to perform required functionalities during its operation without significant degradation in its performance and outcome. Dependability reflects the degree of trust put in the whole system. A highly dependable system should operate properly without intrusion, deliver requested services as specified and not fail during its operation. The words dependability and trustworthiness are often used interchangeably. Assuring dependability before actual system operation is a very difficult task to achieve. For example, timing uncertainties regarding sensor readings and prompt actuation may degrade dependability and lead to unanticipated consequences. Cyber and physical components of the system are inherently interdependent and those underlying components might be dynamically interconnected during system operation, which, in return, renders dependability analysis very difficult. A common language to express dependability related information across constituent systems/underlying components should be introduced in the design stage.
+
+	The CPS component layer includes the capabilities for the CPS
+	components to undertake sensing and actuation.
+
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{QualityRequirementsDC} (see section \ref{subsecDC:QualityRequirementsDC})
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{CacheMemory}
+\label{subsubsecC:CacheMemory}
+\didx{CacheMemory}
+
+The data or contents of the main memory that are used again and again by CPU, are stored in the cache memory so that we can easily access that data in shorter time. Whenever the CPU needs to access memory, it first checks the cache memory. If the data is not found in cache memory then the CPU moves onto the main memory. It also transfers block of recent data into the cache and keeps on deleting the old data in cache to accomodate the new one.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Memory} (see section \ref{subsubsecC:Memory})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Chattering}
+\label{subsubsecC:Chattering}
+\didx{Chattering}
+
+Infinite switches around a discontinuity surface
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ComType}
+\label{subsubsecC:ComType}
+\didx{ComType}
+
+The class models the type of communication: whether it is synchronus or asynchronous.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Communication}
+\label{subsubsecC:Communication}
+\didx{Communication}
+
+This class models the communication system and the communication protocols used in the network between the different components of the cyber-physical system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Communication} (see section \ref{subsubsecC:Communication})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{CommunicationAction}
+\label{subsubsecC:CommunicationAction}
+\didx{CommunicationAction}
+
+A communicative action is a kind of action that sends a message through a communication network of the CPS.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Action} (see section \ref{subsubsecC:Action})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Complex/strange}
+\label{subsubsecC:Complex/strange}
+\didx{Complex/strange}
+
+Unexpected, unpredictable behaviour.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Composability}
+\label{subsubsecC:Composability}
+\didx{Composability}
+
+Composability is a system-design principle that deals with the inter-relationships of components. A highly composable system provides components that can be selected and assembled in various combinations to satisfy specific requirements. Composability requires modularity and statelessness.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Configuration}
+\label{subsubsecC:Configuration}
+\didx{Configuration}
+
+Network configuration is also known as network topology. This class describes how the nodes/devices/components in the system network are arranged and how they communicate with each other.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Consistency}
+\label{subsubsecC:Consistency}
+\didx{Consistency}
+
+Property of logical systems by which it is not possible to find a contradiction within the system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ConstituentElement}
+\label{subsubsecC:ConstituentElement}
+\didx{ConstituentElement}
+
+The class that encompasses all the different elements that actually constitute the cyber-physical system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{ConstituentElement} (see section \ref{subsubsecC:ConstituentElement})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Constraints}
+\label{subsubsecC:Constraints}
+\didx{Constraints}
+
+Constraints are conditions that a human performing the role must take into consideration when exercising its responsibilities.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Continuity}
+\label{subsubsecC:Continuity}
+\didx{Continuity}
+
+This class describes the property of the state of the system and how it's graph (versus time) behaves in terms of continuity. Whether it is continuous or discontinuous.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Control}
+\label{subsubsecC:Control}
+\didx{Control}
+
+The action of modifying the behaviour of a system through feedback.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Control} (see section \ref{subsubsecC:Control})
+	\item \textbf{ConstituentElement} (see section \ref{subsubsecC:ConstituentElement})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Controllability}
+\label{subsubsecC:Controllability}
+\didx{Controllability}
+
+A system is controllable if it can be controlled (its internal state can be modified) by modifying its inputs.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Controller}
+\label{subsubsecC:Controller}
+\didx{Controller}
+
+External device or component of the system which produces the control signal to modify the system behaviour.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Physical} (see section \ref{subsubsecC:Physical})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Cyber}
+\label{subsubsecC:Cyber}
+\didx{Cyber}
+
+Communication and control between any human/biological/social system and any artificial device. It refers to systems where feedback is essential.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Cyber} (see section \ref{subsubsecC:Cyber})
+	\item \textbf{ConstituentElement} (see section \ref{subsubsecC:ConstituentElement})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Dependency}
+\label{subsubsecC:Dependency}
+\didx{Dependency}
+
+This class models the dependencies of the feedback mechanism in the control of the system. The feedback loop can be a function of the state and/or the output of the system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Deterministic}
+\label{subsubsecC:Deterministic}
+\didx{Deterministic}
+
+Modeling uncertainty with determinsitic models that do not incorporate any sort of randomness. Every time you run a simulation with the same initial conditions, you get the same results.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Uncertainty} (see section \ref{subsubsecC:Uncertainty})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Diagnostics}
+\label{subsubsecC:Diagnostics}
+\didx{Diagnostics}
+
+Identification of properties in a system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Disciplines}
+\label{subsubsecC:Disciplines}
+\didx{Disciplines}
+
+This class describes the various engineering and other disciplines that are associated with the development and application of the cyber-physical system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Discontinuous}
+\label{subsubsecC:Discontinuous}
+\didx{Discontinuous}
+
+Discontinuous or non-smooth systems present some type of discontinuity in the model representing the system. Different names are used depending on the type of discontinuity.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Continuity} (see section \ref{subsubsecC:Continuity})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Dissipativity/Passivity}
+\label{subsubsecC:Dissipativity/Passivity}
+\didx{Dissipativity/Passivity}
+
+Abstraction of the energy properties of systems. A dissipative system dissipates energy in some manner.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Disturbance}
+\label{subsubsecC:Disturbance}
+\didx{Disturbance}
+
+
+						External influence of the environment in a system,
+						typically unknown.
+					
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Dynamics}
+\label{subsubsecC:Dynamics}
+\didx{Dynamics}
+
+Evolution of a system over time
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Dynamics} (see section \ref{subsubsecC:Dynamics})
 \end{itemize}
 
 
@@ -171,11 +670,190 @@ Dependability refers to the property of a system to perform required functionali
 \label{subsubsecC:Efficiency}
 \didx{Efficiency}
 
-Efficiency refers to the amount of resources (such as energy, cost, time etc.) the system requires to deliver specified functionalities. A highly efficient system should operate properly under optimum amount of system resources. Efficiency is especially important for energy management in CPS applications. For example, smart buildings can detect the absence of occupants and turn off HVAC (Heating, Ventilation, and Air Conditioning) units to save energy. Further, they can provide automated pre-heating or pre-cooling services based on the occupancy prediction techniques.
+The efficiency indicates the manner in which the inputs are used by the system. Being efficient means the system uses inputs in a 'right' way. If the input-output ratio is adverse, we say that the system is inefficient though it produces the desired output.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Sustainability} (see section \ref{subsubsecC:Sustainability})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Electronic}
+\label{subsubsecC:Electronic}
+\didx{Electronic}
+
+The execution platform of the control software
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Electronic} (see section \ref{subsubsecC:Electronic})
+	\item \textbf{Controller} (see section \ref{subsubsecC:Controller})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Embedded/FirmwareSoftware}
+\label{subsubsecC:Embedded/FirmwareSoftware}
+\didx{Embedded/FirmwareSoftware}
+
+Embedded software is computer software, written to control machines or devices that are not typically thought of as computers, commonly known as embedded systems. It is typically specialized for the particular hardware that it runs on and has time and memory constraints. A precise and stable characteristic feature is that no or not all functions of embedded software are initiated/controlled via a human interface, but through machine-interfaces instead. Unlike standard computers that generally use an operating systems such as OS X, Windows or GNU/Linux, embedded software may use no operating system, or when they do use, a wide variety of operating systems can be chosen from, typically a real-time operating system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Software} (see section \ref{subsubsecC:Software})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{EmergentBehavior}
+\label{subsubsecC:EmergentBehavior}
+\didx{EmergentBehavior}
+
+Behaviour that did not exist in the single systems that together form a complex system consisting of interacting systems.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Entity}
+\label{subsubsecC:Entity}
+\didx{Entity}
+
+An entity is anything perceivable or conceivable (I think that entity should be defined for CPS at a higher level than under human).
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Environment}
+\label{subsubsecC:Environment}
+\didx{Environment}
+
+What it is not the system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Physical} (see section \ref{subsubsecC:Physical})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{EpistemicAction}
+\label{subsubsecC:EpistemicAction}
+\didx{EpistemicAction}
+
+An epistemic action is a kind of action that changes the state of the data held by the CPS. A human performs actions through actuators.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Action} (see section \ref{subsubsecC:Action})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Equilibrium}
+\label{subsubsecC:Equilibrium}
+\didx{Equilibrium}
+
+States of the system that represent set points.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Event}
+\label{subsubsecC:Event}
+\didx{Event}
+
+A human can perceive events generated by the CPS or environment. An event is a kind of entity that is related to the states of affairs before and after it has occurred. A human perceives events through sensors.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ExternalInterfaces}
+\label{subsubsecC:ExternalInterfaces}
+\didx{ExternalInterfaces}
+
+Interfaces and connections in between componenets of the execution platform.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Feedback}
+\label{subsubsecC:Feedback}
+\didx{Feedback}
+
+Implementation of the control action by sensing the output of a system and modifying its input by means of actuators to meet a pre-defined control goal.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Feedback} (see section \ref{subsubsecC:Feedback})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Goal}
+\label{subsubsecC:Goal}
+\didx{Goal}
+
+Desired behaviour of a system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Goal} (see section \ref{subsubsecC:Goal})
 \end{itemize}
 
 
@@ -187,11 +865,11 @@ Efficiency refers to the amount of resources (such as energy, cost, time etc.) t
 \label{subsubsecC:Heterogeneity}
 \didx{Heterogeneity}
 
-Heterogeneity refers to the property of a system to incorporate a set of different types of interacting and interconnected components forming a complex whole. CPSs are inherently heterogeneous due to constituent physical dynamics, computational elements, control logic, and deployment of diverse communication technologies. Therefore, CPSs necessitate heterogeneous composition of all system components. For example, incorporating heterogeneous computing and communication capabilities, future medical devices are likely to be interconnected in increasingly complex open systems with a plug-and-play fashion, which makes a heterogeneous control network and closed loop control of interconnected devices crucial. Configuration of such devices may be highly dynamic depending on patient-specific medical considerations. Enabled by the science and emerging technologies, medical systems of the future are expected to provide situation-aware component autonomy, cooperative coordination, real-time guarantee, and heterogeneous personalized configurations far more capable and complex than today's.
+Being non-homogeneous.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Interoperability} (see section \ref{subsubsecC:Interoperability})
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
 \end{itemize}
 
 
@@ -199,15 +877,85 @@ Heterogeneity refers to the property of a system to incorporate a set of differe
 
 
 
-\subsubsection{Integrity}
-\label{subsubsecC:Integrity}
-\didx{Integrity}
+\subsubsection{Human}
+\label{subsubsecC:Human}
+\didx{Human}
 
-Integrity refers to the property of a system to protect itself or information within it from unauthorized manipulation or modification to preserve correctness of the information. A high integrity system should provide extensive authorization and consistency check mechanisms. High integrity is one of the important properties of a CPS. CPSs need to be developed with greater assurance by providing integrity check mechanisms on several occasions (such as data integrity of network packets, distinguishing malicious behaviors from the ambient noise, identifying false data injection and compromised sensor/actuator components etc.). Properties of the physical and cyber processes should be well-understood and thus can be utilized to define required integrity assurance.
+Humans within a CPS perform certain roles within the CPS. 
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Security} (see section \ref{subsubsecC:Security})
+	\item \textbf{Human} (see section \ref{subsubsecC:Human})
+	\item \textbf{ConstituentElement} (see section \ref{subsubsecC:ConstituentElement})
+	\item \textbf{Participant} (see section \ref{subsubsecC:Participant})
+	\item \textbf{Resource} (see section \ref{subsubsecC:Resource})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Human}
+\label{subsubsecC:Human}
+\didx{Human}
+
+Humans within a CPS perform certain roles within the CPS. 
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Human} (see section \ref{subsubsecC:Human})
+	\item \textbf{ConstituentElement} (see section \ref{subsubsecC:ConstituentElement})
+	\item \textbf{Participant} (see section \ref{subsubsecC:Participant})
+	\item \textbf{Resource} (see section \ref{subsubsecC:Resource})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Hysteresis}
+\label{subsubsecC:Hysteresis}
+\didx{Hysteresis}
+
+Persistence of effects after the causes of these effects are eliminated, representing the dependence of the state of a system on its past history (memory).
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Input}
+\label{subsubsecC:Input}
+\didx{Input}
+
+Abstraction of the external factors in a system influencing its behaviour.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Intelligence}
+\label{subsubsecC:Intelligence}
+\didx{Intelligence}
+
+Ability to 'think' or automate tasks to achieve a goal.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
 \end{itemize}
 
 
@@ -219,11 +967,14 @@ Integrity refers to the property of a system to protect itself or information wi
 \label{subsubsecC:Interoperability}
 \didx{Interoperability}
 
-Interoperability refers to the ability of the systems/components to work together, exchange information and use this information to provide specified services. A highly interoperable system should provide or accept services conducive to effective communication and interoperation among system components. Performing far-reaching battlefield operations and having more interconnected and potentially joint-service combat systems, Unmanned Air Vehicles (UAVs) call for seamless communication between each other and numerous ground vehicles in operation. The lack of interoperability standards often causes reduction in the effectiveness of complicated and critical missions. Likewise, according to changing needs, dynamic standards should be developed and tested for devices, systems, and processes used in the Smart Grid to ensure and certify the interoperability of those ones being considered for a specific Smart Grid deployment under realistic operating conditions.
+
+	The interoperability is the capacity of a product or system whose interfaces are fully known to work with other products or existing or future systems and unrestricted access or implementation.
+	Interoperability is different from compatibility. Where compatibility is a vertical notion that a system can operate in agiven environment, interoperability is a transversal notion that allows various systems to communicate and work together.
+
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{QualityRequirementsDC} (see section \ref{subsecDC:QualityRequirementsDC})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
 \end{itemize}
 
 
@@ -231,15 +982,15 @@ Interoperability refers to the ability of the systems/components to work togethe
 
 
 
-\subsubsection{Maintainability}
-\label{subsubsecC:Maintainability}
-\didx{Maintainability}
+\subsubsection{Learning}
+\label{subsubsecC:Learning}
+\didx{Learning}
 
-Maintainability refers to the property of a system to be repaired in case a failure occurs. A highly maintainable system should be repaired in a simple and rapid manner at the minimum expenses of supporting resources, and free from causing additional faults during the maintenance process. With the close interaction among the system components (e.g. sensors, actuators, cyber components, and physical components) underlying CPS infrastructure, autonomous predictive /corrective diagnostic mechanisms can be proposed. Continuous monitoring and testing of the infrastructure can be performed through those mechanisms. The outcome of monitoring and testing facilities help finding which units need to be repaired. Some components, which happen to be the source of recurrent failures, can be redesigned or discarded and replaced with the ones with better quality
+Ability to learn.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Dependability} (see section \ref{subsubsecC:Dependability})
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
 \end{itemize}
 
 
@@ -247,15 +998,15 @@ Maintainability refers to the property of a system to be repaired in case a fail
 
 
 
-\subsubsection{Predictability}
-\label{subsubsecC:Predictability}
-\didx{Predictability}
+\subsubsection{Linearity}
+\label{subsubsecC:Linearity}
+\didx{Linearity}
 
-Predictability refers to the degree of foreseeing of a system's state/behavior/functionality either qualitatively or quantitatively. A highly predicable system should guarantee the specified outcome of the system's behavior/functionality to a great extent every moment of time at which it is operating while meeting all system requirements. In Cyber-Physical Medical Systems (CPMS), smart medical devices together with sophisticated control technologies are supposed to be well adapted to the patient's conditions, predict the patient's movements, and change their characteristics based on context awareness within the surrounding environment. Many medical devices perform operations in real-time, satisfying different timing constraints and showing diverse sensitivity to timing uncertainties (e.g. delays, jitters etc.). However, not all components of CPMS are time-predictable. Therefore, in addition to new programming and networking abstractions, new policies of resource allocation and scheduling should be developed to ensure predictable end-to-end timing constraints.
+This class describes the property of the system that models the relationship between the input and output. If the transformation relation is linear, the system is classified as linear. If a change in input results in a propotional change in output, the system is linear. If not, the system is lon-linear.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{QualityRequirementsDC} (see section \ref{subsecDC:QualityRequirementsDC})
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
 \end{itemize}
 
 
@@ -263,16 +1014,371 @@ Predictability refers to the degree of foreseeing of a system's state/behavior/f
 
 
 
-\subsubsection{Reconfigurability}
-\label{subsubsecC:Reconfigurability}
-\didx{Reconfigurability}
+\subsubsection{MainMemory}
+\label{subsubsecC:MainMemory}
+\didx{MainMemory}
 
-Reconfigurability refers to the property of a system to change its configurations in case of
-failure or upon inner or outer requests. A highly reconfigurable system should be self-configurable, meaning able to fine-tune itself dynamically and coordinate the operation of its components at finer granularities. CPSs can be regarded as autonomously reconfigurable engineered systems. Remote monitoring and control mechanisms might be necessity in some CPS application scenarios such as international border monitoring, wildfire emergency management, gas pipeline monitoring etc. Operational needs (e.g. security threat level updates, regular code updates, efficient energy management etc.) may change for such scenarios, which calls for significant reconfiguration of sensor/actuator nodes being deployed or the entire network to provide the best possible service and use of resources.
+The memory unit that communicates directly within the CPU, Auxillary memory and Cache memory, is called main memory. It is the central storage unit of the computer system. It is a large and fast memory used to store data during computer operations. Main memory is made up of RAM and ROM, with RAM integrated circuit chips holding the major share.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Sustainability} (see section \ref{subsubsecC:Sustainability})
+	\item \textbf{Memory} (see section \ref{subsubsecC:Memory})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ManagementLayer}
+\label{subsubsecC:ManagementLayer}
+\didx{ManagementLayer}
+
+The management layer supports capabilities such as device management, traffic and congestion management.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Mechanical}
+\label{subsubsecC:Mechanical}
+\didx{Mechanical}
+
+A mechanical control mechanism like a bi-metallic strip in a thermostat. Its input is made of mechanical effort.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Controller} (see section \ref{subsubsecC:Controller})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Memory}
+\label{subsubsecC:Memory}
+\didx{Memory}
+
+Memory refers to a device that is used to store information for immediate use in a computer or related computer hardware. It typically refers to semi-conductor memory, where data is stored within MOS (Metal-Oxide Semiconductor) cells on an integrated chip.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Memory} (see section \ref{subsubsecC:Memory})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Network}
+\label{subsubsecC:Network}
+\didx{Network}
+
+A set of elements (for example, nodes) connected in some physical or abstract manner (for example, links).
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Network} (see section \ref{subsubsecC:Network})
+	\item \textbf{ConstituentElement} (see section \ref{subsubsecC:ConstituentElement})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{NetworkLayer}
+\label{subsubsecC:NetworkLayer}
+\didx{NetworkLayer}
+
+The network layer provides functionality for networking connectivity and transport capabilities enabling the coordination of components.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Non-deterministic}
+\label{subsubsecC:Non-deterministic}
+\didx{Non-deterministic}
+
+In the case the system does not record and 'learn' from the environment statsitically to predict some part of the future and act accordingly.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Uncertainty} (see section \ref{subsubsecC:Uncertainty})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Observability}
+\label{subsubsecC:Observability}
+\didx{Observability}
+
+A system is observable if its internal state can be detected (observed) from its outputs.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{OperatingSystem}
+\label{subsubsecC:OperatingSystem}
+\didx{OperatingSystem}
+
+An Operating System (OS) is the interface between a user and the hardware of the cyber-physical system. The OS is the software which performs all the basic tasks like management, memory management, process management, handling input and output.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{OperatingSystem} (see section \ref{subsubsecC:OperatingSystem})
+	\item \textbf{SystemSoftware} (see section \ref{subsubsecC:SystemSoftware})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Oscillations/LimitCycles}
+\label{subsubsecC:Oscillations/LimitCycles}
+\didx{Oscillations/LimitCycles}
+
+Limit cycle is a trajectory for which energy of the system would be constant over a cycle - i.e. on an average there is no loss or gain of energy. Limit cycle is an outcome of delicate energy balance due to the presence of nonlinear term in the equation of motion.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Output}
+\label{subsubsecC:Output}
+\didx{Output}
+
+Abstraction of the effect of a system on its environment.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Performance}
+\label{subsubsecC:Performance}
+\didx{Performance}
+
+The total effectiveness of the system, including throughput, individual response time, and availability.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{PhaseTransitions}
+\label{subsubsecC:PhaseTransitions}
+\didx{PhaseTransitions}
+
+Name for bifurcation, typically used in physics.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Physical}
+\label{subsubsecC:Physical}
+\didx{Physical}
+
+This class represents the physical components that constitute the cyber-physical system. 
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Physical} (see section \ref{subsubsecC:Physical})
+	\item \textbf{ConstituentElement} (see section \ref{subsubsecC:ConstituentElement})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{PhysicalAction}
+\label{subsubsecC:PhysicalAction}
+\didx{PhysicalAction}
+
+Physical action is a kind of action that changes the state of a physical element of the CPS or environment.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Action} (see section \ref{subsubsecC:Action})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Plant}
+\label{subsubsecC:Plant}
+\didx{Plant}
+
+System to control.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Physical} (see section \ref{subsubsecC:Physical})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Probabilistic}
+\label{subsubsecC:Probabilistic}
+\didx{Probabilistic}
+
+Probabilistic models incorporate randomness in their approach.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Uncertainty} (see section \ref{subsubsecC:Uncertainty})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Processor}
+\label{subsubsecC:Processor}
+\didx{Processor}
+
+A process or processing unit is a digital circuit which performs operations on some external data source. It typically takes the form of a microprocessor, implented on a metal-oxide semiconductor integrated circuit chip.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Prognostics}
+\label{subsubsecC:Prognostics}
+\didx{Prognostics}
+
+Prediction of the time in the future when a system will not performed anymore as it is expected or for what it was designed (control goal).
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Properties}
+\label{subsubsecC:Properties}
+\didx{Properties}
+
+Characteristics related to systems related to control.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Protocol}
+\label{subsubsecC:Protocol}
+\didx{Protocol}
+
+That feature of a communication network that allows two or more entities/subcomponents to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication, and possible error recovery methods.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ReferenceSignal}
+\label{subsubsecC:ReferenceSignal}
+\didx{ReferenceSignal}
+
+Desired value for the states and/or outputs of the system to reach.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Regulation}
+\label{subsubsecC:Regulation}
+\didx{Regulation}
+
+Action to make the system to reach a set point.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
 \end{itemize}
 
 
@@ -284,12 +1390,11 @@ failure or upon inner or outer requests. A highly reconfigurable system should b
 \label{subsubsecC:Reliability}
 \didx{Reliability}
 
-Reliability refers to the degree of correctness which a system provides to perform its function.
-The certification of system capabilities about how to do things correctly does not mean that they are done correctly. So a highly reliable system makes sure that it does the things right. Considering the fact that CPSs are expected to operate reliably in open, evolving, and uncertain environments, uncertainty in the knowledge, attribute (e.g. timing), or outcome of a process in the CPS infrastructure makes it necessary to quantify uncertainties during the CPS design stage. That uncertainty analysis will yield to effective CPS reliability characterization. Besides, accuracy of physical and cyber components, potential errors in design/control flow, cross-domain network connections in an ad-hoc manner limit the CPS reliability.
+Reliability is the probability that a system performs correctly during a specific time duration. During this correct operation, no repair should be required or performed, and the system adequately follows the defined performance specifications.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{QualityRequirementsDC} (see section \ref{subsecDC:QualityRequirementsDC})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
 \end{itemize}
 
 
@@ -301,12 +1406,27 @@ The certification of system capabilities about how to do things correctly does n
 \label{subsubsecC:Resilience}
 \didx{Resilience}
 
-Resilience refers to the ability of a system to persevere in its operation and delivery of services
-in an acceptable quality in case the system is exposed to any inner or outer difficulties (e.g. sudden defect, malfunctioning components, rising workload etc.) that do not exceed its endurance limit. A highly resilient system should be self-healing and comprise early detection and fast recovery mechanisms against failures to continue to meet the demands for services. High resilience comes into play in delivering mission-critical services (e.g. automated brake control in vehicular CPS, air and oxygen flow control over an automated medical ventilator etc.). Mission-critical CPS applications are often required to operate even in case of disruptions at any level of the system (e.g. hardware, software, network connections, or the underlying infrastructure). Therefore, designing highly resilient CPS requires thorough understanding of potential failures and disruptions, the resilience properties of the pertinent application, and system evolution due to the dynamically changing nature of the operational environment.
+Ability of a system to maintain functionality by adaptation and recover when changes are produced within and outside the system.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Sustainability} (see section \ref{subsubsecC:Sustainability})
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Responsibilities}
+\label{subsubsecC:Responsibilities}
+\didx{Responsibilities}
+
+Responsibilities are components of a role that determine what a human performing the role must do for the behaviour goals of the CPS to be achieved.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
 \end{itemize}
 
 
@@ -318,12 +1438,28 @@ in an acceptable quality in case the system is exposed to any inner or outer dif
 \label{subsubsecC:Robustness}
 \didx{Robustness}
 
-Robustness refers to the ability of a system to keep its stable configuration and withstand any
-failures. A highly robust system should continue to operate in the presence of any failures without fundamental changes to its original configuration and prevent those failures from hindering or stopping its operation. In addition to failures, the presence of disturbances possibly arising from sensor noises, actuator inaccuracies, faulty communication channels, potential hardware errors or software bugs may degrade overall robustness of CPS. Lack of modeling integrated system dynamics (e.g. actual ambient conditions in which CPSs operate), evolved operational environment, or unforeseen events are other particular non-negligible factors, which might be unavoidable in the run-time, hence the need for robust CPS design.
+Ability of a system to keep performing well despite changes within and outside the system (for example, maintaining its trajectories close to equilibria despite perturbations). It does not entail adaptation.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Reliability} (see section \ref{subsubsecC:Reliability})
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Role}
+\label{subsubsecC:Role}
+\didx{Role}
+
+Each role represents some capacity or position, where humans playing the role need to contribute for achieving certain behaviour goals set for the CPS. Each role is defined in terms of responsibilities and constraints pertaining to the role that are required for contributing to achieving the behaviour goals set for the CPS.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Role} (see section \ref{subsubsecC:Role})
 \end{itemize}
 
 
@@ -335,11 +1471,11 @@ failures. A highly robust system should continue to operate in the presence of a
 \label{subsubsecC:Safety}
 \didx{Safety}
 
-Safety refers to the property of a system to not cause any harm, hazard or risk inside or outside of it during its operation. A very safe system should comply with both general and application-specific safety regulations to a great extent and deploy safety assurance mechanisms in case something went wrong. For example, among the goals for Smart Manufacturing (SM), point-in-time tracking of sustainable production and real-time management of processes throughout the factory yield to improved safety. Safety of manufacturing plants can be highly optimized through automated process control using embedded control systems and data collection frameworks (including sensors) across the manufacturing enterprise. Smart networked sensors could detect operational failures/anomalies and help prevention of catastrophic incidents due to those failures/anomalies.
+The concept of system safety calls for a risk management strategy based on identification, analysis of hazards, and application of remedial controls using a systems-based approach. The concept of system safety is useful in demonstrating adequacy of a technology when difficulties are faced with probabilistic risk analysis.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Dependability} (see section \ref{subsubsecC:Dependability})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
 \end{itemize}
 
 
@@ -351,11 +1487,27 @@ Safety refers to the property of a system to not cause any harm, hazard or risk 
 \label{subsubsecC:Scalability}
 \didx{Scalability}
 
-Scalability refers to the ability of a system to keep functioning well even in case of change in its size/increased workload, and take full advantage of it. The increase in the system throughput should be proportional to the increase in the system resources. A highly scalable system should provide scatter and gather mechanisms for workload balancing and effective communication protocols to improve the performance. Depending on their scale, CPSs may comprise over thousands of embedded computers, sensors, and actuators that must work together effectively. Scalable embedded many-core architectures with a programmable interconnect network can be deployed to deliver increasing compute demand in CPS. Further, a high performance and highly scalable infrastructure is needed to allow the entities of CPS to join and leave the existing network dynamically. In the presence of frequent data dissemination among those entities, dynamic software updates (i.e. changing the computer program in run-time) can help update CPS applications dynamically and use CPS resources more productively.
+Scalability is the property of a system that models its capability of handling a growing amount of work by adding resouces or components to the system. It designates the adaptability of the system to an order of magnitude change in demand.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Interoperability} (see section \ref{subsubsecC:Interoperability})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Scope}
+\label{subsubsecC:Scope}
+\didx{Scope}
+
+Describes the range of componenets and signals that the feedback signal effects on the input side of the control algorithm/s of the system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
 \end{itemize}
 
 
@@ -367,12 +1519,191 @@ Scalability refers to the ability of a system to keep functioning well even in c
 \label{subsubsecC:Security}
 \didx{Security}
 
-Security refers to the property of a system to control access to the system resources and protect
-sensitive information from unauthorized disclosures. A highly secure system should provide protection mechanisms against unauthorized modification of information and unauthorized withholding of resources, and must be free from disclosure of sensitive information to a great extent. CPSs are vulnerable to failures and attacks on both the physical and cyber sides, due to their scalability, complexity, and dynamic nature. Malicious attacks (e.g. eavesdropping, man-in-the-middle, denial-of-service, injecting fake sensor measurements or actuation requests etc.) can be directed to the cyber infrastructure (e.g. data management layer, communication infrastructure, decision making mechanisms etc.) or the physical components with the intent of disrupting the system in operation or stealing sensitive information. Making use of a large-scale network (such as the Internet), adopting insecure communication protocols, heavy use of legacy systems or rapid adoption of commercial off-the-shelf (COTS) technologies are other factors which make CPSs easily exposed to the security threats.
+A system is said to be secure if its resources are used and accessed as intended under all the circumstances. It is a process of ensuring confidentiality and integrity of a system. Integrity, secrecy, and availability of the system are the three main objectives.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{QualityRequirementsDC} (see section \ref{subsecDC:QualityRequirementsDC})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{SecurityLayer}
+\label{subsubsecC:SecurityLayer}
+\didx{SecurityLayer}
+
+A Security layer captures the security functionality.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Sensitivity}
+\label{subsubsecC:Sensitivity}
+\didx{Sensitivity}
+
+Level of response of a system to changes.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Sensor}
+\label{subsubsecC:Sensor}
+\didx{Sensor}
+
+External devices or components of the system which collect information from the environment or the system state.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Physical} (see section \ref{subsubsecC:Physical})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ServiceLayer}
+\label{subsubsecC:ServiceLayer}
+\didx{ServiceLayer}
+
+
+	The Services layer consists of functionality for generic support services
+	(such as data processing or data storage), and specific support capabilities for the
+	particular applications that may already apply a degree of intelligence.
+
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Setpoint}
+\label{subsubsecC:Setpoint}
+\didx{Setpoint}
+
+Goal that does not vary with time (typically a constant value).
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{SlidingMotions}
+\label{subsubsecC:SlidingMotions}
+\didx{SlidingMotions}
+
+Dynamics on the discontinuity surface of a switched system, key for the analysis of these systems. There are typically undefined and different methods are used to define it, mainly Filipov's continuation method and Utkin's equivalent control method.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Smooth}
+\label{subsubsecC:Smooth}
+\didx{Smooth}
+
+There is no discontunity in the model representing the system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Continuity} (see section \ref{subsubsecC:Continuity})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Software}
+\label{subsubsecC:Software}
+\didx{Software}
+
+Computer software, or simply software, is a collection of data or computer instructions that tell the computer how to work. In computer science and software engineering, computer software is all information processed by computer systems, programs and data. Computer software includes computer programs, libraries and related non-executable data, such as online documentation or digital media. Computer hardware and software require each other and neither can be realistically used on its own.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Cyber} (see section \ref{subsubsecC:Cyber})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Stability}
+\label{subsubsecC:Stability}
+\didx{Stability}
+
+Idea that a system trajectory will keep getting closer and closer to a desired point in space.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{State}
+\label{subsubsecC:State}
+\didx{State}
+
+Instrinsic configuration and description of the system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{State-of-Affairs}
+\label{subsubsecC:State-of-Affairs}
+\didx{State-of-Affairs}
+
+State of affairs is a collective state of the entities of the CPS and the environment.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
 \end{itemize}
 
 
@@ -384,29 +1715,11 @@ sensitive information from unauthorized disclosures. A highly secure system shou
 \label{subsubsecC:Sustainability}
 \didx{Sustainability}
 
-Sustainability means being capable of enduring without compromising requirements of the system, while renewing the system's resources and using them efficiently. A highly sustainable system is a long lasting system which has self-healing and dynamic tuning capabilities under evolving circumstances. Sustainability from energy perspective is an important part of energy provision and management policies. For example, the Smart Grid facilitates energy distribution, management, and customization from the perspective of customers or service providers by incorporating green sources of energy extracted from the physical environment. However, intermittent energy supply and unknown/ill-defined load characterization hinders the efforts to maintain long-term operation of the Smart Grid. To maintain sustainability, the Smart Grid requires planning and operation under uncertainties, use of real-time performance measurements, dynamic optimization techniques for energy usage, environment-aware duty cycling of computing units, and devising self-contained energy distribution facilities (such as autonomous micro grids).
+Capability of  system to endure and maintain its function within defined acceptable limits.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{QualityRequirementsDC} (see section \ref{subsecDC:QualityRequirementsDC})
-\end{itemize}
-
-
-
-\subsection{SystemDC}
-\label{subsecDC:SystemDC}
-
-\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
-
-\subsubsection{Component}
-\label{subsubsecC:Component}
-\didx{Component}
-
-\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
-
-\textbf{Subclass of}
-\begin{itemize}
-	\item \textbf{SystemDC} (see section \ref{subsecDC:SystemDC})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
 \end{itemize}
 
 
@@ -414,16 +1727,15 @@ Sustainability means being capable of enduring without compromising requirements
 
 
 
-\subsubsection{System}
-\label{subsubsecC:System}
-\didx{System}
+\subsubsection{SystemBus}
+\label{subsubsecC:SystemBus}
+\didx{SystemBus}
 
-\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+The system bus is a pathway composed of cables and connectors used to carry data between a computer microprocessor and the main memory. The bus provides a communication path for the data and control signals moving between the major components of the computer system.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{Component} (see section \ref{subsubsecC:Component})
-	\item \textbf{SystemDC} (see section \ref{subsecDC:SystemDC})
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
 \end{itemize}
 
 
@@ -431,17 +1743,2598 @@ Sustainability means being capable of enduring without compromising requirements
 
 
 
-\subsubsection{SystemPart}
-\label{subsubsecC:SystemPart}
-\didx{SystemPart}
+\subsubsection{SystemServices}
+\label{subsubsecC:SystemServices}
+\didx{SystemServices}
 
-\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+A service is software that performs automated tasks, responds to hardware events, or listens for data requests from other software. In a user's operating system, these services are often loaded automatically at startup, and run in the background, without user interaction. They respond to user keyboard shortcuts, index and optimize the file system, and communicate with other devices on the local network.
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{SystemDC} (see section \ref{subsecDC:SystemDC})
+	\item \textbf{SystemSoftware} (see section \ref{subsubsecC:SystemSoftware})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{SystemSoftware}
+\label{subsubsecC:SystemSoftware}
+\didx{SystemSoftware}
+
+System software is software designed to provide a platform for other software. Examples of system software include operating systems like macOS, GNU/Linux and Microsoft Windows, computational science software, game engines, industrial automation, and software as a service applications.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{SystemSoftware} (see section \ref{subsubsecC:SystemSoftware})
+	\item \textbf{Software} (see section \ref{subsubsecC:Software})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{SystemType}
+\label{subsubsecC:SystemType}
+\didx{SystemType}
+
+Three main features to consider for the classification of systems
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{SystemType} (see section \ref{subsubsecC:SystemType})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{SystemUtilities}
+\label{subsubsecC:SystemUtilities}
+\didx{SystemUtilities}
+
+Software designed to help to analyze, configure, optimize or maintain a computer. It is used to support the computer infrastructure - in contrast to application software, which is aimed at directly performing tasks that benefit ordinary users. However, utilities often form part of the application systems. Although a basic set of utility programs is usually distributed with an operating system (OS), and this first party utility software is often considered part of the operating system, users often install replacements or additional utilities.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{SystemSoftware} (see section \ref{subsubsecC:SystemSoftware})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Timing}
+\label{subsubsecC:Timing}
+\didx{Timing}
+
+The characteristic of time-dependence of the system. If the system functions or change state repetetively after a set time period it is a discrete system. If the system changes analogously with time, it is a continuous system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{TopologicalEvolution}
+\label{subsubsecC:TopologicalEvolution}
+\didx{TopologicalEvolution}
+
+The evolution of the system topology with respect to time.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Topology}
+\label{subsubsecC:Topology}
+\didx{Topology}
+
+Structure of the interconnections of the components of a system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Topology} (see section \ref{subsubsecC:Topology})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Tracking}
+\label{subsubsecC:Tracking}
+\didx{Tracking}
+
+Action to make the system follow a goal that varies with time.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{Tracking} (see section \ref{subsubsecC:Tracking})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Uncertainty}
+\label{subsubsecC:Uncertainty}
+\didx{Uncertainty}
+
+The lack of certainty
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Uncertainty} (see section \ref{subsubsecC:Uncertainty})
+	\item \textbf{Uncertainty} (see section \ref{subsubsecC:Uncertainty})
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{UserInterface}
+\label{subsubsecC:UserInterface}
+\didx{UserInterface}
+
+The user interface (UI), in the industrial design field of human-computer interaction, is the space where interactions between humans and machines occur. The goal of this interaction is to allow effective operation and control of the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making process.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ValidityRegion}
+\label{subsubsecC:ValidityRegion}
+\didx{ValidityRegion}
+
+This concept defines the scope of the tracking signal. WHether it depends on a local subset of characteristics of the system/environment, or if it is affected by global variables.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{X\textunderscore ilities}
+\label{subsubsecC:X_ilities}
+\didx{X_ilities}
+
+Various other kinds of non-functional requirements for a cyber-physical system that are not explicitly elucidated in the model.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Zenoness}
+\label{subsubsecC:Zenoness}
+\didx{Zenoness}
+
+Infinite switches in a finite time.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{nonfunctionalReqs}
+\label{subsubsecC:nonfunctionalReqs}
+\didx{nonfunctionalReqs}
+
+Nonfunctional Requirements (NFRs) define system attributes such as security, reliability, performance, maintainability, scalability, and usability. They serve as constraints or restrictions on the design of the system across the different backlogs. They ensure the usability and effectiveness of the entire system.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{CpsDC} (see section \ref{subsecDC:CpsDC})
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
 \end{itemize}
 
 \section{Properties}
+\label{sec:cps:properties}
+
+
+\subsection{hasAction}
+\label{subsecP:hasAction}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Action} (see section \ref{subsubsecC:Action})
+\end{itemize}
+
+
+
+
+\subsection{hasActuator}
+\label{subsecP:hasActuator}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Actuator} (see section \ref{subsubsecC:Actuator})
+\end{itemize}
+
+
+
+
+\subsection{hasAdaptation}
+\label{subsecP:hasAdaptation}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Adaptation} (see section \ref{subsubsecC:Adaptation})
+\end{itemize}
+
+
+
+
+\subsection{hasApplication-specificCircuit}
+\label{subsecP:hasApplication-specificCircuit}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Application-specificCircuit} (see section \ref{subsubsecC:Application-specificCircuit})
+\end{itemize}
+
+
+
+
+\subsection{hasApplicationDomain}
+\label{subsecP:hasApplicationDomain}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ApplicationDomain} (see section \ref{subsubsecC:ApplicationDomain})
+\end{itemize}
+
+
+
+
+\subsection{hasApplicationLayer}
+\label{subsecP:hasApplicationLayer}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ApplicationLayer} (see section \ref{subsubsecC:ApplicationLayer})
+\end{itemize}
+
+
+
+
+\subsection{hasApplicationSoftware}
+\label{subsecP:hasApplicationSoftware}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ApplicationSoftware} (see section \ref{subsubsecC:ApplicationSoftware})
+\end{itemize}
+
+
+
+
+\subsection{hasArchitecture}
+\label{subsecP:hasArchitecture}
+The hasArchitecture object property is defined to relate a system to its architecture.
+
+Subproperty of:
+None
+
+
+Domains:
+\begin{itemize}
+	\item \textbf{System} (see section \ref{subsubsecC:System})
+\end{itemize}
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Architecture} (see section \ref{subsubsecC:Architecture})
+\end{itemize}
+
+
+
+
+\subsection{hasAutonomy}
+\label{subsecP:hasAutonomy}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Autonomy} (see section \ref{subsubsecC:Autonomy})
+\end{itemize}
+
+
+
+
+\subsection{hasAuxiliaryMemory}
+\label{subsecP:hasAuxiliaryMemory}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{AuxiliaryMemory} (see section \ref{subsubsecC:AuxiliaryMemory})
+\end{itemize}
+
+
+
+
+\subsection{hasAvailability}
+\label{subsecP:hasAvailability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Availability} (see section \ref{subsubsecC:Availability})
+\end{itemize}
+
+
+
+
+\subsection{hasBehavior}
+\label{subsecP:hasBehavior}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Behavior} (see section \ref{subsubsecC:Behavior})
+\end{itemize}
+
+
+
+
+\subsection{hasBifurcations}
+\label{subsecP:hasBifurcations}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Bifurcations} (see section \ref{subsubsecC:Bifurcations})
+\end{itemize}
+
+
+
+
+\subsection{hasCPS}
+\label{subsecP:hasCPS}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{CPS} (see section \ref{subsubsecC:CPS})
+\end{itemize}
+
+
+
+
+\subsection{hasCPSComponentLayer}
+\label{subsecP:hasCPSComponentLayer}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{CPSComponentLayer} (see section \ref{subsubsecC:CPSComponentLayer})
+\end{itemize}
+
+
+
+
+\subsection{hasCacheMemory}
+\label{subsecP:hasCacheMemory}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{CacheMemory} (see section \ref{subsubsecC:CacheMemory})
+\end{itemize}
+
+
+
+
+\subsection{hasChattering}
+\label{subsecP:hasChattering}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Chattering} (see section \ref{subsubsecC:Chattering})
+\end{itemize}
+
+
+
+
+\subsection{hasComType}
+\label{subsecP:hasComType}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ComType} (see section \ref{subsubsecC:ComType})
+\end{itemize}
+
+
+
+
+\subsection{hasCommunication}
+\label{subsecP:hasCommunication}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Communication} (see section \ref{subsubsecC:Communication})
+\end{itemize}
+
+
+
+
+\subsection{hasCommunicationAction}
+\label{subsecP:hasCommunicationAction}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{CommunicationAction} (see section \ref{subsubsecC:CommunicationAction})
+\end{itemize}
+
+
+
+
+\subsection{hasComplex/strange}
+\label{subsecP:hasComplex/strange}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Complex/strange} (see section \ref{subsubsecC:Complex/strange})
+\end{itemize}
+
+
+
+
+\subsection{hasComposability}
+\label{subsecP:hasComposability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Composability} (see section \ref{subsubsecC:Composability})
+\end{itemize}
+
+
+
+
+\subsection{hasConfiguration}
+\label{subsecP:hasConfiguration}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Configuration} (see section \ref{subsubsecC:Configuration})
+\end{itemize}
+
+
+
+
+\subsection{hasConsistency}
+\label{subsecP:hasConsistency}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Consistency} (see section \ref{subsubsecC:Consistency})
+\end{itemize}
+
+
+
+
+\subsection{hasConstituentElement}
+\label{subsecP:hasConstituentElement}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ConstituentElement} (see section \ref{subsubsecC:ConstituentElement})
+\end{itemize}
+
+
+
+
+\subsection{hasConstraints}
+\label{subsecP:hasConstraints}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Constraints} (see section \ref{subsubsecC:Constraints})
+\end{itemize}
+
+
+
+
+\subsection{hasContinuity}
+\label{subsecP:hasContinuity}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Continuity} (see section \ref{subsubsecC:Continuity})
+\end{itemize}
+
+
+
+
+\subsection{hasControl}
+\label{subsecP:hasControl}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Control} (see section \ref{subsubsecC:Control})
+\end{itemize}
+
+
+
+
+\subsection{hasControllability}
+\label{subsecP:hasControllability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Controllability} (see section \ref{subsubsecC:Controllability})
+\end{itemize}
+
+
+
+
+\subsection{hasController}
+\label{subsecP:hasController}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Controller} (see section \ref{subsubsecC:Controller})
+\end{itemize}
+
+
+
+
+\subsection{hasCyber}
+\label{subsecP:hasCyber}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Cyber} (see section \ref{subsubsecC:Cyber})
+\end{itemize}
+
+
+
+
+\subsection{hasDependency}
+\label{subsecP:hasDependency}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Dependency} (see section \ref{subsubsecC:Dependency})
+\end{itemize}
+
+
+
+
+\subsection{hasDeterministic}
+\label{subsecP:hasDeterministic}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Deterministic} (see section \ref{subsubsecC:Deterministic})
+\end{itemize}
+
+
+
+
+\subsection{hasDiagnostics}
+\label{subsecP:hasDiagnostics}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Diagnostics} (see section \ref{subsubsecC:Diagnostics})
+\end{itemize}
+
+
+
+
+\subsection{hasDisciplines}
+\label{subsecP:hasDisciplines}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Disciplines} (see section \ref{subsubsecC:Disciplines})
+\end{itemize}
+
+
+
+
+\subsection{hasDiscontinuous}
+\label{subsecP:hasDiscontinuous}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Discontinuous} (see section \ref{subsubsecC:Discontinuous})
+\end{itemize}
+
+
+
+
+\subsection{hasDissipativity/Passivity}
+\label{subsecP:hasDissipativity/Passivity}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Dissipativity/Passivity} (see section \ref{subsubsecC:Dissipativity/Passivity})
+\end{itemize}
+
+
+
+
+\subsection{hasDisturbance}
+\label{subsecP:hasDisturbance}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Disturbance} (see section \ref{subsubsecC:Disturbance})
+\end{itemize}
+
+
+
+
+\subsection{hasDynamics}
+\label{subsecP:hasDynamics}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Dynamics} (see section \ref{subsubsecC:Dynamics})
+\end{itemize}
+
+
+
+
+\subsection{hasEfficiency}
+\label{subsecP:hasEfficiency}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Efficiency} (see section \ref{subsubsecC:Efficiency})
+\end{itemize}
+
+
+
+
+\subsection{hasElectronic}
+\label{subsecP:hasElectronic}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Electronic} (see section \ref{subsubsecC:Electronic})
+\end{itemize}
+
+
+
+
+\subsection{hasEmbedded/FirmwareSoftware}
+\label{subsecP:hasEmbedded/FirmwareSoftware}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Embedded/FirmwareSoftware} (see section \ref{subsubsecC:Embedded/FirmwareSoftware})
+\end{itemize}
+
+
+
+
+\subsection{hasEmergentBehavior}
+\label{subsecP:hasEmergentBehavior}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{EmergentBehavior} (see section \ref{subsubsecC:EmergentBehavior})
+\end{itemize}
+
+
+
+
+\subsection{hasEntity}
+\label{subsecP:hasEntity}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Entity} (see section \ref{subsubsecC:Entity})
+\end{itemize}
+
+
+
+
+\subsection{hasEnvironment}
+\label{subsecP:hasEnvironment}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Environment} (see section \ref{subsubsecC:Environment})
+\end{itemize}
+
+
+
+
+\subsection{hasEpistemicAction}
+\label{subsecP:hasEpistemicAction}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{EpistemicAction} (see section \ref{subsubsecC:EpistemicAction})
+\end{itemize}
+
+
+
+
+\subsection{hasEquilibrium}
+\label{subsecP:hasEquilibrium}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Equilibrium} (see section \ref{subsubsecC:Equilibrium})
+\end{itemize}
+
+
+
+
+\subsection{hasEvent}
+\label{subsecP:hasEvent}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Event} (see section \ref{subsubsecC:Event})
+\end{itemize}
+
+
+
+
+\subsection{hasExternalInterfaces}
+\label{subsecP:hasExternalInterfaces}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ExternalInterfaces} (see section \ref{subsubsecC:ExternalInterfaces})
+\end{itemize}
+
+
+
+
+\subsection{hasFeedback}
+\label{subsecP:hasFeedback}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Feedback} (see section \ref{subsubsecC:Feedback})
+\end{itemize}
+
+
+
+
+\subsection{hasGoal}
+\label{subsecP:hasGoal}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Goal} (see section \ref{subsubsecC:Goal})
+\end{itemize}
+
+
+
+
+\subsection{hasHeterogeneity}
+\label{subsecP:hasHeterogeneity}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Heterogeneity} (see section \ref{subsubsecC:Heterogeneity})
+\end{itemize}
+
+
+
+
+\subsection{hasHuman}
+\label{subsecP:hasHuman}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Human} (see section \ref{subsubsecC:Human})
+\end{itemize}
+
+
+
+
+\subsection{hasHysteresis}
+\label{subsecP:hasHysteresis}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Hysteresis} (see section \ref{subsubsecC:Hysteresis})
+\end{itemize}
+
+
+
+
+\subsection{hasInput}
+\label{subsecP:hasInput}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Input} (see section \ref{subsubsecC:Input})
+\end{itemize}
+
+
+
+
+\subsection{hasIntelligence}
+\label{subsecP:hasIntelligence}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Intelligence} (see section \ref{subsubsecC:Intelligence})
+\end{itemize}
+
+
+
+
+\subsection{hasInteroperability}
+\label{subsecP:hasInteroperability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Interoperability} (see section \ref{subsubsecC:Interoperability})
+\end{itemize}
+
+
+
+
+\subsection{hasLearning}
+\label{subsecP:hasLearning}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Learning} (see section \ref{subsubsecC:Learning})
+\end{itemize}
+
+
+
+
+\subsection{hasLinearity}
+\label{subsecP:hasLinearity}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Linearity} (see section \ref{subsubsecC:Linearity})
+\end{itemize}
+
+
+
+
+\subsection{hasMainMemory}
+\label{subsecP:hasMainMemory}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{MainMemory} (see section \ref{subsubsecC:MainMemory})
+\end{itemize}
+
+
+
+
+\subsection{hasManagementLayer}
+\label{subsecP:hasManagementLayer}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ManagementLayer} (see section \ref{subsubsecC:ManagementLayer})
+\end{itemize}
+
+
+
+
+\subsection{hasMechanical}
+\label{subsecP:hasMechanical}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Mechanical} (see section \ref{subsubsecC:Mechanical})
+\end{itemize}
+
+
+
+
+\subsection{hasMemory}
+\label{subsecP:hasMemory}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Memory} (see section \ref{subsubsecC:Memory})
+\end{itemize}
+
+
+
+
+\subsection{hasNetwork}
+\label{subsecP:hasNetwork}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Network} (see section \ref{subsubsecC:Network})
+\end{itemize}
+
+
+
+
+\subsection{hasNetworkLayer}
+\label{subsecP:hasNetworkLayer}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{NetworkLayer} (see section \ref{subsubsecC:NetworkLayer})
+\end{itemize}
+
+
+
+
+\subsection{hasNon-deterministic}
+\label{subsecP:hasNon-deterministic}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Non-deterministic} (see section \ref{subsubsecC:Non-deterministic})
+\end{itemize}
+
+
+
+
+\subsection{hasObservability}
+\label{subsecP:hasObservability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Observability} (see section \ref{subsubsecC:Observability})
+\end{itemize}
+
+
+
+
+\subsection{hasOperatingSystem}
+\label{subsecP:hasOperatingSystem}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{OperatingSystem} (see section \ref{subsubsecC:OperatingSystem})
+\end{itemize}
+
+
+
+
+\subsection{hasOscillations/Limitcycles}
+\label{subsecP:hasOscillations/Limitcycles}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Oscillations/LimitCycles} (see section \ref{subsubsecC:Oscillations/LimitCycles})
+\end{itemize}
+
+
+
+
+\subsection{hasOutput}
+\label{subsecP:hasOutput}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Output} (see section \ref{subsubsecC:Output})
+\end{itemize}
+
+
+
+
+\subsection{hasPerformance}
+\label{subsecP:hasPerformance}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Performance} (see section \ref{subsubsecC:Performance})
+\end{itemize}
+
+
+
+
+\subsection{hasPhasetransitions}
+\label{subsecP:hasPhasetransitions}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{PhaseTransitions} (see section \ref{subsubsecC:PhaseTransitions})
+\end{itemize}
+
+
+
+
+\subsection{hasPhysical}
+\label{subsecP:hasPhysical}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Physical} (see section \ref{subsubsecC:Physical})
+\end{itemize}
+
+
+
+
+\subsection{hasPhysicalAction}
+\label{subsecP:hasPhysicalAction}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{PhysicalAction} (see section \ref{subsubsecC:PhysicalAction})
+\end{itemize}
+
+
+
+
+\subsection{hasPlant}
+\label{subsecP:hasPlant}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Plant} (see section \ref{subsubsecC:Plant})
+\end{itemize}
+
+
+
+
+\subsection{hasProbabilistic}
+\label{subsecP:hasProbabilistic}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Probabilistic} (see section \ref{subsubsecC:Probabilistic})
+\end{itemize}
+
+
+
+
+\subsection{hasProcessor}
+\label{subsecP:hasProcessor}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Processor} (see section \ref{subsubsecC:Processor})
+\end{itemize}
+
+
+
+
+\subsection{hasPrognostics}
+\label{subsecP:hasPrognostics}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Prognostics} (see section \ref{subsubsecC:Prognostics})
+\end{itemize}
+
+
+
+
+\subsection{hasProperties}
+\label{subsecP:hasProperties}
+Paradigm characteristics are defined by the ParadigmaticProperty class and related to Paradigm characteristics using the hasProperties object property.
+
+Subproperty of:
+None
+
+
+Domains:
+\begin{itemize}
+	\item \textbf{EngineeringParadigm} (see section \ref{subsubsecC:EngineeringParadigm})
+\end{itemize}
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ParadigmaticProperty} (see section \ref{subsubsecC:ParadigmaticProperty})
+	\item \textbf{Properties} (see section \ref{subsubsecC:Properties})
+\end{itemize}
+
+
+
+
+\subsection{hasProtocol}
+\label{subsecP:hasProtocol}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Protocol} (see section \ref{subsubsecC:Protocol})
+\end{itemize}
+
+
+
+
+\subsection{hasReferenceSignal}
+\label{subsecP:hasReferenceSignal}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ReferenceSignal} (see section \ref{subsubsecC:ReferenceSignal})
+\end{itemize}
+
+
+
+
+\subsection{hasRegulation}
+\label{subsecP:hasRegulation}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Regulation} (see section \ref{subsubsecC:Regulation})
+\end{itemize}
+
+
+
+
+\subsection{hasReliability}
+\label{subsecP:hasReliability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Reliability} (see section \ref{subsubsecC:Reliability})
+\end{itemize}
+
+
+
+
+\subsection{hasResilience}
+\label{subsecP:hasResilience}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Resilience} (see section \ref{subsubsecC:Resilience})
+\end{itemize}
+
+
+
+
+\subsection{hasResponsibilities}
+\label{subsecP:hasResponsibilities}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Responsibilities} (see section \ref{subsubsecC:Responsibilities})
+\end{itemize}
+
+
+
+
+\subsection{hasRobustness}
+\label{subsecP:hasRobustness}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Robustness} (see section \ref{subsubsecC:Robustness})
+\end{itemize}
+
+
+
+
+\subsection{hasRole}
+\label{subsecP:hasRole}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Role} (see section \ref{subsubsecC:Role})
+\end{itemize}
+
+
+
+
+\subsection{hasSafety}
+\label{subsecP:hasSafety}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Safety} (see section \ref{subsubsecC:Safety})
+\end{itemize}
+
+
+
+
+\subsection{hasScalability}
+\label{subsecP:hasScalability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Scalability} (see section \ref{subsubsecC:Scalability})
+\end{itemize}
+
+
+
+
+\subsection{hasScope}
+\label{subsecP:hasScope}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Scope} (see section \ref{subsubsecC:Scope})
+\end{itemize}
+
+
+
+
+\subsection{hasSecurity}
+\label{subsecP:hasSecurity}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Security} (see section \ref{subsubsecC:Security})
+\end{itemize}
+
+
+
+
+\subsection{hasSecurityLayer}
+\label{subsecP:hasSecurityLayer}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{SecurityLayer} (see section \ref{subsubsecC:SecurityLayer})
+\end{itemize}
+
+
+
+
+\subsection{hasSensitivity}
+\label{subsecP:hasSensitivity}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Sensitivity} (see section \ref{subsubsecC:Sensitivity})
+\end{itemize}
+
+
+
+
+\subsection{hasSensor}
+\label{subsecP:hasSensor}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Sensor} (see section \ref{subsubsecC:Sensor})
+\end{itemize}
+
+
+
+
+\subsection{hasServiceLayer}
+\label{subsecP:hasServiceLayer}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ServiceLayer} (see section \ref{subsubsecC:ServiceLayer})
+\end{itemize}
+
+
+
+
+\subsection{hasSetpoint}
+\label{subsecP:hasSetpoint}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Setpoint} (see section \ref{subsubsecC:Setpoint})
+\end{itemize}
+
+
+
+
+\subsection{hasSlidingmotions}
+\label{subsecP:hasSlidingmotions}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{SlidingMotions} (see section \ref{subsubsecC:SlidingMotions})
+\end{itemize}
+
+
+
+
+\subsection{hasSmooth}
+\label{subsecP:hasSmooth}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Smooth} (see section \ref{subsubsecC:Smooth})
+\end{itemize}
+
+
+
+
+\subsection{hasSoftware}
+\label{subsecP:hasSoftware}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Software} (see section \ref{subsubsecC:Software})
+\end{itemize}
+
+
+
+
+\subsection{hasStability}
+\label{subsecP:hasStability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Stability} (see section \ref{subsubsecC:Stability})
+\end{itemize}
+
+
+
+
+\subsection{hasState}
+\label{subsecP:hasState}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{State} (see section \ref{subsubsecC:State})
+\end{itemize}
+
+
+
+
+\subsection{hasState-of-Affairs}
+\label{subsecP:hasState-of-Affairs}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{State-of-Affairs} (see section \ref{subsubsecC:State-of-Affairs})
+\end{itemize}
+
+
+
+
+\subsection{hasSustainability}
+\label{subsecP:hasSustainability}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Sustainability} (see section \ref{subsubsecC:Sustainability})
+\end{itemize}
+
+
+
+
+\subsection{hasSystemBus}
+\label{subsecP:hasSystemBus}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{SystemBus} (see section \ref{subsubsecC:SystemBus})
+\end{itemize}
+
+
+
+
+\subsection{hasSystemServices}
+\label{subsecP:hasSystemServices}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{SystemServices} (see section \ref{subsubsecC:SystemServices})
+\end{itemize}
+
+
+
+
+\subsection{hasSystemSoftware}
+\label{subsecP:hasSystemSoftware}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{SystemSoftware} (see section \ref{subsubsecC:SystemSoftware})
+\end{itemize}
+
+
+
+
+\subsection{hasSystemType}
+\label{subsecP:hasSystemType}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{SystemType} (see section \ref{subsubsecC:SystemType})
+\end{itemize}
+
+
+
+
+\subsection{hasSystemUtilities}
+\label{subsecP:hasSystemUtilities}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{SystemUtilities} (see section \ref{subsubsecC:SystemUtilities})
+\end{itemize}
+
+
+
+
+\subsection{hasTiming}
+\label{subsecP:hasTiming}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Timing} (see section \ref{subsubsecC:Timing})
+\end{itemize}
+
+
+
+
+\subsection{hasTopologicalEvolution}
+\label{subsecP:hasTopologicalEvolution}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{TopologicalEvolution} (see section \ref{subsubsecC:TopologicalEvolution})
+\end{itemize}
+
+
+
+
+\subsection{hasTopology}
+\label{subsecP:hasTopology}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Topology} (see section \ref{subsubsecC:Topology})
+\end{itemize}
+
+
+
+
+\subsection{hasTracking}
+\label{subsecP:hasTracking}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Tracking} (see section \ref{subsubsecC:Tracking})
+\end{itemize}
+
+
+
+
+\subsection{hasUncertainty}
+\label{subsecP:hasUncertainty}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Uncertainty} (see section \ref{subsubsecC:Uncertainty})
+\end{itemize}
+
+
+
+
+\subsection{hasUserInterface}
+\label{subsecP:hasUserInterface}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{UserInterface} (see section \ref{subsubsecC:UserInterface})
+\end{itemize}
+
+
+
+
+\subsection{hasValidityRegion}
+\label{subsecP:hasValidityRegion}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ValidityRegion} (see section \ref{subsubsecC:ValidityRegion})
+\end{itemize}
+
+
+
+
+\subsection{hasX\textunderscore ilities}
+\label{subsecP:hasX_ilities}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{X\textunderscore ilities} (see section \ref{subsubsecC:X_ilities})
+\end{itemize}
+
+
+
+
+\subsection{hasZenoness}
+\label{subsecP:hasZenoness}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Zenoness} (see section \ref{subsubsecC:Zenoness})
+\end{itemize}
+
+
+
+
+\subsection{hasnonfunctionalReqs}
+\label{subsecP:hasnonfunctionalReqs}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{nonfunctionalReqs} (see section \ref{subsubsecC:nonfunctionalReqs})
+\end{itemize}
+
+
 
 

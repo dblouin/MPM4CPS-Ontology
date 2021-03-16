@@ -12,6 +12,8 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://mpm4cps.eu/ontology/mpm</Import>
+    <Import>http://mpm4cps.eu/ontology/shared</Import>
     <Annotation>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
         <Literal>Dominique Blouin; Hana Mkaouar</Literal>
@@ -21,88 +23,34 @@
         <Literal>The OWL MPM4CPS ontology that defines cross-cutting concepts between the Shared, MPM and CPS ontologies.</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="4cps#MPM4CPSDC"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4cps#ModelBasedEngineeringArtifact"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4cps#ModelBasedEngineeringEnv"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4cps#ModelBasedProcess"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4cps#ModelingEngineeringParadigm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4cps#View"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4cps#ViewPoint"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasGoverningView"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#hasApplicationMegamodel"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#hasFramedConcerns"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#hasGovernedView"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#hasModelingArtifacts"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#hasStakeholders"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#hasSupportingMegamodelFragments"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#hasSystemConstituentElements"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#hasViewpoint"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="4cps#isSupportedBy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Process"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringArtifact"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringParadigm"/>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#Formalism"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#Model"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/mpm#Formalism"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#ModelRelation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
+        <Class IRI="#MPM4CPSDC"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasArtifacts"/>
+        <Class IRI="#ModelBasedEngineeringEnv"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringEnvironment"/>
+        <Class IRI="#ModelBasedProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#View"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ViewPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="4cps#ModelBasedEngineeringArtifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="4cps#ModelingEngineeringParadigm"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
@@ -111,7 +59,61 @@
         <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringArtifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringEnvironment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringParadigm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFramedConcerns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGovernedView"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGoverningView"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStakeholders"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSupportingMegamodelFragments"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSystemConstituentElements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasViewpoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSupportedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="4cps#hasApplicationMegamodel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="4cps#hasModelingArtifacts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasArtifacts"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="http://mpm4cps.eu/ontology/mpm#Model"/>
@@ -122,135 +124,170 @@
         <Class IRI="4cps#ModelBasedEngineeringArtifact"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="4cps#MPM4CPSDC"/>
+        <Class IRI="#MPM4CPSDC"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedEngineeringEnv"/>
+        <Class IRI="#MPM4CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedEngineeringEnv"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringEnvironment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedProcess"/>
+        <Class IRI="#MPM4CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedProcess"/>
+        <Class IRI="4cps#ModelBasedEngineeringArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelBasedProcess"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#View"/>
+        <Class IRI="#MPM4CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#View"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasGoverningView"/>
+            <Class IRI="#ViewPoint"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ViewPoint"/>
+        <Class IRI="#MPM4CPSDC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ViewPoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStakeholders"/>
+            <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="4cps#ModelBasedEngineeringArtifact"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringArtifact"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="4cps#ModelBasedEngineeringEnv"/>
-        <Class IRI="4cps#MPM4CPSDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4cps#ModelBasedEngineeringEnv"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringEnvironment"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4cps#ModelBasedProcess"/>
-        <Class IRI="4cps#MPM4CPSDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4cps#ModelBasedProcess"/>
-        <Class IRI="4cps#ModelBasedEngineeringArtifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4cps#ModelBasedProcess"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Process"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="4cps#ModelingEngineeringParadigm"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#EngineeringParadigm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4cps#View"/>
-        <Class IRI="4cps#MPM4CPSDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4cps#View"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasGoverningView"/>
-            <Class IRI="4cps#ViewPoint"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4cps#ViewPoint"/>
-        <Class IRI="4cps#MPM4CPSDC"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4cps#ViewPoint"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="4cps#hasStakeholders"/>
-            <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="4cps#hasModelingArtifacts"/>
         <ObjectProperty IRI="http://mpm4cps.eu/ontology/shared#hasArtifacts"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasGovernedView"/>
         <ObjectProperty IRI="#hasGoverningView"/>
-        <ObjectProperty IRI="4cps#hasGovernedView"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFramedConcerns"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGovernedView"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasGoverningView"/>
-        <Class IRI="4cps#View"/>
+        <Class IRI="#View"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="4cps#hasFramedConcerns"/>
-        <Class IRI="4cps#ViewPoint"/>
+        <ObjectProperty IRI="#hasStakeholders"/>
+        <Class IRI="#ViewPoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="4cps#hasGovernedView"/>
-        <Class IRI="4cps#ViewPoint"/>
+        <ObjectProperty IRI="#hasSupportingMegamodelFragments"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSystemConstituentElements"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasViewpoint"/>
+        <Class IRI="#ModelBasedProcess"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSupportedBy"/>
+        <Class IRI="#ViewPoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="4cps#hasModelingArtifacts"/>
-        <Class IRI="4cps#ModelBasedEngineeringEnv"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="4cps#hasStakeholders"/>
-        <Class IRI="4cps#ViewPoint"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="4cps#hasSupportingMegamodelFragments"/>
-        <Class IRI="4cps#ViewPoint"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="4cps#hasSystemConstituentElements"/>
-        <Class IRI="4cps#ViewPoint"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="4cps#hasViewpoint"/>
-        <Class IRI="4cps#ModelBasedProcess"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="4cps#isSupportedBy"/>
-        <Class IRI="4cps#ViewPoint"/>
+        <Class IRI="#ModelBasedEngineeringEnv"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGoverningView"/>
-        <Class IRI="4cps#ViewPoint"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="4cps#hasFramedConcerns"/>
+        <ObjectProperty IRI="#hasFramedConcerns"/>
         <Class IRI="http://mpm4cps.eu/ontology/shared#Concern"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="4cps#hasGovernedView"/>
-        <Class IRI="4cps#View"/>
+        <ObjectProperty IRI="#hasGovernedView"/>
+        <Class IRI="#View"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGoverningView"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStakeholders"/>
+        <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasViewpoint"/>
+        <Class IRI="#ViewPoint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSupportedBy"/>
+        <Class IRI="http://mpm4cps.eu/ontology/mpm#Formalism"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="4cps#hasModelingArtifacts"/>
         <Class IRI="4cps#ModelBasedEngineeringArtifact"/>
     </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="4cps#hasStakeholders"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Stakeholder"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="4cps#hasViewpoint"/>
-        <Class IRI="4cps#ViewPoint"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="4cps#isSupportedBy"/>
-        <Class IRI="http://mpm4cps.eu/ontology/mpm#Formalism"/>
-    </ObjectPropertyRange>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toBeReviewed"/>
-        <IRI>http://mpm4cps.eu/ontology/mpm#hasCharacteristic</IRI>
-        <Literal>under construction.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MPM4CPSDC</IRI>
+        <Literal>MPM4CPSDC domain concept class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ModelBasedEngineeringEnv</IRI>
+        <Literal>In order to define our modeling paradigm notion, we first subclass the EngineeringEnvironment class of the Shared ontology by the ModelBasedEngineeringEnv class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ModelBasedProcess</IRI>
+        <Literal>The Process class of the Shared ontology is refined into the ModelBasedProcess class to represent all processes that manipulate models instead of data fields.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
+        <IRI>#View</IRI>
+        <Literal>Finally, we create another object property to relate a view to its employed models.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#View</IRI>
+        <Literal>A viewpoint governs an architecture view.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ViewPoint</IRI>
+        <Literal>According to the IEEE 42010 standard, a viewpoint frames the concerns of stakeholders.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFramedConcerns</IRI>
+        <Literal>The hasFramedConcerns object property relates a viewpoint to a set of framed concerns as defined in the Shared ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGovernedView</IRI>
+        <Literal>The hasGovernedView object property relates a viewpoint to its view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -259,8 +296,28 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#MPM4CPSDC</IRI>
-        <Literal>MPM4CPSDC domain concept class</Literal>
+        <IRI>#hasStakeholders</IRI>
+        <Literal>The hasStakeholders  object property relates a ViewPoint to its Stakeholder.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSupportingMegamodelFragments</IRI>
+        <Literal>The hasSupportingMegamodelFragments object property  relates a viewpoint to a set of supporting megamodel fragments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSystemConstituentElements</IRI>
+        <Literal>The hasSystemConstituentElements object property relates a viewpoint with its system constituents or parts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasViewpoint</IRI>
+        <Literal>A set of viewpoints can be linked to a process through an object property hasViewpoint, so that data types are declared as the elements grouped under the associated megamodel fragment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSupportedBy</IRI>
+        <Literal>A ViewPoint is supported by a Formalism.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -269,68 +326,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#ModelBasedEngineeringEnv</IRI>
-        <Literal>In order to define our modeling paradigm notion, we first subclass the EngineeringEnvironment class of the Shared ontology by the ModelBasedEngineeringEnv class.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#ModelBasedProcess</IRI>
-        <Literal>The Process class of the Shared ontology is refined into the ModelBasedProcess class to represent all processes that manipulate models instead of data fields.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:toDo"/>
-        <IRI>4cps#View</IRI>
-        <Literal>Finally, we create another object property to relate a view to its employed models.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#View</IRI>
-        <Literal>A viewpoint governs an architecture view.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#ViewPoint</IRI>
-        <Literal>According to the IEEE 42010 standard, a viewpoint frames the concerns of stakeholders.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#hasFramedConcerns</IRI>
-        <Literal>The hasFramedConcerns object property relates a viewpoint to a set of framed concerns as defined in the Shared ontology.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#hasGovernedView</IRI>
-        <Literal>The hasGovernedView object property relates a viewpoint to its view.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>4cps#hasModelingArtifacts</IRI>
         <Literal>The hasModelingArtifacts is a subproperty of the hasArtifacts object property having respectively the ModelBasedEngineeringEnv and ModelBasedEngineeringArtifact classes as domain and range.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#hasStakeholders</IRI>
-        <Literal>The hasStakeholders  object property relates a ViewPoint to its Stakeholder.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#hasSupportingMegamodelFragments</IRI>
-        <Literal>The hasSupportingMegamodelFragments object property  relates a viewpoint to a set of supporting megamodel fragments.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#hasSystemConstituentElements</IRI>
-        <Literal>The hasSystemConstituentElements object property relates a viewpoint with its system constituents or parts.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#hasViewpoint</IRI>
-        <Literal>A set of viewpoints can be linked to a process through an object property hasViewpoint, so that data types are declared as the elements grouped under the associated megamodel fragment.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>4cps#isSupportedBy</IRI>
-        <Literal>A ViewPoint is supported by a Formalism.</Literal>
     </AnnotationAssertion>
 </Ontology>
 

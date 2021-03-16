@@ -56,14 +56,14 @@
 \addtocounter{footnote}{1}
 \section{HPI CPSLab$^{\thefootnote{}}$}\footnotetext[\thefootnote{}]{Acknowledgements: We thank Sebastian W{\"a}tzoldt, Stefan Neumann, Joachim H{\"a}nsel, and Falk Benke for their contributions to the lab described in this section and their contribution to the presented content and figures.}
 
-\LEAD{Soumyadip}\ALSO{Holger, Dominique}\STATUS{%
-Soumyadip has added some figures from the Pisa keynote and the BX/MX Dagstuhl seminar; 
-Holger restructured the text to reflect the three stages of the ontology; 
-Holger added mappings to the ontologies; 
-STILL TO BE DONE: 
-model the introduced ontology elements in the catalog or CPSLab ontology; 
-add graphics showing the added concepts/instances of the ontologies
-}
+%\LEAD{Soumyadip}\ALSO{Holger, Dominique}\STATUS{%
+%Soumyadip has added some figures from the Pisa keynote and the BX/MX Dagstuhl seminar; 
+%Holger restructured the text to reflect the three stages of the ontology; 
+%Holger added mappings to the ontologies; 
+%STILL TO BE DONE: 
+%model the introduced ontology elements in the catalog or CPSLab ontology; 
+%add graphics showing the added concepts/instances of the ontologies
+%}
 
 To structure the presentation of this case study according to the efforts for the MPM4CPS project, we will
 %
@@ -261,8 +261,8 @@ Concerning the verification, we employ code generation at the prototyping stage 
 %
 The \emph{software-in-the-loop} (SiL) simulation at the prototyping stage as depicted in Figure~\ref{fig:sil} requires that code generation is employed to derive code for the functional models and architectural models. In special cases, also additional manually developed code has to be integrated. Then, the code is executed and run against the available simulation of the robot and its environment.
 
-As we still do not always use the real hardware, we still ignore resp.~simplify elements such as real sensor values with noise and not by the simulator covered timing constraints\uidx{Constraint} of the environment or platform, while specific effects of scheduling, the impact of communication\uidx{Communication} interaction and messages, and by the simulator covered timing constraints of the environment or platform, and timing/memory/computation constraints of the software.
-\todo{DB: This sentence is not clear}
+As we are still not using the real hardware, we still ignore and simplify elements such as real sensor values with noise %and not by the simulator covered timing constraints\uidx{Constraint} 
+of the environment or platform, specific effects of scheduling, and timing/memory/computation constraints of the software.
 
 % ============================================
 \subsubsubsection{Software in the Loop (SiL) - CPS Ontology}
@@ -309,19 +309,15 @@ The outlined methodology and tool chain adjusted from the automotive domain, pro
 %
 We put special focus on supporting also hard and soft real-time considerations, which are oftentimes ignored in robotic development scenarios.
 
-\TODONOTE{ HG: add steps when considering multiple robots? }
+%\TODONOTE{ HG: add steps when considering multiple robots? }
 
 
 
-\LATER{ HG: The links to the CPS ontology that are present in the case study are quite weak and so far only refer to the elements. Maybe we can refine them when the improved version of the CPS ontology is available? 
-
-Right now we have:
-
-- separation into physical and cyber elements covered by the ontology are referenced
-
-- maybe properties of the CPS can be added?
-
-}
+%\LATER{ HG: The links to the CPS ontology that are present in the case study are quite weak and so far only refer to the elements. Maybe we can refine them when the improved version of the CPS ontology is available? 
+%Right now we have:
+%- separation into physical and cyber elements covered by the ontology are referenced
+%- maybe properties of the CPS can be added?
+%}
 
 
 
@@ -395,15 +391,15 @@ the FESTO Robotino-Library with the FESTO Robotino{\copyright}Sim simulator.
 \label{fig:MMFig10}
 \end{figure}
 
-\TODOINLINE[SB]{ HG: Please add names of the megamodelfragments to the graphics of Figure~\ref{fig:MMFig10}. We should use the names defined int the subsequent figures which show the fragments of the megamodel in our PPT-slide notation MT (see Figure \ref{fig:CPSLabMTMMF} for a case where MT (for Model Test) and  \CPSLabMTMMF (as the name of the related MegaModelFragmeent) should be added. In most case the short name (e.g., SiL) has been already added. }
+%\TODOINLINE[SB]{ HG: Please add names of the megamodelfragments to the graphics of Figure~\ref{fig:MMFig10}. We should use the names defined int the subsequent figures which show the fragments of the megamodel in our PPT-slide notation MT (see Figure \ref{fig:CPSLabMTMMF} for a case where MT (for Model Test) and  \CPSLabMTMMF (as the name of the related MegaModelFragmeent) should be added. In most case the short name (e.g., SiL) has been already added. }
 
-\TODOINLINE[SB]{ HG: Please remove the methodology part in Figure~\ref{fig:MMFig10} (large red boxes with MT, MiL, RP, ... as this has been shown on the former figure already. Please ove the legend to the the remaining graphicasl elements.}
+%\TODOINLINE[SB]{ HG: Please remove the methodology part in Figure~\ref{fig:MMFig10} (large red boxes with MT, MiL, RP, ... as this has been shown on the former figure already. Please ove the legend to the the remaining graphicasl elements.}
 
 On overview about the stages and activities with an emphasis on models, tools, and multi-paradigm modeling is depicted in Figure~\ref{fig:MMFig10}.
 
 In the following, we outline to which elements of the MPM ontology of Chapter~\ref{ch:mpm} the elements of the megamodel\uidx{Megamodel} refer and which megamodel fragments\uidx{MegamodelFragment} cover the scenarios introduced in the last subsection.
 
-\LATER{ HG: Is an introduction to the notation required? Do we have to explain the links to the MPM ontology concepts here?}
+%\LATER{ HG: Is an introduction to the notation required? Do we have to explain the links to the MPM ontology concepts here?}
 
 \subsubsubsubsection{Formalism, Languages, Models, and Tools}
 
@@ -446,9 +442,9 @@ In the following, we outline to which elements of the MPM ontology of Chapter~\r
     \end{itemize}
 \end{itemize}
 
-\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
-\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
-\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
+%\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
+%\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
+%\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
 
 
 
@@ -498,19 +494,19 @@ The model test introduced in Figure~\ref{fig:mt}, is rather trivial as it only e
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModel, Input data (entered with \MATLABSimulinkSimulator)
         \item Output Model(s): Output data (visualized with \MATLABSimulinkSimulator)
-        \item Employed Tool: \MATLABSimulinkSimulator \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \MATLABSimulinkSimulator %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
 \end{itemize}
 
-\LATER{
-\subsubsubsubsection{Development Process}
+%\LATER{
+%\subsubsubsubsection{Development Process}
  
-FREE TEXT CAPTURING THE ORDERING
-}
+%FREE TEXT CAPTURING THE ORDERING
+%}
 
-\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
-\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
-\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
+%\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
+%\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
+%\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
 
 \begin{figure}[!htb]
 \centering
@@ -552,19 +548,19 @@ In contrast to model test, model-in-the-loop simulation as introduced in Figure~
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModel, \CPSLabPlantModel
         \item Output Model(s): Output data (visualized with \MATLABSimulinkSimulator)
-        \item Employed Tool: \MATLABSimulinkSimulator \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \MATLABSimulinkSimulator %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
 \end{itemize}
 
-\LATER{
-\subsubsubsubsection{Development Process}
+%\LATER{
+%\subsubsubsubsection{Development Process}
  
-FREE TEXT CAPTURING THE ORDERING
-}
+%FREE TEXT CAPTURING THE ORDERING
+%}
 
-\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
-\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
-\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
+%\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
+%\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
+%\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
 
 \begin{figure}[!htb]
 \centering
@@ -618,7 +614,7 @@ The second case depicted in Figure~\ref{fig:MMFig6} connects the abstract contro
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModel, \CPSLabRobotModel
         \item Output Model(s): Output data (visualized with \MATLABSimulinkSimulator and/or \FESTORobotinoView)
-        \item Employed Tool: \MATLABSimulinkSimulator, \FESTORobotinoSim \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \MATLABSimulinkSimulator, \FESTORobotinoSim %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
 \end{itemize}
 
@@ -633,11 +629,11 @@ The second case depicted in Figure~\ref{fig:MMFig6} connects the abstract contro
 
 In Figure~\ref{fig:CPSLabRPaMMF}, the added MegaModel Fragment\uidx{MegamodelFragment} \CPSLabRPaMMF and its elements for the CPSLab ontology outlined in the text are presented.
 
-\LATER{
-\subsubsubsubsection{Development Process}
+%\LATER{
+%\subsubsubsubsection{Development Process}
  
-FREE TEXT CAPTURING THE ORDERING
-}
+%FREE TEXT CAPTURING THE ORDERING
+%}
 
 \subsubsubsubsection{MegaModel Fragment \CPSLabRPbMMF}
 
@@ -655,15 +651,15 @@ FREE TEXT CAPTURING THE ORDERING
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModel
         \item Output Model(s): Output data (visualized with \MATLABSimulinkSimulator and/or observed)
-        \item Employed Tool: \MATLABSimulinkSimulator, \RobotExecutionRemote \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \MATLABSimulinkSimulator, \RobotExecutionRemote %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
 \end{itemize}
 
-\LATER{
-\subsubsubsubsection{Development Process}
+%\LATER{
+%\subsubsubsubsection{Development Process}
  
-FREE TEXT CAPTURING THE ORDERING
-}
+%FREE TEXT CAPTURING THE ORDERING
+%}
 
 \begin{figure}[!htb]
 \centering
@@ -675,9 +671,9 @@ FREE TEXT CAPTURING THE ORDERING
 
 The added MegaModel Fragment \CPSLabRPbMMF and its elements for the CPSLab ontology outlined in the text are depicted also in Figure~\ref{fig:CPSLabRPbMMF}.
 
-\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
-\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
-\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
+%\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
+%\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
+%\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
 
 
 
@@ -746,27 +742,27 @@ A second form executes the generated software  on a desktop computer and in cont
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModel
         \item Output Model(s): \CPSLabControlModelCode
-        \item Employed Tool: \dSPACETargetLink \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \dSPACETargetLink %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
     \item ModelOperation: SystemCodeGeneration
     \begin{itemize}
         \item Input Model(s): \CPSLabSystemModel
         \item Output Model(s): \CPSLabSystemModelCode
-        \item Employed Tool: \dSPACESystemDesk \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \dSPACESystemDesk %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
     \item ModelOperation: Software-in-the-Loop Simulation
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModelCode*, \CPSLabSystemModelCode, \CPSLabRobotModel
         \item Output Model(s): Output data (visualized with \MATLABSimulinkSimulator and/or \FESTORobotinoView)
-        \item Employed Tool: \DesktopExecution, \FESTORobotinoSim \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \DesktopExecution, \FESTORobotinoSim %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
 \end{itemize}
 
-\LATER{
-\subsubsubsubsection{Development Process}
+%\LATER{
+%\subsubsubsubsection{Development Process}
  
-FREE TEXT CAPTURING THE ORDERING
-}
+%FREE TEXT CAPTURING THE ORDERING
+%}
 
 \begin{figure}[!htb]
 \centering
@@ -778,9 +774,9 @@ FREE TEXT CAPTURING THE ORDERING
 The added MegaModel Fragment \CPSLabSiLaMMF and its elements for the CPSLab ontology outlined in the text are depicted also in Figure~\ref{fig:CPSLabSiLaMMF}.
 
 
-\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
-\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
-\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
+%\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
+%\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
+%\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
 
 \subsubsubsubsection{MegaModel Fragment \CPSLabSiLbMMF}
 
@@ -798,31 +794,31 @@ The added MegaModel Fragment \CPSLabSiLaMMF and its elements for the CPSLab onto
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModel
         \item Output Model(s): \CPSLabControlModelCode
-        \item Employed Tool: \dSPACETargetLink \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \dSPACETargetLink %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
     \item ModelOperation: SystemCodeGeneration
     \begin{itemize}
         \item Input Model(s): \CPSLabSystemModel
         \item Output Model(s): \CPSLabSystemModelCode
-        \item Employed Tool: \dSPACESystemDesk \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \dSPACESystemDesk %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
     \item ModelOperation: Software-in-the-Loop Execution
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModelCode*, \CPSLabSystemModelCode
         \item Output Model(s): Output data (visualized with \MATLABSimulinkSimulator and/or observed)
-        \item Employed Tool: \RobotExecutionRemote, \DesktopExecution \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \RobotExecutionRemote, \DesktopExecution %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
 \end{itemize}
 
-\LATER{
-\subsubsubsubsection{Development Process}
+%\LATER{
+%\subsubsubsubsection{Development Process}
  
-FREE TEXT CAPTURING THE ORDERING
-}
+%FREE TEXT CAPTURING THE ORDERING
+%}
 
-\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
-\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
-\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
+%\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
+%\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
+%\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
 
 \begin{figure}[!htb]
 \centering
@@ -865,31 +861,31 @@ Hardware in the Loop (HiL) as introducted in Figure~\ref{fig:hil} in contrast li
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModel
         \item Output Model(s): \CPSLabControlModelCode
-        \item Employed Tool: \dSPACETargetLink \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \dSPACETargetLink %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
     \item ModelOperation: SystemCodeGeneration
     \begin{itemize}
         \item Input Model(s): \CPSLabSystemModel
         \item Output Model(s): \CPSLabSystemModelCode
-        \item Employed Tool: \dSPACESystemDesk \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \dSPACESystemDesk %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
     \item ModelOperation: Hardware-in-the-Loop Execution
     \begin{itemize}
         \item Input Model(s): \CPSLabControlModelCode*, \CPSLabSystemModelCode
         \item Output Model(s): Output data (observed)
-        \item Employed Tool: \RobotExecutionLocal \COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
+        \item Employed Tool: \RobotExecutionLocal %\COMMENT{\tiny THIS ENTRY IS NOT COVERED BY THE ONTOLOGY SO FAR}
     \end{itemize}
 \end{itemize}
 
-\LATER{
-\subsubsubsubsection{Development Process}
+%\LATER{
+%\subsubsubsubsection{Development Process}
  
-FREE TEXT CAPTURING THE ORDERING
-}
+%FREE TEXT CAPTURING THE ORDERING
+%}
 
-\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
-\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
-\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
+%\DONE[HG]{ HG: please add scheme for MPM ontology use here! }
+%\DONE[SB]{ HG: please model scheme for MPM ontology presented here with Protege! }
+%\DONE[SB]{ HG: please add figure showing the used MPM ontology elements here! }
 
 \begin{figure}[!htb]
 \centering
@@ -917,140 +913,311 @@ either the compiled software runs on a host computer and controls the Robotino r
 or the compiled and linked software runs directly on the Robotino robots.
 
 
-\LATER[one advanced scenario]{
-% ============================================
-\subsubsection{Advanced Scenario}\label{subsubsec:cpslab-mpm-advanced}
-\marginpar{WORK EXAMPLE: hopefully complex enough to require most elements of the ontology}%
-%
-A more complex scenario featuring the horizontal combination of multiple specific structures in form of AUTOSAR for the software, VHDL for the hardware, and Matlab/Modelica for the plant linked together via a generic system structure in form of a SysML model is depicted in Figure~\ref{fig:MMFig16}.
-%
-\TODOINLINE{ HG: add refs for work that has been done and explain what is hypothetical }
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale=0.33]{figures/mm-hpi16.pdf}
-\caption{Scenario: More Complex Horizontal Integration}
-\label{fig:MMFig16}
-\end{figure}
-
-\marginpar{WORK EXAMPLE: try to capture what is in Figure~\ref{fig:MMFig16} with the ontology}
-%
-
-CPSLabMM : MegaModel (): for CPSLab
-
-- hasMegaModelFragment (3.4.10): CPSLabMM <-> CPSLabMM::Advanced
-
-CPSLabMM::Advanced : MegaModelFragment (3.3.3.6): whole Figure~\ref{fig:MMFig16}
-
-TargetLinkMO : ModelOperation (3.3.3.10): code generation using TargetLink
-
-- hasInput (3.4.7): multiple Matlab/Simulink control models for different functions
-
-. hasOutput (3.4.16): multipl C-code models for each function covered by one control model
-
-SystemDeskMO : ModelOperation (3.3.3.10): code generation for the architecture using SystemDesk
-
-- hasInput (3.4.7): one AUTOSAR architecture model referencing the different functions
-
-. hasOutput (3.4.16):  C-code models for the architecture integrating all function covered by the control model
-
-CoSimulationMO : ModelOperation (3.3.3.10): co-executes and co-simulates the AUTOSAR, VHDL, and plant model
-
-- hasInput (3.4.7): 
-
--- one SysML architecture model referencing the different architectures
-
--- one AUTOSAR architecture model referencing the different functions
-
--- one VVHDL  model 
-
--- one Modelica/Matlab plant model 
-
-. hasOutput (3.4.16):  simuzlation outcome
-
-OPEN QUESTION: How is this complex model operation linked to the involved tools? Do we use multiple model operations and lomnk them or does the mode operation reference simply multiple tools?
-
-REMARK: possibly required additional tools that allow to link the simulators are missing ...
-
-\subsection*{MegamModel Fragments}
-\begin{itemize}
-    \item robotControl Validation
-\end{itemize}
-
-% ============================================
-%\subsubsection{MPM Ontology}\label{subsubsec:cpslab-mpm-needs}
-%
-\TODOINLINE{ HG: add needs for the MPM ontology and catalog that are present in the case study? 
-
-- define all required ModelOperations with its hasInput and hasOutput
-
-- link ModelOperations to the Tools (in case of co-simulation one model operation links multiple tools!)
-
-
-
-- constrain Models with the specific needs as outlined in the text (e.g., use of block sets etc.)
-
-
-
-}
-}
-
 % ========================================================================================
 \subsection{MPM4CPS}\label{subsec:cpslab-mpm4cps}
 %
 In order to discuss the role of MPM for CPS development as presented in the case study, we refer to the inherent integration needs underlying the development of embedded real-time systems and cyber-physical systems in particular as outlined in \cite{GieseNNS2011}. Furthermore, we link these observations to the MPM4CPS ontology as presented in Chapter~\ref{ch:mpm4cps} and further needs to extend it.
+We present the modeling of this process and of one of its employed modeling paradigms with the MPM4CPS ontology. We first present the modeling of the methodology and its stages. Then, for each stage we present the detailed modeling of the different activities implementing the stage, including the employed viewpoints. Finally, we present the modeling of a simple modeling paradigm employed by the HPI CPSLab process and its viewpoints.
+% ============================================
+\subsubsection{Methodology}
+
+We define the CPSLabMethodology instance of the \uidxp{EngineeringMethodology} class of the workflow subdomain of shared ontology (Chapter~\ref{ch:foundations:introduction}) to capture the HPI CPSLab methodology and its set of stages as depicted in Figure~\ref{fig:introduction.methodology}. This is achieved by representing each stage as an instance of the \uidxp{EngineeringStage} class and creating instances of the \uidxp{hasNextStage} object property defining the order between the stages.
+\\
+\\
+\noindent\uline{Methodology}
+\begin{itemize}
+\item EngineeringMethodology: CPSLabMethodology
+\begin{itemize}
+    \item hasStages EngineeringStage: \texttt{CPSLabSimulationStage}
+    \begin{itemize}
+        \item hasNextStage: \texttt{CPSLabPrototypingStage}
+    \end{itemize}
+    \item hasStages EngineeringStage: \texttt{CPSLabPrototypingStage}
+    \begin{itemize}
+        \item hasNextStage: \texttt{CPSLabPreproductionStage}
+    \end{itemize}
+    \item hasStages EngineeringStage: \texttt{CPSLabPreproductionStage}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Methodology Implementing Process}
+
+We define the root CPSLabProcess instance of the \uidxp{ModelBasedProcess} class to implement the CPSLabMethodology. This process defines an activity set defining root activities and transitions to orchestrate them. Each of these activities contributes to implementing a stage of the CPSLab methodology. In addition, each root activity is decomposed into finer grained activities as declared with an associated subprocess.
+\\
+\\
+\noindent\uline{ActivitySet}
+     \begin{itemize}
+    \item hasSetActivities SubFlow: MTActivity
+        \begin{itemize}
+            \item isImplementingStage: CPSLabSimulationStage
+            \item hasSubProcess: MTProcess
+        \end{itemize}
+    \item hasSetActivities SubFlow: MiLActivity
+        \begin{itemize}
+            \item isImplementingStage: CPSLabSimulationStage
+            \item hasSubProcess: MiLProcess
+        \end{itemize}
+    \item hasSetActivities SubFlow: RPActivity
+        \begin{itemize}
+            \item isImplementingStage: CPSLabSimulationStage
+            \item hasSubProcess: RPProcess
+        \end{itemize}
+    \item hasSetActivities SubFlow: SiLActivity
+        \begin{itemize}
+            \item isImplementingStage: CPSLabPrototypingStage
+            \item hasSubProcess: SiLProcess
+        \end{itemize}
+    \item hasSetActivities SubFlow: HiLActivity
+        \begin{itemize}
+            \item isImplementingStage: CPSLabPrototypingStage
+            \item hasSubProcess: HiLProcess
+        \end{itemize}
+    \item hasSetActivities SubFlow: STActivity
+        \begin{itemize}
+            \item isImplementingStage: CPSLabPreproductionStage
+            \item hasSubProcess: STProcess
+        \end{itemize}
+    \item hasTransitions Transition: MT2MiLTransition
+    \item hasTransitions Transition: MiL2RPTransition
+    \item hasTransitions Transition: RP2SiLTransition
+    \item hasTransitions Transition: MiL2SiLTransition
+    \item hasTransitions Transition: SiL2HiLTransition
+    \item hasTransitions Transition: HiL2STTransition
+\end{itemize}
+
+Transitions are instantiated with appropriate conditions (not presented here) to define the order of execution of activities. Note that the declared order must be overall consistent with the ordering of the implemented stages as defined by the methodology. Overall consistency means that activities of a stage that follows another stage should never be executed before the activities of the preceding stage have already been executed at least once. Indeed, although not shown in this case, root activity transitions may return back to an activity of a preceding stage in case the errors discovered during the current stage were introduced at an earlier stage.
+
+In the next sections, for each stage we present the viewpoints and the root activity processes that employ them.
 
 % ============================================
 \subsubsection{Simulation Stage}
 %
 % =========================================
-\subsubsubsection{Model Test}
+The purpose of the simulation stage is to define the control laws of the system. As opposed to the two next stages, its activities only employ models as captured by the megamodel fragments of Chapter~\ref{ch:foundations:MPM-Ontology} to represent the system and its environment.
+
+For the HPI CPSLab example, we define a set of viewpoints specific to each of the root activities. This differs from the EBCPS example where existing viewpoints (e.g. from a library) are reused to support the activities. In this case, we define three viewpoints to support each root modeling activity of the simulation stage as follows:
+\\
+\\
+\noindent\uline{Viewpoints}
+    \begin{itemize}
+         \item Viewpoint: CPSLabMTControlAlgorithmVP
+         \begin{itemize}
+            \item hasFramedConcerns: ControlAlgorithm
+            \item hasSystemConstituentElements: Controller, Plant, Sensor, Actuator
+            \item hasSupportingMegaModelFragments: CPSLabMTMMF
+         \end{itemize}
+        \item Viewpoint: CPSLabMiLControlAlgorithmVP
+         \begin{itemize}
+            \item hasFramedConcerns: ControlAlgorithm, Stability, Safety, Reliability
+            \item hasSystemConstituentElements: Controller, Plant, Sensor, Actuator
+            \item hasSupportingMegaModelFragments: CPSLabMiLMMF
+         \end{itemize}
+        \item Viewpoint: CPSLabRPControlAlgorithmVP
+         \begin{itemize}
+            \item hasFramedConcerns: ControlAlgorithm, Stability, Safety, Reliability
+            \item hasSystemConstituentElements: Controller, Plant, Sensor, Actuator
+            \item hasSupportingMegaModelFragments: CPSLabRPMMF
+         \end{itemize}
+    \end{itemize}
+
+Each of these viewpoints addresses the concern of the control algorithm of the system under design and is using a megamodel fragment defined in the example section of Chapter~\ref{ch:foundations:MPM-Ontology} of the MPM ontology to capture the employed modeling languages and their relations. In addition, the CPSLabMiLControlAlgorithmVP and CPSLabRPControlAlgorithmVP also address other concerns such as stability, safety, reliability, thanks to the plant model providing feedback to the controller as opposed to the static input data of the model test activity.
+
+Each of these viewpoints describes a cyber-physical setting, at different levels of abstraction. The abstract control algorithm from the cyber domain captured by the Matlab/Simulink control model (ControlModel) is confronted with the physics as represented in the input data plus expected outcomes. This is model differently for each viewpoint as static data model (MT), plant model (MiL) and detailed robot model (RP). Therefore, all viewpoints cover the system constituents of interest represented by these models, which are the controller, plant, sensor and actuator elements. We further have a multi-formalism setting where the control is discrete while the input data is at least conceptually continuous.
+\\
+\\
+\noindent\uline{Root Activity Subprocesses}
+\\
+\\
+Each root subflow activity is further described by a subprocess specifying its decomposition in terms of finer grained activities such a editing a model, executing a model transformation, etc. Besides, the process, which is responsible for defining the context for executing its activities is associated with a viewpoint providing such context. We list below the root activity sub processes and their associated viewpoints. As an example, we present the fine grained activities of the model test subprocess in the next section. 
+
+\begin{itemize}
+    \item ModelBasedProcess: CPSLabMTProcess 
+        \begin{itemize}
+            \item ActivitySet: ...
+            \item hasViewPoint: CPSLabMTControlAlgorithmVP
+        \end{itemize}
+    \item ModelBasedProcess: CPSLabMiLProcess 
+        \begin{itemize}
+            \item ActivitySet: ...
+            \item hasViewPoint: CPSLabMiLControlAlgorithmVP
+        \end{itemize}
+    \item ModelBasedProcess: CPSLabRPProcess 
+        \begin{itemize}
+            \item ActivitySet: ...
+            \item hasViewPoint: CPSLabRPControlAlgorithmVP
+        \end{itemize}
+\end{itemize}
+
+\noindent\uline{Model Test Subprocess (CPSLabMTProcess)}
+\\
+\\
+We describe here as an example the set of subactivities that constitute the CPSLabMTProcess. Like for the process orchestrating root activities, this is achieved by creating a block activity and its activity set. But we first define activity performers to perform the activities.
+\\
+\\
+\noindent\uline{Activity Performers}
+     \begin{itemize}
+    \item ModelingHuman: ControlEngineerPerf
+        \begin{itemize}
+            \item hasTranformationSpecifications: : EditInputModelOperation, EditControlModelOperation, EditPlantModelOperation, EditValidityResultsModel...
+        \end{itemize}
+    \item ModelingTool: SimulinkTool
+        \begin{itemize}
+            \item hasTranformationSpecifications: SimulateModelOperation, ...
+        \end{itemize}
+    \end{itemize}
+
+Then, we define the fine grained activities as per the list below. 
+\\
+\\
+\noindent\uline{ActivitySet}
+     \begin{itemize}
+    \item hasSetActivities Activity: MTEditInputModel 
+        \begin{itemize}
+            \item hasActivityPerformer: ControlEngineerPerf
+        \end{itemize}
+    \item hasSetActivities Activity: MTEditControlModel
+        \begin{itemize}
+            \item hasActivityPerformer: ControlEngineerPerf
+        \end{itemize}
+    \item hasSetActivities Activity: MTSimulateControlModel
+        \begin{itemize}
+            \item hasActivityPerformer: SimulinkTool
+        \end{itemize}
+    \item hasSetActivities Activity: MTCheckSimulationResults
+        \begin{itemize}
+            \item hasActivityPerformer: ControlEngineerPerf
+        \end{itemize}
+    \item hasTransitions Transition: EditInput2EditControlTransition
+    \item hasTransitions Transition: EditControl2SimulateControlTransition
+    \item hasTransitions Transition: CheckResults2EditControlTransition
+        \begin{itemize}
+            \item hasCondition: ValidResults
+        \end{itemize}
+    \item hasTransitions Transition: ...
+\end{itemize}
+
+Transitions are defined between the different activities. It should be noted that this is a simplified version of the real workflow as the order of the activities may depend on several conditions. For example, the transition CheckResults2EditControlTransition between the MTCheckSimulationResults and MTEditControlModel activities has a condition. Such condition evaluates some property of the ValidityResultsModel as was set by the designer during the MTCheckSimulationResults activity and indicating if the results are correct or not. If not correct, the control may be edited again. If correct, the process ends and by default returns to the calling subflow root activity.
+
+At deployment, an application megamodel containing the models to be processed by activity performers can be bound to this structure for executing the process on real models.
+
+The definition of the two other CPSLabMiLProcess and CPSLabRPProcess processes follows the same principles as that of the CPSLabMTProcess detailed above and is not presented. All details can be found in the ontology files accessible from \cite{MPM4CPS-Website}. 
+\\
+% ============================================
+\subsubsection{Prototyping Stage}
 %
-In the model test as outlined in Figure~\ref{fig:MMFig3} and in its megamodel fragment\uidx{MegamodelFragment}, the abstract control algorithm from the cyber domain captured by the Matlab/Simulink model (\CPSLabControlModel) for the control is confronted with the physics as present in the input data plus expected outcomes and thus we have a very simple cyber-physical setting. We further often have a multi-formalism setting as the control is discrete\uidx{DiscreteCharacteristic} while the input is at least conceptually continuous\uidx{ContinuousCharacteristic}. 
-
-\TODONOTE{ HG: viewpoint: plausible control behavior, concern: robust control }
-
 % =========================================
-\subsubsubsection{Model-in-the-Loop}
-%
-The model in the loop depicted in Figure~\ref{fig:MMFig4} and in its megamodel fragment\uidx{MegamodelFragment} in contrast, the abstract control algorithm from the cyber domain captured by the Matlab/Simulink model (\CPSLabControlModel) is combined with the idealized physics as present in the plant captured by the Matlab/Simulink model (\CPSLabPlantModel) and thus we have a simple cyber-physical setting. We again often have a multi-formalism setting as the control is discrete\uidx{DiscreteCharacteristic} while the input is at least conceptually continuous\uidx{ContinuousCharacteristic}. 
+Compared to the simulation stage, which only uses models, the focus of the prototyping stage changes from design to implementation. In this stage, the source code plays a major role and is gradually incorporated into the system under development. The purpose is to ensure that implementation constraints such as discretization of variables and time due to the limited resources of the execution platform are handled appropriately to meet the system requirements. The concerns of this stage are therefore related to performance and accuracy and the activities of this stage are used to optimize related parameters such as data representation format, scheduling periods, sensor sampling rates, etc.
 
-\TODONOTE{ HG: viewpoint: suitable control behavior, concern: robust control }
+For this prototyping stage and the next pre-production stage of the HPI CPSLab methodology, we will only present the viewpoints specification. The modeling of root activity subprocesses is straight forward and follows the same principles as that of the simulation stage. 
+
+Like for the simulation stage, we define a viewpoint for each of the two root activities implementing the prototyping stage (Figure~\ref{fig:introduction.methodology}). Therefore for each stage activity, we first present the activity and then define its supporting viewpoint.
+\\
+\\
+\uline{Software in the Loop (SiL)}
+\\
+\\
+For the Software in the Loop (\texttt{SiL}) activity, the tool TargetLink, which is fully integrated into MATLAB Simulink, is used to generate C code from the Simulink behavior model. This allows to seamlessly migrate the functions and control algorithm from continuous behavior of the model level to a discrete approximation implementation in software. Several parameters for code generation can be configured for the characteristics of the desired target platform. Different effects can be analyzed and results can be compared to results obtained during the simulation stage.
+
+The prototyping stage includes two forms of SiL activities. The first form consists of executing the developed software on a desktop computer against a simulator as depicted in Figure~\ref{fig:MMFig7}. The detailed control algorithm from the cyber domain captured by the Matlab/Simulink and AUTOSAR SystemDesk models (SystemModels) are brought together with the physics as present in the sophisticated robot model of the simulator (RobotModel). Therefore, we clearly have a cyber-physical setting. We again have a multi-formalism setting as the control is discrete while the sophisticated robot mode is at least conceptually continuous. Consistency is checked via co-simulation as the software for the robot control runs in parallel with the sophisticated robot simulator.
+
+The second form of SiL also consists of executing the software on a desktop computer but in this case against a real robot remotely controlled as depicted in Figure~\ref{fig:MMFig8}. In this case, real sensor values are read from the robot and real actuators are controlled therefore including other effects such as sensor noise. The same detailed control algorithm from the cyber domain is this time brought together with the physics of the real remotely controlled robot. Consistency is checked via co-execution as the software for the robot control runs in parallel with the remotely controlled robot.
+\\
+\\
+% ============================================
+\noindent\uline{Hardware in the Loop (HiL)}
+\\
+\\
+The hardware in the loop (HiL) activity consists of executing the software either on the robot as depicted in Figure~\ref{fig:MMFig8} or on special evaluation boards with debugging and calibration interfaces, which are
+similar to the final hardware execution platform. The almost unlimited execution resource of the desktop computer is replaced by the constrained resources of the final platform. Therefore concerns such as resources consumption could be added to this activity.
+
+With its megamodel fragment, this activity ensures that the detailed control algorithm from the cyber domain captured by the Matlab/Simulink model (ControlModel) is brought together with the physics as present in the robot and thus we have clearly a cyber-physical setting. Consistency is checked via executing the software on the robot.
+
+All these SiL and HiL activities actually address similar concerns about the system. The difference resides in the fact that different models at different levels of abstraction (including real hardware) are used. Therefore we define the viewpoints of the following list:
+\\
+\\
+\noindent\uline{Viewpoints}
+    \begin{itemize}
+         \item Viewpoint: CPSLabSiLSoftwareDesignVP
+         \begin{itemize}
+            \item hasFramedConcerns: ControlAlgorithm, Stability, Safety, Reliability
+            \item hasSystemConstituentElements: Software (Cyber in feature model), ExecutionPlatform (Control in feature model)
+            \item hasSupportingMegaModelFragments: CPSLabSiLMMF
+         \end{itemize}
+        \item Viewpoint: CPSLabHiLSoftwareDesignVP
+         \begin{itemize}
+            \item hasFramedConcerns: ControlAlgorithm, Stability, Safety, Reliability, Resources Consumption
+            \item hasSystemConstituentElements: Software (Cyber in feature model), ExecutionPlatform (Control in feature model)
+            \item hasSupportingMegaModelFragments: CPSLabHiLMMF
+         \end{itemize}
+    \end{itemize}
+
+% ===============================================
+\subsection{Modeling Paradigms}
+\label{sec:mpm4cps.example.paradigm}
+
+We present here an example the modeling of one of the paradigms employed by the HPI CPSLab, which is Synchronous Data Flow (SDF), following its description in \cite{Amrani2020}. Then we present the modeling of the overall HPI CPSLab model-based development environment employing this paradigm within the MATLAB/Simulink tool captured in its megamodel.
+
+SDF is a special case of the Data Flow paradigm \cite{J:Watson-Gurd:1982}. It specifies a  directed graph of computations nodes (also called \emph{blocks}) exchanging signals representing infinite streams of data. Computation units execute whenever input data becomes available. Such units without input can fire at any time. They can be atomic or composite by encapsulating a subgraph. Arcs connect nodes together and describe how streams of data flow through the computation nodes. Execution consists of accumulating enough samples within the system as produced by blocks without inputs and performing the subsequent nodes computations thus consuming sample data on inputs and concurrently producing outputs. 
+
+The SDF Paradigm \cite{J:Lee-Messerschmitt:1987} is a specialization of Data Flow where all computation nodes are \emph{synchronous}, meaning that each block explicitly defines how many samples are consumed and produced. In their work, \cite{Amrani2020} describe the SDF paradigm as exhibiting the following characteristics:
+
+\begin{itemize}
+    \item SignalProperty: \textsf{Signal}s composed of an infinite ordered stream of \textsf{Sample}s are present.
+   
+   \item DirectedGraphProperty: A \emph{directed} graph with \textsf{Block}s as nodes and \textsf{Arc}s are present. 
+   
+   \item BlocksPortsProperty: \textsf{Block}s possess \textsf{Port}s that explicitly define how many
+   \textsf{Sample}s are used (consumed by \textsf{Input}s, or produced by 
+   \textsf{Output}s).
+
+   \item ArcsProperty: \textsf{Arc}s connect \textsf{Port}s and instantaneously transmit \textsf{Signal}s. Note that a \textsf{Port} may be plugged to several \textsf{Arc}s but \textsf{shortcuts} are prohibited.
+   \textsf \textsf{Arc}s are forbidden to connect as source and target \textsf{Port}s of the same \textsf{Type}.
+   
+   \item MemoryFullProperty: A \textsf{MemoryFull} \textsf{Block} should always define an extra \textsf{Port} corresponding to initial conditions. 
+\end{itemize}
+
+Following this, we define an engineering paradigm to represent SDF as follows:
+\\
+\\
+\noindent\uline{Engineering Paradigms}
+\begin{itemize}
+    \item ModelingEngineeringParadigm: SDFParadigm
+    \begin{itemize}
+        \item hasCharacteristics: SDFParadigmCharacteristics
+        \begin{itemize}
+            \item hasProperties: SignalProperty, DirectedGraphProperty, BlocksPortsProperty, ArcsProperty, MemoryFullProperty
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+There are several ways such properties could be specified. If all languages and their semantics expressed as semantic domains are encoded using the same technical space such as Ecore metamodels, then these properties could be encoded as graph patterns using tools such as Henshin\footnote{\url{https://www.eclipse.org/henshin/}} or SDM\footnote{\url{https://www.hpi.uni-potsdam.de/giese/public/mdelab/mdelab-projects/story-diagram-tools/}}.
+
+It should be noted that the aforementioned Catalog of Formalisms, Modeling Languages and Tools already declares SDF as being a formalism and not a paradigm. Besides, several modeling languages of the catalog such as Simulink are declared as being based on SDF. Therefore, the question of whether SDF should be classified as a formalism or a paradigm remains. A deeper study of the catalog's formalisms could help answer that question.
+
+Next, we model the HPI CPSLab model-based engineering environment, which uses the CPSLabMM megamodel presented in the HPI CPSLab example of Chapter~\ref{ch:foundations:MPM-Ontology} and the CPSLabProcess development process defined in the previous section:
+\\
+\\
+\noindent\uline{Engineering Environment}
+\begin{itemize}
+\item ModelBasedEngineeringEnv: CPSLabEngineeringEnv
+    \begin{itemize}
+        \item hasModelingArtifacts: CPSLabMM, CPSLabProcess
+        \item isBasedOnParadigms: SDFParadigm
+    \end{itemize}
+\end{itemize}
+
+It should be noted that the \uidxp{isBasedOnParadigms} property at the engineering environment level is derived from the same property of Simulink language captured in the mega model. This can be determined from the SDFParadigm and its properties evaluated onver the language and its semantics.
+%\TODONOTE{ HG: viewpoint: suitable system behavior, concern: robust overall control }
+
+%\TODONOTE{ HG: we have similar concerns that are repeatedly checked with different degrees of detail. Do we need different viewpoint names? }
 
 
-% =========================================
-\subsubsubsection{Rapid Prototyping}
-%
-Our rapid prototyping based on a sophisticated robot simulator as depicted in Figure~\ref{fig:MMFig5} and in its megamodel fragment\uidx{MegamodelFragment}, again the abstract control algorithm from the cyber domain captured by the Matlab/Simulink model (\CPSLabControlModel) is brought together with the physics as present in the sophisticated robot model (\CPSLabRobotModel) of the simulator and thus we have clearly a cyber-physical setting. We again often have a multi-formalism setting as the control is discrete\uidx{DiscreteCharacteristic}, while the sophisticated model of the robot simulation is at least conceptually continuous\uidx{ContinuousCharacteristic}. Consistency is checked via co-simulation as the simulator for the robot model runs in parallel with the sophisticated robot simulator.\todo{What is the other simulator?}
-
-The rapid prototyping against the robot as depicted in Figure~\ref{fig:MMFig6} and in its megamodel fragment\uidx{MegamodelFragment}, the abstract control algorithm from the cyber domain captured by the Matlab/Simulink model (\CPSLabControlModel) is brought together with the real physics of the robot  and thus we have clearly a cyber-physical setting. Consistency is checked via co-simulation as the simulator for the robot model runs in parallel with the robot.
-
-\TODONOTE{ HG: viewpoint: really suitable control behavior, concern: robust control }
-
+% ========================================
 
 % ============================================
-\subsubsection{Prototyping}
+%\subsubsection{Use of MPM4CPS Ontology}\label{subsubsec:cpslab-mpm4cps-use}
 %
-
-% ============================================
-\subsubsection{Software in the Loop (SiL)}
-%
-The first form of software in the loop (SiL) executing the software on a desktop computer against a simulator as depicted in Figure~\ref{fig:MMFig7} and in its megamodel fragment features that the detailed control algorithm from the cyber domain captured by the Matlab/Simulink and AUTOSAR SystemDesk models (\CPSLabSystemModels) are brought together with the physics as present in the sophisticated robot model of the simulator (\CPSLabRobotModel) and thus we have clearly a cyber-physical setting. We again often have a multi-formalism setting as the control is discrete\uidx{DiscreteCharacteristic} while the sophisticated robot mode is at least conceptually continuous\uidx{ContinuousCharacteristic}. Consistency is checked via co-simulation as the software for the robot control runs in parallel with the sophisticated robot simulator.
-
-
-The second form of software in the loop (SiL) executing the software on a desktop computer against a remote controlled robot depicted in Figure~\ref{fig:MMFig8} and in its megamodel fragment ensures that the detailed control algorithm from the cyber domain captured by the Matlab/Simulink model and AUTOSAR SystemDesk models (\CPSLabSystemModels) are brought together with the physics as present in the remote controlled robot and thus we have clearly a cyber-physical setting. Consistency is checked via co-execution as the software for the robot control runs in parallel with the remote controller robot.
-
-\TODONOTE{ HG: viewpoint: suitable system behavior, concern: robust overall control }
-
-% ============================================
-\subsubsection{Hardware in the Loop (HiL)}
-%
-The hardware in the loop (HiL) executing the software on the robot depicted in Figure~\ref{fig:MMFig8} and in its megamodel fragment ensures that the detailed control algorithm from the cyber domain aptured by the Matlab/Simulink model (\CPSLabControlModel) is brought together with the physics as present in the robot and thus we have clearly a cyber-physical setting. Consistency is checked via executing the software on the robot.
-
-\TODONOTE{ HG: viewpoint: suitable system behavior, concern: robust overall control }
-
-\TODONOTE{ HG: we have similar concerns that are repeatedly checked with different degrees of detail. Do we need different viewpoint names? }
-
+%\TODONOTE{ HG: Which MPM4CPS concept are required to describe the linkage between the MegaModelFragments with its models  from the MPM ontology and the CPS concepts from the CPS ontology?}
 \LATER[advanced scenarios]{
 
 % ============================================
@@ -1260,11 +1427,6 @@ exclude errors in later stages to be on the safe side
 
 
 }
-
-% ============================================
-%\subsubsection{Use of MPM4CPS Ontology}\label{subsubsec:cpslab-mpm4cps-use}
-%
-\TODONOTE{ HG: Which MPM4CPS concept are required to describe the linkage between the MegaModelFragments with its models  from the MPM ontology and the CPS concepts from the CPS ontology?}
 
 % ===============================================
 \subsection{Summary}

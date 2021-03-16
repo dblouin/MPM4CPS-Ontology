@@ -521,12 +521,31 @@
 </or>
 <and mandatory="true" name="Architecture">
 <graphics key="collapsed" value="false"/>
-<feature mandatory="true" name="Management Layer"/>
-<feature mandatory="true" name="CPS Component Layer"/>
-<feature mandatory="true" name="Network Layer"/>
-<feature mandatory="true" name="Service Layer"/>
-<feature mandatory="true" name="Application Layer"/>
-<feature mandatory="true" name="Security Layer"/>
+<feature mandatory="true" name="Management Layer">
+<description>The management layer supports capabilities such as device management, traffic and congestion management.</description>
+</feature>
+<feature mandatory="true" name="CPS Component Layer">
+<description>
+	The CPS component layer includes the capabilities for the CPS&#13;
+	components to undertake sensing and actuation.
+</description>
+</feature>
+<feature mandatory="true" name="Network Layer">
+<description>The network layer provides functionality for networking connectivity and transport capabilities enabling the coordination of components.</description>
+</feature>
+<feature mandatory="true" name="Service Layer">
+<description>
+	The Services layer consists of functionality for generic support services&#13;
+	(such as data processing or data storage), and specific support capabilities for the&#13;
+	particular applications that may already apply a degree of intelligence.
+</description>
+</feature>
+<feature mandatory="true" name="Application Layer">
+<description>The application layer orchestrates the services to provide emergent properties.</description>
+</feature>
+<feature mandatory="true" name="Security Layer">
+<description>A Security layer captures the security functionality.</description>
+</feature>
 </and>
 <or hidden="true" name="Evaluation">
 <graphics key="collapsed" value="true"/>

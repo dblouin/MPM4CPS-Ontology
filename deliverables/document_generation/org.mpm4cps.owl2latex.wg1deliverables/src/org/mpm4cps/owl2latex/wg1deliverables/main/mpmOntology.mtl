@@ -23,6 +23,7 @@ This ontology of multi-paradigm modeling contains concepts divided into sub-doma
 [generateDomainConcepts( rootDoc.ontology->first() )/]
 
 \section{Properties}
+\label{sec:mpm:properties}
 
 [generateProperties( rootDoc.ontology->first() )/]
 	[/file]

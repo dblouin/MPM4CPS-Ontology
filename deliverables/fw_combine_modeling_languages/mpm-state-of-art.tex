@@ -1,9 +1,9 @@
 \section{State-of-the-art }
 \label{sec:SotA}
 
-\STATUS{Moussa has proof-read the entire section (\S 3.1): corrected some typo, reorganised some sections to have a progression in the discourse, cleaned up some references to have a consistent set everywhere, and harmonised (somehow) the writing (e.g., meta model / megamodel / etc. INTO metamodel / megamodel).}
+%\STATUS{Moussa has proof-read the entire section (\S 3.1): corrected some typo, reorganised some sections to have a progression in the discourse, cleaned up some references to have a consistent set everywhere, and harmonised (somehow) the writing (e.g., meta model / megamodel / etc. INTO metamodel / megamodel).}
 
-\LATER{ HG: remove use of ins and chg macro }
+%\LATER{ HG: remove use of ins and chg macro }
 
 Developing nowadays complex systems\uidx{System} with Multi-Paradigm Modeling 
 requires \emph{Global Model Management} (\emph{GMM})~\cite{BJRV05,Favre04foundationsof}
@@ -280,7 +280,7 @@ models involved during development is captured in a common RDF graph. The approa
 Inconsistency patterns based on these semantic connections are continuously checked over the RDF model for potential matches identifying inconsistencies. Means to automatically resolve inconsistencies are under development. However, since the conversion of all models as an RDF graph is required, this approach is not incremental and will not scale for
 large models.
 
-\subsubsection{Mega Models}
+\subsubsection{Megamodels}
 %
 In this second strand, megamodels\uidx{Megamodel} serve to capture and manage
 MDE resources such as modeling languages\uidx{ModelingLanguage}, model transformations, model correspondences and tools used in modeling environments.
@@ -295,9 +295,7 @@ However, most of these mega modeling approaches only cover to a certain degree
 the core ingredients of specifying MDE resources by means of meta models and
 model operations\uidx{ModelOperation} with appropriate modularity and incrementality. Only fragments
 of the problem are solved. Furthermore, all these megamodeling languages are
-monolithic and as a result, predefined megamodel fragments cannot be %
-%\ins{
-easily%}
+monolithic and as a result, predefined megamodel fragments cannot be easily
 composed and reused to avoid
 rebuilding complete megamodel\uidx{Megamodel} specifications from scratch  for new projects\uidx{Project}. An attempt towards the reuse of megamodel fragments is presented in~\cite{Hilliard2012,Hilliard2010}. 
 The work makes use of megamodeling techniques to propose an automated infrastructure to facilitate customization, composition and reuse of the architect's representational resources to meet project-\uidx{Project}, domain-\uidx{Domain} and organization-specific needs\uidx{Organization}.

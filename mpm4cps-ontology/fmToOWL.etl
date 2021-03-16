@@ -145,8 +145,19 @@ rule featureTypeToObjectPropertyRange
 		owlObjectPropertyRange.class = owlClass;
 		ont.objectPropertyRange.add( owlObjectPropertyRange );
 	}
-
-
+	
+// added by Rakshit 
+/*rule superBranchTypeToObjectPropertyDomain
+	transform supbranch : fm!FeatureType
+	to owlObjectPropertyDomain : owl!ObjectPropertyDomain,
+	   owlOP : owl!ObjectProperty, owlClass : owl!Class {
+	guard : not feature.isDisabled () and not feature.isIndividual ()
+		owlOP.iri = feature.generateOwlObjectPropertyIRI();
+		owlObjectPropertyDomain.objectProperty = owlOP;
+		owlObjectPropertyDomain.class = owlClass;
+		ont.objectpropertyDomain.add( owlObjectPropertyDomain );
+	}
+*/
 // Add object property relationships to the ontology
 rule andBranchTypeToSubclassOf
 	transform branch : fm!BranchType

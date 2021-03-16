@@ -19,41 +19,13 @@
     <owl:Class IRI="#CpsDC"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
   </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#ApplicationSoftware"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#ApplicationSoftware</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-								Application software (app for short) is a program or group of
-								programs designed for end users. Application software is built for
-								specific tasks.
-								While system software programs run in the background,
-								application software runs in the foreground and users interact
-								with it. System software programs work on its own while
-								application software is dependent on it.
-							</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Application software (app for short) is a program or group of programs designed for end users. Application software is built for specific tasks. While system software programs run in the background, application software runs in the foreground and users interact with it. System software programs work on its own while application software is dependent on it.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -66,15 +38,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#SystemServices</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-									A service is software that performs automated tasks, responds to
-									hardware events, or listens for data requests from other software.
-									In a user's operating system, these services are often loaded
-									automatically at startup, and run in the background, without user
-									interaction. They respond to user keyboard shortcuts, index and
-									optimize the file system, and communicate with other devices on
-									the local network.
-								</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A service is software that performs automated tasks, responds to hardware events, or listens for data requests from other software. In a user's operating system, these services are often loaded automatically at startup, and run in the background, without user interaction. They respond to user keyboard shortcuts, index and optimize the file system, and communicate with other devices on the local network.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -87,17 +51,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#SystemUtilities</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-									Software designed to help to analyze, configure, optimize or
-									maintain a computer. It is used to support the computer
-									infrastructure - in contrast to application software, which is aimed
-									at directly performing tasks that benefit ordinary users. However,
-									utilities often form part of the application systems.
-									Although a basic set of utility programs is usually distributed with
-									an operating system (OS), and this first party utility software is
-									often considered part of the operating system, users often install
-									replacements or additional utilities.
-								</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Software designed to help to analyze, configure, optimize or maintain a computer. It is used to support the computer infrastructure - in contrast to application software, which is aimed at directly performing tasks that benefit ordinary users. However, utilities often form part of the application systems. Although a basic set of utility programs is usually distributed with an operating system (OS), and this first party utility software is often considered part of the operating system, users often install replacements or additional utilities.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -110,21 +64,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Embedded/FirmwareSoftware</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Embedded software is computer software, written to control
-							machines or devices that are not typically thought of as
-							computers, commonly known as embedded systems. It is typically
-							specialized for the particular hardware that it runs on and has time
-							and memory constraints.
-							A precise and stable characteristic feature is that no or not all
-							functions of embedded software are initiated/controlled via a
-							human interface, but through machine-interfaces instead.
-							Unlike standard computers that generally use an operating
-							systems such as OS X, Windows or GNU/Linux, embedded
-							software may use no operating system, or when they do use, a
-							wide variety of operating systems can be chosen from, typically a
-							real-time operating system.
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Embedded software is computer software, written to control machines or devices that are not typically thought of as computers, commonly known as embedded systems. It is typically specialized for the particular hardware that it runs on and has time and memory constraints. A precise and stable characteristic feature is that no or not all functions of embedded software are initiated/controlled via a human interface, but through machine-interfaces instead. Unlike standard computers that generally use an operating systems such as OS X, Windows or GNU/Linux, embedded software may use no operating system, or when they do use, a wide variety of operating systems can be chosen from, typically a real-time operating system.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -192,10 +132,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Setpoint</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Goal that does not vary with time (typically a constant
-							value).
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Goal that does not vary with time (typically a constant value).</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -221,10 +158,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#ReferenceSignal</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Desired value for the states and/or outputs of the
-							system to reach.
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Desired value for the states and/or outputs of the system to reach.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -232,50 +166,25 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:Class IRI="#StateDependency"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#StateDependency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-								Control action which is designed depending on
-								the system states.
-							</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#StateDependency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#OutputDependency"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#OutputDependency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-								Control action which is designed depending
-								on the system outputs.
-							</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#OutputDependency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
     <owl:Class IRI="#Smooth"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Smooth</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">There is no discontunity in the model representing the system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Smooth</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Bifurcations"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Bifurcations</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Points that mark a change in the dynamical patterns
-							in a system.
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Points that mark a change in the dynamical patterns in a system.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -285,17 +194,23 @@
   <owl:Declaration>
     <owl:Class IRI="#Oscillations/LimitCycles"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Oscillations/LimitCycles</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Limit cycle is a trajectory for which energy of the system would be constant over a cycle - i.e. on an average there is no loss or gain of energy. Limit cycle is an outcome of delicate energy balance due to the presence of nonlinear term in the equation of motion.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Oscillations/LimitCycles</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Hysteresis"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Hysteresis</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Persistence of effects after the causes of these effects
-							are eliminated, representing the dependence of the state of a system
-							on its past history (memory).
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Persistence of effects after the causes of these effects are eliminated, representing the dependence of the state of a system on its past history (memory).</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -334,13 +249,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#SlidingMotions</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-						Dynamics on the discontinuity surface of a
-						switched system, key for the analysis of these systems. There
-						are typically undefined and different methods are used to define
-						it, mainly Filipov&#x2019;s continuation method and Utkin&#x2019;s equivalent
-						control method.
-					</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Dynamics on the discontinuity surface of a switched system, key for the analysis of these systems. There are typically undefined and different methods are used to define it, mainly Filipov's continuation method and Utkin's equivalent control method.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -374,167 +283,12 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:Class IRI="#Collective"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Collective</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Produced by the interaction of many individual elements.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Collective</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Flocking"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Flocking</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							To congregate or travel in flock. How to force all
-							individuals to move as a group (control).
-						</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Flocking</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Swarming"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Swarming</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">To move or gather in groups (modelling).</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Swarming</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Consensus"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Consensus</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Protocols to reach an agreement as a group. How to
-							achieve a common solution for the entire group (stability).
-						</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Consensus</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Synchronisation"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Synchronisation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Emergence of coherent behaviour in which
-							the elements of the system follow the same dynamical pattern.
-							It cannot be explained in terms of the individual dynamics of
-							each single node in the network.
-						</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Synchronisation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Self-organisation"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Self-organisation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Collective behaviour that emerges in absence
-							of centralised control, local rules for the individuals lead to
-							global patterns, transcending the detailed nature of the components.
-						</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Self-organisation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#CascadingDynamics"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#CascadingDynamics</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Effect in cascade in the dynamics of the
-							system.
-						</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#CascadingDynamics</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Cooperation"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Cooperation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Action of aggregation of interacting system components.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Cooperation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Competition"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Competition</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Action of segregation of interacting system components.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Competition</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Self-organisedCriticality"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Self-organisedCriticality</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Tendency of large systems to evolve
-							into a &#x2018;critical&#x2019; state where minimal internal changes may lead
-							to abrupt avalanches with unpredictable consequences.
-						</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Self-organisedCriticality</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
     <owl:Class IRI="#Stability"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Stability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-					Idea that a system trajectory will keep getting closer and
-					closer to a desired point in space.
-				</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Idea that a system trajectory will keep getting closer and closer to a desired point in space.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -547,10 +301,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Dissipativity/Passivity</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				Abstraction of the energy properties of systems.
-				A dissipative system dissipates energy in some manner.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Abstraction of the energy properties of systems. A dissipative system dissipates energy in some manner.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -563,12 +314,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Robustness</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				Ability of a system to keep performing well despite
-				changes within and outside the system (for example, maintaining its
-				trajectories close to equilibria despite perturbations). It does not entail
-				adaptation.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability of a system to keep performing well despite changes within and outside the system (for example, maintaining its trajectories close to equilibria despite perturbations). It does not entail adaptation.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -581,10 +327,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Adaptation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				Evolution/change over time depending on environment
-				and system&#x2019;s changes.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evolution/change over time depending on environment and system's changes.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -597,10 +340,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Controllability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				A system is controllable if it can be controlled (its
-				internal state can be modified) by modifying its inputs.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A system is controllable if it can be controlled (its internal state can be modified) by modifying its inputs.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -613,10 +353,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Observability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				A system is observable if its internal state can be detected
-				(observed) from its outputs.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A system is observable if its internal state can be detected (observed) from its outputs.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -629,10 +366,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Resilience</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				Ability of a system to maintain functionality by adaptation
-				and recover when changes are produced within and outside the system.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability of a system to maintain functionality by adaptation and recover when changes are produced within and outside the system.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -658,7 +392,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Intelligence</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability to &#x2018;think&#x2019; or automate tasks to achieve a goal.</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability to 'think' or automate tasks to achieve a goal.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -671,10 +405,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Consistency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				Property of logical systems by which it is not possible
-				to find a contradiction within the system.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Property of logical systems by which it is not possible to find a contradiction within the system.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -723,15 +454,29 @@
   <owl:Declaration>
     <owl:Class IRI="#Deterministic"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Deterministic</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Modeling uncertainty with determinsitic models that do not incorporate any sort of randomness. Every time you run a simulation with the same initial conditions, you get the same results.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Deterministic</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Non-deterministic"/>
   </owl:Declaration>
-  <owl:Declaration>
-    <owl:Class IRI="#Probabilistic"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:Class IRI="#Stochastic"/>
-  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Non-deterministic</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">In the case the system does not record and 'learn' from the environment statsitically to predict some part of the future and act accordingly.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Non-deterministic</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Diagnostics"/>
   </owl:Declaration>
@@ -751,11 +496,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Prognostics</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-			Prediction of the time in the future when a system will not
-			performed anymore as it is expected or for what it was designed (control
-			goal).
-		</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Prediction of the time in the future when a system will not performed anymore as it is expected or for what it was designed (control goal).</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -768,11 +509,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Responsibilities</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				Responsibilities are components of a role that determine what a human
-				performing the role must do for the behaviour goals of the CPS to
-				be achieved.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Responsibilities are components of a role that determine what a human performing the role must do for the behaviour goals of the CPS to be achieved.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -785,11 +522,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Constraints</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				Constraints are conditions that a human performing
-				the role must take into consideration when exercising its
-				responsibilities.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Constraints are conditions that a human performing the role must take into consideration when exercising its responsibilities.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -802,10 +535,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#State-of-Affairs</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				State of affairs is a collective
-				state of the entities of the CPS and the environment.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">State of affairs is a collective state of the entities of the CPS and the environment.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -818,10 +548,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Entity</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-			An entity is anything perceivable or conceivable (I think that entity should be
-			defined for CPS at a higher level than under human).
-		</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An entity is anything perceivable or conceivable (I think that entity should be defined for CPS at a higher level than under human).</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -834,11 +561,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#CommunicationAction</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				A communicative action is a kind of action that sends a message
-				(I think a message should be defined for CPS but currently it is
-				not) through a communication network of the CPS.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A communicative action is a kind of action that sends a message through a communication network of the CPS.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -851,10 +574,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#PhysicalAction</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				Physical action is a kind of action that changes
-				the state of a physical element of the CPS or environment.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Physical action is a kind of action that changes the state of a physical element of the CPS or environment.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -867,11 +587,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#EpistemicAction</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				An epistemic action is a kind of action that changes the state of the data (I
-				would rather use the term knowledge) held by the CPS. A human
-				performs actions through actuators.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An epistemic action is a kind of action that changes the state of the data held by the CPS. A human performs actions through actuators.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -884,10 +600,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Sensor</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-			External devices or components of the system which collect
-			information from the environment or the system state.
-		</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">External devices or components of the system which collect information from the environment or the system state.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -900,10 +613,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Actuator</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-			External devices or components of the system which act on
-			parts of the system to modify its behaviour.
-		</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">External devices or components of the system which act on parts of the system to modify its behaviour.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -929,14 +639,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#MainMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-						The memory unit that communicates directly within the CPU,
-						Auxillary memory and Cache memory, is called main memory. It
-						is the central storage unit of the computer system. It is a large and
-						fast memory used to store data during computer operations. Main
-						memory is made up of RAM and ROM, with RAM integrated
-						circuit chips holding the major share.
-					</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The memory unit that communicates directly within the CPU, Auxillary memory and Cache memory, is called main memory. It is the central storage unit of the computer system. It is a large and fast memory used to store data during computer operations. Main memory is made up of RAM and ROM, with RAM integrated circuit chips holding the major share.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -949,16 +652,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#CacheMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-						The data or contents of the main memory that are used again and
-						again by CPU, are stored in the cache memory so that we can
-						easily access that data in shorter time.
-						Whenever the CPU needs to access memory, it first checks the
-						cache memory. If the data is not found in cache memory then the
-						CPU moves onto the main memory. It also transfers block of
-						recent data into the cache and keeps on deleting the old data in
-						cache to accomodate the new one.
-					</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The data or contents of the main memory that are used again and again by CPU, are stored in the cache memory so that we can easily access that data in shorter time. Whenever the CPU needs to access memory, it first checks the cache memory. If the data is not found in cache memory then the CPU moves onto the main memory. It also transfers block of recent data into the cache and keeps on deleting the old data in cache to accomodate the new one.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -971,13 +665,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#SystemBus</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-					The system bus is a pathway composed of cables and connectors
-					used to carry data between a computer microprocessor and the
-					main memory. The bus provides a communication path for the
-					data and control signals moving between the major components
-					of the computer system.
-				</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The system bus is a pathway composed of cables and connectors used to carry data between a computer microprocessor and the main memory. The bus provides a communication path for the data and control signals moving between the major components of the computer system.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -990,10 +678,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#ExternalInterfaces</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-					Interfaces and connections in between componenets of the
-					execution platform
-				</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Interfaces and connections in between componenets of the execution platform.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1003,16 +688,23 @@
   <owl:Declaration>
     <owl:Class IRI="#Application-specificCircuit"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Application-specificCircuit</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Application-specific circuits are various additional circuit-based components that are connected to the controller. It includes all kinds of bespoke circuits that are not processor, memory or interfaces, for example, hardware accelerators, signal processors, etc.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Application-specificCircuit</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Mechanical"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Mechanical</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-				A mechanical control mechanism like a bi-metallic strip in a
-				thermostat. Its input is made up of effort.
-			</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A mechanical control mechanism like a bi-metallic strip in a thermostat. Its input is made of mechanical effort.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1035,60 +727,231 @@
   <owl:Declaration>
     <owl:Class IRI="#Performance"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Performance</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The total effectiveness of the system, including throughput, individual response time, and availability.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Performance</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Security"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Security</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A system is said to be secure if its resources are used and accessed as intended under all the circumstances. It is a process of ensuring confidentiality and integrity of a system. Integrity, secrecy, and availability of the system are the three main objectives.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Security</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Safety"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Safety</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The concept of system safety calls for a risk management strategy based on identification, analysis of hazards, and application of remedial controls using a systems-based approach. The concept of system safety is useful in demonstrating adequacy of a technology when difficulties are faced with probabilistic risk analysis.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Safety</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Reliability"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Reliability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reliability is the probability that a system performs correctly during a specific time duration. During this correct operation, no repair should be required or performed, and the system adequately follows the defined performance specifications.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Reliability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Efficiency"/>
   </owl:Declaration>
-  <owl:Declaration>
-    <owl:Class IRI="#SyntacticInteroperability"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:Class IRI="#SemanticInteroperability"/>
-  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Efficiency</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The efficiency indicates the manner in which the inputs are used by the system. Being efficient means the system uses inputs in a 'right' way. If the input-output ratio is adverse, we say that the system is inefficient though it produces the desired output.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Efficiency</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Scalability"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Scalability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Scalability is the property of a system that models its capability of handling a growing amount of work by adding resouces or components to the system. It designates the adaptability of the system to an order of magnitude change in demand.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Scalability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Composability"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Composability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Composability is a system-design principle that deals with the inter-relationships of components. A highly composable system provides components that can be selected and assembled in various combinations to satisfy specific requirements. Composability requires modularity and statelessness.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Composability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Availability"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Availability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Availability is the probability that system will work as required when required during the period of the mission. Availabilty includes non-operational periods associated with reliability, maintenance and logistics. Availabilty is measured in terms of 'nines'. For example, Five-9s (99.999%) means less than 5 minutes when the system is not operating correctly over the span of the year.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Availability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Sustainability"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Sustainability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Capability of  system to endure and maintain its function within defined acceptable limits.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Sustainability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#X_ilities"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#X_ilities</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Various other kinds of non-functional requirements for a cyber-physical system that are not explicitly elucidated in the model.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#X_ilities</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#ManagementLayer"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ManagementLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The management layer supports capabilities such as device management, traffic and congestion management.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ManagementLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#CPSComponentLayer"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#CPSComponentLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+	The CPS component layer includes the capabilities for the CPS&#xD;
+	components to undertake sensing and actuation.
+</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#CPSComponentLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#NetworkLayer"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#NetworkLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The network layer provides functionality for networking connectivity and transport capabilities enabling the coordination of components.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#NetworkLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#ServiceLayer"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ServiceLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+	The Services layer consists of functionality for generic support services&#xD;
+	(such as data processing or data storage), and specific support capabilities for the&#xD;
+	particular applications that may already apply a degree of intelligence.
+</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ServiceLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#ApplicationLayer"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ApplicationLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The application layer orchestrates the services to provide emergent properties.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ApplicationLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#SecurityLayer"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#SecurityLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Security layer captures the security functionality.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#SecurityLayer</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#CPS"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#CPS</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The top-level class that encapsulates cyber-physical systems.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#CPS</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#CPS"/>
     <owl:Class IRI="#CpsDC"/>
@@ -1096,6 +959,16 @@
   <owl:Declaration>
     <owl:Class IRI="#ConstituentElement"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ConstituentElement</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class that encompasses all the different elements that actually constitute the cyber-physical system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ConstituentElement</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
   </owl:Declaration>
@@ -1285,10 +1158,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Network</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-		A set of elements (for example, nodes) connected in some physical or
-		abstract manner (for example, links).
-	</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A set of elements (for example, nodes) connected in some physical or abstract manner (for example, links).</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1325,10 +1195,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Cyber</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-						Communication and control between any human/biological/social system
-						and any artificial device. It refers to systems where feedback is essential.
-					</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Communication and control between any human/biological/social system and any artificial device. It refers to systems where feedback is essential.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1341,16 +1208,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Software</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Computer software, or simply software, is a collection of data or
-							computer instructions that tell the computer how to work.
-							In computer science and software engineering, computer software
-							is all information processed by computer systems, programs and
-							data. Computer software includes computer programs, libraries
-							and related non-executable data, such as online documentation
-							or digital media. Computer hardware and software require each
-							other and neither can be realistically used on its own.
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Computer software, or simply software, is a collection of data or computer instructions that tell the computer how to work. In computer science and software engineering, computer software is all information processed by computer systems, programs and data. Computer software includes computer programs, libraries and related non-executable data, such as online documentation or digital media. Computer hardware and software require each other and neither can be realistically used on its own.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1385,13 +1243,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#SystemSoftware</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-								System software is software designed to provide a platform for
-								other software. Examples of system software include operating
-								systems like macOS, GNU/Linux and Microsoft Windows,
-								computational science software, game engines, industrial
-								automation, and software as a service applications.
-							</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">System software is software designed to provide a platform for other software. Examples of system software include operating systems like macOS, GNU/Linux and Microsoft Windows, computational science software, game engines, industrial automation, and software as a service applications.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1423,6 +1275,16 @@
   <owl:Declaration>
     <owl:Class IRI="#OperatingSystem"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#OperatingSystem</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Operating System (OS) is the interface between a user and the hardware of the cyber-physical system. The OS is the software which performs all the basic tasks like management, memory management, process management, handling input and output.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#OperatingSystem</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasOperatingSystem"/>
   </owl:Declaration>
@@ -1505,6 +1367,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Physical"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Physical</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class represents the physical components that constitute the cyber-physical system. </owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Physical</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasActuator"/>
   </owl:Declaration>
@@ -1555,10 +1427,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Controller</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-			External device or component of the system which produces
-			the control signal to modify the system behaviour
-		</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">External device or component of the system which produces the control signal to modify the system behaviour.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1711,14 +1580,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#UserInterface</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-										The user interface (UI), in the industrial design field of
-										human-computer interaction, is the space where interactions
-										between humans and machines occur. The goal of this interaction
-										is to allow effective operation and control of the machine from
-										the human end, whilst the machine simultaneously feeds back
-										information that aids the operators' decision-making process.
-									</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The user interface (UI), in the industrial design field of human-computer interaction, is the space where interactions between humans and machines occur. The goal of this interaction is to allow effective operation and control of the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making process.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1785,10 +1647,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Tracking</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Action to make the system follow a goal that varies with
-							time.
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Action to make the system follow a goal that varies with time.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1802,6 +1661,16 @@
   <owl:Declaration>
     <owl:Class IRI="#ValidityRegion"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ValidityRegion</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This concept defines the scope of the tracking signal. WHether it depends on a local subset of characteristics of the system/environment, or if it is affected by global variables.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ValidityRegion</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#ValidityRegion"/>
     <owl:Class IRI="#CpsDC"/>
@@ -1812,11 +1681,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Feedback</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-						Implementation of the control action by sensing the output of a
-						system and modifying its input by means of actuators to meet a
-						pre-defined control goal.
-					</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Implementation of the control action by sensing the output of a system and modifying its input by means of actuators to meet a pre-defined control goal.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1830,28 +1695,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Dependency"/>
   </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasStateDependency"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasStateDependency"/>
-    <owl:Class IRI="#StateDependency"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#StateDependency"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasOutputDependency"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasOutputDependency"/>
-    <owl:Class IRI="#OutputDependency"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#OutputDependency"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Dependency</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class models the dependencies of the feedback mechanism in the control of the system. The feedback loop can be a function of the state and/or the output of the system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Dependency</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Dependency"/>
     <owl:Class IRI="#CpsDC"/>
@@ -1859,6 +1712,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Scope"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Scope</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Describes the range of componenets and signals that the feedback signal effects on the input side of the control algorithm/s of the system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Scope</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Scope"/>
     <owl:Class IRI="#CpsDC"/>
@@ -1886,10 +1749,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#SystemType</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							Three main features to consider for the classification of
-							systems
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Three main features to consider for the classification of systems</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -1903,6 +1763,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Linearity"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Linearity</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class describes the property of the system that models the relationship between the input and output. If the transformation relation is linear, the system is classified as linear. If a change in input results in a propotional change in output, the system is linear. If not, the system is lon-linear.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Linearity</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Linearity"/>
     <owl:Class IRI="#CpsDC"/>
@@ -1910,6 +1780,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Timing"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Timing</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The characteristic of time-dependence of the system. If the system functions or change state repetetively after a set time period it is a discrete system. If the system changes analogously with time, it is a continuous system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Timing</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Timing"/>
     <owl:Class IRI="#CpsDC"/>
@@ -1917,6 +1797,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Continuity"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Continuity</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class describes the property of the state of the system and how it's graph (versus time) behaves in terms of continuity. Whether it is continuous or discontinuous.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Continuity</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasSmooth"/>
   </owl:Declaration>
@@ -1934,12 +1824,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Discontinuous</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-									Discontinous or non-smooth
-									systems present some type of discontinuity in the model representing
-									the system. Different names are used depending of the type of
-									discontinuity.
-								</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Discontinuous or non-smooth systems present some type of discontinuity in the model representing the system. Different names are used depending on the type of discontinuity.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -2068,10 +1953,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Equilibrium</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-							States of the system that represent set points. They can
-							be
-						</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">States of the system that represent set points.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -2089,21 +1971,13 @@
     <owl:Class IRI="#Equilibrium"/>
     <owl:Class IRI="#Behavior"/>
   </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Behavior"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#EmergentBehavior"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#EmergentBehavior</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-						Behaviour that did not exist in the single systems
-						that together form a complex system consisting of interacting
-						systems.
-					</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Behaviour that did not exist in the single systems that together form a complex system consisting of interacting systems.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -2111,117 +1985,18 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCollective"/>
+    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
   </owl:Declaration>
   <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCollective"/>
-    <owl:Class IRI="#Collective"/>
+    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
+    <owl:Class IRI="#EmergentBehavior"/>
   </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Collective"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasFlocking"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasFlocking"/>
-    <owl:Class IRI="#Flocking"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Flocking"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSwarming"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSwarming"/>
-    <owl:Class IRI="#Swarming"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Swarming"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasConsensus"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasConsensus"/>
-    <owl:Class IRI="#Consensus"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Consensus"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSynchronisation"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSynchronisation"/>
-    <owl:Class IRI="#Synchronisation"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Synchronisation"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSelf-organisation"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSelf-organisation"/>
-    <owl:Class IRI="#Self-organisation"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Self-organisation"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCascadingDynamics"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCascadingDynamics"/>
-    <owl:Class IRI="#CascadingDynamics"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CascadingDynamics"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCooperation"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCooperation"/>
-    <owl:Class IRI="#Cooperation"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Cooperation"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCompetition"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCompetition"/>
-    <owl:Class IRI="#Competition"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Competition"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSelf-organisedCriticality"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSelf-organisedCriticality"/>
-    <owl:Class IRI="#Self-organisedCriticality"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Self-organisedCriticality"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:SubClassOf>
     <owl:Class IRI="#EmergentBehavior"/>
+    <owl:Class IRI="#Behavior"/>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Behavior"/>
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -2230,10 +2005,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Topology</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-					Structure of the interconnections of the components of a
-					system.
-				</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Structure of the interconnections of the components of a system.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -2247,6 +2019,16 @@
   <owl:Declaration>
     <owl:Class IRI="#TopologicalEvolution"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#TopologicalEvolution</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The evolution of the system topology with respect to time.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#TopologicalEvolution</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#TopologicalEvolution"/>
     <owl:Class IRI="#CpsDC"/>
@@ -2429,7 +2211,7 @@
   </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Deterministic"/>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#Uncertainty"/>
   </owl:SubClassOf>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasNon-deterministic"/>
@@ -2440,8 +2222,21 @@
   </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Non-deterministic"/>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#Uncertainty"/>
   </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:Class IRI="#Probabilistic"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Probabilistic</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Probabilistic models incorporate randomness in their approach.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Probabilistic</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasProbabilistic"/>
   </owl:Declaration>
@@ -2451,18 +2246,7 @@
   </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Probabilistic"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasStochastic"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasStochastic"/>
-    <owl:Class IRI="#Stochastic"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Stochastic"/>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#Uncertainty"/>
   </owl:SubClassOf>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasUncertainty"/>
@@ -2474,6 +2258,10 @@
   <owl:SubClassOf>
     <owl:Class IRI="#Uncertainty"/>
     <owl:ObjectUnionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasProbabilistic"/>
+        <owl:Class IRI="#Probabilistic"/>
+      </owl:ObjectSomeValuesFrom>
       <owl:ObjectSomeValuesFrom>
         <owl:ObjectProperty IRI="#hasDeterministic"/>
         <owl:Class IRI="#Deterministic"/>
@@ -2482,14 +2270,6 @@
         <owl:ObjectProperty IRI="#hasNon-deterministic"/>
         <owl:Class IRI="#Non-deterministic"/>
       </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasProbabilistic"/>
-        <owl:Class IRI="#Probabilistic"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasStochastic"/>
-        <owl:Class IRI="#Stochastic"/>
-      </owl:ObjectSomeValuesFrom>
     </owl:ObjectUnionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
@@ -2498,8 +2278,18 @@
       <owl:ObjectUnionOf>
         <owl:ObjectIntersectionOf>
           <owl:ObjectSomeValuesFrom>
+            <owl:ObjectProperty IRI="#hasProbabilistic"/>
+            <owl:Class IRI="#Probabilistic"/>
+          </owl:ObjectSomeValuesFrom>
+          <owl:ObjectSomeValuesFrom>
             <owl:ObjectProperty IRI="#hasDeterministic"/>
             <owl:Class IRI="#Deterministic"/>
+          </owl:ObjectSomeValuesFrom>
+        </owl:ObjectIntersectionOf>
+        <owl:ObjectIntersectionOf>
+          <owl:ObjectSomeValuesFrom>
+            <owl:ObjectProperty IRI="#hasProbabilistic"/>
+            <owl:Class IRI="#Probabilistic"/>
           </owl:ObjectSomeValuesFrom>
           <owl:ObjectSomeValuesFrom>
             <owl:ObjectProperty IRI="#hasNon-deterministic"/>
@@ -2522,8 +2312,18 @@
             <owl:Class IRI="#Deterministic"/>
           </owl:ObjectSomeValuesFrom>
           <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasStochastic"/>
-            <owl:Class IRI="#Stochastic"/>
+            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
+            <owl:Class IRI="#Non-deterministic"/>
+          </owl:ObjectSomeValuesFrom>
+        </owl:ObjectIntersectionOf>
+        <owl:ObjectIntersectionOf>
+          <owl:ObjectSomeValuesFrom>
+            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
+            <owl:Class IRI="#Non-deterministic"/>
+          </owl:ObjectSomeValuesFrom>
+          <owl:ObjectSomeValuesFrom>
+            <owl:ObjectProperty IRI="#hasProbabilistic"/>
+            <owl:Class IRI="#Probabilistic"/>
           </owl:ObjectSomeValuesFrom>
         </owl:ObjectIntersectionOf>
         <owl:ObjectIntersectionOf>
@@ -2534,86 +2334,6 @@
           <owl:ObjectSomeValuesFrom>
             <owl:ObjectProperty IRI="#hasDeterministic"/>
             <owl:Class IRI="#Deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-            <owl:Class IRI="#Non-deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasProbabilistic"/>
-            <owl:Class IRI="#Probabilistic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-            <owl:Class IRI="#Non-deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasStochastic"/>
-            <owl:Class IRI="#Stochastic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasProbabilistic"/>
-            <owl:Class IRI="#Probabilistic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasDeterministic"/>
-            <owl:Class IRI="#Deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasProbabilistic"/>
-            <owl:Class IRI="#Probabilistic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-            <owl:Class IRI="#Non-deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasProbabilistic"/>
-            <owl:Class IRI="#Probabilistic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasStochastic"/>
-            <owl:Class IRI="#Stochastic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasStochastic"/>
-            <owl:Class IRI="#Stochastic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasDeterministic"/>
-            <owl:Class IRI="#Deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasStochastic"/>
-            <owl:Class IRI="#Stochastic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-            <owl:Class IRI="#Non-deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasStochastic"/>
-            <owl:Class IRI="#Stochastic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasProbabilistic"/>
-            <owl:Class IRI="#Probabilistic"/>
           </owl:ObjectSomeValuesFrom>
         </owl:ObjectIntersectionOf>
       </owl:ObjectUnionOf>
@@ -2633,13 +2353,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Role</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-			Each role represents some capacity or position, where humans playing
-			the role need to contribute for achieving certain behaviour goals
-			set for the CPS. Each role is defined in terms of responsibilities and
-			constraints pertaining to the role that are required for contributing
-			to achieving the behaviour goals set for the CPS.
-		</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Each role represents some capacity or position, where humans playing the role need to contribute for achieving certain behaviour goals set for the CPS. Each role is defined in terms of responsibilities and constraints pertaining to the role that are required for contributing to achieving the behaviour goals set for the CPS.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -2678,12 +2392,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Event</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-			A human can perceive events generated by the CPS or
-			environment. An event is a kind of entity that is related to the
-			states of affairs before and after it has occurred. A human
-			perceives events through sensors.
-		</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A human can perceive events generated by the CPS or environment. An event is a kind of entity that is related to the states of affairs before and after it has occurred. A human perceives events through sensors.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -2711,13 +2420,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#Action</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-			Humans within a CPS exercise their responsibilities defined by
-			roles by performing certain actions. Action is an entity that is
-			targeted at changing the state of the CPS or environment. Actions
-			are divided into physical actions, communicative actions, and
-			epistemic actions.
-		</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humans within a CPS exercise their responsibilities defined by roles by performing certain actions. Action is an entity that is targeted at changing the state of the CPS or environment. Actions are divided into physical actions, communicative actions, and epistemic actions.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -2764,6 +2467,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Configuration"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Configuration</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Network configuration is also known as network topology. This class describes how the nodes/devices/components in the system network are arranged and how they communicate with each other.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Configuration</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Configuration"/>
     <owl:Class IRI="#CpsDC"/>
@@ -2771,6 +2484,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Communication"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Communication</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class models the communication system and the communication protocols used in the network between the different components of the cyber-physical system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Communication</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Communication"/>
     <owl:Class IRI="#CpsDC"/>
@@ -2778,6 +2501,16 @@
   <owl:Declaration>
     <owl:Class IRI="#ComType"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ComType</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class models the type of communication: whether it is synchronus or asynchronous.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ComType</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#ComType"/>
     <owl:Class IRI="#CpsDC"/>
@@ -2785,6 +2518,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Protocol"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Protocol</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">That feature of a communication network that allows two or more entities/subcomponents to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication, and possible error recovery methods.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Protocol</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Protocol"/>
     <owl:Class IRI="#CpsDC"/>
@@ -2792,6 +2535,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Processor"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Processor</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A process or processing unit is a digital circuit which performs operations on some external data source. It typically takes the form of a microprocessor, implented on a metal-oxide semiconductor integrated circuit chip.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Processor</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Processor"/>
     <owl:Class IRI="#CpsDC"/>
@@ -2799,6 +2552,16 @@
   <owl:Declaration>
     <owl:Class IRI="#Memory"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Memory</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Memory refers to a device that is used to store information for immediate use in a computer or related computer hardware. It typically refers to semi-conductor memory, where data is stored within MOS (Metal-Oxide Semiconductor) cells on an integrated chip.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Memory</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasCacheMemory"/>
   </owl:Declaration>
@@ -2827,14 +2590,7 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#AuxiliaryMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-						Devices that provide backup storage are called auxiliary memory.
-						It is not directly accessible to the CPU, and is accessed using the
-						Input/Output channels.
-						Magnetic disks and tapes are commonly used auxiliary devices.
-						Other devices used as auxiliary memory are magnetic drums,
-						magnetic bubble memory and optical disks.
-					</owl:Literal>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Devices that provide backup storage are called auxiliary memory. It is not directly accessible to the CPU, and is accessed using the Input/Output channels. Magnetic disks and tapes are commonly used auxiliary devices. Other devices used as auxiliary memory are magnetic drums, magnetic bubble memory and optical disks.</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
@@ -2859,6 +2615,16 @@
   <owl:Declaration>
     <owl:Class IRI="#nonfunctionalReqs"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#nonfunctionalReqs</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nonfunctional Requirements (NFRs) define system attributes such as security, reliability, performance, maintainability, scalability, and usability. They serve as constraints or restrictions on the design of the system across the different backlogs. They ensure the usability and effectiveness of the entire system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#nonfunctionalReqs</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasPerformance"/>
   </owl:Declaration>
@@ -2972,28 +2738,19 @@
   <owl:Declaration>
     <owl:Class IRI="#Interoperability"/>
   </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSyntacticInteroperability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSyntacticInteroperability"/>
-    <owl:Class IRI="#SyntacticInteroperability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SyntacticInteroperability"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSemanticInteroperability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSemanticInteroperability"/>
-    <owl:Class IRI="#SemanticInteroperability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SemanticInteroperability"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Interoperability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+	The interoperability is the capacity of a product or system whose interfaces are fully known to work with other products or existing or future systems and unrestricted access or implementation.
+	Interoperability is different from compatibility. Where compatibility is a vertical notion that a system can operate in agiven environment, interoperability is a transversal notion that allows various systems to communicate and work together.
+</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Interoperability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasInteroperability"/>
   </owl:Declaration>
@@ -3001,46 +2758,6 @@
     <owl:ObjectProperty IRI="#hasInteroperability"/>
     <owl:Class IRI="#Interoperability"/>
   </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Interoperability"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSyntacticInteroperability"/>
-        <owl:Class IRI="#SyntacticInteroperability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSemanticInteroperability"/>
-        <owl:Class IRI="#SemanticInteroperability"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Interoperability"/>
-    <owl:ObjectComplementOf>
-      <owl:ObjectUnionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasSyntacticInteroperability"/>
-            <owl:Class IRI="#SyntacticInteroperability"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasSemanticInteroperability"/>
-            <owl:Class IRI="#SemanticInteroperability"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasSemanticInteroperability"/>
-            <owl:Class IRI="#SemanticInteroperability"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasSyntacticInteroperability"/>
-            <owl:Class IRI="#SyntacticInteroperability"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-      </owl:ObjectUnionOf>
-    </owl:ObjectComplementOf>
-  </owl:SubClassOf>
   <owl:SubClassOf>
     <owl:Class IRI="#Interoperability"/>
     <owl:Class IRI="#nonfunctionalReqs"/>
@@ -3052,6 +2769,16 @@
   <owl:Declaration>
     <owl:Class IRI="#ApplicationDomain"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ApplicationDomain</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class describes the various domains and industrial sectors which the cyber-physical system is concerned with.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ApplicationDomain</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#ApplicationDomain"/>
     <owl:Class IRI="#CpsDC"/>
@@ -3059,12 +2786,22 @@
   <owl:Declaration>
     <owl:Class IRI="#Disciplines"/>
   </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Disciplines</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class describes the various engineering and other disciplines that are associated with the development and application of the cyber-physical system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Disciplines</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:SubClassOf>
     <owl:Class IRI="#Disciplines"/>
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:Declaration>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Architecture"/>
+    <owl:Class IRI="#Architecture"/>
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasManagementLayer"/>
@@ -3133,7 +2870,7 @@
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Architecture"/>
+    <owl:Class IRI="#Architecture"/>
     <owl:Class IRI="#CpsDC"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -3180,9 +2917,6 @@
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasBehavior"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
   </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasTopology"/>
@@ -3293,10 +3027,6 @@
     <owl:Class IRI="#Behavior"/>
   </owl:ObjectPropertyRange>
   <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
-    <owl:Class IRI="#EmergentBehavior"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasTopology"/>
     <owl:Class IRI="#Topology"/>
   </owl:ObjectPropertyRange>
@@ -3358,7 +3088,7 @@
   </owl:ObjectPropertyRange>
   <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasArchitecture"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Architecture"/>
+    <owl:Class IRI="#Architecture"/>
   </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#CPS"/>
@@ -3369,7 +3099,7 @@
       </owl:ObjectSomeValuesFrom>
       <owl:ObjectSomeValuesFrom>
         <owl:ObjectProperty IRI="#hasArchitecture"/>
-        <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Architecture"/>
+        <owl:Class IRI="#Architecture"/>
       </owl:ObjectSomeValuesFrom>
       <owl:ObjectSomeValuesFrom>
         <owl:ObjectProperty IRI="#hasApplicationDomain"/>
@@ -3490,7 +3220,7 @@
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Architecture"/>
+    <owl:Class IRI="#Architecture"/>
     <owl:ObjectIntersectionOf>
       <owl:ObjectSomeValuesFrom>
         <owl:ObjectProperty IRI="#hasManagementLayer"/>
@@ -3536,19 +3266,6 @@
       <owl:ObjectSomeValuesFrom>
         <owl:ObjectProperty IRI="#hasReferenceSignal"/>
         <owl:Class IRI="#ReferenceSignal"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Dependency"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasStateDependency"/>
-        <owl:Class IRI="#StateDependency"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasOutputDependency"/>
-        <owl:Class IRI="#OutputDependency"/>
       </owl:ObjectSomeValuesFrom>
     </owl:ObjectUnionOf>
   </owl:SubClassOf>

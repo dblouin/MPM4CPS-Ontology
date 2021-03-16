@@ -7,8 +7,8 @@
     <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/mpm" uri="../mpm4cps-ontology/mpm.owl"/>
     <uri id="User Entered Import Resolution" name="http://mpm4cps.eu/ontology/cps" uri="../mpm4cps-ontology/cps.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1606230734429" name="http://mpm4cps.eu/ontology/case-studies/ensemble-based-cps" uri="ensemble-based-cps.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1606230734429" name="http://mpm4cps.eu/ontology/case-studies/example-viewpoints" uri="example-viewpoints.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1606230734429" name="http://mpm4cps.eu/ontology/case-studies/hpi-cps-lab" uri="hpi-cps-lab.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1615899522118" name="http://mpm4cps.eu/ontology/case-studies/ensemble-based-cps" uri="ensemble-based-cps.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1615899522118" name="http://mpm4cps.eu/ontology/case-studies/example-viewpoints" uri="example-viewpoints.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1615899522118" name="http://mpm4cps.eu/ontology/case-studies/hpi-cps-lab" uri="hpi-cps-lab.owl"/>
     </group>
 </catalog>

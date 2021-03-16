@@ -8,12 +8,12 @@
 	<feature automatic="selected" manual="selected" name="System Software"/>
 	<feature automatic="selected" name="Operating System"/>
 	<feature automatic="selected" name="User Interface"/>
-	<feature manual="selected" name="Graphical"/>
-	<feature manual="unselected" name="Menu-driven"/>
-	<feature manual="unselected" name="Command-line"/>
+	<feature manual="selected" name="Graphical UI"/>
+	<feature manual="selected" name="Menu-driven UI"/>
+	<feature manual="selected" name="Command-line UI"/>
 	<feature automatic="selected" name="System Services"/>
 	<feature automatic="selected" name="System Utilities"/>
-	<feature manual="selected" name="Embedded/Firmware"/>
+	<feature manual="selected" name="Embedded/Firmware Software"/>
 	<feature automatic="selected" manual="selected" name="Control"/>
 	<feature automatic="selected" manual="selected" name="State"/>
 	<feature automatic="selected" manual="selected" name="Disturbance"/>
@@ -22,44 +22,44 @@
 	<feature automatic="selected" manual="selected" name="Goal"/>
 	<feature manual="selected" name="Setpoint"/>
 	<feature automatic="selected" manual="selected" name="Tracking"/>
-	<feature automatic="selected" name="ValidityRegion"/>
-	<feature manual="selected" name="Local"/>
-	<feature manual="unselected" name="Global"/>
-	<feature manual="unselected" name="SemiGlobal"/>
+	<feature automatic="selected" name="Validity Region"/>
+	<feature manual="selected" name="Local VR"/>
+	<feature manual="unselected" name="Global VR"/>
+	<feature manual="unselected" name="SemiGlobal VR"/>
 	<feature manual="selected" name="Regulation"/>
 	<feature manual="unselected" name="ReferenceSignal"/>
 	<feature automatic="selected" manual="selected" name="Feedback"/>
 	<feature automatic="selected" name="Dependency"/>
-	<feature manual="selected" name="StateFeedback"/>
-	<feature manual="selected" name="OutputFeedback"/>
+	<feature automatic="selected" manual="selected" name="State Dependency"/>
+	<feature manual="unselected" name="Output Dependency"/>
 	<feature automatic="selected" name="Scope"/>
-	<feature manual="selected" name="Centralized"/>
-	<feature automatic="unselected" name="Decentralized"/>
-	<feature automatic="unselected" name="Distributed"/>
+	<feature automatic="selected" manual="selected" name="Centralized Scope"/>
+	<feature manual="unselected" name="Decentralized Scope"/>
+	<feature manual="unselected" name="Distributed Scope"/>
 	<feature automatic="selected" manual="selected" name="Dynamics"/>
 	<feature automatic="selected" manual="selected" name="SystemType"/>
 	<feature automatic="selected" manual="selected" name="Linearity"/>
-	<feature automatic="unselected" name="Linear"/>
-	<feature manual="selected" name="Non-linear"/>
-	<feature automatic="selected" manual="selected" name="Time"/>
+	<feature manual="selected" name="Linear System"/>
+	<feature automatic="unselected" name="Non-linear System"/>
+	<feature automatic="selected" name="Timing"/>
 	<feature manual="selected" name="Discrete Time"/>
 	<feature automatic="unselected" name="Continuous Time"/>
 	<feature automatic="selected" manual="selected" name="Continuity"/>
-	<feature automatic="unselected" name="Smooth"/>
-	<feature automatic="selected" manual="selected" name="Discontiuous"/>
-	<feature manual="selected" name="Multi-modal system"/>
-	<feature manual="unselected" name="Discrete-event System"/>
-	<feature manual="unselected" name="Transition system"/>
-	<feature manual="unselected" name="Varable structure system"/>
-	<feature manual="unselected" name="Switched system"/>
-	<feature manual="unselected" name="Reset/jump/impulsive system"/>
-	<feature manual="unselected" name="Piecewise-affine system"/>
-	<feature manual="unselected" name="Hybrid system"/>
-	<feature manual="unselected" name="Other"/>
+	<feature manual="unselected" name="Smooth"/>
+	<feature automatic="selected" manual="selected" name="Discontinuous"/>
+	<feature manual="selected" name="Multi-modal System"/>
+	<feature manual="selected" name="Discrete-event System"/>
+	<feature manual="unselected" name="Transition System"/>
+	<feature manual="unselected" name="Variable-structure System"/>
+	<feature manual="selected" name="Switched System"/>
+	<feature manual="selected" name="Reset/jump/impulsive System"/>
+	<feature manual="selected" name="Piecewise-affine System"/>
+	<feature manual="selected" name="Hybrid System"/>
+	<feature manual="unselected" name="Other Discontinuous System"/>
 	<feature automatic="selected" manual="selected" name="Behavior"/>
-	<feature automatic="selected" name="Equilibria"/>
-	<feature manual="selected" name="Common"/>
-	<feature automatic="unselected" name="Multiple"/>
+	<feature automatic="selected" name="Equilibrium"/>
+	<feature manual="selected" name="Common Equilibrium"/>
+	<feature manual="unselected" name="Multiple Equilibria"/>
 	<feature manual="unselected" name="Bifurcations"/>
 	<feature manual="unselected" name="Oscillations/Limit cycles"/>
 	<feature manual="unselected" name="Hysteresis"/>
@@ -68,21 +68,21 @@
 	<feature manual="unselected" name="Sliding motions"/>
 	<feature manual="unselected" name="Phase transitions"/>
 	<feature manual="unselected" name="Zenoness"/>
-	<feature automatic="selected" name="Emergent_Behavior"/>
+	<feature automatic="selected" name="Emergent Behavior"/>
 	<feature manual="unselected" name="Collective"/>
 	<feature manual="unselected" name="Flocking"/>
 	<feature manual="unselected" name="Swarming"/>
 	<feature manual="unselected" name="Consensus"/>
 	<feature manual="unselected" name="Synchronisation"/>
-	<feature manual="unselected" name="SelfOrganisation"/>
+	<feature manual="unselected" name="Self-organisation"/>
 	<feature manual="unselected" name="CascadingDynamics"/>
 	<feature manual="selected" name="Cooperation"/>
 	<feature manual="unselected" name="Competition"/>
-	<feature manual="unselected" name="SelfOrganisedCriticality"/>
+	<feature manual="unselected" name="Self-organised Criticality"/>
 	<feature manual="unselected" name="Topology"/>
-	<feature automatic="unselected" name="Evolution"/>
-	<feature automatic="unselected" name="Static"/>
-	<feature automatic="unselected" name="Adaptive"/>
+	<feature automatic="unselected" name="Topological Evolution"/>
+	<feature automatic="unselected" name="Static Evolution"/>
+	<feature automatic="unselected" name="Adaptive Evolution"/>
 	<feature automatic="selected" manual="selected" name="Properties"/>
 	<feature manual="selected" name="Stability"/>
 	<feature manual="selected" name="Dissipativity/Passivity"/>
@@ -105,16 +105,16 @@
 	<feature manual="unselected" name="Diagnostics"/>
 	<feature manual="selected" name="Prognostics"/>
 	<feature automatic="selected" manual="selected" name="Human"/>
-	<feature automatic="selected" manual="selected" name="Role"/>
-	<feature manual="selected" name="Responsibilities"/>
+	<feature manual="selected" name="Role"/>
+	<feature automatic="selected" manual="selected" name="Responsibilities"/>
 	<feature automatic="selected" name="Constraints"/>
 	<feature manual="unselected" name="Event"/>
 	<feature automatic="unselected" name="State-of-Affairs"/>
 	<feature manual="selected" name="Entity"/>
-	<feature manual="selected" name="Action"/>
-	<feature manual="unselected" name="CommunicationAction"/>
-	<feature manual="unselected" name="PhysicalAction"/>
-	<feature automatic="selected" manual="selected" name="EpistemicAction"/>
+	<feature automatic="selected" manual="selected" name="Action"/>
+	<feature manual="unselected" name="Communication Action"/>
+	<feature manual="unselected" name="Physical Action"/>
+	<feature manual="selected" name="Epistemic Action"/>
 	<feature automatic="selected" name="Network"/>
 	<feature automatic="selected" name="Configuration"/>
 	<feature automatic="unselected" manual="unselected" name="Star"/>
@@ -137,7 +137,7 @@
 	<feature automatic="selected" name="Actuator"/>
 	<feature automatic="selected" name="Plant"/>
 	<feature automatic="selected" name="Controller"/>
-	<feature manual="selected" name="Hardware Platform"/>
+	<feature manual="selected" name="Electronic"/>
 	<feature automatic="selected" name="Processor"/>
 	<feature automatic="selected" name="CPU"/>
 	<feature manual="unselected" name="GPU"/>
@@ -148,7 +148,6 @@
 	<feature automatic="unselected" name="Physical Storage"/>
 	<feature automatic="unselected" name="Cloud Storage"/>
 	<feature automatic="selected" name="System Bus"/>
-	<feature automatic="selected" name="H/W Topology"/>
 	<feature automatic="selected" name="External Interfaces"/>
 	<feature manual="unselected" name="Application-specific Circuit"/>
 	<feature manual="unselected" name="Mechanical"/>
@@ -167,31 +166,31 @@
 	<feature manual="selected" name="Availability"/>
 	<feature manual="selected" name="Sustainability"/>
 	<feature manual="selected" name="X_ilities"/>
-	<feature automatic="selected" name="ApplicationDomain"/>
-	<feature automatic="unselected" name="Health"/>
-	<feature manual="selected" name="SmartManufacturing"/>
+	<feature automatic="selected" name="Application Domain"/>
+	<feature automatic="unselected" manual="unselected" name="Health"/>
+	<feature automatic="unselected" name="Smart Manufacturing"/>
 	<feature automatic="unselected" name="Transportation"/>
-	<feature automatic="unselected" name="ProcessControl"/>
+	<feature automatic="unselected" name="Process Control"/>
 	<feature automatic="unselected" name="Defense"/>
-	<feature automatic="unselected" name="BuildingAutomation"/>
-	<feature automatic="unselected" name="RoboticforService"/>
-	<feature automatic="unselected" name="CriticalInfrastructure"/>
-	<feature automatic="unselected" name="EmergencyResponse"/>
-	<feature automatic="unselected" name="X_Domain"/>
+	<feature automatic="unselected" name="Building Automation"/>
+	<feature manual="selected" name="Robot for Service"/>
+	<feature automatic="unselected" name="Critical Infrastructure"/>
+	<feature automatic="unselected" name="Emergency Response"/>
+	<feature automatic="unselected" name="Other Domain"/>
 	<feature automatic="selected" name="Disciplines"/>
-	<feature manual="selected" name="SoftwareEngineering"/>
-	<feature manual="selected" name="MechanicalEngineering"/>
-	<feature manual="selected" name="ElectricalEngineering"/>
-	<feature manual="unselected" name="CivilEngineering"/>
-	<feature manual="unselected" name="ChecmicalEngineering"/>
-	<feature manual="unselected" name="OtherEngineering"/>
+	<feature manual="selected" name="Software Engineering"/>
+	<feature manual="selected" name="Mechanical Engineering"/>
+	<feature manual="selected" name="Electrical Engineering"/>
+	<feature manual="unselected" name="Civil Engineering"/>
+	<feature manual="unselected" name="Chemical Engineering"/>
+	<feature manual="selected" name="Other Engineering"/>
 	<feature automatic="selected" name="Architecture"/>
-	<feature automatic="selected" name="ManagementLayer"/>
-	<feature automatic="selected" name="CPSComponentLayer"/>
-	<feature automatic="selected" name="NetworkLayer"/>
-	<feature automatic="selected" name="ServiceLayer"/>
-	<feature automatic="selected" name="ApplicationLayer"/>
-	<feature automatic="selected" name="SecurityLayer"/>
+	<feature automatic="selected" name="Management Layer"/>
+	<feature automatic="selected" name="CPS Component Layer"/>
+	<feature automatic="selected" name="Network Layer"/>
+	<feature automatic="selected" name="Service Layer"/>
+	<feature automatic="selected" name="Application Layer"/>
+	<feature automatic="selected" name="Security Layer"/>
 	<feature name="Evaluation"/>
 	<feature name="Simulation"/>
 	<feature name="Experimentation"/>

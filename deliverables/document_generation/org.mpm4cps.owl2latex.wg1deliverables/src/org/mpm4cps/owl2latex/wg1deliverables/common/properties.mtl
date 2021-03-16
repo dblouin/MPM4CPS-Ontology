@@ -10,6 +10,7 @@
 \subsection{[ontology.completeName( propIri )/]}
 \label{subsecP:[propIri.toLatexLabel()/]}
 [ontology.commentAss( propIri )/]
+
 [generateExtendedProperties( ontology, propIri )/]
 
 [generateDomains( ontology, propIri )/]

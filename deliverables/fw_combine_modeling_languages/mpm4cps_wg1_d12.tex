@@ -15,6 +15,7 @@
     Holger Giese,  
     Mauro Iacono, 
     Stefan Klikovits,
+    Rakshit Mittal,
     Eva Navarro,
     Patrizio Pelliccione,
     Kuldar Taveter,
@@ -274,18 +275,18 @@ ontology modeling. A commonly accepted definition of an ontology is
 ``an explicit specification of conceptualization'' \cite{Gruber1995}. An
 ontology represents the semantics of concepts and their relationships using some description language. Basic feature modeling is also a concept description technique that focuses on modeling both the commonality and variability. It has been indicated that feature models can be seen as views on ontologies \cite{Czarnecki2006}.
 
-To develop the WG1 ontologies presented in details in the following chapters, the aforementioned techniques have been used. For the CPS ontology, feature modeling has been used while for the MPM ontology, modeling with the W3C OWL language and its tool Protege has been used. 
+To develop the WG1 ontologies presented in details in the following chapters, the aforementioned techniques have been used. For the CPS ontology, feature modeling has been used while for the MPM ontology, modeling with the W3C OWL language and its tool Protege has been used. Consequently, using the concepts developed in \cite{Czarnecki2006}, we present a version of the CPS ontology using the W3C OWL language that has been derived directly from the feature model. This enables uniform study and analysis of all the ontologies, with same semantics, presented in this deliverable. 
 %In the next year, it is planned to also integrate the CPS ontology into the Protege OWL technical space.
 \chapter{Ontology of Shared Concepts}\LEAD{Holger}\ALSO{Dominique}\STATUS{started; initial comments by Holger}
 \label{ch:core}
 %
 As outlined in the introduction of Chapter~\ref{ch:introduction} in Figure~\ref{fig:ontology_structure}, the structure of the framework and its elements are organized in the form of different ontologies providing classes for the covered domains and individuals (instances) for these classes. The ontology presented in this chapter serves in this context as foundation to define an ontology of Cyber-Physical Systems later in Chapter~\ref{ch:cps} and an ontology of Multi-Paradigm Modeling in Chapter~\ref{ch:mpm}. Then, these ontologies together with the one of this chapter are combined to define an ontology of Multi-Paradigm Modeling for Cyber-Physical Systems presented in Chapter~\ref{ch:mpm4cps}. 
 %
-\DONE[DB]{ Holger 2 Dominique: NEW, please review ... DB: Done, HG: minor revision, please review ... DB: Reviewed.}
+%\DONE[DB]{ Holger 2 Dominique: NEW, please review ... DB: Done, HG: minor revision, please review ... DB: Reviewed.}
 
-\TODONOTE[DB]{ Holger 2 Dominique: I suggest that we present a more detailed version of the shared ontology here, as we later will have a full chapter on this. In addition, we may introduce the machinery employed for the ontology here as well in more detail (e.g., providing a short introduction into ontologies and the employed notation). What do you think? }
+%\TODONOTE[DB]{ Holger 2 Dominique: I suggest that we present a more detailed version of the shared ontology here, as we later will have a full chapter on this. In addition, we may introduce the machinery employed for the ontology here as well in more detail (e.g., providing a short introduction into ontologies and the employed notation). What do you think? }
 
-\LATERNOTE{ HG: The lack of an example might be accepted for the report, but is a problem for the later planned book chapters. Maybe we can sketch here or in the examples informally the link between the examples and the core ontology. }
+%\LATERNOTE{ HG: The lack of an example might be accepted for the report, but is a problem for the later planned book chapters. Maybe we can sketch here or in the examples informally the link between the examples and the core ontology. }
 
 % ========================================================
 \input{shared-ontology}
@@ -295,7 +296,7 @@ As outlined in the introduction of Chapter~\ref{ch:introduction} in Figure~\ref{
 \chapter{Ontology of Cyber-Physical Systems}
 \label{ch:cps}
 
-\section{State-of-the-art }
+\section{State-of-the-art}
 
 Cyber-Physical Systems (CPS) are systems\uidx{System} that tightly integrate computation 
 with networking and physical processes. Such systems form large networks that 
@@ -330,16 +331,24 @@ Currently, there is a few common design and modelling approaches that allow engi
 
 \section{Ontology Overview}\label{sec:Ontology-CPS}
 
-After a domain analysis to CPS we have derived the feature model as shown in
-figure \ref{fig:feature_model_cps}. The different components\uidx{Component} of a CPS system can be designed together or
+After a domain analysis to CPS we have derived the feature model, the top-level classification for which is shown in
+figure \ref{fig:feature_model_cps_top}. The different components\uidx{Component} of a CPS system can be designed together or
 separately: in the latter case, the various different components need to be integrated. A CPS has different component types which can be computational or physical. Furthermore, a CPS has a network which can have different configurations and protocols.
-
+The various components that constitute the CPS fall under the ConstituentElement class. The subset of the feature model corresponding to the ConstituentElement class is depicted in figure \ref{fig:feature_model_cps_constituent}.
 \begin{figure}[!htb]
-\includegraphics[width=0.42\textwidth]{figures/cps-ontology.png}  % STKLIK: fixing path, to make compatible with downloaded version
+\includegraphics[width=0.42\textwidth]{figures/cps-ontology-top.png}  % STKLIK: fixing path, to make compatible with downloaded version
 % \includegraphics[width=0.42\textwidth]{fw_combine_modeling_languages/figures/cps-ontology.png}
 \caption{Feature Model of a CPS representing common and variant properties}
-\label{fig:feature_model_cps}
+\label{fig:feature_model_cps_top}
 \end{figure}
+
+\begin{figure}[!htb]
+\includegraphics[width=0.42\textwidth]{figures/cps-ontology-constituent.png}  % STKLIK: fixing path, to make compatible with downloaded version
+% \includegraphics[width=0.42\textwidth]{fw_combine_modeling_languages/figures/cps-ontology.png}
+\caption{Feature Model of a CPS representing common and variant properties}
+\label{fig:feature_model_cps_constituent}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CPS 
@@ -350,24 +359,24 @@ separately: in the latter case, the various different components need to be inte
 \newcommand{\CPSCyberPart}{\p{Cyber}\xspace}
 \newcommand{\CPSPhysicalPart}{\p{Physical}\xspace}
 
-\TODOINLINE[DB]{ HG: \p{CyberPart} and \p{PhysicalPart} as used in the CPSLab text later to link to this ontology, but these elements or parts are no longer present as such are now named \CPSCyberPart and \CPSPhysicalPart without the \p{Part}. Is that OK or should we add Part? }
+%\TODOINLINE[DB]{ HG: \p{CyberPart} and \p{PhysicalPart} as used in the CPSLab text later to link to this ontology, but these elements or parts are no longer present as such are now named \CPSCyberPart and \CPSPhysicalPart without the \p{Part}. Is that OK or should we add Part? }
 
-\iidxp{Interoperability} relates to how well the different components\uidx{Component} can operate
-together. Here we can have syntactic or semantic interoperability. Since both
-are required in CPS, these two features are considered mandatory, rather than
-alternative. Different components in a CPS can be of the same type or of different types, thereby distinguishing between homogeneous or heterogeneous CPS. The
-final feature in the feature model presents the various application domains\uidx{ApplicationDomain} in
-which CPS can be applied including manufacturing, healthcare, transportation
-etc.
+%\iidxp{Interoperability} relates to how well the different components\uidx{Component} can operate
+%together. Here we can have syntactic or semantic interoperability. Since both
+%are required in CPS, these two features are considered mandatory, rather than
+%alternative. Different components in a CPS can be of the same type or of different types, thereby distinguishing between homogeneous or heterogeneous CPS. The
+%final feature in the feature model presents the various application domains\uidx{ApplicationDomain} in
+%which CPS can be applied including manufacturing, healthcare, transportation
+%etc.
 
 \subsection{Ontology Diagram}
 
 In this section we describe the metamodel for
 CPS which represents the concepts and their relations\uidx{Relation}. The metamodel is shown in figure \ref{fig:cps_classes}. A
-CPS system consists of CPS Components\uidx{Component} that interact by using one or more Communication Protocols running on a Communication Network\uidx{Communication}. CPS Components interact with other components. A CPS Component is a Computational Component or Physical Component. A computational component is a Software Component or Hardware Component that can include zero or more Sensors and Actuators. Sensors monitor the Physical Component while Actuators can drive them. Essentially, sensors take a
+CPS system consists of CPS Components\uidx{Component} that interact by using one or more Communication Protocols running on a Communication Network\uidx{Communication}. CPS Components interact with other components. A CPS Component is a Cyber Component or Physical Component. A Cyber component is a Software Component that can have various kinds of user interfaces. The Physical Component can be a Mechanical Component or Hardware Component that can include zero or more Sensors and Actuators. Sensors monitor the Physical Component while Actuators can drive them. Essentially, sensors take a
 mechanical, optical, magnetic or thermal signal and convert it into voltage
 and current. This provided data can then be processed and used to define the
-required action\uidx{Action}. Both computational components and physical components could
+required action\uidx{Action}. Both cyber components and physical components could
 have a virtual surrogate. Virtual entities can have different representations
 such as 3D models, avatars, objects or even a social network account. Some
 Virtual Entities can also interact with other Virtual Entities to fulfill their
@@ -412,7 +421,7 @@ the implementation project and allocate tasks.
 \chapter{Ontology of Multi-Paradigm Modeling}
 \label{ch:mpm}
 
-\DONE{Missing a header for the section: what is done here in the perspective of the whole document}
+%\DONE{Missing a header for the section: what is done here in the perspective of the whole document}
 \LEAD{Moussa}\ALSO{Dominique \& Holger}
 This chapter presents the ontology of Multi-Paradigm Modeling (MPM), which consists of classes and properties to support a classification of MPM approaches. First, a state-of-the-art on MPM focusing on global model management, model integration and multi-formalism modelling is presented. Then an overview of the developed MPM ontology is presented followed by a detailed presentation of the proposed classes and properties.
 
@@ -459,7 +468,7 @@ This ontology of MPM for CPS provides cross-cutting concepts between the two dom
 \input{hpi_cps_lab_example}
 
 % ========================================================
-\chapter{Summary and Future Work}\LEAD{Holger}\ALSO{Dominique, Eva, Fernando}\STATUS{ Holger revised the text; TO BE DONE: review}
+\chapter{Summary and Future Work}
 %
 In this report on the Framework to Relate / Combine Modeling Languages
 and Techniques of Working Group1 on Foundations of the ICT COST Action IC1404
@@ -475,7 +484,7 @@ Multi-Paradigm Modeling for Cyber Physical Systems presented in Chapter~\ref{ch:
 Finally, we presented two examples for CPS development cases and sketched how they fit into 
 our framework and how their megamodels resp. megamodel fragments\uidx{MegamodelFragment} covering development scenarios look like in Chapter~\ref{ch:catalog}. These examples instantiate the MPM4CPS ontology and also make use of the catalog of languages\uidx{ModelingLanguage} and tools.
 
-\DONE{ HG: this paragraph has to be revised when after the 28.12 it is clear what the different parts will finally contain and whether there will be any restructurings. }
+%\DONE{ HG: this paragraph has to be revised when after the 28.12 it is clear what the different parts will finally contain and whether there will be any restructurings. }
 
 We
 %
@@ -485,7 +494,7 @@ developed a first MPM4CPS ontology that integrate both based on viewpoints.
 %
 Furthermore, we developed documentation generators that produce detailed specifications from the ontologies.
 
-\DONE{ HG: please add keywords for suggested future work or comments about the already suggested directions. HG: none received ... }
+%\DONE{ HG: please add keywords for suggested future work or comments about the already suggested directions. HG: none received ... }
 
 As future work, we plan 
 %
@@ -494,7 +503,7 @@ to further enrich the CPS ontology, the MPM ontology, and the MPM4CPS ontology a
 Furthermore, we plan to further develop documentation generators such that they can also produce detailed specifications for development environment examples.
 
 
-\DONE{ HG: It might also be an option to skip the future work. Opinions? HG: no feedback ...}
+%\DONE{ HG: It might also be an option to skip the future work. Opinions? HG: no feedback ...}
 
 %\todo[inline]{ Holger:\\
 %LATER:\\

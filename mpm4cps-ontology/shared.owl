@@ -20,10 +20,8 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal>The shared ontology defines concepts that do not specifically pertain to the CPS and neither to the MPM domain, but that are required by one of these domains or both. It is a place to define concepts reusable by all the ontologies developed in this effort. The classes and properties provided in this ontology may be refined by other ontologies of the framework to provide specialized definitions for more specific domains. 
 
-The shared ontology is divided into five domains for capturing concepts related to the \uidxp{Linguistic}, \uidxp{workflow}, \uidxp{project management},  \uidxp{architecture} and  \uidxp{paradigm} domains. When applicable, the classes of these domains were based on well-known standards and other de-facto standard works. 
-Note that these domains are not disjoint so that a class may appear under several domain concept classes.
-
-The detailed specification of the shared onytology is provided in the following subsections.</Literal>
+The shared ontology is divided into five domains for capturing concepts related to the \uidxp{linguistic}, \uidxp{workflow}, \uidxp{project management},  \uidxp{architecture} and  \uidxp{paradigm} domains. When applicable, the classes of these domains were based on well-known standards and other de-facto standard works. 
+Note that these domains are not disjoint so that a class may appear under several domain concept classes.</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="#Activity"/>
@@ -36,9 +34,6 @@ The detailed specification of the shared onytology is provided in the following 
     </Declaration>
     <Declaration>
         <Class IRI="#Application"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Architecture"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ArchitectureDC"/>
@@ -292,10 +287,6 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#ActivityPerformer"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Architecture"/>
-        <Class IRI="#ArchitectureDC"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ArchitectureDC"/>
         <Class IRI="#DomainConcept"/>
     </SubClassOf>
@@ -306,6 +297,10 @@ The detailed specification of the shared onytology is provided in the following 
     <SubClassOf>
         <Class IRI="#ArtificialLanguage"/>
         <Class IRI="#Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#Architecture"/>
+        <Class IRI="#ArchitectureDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ArtificialLanguage"/>
@@ -591,10 +586,6 @@ The detailed specification of the shared onytology is provided in the following 
         <Class IRI="#ActivitySet"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasArchitecture"/>
-        <Class IRI="#Architecture"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasArtifacts"/>
         <Class IRI="#EngineeringArtifact"/>
     </ObjectPropertyRange>
@@ -609,10 +600,6 @@ The detailed specification of the shared onytology is provided in the following 
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDecisionProcedures"/>
         <Class IRI="#DecisionProcedure"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasExpressedArchitecture"/>
-        <Class IRI="#Architecture"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasExpressions"/>
@@ -696,14 +683,7 @@ The detailed specification of the shared onytology is provided in the following 
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Application</IRI>
-        <Literal>The Application class ia a descriptions of the IT applications or interfaces which may be invoked by the service to support, or wholly automate, the processing associated with each activity.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Architecture</IRI>
-        <Literal>Architecture class is a property exhibiting the essence or fundamentals of a system,  following the ISO/IEEE 42010.
-This definition is wide enough to encompass a variety of uses of the term architecture such as to understand and
-control those elements of a system-of-interest that contribute to its utility, cost, time and risk within its environment.</Literal>
+        <Literal>The Application class is a description of the IT applications or interfaces which may be invoked by the service to support, or wholly automate, the processing associated with each activity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#mpm4cps:author"/>
@@ -716,16 +696,11 @@ control those elements of a system-of-interest that contribute to its utility, c
         <Literal>Architecture Domain Concepts</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#mpm4cps:toBeRemoved"/>
-        <IRI>#ArchitectureDC</IRI>
-        <Literal>Now located under the CPS ontology</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ArchitectureDC</IRI>
         <Literal>This class groups concepts that are related to the \uidxp{architecture} domain. These concepts were initially inspired from the well-known ISO/IEC/ IEEE 42010 standard and its adaptation by \cite{Broman2012}. 
 
-The architecture is extremely vast and only a minimal subset from its concepts has been considered and adapted for the MPM4CPS sub-domains (see figure~2 of \cite{IEEE42010}).</Literal>
+The architecture is extremely vast and only a minimal subset from its concepts has been considered and adapted for the MPM4CPS sub-domains (see figure~2 of \cite{Hilliard2012}).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
@@ -745,7 +720,7 @@ The architecture is extremely vast and only a minimal subset from its concepts h
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ArtificialLanguage</IRI>
-        <Literal>ArtificialLanguage classe is about the languages that can be processed by machines (computers).</Literal>
+        <Literal>ArtificialLanguage class is about the languages that can be processed by machines (computers).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -755,7 +730,7 @@ The architecture is extremely vast and only a minimal subset from its concepts h
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Characteristic</IRI>
-        <Literal>The Characteristics classe is related with  EngineeringParadigm using  the hasCharacterisics object property.</Literal>
+        <Literal>The Characteristic class is related with  EngineeringParadigm using  the hasCharacterisics object property.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -790,13 +765,13 @@ The architecture is extremely vast and only a minimal subset from its concepts h
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DomainConcept</IRI>
-        <Literal>This class groups all domain concepts of the MPM4CPS ontologies. It is further divided into  subclasses for the different sub-domains of the MPM4CPS ontologies. The classes for these sub-domains can be identified from their DC (Domaoçn Concept) suffix. 
+        <Literal>This class groups all domain concepts of the MPM4CPS ontologies. It is further divided into  subclasses for the different sub-domains of the MPM4CPS ontologies. The classes for these sub-domains can be identified from their DC (Domain Concept) suffix. 
 These sub-domain classes allow organizing the ontology into specific domains thus facilitating the navigation across the many concepts of the MPM4CPS ontologies. Note that the sub-domain classes are not disjoint from each other so that a class may belong to several sub-domain concepts.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#EngineeringArtifact</IRI>
-        <Literal>EngineeringArtifact classe represents any artifact employed to engineer systems.</Literal>
+        <Literal>EngineeringArtifact class represents any artifact employed to engineer systems.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -811,7 +786,7 @@ These sub-domain classes allow organizing the ontology into specific domains thu
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#EngineeringParadigm</IRI>
-        <Literal>EngineeringParadigm classe is a specific view of engineering environments.</Literal>
+        <Literal>EngineeringParadigm class is a specific view of engineering environments.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -837,7 +812,7 @@ semantics.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NaturalLanguage</IRI>
-        <Literal>NaturalLanguage classe gathers  natural languages are those spoken by humans such as English, French, etc.</Literal>
+        <Literal>NaturalLanguage class gathers  natural languages are those spoken by humans such as English, French, etc.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -862,7 +837,7 @@ semantics.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ParadigmaticProperty</IRI>
-        <Literal>Paradigm characteristics are defined by the ParadigmaticProperty class and related to Paradigm characteristics using the hasProperties object property.</Literal>
+        <Literal>Paradigm characteristics are defined by the ParadigmaticProperty class and are related to Paradigm characteristics using the hasProperties object property.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -938,7 +913,7 @@ Resources can be humans, facilities, equipment, materials, infrastructure and to
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Syntax</IRI>
-        <Literal>According to Wikipedia, a Syntax “is the set of rules, principles, and processes that govern the structure of sentences (sentence structure) in a given language”.</Literal>
+        <Literal>According to Wikipedia, a Syntax &quot;is the set of rules, principles, and processes that govern the structure of sentences (sentence structure) in a given language&quot;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1004,7 +979,12 @@ the activities in the ActivitySet.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasCharacteristics</IRI>
-        <Literal>The hasCharacteristics allows to relate the EngineeringParadigm classe to Characteristics class.</Literal>
+        <Literal>The hasCharacteristics allows to relate the EngineeringParadigm class to Characteristics class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContainedActivitySet</IRI>
+        <Literal>The hasContainedActivitySet property allows to relate the Process with the ActivitySet(s) associated with it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1091,6 +1071,16 @@ The object property isImplementingMethodology  relates a process to the methodol
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isImplementingStage</IRI>
         <Literal>The isImplementingStage is defined to relate an activity to a stage it implements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isTransitionFrom</IRI>
+        <Literal>A Transition determines the order of execution of activities in the ActivitySet. The isTransitionFrom property allows to relate the Transition with the Activity that is being transitioned from, that results in the conditions defined by the transition being met.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isTransitionTo</IRI>
+        <Literal>A Transition determines the order of execution of activities in the ActivitySet. The isTransitionTo property allows to relate the Transition with the Activity that is being transitioned to, i.e. the Activity that is performed as a result of the execution of the Transition.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

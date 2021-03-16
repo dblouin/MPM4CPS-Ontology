@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <featureModel>
 	<properties>
-		<graphics key="showhiddenfeatures" value="true"/>
-		<graphics key="legendposition" value="1013,252"/>
-		<graphics key="legendautolayout" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
 		<graphics key="showshortnames" value="false"/>
 		<graphics key="layout" value="vertical"/>
-		<graphics key="showcollapsedconstraints" value="false"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
 		<graphics key="legendhidden" value="false"/>
 		<graphics key="layoutalgorithm" value="4"/>
 	</properties>
@@ -449,7 +447,7 @@
 </and>
 <or mandatory="true" name="nonfunctionalReqs">
 <description>Nonfunctional Requirements (NFRs) define system attributes such as security, reliability, performance, maintainability, scalability, and usability. They serve as constraints or restrictions on the design of the system across the different backlogs. They ensure the usability and effectiveness of the entire system.</description>
-<graphics key="collapsed" value="false"/>
+<graphics key="collapsed" value="true"/>
 <feature name="Performance">
 <description>The total effectiveness of the system, including throughput, individual response time, and availability.</description>
 </feature>
@@ -495,7 +493,7 @@
 </or>
 <alt mandatory="true" name="Application Domain">
 <description>This class describes the various domains and industrial sectors which the cyber-physical system is concerned with.</description>
-<graphics key="collapsed" value="false"/>
+<graphics key="collapsed" value="true"/>
 <feature name="Health">
 <description>This is the description for health</description>
 </feature>
@@ -511,7 +509,7 @@
 </alt>
 <or mandatory="true" name="Disciplines">
 <description>This class describes the various engineering and other disciplines that are associated with the development and application of the cyber-physical system.</description>
-<graphics key="collapsed" value="false"/>
+<graphics key="collapsed" value="true"/>
 <feature name="Software Engineering"/>
 <feature name="Mechanical Engineering"/>
 <feature name="Electrical Engineering"/>
@@ -520,13 +518,32 @@
 <feature name="Other Engineering"/>
 </or>
 <and mandatory="true" name="Architecture">
-<graphics key="collapsed" value="false"/>
-<feature mandatory="true" name="Management Layer"/>
-<feature mandatory="true" name="CPS Component Layer"/>
-<feature mandatory="true" name="Network Layer"/>
-<feature mandatory="true" name="Service Layer"/>
-<feature mandatory="true" name="Application Layer"/>
-<feature mandatory="true" name="Security Layer"/>
+<graphics key="collapsed" value="true"/>
+<feature mandatory="true" name="Management Layer">
+<description>The management layer supports capabilities such as device management, traffic and congestion management.</description>
+</feature>
+<feature mandatory="true" name="CPS Component Layer">
+<description>
+	The CPS component layer includes the capabilities for the CPS
+	components to undertake sensing and actuation.
+</description>
+</feature>
+<feature mandatory="true" name="Network Layer">
+<description>The network layer provides functionality for networking connectivity and transport capabilities enabling the coordination of components.</description>
+</feature>
+<feature mandatory="true" name="Service Layer">
+<description>
+	The Services layer consists of functionality for generic support services
+	(such as data processing or data storage), and specific support capabilities for the
+	particular applications that may already apply a degree of intelligence.
+</description>
+</feature>
+<feature mandatory="true" name="Application Layer">
+<description>The application layer orchestrates the services to provide emergent properties.</description>
+</feature>
+<feature mandatory="true" name="Security Layer">
+<description>A Security layer captures the security functionality.</description>
+</feature>
 </and>
 <or hidden="true" name="Evaluation">
 <graphics key="collapsed" value="true"/>
