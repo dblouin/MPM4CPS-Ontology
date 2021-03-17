@@ -32,6 +32,22 @@ This class groups concepts that are related to the \uidxp{architecture} domain. 
 
 The architecture is extremely vast and only a minimal subset from its concepts has been considered and adapted for the MPM4CPS sub-domains (see figure~2 of \cite{Hilliard2012}).
 
+\subsubsection{Architecture}
+\label{subsubsecC:Architecture}
+\didx{Architecture}
+
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{ArchitectureDC} (see section \ref{subsecDC:ArchitectureDC})
+\end{itemize}
+
+
+
+
+
+
 \subsubsection{ArchitectureDescription}
 \label{subsubsecC:ArchitectureDescription}
 \didx{ArchitectureDescription}
@@ -150,6 +166,22 @@ semantics.
 	\item \textbf{LinguisticDC} (see section \ref{subsecDC:LinguisticDC})
 	\item \textbf{Language} (see section \ref{subsubsecC:Language})
 	\item \textbf{Language} (see section \ref{subsubsecC:Language})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{LanguageFragment}
+\label{subsubsecC:LanguageFragment}
+\didx{LanguageFragment}
+
+Part of a language, that is not complete on its own, but rather epends on another language to give it meaning. For example, bahvioral annex in AADL.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{LinguisticDC} (see section \ref{subsecDC:LinguisticDC})
 \end{itemize}
 
 
@@ -484,6 +516,22 @@ A tool.
 \textbf{Subclass of}
 \begin{itemize}
 	\item \textbf{Application} (see section \ref{subsubsecC:Application})
+	\item \textbf{Resource} (see section \ref{subsubsecC:Resource})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ToolExtension}
+\label{subsubsecC:ToolExtension}
+\didx{ToolExtension}
+
+Extension of a tool. Not wholly independent to function on its own. It complements the capabilities of another tool, that may or may not be independent.
+
+\textbf{Subclass of}
+\begin{itemize}
 	\item \textbf{Resource} (see section \ref{subsubsecC:Resource})
 \end{itemize}
 

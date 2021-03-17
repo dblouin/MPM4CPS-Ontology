@@ -24,6 +24,9 @@ The shared ontology is divided into five domains for capturing concepts related 
 Note that these domains are not disjoint so that a class may appear under several domain concept classes.</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#Architecture"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Activity"/>
     </Declaration>
     <Declaration>
@@ -84,6 +87,9 @@ Note that these domains are not disjoint so that a class may appear under severa
         <Class IRI="#Language"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#LanguageFragment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#LinguisticDC"/>
     </Declaration>
     <Declaration>
@@ -133,6 +139,9 @@ Note that these domains are not disjoint so that a class may appear under severa
     </Declaration>
     <Declaration>
         <Class IRI="#Tool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ToolExtension"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ToolProvider"/>
@@ -267,6 +276,10 @@ Note that these domains are not disjoint so that a class may appear under severa
         <AnnotationProperty IRI="#mpm4cps:usage:cps"/>
     </Declaration>
     <SubClassOf>
+        <Class IRI="http://mpm4cps.eu/ontology/cps#Architecture"/>
+        <Class IRI="#ArchitectureDC"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Activity"/>
         <Class IRI="#WorkflowDC"/>
     </SubClassOf>
@@ -297,10 +310,6 @@ Note that these domains are not disjoint so that a class may appear under severa
     <SubClassOf>
         <Class IRI="#ArtificialLanguage"/>
         <Class IRI="#Language"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mpm4cps.eu/ontology/cps#Architecture"/>
-        <Class IRI="#ArchitectureDC"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ArtificialLanguage"/>
@@ -380,6 +389,10 @@ Note that these domains are not disjoint so that a class may appear under severa
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#LanguageFragment"/>
+        <Class IRI="#LinguisticDC"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#LinguisticDC"/>
         <Class IRI="#DomainConcept"/>
     </SubClassOf>
@@ -453,6 +466,10 @@ Note that these domains are not disjoint so that a class may appear under severa
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tool"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ToolExtension"/>
         <Class IRI="#Resource"/>
     </SubClassOf>
     <SubClassOf>
@@ -805,6 +822,16 @@ These sub-domain classes allow organizing the ontology into specific domains thu
 semantics.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="#mpm4cps:author"/>
+        <IRI>#LanguageFragment</IRI>
+        <Literal>Rakshit Mittal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LanguageFragment</IRI>
+        <Literal>Part of a language, that is not complete on its own, but rather epends on another language to give it meaning. For example, bahvioral annex in AADL.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#LinguisticDC</IRI>
         <Literal>This class groups domain concepts related to the linguistic aspects, such as modeling, programming, formal and even natural languages and their syntax.</Literal>
@@ -924,6 +951,11 @@ Resources can be humans, facilities, equipment, materials, infrastructure and to
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Tool</IRI>
         <Literal>A tool.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ToolExtension</IRI>
+        <Literal>Extension of a tool. Not wholly independent to function on its own. It complements the capabilities of another tool, that may or may not be independent.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

@@ -28,6 +28,39 @@ This ontology of multi-paradigm modeling contains concepts divided into sub-doma
 
 MPM4CPSDC domain concept class
 
+\subsubsection{Model}
+\label{subsubsecC:Model}
+\didx{Model}
+
+Please refer to section \ref{subsubsecC:Model}
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{ModelBasedEngineeringArtifact} (see section \ref{subsubsecC:ModelBasedEngineeringArtifact})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ModelBasedEngineeringArtifact}
+\label{subsubsecC:ModelBasedEngineeringArtifact}
+\didx{ModelBasedEngineeringArtifact}
+
+The EngineeringArtifact is refined into ModelBasedEngineeringArtifact.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{MPM4CPSDC} (see section \ref{subsecDC:MPM4CPSDC})
+	\item \textbf{EngineeringArtifact} (see section \ref{subsubsecC:EngineeringArtifact})
+\end{itemize}
+
+
+
+
+
+
 \subsubsection{ModelBasedEngineeringEnv}
 \label{subsubsecC:ModelBasedEngineeringEnv}
 \didx{ModelBasedEngineeringEnv}
@@ -53,9 +86,41 @@ The Process class of the Shared ontology is refined into the ModelBasedProcess c
 
 \textbf{Subclass of}
 \begin{itemize}
-	\item \textbf{MPM4CPSDC} (see section \ref{subsecDC:MPM4CPSDC})
 	\item \textbf{ModelBasedEngineeringArtifact} (see section \ref{subsubsecC:ModelBasedEngineeringArtifact})
 	\item \textbf{Process} (see section \ref{subsubsecC:Process})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ModelRelation}
+\label{subsubsecC:ModelRelation}
+\didx{ModelRelation}
+
+Please refer to section \ref{subsubsecC:ModelRelation}
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{ModelBasedEngineeringArtifact} (see section \ref{subsubsecC:ModelBasedEngineeringArtifact})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ModelingEngineeringParadigm}
+\label{subsubsecC:ModelingEngineeringParadigm}
+\didx{ModelingEngineeringParadigm}
+
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{MPM4CPSDC} (see section \ref{subsecDC:MPM4CPSDC})
+	\item \textbf{EngineeringParadigm} (see section \ref{subsubsecC:EngineeringParadigm})
 \end{itemize}
 
 
@@ -79,8 +144,6 @@ A viewpoint governs an architecture view.
 
 
 
-\todoAuthors{Finally, we create another object property to relate a view to its employed models.}
-
 
 \subsubsection{ViewPoint}
 \label{subsubsecC:ViewPoint}
@@ -95,6 +158,26 @@ According to the IEEE 42010 standard, a viewpoint frames the concerns of stakeho
 \end{itemize}
 
 \section{Properties}
+
+
+\subsection{hasApplicationMegamodel}
+\label{subsecP:hasApplicationMegamodel}
+\todoAuthors{Provide ``rdfs:comment'' annotation in ontology}
+
+Subproperty of:
+None
+
+
+Domains:
+None
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{Megamodel} (see section \ref{subsubsecC:Megamodel})
+\end{itemize}
+
+
 
 
 \subsection{hasFramedConcerns}
@@ -158,6 +241,30 @@ Domains:
 Ranges:
 \begin{itemize}
 	\item \textbf{ViewPoint} (see section \ref{subsubsecC:ViewPoint})
+\end{itemize}
+
+
+
+
+\subsection{hasModelingArtifacts}
+\label{subsecP:hasModelingArtifacts}
+The hasModelingArtifacts is a subproperty of the hasArtifacts object property having respectively the ModelBasedEngineeringEnv and ModelBasedEngineeringArtifact classes as domain and range.
+
+Subproperty of:
+\begin{itemize}
+	\item \textbf{hasArtifacts} (see section \ref{subsecP:hasArtifacts})
+\end{itemize}
+
+
+Domains:
+\begin{itemize}
+	\item \textbf{ModelBasedEngineeringEnv} (see section \ref{subsubsecC:ModelBasedEngineeringEnv})
+\end{itemize}
+
+
+Ranges:
+\begin{itemize}
+	\item \textbf{ModelBasedEngineeringArtifact} (see section \ref{subsubsecC:ModelBasedEngineeringArtifact})
 \end{itemize}
 
 

@@ -62,6 +62,22 @@ Tools to analysis systems e.g. performance, resourceConsumption, schedulability 
 
 
 
+\subsubsection{ApplicationMegaModel}
+\label{subsubsecC:ApplicationMegaModel}
+\didx{ApplicationMegaModel}
+
+A representation of the real models in the CPS development environment.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Megamodel} (see section \ref{subsubsecC:Megamodel})
+\end{itemize}
+
+
+
+
+
+
 \subsubsection{ArchitectureDescriptionLanguage}
 \label{subsubsecC:ArchitectureDescriptionLanguage}
 \didx{ArchitectureDescriptionLanguage}
@@ -186,6 +202,22 @@ A concrete syntax is the syntax users of the language manipulate to build models
 \begin{itemize}
 	\item \textbf{Model} (see section \ref{subsubsecC:Model})
 	\item \textbf{Syntax} (see section \ref{subsubsecC:Syntax})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{ConfigurationMegaModel}
+\label{subsubsecC:ConfigurationMegaModel}
+\didx{ConfigurationMegaModel}
+
+Declares types for the models and relations contained in application megamodel. (language and relation types)
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Megamodel} (see section \ref{subsubsecC:Megamodel})
 \end{itemize}
 
 
@@ -415,6 +447,22 @@ Logic-based Formalisms
 
 
 
+\subsubsection{Megamodel}
+\label{subsubsecC:Megamodel}
+\didx{Megamodel}
+
+A model that contains models and relations between them.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Model} (see section \ref{subsubsecC:Model})
+\end{itemize}
+
+
+
+
+
+
 \subsubsection{MegamodelFragment}
 \label{subsubsecC:MegamodelFragment}
 \didx{MegamodelFragment}
@@ -465,6 +513,22 @@ MicroModelElement represents an  atomic element contained by a MicroModel.
 
 
 
+\subsubsection{Micromodel}
+\label{subsubsecC:Micromodel}
+\didx{Micromodel}
+
+Micromodels are usual models and their model elements.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Model} (see section \ref{subsubsecC:Model})
+\end{itemize}
+
+
+
+
+
+
 \subsubsection{Model}
 \label{subsubsecC:Model}
 \didx{Model}
@@ -485,9 +549,7 @@ A representation of real artifacts regardless of the metamodeling technical spac
 \label{subsubsecC:ModelRelation}
 \didx{ModelRelation}
 
-A model relation is used to connect an arbitrary number of models.
-This connects reference is defined in our ontology by the hasConnectedModels object property. 
-The property has the ModelRelation for its domain and the Model class for its range.
+A relation that connects models.
 
 \textbf{Subclass of}
 \begin{itemize}
@@ -785,6 +847,22 @@ Timed Characteristic  represents the behavioral characteristics of the formalism
 \textbf{Subclass of}
 \begin{itemize}
 	\item \textbf{BehavioralCharacteristic} (see section \ref{subsubsecC:BehavioralCharacteristic})
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{TraceabilityModel}
+\label{subsubsecC:TraceabilityModel}
+\didx{TraceabilityModel}
+
+After or while a transformation is being executed, the transformed models often need to be related and a set of traceability relations are created as a by-product of the transformation execution.
+
+\textbf{Subclass of}
+\begin{itemize}
+	\item \textbf{Micromodel} (see section \ref{subsubsecC:Micromodel})
 \end{itemize}
 
 
@@ -1220,9 +1298,7 @@ Domains:
 
 
 Ranges:
-\begin{itemize}
-	\item \textbf{LanguageFragment} (see section \ref{subsubsecC:LanguageFragment})
-\end{itemize}
+None
 
 
 
@@ -1469,9 +1545,7 @@ Domains:
 
 
 Ranges:
-\begin{itemize}
-	\item \textbf{ToolExtension} (see section \ref{subsubsecC:ToolExtension})
-\end{itemize}
+None
 
 
 
@@ -1507,9 +1581,7 @@ None
 
 
 Domains:
-\begin{itemize}
-	\item \textbf{ToolExtension} (see section \ref{subsubsecC:ToolExtension})
-\end{itemize}
+None
 
 
 Ranges:

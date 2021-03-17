@@ -12,6 +12,7 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://mpm4cps.eu/ontology/shared</Import>
     <Annotation>
         <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
         <Literal>Dominique Blouin; Hana Mkaouar</Literal>
@@ -96,9 +97,6 @@
         <Class IRI="#HybridAutomataBasedFormalism"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LanguageFragment"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#LogicBasedFormalism"/>
     </Declaration>
     <Declaration>
@@ -178,9 +176,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#TimedCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ToolExtension"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TraceabilityModel"/>
@@ -485,12 +480,12 @@
         <Class IRI="#AutomataBasedFormalism"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#LanguageFragment"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Language"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#LogicBasedFormalism"/>
         <Class IRI="#Formalism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Megamodel"/>
+        <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MegamodelFragment"/>
@@ -502,6 +497,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MicroModelElement"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Micromodel"/>
         <Class IRI="#Model"/>
     </SubClassOf>
     <SubClassOf>
@@ -602,10 +601,6 @@
     <SubClassOf>
         <Class IRI="#TimedCharacteristic"/>
         <Class IRI="#BehavioralCharacteristic"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ToolExtension"/>
-        <Class IRI="http://mpm4cps.eu/ontology/shared#Tool"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TraceabilityModel"/>
@@ -796,10 +791,6 @@
         <Class IRI="#Formalism"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isToolExtensionFor"/>
-        <Class IRI="#ToolExtension"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isToolFor"/>
         <Class IRI="#ModelingTool"/>
     </ObjectPropertyDomain>
@@ -860,10 +851,6 @@
         <Class IRI="#ModelingLanguage"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasLanguageFragment"/>
-        <Class IRI="#LanguageFragment"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMetamodel"/>
         <Class IRI="#Metamodel"/>
     </ObjectPropertyRange>
@@ -902,10 +889,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isBasedOn"/>
         <Class IRI="#Formalism"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isEnvironmentFor"/>
-        <Class IRI="#ToolExtension"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isImplementedBy"/>
@@ -1117,16 +1100,6 @@ However pure graphical syntax are not common and often include textual parts.</L
         <Literal>Hybrid Automata-based Formalisms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
-        <IRI>#LanguageFragment</IRI>
-        <Literal>Rakshit Mittal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#LanguageFragment</IRI>
-        <Literal>Fragments of language that are not languages in themselves but dependent on other language(s) for complete meaning</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#LogicBasedFormalism</IRI>
         <Literal>Logic-based Formalisms</Literal>
@@ -1311,16 +1284,6 @@ Only some sequences of words or sentences are considered valid and the set of al
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TimedCharacteristic</IRI>
         <Literal>Timed Characteristic  represents the behavioral characteristics of the formalism that are time-bound.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://mpm4cps.eu/ontology/shared#mpm4cps:author"/>
-        <IRI>#ToolExtension</IRI>
-        <Literal>Rakshit Mittal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#ToolExtension</IRI>
-        <Literal>Extension of a tool, not a standalone tool.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

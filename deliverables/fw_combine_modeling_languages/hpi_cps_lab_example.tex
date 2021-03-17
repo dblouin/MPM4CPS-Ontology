@@ -921,7 +921,7 @@ We present the modeling of this process and of one of its employed modeling para
 % ============================================
 \subsubsection{Methodology}
 
-We define the CPSLabMethodology instance of the \uidxp{EngineeringMethodology} class of the workflow subdomain of shared ontology (Chapter~\ref{ch:foundations:introduction}) to capture the HPI CPSLab methodology and its set of stages as depicted in Figure~\ref{fig:introduction.methodology}. This is achieved by representing each stage as an instance of the \uidxp{EngineeringStage} class and creating instances of the \uidxp{hasNextStage} object property defining the order between the stages.
+We define the CPSLabMethodology instance of the \uidxp{EngineeringMethodology} class of the workflow subdomain of shared ontology (Chapter~\ref{ch:core}) to capture the HPI CPSLab methodology and its set of stages as depicted in Figure~\ref{fig:methodology}. This is achieved by representing each stage as an instance of the \uidxp{EngineeringStage} class and creating instances of the \uidxp{hasNextStage} object property defining the order between the stages.
 \\
 \\
 \noindent\uline{Methodology}
@@ -993,7 +993,7 @@ In the next sections, for each stage we present the viewpoints and the root acti
 \subsubsection{Simulation Stage}
 %
 % =========================================
-The purpose of the simulation stage is to define the control laws of the system. As opposed to the two next stages, its activities only employ models as captured by the megamodel fragments of Chapter~\ref{ch:foundations:MPM-Ontology} to represent the system and its environment.
+The purpose of the simulation stage is to define the control laws of the system. As opposed to the two next stages, its activities only employ models as captured by the megamodel fragments of Chapter~\ref{ch:mpm} to represent the system and its environment.
 
 For the HPI CPSLab example, we define a set of viewpoints specific to each of the root activities. This differs from the EBCPS example where existing viewpoints (e.g. from a library) are reused to support the activities. In this case, we define three viewpoints to support each root modeling activity of the simulation stage as follows:
 \\
@@ -1020,7 +1020,7 @@ For the HPI CPSLab example, we define a set of viewpoints specific to each of th
          \end{itemize}
     \end{itemize}
 
-Each of these viewpoints addresses the concern of the control algorithm of the system under design and is using a megamodel fragment defined in the example section of Chapter~\ref{ch:foundations:MPM-Ontology} of the MPM ontology to capture the employed modeling languages and their relations. In addition, the CPSLabMiLControlAlgorithmVP and CPSLabRPControlAlgorithmVP also address other concerns such as stability, safety, reliability, thanks to the plant model providing feedback to the controller as opposed to the static input data of the model test activity.
+Each of these viewpoints addresses the concern of the control algorithm of the system under design and is using a megamodel fragment defined in the MPM ontology section to capture the employed modeling languages and their relations. In addition, the CPSLabMiLControlAlgorithmVP and CPSLabRPControlAlgorithmVP also address other concerns such as stability, safety, reliability, thanks to the plant model providing feedback to the controller as opposed to the static input data of the model test activity.
 
 Each of these viewpoints describes a cyber-physical setting, at different levels of abstraction. The abstract control algorithm from the cyber domain captured by the Matlab/Simulink control model (ControlModel) is confronted with the physics as represented in the input data plus expected outcomes. This is model differently for each viewpoint as static data model (MT), plant model (MiL) and detailed robot model (RP). Therefore, all viewpoints cover the system constituents of interest represented by these models, which are the controller, plant, sensor and actuator elements. We further have a multi-formalism setting where the control is discrete while the input data is at least conceptually continuous.
 \\
@@ -1100,7 +1100,7 @@ Transitions are defined between the different activities. It should be noted tha
 
 At deployment, an application megamodel containing the models to be processed by activity performers can be bound to this structure for executing the process on real models.
 
-The definition of the two other CPSLabMiLProcess and CPSLabRPProcess processes follows the same principles as that of the CPSLabMTProcess detailed above and is not presented. All details can be found in the ontology files accessible from \cite{MPM4CPS-Website}. 
+The definition of the two other CPSLabMiLProcess and CPSLabRPProcess processes follows the same principles as that of the CPSLabMTProcess detailed above and is not presented. All details can be found in the ontology files accessible from \url{http://mpm4cps.eu}. 
 \\
 % ============================================
 \subsubsection{Prototyping Stage}
@@ -1110,7 +1110,7 @@ Compared to the simulation stage, which only uses models, the focus of the proto
 
 For this prototyping stage and the next pre-production stage of the HPI CPSLab methodology, we will only present the viewpoints specification. The modeling of root activity subprocesses is straight forward and follows the same principles as that of the simulation stage. 
 
-Like for the simulation stage, we define a viewpoint for each of the two root activities implementing the prototyping stage (Figure~\ref{fig:introduction.methodology}). Therefore for each stage activity, we first present the activity and then define its supporting viewpoint.
+Like for the simulation stage, we define a viewpoint for each of the two root activities implementing the prototyping stage (Figure~\ref{fig:rp}). Therefore for each stage activity, we first present the activity and then define its supporting viewpoint.
 \\
 \\
 \uline{Software in the Loop (SiL)}
@@ -1194,7 +1194,7 @@ There are several ways such properties could be specified. If all languages and 
 
 It should be noted that the aforementioned Catalog of Formalisms, Modeling Languages and Tools already declares SDF as being a formalism and not a paradigm. Besides, several modeling languages of the catalog such as Simulink are declared as being based on SDF. Therefore, the question of whether SDF should be classified as a formalism or a paradigm remains. A deeper study of the catalog's formalisms could help answer that question.
 
-Next, we model the HPI CPSLab model-based engineering environment, which uses the CPSLabMM megamodel presented in the HPI CPSLab example of Chapter~\ref{ch:foundations:MPM-Ontology} and the CPSLabProcess development process defined in the previous section:
+Next, we model the HPI CPSLab model-based engineering environment, which uses the CPSLabMM megamodel and the CPSLabProcess development process defined in the previous sections:
 \\
 \\
 \noindent\uline{Engineering Environment}
