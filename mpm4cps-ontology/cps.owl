@@ -8,35 +8,35 @@
   <owl:Prefix IRI="http://www.w3.org/2000/01/rdf-schema#" name="rdfs"/>
   <owl:Import>http://mpm4cps.eu/ontology/shared</owl:Import>
   <owl:Declaration>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#CpsDC</owl:IRI>
+    <owl:IRI>#CPSDC</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#CPSDC"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#CPSDC"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#CPSDC"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#CPSDC"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#CPSDC"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#CpsDC"/>
+    <owl:Class IRI="#CPSDC"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
   </owl:SubClassOf>
   <owl:Declaration>
@@ -183,318 +183,6 @@
   <owl:AnnotationAssertion>
     <owl:AnnotationProperty IRI="#mpm4cps:author"/>
     <owl:IRI>#ReferenceSignal</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Smooth"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Smooth</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">There is no discontunity in the model representing the system.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Smooth</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Bifurcations"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Bifurcations</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Points that mark a change in the dynamical patterns in a system.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Bifurcations</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Oscillations/LimitCycles"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Oscillations/LimitCycles</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Limit cycle is a trajectory for which energy of the system would be constant over a cycle - i.e. on an average there is no loss or gain of energy. Limit cycle is an outcome of delicate energy balance due to the presence of nonlinear term in the equation of motion.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Oscillations/LimitCycles</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Hysteresis"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Hysteresis</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Persistence of effects after the causes of these effects are eliminated, representing the dependence of the state of a system on its past history (memory).</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Hysteresis</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Complex/strange"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Complex/strange</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unexpected, unpredictable behaviour.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Complex/strange</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Chattering"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Chattering</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Infinite switches around a discontinuity surface</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Chattering</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#SlidingMotions"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#SlidingMotions</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Dynamics on the discontinuity surface of a switched system, key for the analysis of these systems. There are typically undefined and different methods are used to define it, mainly Filipov's continuation method and Utkin's equivalent control method.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#SlidingMotions</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#PhaseTransitions"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#PhaseTransitions</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Name for bifurcation, typically used in physics.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#PhaseTransitions</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Zenoness"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Zenoness</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Infinite switches in a finite time.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Zenoness</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Stability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Stability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Idea that a system trajectory will keep getting closer and closer to a desired point in space.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Stability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Dissipativity/Passivity"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Dissipativity/Passivity</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Abstraction of the energy properties of systems. A dissipative system dissipates energy in some manner.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Dissipativity/Passivity</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Robustness"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Robustness</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability of a system to keep performing well despite changes within and outside the system (for example, maintaining its trajectories close to equilibria despite perturbations). It does not entail adaptation.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Robustness</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Adaptation"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Adaptation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evolution/change over time depending on environment and system's changes.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Adaptation</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Controllability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Controllability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A system is controllable if it can be controlled (its internal state can be modified) by modifying its inputs.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Controllability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Observability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Observability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A system is observable if its internal state can be detected (observed) from its outputs.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Observability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Resilience"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Resilience</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability of a system to maintain functionality by adaptation and recover when changes are produced within and outside the system.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Resilience</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Autonomy"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Autonomy</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability of a system to make decisions affecting its behaviour.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Autonomy</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Intelligence"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Intelligence</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability to 'think' or automate tasks to achieve a goal.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Intelligence</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Consistency"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Consistency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Property of logical systems by which it is not possible to find a contradiction within the system.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Consistency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Heterogeneity"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Heterogeneity</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Being non-homogeneous.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Heterogeneity</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Sensitivity"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Sensitivity</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Level of response of a system to changes.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Sensitivity</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Learning"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Learning</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ability to learn.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Learning</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Deterministic"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Deterministic</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Modeling uncertainty with determinsitic models that do not incorporate any sort of randomness. Every time you run a simulation with the same initial conditions, you get the same results.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Deterministic</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Non-deterministic"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Non-deterministic</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">In the case the system does not record and 'learn' from the environment statsitically to predict some part of the future and act accordingly.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Non-deterministic</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
@@ -654,32 +342,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:Class IRI="#MainMemory"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#MainMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The memory unit that communicates directly within the CPU, Auxillary memory and Cache memory, is called main memory. It is the central storage unit of the computer system. It is a large and fast memory used to store data during computer operations. Main memory is made up of RAM and ROM, with RAM integrated circuit chips holding the major share.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#MainMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#CacheMemory"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#CacheMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The data or contents of the main memory that are used again and again by CPU, are stored in the cache memory so that we can easily access that data in shorter time. Whenever the CPU needs to access memory, it first checks the cache memory. If the data is not found in cache memory then the CPU moves onto the main memory. It also transfers block of recent data into the cache and keeps on deleting the old data in cache to accomodate the new one.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#CacheMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
     <owl:Class IRI="#SystemBus"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -745,136 +407,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:Class IRI="#Performance"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Performance</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The total effectiveness of the system, including throughput, individual response time, and availability.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Performance</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Security"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Security</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A system is said to be secure if its resources are used and accessed as intended under all the circumstances. It is a process of ensuring confidentiality and integrity of a system. Integrity, secrecy, and availability of the system are the three main objectives.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Security</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Safety"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Safety</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The concept of system safety calls for a risk management strategy based on identification, analysis of hazards, and application of remedial controls using a systems-based approach. The concept of system safety is useful in demonstrating adequacy of a technology when difficulties are faced with probabilistic risk analysis.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Safety</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Reliability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Reliability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reliability is the probability that a system performs correctly during a specific time duration. During this correct operation, no repair should be required or performed, and the system adequately follows the defined performance specifications.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Reliability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Efficiency"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Efficiency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The efficiency indicates the manner in which the inputs are used by the system. Being efficient means the system uses inputs in a 'right' way. If the input-output ratio is adverse, we say that the system is inefficient though it produces the desired output.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Efficiency</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Scalability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Scalability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Scalability is the property of a system that models its capability of handling a growing amount of work by adding resouces or components to the system. It designates the adaptability of the system to an order of magnitude change in demand.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Scalability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Composability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Composability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Composability is a system-design principle that deals with the inter-relationships of components. A highly composable system provides components that can be selected and assembled in various combinations to satisfy specific requirements. Composability requires modularity and statelessness.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Composability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Availability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Availability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Availability is the probability that system will work as required when required during the period of the mission. Availabilty includes non-operational periods associated with reliability, maintenance and logistics. Availabilty is measured in terms of 'nines'. For example, Five-9s (99.999%) means less than 5 minutes when the system is not operating correctly over the span of the year.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Availability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#Sustainability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Sustainability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Capability of  system to endure and maintain its function within defined acceptable limits.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Sustainability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="#X_ilities"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#X_ilities</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Various other kinds of non-functional requirements for a cyber-physical system that are not explicitly elucidated in the model.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#X_ilities</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
     <owl:Class IRI="#ManagementLayer"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -894,7 +426,7 @@
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#CPSComponentLayer</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-	The CPS component layer includes the capabilities for the CPS&#xD;
+	The CPS component layer includes the capabilities for the CPS
 	components to undertake sensing and actuation.
 </owl:Literal>
   </owl:AnnotationAssertion>
@@ -923,8 +455,8 @@
     <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     <owl:IRI>#ServiceLayer</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-	The Services layer consists of functionality for generic support services&#xD;
-	(such as data processing or data storage), and specific support capabilities for the&#xD;
+	The Services layer consists of functionality for generic support services
+	(such as data processing or data storage), and specific support capabilities for the
 	particular applications that may already apply a degree of intelligence.
 </owl:Literal>
   </owl:AnnotationAssertion>
@@ -972,10 +504,6 @@
     <owl:IRI>#CPS</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CPS"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#ConstituentElement"/>
   </owl:Declaration>
@@ -989,254 +517,6 @@
     <owl:IRI>#ConstituentElement</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>http://mpm4cps.eu/ontology/shared#Human</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humans within a CPS perform certain roles within the CPS. </owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>http://mpm4cps.eu/ontology/shared#Human</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEntity"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEntity"/>
-    <owl:Class IRI="#Entity"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Entity"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasHuman"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasHuman"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasEntity"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-  </owl:ObjectPropertyDomain>
-  <owl:SubClassOf>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasRole"/>
-        <owl:Class IRI="#Role"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEvent"/>
-        <owl:Class IRI="#Event"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasAction"/>
-        <owl:Class IRI="#Action"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEntity"/>
-        <owl:Class IRI="#Entity"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
-    <owl:Class IRI="#ConstituentElement"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Control"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Control</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The action of modifying the behaviour of a system through feedback.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Control</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasState"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasState"/>
-    <owl:Class IRI="#State"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#State"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDisturbance"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDisturbance"/>
-    <owl:Class IRI="#Disturbance"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Disturbance"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasInput"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasInput"/>
-    <owl:Class IRI="#Input"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Input"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasOutput"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasOutput"/>
-    <owl:Class IRI="#Output"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Output"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDiagnostics"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDiagnostics"/>
-    <owl:Class IRI="#Diagnostics"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Diagnostics"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPrognostics"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPrognostics"/>
-    <owl:Class IRI="#Prognostics"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Prognostics"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasControl"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasControl"/>
-    <owl:Class IRI="#Control"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasState"/>
-    <owl:Class IRI="#Control"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasDisturbance"/>
-    <owl:Class IRI="#Control"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasInput"/>
-    <owl:Class IRI="#Control"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasOutput"/>
-    <owl:Class IRI="#Control"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasDiagnostics"/>
-    <owl:Class IRI="#Control"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasPrognostics"/>
-    <owl:Class IRI="#Control"/>
-  </owl:ObjectPropertyDomain>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Control"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasFeedback"/>
-        <owl:Class IRI="#Feedback"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasProperties"/>
-        <owl:Class IRI="#Properties"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasGoal"/>
-        <owl:Class IRI="#Goal"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasDynamics"/>
-        <owl:Class IRI="#Dynamics"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasState"/>
-        <owl:Class IRI="#State"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasDisturbance"/>
-        <owl:Class IRI="#Disturbance"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasInput"/>
-        <owl:Class IRI="#Input"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasOutput"/>
-        <owl:Class IRI="#Output"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Control"/>
-    <owl:Class IRI="#ConstituentElement"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Network"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Network</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A set of elements (for example, nodes) connected in some physical or abstract manner (for example, links).</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Network</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasNetwork"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasNetwork"/>
-    <owl:Class IRI="#Network"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Network"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasCommunication"/>
-        <owl:Class IRI="#Communication"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasConfiguration"/>
-        <owl:Class IRI="#Configuration"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Network"/>
-    <owl:Class IRI="#ConstituentElement"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Cyber"/>
   </owl:Declaration>
@@ -1264,28 +544,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasApplicationSoftware"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasApplicationSoftware"/>
-    <owl:Class IRI="#ApplicationSoftware"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ApplicationSoftware"/>
-    <owl:Class IRI="#Software"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEmbedded/FirmwareSoftware"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEmbedded/FirmwareSoftware"/>
-    <owl:Class IRI="#Embedded/FirmwareSoftware"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Embedded/FirmwareSoftware"/>
-    <owl:Class IRI="#Software"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#SystemSoftware"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -1298,28 +556,6 @@
     <owl:IRI>#SystemSoftware</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSystemUtilities"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSystemUtilities"/>
-    <owl:Class IRI="#SystemUtilities"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SystemUtilities"/>
-    <owl:Class IRI="#SystemSoftware"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSystemServices"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSystemServices"/>
-    <owl:Class IRI="#SystemServices"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SystemServices"/>
-    <owl:Class IRI="#SystemSoftware"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#OperatingSystem"/>
   </owl:Declaration>
@@ -1334,343 +570,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasOperatingSystem"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasOperatingSystem"/>
-    <owl:Class IRI="#OperatingSystem"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#OperatingSystem"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasUserInterface"/>
-        <owl:Class IRI="#UserInterface"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#OperatingSystem"/>
-    <owl:Class IRI="#SystemSoftware"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSystemSoftware"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSystemSoftware"/>
-    <owl:Class IRI="#SystemSoftware"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSystemServices"/>
-    <owl:Class IRI="#SystemSoftware"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSystemUtilities"/>
-    <owl:Class IRI="#SystemSoftware"/>
-  </owl:ObjectPropertyDomain>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SystemSoftware"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasOperatingSystem"/>
-        <owl:Class IRI="#OperatingSystem"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSystemServices"/>
-        <owl:Class IRI="#SystemServices"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSystemUtilities"/>
-        <owl:Class IRI="#SystemUtilities"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SystemSoftware"/>
-    <owl:Class IRI="#Software"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSoftware"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSoftware"/>
-    <owl:Class IRI="#Software"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasApplicationSoftware"/>
-    <owl:Class IRI="#Software"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasEmbedded/FirmwareSoftware"/>
-    <owl:Class IRI="#Software"/>
-  </owl:ObjectPropertyDomain>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Software"/>
-    <owl:Class IRI="#Cyber"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCyber"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCyber"/>
-    <owl:Class IRI="#Cyber"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Cyber"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSoftware"/>
-        <owl:Class IRI="#Software"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Cyber"/>
-    <owl:Class IRI="#ConstituentElement"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Physical"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Physical</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class represents the physical components that constitute the cyber-physical system. </owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Physical</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasActuator"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasActuator"/>
-    <owl:Class IRI="#Actuator"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Actuator"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSensor"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSensor"/>
-    <owl:Class IRI="#Sensor"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Sensor"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPlant"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPlant"/>
-    <owl:Class IRI="#Plant"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Plant"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEnvironment"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEnvironment"/>
-    <owl:Class IRI="#Environment"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Environment"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Controller"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Controller</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">External device or component of the system which produces the control signal to modify the system behaviour.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Controller</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasMechanical"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasMechanical"/>
-    <owl:Class IRI="#Mechanical"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Mechanical"/>
-    <owl:Class IRI="#Controller"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Electronic"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Electronic</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The execution platform of the control software</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Electronic</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSystemBus"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSystemBus"/>
-    <owl:Class IRI="#SystemBus"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SystemBus"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
-    <owl:Class IRI="#ExternalInterfaces"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ExternalInterfaces"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasApplication-specificCircuit"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasApplication-specificCircuit"/>
-    <owl:Class IRI="#Application-specificCircuit"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Application-specificCircuit"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasElectronic"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasElectronic"/>
-    <owl:Class IRI="#Electronic"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSystemBus"/>
-    <owl:Class IRI="#Electronic"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
-    <owl:Class IRI="#Electronic"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasApplication-specificCircuit"/>
-    <owl:Class IRI="#Electronic"/>
-  </owl:ObjectPropertyDomain>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Electronic"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasProcessor"/>
-        <owl:Class IRI="#Processor"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasMemory"/>
-        <owl:Class IRI="#Memory"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSystemBus"/>
-        <owl:Class IRI="#SystemBus"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
-        <owl:Class IRI="#ExternalInterfaces"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Electronic"/>
-    <owl:Class IRI="#Controller"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasController"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasController"/>
-    <owl:Class IRI="#Controller"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasMechanical"/>
-    <owl:Class IRI="#Controller"/>
-  </owl:ObjectPropertyDomain>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Controller"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPhysical"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPhysical"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSensor"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasActuator"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasPlant"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasEnvironment"/>
-    <owl:Class IRI="#Physical"/>
-  </owl:ObjectPropertyDomain>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Physical"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasController"/>
-        <owl:Class IRI="#Controller"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSensor"/>
-        <owl:Class IRI="#Sensor"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasActuator"/>
-        <owl:Class IRI="#Actuator"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasPlant"/>
-        <owl:Class IRI="#Plant"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEnvironment"/>
-        <owl:Class IRI="#Environment"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Physical"/>
-    <owl:Class IRI="#ConstituentElement"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ConstituentElement"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#UserInterface"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -1683,10 +582,19 @@
     <owl:IRI>#UserInterface</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#UserInterface"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:Class IRI="#Control"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Control</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The action of modifying the behaviour of a system through feedback.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Control</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
   <owl:Declaration>
     <owl:Class IRI="#Goal"/>
   </owl:Declaration>
@@ -1701,43 +609,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSetpoint"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSetpoint"/>
-    <owl:Class IRI="#Setpoint"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Setpoint"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasRegulation"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasRegulation"/>
-    <owl:Class IRI="#Regulation"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Regulation"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasReferenceSignal"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasReferenceSignal"/>
-    <owl:Class IRI="#ReferenceSignal"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ReferenceSignal"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Goal"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#Tracking"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -1750,10 +621,6 @@
     <owl:IRI>#Tracking</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Tracking"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#ValidityRegion"/>
   </owl:Declaration>
@@ -1767,10 +634,6 @@
     <owl:IRI>#ValidityRegion</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ValidityRegion"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Feedback"/>
   </owl:Declaration>
@@ -1784,10 +647,6 @@
     <owl:IRI>#Feedback</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Feedback"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Dependency"/>
   </owl:Declaration>
@@ -1801,10 +660,6 @@
     <owl:IRI>#Dependency</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Dependency"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Scope"/>
   </owl:Declaration>
@@ -1818,10 +673,6 @@
     <owl:IRI>#Scope</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Scope"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Dynamics"/>
   </owl:Declaration>
@@ -1835,10 +686,6 @@
     <owl:IRI>#Dynamics</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Dynamics"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#SystemType"/>
   </owl:Declaration>
@@ -1852,10 +699,6 @@
     <owl:IRI>#SystemType</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SystemType"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Linearity"/>
   </owl:Declaration>
@@ -1869,10 +712,6 @@
     <owl:IRI>#Linearity</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Linearity"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Timing"/>
   </owl:Declaration>
@@ -1886,10 +725,6 @@
     <owl:IRI>#Timing</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Timing"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Continuity"/>
   </owl:Declaration>
@@ -1904,17 +739,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSmooth"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSmooth"/>
-    <owl:Class IRI="#Smooth"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Smooth"/>
-    <owl:Class IRI="#Continuity"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#Discontinuous"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -1927,21 +751,6 @@
     <owl:IRI>#Discontinuous</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDiscontinuous"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDiscontinuous"/>
-    <owl:Class IRI="#Discontinuous"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Discontinuous"/>
-    <owl:Class IRI="#Continuity"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Continuity"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Behavior"/>
   </owl:Declaration>
@@ -1956,94 +765,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasBifurcations"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasBifurcations"/>
-    <owl:Class IRI="#Bifurcations"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Bifurcations"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasOscillations/Limitcycles"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasOscillations/Limitcycles"/>
-    <owl:Class IRI="#Oscillations/LimitCycles"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Oscillations/LimitCycles"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasHysteresis"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasHysteresis"/>
-    <owl:Class IRI="#Hysteresis"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Hysteresis"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasComplex/strange"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasComplex/strange"/>
-    <owl:Class IRI="#Complex/strange"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Complex/strange"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasChattering"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasChattering"/>
-    <owl:Class IRI="#Chattering"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Chattering"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSlidingmotions"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSlidingmotions"/>
-    <owl:Class IRI="#SlidingMotions"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SlidingMotions"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPhasetransitions"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPhasetransitions"/>
-    <owl:Class IRI="#PhaseTransitions"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#PhaseTransitions"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasZenoness"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasZenoness"/>
-    <owl:Class IRI="#Zenoness"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Zenoness"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#Equilibrium"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -2056,17 +777,6 @@
     <owl:IRI>#Equilibrium</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEquilibrium"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEquilibrium"/>
-    <owl:Class IRI="#Equilibrium"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Equilibrium"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#EmergentBehavior"/>
   </owl:Declaration>
@@ -2081,21 +791,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
-    <owl:Class IRI="#EmergentBehavior"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#EmergentBehavior"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Behavior"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#Topology"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -2108,10 +803,6 @@
     <owl:IRI>#Topology</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Topology"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#TopologicalEvolution"/>
   </owl:Declaration>
@@ -2125,10 +816,6 @@
     <owl:IRI>#TopologicalEvolution</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#TopologicalEvolution"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Properties"/>
   </owl:Declaration>
@@ -2143,149 +830,6 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasStability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasStability"/>
-    <owl:Class IRI="#Stability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Stability"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDissipativity/Passivity"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDissipativity/Passivity"/>
-    <owl:Class IRI="#Dissipativity/Passivity"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Dissipativity/Passivity"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasRobustness"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasRobustness"/>
-    <owl:Class IRI="#Robustness"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Robustness"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasAdaptation"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasAdaptation"/>
-    <owl:Class IRI="#Adaptation"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Adaptation"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasControllability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasControllability"/>
-    <owl:Class IRI="#Controllability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Controllability"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasObservability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasObservability"/>
-    <owl:Class IRI="#Observability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Observability"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasResilience"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasResilience"/>
-    <owl:Class IRI="#Resilience"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Resilience"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasAutonomy"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasAutonomy"/>
-    <owl:Class IRI="#Autonomy"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Autonomy"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasIntelligence"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasIntelligence"/>
-    <owl:Class IRI="#Intelligence"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Intelligence"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasConsistency"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasConsistency"/>
-    <owl:Class IRI="#Consistency"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Consistency"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasHeterogeneity"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasHeterogeneity"/>
-    <owl:Class IRI="#Heterogeneity"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Heterogeneity"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSensitivity"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSensitivity"/>
-    <owl:Class IRI="#Sensitivity"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Sensitivity"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasLearning"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasLearning"/>
-    <owl:Class IRI="#Learning"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Learning"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
     <owl:Class IRI="#Uncertainty"/>
   </owl:Declaration>
   <owl:AnnotationAssertion>
@@ -2298,28 +842,6 @@
     <owl:IRI>#Uncertainty</owl:IRI>
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDeterministic"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDeterministic"/>
-    <owl:Class IRI="#Deterministic"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Deterministic"/>
-    <owl:Class IRI="#Uncertainty"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-    <owl:Class IRI="#Non-deterministic"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Non-deterministic"/>
-    <owl:Class IRI="#Uncertainty"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#Probabilistic"/>
   </owl:Declaration>
@@ -2334,15 +856,482 @@
     <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
   </owl:AnnotationAssertion>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasProbabilistic"/>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>http://mpm4cps.eu/ontology/shared#Human</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humans within a CPS perform certain roles within the CPS. </owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>http://mpm4cps.eu/ontology/shared#Human</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Role"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Role</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Each role represents some capacity or position, where humans playing the role need to contribute for achieving certain behaviour goals set for the CPS. Each role is defined in terms of responsibilities and constraints pertaining to the role that are required for contributing to achieving the behaviour goals set for the CPS.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Role</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Event"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Event</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A human can perceive events generated by the CPS or environment. An event is a kind of entity that is related to the states of affairs before and after it has occurred. A human perceives events through sensors.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Event</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Action"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Action</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humans within a CPS exercise their responsibilities defined by roles by performing certain actions. Action is an entity that is targeted at changing the state of the CPS or environment. Actions are divided into physical actions, communicative actions, and epistemic actions.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Action</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Network"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Network</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A set of elements (for example, nodes) connected in some physical or abstract manner (for example, links).</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Network</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Configuration"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Configuration</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Network configuration is also known as network topology. This class describes how the nodes/devices/components in the system network are arranged and how they communicate with each other.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Configuration</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Communication"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Communication</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class models the communication system and the communication protocols used in the network between the different components of the cyber-physical system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Communication</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#ComType"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ComType</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class models the type of communication: whether it is synchronus or asynchronous.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ComType</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Protocol"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Protocol</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">That feature of a communication network that allows two or more entities/subcomponents to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication, and possible error recovery methods.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Protocol</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Physical"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Physical</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class represents the physical components that constitute the cyber-physical system. </owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Physical</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Controller"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Controller</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">External device or component of the system which produces the control signal to modify the system behaviour.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Controller</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Electronic"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Electronic</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The execution platform of the control software</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Electronic</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Processor"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Processor</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A process or processing unit is a digital circuit which performs operations on some external data source. It typically takes the form of a microprocessor, implented on a metal-oxide semiconductor integrated circuit chip.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Processor</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Memory"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Memory</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Memory refers to a device that is used to store information for immediate use in a computer or related computer hardware. It typically refers to semi-conductor memory, where data is stored within MOS (Metal-Oxide Semiconductor) cells on an integrated chip.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Memory</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#AuxiliaryMemory"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#AuxiliaryMemory</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Devices that provide backup storage are called auxiliary memory. It is not directly accessible to the CPU, and is accessed using the Input/Output channels. Magnetic disks and tapes are commonly used auxiliary devices. Other devices used as auxiliary memory are magnetic drums, magnetic bubble memory and optical disks.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#AuxiliaryMemory</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#nonfunctionalReqs"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#nonfunctionalReqs</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nonfunctional Requirements (NFRs) define system attributes such as security, reliability, performance, maintainability, scalability, and usability. They serve as constraints or restrictions on the design of the system across the different backlogs. They ensure the usability and effectiveness of the entire system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#nonfunctionalReqs</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Interoperability"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Interoperability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+	The interoperability is the capacity of a product or system whose interfaces are fully known to work with other products or existing or future systems and unrestricted access or implementation.
+	Interoperability is different from compatibility. Where compatibility is a vertical notion that a system can operate in agiven environment, interoperability is a transversal notion that allows various systems to communicate and work together.
+</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Interoperability</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#ApplicationDomain"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#ApplicationDomain</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class describes the various domains and industrial sectors which the cyber-physical system is concerned with.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#ApplicationDomain</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Disciplines"/>
+  </owl:Declaration>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    <owl:IRI>#Disciplines</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class describes the various engineering and other disciplines that are associated with the development and application of the cyber-physical system.</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:AnnotationAssertion>
+    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
+    <owl:IRI>#Disciplines</owl:IRI>
+    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
+  </owl:AnnotationAssertion>
+  <owl:Declaration>
+    <owl:Class IRI="#Architecture"/>
+  </owl:Declaration>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasCommunicationAction"/>
   </owl:Declaration>
   <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasProbabilistic"/>
-    <owl:Class IRI="#Probabilistic"/>
+    <owl:ObjectProperty IRI="#hasCommunicationAction"/>
+    <owl:Class IRI="#CommunicationAction"/>
   </owl:ObjectPropertyRange>
   <owl:SubClassOf>
-    <owl:Class IRI="#Probabilistic"/>
-    <owl:Class IRI="#Uncertainty"/>
+    <owl:Class IRI="#Action"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasAction"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasAction"/>
+    <owl:Class IRI="#Action"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasCommunicationAction"/>
+    <owl:Class IRI="#Action"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasPhysicalAction"/>
+    <owl:Class IRI="#Action"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasEpistemicAction"/>
+    <owl:Class IRI="#Action"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Action"/>
+    <owl:ObjectUnionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasCommunicationAction"/>
+        <owl:Class IRI="#CommunicationAction"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasPhysicalAction"/>
+        <owl:Class IRI="#PhysicalAction"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEpistemicAction"/>
+        <owl:Class IRI="#EpistemicAction"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectUnionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#CommunicationAction"/>
+    <owl:Class IRI="#Action"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasPhysicalAction"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasPhysicalAction"/>
+    <owl:Class IRI="#PhysicalAction"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#PhysicalAction"/>
+    <owl:Class IRI="#Action"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasEpistemicAction"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEpistemicAction"/>
+    <owl:Class IRI="#EpistemicAction"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#EpistemicAction"/>
+    <owl:Class IRI="#Action"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasAuxiliaryMemory"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasAuxiliaryMemory"/>
+    <owl:Class IRI="#AuxiliaryMemory"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Memory"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasMemory"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasMemory"/>
+    <owl:Class IRI="#Memory"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Memory"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasMainMemory"/>
+        <owl:Class IRI="#MainMemory"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasCacheMemory"/>
+        <owl:Class IRI="#CacheMemory"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#AuxiliaryMemory"/>
+    <owl:Class IRI="#Memory"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasInteroperability"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasInteroperability"/>
+    <owl:Class IRI="#Interoperability"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#nonfunctionalReqs"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasnonfunctionalReqs"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasnonfunctionalReqs"/>
+    <owl:Class IRI="#nonfunctionalReqs"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#nonfunctionalReqs"/>
+    <owl:ObjectUnionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasInteroperability"/>
+        <owl:Class IRI="#Interoperability"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasPerformance"/>
+        <owl:Class IRI="#Performance"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSecurity"/>
+        <owl:Class IRI="#Security"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSafety"/>
+        <owl:Class IRI="#Safety"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasReliability"/>
+        <owl:Class IRI="#Reliability"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEfficiency"/>
+        <owl:Class IRI="#Efficiency"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasScalability"/>
+        <owl:Class IRI="#Scalability"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasComposability"/>
+        <owl:Class IRI="#Composability"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasAvailability"/>
+        <owl:Class IRI="#Availability"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSustainability"/>
+        <owl:Class IRI="#Sustainability"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasX_ilities"/>
+        <owl:Class IRI="#X_ilities"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectUnionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Interoperability"/>
+    <owl:Class IRI="#nonfunctionalReqs"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasEquilibrium"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEquilibrium"/>
+    <owl:Class IRI="#Equilibrium"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Behavior"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasBehavior"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasBehavior"/>
+    <owl:Class IRI="#Behavior"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Behavior"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEquilibrium"/>
+        <owl:Class IRI="#Equilibrium"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
+        <owl:Class IRI="#EmergentBehavior"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Equilibrium"/>
+    <owl:Class IRI="#Behavior"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
+    <owl:Class IRI="#EmergentBehavior"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#EmergentBehavior"/>
+    <owl:Class IRI="#Behavior"/>
   </owl:SubClassOf>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasUncertainty"/>
@@ -2351,14 +1340,6 @@
     <owl:ObjectProperty IRI="#hasUncertainty"/>
     <owl:Class IRI="#Uncertainty"/>
   </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasDeterministic"/>
-    <owl:Class IRI="#Uncertainty"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-    <owl:Class IRI="#Uncertainty"/>
-  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Uncertainty"/>
     <owl:ObjectUnionOf>
@@ -2444,952 +1425,529 @@
     </owl:ObjectComplementOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#Uncertainty"/>
     <owl:Class IRI="#Properties"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Properties"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Role"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Role</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Each role represents some capacity or position, where humans playing the role need to contribute for achieving certain behaviour goals set for the CPS. Each role is defined in terms of responsibilities and constraints pertaining to the role that are required for contributing to achieving the behaviour goals set for the CPS.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Role</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasResponsibilities"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasResponsibilities"/>
-    <owl:Class IRI="#Responsibilities"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Responsibilities"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasConstraints"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasConstraints"/>
-    <owl:Class IRI="#Constraints"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Constraints"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Role"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Event"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Event</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A human can perceive events generated by the CPS or environment. An event is a kind of entity that is related to the states of affairs before and after it has occurred. A human perceives events through sensors.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Event</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasState-of-Affairs"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasState-of-Affairs"/>
-    <owl:Class IRI="#State-of-Affairs"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#State-of-Affairs"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Event"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Action"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Action</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Humans within a CPS exercise their responsibilities defined by roles by performing certain actions. Action is an entity that is targeted at changing the state of the CPS or environment. Actions are divided into physical actions, communicative actions, and epistemic actions.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Action</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCommunicationAction"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCommunicationAction"/>
-    <owl:Class IRI="#CommunicationAction"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CommunicationAction"/>
-    <owl:Class IRI="#Action"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPhysicalAction"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPhysicalAction"/>
-    <owl:Class IRI="#PhysicalAction"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#PhysicalAction"/>
-    <owl:Class IRI="#Action"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEpistemicAction"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEpistemicAction"/>
-    <owl:Class IRI="#EpistemicAction"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#EpistemicAction"/>
-    <owl:Class IRI="#Action"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Action"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Configuration"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Configuration</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Network configuration is also known as network topology. This class describes how the nodes/devices/components in the system network are arranged and how they communicate with each other.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Configuration</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Configuration"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Communication"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Communication</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class models the communication system and the communication protocols used in the network between the different components of the cyber-physical system.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Communication</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Communication"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#ComType"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#ComType</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class models the type of communication: whether it is synchronus or asynchronous.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#ComType</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ComType"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Protocol"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Protocol</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">That feature of a communication network that allows two or more entities/subcomponents to transmit information. The protocol defines the rules, syntax, semantics and synchronization of communication, and possible error recovery methods.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Protocol</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Protocol"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Processor"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Processor</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A process or processing unit is a digital circuit which performs operations on some external data source. It typically takes the form of a microprocessor, implented on a metal-oxide semiconductor integrated circuit chip.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Processor</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Processor"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Memory"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Memory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Memory refers to a device that is used to store information for immediate use in a computer or related computer hardware. It typically refers to semi-conductor memory, where data is stored within MOS (Metal-Oxide Semiconductor) cells on an integrated chip.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Memory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCacheMemory"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCacheMemory"/>
-    <owl:Class IRI="#CacheMemory"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CacheMemory"/>
-    <owl:Class IRI="#Memory"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasMainMemory"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasMainMemory"/>
-    <owl:Class IRI="#MainMemory"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#MainMemory"/>
-    <owl:Class IRI="#Memory"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#AuxiliaryMemory"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#AuxiliaryMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Devices that provide backup storage are called auxiliary memory. It is not directly accessible to the CPU, and is accessed using the Input/Output channels. Magnetic disks and tapes are commonly used auxiliary devices. Other devices used as auxiliary memory are magnetic drums, magnetic bubble memory and optical disks.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#AuxiliaryMemory</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasAuxiliaryMemory"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasAuxiliaryMemory"/>
-    <owl:Class IRI="#AuxiliaryMemory"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#AuxiliaryMemory"/>
-    <owl:Class IRI="#Memory"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Memory"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#nonfunctionalReqs</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nonfunctional Requirements (NFRs) define system attributes such as security, reliability, performance, maintainability, scalability, and usability. They serve as constraints or restrictions on the design of the system across the different backlogs. They ensure the usability and effectiveness of the entire system.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#nonfunctionalReqs</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasPerformance"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasPerformance"/>
-    <owl:Class IRI="#Performance"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Performance"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSecurity"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSecurity"/>
-    <owl:Class IRI="#Security"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Security"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSafety"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSafety"/>
-    <owl:Class IRI="#Safety"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Safety"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasReliability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasReliability"/>
-    <owl:Class IRI="#Reliability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Reliability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEfficiency"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEfficiency"/>
-    <owl:Class IRI="#Efficiency"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Efficiency"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasScalability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasScalability"/>
-    <owl:Class IRI="#Scalability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Scalability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasComposability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasComposability"/>
-    <owl:Class IRI="#Composability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Composability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasAvailability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasAvailability"/>
-    <owl:Class IRI="#Availability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Availability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSustainability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSustainability"/>
-    <owl:Class IRI="#Sustainability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Sustainability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasX_ilities"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasX_ilities"/>
-    <owl:Class IRI="#X_ilities"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#X_ilities"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Interoperability"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Interoperability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
-	The interoperability is the capacity of a product or system whose interfaces are fully known to work with other products or existing or future systems and unrestricted access or implementation.
-	Interoperability is different from compatibility. Where compatibility is a vertical notion that a system can operate in agiven environment, interoperability is a transversal notion that allows various systems to communicate and work together.
-</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Interoperability</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasInteroperability"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasInteroperability"/>
-    <owl:Class IRI="#Interoperability"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Interoperability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#ApplicationDomain"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#ApplicationDomain</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class describes the various domains and industrial sectors which the cyber-physical system is concerned with.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#ApplicationDomain</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ApplicationDomain"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Disciplines"/>
-  </owl:Declaration>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    <owl:IRI>#Disciplines</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class describes the various engineering and other disciplines that are associated with the development and application of the cyber-physical system.</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:AnnotationAssertion>
-    <owl:AnnotationProperty IRI="#mpm4cps:author"/>
-    <owl:IRI>#Disciplines</owl:IRI>
-    <owl:Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FeatureModel</owl:Literal>
-  </owl:AnnotationAssertion>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Disciplines"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:Class IRI="#Architecture"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasManagementLayer"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasManagementLayer"/>
-    <owl:Class IRI="#ManagementLayer"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ManagementLayer"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCPSComponentLayer"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCPSComponentLayer"/>
-    <owl:Class IRI="#CPSComponentLayer"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CPSComponentLayer"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasNetworkLayer"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasNetworkLayer"/>
-    <owl:Class IRI="#NetworkLayer"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#NetworkLayer"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasServiceLayer"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasServiceLayer"/>
-    <owl:Class IRI="#ServiceLayer"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ServiceLayer"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasApplicationLayer"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasApplicationLayer"/>
-    <owl:Class IRI="#ApplicationLayer"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#ApplicationLayer"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSecurityLayer"/>
-  </owl:Declaration>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSecurityLayer"/>
-    <owl:Class IRI="#SecurityLayer"/>
-  </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
-    <owl:Class IRI="#SecurityLayer"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#Architecture"/>
-    <owl:Class IRI="#CpsDC"/>
-  </owl:SubClassOf>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCPS"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasConstituentElement"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasUserInterface"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasGoal"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasTracking"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasValidityRegion"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasFeedback"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDependency"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasScope"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDynamics"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasSystemType"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasLinearity"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasTiming"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasContinuity"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasBehavior"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasTopology"/>
-  </owl:Declaration>
-  <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasTopologicalEvolution"/>
-  </owl:Declaration>
   <owl:Declaration>
     <owl:ObjectProperty IRI="#hasProperties"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasProperties"/>
+    <owl:Class IRI="#Properties"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Uncertainty"/>
+    <owl:Class IRI="#Properties"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasRole"/>
+    <owl:ObjectProperty IRI="#hasMechanical"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasMechanical"/>
+    <owl:Class IRI="#Mechanical"/>
+  </owl:ObjectPropertyRange>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasEvent"/>
+    <owl:ObjectProperty IRI="#hasController"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasController"/>
+    <owl:Class IRI="#Controller"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasMechanical"/>
+    <owl:Class IRI="#Controller"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Mechanical"/>
+    <owl:Class IRI="#Controller"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasAction"/>
+    <owl:ObjectProperty IRI="#hasElectronic"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasElectronic"/>
+    <owl:Class IRI="#Electronic"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSystemBus"/>
+    <owl:Class IRI="#Electronic"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
+    <owl:Class IRI="#Electronic"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasApplication-specificCircuit"/>
+    <owl:Class IRI="#Electronic"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Electronic"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasProcessor"/>
+        <owl:Class IRI="#Processor"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasMemory"/>
+        <owl:Class IRI="#Memory"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSystemBus"/>
+        <owl:Class IRI="#SystemBus"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
+        <owl:Class IRI="#ExternalInterfaces"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Electronic"/>
+    <owl:Class IRI="#Controller"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasConfiguration"/>
+    <owl:ObjectProperty IRI="#hasHuman"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasHuman"/>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasEntity"/>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+    <owl:ObjectUnionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasRole"/>
+        <owl:Class IRI="#Role"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEvent"/>
+        <owl:Class IRI="#Event"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasAction"/>
+        <owl:Class IRI="#Action"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEntity"/>
+        <owl:Class IRI="#Entity"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectUnionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ConstituentElement"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasCommunication"/>
+    <owl:ObjectProperty IRI="#hasConstituentElement"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasConstituentElement"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ConstituentElement"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasCyber"/>
+        <owl:Class IRI="#Cyber"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasControl"/>
+        <owl:Class IRI="#Control"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasNetwork"/>
+        <owl:Class IRI="#Network"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasPhysical"/>
+        <owl:Class IRI="#Physical"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasComType"/>
+    <owl:ObjectProperty IRI="#hasControl"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasControl"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasState"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasDisturbance"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasInput"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasOutput"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasDiagnostics"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasPrognostics"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Control"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasFeedback"/>
+        <owl:Class IRI="#Feedback"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasProperties"/>
+        <owl:Class IRI="#Properties"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasGoal"/>
+        <owl:Class IRI="#Goal"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasDynamics"/>
+        <owl:Class IRI="#Dynamics"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasState"/>
+        <owl:Class IRI="#State"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasDisturbance"/>
+        <owl:Class IRI="#Disturbance"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasInput"/>
+        <owl:Class IRI="#Input"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasOutput"/>
+        <owl:Class IRI="#Output"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Control"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasProtocol"/>
+    <owl:ObjectProperty IRI="#hasNetwork"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasNetwork"/>
+    <owl:Class IRI="#Network"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Network"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasCommunication"/>
+        <owl:Class IRI="#Communication"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasConfiguration"/>
+        <owl:Class IRI="#Configuration"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Network"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasProcessor"/>
+    <owl:ObjectProperty IRI="#hasCyber"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasCyber"/>
+    <owl:Class IRI="#Cyber"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Cyber"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSoftware"/>
+        <owl:Class IRI="#Software"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Cyber"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasMemory"/>
+    <owl:ObjectProperty IRI="#hasPhysical"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasPhysical"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSensor"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasActuator"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasPlant"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasEnvironment"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Physical"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasController"/>
+        <owl:Class IRI="#Controller"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSensor"/>
+        <owl:Class IRI="#Sensor"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasActuator"/>
+        <owl:Class IRI="#Actuator"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasPlant"/>
+        <owl:Class IRI="#Plant"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasEnvironment"/>
+        <owl:Class IRI="#Environment"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Physical"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasnonfunctionalReqs"/>
+    <owl:ObjectProperty IRI="#hasSoftware"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSoftware"/>
+    <owl:Class IRI="#Software"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasApplicationSoftware"/>
+    <owl:Class IRI="#Software"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasEmbedded/FirmwareSoftware"/>
+    <owl:Class IRI="#Software"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Software"/>
+    <owl:Class IRI="#Cyber"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasApplicationDomain"/>
+    <owl:ObjectProperty IRI="#hasApplicationSoftware"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasApplicationSoftware"/>
+    <owl:Class IRI="#ApplicationSoftware"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ApplicationSoftware"/>
+    <owl:Class IRI="#Software"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasDisciplines"/>
+    <owl:ObjectProperty IRI="#hasEmbedded/FirmwareSoftware"/>
   </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEmbedded/FirmwareSoftware"/>
+    <owl:Class IRI="#Embedded/FirmwareSoftware"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Embedded/FirmwareSoftware"/>
+    <owl:Class IRI="#Software"/>
+  </owl:SubClassOf>
   <owl:Declaration>
-    <owl:ObjectProperty IRI="#hasArchitecture"/>
+    <owl:ObjectProperty IRI="#hasSystemSoftware"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSystemSoftware"/>
+    <owl:Class IRI="#SystemSoftware"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSystemServices"/>
+    <owl:Class IRI="#SystemSoftware"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSystemUtilities"/>
+    <owl:Class IRI="#SystemSoftware"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#SystemSoftware"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasOperatingSystem"/>
+        <owl:Class IRI="#OperatingSystem"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSystemServices"/>
+        <owl:Class IRI="#SystemServices"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSystemUtilities"/>
+        <owl:Class IRI="#SystemUtilities"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#SystemSoftware"/>
+    <owl:Class IRI="#Software"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasSystemUtilities"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSystemUtilities"/>
+    <owl:Class IRI="#SystemUtilities"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#SystemUtilities"/>
+    <owl:Class IRI="#SystemSoftware"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasSystemServices"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSystemServices"/>
+    <owl:Class IRI="#SystemServices"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#SystemServices"/>
+    <owl:Class IRI="#SystemSoftware"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasOperatingSystem"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasOperatingSystem"/>
+    <owl:Class IRI="#OperatingSystem"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#OperatingSystem"/>
+    <owl:ObjectIntersectionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasUserInterface"/>
+        <owl:Class IRI="#UserInterface"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectIntersectionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#OperatingSystem"/>
+    <owl:Class IRI="#SystemSoftware"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDiscontinuous"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDiscontinuous"/>
+    <owl:Class IRI="#Discontinuous"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Continuity"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasContinuity"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasContinuity"/>
+    <owl:Class IRI="#Continuity"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Discontinuous"/>
+    <owl:Class IRI="#Continuity"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasActuator"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasActuator"/>
+    <owl:Class IRI="#Actuator"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Actuator"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasSensor"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSensor"/>
+    <owl:Class IRI="#Sensor"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Sensor"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasPlant"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasPlant"/>
+    <owl:Class IRI="#Plant"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Plant"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasEnvironment"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEnvironment"/>
+    <owl:Class IRI="#Environment"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Environment"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Controller"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasProbabilistic"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasProbabilistic"/>
+    <owl:Class IRI="#Probabilistic"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Probabilistic"/>
+    <owl:Class IRI="#Uncertainty"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasCPS"/>
   </owl:Declaration>
   <owl:ObjectPropertyRange>
     <owl:ObjectProperty IRI="#hasCPS"/>
     <owl:Class IRI="#CPS"/>
   </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasConstituentElement"/>
-    <owl:Class IRI="#ConstituentElement"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasUserInterface"/>
-    <owl:Class IRI="#UserInterface"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasGoal"/>
-    <owl:Class IRI="#Goal"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasTracking"/>
-    <owl:Class IRI="#Tracking"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasValidityRegion"/>
-    <owl:Class IRI="#ValidityRegion"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasFeedback"/>
-    <owl:Class IRI="#Feedback"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDependency"/>
-    <owl:Class IRI="#Dependency"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasScope"/>
-    <owl:Class IRI="#Scope"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDynamics"/>
-    <owl:Class IRI="#Dynamics"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasSystemType"/>
-    <owl:Class IRI="#SystemType"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasLinearity"/>
-    <owl:Class IRI="#Linearity"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasTiming"/>
-    <owl:Class IRI="#Timing"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasContinuity"/>
-    <owl:Class IRI="#Continuity"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasBehavior"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasTopology"/>
-    <owl:Class IRI="#Topology"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasTopologicalEvolution"/>
-    <owl:Class IRI="#TopologicalEvolution"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasProperties"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasRole"/>
-    <owl:Class IRI="#Role"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasEvent"/>
-    <owl:Class IRI="#Event"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasAction"/>
-    <owl:Class IRI="#Action"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasConfiguration"/>
-    <owl:Class IRI="#Configuration"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasCommunication"/>
-    <owl:Class IRI="#Communication"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasComType"/>
-    <owl:Class IRI="#ComType"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasProtocol"/>
-    <owl:Class IRI="#Protocol"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasProcessor"/>
-    <owl:Class IRI="#Processor"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasMemory"/>
-    <owl:Class IRI="#Memory"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasnonfunctionalReqs"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasApplicationDomain"/>
-    <owl:Class IRI="#ApplicationDomain"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasDisciplines"/>
-    <owl:Class IRI="#Disciplines"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyRange>
-    <owl:ObjectProperty IRI="#hasArchitecture"/>
-    <owl:Class IRI="#Architecture"/>
-  </owl:ObjectPropertyRange>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSetpoint"/>
-    <owl:Class IRI="#Goal"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasRegulation"/>
-    <owl:Class IRI="#Goal"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasReferenceSignal"/>
-    <owl:Class IRI="#Goal"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSmooth"/>
-    <owl:Class IRI="#Continuity"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasBifurcations"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasOscillations/Limitcycles"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasHysteresis"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasComplex/strange"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasChattering"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSlidingmotions"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasPhasetransitions"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasZenoness"/>
-    <owl:Class IRI="#Behavior"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasStability"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasDissipativity/Passivity"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasRobustness"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasAdaptation"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasControllability"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasObservability"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasResilience"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasAutonomy"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasIntelligence"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasConsistency"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasHeterogeneity"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSensitivity"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasLearning"/>
-    <owl:Class IRI="#Properties"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasResponsibilities"/>
-    <owl:Class IRI="#Role"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasConstraints"/>
-    <owl:Class IRI="#Role"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasState-of-Affairs"/>
-    <owl:Class IRI="#Event"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasCommunicationAction"/>
-    <owl:Class IRI="#Action"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasPhysicalAction"/>
-    <owl:Class IRI="#Action"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasEpistemicAction"/>
-    <owl:Class IRI="#Action"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasMainMemory"/>
-    <owl:Class IRI="#Memory"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasCacheMemory"/>
-    <owl:Class IRI="#Memory"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasPerformance"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSecurity"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSafety"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasReliability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasEfficiency"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasScalability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasComposability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasAvailability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSustainability"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasX_ilities"/>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasManagementLayer"/>
-    <owl:Class IRI="#Architecture"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasCPSComponentLayer"/>
-    <owl:Class IRI="#Architecture"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasNetworkLayer"/>
-    <owl:Class IRI="#Architecture"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasServiceLayer"/>
-    <owl:Class IRI="#Architecture"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasApplicationLayer"/>
-    <owl:Class IRI="#Architecture"/>
-  </owl:ObjectPropertyDomain>
-  <owl:ObjectPropertyDomain>
-    <owl:ObjectProperty IRI="#hasSecurityLayer"/>
-    <owl:Class IRI="#Architecture"/>
-  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#CPS"/>
     <owl:ObjectIntersectionOf>
@@ -3416,26 +1974,71 @@
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#ConstituentElement"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasCyber"/>
-        <owl:Class IRI="#Cyber"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasControl"/>
-        <owl:Class IRI="#Control"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasNetwork"/>
-        <owl:Class IRI="#Network"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasPhysical"/>
-        <owl:Class IRI="#Physical"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
+    <owl:Class IRI="#CPS"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasUserInterface"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasUserInterface"/>
+    <owl:Class IRI="#UserInterface"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#UserInterface"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasGoal"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasGoal"/>
+    <owl:Class IRI="#Goal"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSetpoint"/>
+    <owl:Class IRI="#Goal"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasRegulation"/>
+    <owl:Class IRI="#Goal"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasReferenceSignal"/>
+    <owl:Class IRI="#Goal"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Goal"/>
+    <owl:ObjectUnionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasTracking"/>
+        <owl:Class IRI="#Tracking"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSetpoint"/>
+        <owl:Class IRI="#Setpoint"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasRegulation"/>
+        <owl:Class IRI="#Regulation"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasReferenceSignal"/>
+        <owl:Class IRI="#ReferenceSignal"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectUnionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Goal"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasTracking"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasTracking"/>
+    <owl:Class IRI="#Tracking"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Tracking"/>
     <owl:ObjectIntersectionOf>
@@ -3445,6 +2048,28 @@
       </owl:ObjectSomeValuesFrom>
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Tracking"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasValidityRegion"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasValidityRegion"/>
+    <owl:Class IRI="#ValidityRegion"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ValidityRegion"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasFeedback"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasFeedback"/>
+    <owl:Class IRI="#Feedback"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Feedback"/>
     <owl:ObjectIntersectionOf>
@@ -3459,18 +2084,116 @@
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#Behavior"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEquilibrium"/>
-        <owl:Class IRI="#Equilibrium"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
-        <owl:Class IRI="#EmergentBehavior"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
+    <owl:Class IRI="#Feedback"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDependency"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDependency"/>
+    <owl:Class IRI="#Dependency"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Dependency"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasScope"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasScope"/>
+    <owl:Class IRI="#Scope"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Scope"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDynamics"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDynamics"/>
+    <owl:Class IRI="#Dynamics"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Dynamics"/>
+    <owl:ObjectUnionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasBehavior"/>
+        <owl:Class IRI="#Behavior"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasTopology"/>
+        <owl:Class IRI="#Topology"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasSystemType"/>
+        <owl:Class IRI="#SystemType"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectUnionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Dynamics"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasSystemType"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSystemType"/>
+    <owl:Class IRI="#SystemType"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#SystemType"/>
+    <owl:ObjectUnionOf>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasContinuity"/>
+        <owl:Class IRI="#Continuity"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasLinearity"/>
+        <owl:Class IRI="#Linearity"/>
+      </owl:ObjectSomeValuesFrom>
+      <owl:ObjectSomeValuesFrom>
+        <owl:ObjectProperty IRI="#hasTiming"/>
+        <owl:Class IRI="#Timing"/>
+      </owl:ObjectSomeValuesFrom>
+    </owl:ObjectUnionOf>
+  </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#SystemType"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasLinearity"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasLinearity"/>
+    <owl:Class IRI="#Linearity"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Linearity"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasTiming"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasTiming"/>
+    <owl:Class IRI="#Timing"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Timing"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasTopology"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasTopology"/>
+    <owl:Class IRI="#Topology"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
     <owl:Class IRI="#Topology"/>
     <owl:ObjectIntersectionOf>
@@ -3480,6 +2203,36 @@
       </owl:ObjectSomeValuesFrom>
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Topology"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasTopologicalEvolution"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasTopologicalEvolution"/>
+    <owl:Class IRI="#TopologicalEvolution"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#TopologicalEvolution"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasRole"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasRole"/>
+    <owl:Class IRI="#Role"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasResponsibilities"/>
+    <owl:Class IRI="#Role"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasConstraints"/>
+    <owl:Class IRI="#Role"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Role"/>
     <owl:ObjectIntersectionOf>
@@ -3494,6 +2247,43 @@
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
+    <owl:Class IRI="#Role"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasEvent"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEvent"/>
+    <owl:Class IRI="#Event"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasState-of-Affairs"/>
+    <owl:Class IRI="#Event"/>
+  </owl:ObjectPropertyDomain>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Event"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasConfiguration"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasConfiguration"/>
+    <owl:Class IRI="#Configuration"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Configuration"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasCommunication"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasCommunication"/>
+    <owl:Class IRI="#Communication"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
     <owl:Class IRI="#Communication"/>
     <owl:ObjectIntersectionOf>
       <owl:ObjectSomeValuesFrom>
@@ -3507,18 +2297,95 @@
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#Memory"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasMainMemory"/>
-        <owl:Class IRI="#MainMemory"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasCacheMemory"/>
-        <owl:Class IRI="#CacheMemory"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
+    <owl:Class IRI="#Communication"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasComType"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasComType"/>
+    <owl:Class IRI="#ComType"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ComType"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasProtocol"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasProtocol"/>
+    <owl:Class IRI="#Protocol"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Protocol"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasProcessor"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasProcessor"/>
+    <owl:Class IRI="#Processor"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Processor"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasApplicationDomain"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasApplicationDomain"/>
+    <owl:Class IRI="#ApplicationDomain"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ApplicationDomain"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDisciplines"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDisciplines"/>
+    <owl:Class IRI="#Disciplines"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Disciplines"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasArchitecture"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasArchitecture"/>
+    <owl:Class IRI="#Architecture"/>
+  </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasManagementLayer"/>
+    <owl:Class IRI="#Architecture"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasCPSComponentLayer"/>
+    <owl:Class IRI="#Architecture"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasNetworkLayer"/>
+    <owl:Class IRI="#Architecture"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasServiceLayer"/>
+    <owl:Class IRI="#Architecture"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasApplicationLayer"/>
+    <owl:Class IRI="#Architecture"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSecurityLayer"/>
+    <owl:Class IRI="#Architecture"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Architecture"/>
     <owl:ObjectIntersectionOf>
@@ -3549,124 +2416,249 @@
     </owl:ObjectIntersectionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
-    <owl:Class IRI="#Goal"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasTracking"/>
-        <owl:Class IRI="#Tracking"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSetpoint"/>
-        <owl:Class IRI="#Setpoint"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasRegulation"/>
-        <owl:Class IRI="#Regulation"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasReferenceSignal"/>
-        <owl:Class IRI="#ReferenceSignal"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
+    <owl:Class IRI="#Architecture"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasState"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasState"/>
+    <owl:Class IRI="#State"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
-    <owl:Class IRI="#Dynamics"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasBehavior"/>
-        <owl:Class IRI="#Behavior"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasTopology"/>
-        <owl:Class IRI="#Topology"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSystemType"/>
-        <owl:Class IRI="#SystemType"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
+    <owl:Class IRI="#State"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDisturbance"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDisturbance"/>
+    <owl:Class IRI="#Disturbance"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
-    <owl:Class IRI="#SystemType"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasContinuity"/>
-        <owl:Class IRI="#Continuity"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasLinearity"/>
-        <owl:Class IRI="#Linearity"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasTiming"/>
-        <owl:Class IRI="#Timing"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
+    <owl:Class IRI="#Disturbance"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasInput"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasInput"/>
+    <owl:Class IRI="#Input"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
-    <owl:Class IRI="#Action"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasCommunicationAction"/>
-        <owl:Class IRI="#CommunicationAction"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasPhysicalAction"/>
-        <owl:Class IRI="#PhysicalAction"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEpistemicAction"/>
-        <owl:Class IRI="#EpistemicAction"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
+    <owl:Class IRI="#Input"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasOutput"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasOutput"/>
+    <owl:Class IRI="#Output"/>
+  </owl:ObjectPropertyRange>
   <owl:SubClassOf>
-    <owl:Class IRI="#nonfunctionalReqs"/>
-    <owl:ObjectUnionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasInteroperability"/>
-        <owl:Class IRI="#Interoperability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasPerformance"/>
-        <owl:Class IRI="#Performance"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSecurity"/>
-        <owl:Class IRI="#Security"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSafety"/>
-        <owl:Class IRI="#Safety"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasReliability"/>
-        <owl:Class IRI="#Reliability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEfficiency"/>
-        <owl:Class IRI="#Efficiency"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasScalability"/>
-        <owl:Class IRI="#Scalability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasComposability"/>
-        <owl:Class IRI="#Composability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasAvailability"/>
-        <owl:Class IRI="#Availability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSustainability"/>
-        <owl:Class IRI="#Sustainability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasX_ilities"/>
-        <owl:Class IRI="#X_ilities"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectUnionOf>
+    <owl:Class IRI="#Output"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasSetpoint"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSetpoint"/>
+    <owl:Class IRI="#Setpoint"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Setpoint"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasRegulation"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasRegulation"/>
+    <owl:Class IRI="#Regulation"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Regulation"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasReferenceSignal"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasReferenceSignal"/>
+    <owl:Class IRI="#ReferenceSignal"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ReferenceSignal"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasDiagnostics"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasDiagnostics"/>
+    <owl:Class IRI="#Diagnostics"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Diagnostics"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasPrognostics"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasPrognostics"/>
+    <owl:Class IRI="#Prognostics"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Prognostics"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasResponsibilities"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasResponsibilities"/>
+    <owl:Class IRI="#Responsibilities"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Responsibilities"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasConstraints"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasConstraints"/>
+    <owl:Class IRI="#Constraints"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Constraints"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasState-of-Affairs"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasState-of-Affairs"/>
+    <owl:Class IRI="#State-of-Affairs"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#State-of-Affairs"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasEntity"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasEntity"/>
+    <owl:Class IRI="#Entity"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Entity"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasSystemBus"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSystemBus"/>
+    <owl:Class IRI="#SystemBus"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#SystemBus"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasExternalInterfaces"/>
+    <owl:Class IRI="#ExternalInterfaces"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ExternalInterfaces"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasApplication-specificCircuit"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasApplication-specificCircuit"/>
+    <owl:Class IRI="#Application-specificCircuit"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#Application-specificCircuit"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasManagementLayer"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasManagementLayer"/>
+    <owl:Class IRI="#ManagementLayer"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ManagementLayer"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasCPSComponentLayer"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasCPSComponentLayer"/>
+    <owl:Class IRI="#CPSComponentLayer"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#CPSComponentLayer"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasNetworkLayer"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasNetworkLayer"/>
+    <owl:Class IRI="#NetworkLayer"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#NetworkLayer"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasServiceLayer"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasServiceLayer"/>
+    <owl:Class IRI="#ServiceLayer"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ServiceLayer"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasApplicationLayer"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasApplicationLayer"/>
+    <owl:Class IRI="#ApplicationLayer"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#ApplicationLayer"/>
+    <owl:Class IRI="#CPSDC"/>
+  </owl:SubClassOf>
+  <owl:Declaration>
+    <owl:ObjectProperty IRI="#hasSecurityLayer"/>
+  </owl:Declaration>
+  <owl:ObjectPropertyRange>
+    <owl:ObjectProperty IRI="#hasSecurityLayer"/>
+    <owl:Class IRI="#SecurityLayer"/>
+  </owl:ObjectPropertyRange>
+  <owl:SubClassOf>
+    <owl:Class IRI="#SecurityLayer"/>
+    <owl:Class IRI="#CPSDC"/>
   </owl:SubClassOf>
 </owl:Ontology>
