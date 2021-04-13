@@ -27,7 +27,7 @@ To manifest the new concepts of EBCPS, the Department of Distributed and Dependa
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.80]{figures/deeco_map.PNG}
+\includegraphics[width=\textwidth]{figures/deeco_map.PNG}
 \caption{Overview of the models provided by DEECo and their relations}
 \label{fig:deeco_map}
 \end{figure}
@@ -48,14 +48,14 @@ Regarding the design and runtime parts \cite{Bures:2013:DEC:2465449.2465462}\cit
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.80]{figures/deeco_code}
+\includegraphics[scale=0.70]{figures/deeco_code}
 \caption{Snippet of jDEECo code}
 \label{fig:deeco_code}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.85]{figures/jdeeco}
+\includegraphics[width=\textwidth]{figures/jdeeco}
 \caption{jDEECo runtime framework architecture}
 \label{fig:ros}
 \end{figure}
@@ -72,7 +72,7 @@ Regarding the design and runtime parts \cite{Bures:2013:DEC:2465449.2465462}\cit
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.85]{figures/edl}
+\includegraphics[width=\textwidth]{figures/edl}
 \caption{Framework high-level architecture that supports Ensemble Definition Language (EDL)}
 \label{fig:ros}
 \end{figure}
@@ -124,7 +124,7 @@ Finally, the simulation part targets two domains for vehicles\cite{Kit:2015:AFE:
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.85]{figures/gossip}
+\includegraphics[width = \textwidth]{figures/gossip}
 \caption{Illustration of communication\uidx{Communication} groups; each is associated with an instance of SameDestination}
 \label{fig:gossip}
 \end{figure}
@@ -200,22 +200,83 @@ The scalability\uidx{Scalability} issue was targeted in an example about intelli
  
  \subsubsection{CPS}
 % \STATUS{ready for review}
-In this part, the individuals represents the system domain and its parts\uidx{SystemPart}, in addition to the its requirements.
- \begin{itemize}
-     \item ApplicationDomainsDS\uidx{ApplicationDomain}: BuildingAutomation, IntelligentTransport, RoboticForService, SmartManufacturing
-     \item \uidxp{Architecture}: Generic Architecture
-     \item SystemDC: 
-        \subitem \uidx{SystemPart}: regarding the CommunicationProtocol, the short range communication\uidx{Communication} (P2P) is used in most of the use cases (e.g. MANET, gossip protocol, ...). 
-        \subitem \uidx{Component}: entities which are modeled in CPS using DEECo are hardware/physical components. For instance, vehicle or cleaner are physical components with a need for representation of physical process dynamics (i.e. differential equations). Additionally, it is possible to model components\uidx{Component} in the environment such as human.
-           
-    \item QualityRequirementsDC
-        \subitem \uidxp{Dependability}: \uidxp{Safety}, \uidxp{Availability}
-        \subitem \uidxp{Interoperability}: \uidxp{Scalability}
-        \subitem \uidxp{Predictability}: \uidxp{Accuracy}
-        \subitem \uidxp{Reliability}: \uidxp{Robustness} 
-        \subitem \uidxp{Security}: \uidxp{Confidentiality}
-        \subitem \uidxp{Sustainability}: \uidxp{Adaptability}, \uidxp{Efficiency} (i.e. performance), \uidxp{Resilience} 
- \end{itemize}
+In order to present all the related parts in the example, we refer to the tasks related to vehicle joining a road train as (1), and vehicle finding a parking slot as (2).
+
+\begin{itemize}
+    \item \checkmark \textbf{ConstituentElement} : (mandatory) The elements constituting the system
+    \begin{itemize}
+        \item \checkmark \textbf{Cyber}: (mandatory) System model based on DEECo concepts.
+        \begin{itemize}
+            \item \checkmark \textbf{Software}: Collection of data or computer instructions that tell the computer/controller of the robot, how to work. 
+            \begin{itemize}
+                \item \checkmark \textbf{Application Software}: The simulation software used to simulate traffic conditions and the EBCPS.
+                \item \checkmark \textbf{System Software}: The system software is the software running on the simulation computer and all of its included \textbf{System Services} and \textbf{System Utilities}.
+                \item \xmark \textbf{Embedded Software (Firmware)} 
+            \end{itemize}
+        \end{itemize}
+        \item \checkmark \textbf{Control}: (mandatory) (1)(2) Vehicles have PID controllers to maintain the desired speed and the desired distance based on the driver preferences or the determined values in each vehicle mode in addition to (2) heading to the destination. 
+        \begin{itemize}
+            \item \checkmark \textbf{State}: We determine the states, which are the operational modes, of (1) a vehicle in a road train to be "Cooperative Adaptive Cruise Control (CACC)" or "Adaptive Cruise Control (ACC)", and of (2) a vehicle parks in a city to be "waiting", "search for parking lot", "reserve parking slot", "cancel reserved parking slot", "parking slot reserved", "search for parking slot on spot", "find parking slot on spot", "parking", "parked", or "leave the parking slot". The (2) parking lot has the following states for each parking slot: "available", "reserved", "canceled", "filled".  
+            \item \checkmark \textbf{Disturbance}: (1)(2) Noise in sensors measurements, (1)(2) communication problems, and (1) traffic fluctuation.
+            \item \checkmark \textbf{Input}: (1) In road train, the vehicle receives the speed and the position of the vehicle in front. (2) Regarding finding a parking slot, the input is the availability of the parking lots, the available slots detected by other vehicles, 
+            \item \checkmark \textbf{Output}: (2) In road train, the vehicle speed and distance from the vehicle in front is maintained. (2) When reaching the parking slot, the vehicle parks.
+            \item \checkmark \textbf{Goal}: (1) Hard real-time goal keep a save distance, (1) Soft real-time goal save fuel, and (2) Soft real-time goal is parking.
+            \begin{itemize}
+                \item \checkmark \textbf{Setpoint}: (1) The desired speed and the desired distance from the vehicle in front. (2) The final destination and the parking stops in between for the vehicle.
+                \item \checkmark \textbf{Tracking}: The vehicle checks for the driver's inputs for (1) the desired speed and (1)(2) the desired stops, or (1) updates from the vehicles in the road train for the speed and distance to maintain. (2) The vehicle receives information about available parking slots from other vehicles or from parking lots. 
+                The \textbf{ValidityRegion} of the tracking in (1) the vehicle is local when vehicle is not in a road train and decentralized when vehicle is in a road train. Additionally, (2) the vehicle tracks the available parking slots in decentralized manner. The \textbf{ValidityRegion} of the tracking in (2) the parking lot functions in decentralized manner. 
+                \item \checkmark \textbf{Regulation}: (1)(2) The vehicles communicate with each other to maintain the road train or to find an available parking slots on the spot. (2) The vehicle communicates with the parking lot to reserve a parking slot.  
+                \item \checkmark\  \textbf{Reference Signal}: (1)(2) The GPS signal is a reference signal in vehicles for self-positioning and (2) calculating the distance from the stops and parking lots.
+            \end{itemize}
+            \item \checkmark \textbf{Feedback}: (1) There are two kinds of feedback loops in the autonomous vehicle. The first is part of the control loop to regulate the speed and the safety distance. We represent that loop using MAPE-K model~\cite{Sinreich2006AnAB}. The second feedback learns about the vehicle behavior and the reliability of the sensors to perform better adaptation.
+            \begin{itemize}
+                \item \checkmark\textbf{Dependency}: (1) The first feedback for the system is the measured acceleration from vehicle accelerometer (i.e. output of the Plant), which feeds back into the PID controller. The second feedback is studying the vehicle behavior and the reliability of the sensors to decide adapting to a more suitable mode for the current situation (e.g. change from CACC to ACC in case the wifi communication is unreliable). 
+                \item \checkmark\textbf{Scope}: (1) The scope of the control signals is local to the vehicle.
+            \end{itemize}
+            \item \checkmark\textbf{Dynamics} Context-based ensembles i.e. The vehicles can form in dynamic groups to (1) maintain distance in a road train or (2) detect available parking slots, and (2) the vehicles form a dynamic grouping with the parking lots to exchange information about the parking slots. 
+            \begin{itemize}
+                \item \checkmark \textbf{SystemType}: (\textbf{Linearity}) (1) The vehicle movement is non-linear. (\textbf{Time}) The system is discrete with relation to (1) the control-loop in the vehicle and the communication with (1)(2) other vehicles or (2) the parking lots.. (\textbf{Continuity}) The vehicle movement is continuous in reality. However, in the simulation it is discretized. 
+                \item \textbf{Behaviour} (\textbf{Equilibria}) There exist multiple \textbf{Distributed} equilibria for each car. The \textbf{(Emergent Behavior)} of the CPS. 
+                \item \textbf{Topology} (\textbf{Evolution}) (1)(2) The connections between the components are dynamic over time (i.e. through ensembles), which (\textbf{Implementation}) support adding constraints over the connections that provide context-awareness into the system.
+            \end{itemize}
+            \item \checkmark \textbf{Properties}: Autonomy, adaptation, learning and uncertainty. (\textbf{Uncertainty}) In the example, we consider white noise in measurements and network delays (i.e. stochastic and exponential distribution accordingly).
+            \item \xmark\ \textbf{Diagnostics}: No automatic diagnostic. 
+            \item \checkmark \textbf{Prognostics}: The prediction is used in the system in the adaptation decision. For instance, after learning the vehicle behavior, (1) the vehicle decide to change mode to ACC because the WiFi communication is unreliable. 
+        \end{itemize}
+        \item \checkmark \textbf{Human}: The driver determine the next tasks to be performed in the vehicle.
+        \begin{itemize}
+            \item \checkmark \textbf{Role}: (1) The driver decide to join or leave a road train, and (2) determine the final destination of the trip and the stops in between.
+            \item \checkmark \textbf{Event}: (1) Detecting a road train, (2) Determine the locations to visit. 
+            \item \textbf{Entity}: The driver.
+            \item \checkmark \textbf{Action}: the driver can make a (1) Request for joining or leaving a road train, or a (2) Request for finding a parking slot. 
+        \end{itemize}
+        \item \checkmark \textbf{Network}: (mandatory) The communication is Peer-to-Peer communication (i.e. MANET-based wireless and IP-based communication)
+        \begin{itemize}
+            \item \checkmark \textbf{Configuration}: (mandatory) The communication of peer-to-peer communication. % , gossip-based communication.
+            \item \checkmark \textbf{Communication}: (mandatory) The communication is governed by protocols and constraints.
+            \begin{itemize}
+                \item \checkmark \textbf{ComType}: %\rima{I am not sure from the options here?}
+                (mandatory) asynchronous communication since the communication is implicit, where the components propagate their knowledge and do not wait for an answer. However, we assume a shared clock for all the components in the example.
+                \item \checkmark \textbf{Protocol}: (mandatory) Gossiping via (2) UDP on top of Ethernet NIC and (1)(2) broadcast via wireless NIC.  
+            \end{itemize}
+        \end{itemize}
+        \item \checkmark \textbf{Physical}: (mandatory) The physical elements of the vehicle, the parking lots.
+        \begin{itemize}
+            \item \checkmark \textbf{Sensor}: (mandatory) (1) When vehicle is on the road the used sensors are: wifi antenna, GPS antenna, camera, radar, lidar, ultrasonic, and accelerometer. (2) When the vehicle is looking for parking the camera in the vehicles, and (2) camera or sensors in the parking lots to detect the availability of a parking slot.  
+            \item \checkmark \textbf{Actuator}: (mandatory) In the vehicle (1) the gas and brake pedals (i.e. vehicle engine). Even though the publications did not cover the automatic parking , however it is interesting to highlight the (2) steering as actuators in the vehicle.
+            \item \checkmark \textbf{Plant}: (mandatory) (1) The vehicle movement equations (because we simulate)
+            \item \checkmark \textbf{Controller}: (mandatory) (1) The PID controllers
+            \begin{itemize}
+                \item \xmark \textbf{Mechanical}
+                \item \checkmark \textbf{Hardware Platform}: Consists of \textbf{Processor}, \textbf{Memory}, \textbf{System Bus}, \textbf{Hardware Topology}, and \textbf{Application-specific Circuit}
+            \end{itemize}
+            \item \checkmark \textbf{Environment}: (mandatory) (2) The cities, and (1)(2) the roads. 
+        \end{itemize}
+    \end{itemize}
+    \item \checkmark \textbf{nonfunctionalReqs} :  Safety, Efficiency, Adaptability
+    \item \checkmark \textbf{ApplicationDomain} :  Transportation
+    \item \checkmark \textbf{Disciplines} : The disciplines associated with the vehicle are - \textbf{Software Engineering} and \textbf{Mechanical Engineering} 
+\end{itemize}
  
 
  \subsubsection{MPM}
