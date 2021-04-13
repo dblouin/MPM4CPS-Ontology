@@ -1,13 +1,13 @@
 pre {
 	"Running fmToOWL transformation".println();
 	var ont : new owl!Ontology;
-	var sharedOnt : new owl!Import;	
+	var sharedOnt : new owl!Import;
 	var sharedClasses = new List;
-	
+
 	// Header settings
 	ont.base = "http://mpm4cps.eu/ontology/cps";
 	ont.ontologyIRI = "http://mpm4cps.eu/ontology/cps";
-	
+
 	// Prefixes
 	addPrefix("", "http://mpm4cps.eu/ontology/cps");
 	addPrefix("owl", "http://www.w3.org/2002/07/owl#");
@@ -15,85 +15,84 @@ pre {
 	addPrefix("xml", "http://www.w3.org/XML/1998/namespace");
 	addPrefix("xsd", "http://www.w3.org/2001/XMLSchema#");
 	addPrefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
-	
-	
+
 	//import shared ontology and prepare a list of its classes
 	sharedOnt.value = "http://mpm4cps.eu/ontology/shared";
 	ont.Import.add(sharedOnt);
 
 	var root : new owl!Class;
 	var owlDeclaration : new owl!Declaration;
-	
+
 	root.iri = generateOwlClassIRI("CPSDC");
 	owlDeclaration.class = root;
 	ont.declaration.add(owlDeclaration);
 	ont.annotationAssertion.add(createAuthor(root.iri, "FeatureModel"));
-	
-	
+
 	for (class in shared!Class) {
-	   sharedClasses.add(class.iri);
-	   if (class.iri = "#DomainConcept"){
-          root.ontHierarchyShared("DomainConcept");	
-	   }
+		sharedClasses.add(class.iri);
+		/*if (class.iri = "#DomainConcept"){
+			root.ontHierarchyShared("DomainConcept");
+		}*/	
 	}
+	root.ontHierarchyShared("DomainConcept");
 }
 
 post {
 	"Feature model to OWL transformation finished.".println();
-}
+	}
 
-/**************************/
-/********* RULES **********/
-/**************************/
+//-----//
+//RULES//
+//-----//
 
 // to transform FM features to OWL classes
 rule featureTypeToClass
 	transform feature : fm!FeatureType
 	to owlDeclaration : owl!Declaration {
 	guard : not feature.isDisabled () and not feature.isIndividual ()
-		// Create class
-		var owlClass : new owl!Class;
-		var s : new String;
-		owlClass.iri = generateOwlClassIRI(feature.name);
-		owlDeclaration.class = owlClass;
-		ont.declaration.add(owlDeclaration);
-		s = "CREATED OWL class " + owlClass.iri;
+	// Create class
+	var owlClass : new owl!Class;
+	var s : new String;
+	owlClass.iri = generateOwlClassIRI(feature.name);
+	owlDeclaration.class = owlClass;
+	ont.declaration.add(owlDeclaration);
+	s = "CREATED OWL class " + owlClass.iri;
+	s.println();
+	// Create description (if any)
+	if (feature.description.isDefined()) {
+		ont.annotationAssertion.add(createDescription(owlClass.iri, feature.description));
+		ont.annotationAssertion.add(createAuthor(owlClass.iri, "FeatureModel"));
+		s = "CREATED annotation for OWL class " + owlClass.iri;
 		s.println();
-		// Create description (if any)
-		if (feature.description.isDefined()) {
-			ont.annotationAssertion.add(createDescription(owlClass.iri, feature.description));
-			ont.annotationAssertion.add(createAuthor(owlClass.iri, "FeatureModel"));
-			s = "CREATED annotation for OWL class " + owlClass.iri;
-			s.println();
-		} else {
-			s = "NO ANNOTATION FOUND FOR " + owlClass.iri + " !!";
-			s.println();
-		}		
+	} else {
+	s = "NO ANNOTATION FOUND FOR " + owlClass.iri + " !!";
+	s.println();
 	}
-	
+}
+
 // to transform FM branches to OWL classes
 rule branchTypeToClass
 	transform branch : fm!BranchType
 	to owlDeclaration : owl!Declaration {
 	guard : not branch.isDisabled ()
-		// Create class
-		var owlClass : new owl!Class;
-		var s : new String;
-		owlClass.iri = generateOwlClassIRI(branch.name);
-		owlDeclaration.class = owlClass;
-		ont.declaration.add(owlDeclaration);
-		s = "CREATED OWL class " + owlClass.iri;
+	// Create class
+	var owlClass : new owl!Class;
+	var s : new String;
+	owlClass.iri = generateOwlClassIRI(branch.name);
+	owlDeclaration.class = owlClass;
+	ont.declaration.add(owlDeclaration);
+	s = "CREATED OWL class " + owlClass.iri;
+	s.println();
+	// Create description (if any)
+	if (branch.description.isDefined()) {
+		ont.annotationAssertion.add(createDescription(owlClass.iri, branch.description));
+		ont.annotationAssertion.add(createAuthor(owlClass.iri, "FeatureModel"));
+		s = "ADDED annotation for OWL class " + owlClass.iri;
 		s.println();
-		// Create description (if any)
-		if (branch.description.isDefined()) {
-			ont.annotationAssertion.add(createDescription(owlClass.iri, branch.description));
-			ont.annotationAssertion.add(createAuthor(owlClass.iri, "FeatureModel"));
-			s = "ADDED annotation for OWL class " + owlClass.iri;
-			s.println();
-		} else {
-			s = "NO ANNOTATION FOUND FOR " + owlClass.iri + " !!";
-			s.println();
-		}
+	} else {
+	s = "NO ANNOTATION FOUND FOR " + owlClass.iri + " !!";
+	s.println();
+	}
 }
 
 // to transform feature relations to OWL subclass relations
@@ -101,50 +100,217 @@ rule subClassRelationToOWLSubclassOf
 	transform featurerelation : featureRelations!SubClassRelation
 	to owlsubclass : owl!SubClassOf {
 	guard : not featurerelation.hasIndividuals
-		var subClasses : List = featurerelation.hasSubclasses();
-		var s : new String;
-		if (subClasses.notEmpty()){
-			for (subClass in subClasses){
-				if ( subClass.equivalent().isDefined() ) {	
-		         	subClass.equivalent().class.ontHierarchy(featurerelation.SuperBranch.equivalent().class);
-		         	s = "CREATED subclass relation between " + subClass.name + " and " + featurerelation.SuperBranch.name ;
-					s.println();
-		   		}
-		   	}
-		}		
-}		
+	var subClasses : List = featurerelation.hasSubclasses();
+	var s : new String;
+	if (subClasses.notEmpty()){
+		for (subClass : fm!FeatureType in subClasses){
+			if ( subClass.equivalent().isDefined() and not subClass.isIndividual() and not subClass.isDisabled()) {
+        		subClass.equivalent().class.ontHierarchy(featurerelation.SuperBranch.equivalent().class);
+        		s = "CREATED subclass relation between " + subClass.name + " and " + featurerelation.SuperBranch.name ;
+				s.println();
+  			}
+  		}
+  		for (subClass : fm!BranchType in subClasses){
+  			if (subClass.equivalent().isDefined() and not subClass.isDisabled()){
+  				subClass.equivalent().class.ontHierarchy(featurerelation.SuperBranch.equivalent().class);
+        		s = "CREATED subclass relation between " + subClass.name + " and " + featurerelation.SuperBranch.name ;
+				s.println();
+  			}
+  		}
+	}
+}
 
-// to relate classes with no superclass as subset of CPSDC
+// to relate features with no superclass (defined in FRM) as subset of CPSDC
 rule noSubBranchRelationToOWLSubclassOfCPSDC
 	transform branch : fm!BranchType
 	to owlsubclass : owl!SubClassOf{
 	guard : not branch.isDisabled()
-		var s : new String;
-		if ( not branch.isSubclass() ) {
-			branch.equivalent().class.ontHierarchy(root);
-		}
+	var s : new String;
+	if ( not branch.isSubclass() ) {
+		branch.equivalent().class.ontHierarchy(root);
 		s = "CREATED subclass relation between " + branch.name + " and CPSDC";
 		s.println();
+	}
 }
 
+// to relate branches with no superclass (defined in FRM) as subset of CPSDC
 rule noSubFeatureRelationToOWLSubclassOfCPSDC
 	transform feature : fm!FeatureType
 	to owlsubclass : owl!SubClassOf{
 	guard : not feature.isDisabled() and not feature.isIndividual ()
-		var s : new String;
-		if ( not feature.isSubclass() ) {
-			feature.equivalent().class.ontHierarchy(root);
-		}
+	var s : new String;
+	if ( not feature.isSubclass() ) {
+		feature.equivalent().class.ontHierarchy(root);
 		s = "CREATED subclass relation between " + feature.name + " and CPSDC";
 		s.println();
+	}
 }
 
-// operation to declare OWL heirarchy in the rules above
+// to add object properties to the ontology
+rule branchTypeToDeclareObjectProperties
+	transform branch : fm!BranchType
+	to owlDeclaration : owl!Declaration, owlOP : owl!ObjectProperty {
+	guard : not branch.isDisabled ()
+	var s : new String;
+	owlOP.iri = branch.generateOwlObjectPropertyIRI();
+	owlDeclaration.objectProperty = owlOP;
+	ont.declaration.add(owlDeclaration);
+	s = "CREATED object property " + owlOP.iri;
+	s.println();
+}
+
+rule featureTypeToDeclareObjectProperties
+	transform feature : fm!FeatureType
+	to owlDeclaration : owl!Declaration, owlOP : owl!ObjectProperty {
+	guard : not feature.isDisabled () and not feature.isIndividual ()
+	var s : new String;
+	owlOP.iri = feature.generateOwlObjectPropertyIRI();
+	owlDeclaration.objectProperty = owlOP;
+	ont.declaration.add(owlDeclaration);
+	s = "CREATED object property " + owlOP.iri;
+	s.println();
+}
+
+// Add range to the object properties
+rule branchTypeToObjectPropertyRange
+	transform branch : fm!BranchType
+	to owlObjectPropertyRange : owl!ObjectPropertyRange, owlOP : owl!ObjectProperty, owlClass: owl!Class {
+	guard : not branch.isDisabled ()
+	var s : new String;
+	owlOP.iri = branch.generateOwlObjectPropertyIRI();
+	owlObjectPropertyRange.objectProperty = owlOP;
+	owlClass.iri = generateOwlClassIRI(branch.name);
+	owlObjectPropertyRange.class = owlClass;
+	ont.objectPropertyRange.add( owlObjectPropertyRange );
+	s = "ADDED Range " + owlClass.iri + " to object property " + owlOP.iri;
+	s.println();
+}
+
+rule featureTypeToObjectPropertyRange
+	transform feature : fm!FeatureType
+	to owlObjectPropertyRange : owl!ObjectPropertyRange, owlOP : owl!ObjectProperty, owlClass: owl!Class {
+    guard : not feature.isDisabled () and not feature.isIndividual ()
+    var s : new String;
+	owlOP.iri = feature.generateOwlObjectPropertyIRI();
+	owlObjectPropertyRange.objectProperty = owlOP;
+	owlClass.iri = generateOwlClassIRI(feature.name);
+	owlObjectPropertyRange.class = owlClass;
+	ont.objectPropertyRange.add( owlObjectPropertyRange );
+	s = "ADDED Range " + owlClass.iri + " to object property " + owlOP.iri;
+	s.println();
+}
+
+// Add domain to the object properties
+rule branchTypeToObjectPropertyDomain
+	transform branch : fm!BranchType
+	to owlObjectPropertyDomain : owl!ObjectPropertyDomain, owlOP : owl!ObjectProperty, owlClass : owl!Class {
+	guard : not branch.isDisabled ()
+	var s : new String;
+	var subfeatures : List = hasSubFeatures( branch );
+	var subbranches : List = hasSubBranches( branch );
+	for (feature : fm!FeatureType in subfeatures) {
+		ontOPDomain( feature, branch );
+		s = "ADDED Domain " + feature.name + " to object property " + branch.name;
+		s.println();
+	}
+	for (feature : fm!BranchType in subbranches) {
+		ontOPDomain( feature, branch );
+		s = "ADDED Domain " + feature.name + " to object property " + branch.name;
+		s.println();
+	}
+}
+
+// Add object property relationships to the ontology
+//for And Branch
+rule andBranchTypeToSubclassOf
+	transform branch : fm!BranchType
+	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectIntersectionOf : owl!ObjectIntersectionOf {
+	guard : branch.isAndBranch() and branch.hasFeatures( true ) and not branch.isDisabled () and not branch.hasIndividual ()
+
+	owlClass.iri = generateOwlClassIRI(branch.name);
+	owlSubClassOf.class.add(owlClass);
+	owlSubClassOf.objectIntersectionOf = owlObjectIntersectionOf;
+	ont.subclassof.add( owlSubClassOf );
+
+	for ( subBranch in branch.And ) {
+		subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, true );
+	}
+	for ( subBranch in branch.alt ) {
+		subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, true );
+	}
+	for ( subBranch in branch.Or ) {
+		subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, true );
+	}
+	for ( feature in branch.feature ) {
+		feature.addSomeValueFromFeature( owlObjectIntersectionOf, true );
+	}
+}
+
+//for Or Branch
+rule orBranchTypeToSubclassOf
+	transform branch : fm!BranchType
+	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectUnionOf : owl!ObjectUnionOf {
+	guard : branch.isOrBranch() or branch.isAltBranch() and branch.hasFeatures( false ) and not branch.isDisabled () and not branch.hasIndividual ()
+
+	owlClass.iri = generateOwlClassIRI(branch.name);
+	owlSubClassOf.class.add(owlClass);
+	owlSubClassOf.objectUnionOf = owlObjectUnionOf;
+	ont.subclassof.add( owlSubClassOf );
+
+	for ( subBranch in branch.And ) {
+		subBranch.addSomeValueFromFeature( owlObjectUnionOf );
+	}
+	for ( subBranch in branch.alt ) {
+		subBranch.addSomeValueFromFeature( owlObjectUnionOf );
+	}
+	for ( subBranch in branch.Or ) {
+		subBranch.addSomeValueFromFeature( owlObjectUnionOf );
+	}
+	for ( feature in branch.feature ) {
+		feature.addSomeValueFromFeature( owlObjectUnionOf );
+	}
+}
+
+//for Alternative Branch
+rule altBranchTypeToSubclassOf
+	transform branch : fm!BranchType
+	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectComplementOf : owl!ObjectComplementOf, owlObjectUnionOf : owl!ObjectUnionOf {
+	guard : branch.isAltBranch() and branch.hasFeatures( false ) and not branch.isDisabled () and not branch.hasIndividual ()
+
+	owlClass.iri = generateOwlClassIRI(branch.name);
+	owlSubClassOf.class.add(owlClass);
+	owlSubClassOf.objectComplementOf = owlObjectComplementOf;
+	owlObjectComplementOf.objectUnionOf = owlObjectUnionOf;
+	ont.subclassof.add( owlSubClassOf );
+
+	for ( subBranch in branch.And ) {
+		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
+	}
+	for ( subBranch in branch.alt ) {
+		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
+	}
+	for ( subBranch in branch.Or ) {
+		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
+	}
+	for ( feature in branch.feature ) {
+		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, feature );
+	}
+}
+
+//----------//
+//OPERATIONS//
+//----------//
+
+//------------------------------------------------//
+//OPERATIONS RELATED TO OWL SUBCLASS RELATIONSHIPS//
+//------------------------------------------------//
+
+// to generate OWL subclass declaration from superclass
 operation owl!Class ontHierarchy (superClass : owl!Class) {
 	var owlSubClass : new owl!SubClassOf;
 	var owlParentClass : new owl!Class;
 	var owlChildClass : new owl!Class;
-	
+
 	owlChildClass.iri = self.iri;
 	owlSubClass.class.add(owlChildClass);
 	owlParentClass.iri = superClass.iri;
@@ -152,260 +318,75 @@ operation owl!Class ontHierarchy (superClass : owl!Class) {
 	ont.subclassof.add(owlSubClass);
 }
 
-// Add object properties to the ontology
-rule branchTypeToDeclareObjectProperties
-	transform branch : fm!BranchType
-	to owlDeclaration : owl!Declaration, owlOP : owl!ObjectProperty {
-	guard : not branch.isDisabled ()
-	var s : new String;
-		owlOP.iri = branch.generateOwlObjectPropertyIRI();
-		owlDeclaration.objectProperty = owlOP;
-		ont.declaration.add(owlDeclaration);
-		s = "CREATED object property " + owlOP.iri;
-		s.println();
-		
-	}
-
-rule featureTypeToDeclareObjectProperties
-	transform feature : fm!FeatureType
-	to owlDeclaration : owl!Declaration, owlOP : owl!ObjectProperty {
-	guard : not feature.isDisabled () and not feature.isIndividual ()
-	var s : new String;
-		owlOP.iri = feature.generateOwlObjectPropertyIRI();
-		owlDeclaration.objectProperty = owlOP;
-		ont.declaration.add(owlDeclaration);
-		s = "CREATED object property " + owlOP.iri;
-		s.println();	
-	}
-
-// Add range to the object properties	
-rule branchTypeToObjectPropertyRange
-	transform branch : fm!BranchType
-	to owlObjectPropertyRange : owl!ObjectPropertyRange, 
-	owlOP : owl!ObjectProperty, 
-	owlClass: owl!Class {
-	guard : not branch.isDisabled ()
-	var s : new String;
-		owlOP.iri = branch.generateOwlObjectPropertyIRI();
-		owlObjectPropertyRange.objectProperty = owlOP;
-		owlClass.iri = generateOwlClassIRI(branch.name);
-		owlObjectPropertyRange.class = owlClass;
-		ont.objectPropertyRange.add( owlObjectPropertyRange );
-		s = "ADDED Range " + owlOP.iri + " to object property " + owlClass.iri;
-		s.println();
-	}
-
-rule featureTypeToObjectPropertyRange
-	transform feature : fm!FeatureType
-	to owlObjectPropertyRange : owl!ObjectPropertyRange,
-	   owlOP : owl!ObjectProperty, owlClass: owl!Class {
-    guard : not feature.isDisabled () and not feature.isIndividual ()
-    	var s : new String;
-		owlOP.iri = feature.generateOwlObjectPropertyIRI();
-		owlObjectPropertyRange.objectProperty = owlOP;
-		owlClass.iri = generateOwlClassIRI(feature.name);
-		owlObjectPropertyRange.class = owlClass;
-		ont.objectPropertyRange.add( owlObjectPropertyRange );
-		s = "ADDED Range " + owlOP.iri + " to object property " + owlClass.iri;
-		s.println();
-	}
-	
-// Add domain to the object properties
-rule branchTypeToObjectPropertyDomain
-	transform branch : fm!BranchType
-	to owlObjectPropertyDomain : owl!ObjectPropertyDomain,
-	   owlOP : owl!ObjectProperty, owlClass : owl!Class {
-	guard : not branch.isDisabled () 
-	var s : new String;
-		var subfeatures : List = hasSubfeatures( branch );
-		var subbranches : List = hasSubbranches( branch );
-		for (feature : fm!FeatureType in subfeatures) {			
-			ontOPDomain( feature, branch );
-			s = "ADDED Domain " + feature.name + " to object property " + branch.name;
-			s.println();
-		}
-		for (feature : fm!BranchType in subfeatures) {
-			ontOPDomain( feature, branch );
-		}
-	}
-
-// Add object property relationships to the ontology
-rule andBranchTypeToSubclassOf
-	transform branch : fm!BranchType
-	to owlSubClassOf : owl!SubClassOf, 
-	   owlClass : owl!Class, 
-	   owlObjectIntersectionOf : owl!ObjectIntersectionOf {
-	guard : branch.isAndBranch() and branch.hasFeatures( true ) 
-	       and not branch.isDisabled () and not branch.hasIndividual ()
-
-	owlClass.iri = generateOwlClassIRI(branch.name);
-	owlSubClassOf.class.add(owlClass);
-	owlSubClassOf.objectIntersectionOf = owlObjectIntersectionOf;
-	ont.subclassof.add( owlSubClassOf );
-	
-	for ( subBranch in branch.And ) {
-		subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, true );
-	}
-	
-	for ( subBranch in branch.alt ) {
-		subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, true );
-	}
-
-	for ( subBranch in branch.Or ) {
-		subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, true );
-	}
-
-	for ( feature in branch.feature ) {
-		feature.addSomeValueFromFeature( owlObjectIntersectionOf, true );
-	}
+// to generate OWL subclass declaration from superclass name
+operation owl!Class ontHierarchyShared (superClassName : String) {
+	var owlSubClass : new owl!SubClassOf;
+	var owlParentClass : new owl!Class;
+	var owlChildClass : new owl!Class;
+	owlChildClass.iri = self.iri;
+	owlSubClass.class.add(owlChildClass);
+	owlParentClass.iri = generateOwlClassIRI (superClassName);
+	owlSubClass.class.add(owlParentClass);
+	ont.subclassof.add(owlSubClass);
 }
 
-rule orBranchTypeToSubclassOf
-	transform branch : fm!BranchType
-	to owlSubClassOf : owl!SubClassOf, 
-	   owlClass : owl!Class, 
-	   owlObjectUnionOf : owl!ObjectUnionOf {
-	guard : branch.isOrBranch() or branch.isAltBranch() 
-	and branch.hasFeatures( false ) 
-	and not branch.isDisabled () and not branch.hasIndividual ()
-
-	owlClass.iri = generateOwlClassIRI(branch.name);
-	owlSubClassOf.class.add(owlClass);
-	owlSubClassOf.objectUnionOf = owlObjectUnionOf;
-	ont.subclassof.add( owlSubClassOf );
-	
-	for ( subBranch in branch.And ) {
-		subBranch.addSomeValueFromFeature( owlObjectUnionOf );
-	}
-	
-	for ( subBranch in branch.alt ) {
-		subBranch.addSomeValueFromFeature( owlObjectUnionOf );
-	}
-
-	for ( subBranch in branch.Or ) {
-		subBranch.addSomeValueFromFeature( owlObjectUnionOf );
-	}
-
-	for ( feature in branch.feature ) {
-		feature.addSomeValueFromFeature( owlObjectUnionOf );
-	}
+// to return list of subclasses of a branch
+operation fm!BranchType hasSubclasses (): List {
+   var subClasses = new List;
+   for (relation in featureRelations!SubClassRelation) {
+      if (relation.SuperBranch = self and not relation.SuperBranch.hasIndividuals){
+    	subClasses = relation.hasSubClasses ();
+ }  
+   }
+   return subClasses;
 }
 
-rule altBranchTypeToSubclassOf
-	transform branch : fm!BranchType
-	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectComplementOf : owl!ObjectComplementOf, owlObjectUnionOf : owl!ObjectUnionOf {
-	guard : branch.isAltBranch() and branch.hasFeatures( false ) 
-	and not branch.isDisabled () and not branch.hasIndividual ()
-
-	owlClass.iri = generateOwlClassIRI(branch.name);
-	owlSubClassOf.class.add(owlClass);
-	owlSubClassOf.objectComplementOf = owlObjectComplementOf;
-	owlObjectComplementOf.objectUnionOf = owlObjectUnionOf;
-	ont.subclassof.add( owlSubClassOf );
-	
-	for ( subBranch in branch.And ) {
-		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
-	}
-	
-	for ( subBranch in branch.alt ) {
-		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
-	}
-
-	for ( subBranch in branch.Or ) {
-		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
-	}
-
-	for ( feature in branch.feature ) {
-		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, feature );
-	}
+// to generate list of subclasses in a FRM subclass relation
+operation featureRelations!SubClassRelation hasSubclasses (): List {
+    var subClasses = new List;
+    for (feat in self.SubFeature) {
+subClasses.add (feat);
+}
+for (branch in self.SubBranch) {
+subClasses.add (branch);
+}      
+    return subClasses;
 }
 
-
-
-/**************************/
-/******* OPERATIONS *******/
-/**************************/
-
-//OPERATIONS RELATED TO INDIVIDUAL AND DISABLED FEATURES
-
-// to check if a feature is an individual, it can either be declared individual directly or its superbranch.hasIndividual = true.
-operation fm!FeatureType isIndividual (): Boolean {
-	var s : new String;
-	if ( self.isDeclaredIndividual () or self.hasSuperBranchIndividuals ()) {
-		s = self.name + " is an individual";
-		s.println();
-		return true;
-	} else {
-		s = self.name + " is not an individual";
-		s.println();
-		return false;
-	}  
-}
-
-operation fm!FeatureType hasSuperBranchIndividuals (): Boolean {
-	var s : new String;
-	for (branch in featureRelations!SubClassRelation) {
-    	if (branch.hasIndividuals){
-	    	for (feat in branch.SubFeature) {
-	        	if (feat = self){
-	        		s = "The super-branch of " + self.name + ", " + branch.SuperBranch.name + ", has individuals";
-					s.println();
-	           		return true;
-	        	}
-	     	}	      
-	  	}
-   	}
-   	s = "The super-branch of " + self.name + " doesn't have individuals";
-	s.println();
-	return false; 
-}
-
-operation fm!FeatureType isDeclaredIndividual (): Boolean {
-	var s : new String;
-	for (individual in featureRelations!Individual) {
-		for (feat in individual.Features) {
-   	  		if (feat.name = self.name) {
-   	  			s = self.name + " is declared as individual";
-				s.println();
-   	  	 		return true;
-   	  		}
-   	  	}
+// to check if a branch is a subclass
+operation fm!BranchType isSubclass (): Boolean {
+   	for (relation in featureRelations!SubClassRelation) {
+    	for (branch in relation.SubBranch) {
+       		if (branch = self){
+       			return true;
+       		}
+       	}
    	}
    	return false;
-   	s = self.name + " is not declared as individual";
-	s.println();
 }
 
-// to check if a feature is disabled
-operation fm!FeatureType isDisabled (): Boolean {
-   for (feat in featureRelations!Disabled) {
-       
-     if (feat.features.indexOf (self) <> -1){
-        return true;
-     }
-   }   
-   return false;  
+//to check if a feature is a subclass
+operation fm!FeatureType isSubclass (): Boolean {
+	for (relation in featureRelations!SubClassRelation) {
+    	for (feature in relation.SubFeature) {
+       		if (feature = self){
+       			return true;
+       		}
+       	}
+   	}
+   	return false;
 }
 
-// to check if a branch has individuals
-operation fm!BranchType hasIndividual (): Boolean {
-   for (branch in featureRelations!SubClassRelation) {
-      if ((branch.SuperBranch = self) and (branch.hasIndividuals)){
-	     return true;
-      }
-   }      
-   return false;  
-}
-
-
-//OPERATIONS RELATED TO IRIs AND STRING MANIPULATIONS
+//---------------------------------------------------//
+//OPERATIONS RELATED TO IRIs AND STRING MANIPULATIONS//
+//---------------------------------------------------//
 
 // to generate OWL class IRI from feature name
 operation generateOwlClassIRI(fmName : String) : String {
-	return generateOwlClassIRI( '', fmName );
+	return generateOwlClassIRI( '' , fmName );
 }
 
-operation generateOwlClassIRI(	prefix : String, fmName : String) : String {
+operation generateOwlClassIRI( prefix : String, fmName : String) : String {
 	var refactoredfmName : String;
 	var splited = new List;
 	splited = fmName.split("\\s+");
@@ -416,130 +397,246 @@ operation generateOwlClassIRI(	prefix : String, fmName : String) : String {
 		fmName = refactoredfmName;
 	}
 	if (sharedClasses.contains("#"+ prefix + fmName)) {
-			return sharedOnt.value + "#" + prefix + fmName;
+		return sharedOnt.value + "#" + prefix + fmName;
+	} else {
+		return "#" + prefix + fmName.legalName();
 	}
-	else {
-			return "#" + prefix + fmName.legalName();
-	}
-
 }
 
-//OPERATIONS RELATED TO SUBCLASS AND SUPERCLASS RELATIONSHIPS
-
-// to generate list of subclasses of a branch
-operation fm!BranchType hasSubclasses (): List {
-   var subClasses = new List;
-   for (branch in featureRelations!SubClassRelation) {
-      if ((branch.SuperBranch = self) and not branch.SuperBranch.hasIndividual ()){
-	     for (feat in branch.SubFeature) {
-	        subClasses.add (feat);
-	        }
-	     for (bran in branch.SubBranch) {
-	        subClasses.add (bran);
-	        }	       
-	  }  
-   }
-   return subClasses;
+//to add prefix to the ontology
+operation addPrefix(prefixName : String, prefixIRI : String) {
+	var prefix = new owl!Prefix;
+	prefix.name = prefixName;
+	prefix.iri = prefixIRI;
+	ont.Prefix.add(prefix);
 }
 
-// to generate list of subclasses in a subclass relation
-operation featureRelations!SubClassRelation hasSubclasses (): List {
-   	var subClasses = new List;
-   	for (feat in self.SubFeature) {
-		subClasses.add (feat);
-	}
-	for (branch in self.SubBranch) {
-		subClasses.add (branch);
-	}	       
-   	return subClasses;
+//to generate OWL object propertyIRI for branch type classes
+operation fm!BranchType generateOwlObjectPropertyIRI() : String {
+	return "#has" + self.name.legalName();
 }
 
-// to check if a branch is a subclass
-operation fm!BranchType isSubclass (): Boolean {
-   for (superbranch in featureRelations!SubClassRelation) {
-	     for (branch in superbranch.SubBranch) {
-	        if (branch = self){
-	        return true;}
-	        }
-   }
-   return false;
+//to generate OWL object propertyIRI for feature type classes
+operation fm!FeatureType generateOwlObjectPropertyIRI() : String {
+	return "#has" + self.name.legalName();
 }
 
-//to check if a feature is a subclass
-operation fm!FeatureType isSubclass (): Boolean {
-   for (superbranch in featureRelations!SubClassRelation) {
-	     for (feature in superbranch.SubFeature) {
-	        if (feature = self){
-	        return true;}
-	        }
-   }
-   return false;
+//to convert a string to legalname (i.e. without spaces)
+operation String legalName() : String {
+	return self.replaceall( ' ', '' );
 }
 
 
+//-------------------------------------//
+//OPERATIONS RELATED TO OWL ANNOTATIONS//
+//-------------------------------------//
 
-operation fm!BranchType convert() {
-	if (self.hidden) {
+// to return descriptive annotation for OWL class
+operation createDescription (classIRI : String, description : String) : owl!AnnotationAssertion {
+	var owlAnnotation : new owl!AnnotationAssertion;
+	// Create AnnotationProperty
+	var annotationProp : new owl!AnnotationProperty;
+	annotationProp.abbreviatedIRI = "rdfs:comment";
+	owlAnnotation.annotationProperty = annotationProp;
+	// Create IRI
+	var iri : new owl!IRI;
+	iri.value = classIRI;
+	owlAnnotation.iri = iri;
+	// Create Literal
+	var literal : new owl!Literal;
+	literal.datatypeIRI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral";
+	literal.value = description;
+	owlAnnotation.literal = literal;
+	return owlAnnotation;
+}
+
+//to return author annotation for OWL class
+operation createAuthor (classIRI : String, author : String) : owl!AnnotationAssertion {
+	var owlAnnotation : new owl!AnnotationAssertion;
+	// Create AnnotationProperty
+	var annotationProp : new owl!AnnotationProperty;
+	annotationProp.iri = "#mpm4cps:author";
+	owlAnnotation.annotationProperty = annotationProp;
+	// Create IRI
+	var iri : new owl!IRI;
+	iri.value = classIRI;
+	owlAnnotation.iri = iri;
+	// Create Literal
+	var literal : new owl!Literal;
+	literal.datatypeIRI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral";
+	literal.value = author;
+	owlAnnotation.literal = literal;
+	return owlAnnotation;
+}
+
+//------------------------------------------------------//
+//OPERATIONS RELATED TO INDIVIDUAL AND DISABLED FEATURES//
+//------------------------------------------------------//
+
+// to check if a feature is an individual, it can either be declared individual directly or its superbranch.hasIndividual = true.
+operation fm!FeatureType isIndividual (): Boolean {
+	if ( self.isDeclaredIndividual () or self.hasSuperBranchIndividuals ()) {
+		return true;
+	} else {
 		return false;
-	}
-	
-	if ( self.eContainer.isDefined() ) {
-		return self.eContainer.convert ();
-	}
-	
-	return true;
+	}  
 }
 
-operation fm!FeatureType convert() {
-	if ( self.hidden ) {
-		return false;
+//to check if the super-branch of the feature has individuals
+operation fm!FeatureType hasSuperBranchIndividuals (): Boolean {
+	for (branch in featureRelations!SubClassRelation) {
+    	if (branch.hasIndividuals){
+    		for (feat in branch.SubFeature) {
+        		if (feat = self){
+          			return true;
+        		}
+    		}      
+  		}
+    }
+return false;
+}
+
+//to check if a feature is declared individual independently
+operation fm!FeatureType isDeclaredIndividual (): Boolean {
+	for (individual in featureRelations!Individual) {
+		for (feat in individual.Features) {
+      		if (feat.name = self.name) {
+      			return true;
+      		}
+      	}
 	}
-	
-	if ( self.eContainer.isDefined() ) {
-		return self.eContainer.convert ();
+    return false;
+}
+
+// to check if a feature is disabled
+operation fm!FeatureType isDisabled (): Boolean {
+   for (feat in featureRelations!Disabled) {
+     if (feat.features.indexOf (self) <> -1){
+        return true;
+     }
+   }  
+   return false;  
+}
+
+//to check if a branch is disabled
+operation fm!BranchType isDisabled (): Boolean {
+   for (branch in featureRelations!Disabled) {
+     if (branch.branches.indexOf (self) <> -1){
+        return true;
+     }
+   }  
+   return false;  
+}
+
+// to check if a branch has individuals
+operation fm!BranchType hasIndividual (): Boolean {
+	for (branch in featureRelations!SubClassRelation) {
+      	if (branch.SuperBranch = self) { 
+      		if (branch.hasIndividuals) {
+    			return true;
+      		} else {
+      		return false;
+      		}
+   		}      
+   	return false;  
 	}
-	
-	return true;
 }
 
-operation fm!StructType convert() {
-	return true;
-}
+//---------------------------------------------------------//
+//OPERATIONS RELATED TO FEATURE MODEL SUB-FEATURE RELATIONS//
+//---------------------------------------------------------//
 
-operation fm!FeatureModelType convert() {
-	return true;
-}
-
+// to check if a feature has subfeatures
 operation fm!BranchType hasFeatures( checkMandatory : Boolean ) {
 	for ( subBranch in self.And ) {
 		if ( not subBranch.isHidden() and ( not checkMandatory or subBranch.isMandatory() ) ) {
 			return true;
 		}
 	}
-	
 	for ( subBranch in self.alt ) {
 		if ( not subBranch.isHidden() and ( not checkMandatory or subBranch.isMandatory() ) ) {
 			return true;
 		}
 	}
-
 	for ( subBranch in self.Or ) {
 		if ( not subBranch.isHidden() and ( not checkMandatory or subBranch.isMandatory() ) ) {
 			return true;
 		}
 	}
-
 	for ( feature in self.feature ) {
-		if ( not feature.isHidden() and ( not checkMandatory or feature.isMandatory() ) ) {
+		if ( not feature.isHidden() and not feature.isIndividual () and ( not checkMandatory or feature.isMandatory() ) ) {
 			return true;
 		}
 	}
-	
 	return false;
 }
 
-operation fm!BranchType addSomeValueFromFeature(owlObjectIntersectionOf : owl!ObjectIntersectionOf,
-													checkMandatory : Boolean ) {
+// to check if a branch is of mandatory type
+operation fm!BranchType isMandatory() : Boolean {
+	if ( self.mandatory.isDefined() ) {
+		return self.mandatory.asBoolean();
+	}
+	return false;
+}
+
+// to check if a branch is of And type
+operation fm!BranchType isAndBranch() :  Boolean {
+	return self.isBranchOf( 'and' );
+}
+
+// to check if a branch  is of Or type
+operation fm!BranchType isOrBranch() :  Boolean {
+	return self.isBranchOf( 'or' );
+}
+
+// to check if a branch is of Alt type
+operation fm!BranchType isAltBranch() :  Boolean {
+	return self.isBranchOf( 'alt' );
+}
+
+// to check if a branch is of a specific type
+operation fm!BranchType isBranchOf( type : String ) :  Boolean {
+	return self.eContainingFeature().name = type;
+}
+
+// to return list of sub-features of a branch
+operation hasSubFeatures ( superbranch : fm!BranchType ): List {
+	var subFeatures = new List;
+	var s = new String;
+	for ( feature in superbranch.feature ) {
+		if ( not feature.isDisabled () and not feature.isIndividual () ) {
+			subFeatures.add ( feature );
+		}
+	}
+	return subFeatures;
+}
+
+// to return list of sub-branches of a branch
+operation hasSubBranches ( superbranch : fm!BranchType ): List {
+	var subBranches = new List;
+	for ( branch in superbranch.alt ) {
+		if (not branch.isDisabled()) {
+			subBranches.add (branch);
+		}
+	}
+	for ( branch in superbranch.And ) {
+		if (not branch.isDisabled()) {
+			subBranches.add (branch);
+		}
+	}
+	for ( branch in superbranch.Or ) {
+		if (not branch.isDisabled()) {
+			subBranches.add (branch);
+		}
+	}
+	return subBranches;
+}
+
+//---------------------------------------------------------------//
+//OPERATIONS RELATED TO ADDITION OF OBJECT PROPERTY RELATIONSHIPS//
+//---------------------------------------------------------------//
+
+operation fm!BranchType addSomeValueFromFeature( owlObjectIntersectionOf : owl!ObjectIntersectionOf, checkMandatory : Boolean ) {
 	if ( not self.isHidden() and ( not checkMandatory or self.isMandatory() ) ) {
 		var owlObjectSomeValuesFrom : new owl!ObjectSomeValuesFrom;
 		var owlOP : new owl!ObjectProperty;
@@ -552,12 +649,8 @@ operation fm!BranchType addSomeValueFromFeature(owlObjectIntersectionOf : owl!Ob
 	}
 }
 
-operation fm!FeatureType addSomeValueFromFeature( 	
-    owlObjectIntersectionOf : owl!ObjectIntersectionOf,
-    checkMandatory : Boolean ) {
-	if (not self.isHidden() and 
-	    (not checkMandatory or self.isMandatory()) 
-	    ) {
+operation fm!FeatureType addSomeValueFromFeature( owlObjectIntersectionOf : owl!ObjectIntersectionOf, checkMandatory : Boolean ) {
+	if (not self.isHidden() and not self.isIndividual () and ( not checkMandatory or self.isMandatory() )) {
 		var owlObjectSomeValuesFrom : new owl!ObjectSomeValuesFrom;
 		var owlOP : new owl!ObjectProperty;
 		owlOP.iri = self.generateOwlObjectPropertyIRI();
@@ -575,7 +668,6 @@ operation fm!BranchType addSomeValueFromFeature( owlObjectUnionOf : owl!ObjectUn
 		var owlOP : new owl!ObjectProperty;
 		owlOP.iri = self.generateOwlObjectPropertyIRI();
 		owlObjectSomeValuesFrom.objectProperty = owlOP;
-		
 		var owlClassRange : new owl!Class;
 		owlClassRange.iri = generateOwlClassIRI(self.name);
 		owlObjectSomeValuesFrom.class = owlClassRange;
@@ -584,8 +676,7 @@ operation fm!BranchType addSomeValueFromFeature( owlObjectUnionOf : owl!ObjectUn
 }
 
 operation fm!FeatureType addSomeValueFromFeature( owlObjectUnionOf : owl!ObjectUnionOf ) {
-	if (not self.isHidden() 
-	) {
+	if (not self.isHidden()) {
 		var owlObjectSomeValuesFrom : new owl!ObjectSomeValuesFrom;
 		var owlOP : new owl!ObjectProperty;
 		owlOP.iri = self.generateOwlObjectPropertyIRI();
@@ -597,8 +688,7 @@ operation fm!FeatureType addSomeValueFromFeature( owlObjectUnionOf : owl!ObjectU
 	}
 }
 
-operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!ObjectUnionOf,
-														branch : fm!BranchType ) {
+operation fm!BranchType addDisjointTwoByTwoFeatures( owlObjectUnionOf : owl!ObjectUnionOf, branch : fm!BranchType ) {
 	for ( subBranch in self.And ) {
 		if ( branch <> subBranch and not subBranch.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -607,7 +697,6 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!Obj
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
-	
 	for ( subBranch in self.alt ) {
 		if ( branch <> subBranch and not subBranch.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -616,7 +705,6 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!Obj
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
-
 	for ( subBranch in self.Or ) {
 		if ( branch <> subBranch and not subBranch.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -625,7 +713,6 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!Obj
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
-
 	for ( subFeature in self.feature ) {
 		if ( not subFeature.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -636,8 +723,7 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!Obj
 	}
 }
 
-operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!ObjectUnionOf,
-														feature : fm!FeatureType ) {
+operation fm!BranchType addDisjointTwoByTwoFeatures( owlObjectUnionOf : owl!ObjectUnionOf, feature : fm!FeatureType ) {
 	for ( subBranch in self.And ) {
 		if ( not subBranch.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -646,7 +732,6 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!Obj
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
-	
 	for ( subBranch in self.alt ) {
 		if ( not subBranch.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -655,7 +740,6 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!Obj
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
-
 	for ( subBranch in self.Or ) {
 		if ( not subBranch.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -664,7 +748,6 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!Obj
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
-
 	for ( subFeature in self.feature ) {
 		if ( feature <> subFeature and not subFeature.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -675,422 +758,24 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( 	owlObjectUnionOf : owl!Obj
 	}
 }
 
-operation fm!BranchType isMandatory() : Boolean {
-	if ( self.mandatory.isDefined() ) {
-		return self.mandatory.asBoolean();
-	}
-	
-	return false;
-}
-
-operation fm!BranchType isAndBranch() :  Boolean {
-	return self.isBranchOf( 'and' );
-}
-
-operation fm!BranchType isOrBranch() :  Boolean {
-	return self.isBranchOf( 'or' );
-}
-
-operation fm!BranchType isAltBranch() :  Boolean {
-	return self.isBranchOf( 'alt' );
-}
-
-operation fm!BranchType isBranchOf(	type : String ) :  Boolean {
-	
-	return self.eContainingFeature().name = type;
-}
-
-operation addPrefix(prefixName : String, prefixIRI : String) {
-	var prefix = new owl!Prefix;
-	prefix.name = prefixName;
-	prefix.iri = prefixIRI;
-	ont.Prefix.add(prefix);
-}
-
-
-
-operation createDescription (classIRI : String, description : String) : owl!AnnotationAssertion {
-	var owlAnnotation : new owl!AnnotationAssertion;
-	
-	// Create AnnotationProperty
-	var annotationProp : new owl!AnnotationProperty;
-	annotationProp.abbreviatedIRI = "rdfs:comment";
-	owlAnnotation.annotationProperty = annotationProp;
-	
-	// Create IRI
-	var iri : new owl!IRI;
-	iri.value = classIRI;
-	owlAnnotation.iri = iri;
-	
-	// Create Literal
-	var literal : new owl!Literal;
-	literal.datatypeIRI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral";
-	literal.value = description;
-	owlAnnotation.literal = literal;
-	
-	return owlAnnotation;
-}
-
-operation createAuthor (classIRI : String, author : String) : owl!AnnotationAssertion {
-	var owlAnnotation : new owl!AnnotationAssertion;
-	
-	// Create AnnotationProperty
-	var annotationProp : new owl!AnnotationProperty;
-	annotationProp.iri = "#mpm4cps:author";
-	owlAnnotation.annotationProperty = annotationProp;
-	
-	// Create IRI
-	var iri : new owl!IRI;
-	iri.value = classIRI;
-	owlAnnotation.iri = iri;
-	
-	// Create Literal
-	var literal : new owl!Literal;
-	literal.datatypeIRI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral";
-	literal.value = author;
-	owlAnnotation.literal = literal;
-	
-	return owlAnnotation;
-}
-
-operation fm!BranchType generateOwlObjectPropertyIRI() : String {
-		return "#has" + self.name.legalName();
-}
-
-operation fm!FeatureType generateOwlObjectPropertyIRI() : String {
-	return "#has" + self.name.legalName();
-}
-
-operation String legalName() : String {
-	return self.replaceall( ' ', '' );
-}
-
-operation deleteFeature (branch : fm!BranchType) {
-	for (subBranch in branch.alt) {
-		for (feature in subBranch.feature) {
-			delete feature.equivalent();
-		}
-	}
-	
-	for (subBranch in branch.Or) {
-		for (feature in subBranch.feature) {
-			delete feature.equivalent();
-		}
-	}
-	
-	for (subBranch in branch.And) {
-		for (feature in subBranch.feature) {
-			delete feature.equivalent();
-		}
-	}
-}
-
-
-operation searchForBranches (branch : fm!BranchType) {
-	// Alternative branches
-	for (subBranch in branch.alt) {
-			var owlSubClassOf : new owl!SubClassOf;
-			var owlClass : new owl!Class;
-			var owlOP : new owl!ObjectProperty;
-			addAltObjProp(owlSubClassOf, owlClass, owlOP, subBranch);
-			
-			if ( (not subBranch.And.isEmpty()) or (not subBranch.Or.isEmpty()) or (not subBranch.alt.isEmpty()) ) {
-				searchForBranches(subBranch);
-			}
-		//}
-	}
-	
-	// Mandatory branches
-	for (subBranch in branch.And) {
-			var owlSubClassOf : new owl!SubClassOf;
-			var owlClass : new owl!Class;
-			var owlOP : new owl!ObjectProperty;
-			addAndObjProp(owlSubClassOf, owlClass, owlOP, subBranch, false);
-			
-			if ( (not subBranch.And.isEmpty()) or (not subBranch.Or.isEmpty()) or (not subBranch.alt.isEmpty()) ) {
-				searchForBranches(subBranch);
-			}
-		//}
-	}
-
-	// Or branches
-	for (subBranch in branch.Or) {
-			var owlSubClassOf : new owl!SubClassOf;
-			var owlClass : new owl!Class;
-			var owlOP : new owl!ObjectProperty;
-			addOrObjProp(owlSubClassOf, owlClass, owlOP, subBranch);
-			
-			if ( (not subBranch.And.isEmpty()) or (not subBranch.Or.isEmpty()) or (not subBranch.alt.isEmpty()) ) {
-				searchForBranches(subBranch);
-			}
-	}
-}
-
-// Add alternative object property between ontology classes
-/*operation addAltObjProp(owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlOP : owl!ObjectProperty, branch : fm!BranchType) {
-	// Add class
-	owlClass.iri = generateOwlClassIRI(branch.name);
-	owlSubClassOf.class.add(owlClass);
-
-	owlOP.iri = branch.generateOwlObjectPropertyIRI();
-	
-	var owlObjectAllValuesFrom : new owl!ObjectAllValuesFrom;
-	var owlObjectUnionOf : new owl!ObjectUnionOf;
-	
-	owlObjectAllValuesFrom.objectProperty = owlOP;
-	
-	for (feature in branch.feature) {
-		// Create childs for every branch in the feature model
-		var owlChildClass : new owl!Class;				
-		owlChildClass.iri = feature.equivalent().class.iri;	
-			
-		// Add the child elements to the ObjectUnionOf MM class
-		owlObjectUnionOf.class.add(owlChildClass);
-	}
-	
-	for (subBranch in branch.And) {
-		// Create childs for every branch in the feature model
-		var owlChildClass : new owl!Class;				
-		owlChildClass.iri = subBranch.equivalent().class.iri;	
-		// Add the child elements to the ObjectUnionOf MM class
-		owlObjectUnionOf.class.add(owlChildClass);
-	}
-	
-	for (subBranch in branch.Or) {
-		// Create childs for every branch in the feature model
-		var owlChildClass : new owl!Class;		
-		owlChildClass.iri = subBranch.Dua Lipa - IDGAFequivalent().class.iri;	
-		// Add the child elements to the ObjectUnionOf MM class
-		owlObjectUnionOf.class.add(owlChildClass);
-	}
-	
-	for (subBranch in branch.alt) {
-		// Create childs for every branch in the feature model
-		var owlChildClass : new owl!Class;				
-		owlChildClass.iri = subBranch.equivalent().class.iri;	
-		// Add the child elements to the ObjectUnionOf MM class
-		owlObjectUnionOf.class.add(owlChildClass);
-	}
-	
-	// Add the ObjectUnionOf element to the ObjectAllValuesFrom MM class
-	owlObjectAllValuesFrom.objectUnionOf = owlObjectUnionOf;	
-	owlSubClassOf.objectAllValuesFrom = owlObjectAllValuesFrom;
-	ont.subclassof.add(owlSubClassOf);
-}
-
-
-// Add mandatory object property between ontology classes
-operation addAndObjProp(owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlOP : owl!ObjectProperty, branch : fm!BranchType, overruleMandatory : Boolean) {
-	// Add class
-	owlClass.iri = generateOwlClassIRI(branch.name);
-	owlSubClassOf.class.add(owlClass);
-	
-	var owlObjectSomeValuesFrom : new owl!ObjectSomeValuesFrom;
-	var owlObjectIntersectionOfSome : new owl!ObjectIntersectionOf;
-	owlOP.iri = branch.generateOwlObjectPropertyIRI();
-	owlObjectSomeValuesFrom.objectProperty = owlOP;
-	
-	var owlClassMin : new owl!Class;
-	owlClassMin.iri = generateOwlClassIRI(branch.name);
-	var owlSubClassOfMin : new owl!SubClassOf;
-	owlSubClassOfMin.class.add(owlClassMin);
-	var owlOPMin : new owl!ObjectProperty;
-	var owlObjectMinCardinality : new owl!ObjectMinCardinality;
-	var owlObjectIntersectionOfMin : new owl!ObjectIntersectionOf;
-	owlOPMin.iri = branch.generateOwlObjectPropertyIRI();
-	owlObjectMinCardinality.objectProperty = owlOPMin;
-	
-	for (feature in branch.feature) {
-		// Create childs for every branch in the feature model
-		var owlChildClass : new owl!Class;				
-		owlChildClass.iri = feature.equivalent().class.iri;	
-		if ((overruleMandatory == true) or (feature.mandatory == true)) {
-			// Add the child elements to the ObjectIntersectionOf MM class
-			owlObjectIntersectionOfSome.class.add(owlChildClass);
-		}
-		else {
-			// Add the child elements to the ObjectIntersectionOf MM class
-			owlObjectIntersectionOfMin.class.add(owlChildClass);
-		}
-	}
-	
-	for (subBranch in branch.And) {
-		if ( isSubclass( subBranch.name ) ) {
-//		if (not subBranch.name.endsWith('*')) {
-			// Create childs for every branch in the feature model
-			var owlChildClass : new owl!Class;				
-			owlChildClass.iri = subBranch.equivalent().class.iri;
-			// Add the child elements to the ObjectIntersectionOf MM class
-			owlObjectIntersectionOfSome.class.add(owlChildClass);
-		}
-	}
-	
-	for (subBranch in branch.Or) {
-		if ( isSubclass( subBranch.name ) ) {
-//		if (not subBranch.name.endsWith('*')) {
-			// Create childs for every branch in the feature model
-			var owlChildClass : new owl!Class;				
-			owlChildClass.iri = subBranch.equivalent().class.iri;
-			// Add the child elements to the ObjectIntersectionOf MM class
-			owlObjectIntersectionOfSome.class.add(owlChildClass);
-		}		
-	}
-	
-	for (subBranch in branch.alt) {
-		if ( isSubclass( subBranch.name ) ) {
-//		if (not subBranch.name.endsWith('*')) {
-			// Create childs for every branch in the feature model
-			var owlChildClass : new owl!Class;				
-			owlChildClass.iri = subBranch.equivalent().class.iri;
-			// Add the child elements to the ObjectIntersectionOf MM class
-			owlObjectIntersectionOfSome.class.add(owlChildClass);
-		}		
-	}
-	
-	// Add the ObjectIntersectionOf element to the ObjectSomeValuesFrom MM class
-	if (not owlObjectIntersectionOfSome.class.isEmpty()) {
-		owlObjectSomeValuesFrom.objectIntersectionOf = owlObjectIntersectionOfSome;	
-		owlSubClassOf.objectSomeValuesFrom = owlObjectSomeValuesFrom;
-		ont.subclassof.add(owlSubClassOf);
-	}
-	
-	if (not owlObjectIntersectionOfMin.class.isEmpty()) {
-		owlObjectMinCardinality.objectIntersectionOf = owlObjectIntersectionOfMin;
-		var cardinality = new Native("java.math.BigInteger")("0");
-		owlObjectMinCardinality.cardinality = cardinality;
-		owlSubClassOfMin.objectMinCardinality = owlObjectMinCardinality;
-		("OwlSubClassOfMin: " + branch.name + " " + owlObjectIntersectionOfMin).println();
-		ont.subclassof.add(owlSubClassOfMin);
-	}
-}
-
-// Add or object property between ontology classes
-operation addOrObjProp(owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlOP : owl!ObjectProperty, branch : fm!BranchType) {
-	// Add class
-	owlClass.iri = generateOwlClassIRI(branch.name);
-	owlSubClassOf.class.add(owlClass);
-
-	owlOP.iri = branch.generateOwlObjectPropertyIRI();
-	
-	var owlObjectSomeValuesFrom : new owl!ObjectSomeValuesFrom;
-	var owlObjectUnionOf : new owl!ObjectUnionOf;
-	
-	owlObjectSomeValuesFrom.objectProperty = owlOP;
-	
-	for (feature in branch.feature) {
-			// Create childs for every branch in the feature model
-			var owlChildClass : new owl!Class;				
-			owlChildClass.iri = feature.equivalent().class.iri;	
-			// Add the child elements to the ObjectUnionOf MM class
-			owlObjectUnionOf.class.add(owlChildClass);
-	}
-	
-	for (subBranch in branch.And) {
-		// Create childs for every branch in the feature model
-		var owlChildClass : new owl!Class;				
-		owlChildClass.iri = subBranch.equivalent().class.iri;	
-		// Add the child elements to the ObjectUnionOf MM class
-		owlObjectUnionOf.class.add(owlChildClass);
-	}
-	
-	for (subBranch in branch.Or) {
-		// Create childs for every branch in the feature model
-		var owlChildClass : new owl!Class;				
-		owlChildClass.iri = subBranch.equivalent().class.iri;	
-		// Add the child elements to the ObjectUnionOf MM class
-		owlObjectUnionOf.class.add(owlChildClass);
-	}
-	
-	for (subBranch in branch.alt) {
-		// Create childs for every branch in the feature model
-		var owlChildClass : new owl!Class;				
-		owlChildClass.iri = subBranch.equivalent().class.iri;	
-		// Add the child elements to the ObjectUnionOf MM class
-		owlObjectUnionOf.class.add(owlChildClass);
-	}
-	
-	// Add the ObjectUnionOf element to the ObjectSomeValuesFrom MM class
-	owlObjectSomeValuesFrom.objectUnionOf = owlObjectUnionOf;	
-	owlSubClassOf.objectSomeValuesFrom = owlObjectSomeValuesFrom;
-	ont.subclassof.add(owlSubClassOf);
-}*/
-
-
-
-
-operation hasSubfeatures ( superbranch : fm!BranchType ): List {
-	var subFeatures = new List;
-	for ( feature in superbranch.feature ) {
-		if ( not feature.isDisabled () and not feature.isIndividual () ) {
-			subFeatures.add ( feature );
-		}
-	}
-	return subFeatures;
-}
-
-operation hasSubbranches ( superbranch : fm!BranchType ): List {
-	var subBranches = new List;
-	for ( branch in superbranch.alt ) {
-		if (not branch.isDisabled()) {subBranches.add (branch);}
-	}
-	for ( branch in superbranch.And ) {
-		if (not branch.isDisabled()) {subBranches.add (branch);}
-	}
-	for ( branch in superbranch.Or ) {
-		if (not branch.isDisabled()) {subBranches.add (branch);}
-	}
-	return subBranches;
-}
-
-
-
-
-
-operation fm!BranchType isDisabled (): Boolean {
-   for (branch in featureRelations!Disabled) {
-     if (branch.branches.indexOf (self) <> -1){
-        return true;
-     }
-   }   
-   return false;  
-}
-
-
-
-
-
-
-operation owl!Class ontHierarchyShared (superClassName : String) {
-	var owlSubClass : new owl!SubClassOf;
-	var owlParentClass : new owl!Class;
-	var owlChildClass : new owl!Class;
-	
-	owlChildClass.iri = self.iri;
-	owlSubClass.class.add(owlChildClass);
-	owlParentClass.iri = generateOwlClassIRI (superClassName);
-	owlSubClass.class.add(owlParentClass);
-
-	ont.subclassof.add(owlSubClass);
-}
-
 operation ontOPDomain ( feature : fm!FeatureType , branch : fm!BranchType ) {
     var owlObjectPropertyDomain = new owl!ObjectPropertyDomain;
     var owlOP = new owl!ObjectProperty;
-    var owlClass = new owl!Class;		
-	owlOP.iri = feature.generateOwlObjectPropertyIRI();	
+    var owlClass = new owl!Class;
+	owlOP.iri = feature.generateOwlObjectPropertyIRI();
 	owlObjectPropertyDomain.objectProperty = owlOP;
-	owlClass.iri = generateOwlClassIRI(branch.name);	
+	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlObjectPropertyDomain.class = owlClass;
-	ont.objectpropertyDomain.add( owlObjectPropertyDomain );	
+	ont.objectpropertyDomain.add( owlObjectPropertyDomain );
 }
 
 operation ontOPDomain ( feature : fm!BranchType , branch : fm!BranchType ) {
-	var owlObjectPropertyDomain = new owl!ObjectPropertyDomain;
+var owlObjectPropertyDomain = new owl!ObjectPropertyDomain;
     var owlOP = new owl!ObjectProperty;
-    var owlClass = new owl!Class;		
-	owlOP.iri = feature.generateOwlObjectPropertyIRI();	
+    var owlClass = new owl!Class;
+	owlOP.iri = feature.generateOwlObjectPropertyIRI();
 	owlObjectPropertyDomain.objectProperty = owlOP;
-	owlClass.iri = generateOwlClassIRI(branch.name);	
+	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlObjectPropertyDomain.class = owlClass;
-	ont.objectpropertyDomain.add( owlObjectPropertyDomain );	
+	ont.objectpropertyDomain.add( owlObjectPropertyDomain );
 }

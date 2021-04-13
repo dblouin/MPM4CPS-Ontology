@@ -121,12 +121,12 @@
 \begin{center}
 \textbf{ICT COST Action IC1404} \\
 
-\vspace{1cm} 
+\vspace{0.5cm} 
 
 %title, authors
 {\Huge\bfseries\doctitle}
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 {\Large\docauthor}
 
@@ -158,6 +158,7 @@
 	 University of Campania Luigi Vanvitelli, Caserta, Italy	&	&     	  & \\
 	 Tallinn University of Technology, Estonia	&	&     	  & \\
 	 Chalmers University of Technology, Goteborg, Sweden	&	&     	  & \\
+	 Birla Institute of Technology \& Science, Pilani, Goa, India	&	&     	  & \\
 	\end{tabularx}
 \end{table}
 

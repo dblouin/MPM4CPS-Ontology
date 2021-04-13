@@ -21,6 +21,23 @@
 	[/for]
 [/template]
 
+[template public generateCPSProperties( ontology : Ontology )]
+	[for ( propIri : String | ontology.declaration->select( objectProperty <> null )->select( el | el.objectProperty.iRI.isLocal() )->collect( objectProperty.iRI )->sortedBy( toLatex() ) )]
+
+\subsection{[ontology.completeName( propIri )/]}
+\label{subsecP:[propIri.toLatexLabel()/]}
+This object property is used to relate [for ( domain : String | ontology.objectPropertyDomains( propIri )->sortedBy( toLatex() ) )][domain.domainType()/][domain.domainClassIri().toLatex()/], [/for]to the [for ( range : String | ontology.objectPropertyRanges( propIri )->sortedBy( toLatex() ) )][range.rangeType()/][range.rangeClassIri().toLatex()/], [/for]that it has.  
+
+[generateExtendedProperties( ontology, propIri )/]
+
+[generateDomains( ontology, propIri )/]
+
+[generateRanges( ontology, propIri )/]
+
+[generateToDos( ontology, propIri )/]
+	[/for]
+[/template]
+
 [template public generateDomains(  ontology : Ontology, propIri : String )]
 Domains:
 	[if ( ontology.objectPropertyDomains( propIri )->isEmpty() )]

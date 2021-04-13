@@ -28,7 +28,7 @@ This ontology of cyber-physical systems contains concepts divided into sub-domai
 \section{Properties}
 \label{sec:cps:properties}
 
-[generateProperties( rootDoc.ontology->first() )/]
+[generateCPSProperties( rootDoc.ontology->first() )/]
 	[/file]
 [/template]
 

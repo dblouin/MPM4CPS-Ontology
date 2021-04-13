@@ -19,26 +19,6 @@
     <owl:Class IRI="#CPSDC"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
   </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CPSDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CPSDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CPSDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CPSDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
-  <owl:SubClassOf>
-    <owl:Class IRI="#CPSDC"/>
-    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#DomainConcept"/>
-  </owl:SubClassOf>
   <owl:Declaration>
     <owl:Class IRI="#ApplicationSoftware"/>
   </owl:Declaration>
@@ -1199,19 +1179,10 @@
     <owl:ObjectProperty IRI="#hasMemory"/>
     <owl:Class IRI="#Memory"/>
   </owl:ObjectPropertyRange>
-  <owl:SubClassOf>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasAuxiliaryMemory"/>
     <owl:Class IRI="#Memory"/>
-    <owl:ObjectIntersectionOf>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasMainMemory"/>
-        <owl:Class IRI="#MainMemory"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasCacheMemory"/>
-        <owl:Class IRI="#CacheMemory"/>
-      </owl:ObjectSomeValuesFrom>
-    </owl:ObjectIntersectionOf>
-  </owl:SubClassOf>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#AuxiliaryMemory"/>
     <owl:Class IRI="#Memory"/>
@@ -1234,6 +1205,10 @@
     <owl:ObjectProperty IRI="#hasnonfunctionalReqs"/>
     <owl:Class IRI="#nonfunctionalReqs"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasInteroperability"/>
+    <owl:Class IRI="#nonfunctionalReqs"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#nonfunctionalReqs"/>
     <owl:ObjectUnionOf>
@@ -1305,6 +1280,14 @@
     <owl:ObjectProperty IRI="#hasBehavior"/>
     <owl:Class IRI="#Behavior"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasEquilibrium"/>
+    <owl:Class IRI="#Behavior"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasEmergentBehavior"/>
+    <owl:Class IRI="#Behavior"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Behavior"/>
     <owl:ObjectIntersectionOf>
@@ -1340,6 +1323,10 @@
     <owl:ObjectProperty IRI="#hasUncertainty"/>
     <owl:Class IRI="#Uncertainty"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasProbabilistic"/>
+    <owl:Class IRI="#Uncertainty"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Uncertainty"/>
     <owl:ObjectUnionOf>
@@ -1366,9 +1353,11 @@
             <owl:ObjectProperty IRI="#hasProbabilistic"/>
             <owl:Class IRI="#Probabilistic"/>
           </owl:ObjectSomeValuesFrom>
+        </owl:ObjectIntersectionOf>
+        <owl:ObjectIntersectionOf>
           <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasDeterministic"/>
-            <owl:Class IRI="#Deterministic"/>
+            <owl:ObjectProperty IRI="#hasProbabilistic"/>
+            <owl:Class IRI="#Probabilistic"/>
           </owl:ObjectSomeValuesFrom>
         </owl:ObjectIntersectionOf>
         <owl:ObjectIntersectionOf>
@@ -1376,51 +1365,15 @@
             <owl:ObjectProperty IRI="#hasProbabilistic"/>
             <owl:Class IRI="#Probabilistic"/>
           </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-            <owl:Class IRI="#Non-deterministic"/>
-          </owl:ObjectSomeValuesFrom>
         </owl:ObjectIntersectionOf>
+        <owl:ObjectIntersectionOf/>
         <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasDeterministic"/>
-            <owl:Class IRI="#Deterministic"/>
-          </owl:ObjectSomeValuesFrom>
           <owl:ObjectSomeValuesFrom>
             <owl:ObjectProperty IRI="#hasProbabilistic"/>
             <owl:Class IRI="#Probabilistic"/>
           </owl:ObjectSomeValuesFrom>
         </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasDeterministic"/>
-            <owl:Class IRI="#Deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-            <owl:Class IRI="#Non-deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-            <owl:Class IRI="#Non-deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasProbabilistic"/>
-            <owl:Class IRI="#Probabilistic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-            <owl:Class IRI="#Non-deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasDeterministic"/>
-            <owl:Class IRI="#Deterministic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
+        <owl:ObjectIntersectionOf/>
       </owl:ObjectUnionOf>
     </owl:ObjectComplementOf>
   </owl:SubClassOf>
@@ -1435,6 +1388,10 @@
     <owl:ObjectProperty IRI="#hasProperties"/>
     <owl:Class IRI="#Properties"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasUncertainty"/>
+    <owl:Class IRI="#Properties"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Uncertainty"/>
     <owl:Class IRI="#Properties"/>
@@ -1455,6 +1412,10 @@
   </owl:ObjectPropertyRange>
   <owl:ObjectPropertyDomain>
     <owl:ObjectProperty IRI="#hasMechanical"/>
+    <owl:Class IRI="#Controller"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasElectronic"/>
     <owl:Class IRI="#Controller"/>
   </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
@@ -1478,6 +1439,14 @@
   </owl:ObjectPropertyDomain>
   <owl:ObjectPropertyDomain>
     <owl:ObjectProperty IRI="#hasApplication-specificCircuit"/>
+    <owl:Class IRI="#Electronic"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasProcessor"/>
+    <owl:Class IRI="#Electronic"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasMemory"/>
     <owl:Class IRI="#Electronic"/>
   </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
@@ -1516,6 +1485,18 @@
     <owl:ObjectProperty IRI="#hasEntity"/>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
   </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasRole"/>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasEvent"/>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasAction"/>
+    <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="http://mpm4cps.eu/ontology/shared#Human"/>
     <owl:ObjectUnionOf>
@@ -1548,6 +1529,26 @@
     <owl:ObjectProperty IRI="#hasConstituentElement"/>
     <owl:Class IRI="#ConstituentElement"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasCyber"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasControl"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasNetwork"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasPhysical"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasHuman"/>
+    <owl:Class IRI="#ConstituentElement"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#ConstituentElement"/>
     <owl:ObjectIntersectionOf>
@@ -1604,6 +1605,22 @@
     <owl:ObjectProperty IRI="#hasPrognostics"/>
     <owl:Class IRI="#Control"/>
   </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasFeedback"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasProperties"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasGoal"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasDynamics"/>
+    <owl:Class IRI="#Control"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Control"/>
     <owl:ObjectIntersectionOf>
@@ -1652,6 +1669,14 @@
     <owl:ObjectProperty IRI="#hasNetwork"/>
     <owl:Class IRI="#Network"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasConfiguration"/>
+    <owl:Class IRI="#Network"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasCommunication"/>
+    <owl:Class IRI="#Network"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Network"/>
     <owl:ObjectIntersectionOf>
@@ -1676,6 +1701,10 @@
     <owl:ObjectProperty IRI="#hasCyber"/>
     <owl:Class IRI="#Cyber"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSoftware"/>
+    <owl:Class IRI="#Cyber"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Cyber"/>
     <owl:ObjectIntersectionOf>
@@ -1710,6 +1739,10 @@
   </owl:ObjectPropertyDomain>
   <owl:ObjectPropertyDomain>
     <owl:ObjectProperty IRI="#hasEnvironment"/>
+    <owl:Class IRI="#Physical"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasController"/>
     <owl:Class IRI="#Physical"/>
   </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
@@ -1756,6 +1789,10 @@
     <owl:ObjectProperty IRI="#hasEmbedded/FirmwareSoftware"/>
     <owl:Class IRI="#Software"/>
   </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSystemSoftware"/>
+    <owl:Class IRI="#Software"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Software"/>
     <owl:Class IRI="#Cyber"/>
@@ -1795,6 +1832,10 @@
   </owl:ObjectPropertyDomain>
   <owl:ObjectPropertyDomain>
     <owl:ObjectProperty IRI="#hasSystemUtilities"/>
+    <owl:Class IRI="#SystemSoftware"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasOperatingSystem"/>
     <owl:Class IRI="#SystemSoftware"/>
   </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
@@ -1847,6 +1888,10 @@
     <owl:ObjectProperty IRI="#hasOperatingSystem"/>
     <owl:Class IRI="#OperatingSystem"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasUserInterface"/>
+    <owl:Class IRI="#OperatingSystem"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#OperatingSystem"/>
     <owl:ObjectIntersectionOf>
@@ -1878,6 +1923,10 @@
     <owl:ObjectProperty IRI="#hasContinuity"/>
     <owl:Class IRI="#Continuity"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasDiscontinuous"/>
+    <owl:Class IRI="#Continuity"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Discontinuous"/>
     <owl:Class IRI="#Continuity"/>
@@ -1948,6 +1997,26 @@
     <owl:ObjectProperty IRI="#hasCPS"/>
     <owl:Class IRI="#CPS"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasApplicationDomain"/>
+    <owl:Class IRI="#CPS"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasConstituentElement"/>
+    <owl:Class IRI="#CPS"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasArchitecture"/>
+    <owl:Class IRI="#CPS"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasnonfunctionalReqs"/>
+    <owl:Class IRI="#CPS"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasDisciplines"/>
+    <owl:Class IRI="#CPS"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#CPS"/>
     <owl:ObjectIntersectionOf>
@@ -2007,6 +2076,10 @@
     <owl:ObjectProperty IRI="#hasReferenceSignal"/>
     <owl:Class IRI="#Goal"/>
   </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasTracking"/>
+    <owl:Class IRI="#Goal"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Goal"/>
     <owl:ObjectUnionOf>
@@ -2039,6 +2112,10 @@
     <owl:ObjectProperty IRI="#hasTracking"/>
     <owl:Class IRI="#Tracking"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasValidityRegion"/>
+    <owl:Class IRI="#Tracking"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Tracking"/>
     <owl:ObjectIntersectionOf>
@@ -2070,6 +2147,14 @@
     <owl:ObjectProperty IRI="#hasFeedback"/>
     <owl:Class IRI="#Feedback"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasDependency"/>
+    <owl:Class IRI="#Feedback"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasScope"/>
+    <owl:Class IRI="#Feedback"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Feedback"/>
     <owl:ObjectIntersectionOf>
@@ -2116,6 +2201,18 @@
     <owl:ObjectProperty IRI="#hasDynamics"/>
     <owl:Class IRI="#Dynamics"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasBehavior"/>
+    <owl:Class IRI="#Dynamics"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasTopology"/>
+    <owl:Class IRI="#Dynamics"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasSystemType"/>
+    <owl:Class IRI="#Dynamics"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Dynamics"/>
     <owl:ObjectUnionOf>
@@ -2144,6 +2241,18 @@
     <owl:ObjectProperty IRI="#hasSystemType"/>
     <owl:Class IRI="#SystemType"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasLinearity"/>
+    <owl:Class IRI="#SystemType"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasTiming"/>
+    <owl:Class IRI="#SystemType"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasContinuity"/>
+    <owl:Class IRI="#SystemType"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#SystemType"/>
     <owl:ObjectUnionOf>
@@ -2194,6 +2303,10 @@
     <owl:ObjectProperty IRI="#hasTopology"/>
     <owl:Class IRI="#Topology"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasTopologicalEvolution"/>
+    <owl:Class IRI="#Topology"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Topology"/>
     <owl:ObjectIntersectionOf>
@@ -2283,6 +2396,14 @@
     <owl:ObjectProperty IRI="#hasCommunication"/>
     <owl:Class IRI="#Communication"/>
   </owl:ObjectPropertyRange>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasComType"/>
+    <owl:Class IRI="#Communication"/>
+  </owl:ObjectPropertyDomain>
+  <owl:ObjectPropertyDomain>
+    <owl:ObjectProperty IRI="#hasProtocol"/>
+    <owl:Class IRI="#Communication"/>
+  </owl:ObjectPropertyDomain>
   <owl:SubClassOf>
     <owl:Class IRI="#Communication"/>
     <owl:ObjectIntersectionOf>
