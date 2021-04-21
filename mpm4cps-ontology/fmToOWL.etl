@@ -225,7 +225,7 @@ rule branchTypeToObjectPropertyDomain
 rule andBranchTypeToSubclassOf
 	transform branch : fm!BranchType
 	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectIntersectionOf : owl!ObjectIntersectionOf {
-	guard : branch.isAndBranch() and branch.hasFeatures( true ) and not branch.isDisabled () and not branch.hasIndividual ()
+	guard : branch.isAndBranch() and branch.hasFeatures( true ) and not branch.isDisabled() and not branch.hasIndividual()
 
 	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlSubClassOf.class.add(owlClass);
@@ -250,7 +250,7 @@ rule andBranchTypeToSubclassOf
 rule orBranchTypeToSubclassOf
 	transform branch : fm!BranchType
 	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectUnionOf : owl!ObjectUnionOf {
-	guard : branch.isOrBranch() or branch.isAltBranch() and branch.hasFeatures( false ) and not branch.isDisabled () and not branch.hasIndividual ()
+	guard : branch.isOrBranch() or branch.isAltBranch() and branch.hasFeatures( false ) and not branch.isDisabled() and not branch.hasIndividual()
 
 	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlSubClassOf.class.add(owlClass);
@@ -276,22 +276,23 @@ rule altBranchTypeToSubclassOf
 	transform branch : fm!BranchType
 	to owlSubClassOf : owl!SubClassOf, owlClass : owl!Class, owlObjectComplementOf : owl!ObjectComplementOf, owlObjectUnionOf : owl!ObjectUnionOf {
 	guard : branch.isAltBranch() and branch.hasFeatures( false ) and not branch.isDisabled () and not branch.hasIndividual ()
-
 	owlClass.iri = generateOwlClassIRI(branch.name);
 	owlSubClassOf.class.add(owlClass);
 	owlSubClassOf.objectComplementOf = owlObjectComplementOf;
 	owlObjectComplementOf.objectUnionOf = owlObjectUnionOf;
 	ont.subclassof.add( owlSubClassOf );
-
 	for ( subBranch in branch.And ) {
 		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
 	}
+	
 	for ( subBranch in branch.alt ) {
 		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
 	}
+
 	for ( subBranch in branch.Or ) {
 		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, subBranch );
 	}
+
 	for ( feature in branch.feature ) {
 		branch.addDisjointTwoByTwoFeatures( owlObjectUnionOf, feature );
 	}
@@ -579,6 +580,14 @@ operation fm!BranchType isMandatory() : Boolean {
 	return false;
 }
 
+// to check if a feature is of mandatory type
+operation fm!FeatureType isMandatory() : Boolean {
+	if ( self.mandatory.isDefined() ) {
+		return self.mandatory.asBoolean();
+	}
+	return false;
+}
+
 // to check if a branch is of And type
 operation fm!BranchType isAndBranch() :  Boolean {
 	return self.isBranchOf( 'and' );
@@ -637,7 +646,7 @@ operation hasSubBranches ( superbranch : fm!BranchType ): List {
 //---------------------------------------------------------------//
 
 operation fm!BranchType addSomeValueFromFeature( owlObjectIntersectionOf : owl!ObjectIntersectionOf, checkMandatory : Boolean ) {
-	if ( not self.isHidden() and ( not checkMandatory or self.isMandatory() ) ) {
+	if ( not self.isHidden() and not self.isDisabled() and ( not checkMandatory or self.isMandatory() ) ) {
 		var owlObjectSomeValuesFrom : new owl!ObjectSomeValuesFrom;
 		var owlOP : new owl!ObjectProperty;
 		owlOP.iri = self.generateOwlObjectPropertyIRI();
@@ -650,7 +659,7 @@ operation fm!BranchType addSomeValueFromFeature( owlObjectIntersectionOf : owl!O
 }
 
 operation fm!FeatureType addSomeValueFromFeature( owlObjectIntersectionOf : owl!ObjectIntersectionOf, checkMandatory : Boolean ) {
-	if (not self.isHidden() and not self.isIndividual () and ( not checkMandatory or self.isMandatory() )) {
+	if (not self.isHidden() and not self.isDisabled() and not self.isIndividual () and ( not checkMandatory or self.isMandatory() )) {
 		var owlObjectSomeValuesFrom : new owl!ObjectSomeValuesFrom;
 		var owlOP : new owl!ObjectProperty;
 		owlOP.iri = self.generateOwlObjectPropertyIRI();
@@ -676,7 +685,7 @@ operation fm!BranchType addSomeValueFromFeature( owlObjectUnionOf : owl!ObjectUn
 }
 
 operation fm!FeatureType addSomeValueFromFeature( owlObjectUnionOf : owl!ObjectUnionOf ) {
-	if (not self.isHidden()) {
+	if (not self.isHidden() and not self.isIndividual()) {
 		var owlObjectSomeValuesFrom : new owl!ObjectSomeValuesFrom;
 		var owlOP : new owl!ObjectProperty;
 		owlOP.iri = self.generateOwlObjectPropertyIRI();
@@ -688,36 +697,39 @@ operation fm!FeatureType addSomeValueFromFeature( owlObjectUnionOf : owl!ObjectU
 	}
 }
 
-operation fm!BranchType addDisjointTwoByTwoFeatures( owlObjectUnionOf : owl!ObjectUnionOf, branch : fm!BranchType ) {
+operation fm!BranchType addDisjointTwoByTwoFeatures( owlObjectUnionOf : owl!ObjectUnionOf, subbranch : fm!BranchType ) {
 	for ( subBranch in self.And ) {
-		if ( branch <> subBranch and not subBranch.isHidden() ) {
+		if ( subbranch <> subBranch and not subBranch.isHidden() and not subBranch.isIndividual()) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
 			owlObjectUnionOf.objectIntersectionOf.add( owlObjectIntersectionOf );
-			branch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
+			subbranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
+	
 	for ( subBranch in self.alt ) {
-		if ( branch <> subBranch and not subBranch.isHidden() ) {
+		if ( subbranch <> subBranch and not subBranch.isHidden() and not subBranch.isIndividual()) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
 			owlObjectUnionOf.objectIntersectionOf.add( owlObjectIntersectionOf );
-			branch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
+			subbranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
+
 	for ( subBranch in self.Or ) {
-		if ( branch <> subBranch and not subBranch.isHidden() ) {
+		if ( subbranch <> subBranch and not subBranch.isHidden() and not subBranch.isIndividual()) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
 			owlObjectUnionOf.objectIntersectionOf.add( owlObjectIntersectionOf );
-			branch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
+			subbranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
+
 	for ( subFeature in self.feature ) {
-		if ( not subFeature.isHidden() ) {
+		if ( not subFeature.isHidden()  and not subFeature.isIndividual()) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
 			owlObjectUnionOf.objectIntersectionOf.add( owlObjectIntersectionOf );
-			branch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
+			subbranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 			subFeature.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
@@ -732,6 +744,7 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( owlObjectUnionOf : owl!Obje
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
+	
 	for ( subBranch in self.alt ) {
 		if ( not subBranch.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -740,6 +753,7 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( owlObjectUnionOf : owl!Obje
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
+
 	for ( subBranch in self.Or ) {
 		if ( not subBranch.isHidden() ) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
@@ -748,8 +762,9 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( owlObjectUnionOf : owl!Obje
 			subBranch.addSomeValueFromFeature( owlObjectIntersectionOf, false );
 		}
 	}
-	for ( subFeature in self.feature ) {
-		if ( feature <> subFeature and not subFeature.isHidden() ) {
+
+	for ( subFeature in self.feature) {
+		if ( feature <> subFeature and not subFeature.isHidden() and not subFeature.isIndividual()) {
 			var owlObjectIntersectionOf : new owl!ObjectIntersectionOf;
 			owlObjectUnionOf.objectIntersectionOf.add( owlObjectIntersectionOf );
 			feature.addSomeValueFromFeature( owlObjectIntersectionOf, false );
@@ -757,6 +772,7 @@ operation fm!BranchType addDisjointTwoByTwoFeatures( owlObjectUnionOf : owl!Obje
 		}
 	}
 }
+
 
 operation ontOPDomain ( feature : fm!FeatureType , branch : fm!BranchType ) {
     var owlObjectPropertyDomain = new owl!ObjectPropertyDomain;

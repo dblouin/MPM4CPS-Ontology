@@ -1216,46 +1216,6 @@
         <owl:ObjectProperty IRI="#hasInteroperability"/>
         <owl:Class IRI="#Interoperability"/>
       </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasPerformance"/>
-        <owl:Class IRI="#Performance"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSecurity"/>
-        <owl:Class IRI="#Security"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSafety"/>
-        <owl:Class IRI="#Safety"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasReliability"/>
-        <owl:Class IRI="#Reliability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasEfficiency"/>
-        <owl:Class IRI="#Efficiency"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasScalability"/>
-        <owl:Class IRI="#Scalability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasComposability"/>
-        <owl:Class IRI="#Composability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasAvailability"/>
-        <owl:Class IRI="#Availability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasSustainability"/>
-        <owl:Class IRI="#Sustainability"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasX_ilities"/>
-        <owl:Class IRI="#X_ilities"/>
-      </owl:ObjectSomeValuesFrom>
     </owl:ObjectUnionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
@@ -1334,14 +1294,6 @@
         <owl:ObjectProperty IRI="#hasProbabilistic"/>
         <owl:Class IRI="#Probabilistic"/>
       </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasDeterministic"/>
-        <owl:Class IRI="#Deterministic"/>
-      </owl:ObjectSomeValuesFrom>
-      <owl:ObjectSomeValuesFrom>
-        <owl:ObjectProperty IRI="#hasNon-deterministic"/>
-        <owl:Class IRI="#Non-deterministic"/>
-      </owl:ObjectSomeValuesFrom>
     </owl:ObjectUnionOf>
   </owl:SubClassOf>
   <owl:SubClassOf>
@@ -1360,20 +1312,6 @@
             <owl:Class IRI="#Probabilistic"/>
           </owl:ObjectSomeValuesFrom>
         </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasProbabilistic"/>
-            <owl:Class IRI="#Probabilistic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf/>
-        <owl:ObjectIntersectionOf>
-          <owl:ObjectSomeValuesFrom>
-            <owl:ObjectProperty IRI="#hasProbabilistic"/>
-            <owl:Class IRI="#Probabilistic"/>
-          </owl:ObjectSomeValuesFrom>
-        </owl:ObjectIntersectionOf>
-        <owl:ObjectIntersectionOf/>
       </owl:ObjectUnionOf>
     </owl:ObjectComplementOf>
   </owl:SubClassOf>
